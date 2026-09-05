@@ -1,0 +1,2870 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "FDP-03 - Recall and use common fraction-decimal-percentage equivalences",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-20",
+      "sha256": "35a6572a4fb683d681787f36d682ac8b56b295a04723cd12769f53679691d21c"
+    },
+    "authored_scope": "Recall and use common fraction-decimal-percentage equivalences.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "FDP03-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "verified_desktop_ready_equivalent_fraction_phone_locked_unit_value_failure_inputs_review_resume_320_390",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        15,
+        17,
+        18,
+        19,
+        20
+      ],
+      "source_repairs_consulted": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        18,
+        19
+      ],
+      "note": "All 20 pages and the previous bulk configuration reviewed; active pages rendered. Removed unapproved eighths and general conversion rules. Restored every active source blank, including repeated guided products and full equivalence. Equivalent unsimplified fractions accepted except the two application items explicitly requiring simplest form. No diagnostic confirmation, prerequisite mutation, delayed Retrieval or Strong state is active."
+    }
+  },
+  "identity": {
+    "id": "FDP-03",
+    "slug": "recall-and-use-common-fraction-decimal-percentage-equivalences",
+    "title": "Recall and use common fraction-decimal-percentage equivalences",
+    "strand": "Number",
+    "cluster": "Fractions, Decimals and Percentages",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Recall and use exact benchmark equivalences for halves, quarters, fifths and tenths, including their multiples.",
+    "success_criteria": [
+      "Recall all four unit benchmarks.",
+      "Use the numerator to form multiples of a known unit fraction.",
+      "Complete every requested fraction, decimal and percentage field.",
+      "Preserve exact equivalent forms and simplify only when requested.",
+      "Apply benchmarks to clearly defined contextual wholes."
+    ],
+    "boundaries": {
+      "includes": [
+        "Proper benchmark fractions with denominators 2, 4, 5 and 10",
+        "Exact terminating decimals and whole-number percentages",
+        "Recall, recognition and deduction from a unit benchmark",
+        "Short contexts and explicit simplest-form requirements"
+      ],
+      "excludes": [
+        "Eighths and other new denominator families",
+        "General conversion algorithms",
+        "Recurring or rounded values",
+        "Values above one",
+        "Percentage of an amount",
+        "Entry, Diagnostic, prerequisite routing and delayed Retrieval"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "FDP-01",
+      "FDP-02"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for FDP-01, FDP-02 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "single_choice",
+      "integer",
+      "benchmark_forms"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    },
+    "place_value_profile": true
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "Common fraction, decimal and percentage benchmarks preserve one value.",
+    "invariant": "The selected part of the same whole is unchanged across equivalent forms.",
+    "must_notice": [
+      "The denominator identifies the part size.",
+      "The numerator counts copies of that part.",
+      "Both decimal and percentage scale with the number of copies."
+    ],
+    "common_confusions": [
+      "Denominator copied as percentage or decimal",
+      "Half confused with fifth",
+      "Unit value kept for a multiple",
+      "Numerator treated as tenths",
+      "Decimal and percentage scaled inconsistently"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "Four useful benchmarks",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Four useful benchmarks",
+          "initial_state": "Four useful benchmarks",
+          "model": {
+            "kind": "benchmark_equivalence",
+            "title": "Know the unit benchmarks",
+            "n": 1,
+            "d": 2,
+            "given": "",
+            "steps": [
+              "1/2 = 50/100.",
+              "50/100 = 0.5 = 50%."
+            ],
+            "parts_by_step": [
+              1,
+              1
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "table",
+            "solved": true
+          }
+        },
+        "narration": {
+          "script": "These equal-length wholes show four different unit fractions. Each row connects one selected part to its hundredths, decimal and percentage forms."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Start with one fifth",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Start with one fifth",
+          "initial_state": "Start with one fifth",
+          "model": {
+            "kind": "benchmark_equivalence",
+            "title": "Build three fifths",
+            "n": 3,
+            "d": 5,
+            "given": "Target: 3/5",
+            "steps": [
+              "1/5 = 0.2 = 20%.",
+              "3/5 = 3 × 1/5.",
+              "3 × 0.2 = 0.6; 3 × 20% = 60%.",
+              "3/5 = 0.6 = 60%."
+            ],
+            "parts_by_step": [
+              1,
+              3,
+              3,
+              3
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "Start with the value of a single fifth-sized part. Its decimal and percentage describe that same part."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Take three equal copies",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Take three equal copies",
+          "initial_state": "Take three equal copies",
+          "model": {
+            "kind": "benchmark_equivalence",
+            "title": "Build three fifths",
+            "n": 3,
+            "d": 5,
+            "given": "Target: 3/5",
+            "steps": [
+              "1/5 = 0.2 = 20%.",
+              "3/5 = 3 × 1/5.",
+              "3 × 0.2 = 0.6; 3 × 20% = 60%.",
+              "3/5 = 0.6 = 60%."
+            ],
+            "parts_by_step": [
+              1,
+              3,
+              3,
+              3
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "The numerator tells us to select three fifth-sized parts. The whole stays the same."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Scale both equivalent values",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Scale both equivalent values",
+          "initial_state": "Scale both equivalent values",
+          "model": {
+            "kind": "benchmark_equivalence",
+            "title": "Build three fifths",
+            "n": 3,
+            "d": 5,
+            "given": "Target: 3/5",
+            "steps": [
+              "1/5 = 0.2 = 20%.",
+              "3/5 = 3 × 1/5.",
+              "3 × 0.2 = 0.6; 3 × 20% = 60%.",
+              "3/5 = 0.6 = 60%."
+            ],
+            "parts_by_step": [
+              1,
+              3,
+              3,
+              3
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 4
+          }
+        },
+        "narration": {
+          "script": "Use the same number of copies for the decimal and the percentage. Both totals describe the selected part of this whole."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Explain the quarter equivalence",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Explain the quarter equivalence",
+          "initial_state": "Explain the quarter equivalence",
+          "model": {
+            "kind": "benchmark_equivalence",
+            "title": "Explain three copies of a quarter",
+            "n": 3,
+            "d": 4,
+            "given": "3/4 = 0.75 = 75%",
+            "steps": [
+              "1/4 = 0.25 = 25%.",
+              "3/4 = 3 × 1/4.",
+              "3 × 0.25 = 0.75; 3 × 25% = 75%.",
+              "3/4 = 0.75 = 75%."
+            ],
+            "parts_by_step": [
+              1,
+              3,
+              3,
+              3
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "explanation_question": true
+          }
+        },
+        "narration": {
+          "script": "Choose the reason that accounts for the size of each part and the number selected."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "FDP-03-C01"
+        },
+        "next_step": "T06"
+      },
+      {
+        "id": "T06",
+        "stage": "teaching",
+        "purpose": "Recall one quarter",
+        "source_ref": {
+          "page": 6
+        },
+        "scene": {
+          "display_title": "Recall one quarter",
+          "initial_state": "Recall one quarter",
+          "model": {
+            "kind": "benchmark_equivalence",
+            "title": "Write three quarters in two forms",
+            "n": 3,
+            "d": 4,
+            "given": "Target: 3/4",
+            "steps": [
+              "1/4 = 0.25 = 25%.",
+              "3/4 = 3 × 1/4.",
+              "3 × 0.25 = 0.75; 3 × 25% = 75%.",
+              "3/4 = 0.75 = 75%."
+            ],
+            "parts_by_step": [
+              1,
+              3,
+              3,
+              3
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "For the worked example, begin with the quarter benchmark. That gives the value of just one part."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T07"
+      },
+      {
+        "id": "T07",
+        "stage": "teaching",
+        "purpose": "Use the numerator",
+        "source_ref": {
+          "page": 6
+        },
+        "scene": {
+          "display_title": "Use the numerator",
+          "initial_state": "Use the numerator",
+          "model": {
+            "kind": "benchmark_equivalence",
+            "title": "Write three quarters in two forms",
+            "n": 3,
+            "d": 4,
+            "given": "Target: 3/4",
+            "steps": [
+              "1/4 = 0.25 = 25%.",
+              "3/4 = 3 × 1/4.",
+              "3 × 0.25 = 0.75; 3 × 25% = 75%.",
+              "3/4 = 0.75 = 75%."
+            ],
+            "parts_by_step": [
+              1,
+              3,
+              3,
+              3
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "The numerator tells us how many quarter-sized copies to take."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T08"
+      },
+      {
+        "id": "T08",
+        "stage": "teaching",
+        "purpose": "Scale decimal and percentage",
+        "source_ref": {
+          "page": 6
+        },
+        "scene": {
+          "display_title": "Scale decimal and percentage",
+          "initial_state": "Scale decimal and percentage",
+          "model": {
+            "kind": "benchmark_equivalence",
+            "title": "Write three quarters in two forms",
+            "n": 3,
+            "d": 4,
+            "given": "Target: 3/4",
+            "steps": [
+              "1/4 = 0.25 = 25%.",
+              "3/4 = 3 × 1/4.",
+              "3 × 0.25 = 0.75; 3 × 25% = 75%.",
+              "3/4 = 0.75 = 75%."
+            ],
+            "parts_by_step": [
+              1,
+              3,
+              3,
+              3
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "Apply the same number of copies to both values. The two products must describe the same amount."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T09"
+      },
+      {
+        "id": "T09",
+        "stage": "teaching",
+        "purpose": "Connect the final forms",
+        "source_ref": {
+          "page": 6
+        },
+        "scene": {
+          "display_title": "Connect the final forms",
+          "initial_state": "Connect the final forms",
+          "model": {
+            "kind": "benchmark_equivalence",
+            "title": "Write three quarters in two forms",
+            "n": 3,
+            "d": 4,
+            "given": "Target: 3/4",
+            "steps": [
+              "1/4 = 0.25 = 25%.",
+              "3/4 = 3 × 1/4.",
+              "3 × 0.25 = 0.75; 3 × 25% = 75%.",
+              "3/4 = 0.75 = 75%."
+            ],
+            "parts_by_step": [
+              1,
+              3,
+              3,
+              3
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 4
+          }
+        },
+        "narration": {
+          "script": "These three forms now name the same selected share of the whole."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T10"
+      },
+      {
+        "id": "T10",
+        "stage": "teaching",
+        "purpose": "Choose the valid method",
+        "source_ref": {
+          "page": 6
+        },
+        "scene": {
+          "display_title": "Choose the valid method",
+          "initial_state": "Choose the valid method",
+          "model": {
+            "kind": "benchmark_equivalence",
+            "title": "Choose the four-fifths method",
+            "n": 4,
+            "d": 5,
+            "given": "4/5",
+            "steps": [
+              "1/5 = 0.2 = 20%.",
+              "4/5 = 4 × 1/5.",
+              "4 × 0.2 = 0.8; 4 × 20% = 80%.",
+              "4/5 = 0.8 = 80%."
+            ],
+            "parts_by_step": [
+              1,
+              4,
+              4,
+              4
+            ],
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Select a method that keeps the fifth-sized parts and includes every selected copy."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "FDP-03-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "FDP-03-G01",
+        "support_level": "high",
+        "pre_question_script": "Recall both equivalent values for the unit fraction.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "FDP-03-G02",
+        "support_level": "high",
+        "pre_question_script": "Decide how many copies are selected.",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "faded",
+        "question_ref": "FDP-03-G03",
+        "support_level": "reduced",
+        "pre_question_script": "Complete the two products yourself.",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "faded",
+        "question_ref": "FDP-03-G04",
+        "support_level": "reduced",
+        "pre_question_script": "Now complete both forms in the full equivalence.",
+        "correct_next": "G05"
+      },
+      "G05": {
+        "stage": "independent_transfer",
+        "question_ref": "FDP-03-G05",
+        "support_level": "none",
+        "pre_question_script": "Choose the explanation that accounts for the whole fraction.",
+        "correct_next": "P01"
+      }
+    },
+    "practice": {
+      "intro_script": "Recall or derive each benchmark, then apply it in context. Enter every requested form. Simplify a fraction only where the question asks you to.",
+      "question_order": [
+        "FDP-03-P01",
+        "FDP-03-P02",
+        "FDP-03-P03",
+        "FDP-03-P04",
+        "FDP-03-P05",
+        "FDP-03-P06",
+        "FDP-03-P07",
+        "FDP-03-X01",
+        "FDP-03-X02",
+        "FDP-03-X03",
+        "FDP-03-X04"
+      ],
+      "question_count": 11,
+      "feedback_policy": "Preserve component-level evidence; clues and sequential working support learner correction without confirming a diagnosis."
+    },
+    "exit": {
+      "intro_script": "Complete four equivalences and one reasoning check without hints, models or a benchmark table. All fields are required. Each response locks, and review begins after all five are saved.",
+      "primary_question_refs": [
+        "FDP-03-E01",
+        "FDP-03-E02",
+        "FDP-03-E03",
+        "FDP-03-E04",
+        "FDP-03-E05"
+      ],
+      "confirmation_question_refs": [],
+      "submission_policy": "One locked response per item; no model or correctness before the complete final set.",
+      "mastery_policy": {
+        "profile": "all_primary_unsupported_deferred",
+        "require_all": true,
+        "source_page": 15,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "All four final equivalences and the reasoning check are correct. You preserved the benchmark values across the different families without support.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Keep the benchmark values connected",
+      "ryan_script": "One or more final responses need another pass. Keep the components that are already correct, then review the part size, selected copies and requested form.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "FDP-03-C01",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "Explain why these forms are equal: 3/4 = 0.75 = 75%.",
+      "target": "Preserve the value across benchmark fraction, decimal and percentage forms",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "One quarter is 0.25 = 25%, and three quarters is three copies of that value.",
+          "The denominator 4 is written after the decimal point.",
+          "The numerator 3 means the decimal must be 0.3.",
+          "Every fraction with numerator 3 is equal to 75%."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "One quarter is 0.25 = 25%, and three quarters is three copies of that value."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Yes. The quarter benchmark gives the part size, and the numerator tells you how many copies to take.",
+        "correct_after_support": "Yes. The quarter benchmark gives the part size, and the numerator tells you how many copies to take.",
+        "on_correct_math": "1/4 = 0.25 = 25%. → 3/4 = 3 × 1/4. → 3 × 0.25 = 0.75; 3 × 25% = 75%. → 3/4 = 0.75 = 75%.",
+        "on_incorrect_attempt_1": "Look for a reason that uses both the size of one part and the number of selected parts.",
+        "on_incorrect_attempt_2": "Look for a reason that uses both the size of one part and the number of selected parts.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "1/4 = 0.25 = 25%. → 3/4 = 3 × 1/4. → 3 × 0.25 = 0.75; 3 × 25% = 75%. → 3/4 = 0.75 = 75%."
+      },
+      "mathematical_support": {
+        "hint_1": "Look for a reason that uses both the size of one part and the number of selected parts.",
+        "hint_2": "Recall one equal part, then use the numerator to decide how many copies are needed.",
+        "worked_solution": "1/4 = 0.25 = 25%. → 3/4 = 3 × 1/4. → 3 × 0.25 = 0.75; 3 × 25% = 75%. → 3/4 = 0.75 = 75%."
+      },
+      "working": [
+        "1/4 = 0.25 = 25%.",
+        "3/4 = 3 × 1/4.",
+        "3 × 0.25 = 0.75; 3 × 25% = 75%.",
+        "3/4 = 0.75 = 75%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "benchmark_equivalence",
+          "title": "Explain three copies of a quarter",
+          "n": 3,
+          "d": 4,
+          "given": "3/4 = 0.75 = 75%",
+          "steps": [
+            "1/4 = 0.25 = 25%.",
+            "3/4 = 3 × 1/4.",
+            "3 × 0.25 = 0.75; 3 × 25% = 75%.",
+            "3/4 = 0.75 = 75%."
+          ],
+          "parts_by_step": [
+            1,
+            3,
+            3,
+            3
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "explanation_question": true
+        }
+      },
+      "response_feedback": {
+        "The denominator 4 is written after the decimal point.": "The denominator counts equal parts in one whole. It is not copied into a decimal digit.",
+        "The numerator 3 means the decimal must be 0.3.": "That treats the selected parts as tenths without considering their quarter-sized value.",
+        "Every fraction with numerator 3 is equal to 75%.": "The numerator alone is not enough. Three quarters and three fifths have different-sized parts."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-03-C02",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Which method correctly completes the equivalence for four fifths?",
+      "target": "Preserve the value across benchmark fraction, decimal and percentage forms",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "1/5 = 0.2 = 20%, so four copies give 4/5 = 0.8 = 80%.",
+          "Use the numerator only, so 4/5 = 0.4 = 40%.",
+          "Use the denominator only, so 4/5 = 0.5 = 50%.",
+          "Keep the unit-fraction value, so 4/5 = 0.2 = 20%."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "1/5 = 0.2 = 20%, so four copies give 4/5 = 0.8 = 80%."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both equivalent values are scaled by the number of fifth-sized parts.",
+        "correct_after_support": "Correct. Both equivalent values are scaled by the number of fifth-sized parts.",
+        "on_correct_math": "1/5 = 0.2 = 20%. → 4/5 = 4 × 1/5. → 4 × 0.2 = 0.8; 4 × 20% = 80%. → 4/5 = 0.8 = 80%.",
+        "on_incorrect_attempt_1": "The numerator counts copies of the unit benchmark. Check that both forms use every copy.",
+        "on_incorrect_attempt_2": "The numerator counts copies of the unit benchmark. Check that both forms use every copy.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "1/5 = 0.2 = 20%. → 4/5 = 4 × 1/5. → 4 × 0.2 = 0.8; 4 × 20% = 80%. → 4/5 = 0.8 = 80%."
+      },
+      "mathematical_support": {
+        "hint_1": "The numerator counts copies of the unit benchmark. Check that both forms use every copy.",
+        "hint_2": "Recall one equal part, then use the numerator to decide how many copies are needed.",
+        "worked_solution": "1/5 = 0.2 = 20%. → 4/5 = 4 × 1/5. → 4 × 0.2 = 0.8; 4 × 20% = 80%. → 4/5 = 0.8 = 80%."
+      },
+      "working": [
+        "1/5 = 0.2 = 20%.",
+        "4/5 = 4 × 1/5.",
+        "4 × 0.2 = 0.8; 4 × 20% = 80%.",
+        "4/5 = 0.8 = 80%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "benchmark_equivalence",
+          "title": "Choose the four-fifths method",
+          "n": 4,
+          "d": 5,
+          "given": "4/5",
+          "steps": [
+            "1/5 = 0.2 = 20%.",
+            "4/5 = 4 × 1/5.",
+            "4 × 0.2 = 0.8; 4 × 20% = 80%.",
+            "4/5 = 0.8 = 80%."
+          ],
+          "parts_by_step": [
+            1,
+            4,
+            4,
+            4
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "Use the numerator only, so 4/5 = 0.4 = 40%.": "That uses the numerator as tenths. A fifth is not a tenth.",
+        "Use the denominator only, so 4/5 = 0.5 = 50%.": "That copies the denominator instead of using the value of a fifth.",
+        "Keep the unit-fraction value, so 4/5 = 0.2 = 20%.": "That keeps the value of one fifth. The requested fraction contains several fifths."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-03-G01",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "guided",
+      "prompt": "Recall the unit benchmark: write one fifth as a decimal and as a percentage.",
+      "target": "Preserve the value across benchmark fraction, decimal and percentage forms",
+      "response": {
+        "type": "benchmark_forms",
+        "fields": [
+          "decimal",
+          "percent"
+        ],
+        "input_label": "Complete both forms",
+        "require_simplest_form": false
+      },
+      "answer": {
+        "value": {
+          "decimal": "0.2",
+          "percent": 20
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both entries name one fifth of the whole.",
+        "correct_after_support": "Correct. Both entries name one fifth of the whole.",
+        "on_correct_math": "1/5 = 20/100. → 20/100 = 0.2 = 20%.",
+        "on_incorrect_attempt_1": "A fifth is smaller than a half. Use the size of one of five equal parts.",
+        "on_incorrect_attempt_2": "A fifth is smaller than a half. Use the size of one of five equal parts.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "1/5 = 20/100. → 20/100 = 0.2 = 20%."
+      },
+      "mathematical_support": {
+        "hint_1": "A fifth is smaller than a half. Use the size of one of five equal parts.",
+        "hint_2": "Recall one equal part, then use the numerator to decide how many copies are needed.",
+        "worked_solution": "1/5 = 20/100. → 20/100 = 0.2 = 20%."
+      },
+      "working": [
+        "1/5 = 20/100.",
+        "20/100 = 0.2 = 20%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "benchmark_equivalence",
+          "title": "Connect the fifth family",
+          "n": 1,
+          "d": 5,
+          "given": "1/5 = ? = ?%",
+          "steps": [
+            "1/5 = 20/100.",
+            "20/100 = 0.2 = 20%."
+          ],
+          "parts_by_step": [
+            1,
+            1
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_decimal": "Your percentage is correct. Match its parts-per-hundred amount with the decimal.",
+        "check_percent": "Your decimal is correct. Name that same fifth-sized amount as parts per hundred.",
+        "check_multiple": "Check the size of one fifth. The denominator names equal parts, not the decimal or percentage answer.",
+        "half_confusion": "Those forms describe one half. A fifth is smaller because the same whole is divided into more equal parts.",
+        "copied_denominator": "That copies the denominator into both answers. It counts the equal parts, not their individual size."
+      },
+      "response_patterns": [
+        {
+          "values": {
+            "decimal": ".5",
+            "percent": 50
+          },
+          "classification": "half_confusion"
+        },
+        {
+          "values": {
+            "decimal": ".5",
+            "percent": 5
+          },
+          "classification": "copied_denominator"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-03-G02",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "guided",
+      "prompt": "Four fifths means how many copies of one fifth?",
+      "target": "Preserve the value across benchmark fraction, decimal and percentage forms",
+      "response": {
+        "type": "integer",
+        "input_label": "Number of copies"
+      },
+      "answer": {
+        "value": 4
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. That is the number of fifth-sized parts selected.",
+        "correct_after_support": "Correct. That is the number of fifth-sized parts selected.",
+        "on_correct_math": "The numerator counts selected equal parts. → 4/5 = 4 × 1/5.",
+        "on_incorrect_attempt_1": "Use the numerator to count copies. The denominator names the part size.",
+        "on_incorrect_attempt_2": "Use the numerator to count copies. The denominator names the part size.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The numerator counts selected equal parts. → 4/5 = 4 × 1/5."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the numerator to count copies. The denominator names the part size.",
+        "hint_2": "Recall one equal part, then use the numerator to decide how many copies are needed.",
+        "worked_solution": "The numerator counts selected equal parts. → 4/5 = 4 × 1/5."
+      },
+      "working": [
+        "The numerator counts selected equal parts.",
+        "4/5 = 4 × 1/5."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "benchmark_equivalence",
+          "title": "Count the copies",
+          "n": 4,
+          "d": 5,
+          "given": "4/5 = ? copies of 1/5",
+          "steps": [
+            "The numerator counts selected equal parts.",
+            "4/5 = 4 × 1/5."
+          ],
+          "parts_by_step": [
+            1,
+            4,
+            4,
+            4
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "1": "That is the number of parts in the unit benchmark, not in four fifths.",
+        "5": "That counts all the equal parts in a whole. The question asks how many are selected."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-03-G03",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "faded",
+      "prompt": "Complete both calculations: four copies of 0.2 and four copies of 20%.",
+      "target": "Preserve the value across benchmark fraction, decimal and percentage forms",
+      "response": {
+        "type": "benchmark_forms",
+        "fields": [
+          "decimal",
+          "percent"
+        ],
+        "input_label": "Complete both forms",
+        "require_simplest_form": false
+      },
+      "answer": {
+        "value": {
+          "decimal": "0.8",
+          "percent": 80
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both products include every one-fifth copy.",
+        "correct_after_support": "Correct. Both products include every one-fifth copy.",
+        "on_correct_math": "1/5 = 0.2 = 20%. → 4/5 = 4 × 1/5. → 4 × 0.2 = 0.8; 4 × 20% = 80%. → 4/5 = 0.8 = 80%.",
+        "on_incorrect_attempt_1": "Use the same number of copies in both calculations.",
+        "on_incorrect_attempt_2": "Use the same number of copies in both calculations.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "1/5 = 0.2 = 20%. → 4/5 = 4 × 1/5. → 4 × 0.2 = 0.8; 4 × 20% = 80%. → 4/5 = 0.8 = 80%."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the same number of copies in both calculations.",
+        "hint_2": "Recall one equal part, then use the numerator to decide how many copies are needed.",
+        "worked_solution": "1/5 = 0.2 = 20%. → 4/5 = 4 × 1/5. → 4 × 0.2 = 0.8; 4 × 20% = 80%. → 4/5 = 0.8 = 80%."
+      },
+      "working": [
+        "1/5 = 0.2 = 20%.",
+        "4/5 = 4 × 1/5.",
+        "4 × 0.2 = 0.8; 4 × 20% = 80%.",
+        "4/5 = 0.8 = 80%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "benchmark_equivalence",
+          "title": "Connect the fifth family",
+          "n": 4,
+          "d": 5,
+          "given": "4 × 0.2 = ?; 4 × 20% = ?%",
+          "steps": [
+            "1/5 = 0.2 = 20%.",
+            "4/5 = 4 × 1/5.",
+            "4 × 0.2 = 0.8; 4 × 20% = 80%.",
+            "4/5 = 0.8 = 80%."
+          ],
+          "parts_by_step": [
+            1,
+            4,
+            4,
+            4
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_decimal": "Your percentage product is correct. Include all four copies of the decimal benchmark.",
+        "check_percent": "Your decimal product is correct. Include all four copies in the percentage product.",
+        "check_multiple": "Each product must include four copies of its unit value.",
+        "unit_value": "Those are the one-fifth values. The calculations ask for four copies of each."
+      },
+      "response_patterns": [
+        {
+          "values": {
+            "decimal": ".2",
+            "percent": 20
+          },
+          "classification": "unit_value"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-03-G04",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "faded",
+      "prompt": "Complete the whole equivalence: write four fifths as a decimal and as a percentage.",
+      "target": "Preserve the value across benchmark fraction, decimal and percentage forms",
+      "response": {
+        "type": "benchmark_forms",
+        "fields": [
+          "decimal",
+          "percent"
+        ],
+        "input_label": "Complete both forms",
+        "require_simplest_form": false
+      },
+      "answer": {
+        "value": {
+          "decimal": "0.8",
+          "percent": 80
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The completed equivalence keeps the full four-fifths value.",
+        "correct_after_support": "Correct. The completed equivalence keeps the full four-fifths value.",
+        "on_correct_math": "1/5 = 0.2 = 20%. → 4/5 = 4 × 1/5. → 4 × 0.2 = 0.8; 4 × 20% = 80%. → 4/5 = 0.8 = 80%.",
+        "on_incorrect_attempt_1": "Keep all the fifth-sized parts in both forms.",
+        "on_incorrect_attempt_2": "Keep all the fifth-sized parts in both forms.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "1/5 = 0.2 = 20%. → 4/5 = 4 × 1/5. → 4 × 0.2 = 0.8; 4 × 20% = 80%. → 4/5 = 0.8 = 80%."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep all the fifth-sized parts in both forms.",
+        "hint_2": "Recall one equal part, then use the numerator to decide how many copies are needed.",
+        "worked_solution": "1/5 = 0.2 = 20%. → 4/5 = 4 × 1/5. → 4 × 0.2 = 0.8; 4 × 20% = 80%. → 4/5 = 0.8 = 80%."
+      },
+      "working": [
+        "1/5 = 0.2 = 20%.",
+        "4/5 = 4 × 1/5.",
+        "4 × 0.2 = 0.8; 4 × 20% = 80%.",
+        "4/5 = 0.8 = 80%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "benchmark_equivalence",
+          "title": "Connect the fifth family",
+          "n": 4,
+          "d": 5,
+          "given": "4/5 = ? = ?%",
+          "steps": [
+            "1/5 = 0.2 = 20%.",
+            "4/5 = 4 × 1/5.",
+            "4 × 0.2 = 0.8; 4 × 20% = 80%.",
+            "4/5 = 0.8 = 80%."
+          ],
+          "parts_by_step": [
+            1,
+            4,
+            4,
+            4
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_decimal": "Your percentage is correct. Check that the decimal represents the same four-fifths amount.",
+        "check_percent": "Your decimal is correct. Keep that same selected proportion in the percentage.",
+        "check_multiple": "Recall one fifth, then account for the selected copies.",
+        "unit_value": "That gives one fifth rather than four fifths.",
+        "numerator_as_tenths": "Those forms describe four tenths. The selected pieces here are fifths."
+      },
+      "response_patterns": [
+        {
+          "values": {
+            "decimal": ".2",
+            "percent": 20
+          },
+          "classification": "unit_value"
+        },
+        {
+          "values": {
+            "decimal": ".4",
+            "percent": 40
+          },
+          "classification": "numerator_as_tenths"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-03-G05",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "independent_transfer",
+      "prompt": "Which statement correctly explains four fifths?",
+      "target": "Preserve the value across benchmark fraction, decimal and percentage forms",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "4/5 = 0.4 = 40% because the numerator is 4.",
+          "4/5 = 0.8 = 80% because it is four copies of 1/5 = 0.2 = 20%.",
+          "4/5 = 0.5 = 50% because the denominator is 5.",
+          "4/5 = 0.2 = 20% because all fifths have the same value."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "4/5 = 0.8 = 80% because it is four copies of 1/5 = 0.2 = 20%."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Yes. The explanation accounts for both the unit size and the number of copies.",
+        "correct_after_support": "Yes. The explanation accounts for both the unit size and the number of copies.",
+        "on_correct_math": "1/5 = 0.2 = 20%. → 4/5 = 4 × 1/5. → 4 × 0.2 = 0.8; 4 × 20% = 80%. → 4/5 = 0.8 = 80%.",
+        "on_incorrect_attempt_1": "Distinguish the size of one fifth from the total size of four fifths.",
+        "on_incorrect_attempt_2": "Distinguish the size of one fifth from the total size of four fifths.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "1/5 = 0.2 = 20%. → 4/5 = 4 × 1/5. → 4 × 0.2 = 0.8; 4 × 20% = 80%. → 4/5 = 0.8 = 80%."
+      },
+      "mathematical_support": {
+        "hint_1": "Distinguish the size of one fifth from the total size of four fifths.",
+        "hint_2": "Recall one equal part, then use the numerator to decide how many copies are needed.",
+        "worked_solution": "1/5 = 0.2 = 20%. → 4/5 = 4 × 1/5. → 4 × 0.2 = 0.8; 4 × 20% = 80%. → 4/5 = 0.8 = 80%."
+      },
+      "working": [
+        "1/5 = 0.2 = 20%.",
+        "4/5 = 4 × 1/5.",
+        "4 × 0.2 = 0.8; 4 × 20% = 80%.",
+        "4/5 = 0.8 = 80%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "benchmark_equivalence",
+          "title": "Explain the completed equivalence",
+          "n": 4,
+          "d": 5,
+          "given": "4/5",
+          "steps": [
+            "1/5 = 0.2 = 20%.",
+            "4/5 = 4 × 1/5.",
+            "4 × 0.2 = 0.8; 4 × 20% = 80%.",
+            "4/5 = 0.8 = 80%."
+          ],
+          "parts_by_step": [
+            1,
+            4,
+            4,
+            4
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "4/5 = 0.4 = 40% because the numerator is 4.": "The numerator counts fifths here, not tenths.",
+        "4/5 = 0.5 = 50% because the denominator is 5.": "The denominator names the number of equal parts, not a decimal digit.",
+        "4/5 = 0.2 = 20% because all fifths have the same value.": "Each fifth has the same size, but four fifths contain four of those parts."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-03-P01",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Write one half as a decimal and as a percentage.",
+      "target": "Preserve the value across benchmark fraction, decimal and percentage forms",
+      "response": {
+        "type": "benchmark_forms",
+        "fields": [
+          "decimal",
+          "percent"
+        ],
+        "input_label": "Complete both forms",
+        "require_simplest_form": false
+      },
+      "answer": {
+        "value": {
+          "decimal": "0.5",
+          "percent": 50
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Your decimal and percentage both describe half of the whole.",
+        "correct_after_support": "Correct. Your decimal and percentage both describe half of the whole.",
+        "on_correct_math": "1/2 = 50/100. → 50/100 = 0.5 = 50%.",
+        "on_incorrect_attempt_1": "Use one of two equal parts of the whole.",
+        "on_incorrect_attempt_2": "Use one of two equal parts of the whole.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "1/2 = 50/100. → 50/100 = 0.5 = 50%."
+      },
+      "mathematical_support": {
+        "hint_1": "Use one of two equal parts of the whole.",
+        "hint_2": "Recall one equal part, then use the numerator to decide how many copies are needed.",
+        "worked_solution": "1/2 = 50/100. → 50/100 = 0.5 = 50%."
+      },
+      "working": [
+        "1/2 = 50/100.",
+        "50/100 = 0.5 = 50%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "benchmark_equivalence",
+          "title": "Connect the half family",
+          "n": 1,
+          "d": 2,
+          "given": "1/2 = ? = ?%",
+          "steps": [
+            "1/2 = 50/100.",
+            "50/100 = 0.5 = 50%."
+          ],
+          "parts_by_step": [
+            1,
+            1
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_decimal": "Your percentage names a half correctly. Match the decimal to that same size.",
+        "check_percent": "Your decimal is correct. A half takes the same share of one hundred parts.",
+        "check_multiple": "Check the half benchmark, not the fifth benchmark.",
+        "fifth_confusion": "Those values describe one fifth. One half is a larger share of the same whole."
+      },
+      "response_patterns": [
+        {
+          "values": {
+            "decimal": ".2",
+            "percent": 20
+          },
+          "classification": "fifth_confusion"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-03-P02",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Write one quarter as a decimal and as a percentage.",
+      "target": "Preserve the value across benchmark fraction, decimal and percentage forms",
+      "response": {
+        "type": "benchmark_forms",
+        "fields": [
+          "decimal",
+          "percent"
+        ],
+        "input_label": "Complete both forms",
+        "require_simplest_form": false
+      },
+      "answer": {
+        "value": {
+          "decimal": "0.25",
+          "percent": 25
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both forms describe one of four equal parts.",
+        "correct_after_support": "Correct. Both forms describe one of four equal parts.",
+        "on_correct_math": "1/4 = 25/100. → 25/100 = 0.25 = 25%.",
+        "on_incorrect_attempt_1": "A quarter is half of a half. Do not copy the denominator into a decimal digit.",
+        "on_incorrect_attempt_2": "A quarter is half of a half. Do not copy the denominator into a decimal digit.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "1/4 = 25/100. → 25/100 = 0.25 = 25%."
+      },
+      "mathematical_support": {
+        "hint_1": "A quarter is half of a half. Do not copy the denominator into a decimal digit.",
+        "hint_2": "Recall one equal part, then use the numerator to decide how many copies are needed.",
+        "worked_solution": "1/4 = 25/100. → 25/100 = 0.25 = 25%."
+      },
+      "working": [
+        "1/4 = 25/100.",
+        "25/100 = 0.25 = 25%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "benchmark_equivalence",
+          "title": "Connect the quarter family",
+          "n": 1,
+          "d": 4,
+          "given": "1/4 = ? = ?%",
+          "steps": [
+            "1/4 = 25/100.",
+            "25/100 = 0.25 = 25%."
+          ],
+          "parts_by_step": [
+            1,
+            1
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_decimal": "Your percentage is correct. Use the quarter’s value for the decimal, not its denominator digit.",
+        "check_percent": "Your decimal is correct. Name the same quarter-sized amount out of one hundred.",
+        "check_multiple": "Use the size of one quarter, not the written denominator.",
+        "copied_denominator": "Those values describe four tenths. Four is the number of equal quarters in the whole, not the size of one quarter."
+      },
+      "response_patterns": [
+        {
+          "values": {
+            "decimal": ".4",
+            "percent": 40
+          },
+          "classification": "copied_denominator"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-03-P03",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Write two fifths as a decimal and as a percentage.",
+      "target": "Preserve the value across benchmark fraction, decimal and percentage forms",
+      "response": {
+        "type": "benchmark_forms",
+        "fields": [
+          "decimal",
+          "percent"
+        ],
+        "input_label": "Complete both forms",
+        "require_simplest_form": false
+      },
+      "answer": {
+        "value": {
+          "decimal": "0.4",
+          "percent": 40
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both forms include two fifth-sized parts.",
+        "correct_after_support": "Correct. Both forms include two fifth-sized parts.",
+        "on_correct_math": "1/5 = 0.2 = 20%. → 2/5 = 2 × 1/5. → 2 × 0.2 = 0.4; 2 × 20% = 40%. → 2/5 = 0.4 = 40%.",
+        "on_incorrect_attempt_1": "Take two copies of the one-fifth benchmark.",
+        "on_incorrect_attempt_2": "Take two copies of the one-fifth benchmark.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "1/5 = 0.2 = 20%. → 2/5 = 2 × 1/5. → 2 × 0.2 = 0.4; 2 × 20% = 40%. → 2/5 = 0.4 = 40%."
+      },
+      "mathematical_support": {
+        "hint_1": "Take two copies of the one-fifth benchmark.",
+        "hint_2": "Recall one equal part, then use the numerator to decide how many copies are needed.",
+        "worked_solution": "1/5 = 0.2 = 20%. → 2/5 = 2 × 1/5. → 2 × 0.2 = 0.4; 2 × 20% = 40%. → 2/5 = 0.4 = 40%."
+      },
+      "working": [
+        "1/5 = 0.2 = 20%.",
+        "2/5 = 2 × 1/5.",
+        "2 × 0.2 = 0.4; 2 × 20% = 40%.",
+        "2/5 = 0.4 = 40%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "benchmark_equivalence",
+          "title": "Connect the fifth family",
+          "n": 2,
+          "d": 5,
+          "given": "2/5 = ? = ?%",
+          "steps": [
+            "1/5 = 0.2 = 20%.",
+            "2/5 = 2 × 1/5.",
+            "2 × 0.2 = 0.4; 2 × 20% = 40%.",
+            "2/5 = 0.4 = 40%."
+          ],
+          "parts_by_step": [
+            1,
+            2,
+            2,
+            2
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_decimal": "Your percentage is correct. Check the decimal total for two copies of a fifth.",
+        "check_percent": "Your decimal is correct. Check the matching percentage for both fifths.",
+        "check_multiple": "Check both forms using two copies of the unit benchmark.",
+        "unit_value": "Those forms give only one fifth. The numerator selects two fifths."
+      },
+      "response_patterns": [
+        {
+          "values": {
+            "decimal": ".2",
+            "percent": 20
+          },
+          "classification": "unit_value"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-03-P04",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Write seven tenths as a decimal and as a percentage.",
+      "target": "Preserve the value across benchmark fraction, decimal and percentage forms",
+      "response": {
+        "type": "benchmark_forms",
+        "fields": [
+          "decimal",
+          "percent"
+        ],
+        "input_label": "Complete both forms",
+        "require_simplest_form": false
+      },
+      "answer": {
+        "value": {
+          "decimal": "0.7",
+          "percent": 70
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both forms preserve seven tenths of the whole.",
+        "correct_after_support": "Correct. Both forms preserve seven tenths of the whole.",
+        "on_correct_math": "1/10 = 0.1 = 10%. → 7/10 = 7 × 1/10. → 7 × 0.1 = 0.7; 7 × 10% = 70%. → 7/10 = 0.7 = 70%.",
+        "on_incorrect_attempt_1": "Each selected part is a tenth, not a hundredth.",
+        "on_incorrect_attempt_2": "Each selected part is a tenth, not a hundredth.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "1/10 = 0.1 = 10%. → 7/10 = 7 × 1/10. → 7 × 0.1 = 0.7; 7 × 10% = 70%. → 7/10 = 0.7 = 70%."
+      },
+      "mathematical_support": {
+        "hint_1": "Each selected part is a tenth, not a hundredth.",
+        "hint_2": "Recall one equal part, then use the numerator to decide how many copies are needed.",
+        "worked_solution": "1/10 = 0.1 = 10%. → 7/10 = 7 × 1/10. → 7 × 0.1 = 0.7; 7 × 10% = 70%. → 7/10 = 0.7 = 70%."
+      },
+      "working": [
+        "1/10 = 0.1 = 10%.",
+        "7/10 = 7 × 1/10.",
+        "7 × 0.1 = 0.7; 7 × 10% = 70%.",
+        "7/10 = 0.7 = 70%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "benchmark_equivalence",
+          "title": "Connect the tenth family",
+          "n": 7,
+          "d": 10,
+          "given": "7/10 = ? = ?%",
+          "steps": [
+            "1/10 = 0.1 = 10%.",
+            "7/10 = 7 × 1/10.",
+            "7 × 0.1 = 0.7; 7 × 10% = 70%.",
+            "7/10 = 0.7 = 70%."
+          ],
+          "parts_by_step": [
+            1,
+            7,
+            7,
+            7
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_decimal": "Your percentage is correct. The selected parts occupy the tenths place in the decimal.",
+        "check_percent": "Your decimal is correct. Each tenth contains several hundredths, so do not copy just the numerator.",
+        "check_multiple": "Use seven copies of one tenth in both forms.",
+        "tenths_as_hundredths": "Those values describe seven hundredths. The original parts are tenths."
+      },
+      "response_patterns": [
+        {
+          "values": {
+            "decimal": ".07",
+            "percent": 7
+          },
+          "classification": "tenths_as_hundredths"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-03-P05",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Write 0.75 as a fraction and as a percentage.",
+      "target": "Preserve the value across benchmark fraction, decimal and percentage forms",
+      "response": {
+        "type": "benchmark_forms",
+        "fields": [
+          "fraction",
+          "percent"
+        ],
+        "input_label": "Complete both forms",
+        "require_simplest_form": false
+      },
+      "answer": {
+        "value": {
+          "fraction": {
+            "n": 3,
+            "d": 4
+          },
+          "percent": 75
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Your fraction and percentage both match the given decimal.",
+        "correct_after_support": "Correct. Your fraction and percentage both match the given decimal.",
+        "on_correct_math": "1/4 = 0.25 = 25%. → 3/4 = 3 × 1/4. → 3 × 0.25 = 0.75; 3 × 25% = 75%. → 3/4 = 0.75 = 75%.",
+        "on_incorrect_attempt_1": "Recognise the quarter-family value or use an exact hundredths fraction.",
+        "on_incorrect_attempt_2": "Recognise the quarter-family value or use an exact hundredths fraction.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "1/4 = 0.25 = 25%. → 3/4 = 3 × 1/4. → 3 × 0.25 = 0.75; 3 × 25% = 75%. → 3/4 = 0.75 = 75%."
+      },
+      "mathematical_support": {
+        "hint_1": "Recognise the quarter-family value or use an exact hundredths fraction.",
+        "hint_2": "Recall one equal part, then use the numerator to decide how many copies are needed.",
+        "worked_solution": "1/4 = 0.25 = 25%. → 3/4 = 3 × 1/4. → 3 × 0.25 = 0.75; 3 × 25% = 75%. → 3/4 = 0.75 = 75%."
+      },
+      "working": [
+        "1/4 = 0.25 = 25%.",
+        "3/4 = 3 × 1/4.",
+        "3 × 0.25 = 0.75; 3 × 25% = 75%.",
+        "3/4 = 0.75 = 75%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "benchmark_equivalence",
+          "title": "Connect the quarter family",
+          "n": 3,
+          "d": 4,
+          "given": "0.75 = ? = ?%",
+          "steps": [
+            "1/4 = 0.25 = 25%.",
+            "3/4 = 3 × 1/4.",
+            "3 × 0.25 = 0.75; 3 × 25% = 75%.",
+            "3/4 = 0.75 = 75%."
+          ],
+          "parts_by_step": [
+            1,
+            3,
+            3,
+            3
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "Your percentage is correct. Check that the fraction includes the full three-quarter amount.",
+        "simplify_fraction": "The fraction has the correct value. Simplify only if the question asks for simplest form.",
+        "check_percent": "Your fraction is correct. Match the percentage to the full decimal value.",
+        "check_multiple": "Match both forms to the given decimal. Do not reduce the amount to one quarter."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-03-P06",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Write 40% as a fraction and as a decimal.",
+      "target": "Preserve the value across benchmark fraction, decimal and percentage forms",
+      "response": {
+        "type": "benchmark_forms",
+        "fields": [
+          "fraction",
+          "decimal"
+        ],
+        "input_label": "Complete both forms",
+        "require_simplest_form": false
+      },
+      "answer": {
+        "value": {
+          "fraction": {
+            "n": 2,
+            "d": 5
+          },
+          "decimal": "0.4"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both forms describe the same two-fifths proportion.",
+        "correct_after_support": "Correct. Both forms describe the same two-fifths proportion.",
+        "on_correct_math": "1/5 = 0.2 = 20%. → 2/5 = 2 × 1/5. → 2 × 0.2 = 0.4; 2 × 20% = 40%. → 2/5 = 0.4 = 40%.",
+        "on_incorrect_attempt_1": "Use its count out of one hundred or recognise the matching fifth-family benchmark.",
+        "on_incorrect_attempt_2": "Use its count out of one hundred or recognise the matching fifth-family benchmark.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "1/5 = 0.2 = 20%. → 2/5 = 2 × 1/5. → 2 × 0.2 = 0.4; 2 × 20% = 40%. → 2/5 = 0.4 = 40%."
+      },
+      "mathematical_support": {
+        "hint_1": "Use its count out of one hundred or recognise the matching fifth-family benchmark.",
+        "hint_2": "Recall one equal part, then use the numerator to decide how many copies are needed.",
+        "worked_solution": "1/5 = 0.2 = 20%. → 2/5 = 2 × 1/5. → 2 × 0.2 = 0.4; 2 × 20% = 40%. → 2/5 = 0.4 = 40%."
+      },
+      "working": [
+        "1/5 = 0.2 = 20%.",
+        "2/5 = 2 × 1/5.",
+        "2 × 0.2 = 0.4; 2 × 20% = 40%.",
+        "2/5 = 0.4 = 40%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "benchmark_equivalence",
+          "title": "Connect the fifth family",
+          "n": 2,
+          "d": 5,
+          "given": "40% = ? = ?",
+          "steps": [
+            "1/5 = 0.2 = 20%.",
+            "2/5 = 2 × 1/5.",
+            "2 × 0.2 = 0.4; 2 × 20% = 40%.",
+            "2/5 = 0.4 = 40%."
+          ],
+          "parts_by_step": [
+            1,
+            2,
+            2,
+            2
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "Your decimal is correct. The fraction must describe the same parts-per-hundred amount.",
+        "simplify_fraction": "The fraction has the correct value. Simplify only if the question asks for simplest form.",
+        "check_decimal": "Your fraction is correct. Preserve the tens of hundredths in the decimal.",
+        "check_multiple": "Use the given percentage as a part of one whole in both forms."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-03-P07",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Which set contains three equivalent values?",
+      "target": "Preserve the value across benchmark fraction, decimal and percentage forms",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "3/4, 0.25, 25%",
+          "3/5, 0.6, 60%",
+          "2/5, 0.2, 20%",
+          "9/10, 0.09, 9%"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "3/5, 0.6, 60%"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. All three values in the selected set describe three fifths.",
+        "correct_after_support": "Correct. All three values in the selected set describe three fifths.",
+        "on_correct_math": "1/5 = 0.2 = 20%. → 3/5 = 3 × 1/5. → 3 × 0.2 = 0.6; 3 × 20% = 60%. → 3/5 = 0.6 = 60%.",
+        "on_incorrect_attempt_1": "Check every representation in a set, including the numerator’s number of copies.",
+        "on_incorrect_attempt_2": "Check every representation in a set, including the numerator’s number of copies.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "1/5 = 0.2 = 20%. → 3/5 = 3 × 1/5. → 3 × 0.2 = 0.6; 3 × 20% = 60%. → 3/5 = 0.6 = 60%."
+      },
+      "mathematical_support": {
+        "hint_1": "Check every representation in a set, including the numerator’s number of copies.",
+        "hint_2": "Recall one equal part, then use the numerator to decide how many copies are needed.",
+        "worked_solution": "1/5 = 0.2 = 20%. → 3/5 = 3 × 1/5. → 3 × 0.2 = 0.6; 3 × 20% = 60%. → 3/5 = 0.6 = 60%."
+      },
+      "working": [
+        "1/5 = 0.2 = 20%.",
+        "3/5 = 3 × 1/5.",
+        "3 × 0.2 = 0.6; 3 × 20% = 60%.",
+        "3/5 = 0.6 = 60%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "benchmark_equivalence",
+          "title": "Recognise equal values",
+          "n": 3,
+          "d": 5,
+          "given": "Choose one complete set.",
+          "steps": [
+            "1/5 = 0.2 = 20%.",
+            "3/5 = 3 × 1/5.",
+            "3 × 0.2 = 0.6; 3 × 20% = 60%.",
+            "3/5 = 0.6 = 60%."
+          ],
+          "parts_by_step": [
+            1,
+            3,
+            3,
+            3
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "3/4, 0.25, 25%": "The decimal and percentage describe one quarter, but the fraction contains three quarters.",
+        "2/5, 0.2, 20%": "The decimal and percentage describe one fifth, but the fraction contains two fifths.",
+        "9/10, 0.09, 9%": "The decimal and percentage describe hundredths, but the fraction describes tenths."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-03-X01",
+      "source_ref": {
+        "page": 17
+      },
+      "stage": "practice",
+      "prompt": "In a survey, three quarters of the students said that they walk to school. Write this proportion as a decimal and as a percentage.",
+      "target": "Preserve the value across benchmark fraction, decimal and percentage forms",
+      "response": {
+        "type": "benchmark_forms",
+        "fields": [
+          "decimal",
+          "percent"
+        ],
+        "input_label": "Complete both forms",
+        "require_simplest_form": false
+      },
+      "answer": {
+        "value": {
+          "decimal": "0.75",
+          "percent": 75
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both forms describe the proportion walking to school.",
+        "correct_after_support": "Correct. Both forms describe the proportion walking to school.",
+        "on_correct_math": "1/4 = 0.25 = 25%. → 3/4 = 3 × 1/4. → 3 × 0.25 = 0.75; 3 × 25% = 75%. → 3/4 = 0.75 = 75%.",
+        "on_incorrect_attempt_1": "Describe the students who walk, using the whole survey as the reference.",
+        "on_incorrect_attempt_2": "Describe the students who walk, using the whole survey as the reference.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "1/4 = 0.25 = 25%. → 3/4 = 3 × 1/4. → 3 × 0.25 = 0.75; 3 × 25% = 75%. → 3/4 = 0.75 = 75%."
+      },
+      "mathematical_support": {
+        "hint_1": "Describe the students who walk, using the whole survey as the reference.",
+        "hint_2": "Recall one equal part, then use the numerator to decide how many copies are needed.",
+        "worked_solution": "1/4 = 0.25 = 25%. → 3/4 = 3 × 1/4. → 3 × 0.25 = 0.75; 3 × 25% = 75%. → 3/4 = 0.75 = 75%."
+      },
+      "working": [
+        "1/4 = 0.25 = 25%.",
+        "3/4 = 3 × 1/4.",
+        "3 × 0.25 = 0.75; 3 × 25% = 75%.",
+        "3/4 = 0.75 = 75%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "benchmark_equivalence",
+          "title": "Walking to school",
+          "n": 3,
+          "d": 4,
+          "given": "3/4 of the surveyed students walk to school.",
+          "steps": [
+            "1/4 = 0.25 = 25%.",
+            "3/4 = 3 × 1/4.",
+            "3 × 0.25 = 0.75; 3 × 25% = 75%.",
+            "3/4 = 0.75 = 75%."
+          ],
+          "parts_by_step": [
+            1,
+            3,
+            3,
+            3
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "object": "students"
+        }
+      },
+      "response_feedback": {
+        "check_decimal": "Your percentage of walkers is correct. Check the decimal for the same three-quarter proportion.",
+        "check_percent": "Your decimal is correct. The percentage must also describe those who walk.",
+        "check_multiple": "Keep the walkers as the selected part and all surveyed students as the whole.",
+        "unit_value": "Those values describe one quarter. The walking group accounts for three quarters."
+      },
+      "response_patterns": [
+        {
+          "values": {
+            "decimal": ".25",
+            "percent": 25
+          },
+          "classification": "unit_value"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-03-X02",
+      "source_ref": {
+        "page": 17
+      },
+      "stage": "practice",
+      "prompt": "A shop has sold 40% of its tickets. Write this as a fraction in its simplest form and as a decimal.",
+      "target": "Preserve the value across benchmark fraction, decimal and percentage forms",
+      "response": {
+        "type": "benchmark_forms",
+        "fields": [
+          "fraction",
+          "decimal"
+        ],
+        "input_label": "Complete both forms",
+        "require_simplest_form": true
+      },
+      "answer": {
+        "value": {
+          "fraction": {
+            "n": 2,
+            "d": 5
+          },
+          "decimal": "0.4"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The simplest fraction and decimal both describe the sold tickets.",
+        "correct_after_support": "Correct. The simplest fraction and decimal both describe the sold tickets.",
+        "on_correct_math": "40% = 40/100. → 40/100 = 2/5 after dividing both parts by 20. → 2/5 = 0.4.",
+        "on_incorrect_attempt_1": "Keep the sold proportion, then check whether the fraction can be reduced.",
+        "on_incorrect_attempt_2": "Keep the sold proportion, then check whether the fraction can be reduced.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "40% = 40/100. → 40/100 = 2/5 after dividing both parts by 20. → 2/5 = 0.4."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the sold proportion, then check whether the fraction can be reduced.",
+        "hint_2": "Recall one equal part, then use the numerator to decide how many copies are needed.",
+        "worked_solution": "40% = 40/100. → 40/100 = 2/5 after dividing both parts by 20. → 2/5 = 0.4."
+      },
+      "working": [
+        "40% = 40/100.",
+        "40/100 = 2/5 after dividing both parts by 20.",
+        "2/5 = 0.4."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "benchmark_equivalence",
+          "title": "Tickets sold",
+          "n": 2,
+          "d": 5,
+          "given": "40% of all tickets sold.",
+          "steps": [
+            "40% = 40/100.",
+            "40/100 = 2/5 after dividing both parts by 20.",
+            "2/5 = 0.4."
+          ],
+          "parts_by_step": [
+            1,
+            2,
+            2,
+            2
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "object": "tickets"
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "Your decimal is correct. Check the fraction’s value against the sold proportion.",
+        "simplify_fraction": "Your fraction has the right value and your decimal is correct. Reduce the fraction using a common factor.",
+        "check_decimal": "Your simplest fraction is correct. Match the decimal to that sold proportion.",
+        "check_multiple": "Describe the tickets sold, not those still available, and use a simplest fraction."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-03-X03",
+      "source_ref": {
+        "page": 17
+      },
+      "stage": "practice",
+      "prompt": "A water tank is 0.8 full. Write this as a fraction in its simplest form and as a percentage.",
+      "target": "Preserve the value across benchmark fraction, decimal and percentage forms",
+      "response": {
+        "type": "benchmark_forms",
+        "fields": [
+          "fraction",
+          "percent"
+        ],
+        "input_label": "Complete both forms",
+        "require_simplest_form": true
+      },
+      "answer": {
+        "value": {
+          "fraction": {
+            "n": 4,
+            "d": 5
+          },
+          "percent": 80
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both forms describe the filled part of the tank, and the fraction is simplest.",
+        "correct_after_support": "Correct. Both forms describe the filled part of the tank, and the fraction is simplest.",
+        "on_correct_math": "0.8 = 8/10. → 8/10 = 4/5 after dividing both parts by 2. → 4/5 = 80%.",
+        "on_incorrect_attempt_1": "Use full capacity as the whole. Name the water-filled part and simplify the fraction.",
+        "on_incorrect_attempt_2": "Use full capacity as the whole. Name the water-filled part and simplify the fraction.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "0.8 = 8/10. → 8/10 = 4/5 after dividing both parts by 2. → 4/5 = 80%."
+      },
+      "mathematical_support": {
+        "hint_1": "Use full capacity as the whole. Name the water-filled part and simplify the fraction.",
+        "hint_2": "Recall one equal part, then use the numerator to decide how many copies are needed.",
+        "worked_solution": "0.8 = 8/10. → 8/10 = 4/5 after dividing both parts by 2. → 4/5 = 80%."
+      },
+      "working": [
+        "0.8 = 8/10.",
+        "8/10 = 4/5 after dividing both parts by 2.",
+        "4/5 = 80%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "benchmark_equivalence",
+          "title": "Water in the tank",
+          "n": 4,
+          "d": 5,
+          "given": "0.8 of the full tank capacity.",
+          "steps": [
+            "0.8 = 8/10.",
+            "8/10 = 4/5 after dividing both parts by 2.",
+            "4/5 = 80%."
+          ],
+          "parts_by_step": [
+            1,
+            4,
+            4,
+            4
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "object": "tank"
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "Your percentage filled is correct. Check the fraction against that filled proportion.",
+        "simplify_fraction": "Your fraction has the right value and your percentage is correct. Reduce the numerator and denominator together.",
+        "check_percent": "Your simplest fraction is correct. Name the same filled part as a percentage.",
+        "check_multiple": "Keep the filled capacity in both forms, not the empty capacity."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-03-X04",
+      "source_ref": {
+        "page": 17
+      },
+      "stage": "practice",
+      "prompt": "A battery is one quarter charged. Which display shows the same charge level?",
+      "target": "Preserve the value across benchmark fraction, decimal and percentage forms",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "0.25 and 25%",
+          "0.4 and 40%",
+          "0.5 and 50%",
+          "0.1 and 10%"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "0.25 and 25%"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. That display preserves the quarter-charge value in both forms.",
+        "correct_after_support": "Correct. That display preserves the quarter-charge value in both forms.",
+        "on_correct_math": "1/4 = 25/100. → 25/100 = 0.25 = 25%.",
+        "on_incorrect_attempt_1": "Use the quarter benchmark for the charged part of full capacity.",
+        "on_incorrect_attempt_2": "Use the quarter benchmark for the charged part of full capacity.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "1/4 = 25/100. → 25/100 = 0.25 = 25%."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the quarter benchmark for the charged part of full capacity.",
+        "hint_2": "Recall one equal part, then use the numerator to decide how many copies are needed.",
+        "worked_solution": "1/4 = 25/100. → 25/100 = 0.25 = 25%."
+      },
+      "working": [
+        "1/4 = 25/100.",
+        "25/100 = 0.25 = 25%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "benchmark_equivalence",
+          "title": "A quarter-charged battery",
+          "n": 1,
+          "d": 4,
+          "given": "One quarter charged.",
+          "steps": [
+            "1/4 = 25/100.",
+            "25/100 = 0.25 = 25%."
+          ],
+          "parts_by_step": [
+            1,
+            1
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "object": "battery"
+        }
+      },
+      "response_feedback": {
+        "0.4 and 40%": "That copies the denominator into a decimal digit instead of using a quarter’s value.",
+        "0.5 and 50%": "That shows a half charge, which is larger than the stated quarter charge.",
+        "0.1 and 10%": "That shows a tenth charge, which is smaller than the stated quarter charge."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-03-E01",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "exit",
+      "prompt": "Final check: write one quarter as a decimal and as a percentage.",
+      "target": "Preserve the value across benchmark fraction, decimal and percentage forms",
+      "response": {
+        "type": "benchmark_forms",
+        "fields": [
+          "decimal",
+          "percent"
+        ],
+        "input_label": "Complete both forms",
+        "require_simplest_form": false
+      },
+      "answer": {
+        "value": {
+          "decimal": "0.25",
+          "percent": 25
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both final entries preserve the quarter benchmark.",
+        "correct_after_support": "Correct. Both final entries preserve the quarter benchmark.",
+        "on_correct_math": "1/4 = 25/100. → 25/100 = 0.25 = 25%.",
+        "on_incorrect_attempt_1": "Review the quarter-sized benchmark in both forms.",
+        "on_incorrect_attempt_2": "Review the quarter-sized benchmark in both forms.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "1/4 = 25/100. → 25/100 = 0.25 = 25%."
+      },
+      "mathematical_support": {
+        "hint_1": "Review the quarter-sized benchmark in both forms.",
+        "hint_2": "Recall one equal part, then use the numerator to decide how many copies are needed.",
+        "worked_solution": "1/4 = 25/100. → 25/100 = 0.25 = 25%."
+      },
+      "working": [
+        "1/4 = 25/100.",
+        "25/100 = 0.25 = 25%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "benchmark_equivalence",
+          "title": "Connect the quarter family",
+          "n": 1,
+          "d": 4,
+          "given": "1/4 = ? = ?%",
+          "steps": [
+            "1/4 = 25/100.",
+            "25/100 = 0.25 = 25%."
+          ],
+          "parts_by_step": [
+            1,
+            1
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_decimal": "Your percentage is correct. The decimal must describe that same quarter.",
+        "check_percent": "Your decimal is correct. The percentage must preserve the same quarter-sized share.",
+        "check_multiple": "Review the size of one quarter, rather than copying the denominator digit."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-03-E02",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "exit",
+      "prompt": "Final check: write three fifths as a decimal and as a percentage.",
+      "target": "Preserve the value across benchmark fraction, decimal and percentage forms",
+      "response": {
+        "type": "benchmark_forms",
+        "fields": [
+          "decimal",
+          "percent"
+        ],
+        "input_label": "Complete both forms",
+        "require_simplest_form": false
+      },
+      "answer": {
+        "value": {
+          "decimal": "0.6",
+          "percent": 60
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both final forms include all three fifth-sized parts.",
+        "correct_after_support": "Correct. Both final forms include all three fifth-sized parts.",
+        "on_correct_math": "1/5 = 0.2 = 20%. → 3/5 = 3 × 1/5. → 3 × 0.2 = 0.6; 3 × 20% = 60%. → 3/5 = 0.6 = 60%.",
+        "on_incorrect_attempt_1": "Review how the numerator changes the one-fifth benchmark.",
+        "on_incorrect_attempt_2": "Review how the numerator changes the one-fifth benchmark.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "1/5 = 0.2 = 20%. → 3/5 = 3 × 1/5. → 3 × 0.2 = 0.6; 3 × 20% = 60%. → 3/5 = 0.6 = 60%."
+      },
+      "mathematical_support": {
+        "hint_1": "Review how the numerator changes the one-fifth benchmark.",
+        "hint_2": "Recall one equal part, then use the numerator to decide how many copies are needed.",
+        "worked_solution": "1/5 = 0.2 = 20%. → 3/5 = 3 × 1/5. → 3 × 0.2 = 0.6; 3 × 20% = 60%. → 3/5 = 0.6 = 60%."
+      },
+      "working": [
+        "1/5 = 0.2 = 20%.",
+        "3/5 = 3 × 1/5.",
+        "3 × 0.2 = 0.6; 3 × 20% = 60%.",
+        "3/5 = 0.6 = 60%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "benchmark_equivalence",
+          "title": "Connect the fifth family",
+          "n": 3,
+          "d": 5,
+          "given": "3/5 = ? = ?%",
+          "steps": [
+            "1/5 = 0.2 = 20%.",
+            "3/5 = 3 × 1/5.",
+            "3 × 0.2 = 0.6; 3 × 20% = 60%.",
+            "3/5 = 0.6 = 60%."
+          ],
+          "parts_by_step": [
+            1,
+            3,
+            3,
+            3
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_decimal": "Your percentage is correct. Check the decimal total of the three fifth-sized parts.",
+        "check_percent": "Your decimal is correct. Include all three fifths in the percentage.",
+        "check_multiple": "Review both equivalent values for the complete three-fifths amount.",
+        "unit_value": "Those forms describe one fifth. The final question requires three copies.",
+        "numerator_as_tenths": "Those forms describe three tenths. The final fraction names fifths."
+      },
+      "response_patterns": [
+        {
+          "values": {
+            "decimal": ".2",
+            "percent": 20
+          },
+          "classification": "unit_value"
+        },
+        {
+          "values": {
+            "decimal": ".3",
+            "percent": 30
+          },
+          "classification": "numerator_as_tenths"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-03-E03",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "exit",
+      "prompt": "Final check: write seven tenths as a decimal and as a percentage.",
+      "target": "Preserve the value across benchmark fraction, decimal and percentage forms",
+      "response": {
+        "type": "benchmark_forms",
+        "fields": [
+          "decimal",
+          "percent"
+        ],
+        "input_label": "Complete both forms",
+        "require_simplest_form": false
+      },
+      "answer": {
+        "value": {
+          "decimal": "0.7",
+          "percent": 70
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Your final decimal and percentage preserve the seven-tenths value.",
+        "correct_after_support": "Correct. Your final decimal and percentage preserve the seven-tenths value.",
+        "on_correct_math": "1/10 = 0.1 = 10%. → 7/10 = 7 × 1/10. → 7 × 0.1 = 0.7; 7 × 10% = 70%. → 7/10 = 0.7 = 70%.",
+        "on_incorrect_attempt_1": "Review tenths in both notations.",
+        "on_incorrect_attempt_2": "Review tenths in both notations.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "1/10 = 0.1 = 10%. → 7/10 = 7 × 1/10. → 7 × 0.1 = 0.7; 7 × 10% = 70%. → 7/10 = 0.7 = 70%."
+      },
+      "mathematical_support": {
+        "hint_1": "Review tenths in both notations.",
+        "hint_2": "Recall one equal part, then use the numerator to decide how many copies are needed.",
+        "worked_solution": "1/10 = 0.1 = 10%. → 7/10 = 7 × 1/10. → 7 × 0.1 = 0.7; 7 × 10% = 70%. → 7/10 = 0.7 = 70%."
+      },
+      "working": [
+        "1/10 = 0.1 = 10%.",
+        "7/10 = 7 × 1/10.",
+        "7 × 0.1 = 0.7; 7 × 10% = 70%.",
+        "7/10 = 0.7 = 70%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "benchmark_equivalence",
+          "title": "Connect the tenth family",
+          "n": 7,
+          "d": 10,
+          "given": "7/10 = ? = ?%",
+          "steps": [
+            "1/10 = 0.1 = 10%.",
+            "7/10 = 7 × 1/10.",
+            "7 × 0.1 = 0.7; 7 × 10% = 70%.",
+            "7/10 = 0.7 = 70%."
+          ],
+          "parts_by_step": [
+            1,
+            7,
+            7,
+            7
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_decimal": "Your percentage is correct. The decimal must record tenths, not hundredths.",
+        "check_percent": "Your decimal is correct. Each selected tenth accounts for multiple hundredths.",
+        "check_multiple": "Review the size of a tenth before combining the seven selected parts."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-03-E04",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "exit",
+      "prompt": "Final check: write 0.5 as a fraction and as a percentage.",
+      "target": "Preserve the value across benchmark fraction, decimal and percentage forms",
+      "response": {
+        "type": "benchmark_forms",
+        "fields": [
+          "fraction",
+          "percent"
+        ],
+        "input_label": "Complete both forms",
+        "require_simplest_form": false
+      },
+      "answer": {
+        "value": {
+          "fraction": {
+            "n": 1,
+            "d": 2
+          },
+          "percent": 50
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Your exact fraction and percentage both preserve the half-sized amount.",
+        "correct_after_support": "Correct. Your exact fraction and percentage both preserve the half-sized amount.",
+        "on_correct_math": "1/2 = 50/100. → 50/100 = 0.5 = 50%.",
+        "on_incorrect_attempt_1": "Review the half benchmark or an equivalent hundredths fraction.",
+        "on_incorrect_attempt_2": "Review the half benchmark or an equivalent hundredths fraction.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "1/2 = 50/100. → 50/100 = 0.5 = 50%."
+      },
+      "mathematical_support": {
+        "hint_1": "Review the half benchmark or an equivalent hundredths fraction.",
+        "hint_2": "Recall one equal part, then use the numerator to decide how many copies are needed.",
+        "worked_solution": "1/2 = 50/100. → 50/100 = 0.5 = 50%."
+      },
+      "working": [
+        "1/2 = 50/100.",
+        "50/100 = 0.5 = 50%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "benchmark_equivalence",
+          "title": "Connect the half family",
+          "n": 1,
+          "d": 2,
+          "given": "0.5 = ? = ?%",
+          "steps": [
+            "1/2 = 50/100.",
+            "50/100 = 0.5 = 50%."
+          ],
+          "parts_by_step": [
+            1,
+            1
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "Your percentage is correct. Match the fraction to a half of the whole.",
+        "simplify_fraction": "The fraction has the correct value. Simplification was not required in this final question.",
+        "check_percent": "Your fraction is correct. Match the percentage to the same half-sized amount.",
+        "check_multiple": "Review the half-sized value, not the fifth-sized value."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-03-E05",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "exit",
+      "prompt": "Final reasoning check: which statement is correct?",
+      "target": "Preserve the value across benchmark fraction, decimal and percentage forms",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "A multiple such as 3/5 can be built from three copies of 1/5 = 0.2 = 20%.",
+          "The denominator of a fraction is always its percentage.",
+          "The numerator can always be written directly after the decimal point.",
+          "Every fraction with denominator 5 is equal to 0.5 = 50%."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "A multiple such as 3/5 can be built from three copies of 1/5 = 0.2 = 20%."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The statement accounts for the size and number of selected parts.",
+        "correct_after_support": "Correct. The statement accounts for the size and number of selected parts.",
+        "on_correct_math": "1/5 = 0.2 = 20%. → 3/5 = 3 × 1/5. → 3 × 0.2 = 0.6; 3 × 20% = 60%. → 3/5 = 0.6 = 60%.",
+        "on_incorrect_attempt_1": "Review the roles of the unit benchmark and the numerator.",
+        "on_incorrect_attempt_2": "Review the roles of the unit benchmark and the numerator.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "1/5 = 0.2 = 20%. → 3/5 = 3 × 1/5. → 3 × 0.2 = 0.6; 3 × 20% = 60%. → 3/5 = 0.6 = 60%."
+      },
+      "mathematical_support": {
+        "hint_1": "Review the roles of the unit benchmark and the numerator.",
+        "hint_2": "Recall one equal part, then use the numerator to decide how many copies are needed.",
+        "worked_solution": "1/5 = 0.2 = 20%. → 3/5 = 3 × 1/5. → 3 × 0.2 = 0.6; 3 × 20% = 60%. → 3/5 = 0.6 = 60%."
+      },
+      "working": [
+        "1/5 = 0.2 = 20%.",
+        "3/5 = 3 × 1/5.",
+        "3 × 0.2 = 0.6; 3 × 20% = 60%.",
+        "3/5 = 0.6 = 60%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "benchmark_equivalence",
+          "title": "Explain how benchmark multiples work",
+          "n": 3,
+          "d": 5,
+          "given": "Choose the correct statement.",
+          "steps": [
+            "1/5 = 0.2 = 20%.",
+            "3/5 = 3 × 1/5.",
+            "3 × 0.2 = 0.6; 3 × 20% = 60%.",
+            "3/5 = 0.6 = 60%."
+          ],
+          "parts_by_step": [
+            1,
+            3,
+            3,
+            3
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "The denominator of a fraction is always its percentage.": "The denominator counts equal parts in the whole; it is not the percentage value.",
+        "The numerator can always be written directly after the decimal point.": "The numerator counts selected parts. Their size also depends on the denominator.",
+        "Every fraction with denominator 5 is equal to 0.5 = 50%.": "Fifths differ according to how many are selected. Their denominator does not make every value a half."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    }
+  ],
+  "canonical_lesson": {
+    "version": "FDP03-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

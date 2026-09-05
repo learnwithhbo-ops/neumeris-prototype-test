@@ -1,0 +1,1658 @@
+schema_version: '1.2'
+spec_intent:
+  source_of_truth: true
+  codex_role: implementation_only
+  codex_must_not_invent:
+  - mathematics
+  - question wording
+  - answers
+  - Ryan dialogue
+  - hints
+  - worked solutions
+  - animation storyboards
+  - branching behaviour
+  - mastery rules
+  - lesson sequence
+  - success reactions
+  - reaction sequencing
+  - atomic skill boundaries
+  allowed_engine_interpretation: Codex may implement responsive layout, reusable components, state handling and animation
+    mechanics only where they preserve the authored behaviour in this file.
+identity:
+  id: DEC-04
+  slug: compare-and-order-signed-decimals
+  title: Compare and Order Signed Decimals
+  strand: Number
+  cluster: Decimal Calculation
+  tier: GCSE Foundation
+  status: spec_complete_pending_owner_stage2_review_v1_2
+  estimated_minutes:
+    min: 24
+    max: 30
+curriculum:
+  basis: England GCSE Mathematics / national curriculum spine
+  role: direct_gcse_content
+  official_mapping:
+    direct_gcse_refs:
+    - source: AQA GCSE Mathematics 8300 Number subject content
+      ref: N1
+      relationship: This atomic capability implements or supports Foundation Number ordering/place-value/calculation
+        requirements within CUR-N03.
+    - source: AQA GCSE Mathematics 8300 Number subject content
+      ref: N2
+      relationship: This atomic capability implements or supports Foundation Number ordering/place-value/calculation
+        requirements within CUR-N03.
+    supports_gcse_refs: []
+    prior_curriculum_refs:
+    - source: Revily GCSE Foundation Stage 1 Atomic Skill Inventory v0.1
+      ref: CUR-N03
+      relationship: This count-blind atomic capability refines the provisional Launch 03 Decimal Calculation macro rows.
+  learning_objective: Compare and order positive and negative decimals by combining decimal place value with direction
+    and magnitude on the number line.
+  success_criteria:
+  - Compare and order positive and negative decimals by combining decimal place value with direction and magnitude on
+    the number line.
+  - Use the defining representation or method without changing decimal place value, sign or quantity meaning.
+  - Reject the central misconception using the defining invariant.
+  - Complete the independent exit evidence without hints.
+  boundaries:
+    includes:
+    - Negative decimals to thousandths.
+    - Mixed positive, zero and negative lists.
+    - Comparison symbols and ordering.
+    - Simple temperature and balance interpretations.
+    excludes:
+    - Signed decimal arithmetic as the main target.
+    - Absolute-value notation as a separate skill.
+    - Rounding.
+  ownership_review:
+    overlap_or_alias_candidates:
+    - P-N13
+    - P-N14
+    derived_from_prior_decimal_draft:
+    - DEC-08
+    rule: Pending Stage 2, production must choose one canonical mastery owner. If a P-N skill remains canonical, the
+      corresponding DEC skill becomes a package view/alias rather than a duplicate mastery state.
+dependencies:
+  required_skill_refs:
+  - DEC-02
+  - DEC-03
+  - P-N13
+  entry_assumptions:
+  - Whole-number arithmetic remains deliberately light enough that it does not obscure the decimal target.
+  downstream_rule: Do not store leads_to. Derive downstream relationships from other skills prerequisite references.
+engine_capability_requirements:
+  input_types:
+  - decimal
+  - integer
+  - single_choice
+  visual_primitives:
+  - signed_number_line
+  - decimal_place_value_grid
+  - ordering_cards
+  - single_choice
+  animation_actions:
+  - fade_in
+  - highlight
+  - contrast
+  - reveal_equation
+  - crossfade_phase
+  - align_columns
+  - move_marker
+  - scale_both
+  - rescale
+  - split_equal_groups
+  - combine_groups
+  audio_capabilities:
+  - queued_tts_or_audio
+  - caption_sync
+  - narration_animation_sync
+  - pause_for_input
+  - cancel_on_navigation
+  state_capabilities:
+  - attempt_count
+  - step_resume
+  - skill_state
+  - diagnostic_evidence
+  - exit_score
+  - confirmation_branch
+  - used_reaction_history
+experience_contract:
+  target_session_minutes:
+    min: 24
+    max: 30
+  ordered_phases:
+  - teaching
+  - guided
+  - faded
+  - independent_transfer
+  - practice
+  - exit
+  - completion
+  navigation:
+    default: linear_forward
+    back_button: May revisit completed explanatory screens but must not reset recorded submitted answers.
+    refresh_resume: Resume the current skill at the latest committed step.
+    start_again: Reset current lesson attempt only; preserve historical completion records.
+  global_ui_copy:
+    submit: Check answer
+    continue: Continue
+    try_again: Try again
+    show_me: Show me
+    finish: Finish
+    continue_learning: Continue learning
+    stop_for_today: Finish for today
+  progress_indicator:
+    show: true
+    student_facing_style: phase_progress_without_raw_internal_ids
+    do_not_show: Do not expose YAML ids, attempt counters, AO labels, ownership-review flags or provisional DEC codes
+      to the learner.
+  interaction_rules:
+  - Never auto-submit a mathematical answer.
+  - Disable Continue until the current required interaction is resolved.
+  - Do not use success confetti.
+  - Do not shake the entire screen on an error.
+  - Keep keyboard focus predictable after retry.
+voice_and_script:
+  performer_name: Ryan
+  dialogue_profile_ref: RYAN_DIALOGUE_PROFILE_v1.yaml
+  script_ownership: All lesson-specific mathematical speech is authored exactly in this skill file. Generic encouragement
+    is authored exactly in the referenced Ryan dialogue profile. The engine chooses eligible generic reactions; neither
+    Codex nor TTS may invent, paraphrase or extend any spoken line.
+  delivery_style:
+  - Natural UK English
+  - Warm, conversational and encouraging
+  - Praise understanding, independence or recovery rather than merely announcing correctness
+  - No one-word success reactions
+  - No repeated praise lead-ins within one lesson attempt
+  - Use pauses to let the learner inspect mathematical visuals
+  success_reaction_policy:
+    mode: engine_select_from_authored_profile
+    generation_allowed: false
+    selection_state_scope: lesson_attempt
+    persist_selection_history_on_refresh_resume: true
+    derive_context_from:
+    - stage
+    - attempt_count
+    - recovery_status
+    - practice_streak
+    no_repeat:
+    - reaction_id
+    - exact_text
+    - lead_family
+    fallback_when_pool_exhausted: Speak only the item-specific mathematical follow-up; never repeat or invent praise.
+    diagnostic: silent
+    exit_and_confirmation: silent_until_completion_result
+  adjacent_speech_policy:
+    after_success: Do not play a second generic acknowledgement before the next scene.
+    next_scene: Begin directly with new mathematical content.
+    semantic_echo: The next scene must not restate the mathematical conclusion just delivered in success feedback.
+    item_math_feedback: May follow the selected generic reaction only when it adds mathematical value.
+  caption_policy: Every spoken line must be captioned verbatim. Captions stay visible long enough to be read and disappear
+    before the next unrelated line.
+visual_language:
+  scene_rules:
+    composition: Use one central mathematical representation with one secondary support view only when it clarifies the
+      same decimal relationship.
+    labels: Keep decimal points, place-value headings, signs and units attached to the quantities they describe.
+    motion: Use movement only to expose place value, signed direction, shared scaling, regrouping, grouping or operation
+      structure.
+    focus: De-emphasise non-essential quantities at each narration beat and highlight only the active mathematical relationship.
+  semantic_roles:
+  - decimal_point
+  - place_value
+  - sign
+  - active_quantity
+  - student_focus
+  - error
+  - success
+  - unit_label
+  style_direction:
+  - Professional educational vector style
+  - Clean geometry and typography
+  - High contrast between mathematical roles
+  - Multiple relevant semantic colours rather than one monochrome palette
+  - No decorative illustrations that compete with the maths
+  reduced_motion: Replace physical movement with an equivalent two-state crossfade while preserving all intermediate
+    mathematical labels and narration meaning.
+diagnostic:
+  purpose: Locate whether this atomic skill should be taught; diagnostic distractors are not used to infer a misconception
+    type.
+  question_refs:
+  - DEC-04-D01
+  - DEC-04-D02
+  presentation: Two isolated items. No hints, worked solutions, correctness reveal or Ryan praise while diagnostic evidence
+    is being collected.
+  scoring:
+    2_of_2: DIAGNOSTIC_SECURE
+    0_or_1_of_2: NEEDS_WORK
+  routing: After selected diagnostic skills are scored, start at the earliest non-secure skill in prerequisite order;
+    probe external P-N prerequisites only when the response pattern makes that prerequisite plausibly blocking.
+concept_model:
+  core_idea: 'Signed decimal order follows the number line: farther right is always greater, while decimal place value
+    determines precise magnitude.'
+  invariant: For negative values, greater magnitude means a smaller number; the ordering direction of the number line
+    never changes.
+  mathematical_rule: Separate values by sign, use the number line for negative direction, and use aligned decimal place
+    value to compare magnitudes precisely.
+  vocabulary:
+  - negative
+  - positive
+  - zero
+  - magnitude
+  - greater than
+  - less than
+  - number line
+  must_notice:
+  - -0.4 is greater than -0.6 because it is closer to zero.
+  - All negative values are less than zero and all positive values are greater than zero.
+  - Place-value padding still works for negative decimals.
+  common_confusions:
+  - Orders negative decimals exactly like positive decimals.
+  - Ignores the negative sign.
+  - Assumes the larger magnitude is the greater signed value.
+lesson:
+  teaching_steps:
+  - id: T01
+    stage: teaching
+    purpose: Hook the core idea
+    estimated_seconds: 35
+    scene:
+      layout: single_central_teaching_canvas
+      objects:
+      - Show one concrete example using signed_number_line that makes the central relationship visible.
+      initial_state: Show one concrete example using signed_number_line that makes the central relationship visible.
+    narration:
+      script: 'Start with the meaning, not a shortcut: Signed decimal order follows the number line: farther right is
+        always greater, while decimal place value determines precise magnitude.'
+      delivery: Natural UK English; warm and concise; pause when the learner needs to inspect the representation.
+      sync_cues:
+      - cue: active mathematical relationship
+        action: fade_in
+    animation_timeline:
+    - id: A01
+      trigger: narration_sync
+      action: fade_in
+      target: signed_number_line
+      from: authored starting state
+      to: authored explanatory state
+      duration_ms: 800
+      easing: ease-in-out
+      semantic_purpose: Hook the core idea
+    learner_interaction:
+      question_ref: null
+      input_position: null
+      auto_focus: false
+    branching: {}
+    next_step: T02
+  - id: T02
+    stage: teaching
+    purpose: Make the invariant visible
+    estimated_seconds: 35
+    scene:
+      layout: single_central_teaching_canvas
+      objects:
+      - Hold the example value fixed while the signed_number_line changes only the representation needed to expose the
+        invariant.
+      initial_state: Hold the example value fixed while the signed_number_line changes only the representation needed
+        to expose the invariant.
+    narration:
+      script: 'The part that must stay reliable is this: For negative values, greater magnitude means a smaller number;
+        the ordering direction of the number line never changes.'
+      delivery: Natural UK English; warm and concise; pause when the learner needs to inspect the representation.
+      sync_cues:
+      - cue: active mathematical relationship
+        action: highlight
+    animation_timeline:
+    - id: A02
+      trigger: narration_sync
+      action: highlight
+      target: signed_number_line
+      from: authored starting state
+      to: authored explanatory state
+      duration_ms: 800
+      easing: ease-in-out
+      semantic_purpose: Make the invariant visible
+    learner_interaction:
+      question_ref: null
+      input_position: null
+      auto_focus: false
+    branching: {}
+    next_step: T03
+  - id: T03
+    stage: teaching
+    purpose: First checkpoint
+    estimated_seconds: 70
+    scene:
+      layout: single_central_teaching_canvas
+      objects:
+      - Present -2.04 ___ -2.4 beside the active representation.
+      initial_state: Present -2.04 ___ -2.4 beside the active representation.
+    narration:
+      script: Use the idea on this short check before we add another layer.
+      delivery: Natural UK English; warm and concise; pause when the learner needs to inspect the representation.
+      sync_cues:
+      - cue: active mathematical relationship
+        action: highlight
+    animation_timeline:
+    - id: A03
+      trigger: narration_sync
+      action: highlight
+      target: signed_number_line
+      from: authored starting state
+      to: authored explanatory state
+      duration_ms: 800
+      easing: ease-in-out
+      semantic_purpose: First checkpoint
+    learner_interaction:
+      question_ref: DEC-04-C01
+      input_position: adjacent_to_active_mathematical_object
+      auto_focus: true
+    branching:
+      correct: Use the authored question success behaviour and advance.
+      incorrect_attempt_1: Use the authored first hint and retry.
+      incorrect_attempt_2: Reveal the authored critical step, show the worked explanation and use recovery when referenced.
+    next_step: T04
+  - id: T04
+    stage: teaching
+    purpose: Model the exact method
+    estimated_seconds: 35
+    scene:
+      layout: single_central_teaching_canvas
+      objects:
+      - Work one explicit example from the C01/C02 family one mathematical change at a time; keep decimal points, signs
+        and units attached to their quantities.
+      initial_state: Work one explicit example from the C01/C02 family one mathematical change at a time; keep decimal
+        points, signs and units attached to their quantities.
+    narration:
+      script: 'Now turn the idea into a method: Separate values by sign, use the number line for negative direction,
+        and use aligned decimal place value to compare magnitudes precisely.'
+      delivery: Natural UK English; warm and concise; pause when the learner needs to inspect the representation.
+      sync_cues:
+      - cue: active mathematical relationship
+        action: reveal_equation
+    animation_timeline:
+    - id: A04
+      trigger: narration_sync
+      action: reveal_equation
+      target: signed_number_line
+      from: authored starting state
+      to: authored explanatory state
+      duration_ms: 800
+      easing: ease-in-out
+      semantic_purpose: Model the exact method
+    learner_interaction:
+      question_ref: null
+      input_position: null
+      auto_focus: false
+    branching: {}
+    next_step: T05
+  - id: T05
+    stage: teaching
+    purpose: Contrast the main misconception
+    estimated_seconds: 35
+    scene:
+      layout: single_central_teaching_canvas
+      objects:
+      - 'Show one correct structure beside one muted incorrect structure representing: Orders negative decimals exactly
+        like positive decimals.'
+      initial_state: 'Show one correct structure beside one muted incorrect structure representing: Orders negative decimals
+        exactly like positive decimals.'
+    narration:
+      script: 'A common trap is: Orders negative decimals exactly like positive decimals. Compare that with the correct
+        structure so the exact change in value is visible.'
+      delivery: Natural UK English; warm and concise; pause when the learner needs to inspect the representation.
+      sync_cues:
+      - cue: active mathematical relationship
+        action: contrast
+    animation_timeline:
+    - id: A05
+      trigger: narration_sync
+      action: contrast
+      target: signed_number_line
+      from: authored starting state
+      to: authored explanatory state
+      duration_ms: 800
+      easing: ease-in-out
+      semantic_purpose: Contrast the main misconception
+    learner_interaction:
+      question_ref: null
+      input_position: null
+      auto_focus: false
+    branching: {}
+    next_step: T06
+  - id: T06
+    stage: teaching
+    purpose: Second checkpoint
+    estimated_seconds: 70
+    scene:
+      layout: single_central_teaching_canvas
+      objects:
+      - Present -3.18 ___ -3.081 with less scaffolding.
+      initial_state: Present -3.18 ___ -3.081 with less scaffolding.
+    narration:
+      script: This one checks whether the same method still works when the surface form changes.
+      delivery: Natural UK English; warm and concise; pause when the learner needs to inspect the representation.
+      sync_cues:
+      - cue: active mathematical relationship
+        action: highlight
+    animation_timeline:
+    - id: A06
+      trigger: narration_sync
+      action: highlight
+      target: signed_number_line
+      from: authored starting state
+      to: authored explanatory state
+      duration_ms: 800
+      easing: ease-in-out
+      semantic_purpose: Second checkpoint
+    learner_interaction:
+      question_ref: DEC-04-C02
+      input_position: adjacent_to_active_mathematical_object
+      auto_focus: true
+    branching:
+      correct: Use the authored question success behaviour and advance.
+      incorrect_attempt_1: Use the authored first hint and retry.
+      incorrect_attempt_2: Reveal the authored critical step, show the worked explanation and use recovery when referenced.
+    next_step: T07
+  - id: T07
+    stage: teaching
+    purpose: Generalise beyond the first example
+    estimated_seconds: 35
+    scene:
+      layout: single_central_teaching_canvas
+      objects:
+      - Use a second example that preserves the same invariant while changing the numbers or representation.
+      initial_state: Use a second example that preserves the same invariant while changing the numbers or representation.
+    narration:
+      script: 'Notice what is still true: -0.4 is greater than -0.6 because it is closer to zero. That gives you a way
+        to check an unfamiliar example.'
+      delivery: Natural UK English; warm and concise; pause when the learner needs to inspect the representation.
+      sync_cues:
+      - cue: active mathematical relationship
+        action: crossfade_phase
+    animation_timeline:
+    - id: A07
+      trigger: narration_sync
+      action: crossfade_phase
+      target: signed_number_line
+      from: authored starting state
+      to: authored explanatory state
+      duration_ms: 800
+      easing: ease-in-out
+      semantic_purpose: Generalise beyond the first example
+    learner_interaction:
+      question_ref: null
+      input_position: null
+      auto_focus: false
+    branching: {}
+    next_step: T08
+  - id: T08
+    stage: teaching
+    purpose: Third checkpoint
+    estimated_seconds: 70
+    scene:
+      layout: single_central_teaching_canvas
+      objects:
+      - Present -0.75 ___ -0.8 with the central cue hidden until an incorrect attempt.
+      initial_state: Present -0.75 ___ -0.8 with the central cue hidden until an incorrect attempt.
+    narration:
+      script: Now decide the relationship yourself before I reveal any step.
+      delivery: Natural UK English; warm and concise; pause when the learner needs to inspect the representation.
+      sync_cues:
+      - cue: active mathematical relationship
+        action: highlight
+    animation_timeline:
+    - id: A08
+      trigger: narration_sync
+      action: highlight
+      target: signed_number_line
+      from: authored starting state
+      to: authored explanatory state
+      duration_ms: 800
+      easing: ease-in-out
+      semantic_purpose: Third checkpoint
+    learner_interaction:
+      question_ref: DEC-04-C03
+      input_position: adjacent_to_active_mathematical_object
+      auto_focus: true
+    branching:
+      correct: Use the authored question success behaviour and advance.
+      incorrect_attempt_1: Use the authored first hint and retry.
+      incorrect_attempt_2: Reveal the authored critical step, show the worked explanation and use recovery when referenced.
+    next_step: T09
+  - id: T09
+    stage: teaching
+    purpose: Build the self-check
+    estimated_seconds: 35
+    scene:
+      layout: single_central_teaching_canvas
+      objects:
+      - Display a compact self-check panel tied directly to the active signed_number_line.
+      initial_state: Display a compact self-check panel tied directly to the active signed_number_line.
+    narration:
+      script: 'Before you submit, use this self-check: Place zero mentally, decide which side each value lies on, then
+        remember that farther right is always greater.'
+      delivery: Natural UK English; warm and concise; pause when the learner needs to inspect the representation.
+      sync_cues:
+      - cue: active mathematical relationship
+        action: reveal_equation
+    animation_timeline:
+    - id: A09
+      trigger: narration_sync
+      action: reveal_equation
+      target: signed_number_line
+      from: authored starting state
+      to: authored explanatory state
+      duration_ms: 800
+      easing: ease-in-out
+      semantic_purpose: Build the self-check
+    learner_interaction:
+      question_ref: null
+      input_position: null
+      auto_focus: false
+    branching: {}
+    next_step: T10
+  - id: T10
+    stage: teaching
+    purpose: Transition to transfer
+    estimated_seconds: 35
+    scene:
+      layout: single_central_teaching_canvas
+      objects:
+      - Clear the teaching canvas without erasing completed evidence and open the guided transfer item.
+      initial_state: Clear the teaching canvas without erasing completed evidence and open the guided transfer item.
+    narration:
+      script: You have the idea and the method. I will keep one useful cue for the guided item, then take it away.
+      delivery: Natural UK English; warm and concise; pause when the learner needs to inspect the representation.
+      sync_cues:
+      - cue: active mathematical relationship
+        action: crossfade_phase
+    animation_timeline:
+    - id: A10
+      trigger: narration_sync
+      action: crossfade_phase
+      target: signed_number_line
+      from: authored starting state
+      to: authored explanatory state
+      duration_ms: 800
+      easing: ease-in-out
+      semantic_purpose: Transition to transfer
+    learner_interaction:
+      question_ref: null
+      input_position: null
+      auto_focus: false
+    branching: {}
+    next_step: G01
+  transfer_steps:
+    G01:
+      stage: guided
+      question_ref: DEC-04-G01
+      support_level: high
+      estimated_seconds: 90
+      pre_question_script: I will keep one useful structural cue visible for this one. Use it, but make the mathematical
+        decision yourself.
+      visual_before_answer: Show the central representation from teaching with only the essential cue visible.
+      correct_next: F01
+      recovery_ref: DEC-04-R01
+    F01:
+      stage: faded
+      question_ref: DEC-04-F01
+      support_level: reduced
+      estimated_seconds: 100
+      pre_question_script: This time the main cue is hidden. Work out which part of the method matters before you calculate.
+      visual_before_answer: No worked step is visible. A targeted mathematical cue appears only after an incorrect first
+        attempt.
+      correct_next: I01
+      recovery_ref: DEC-04-R02
+    I01:
+      stage: independent_transfer
+      question_ref: DEC-04-I01
+      support_level: none
+      estimated_seconds: 110
+      pre_question_script: Now do this one without a starting cue. Check the place value, sign, scale or unit before
+        you submit.
+      visual_before_answer: No initial support.
+      correct_next: P01
+      recovery_ref: DEC-04-R03
+  practice:
+    intro_script: Five practice questions now. Use the method independently; if you need a hint, use it to correct the
+      exact step rather than guessing again.
+    question_order:
+    - DEC-04-P01
+    - DEC-04-P02
+    - DEC-04-P03
+    - DEC-04-P04
+    - DEC-04-P05
+    question_count: 5
+    feedback_policy: First wrong attempt gives the authored mathematical hint and retry. Second wrong attempt reveals
+      the critical step and worked solution. Practice performance is reported but does not grant mastery.
+    between_question_transition: Do not add a generic transition immediately after a success reaction; move directly
+      to the next question unless a genuine spoken bridge is required.
+  exit:
+    intro_script: Last check. Two questions, no hints while you are answering. This is just to see whether the idea holds
+      when I step away.
+    primary_question_refs:
+    - DEC-04-E01
+    - DEC-04-E02
+    confirmation_question_refs:
+    - DEC-04-E03
+    - DEC-04-E04
+    submission_policy: One submission per exit item. Do not reveal correctness until both primary exit items are completed.
+    mastery_logic:
+      2_correct_of_2: SECURE
+      1_correct_of_2: Ask one unused confirmation item. Correct -> SECURE. Incorrect -> NEEDS_WORK.
+      0_correct_of_2: NEEDS_WORK
+    confirmation_selection: Use E03 first unless already seen in this lesson attempt; otherwise E04.
+completion:
+  secure:
+    title: Skill complete
+    ryan_script: That was a strong finish. You have the key idea for compare and order signed decimals and you were able
+      to use it independently. You can finish for today or keep going while it is fresh.
+    state_write: SECURE
+    buttons:
+    - Finish for today
+    - Continue learning
+  needs_work:
+    title: One more pass will help
+    ryan_script: You have made progress, but I want this decimal relationship to feel reliable before we add another
+      layer. We will give it one more focused pass rather than rushing on.
+    state_write: NEEDS_WORK
+    buttons:
+    - Try this skill again
+    - Finish for today
+question_bank:
+- id: DEC-04-D01
+  stage: diagnostic
+  target: Compare negative decimals
+  ao: AO1
+  difficulty: 2
+  prompt: -0.6 ___ -0.42
+  response:
+    type: single_choice
+    keyboard_submit: true
+    options:
+    - <
+    - '='
+    - '>'
+    shuffle_options: false
+  answer:
+    value: <
+  attempt_policy:
+    policy: single_submit_silent
+    max_attempts_before_resolution: 1
+    feedback_timing: none_during_diagnostic
+    submit_label: Next
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: null
+    on_incorrect_attempt_1: Record the response silently and move on.
+    on_incorrect_attempt_2: Not applicable in diagnostic.
+    worked_explanation: No worked solution is shown during the diagnostic.
+  mathematical_support:
+    hint_1: null
+    hint_2: null
+    worked_solution: No worked solution is shown during the diagnostic.
+  branching:
+    on_submit: Record correctness as diagnostic evidence, do not reveal correctness, advance to the next diagnostic item.
+    next: Next diagnostic item or diagnostic routing result.
+  success_reaction:
+    mode: silent
+    context_override: null
+    selection_rule: No spoken success reaction in this stage.
+- id: DEC-04-D02
+  stage: diagnostic
+  target: Compare negative decimals
+  ao: AO1
+  difficulty: 2
+  prompt: -1.06 ___ -1.6
+  response:
+    type: single_choice
+    keyboard_submit: true
+    options:
+    - <
+    - '='
+    - '>'
+    shuffle_options: false
+  answer:
+    value: '>'
+  attempt_policy:
+    policy: single_submit_silent
+    max_attempts_before_resolution: 1
+    feedback_timing: none_during_diagnostic
+    submit_label: Next
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: null
+    on_incorrect_attempt_1: Record the response silently and move on.
+    on_incorrect_attempt_2: Not applicable in diagnostic.
+    worked_explanation: No worked solution is shown during the diagnostic.
+  mathematical_support:
+    hint_1: null
+    hint_2: null
+    worked_solution: No worked solution is shown during the diagnostic.
+  branching:
+    on_submit: Record correctness as diagnostic evidence, do not reveal correctness, advance to the next diagnostic item.
+    next: Next diagnostic item or diagnostic routing result.
+  success_reaction:
+    mode: silent
+    context_override: null
+    selection_rule: No spoken success reaction in this stage.
+- id: DEC-04-C01
+  stage: teaching_checkpoint
+  target: Compare negative decimals
+  ao: AO1
+  difficulty: 2
+  prompt: -2.04 ___ -2.4
+  response:
+    type: single_choice
+    keyboard_submit: true
+    options:
+    - <
+    - '='
+    - '>'
+    shuffle_options: false
+  answer:
+    value: '>'
+  attempt_policy:
+    policy: hint_retry_show_then_recovery
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: On the number line, the value farther right is greater, so -2.04 > -2.4.
+    on_incorrect_attempt_1: Picture the values on a number line with zero as a reference.
+    on_incorrect_attempt_2: For two negatives, the value closer to zero is greater.
+    worked_explanation: On the number line, the value farther right is greater, so -2.04 > -2.4.
+  mathematical_support:
+    hint_1: Picture the values on a number line with zero as a reference.
+    hint_2: For two negatives, the value closer to zero is greater.
+    worked_solution: On the number line, the value farther right is greater, so -2.04 > -2.4.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null
+      and continue.
+    on_incorrect_attempt_1: Speak the first authored hint, focus the relevant mathematical object, then retry the same
+      item.
+    on_incorrect_attempt_2: Speak the second authored hint, reveal the critical step and worked explanation, then continue
+      or route to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the response area and focus the exact decimal relationship referenced by hint 1; never
+      shake the whole screen.
+    incorrect_attempt_2: Reveal the critical authored mathematical step or representation, then show the worked explanation.
+  recovery_item_ref: DEC-04-R01
+- id: DEC-04-C02
+  stage: teaching_checkpoint
+  target: Compare negative decimals
+  ao: AO1
+  difficulty: 2
+  prompt: -3.18 ___ -3.081
+  response:
+    type: single_choice
+    keyboard_submit: true
+    options:
+    - <
+    - '='
+    - '>'
+    shuffle_options: false
+  answer:
+    value: <
+  attempt_policy:
+    policy: hint_retry_show_then_recovery
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: On the number line, the value farther right is greater, so -3.18 < -3.081.
+    on_incorrect_attempt_1: Picture the values on a number line with zero as a reference.
+    on_incorrect_attempt_2: For two negatives, the value closer to zero is greater.
+    worked_explanation: On the number line, the value farther right is greater, so -3.18 < -3.081.
+  mathematical_support:
+    hint_1: Picture the values on a number line with zero as a reference.
+    hint_2: For two negatives, the value closer to zero is greater.
+    worked_solution: On the number line, the value farther right is greater, so -3.18 < -3.081.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null
+      and continue.
+    on_incorrect_attempt_1: Speak the first authored hint, focus the relevant mathematical object, then retry the same
+      item.
+    on_incorrect_attempt_2: Speak the second authored hint, reveal the critical step and worked explanation, then continue
+      or route to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the response area and focus the exact decimal relationship referenced by hint 1; never
+      shake the whole screen.
+    incorrect_attempt_2: Reveal the critical authored mathematical step or representation, then show the worked explanation.
+  recovery_item_ref: DEC-04-R02
+- id: DEC-04-C03
+  stage: teaching_checkpoint
+  target: Compare negative decimals
+  ao: AO1
+  difficulty: 2
+  prompt: -0.75 ___ -0.8
+  response:
+    type: single_choice
+    keyboard_submit: true
+    options:
+    - <
+    - '='
+    - '>'
+    shuffle_options: false
+  answer:
+    value: '>'
+  attempt_policy:
+    policy: hint_retry_show_then_recovery
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: On the number line, the value farther right is greater, so -0.75 > -0.8.
+    on_incorrect_attempt_1: Picture the values on a number line with zero as a reference.
+    on_incorrect_attempt_2: For two negatives, the value closer to zero is greater.
+    worked_explanation: On the number line, the value farther right is greater, so -0.75 > -0.8.
+  mathematical_support:
+    hint_1: Picture the values on a number line with zero as a reference.
+    hint_2: For two negatives, the value closer to zero is greater.
+    worked_solution: On the number line, the value farther right is greater, so -0.75 > -0.8.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null
+      and continue.
+    on_incorrect_attempt_1: Speak the first authored hint, focus the relevant mathematical object, then retry the same
+      item.
+    on_incorrect_attempt_2: Speak the second authored hint, reveal the critical step and worked explanation, then continue
+      or route to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the response area and focus the exact decimal relationship referenced by hint 1; never
+      shake the whole screen.
+    incorrect_attempt_2: Reveal the critical authored mathematical step or representation, then show the worked explanation.
+  recovery_item_ref: DEC-04-R03
+- id: DEC-04-G01
+  stage: guided
+  target: Compare negative decimals
+  ao: AO1
+  difficulty: 2
+  prompt: -4.003 ___ -4.03
+  response:
+    type: single_choice
+    keyboard_submit: true
+    options:
+    - <
+    - '='
+    - '>'
+    shuffle_options: false
+  answer:
+    value: '>'
+  attempt_policy:
+    policy: hint_retry_show_then_recovery
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: On the number line, the value farther right is greater, so -4.003 > -4.03.
+    on_incorrect_attempt_1: Picture the values on a number line with zero as a reference.
+    on_incorrect_attempt_2: For two negatives, the value closer to zero is greater.
+    worked_explanation: On the number line, the value farther right is greater, so -4.003 > -4.03.
+  mathematical_support:
+    hint_1: Picture the values on a number line with zero as a reference.
+    hint_2: For two negatives, the value closer to zero is greater.
+    worked_solution: On the number line, the value farther right is greater, so -4.003 > -4.03.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null
+      and continue.
+    on_incorrect_attempt_1: Speak the first authored hint, focus the relevant mathematical object, then retry the same
+      item.
+    on_incorrect_attempt_2: Speak the second authored hint, reveal the critical step and worked explanation, then continue
+      or route to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the response area and focus the exact decimal relationship referenced by hint 1; never
+      shake the whole screen.
+    incorrect_attempt_2: Reveal the critical authored mathematical step or representation, then show the worked explanation.
+  recovery_item_ref: DEC-04-R01
+- id: DEC-04-F01
+  stage: faded
+  target: Compare negative decimals
+  ao: AO1
+  difficulty: 2
+  prompt: -9.1 ___ -9.09
+  response:
+    type: single_choice
+    keyboard_submit: true
+    options:
+    - <
+    - '='
+    - '>'
+    shuffle_options: false
+  answer:
+    value: <
+  attempt_policy:
+    policy: hint_retry_show_then_recovery
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: On the number line, the value farther right is greater, so -9.1 < -9.09.
+    on_incorrect_attempt_1: Picture the values on a number line with zero as a reference.
+    on_incorrect_attempt_2: For two negatives, the value closer to zero is greater.
+    worked_explanation: On the number line, the value farther right is greater, so -9.1 < -9.09.
+  mathematical_support:
+    hint_1: Picture the values on a number line with zero as a reference.
+    hint_2: For two negatives, the value closer to zero is greater.
+    worked_solution: On the number line, the value farther right is greater, so -9.1 < -9.09.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null
+      and continue.
+    on_incorrect_attempt_1: Speak the first authored hint, focus the relevant mathematical object, then retry the same
+      item.
+    on_incorrect_attempt_2: Speak the second authored hint, reveal the critical step and worked explanation, then continue
+      or route to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the response area and focus the exact decimal relationship referenced by hint 1; never
+      shake the whole screen.
+    incorrect_attempt_2: Reveal the critical authored mathematical step or representation, then show the worked explanation.
+  recovery_item_ref: DEC-04-R02
+- id: DEC-04-I01
+  stage: independent
+  target: Compare negative decimals
+  ao: AO1
+  difficulty: 2
+  prompt: -0.009 ___ -0.09
+  response:
+    type: single_choice
+    keyboard_submit: true
+    options:
+    - <
+    - '='
+    - '>'
+    shuffle_options: false
+  answer:
+    value: '>'
+  attempt_policy:
+    policy: hint_retry_show_then_recovery
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: On the number line, the value farther right is greater, so -0.009 > -0.09.
+    on_incorrect_attempt_1: Picture the values on a number line with zero as a reference.
+    on_incorrect_attempt_2: For two negatives, the value closer to zero is greater.
+    worked_explanation: On the number line, the value farther right is greater, so -0.009 > -0.09.
+  mathematical_support:
+    hint_1: Picture the values on a number line with zero as a reference.
+    hint_2: For two negatives, the value closer to zero is greater.
+    worked_solution: On the number line, the value farther right is greater, so -0.009 > -0.09.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null
+      and continue.
+    on_incorrect_attempt_1: Speak the first authored hint, focus the relevant mathematical object, then retry the same
+      item.
+    on_incorrect_attempt_2: Speak the second authored hint, reveal the critical step and worked explanation, then continue
+      or route to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the response area and focus the exact decimal relationship referenced by hint 1; never
+      shake the whole screen.
+    incorrect_attempt_2: Reveal the critical authored mathematical step or representation, then show the worked explanation.
+  recovery_item_ref: DEC-04-R03
+- id: DEC-04-P01
+  stage: practice
+  target: Compare negative decimals
+  ao: AO1
+  difficulty: 2
+  prompt: -2.2 ___ -2.20
+  response:
+    type: single_choice
+    keyboard_submit: true
+    options:
+    - <
+    - '='
+    - '>'
+    shuffle_options: false
+  answer:
+    value: '='
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: On the number line, the value farther right is greater, so -2.2 = -2.20.
+    on_incorrect_attempt_1: Picture the values on a number line with zero as a reference.
+    on_incorrect_attempt_2: For two negatives, the value closer to zero is greater.
+    worked_explanation: On the number line, the value farther right is greater, so -2.2 = -2.20.
+  mathematical_support:
+    hint_1: Picture the values on a number line with zero as a reference.
+    hint_2: For two negatives, the value closer to zero is greater.
+    worked_solution: On the number line, the value farther right is greater, so -2.2 = -2.20.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null
+      and continue.
+    on_incorrect_attempt_1: Speak the first authored hint, focus the relevant mathematical object, then retry the same
+      item.
+    on_incorrect_attempt_2: Speak the second authored hint, reveal the critical step and worked explanation, then continue
+      or route to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the response area and focus the exact decimal relationship referenced by hint 1; never
+      shake the whole screen.
+    incorrect_attempt_2: Reveal the critical authored mathematical step or representation, then show the worked explanation.
+- id: DEC-04-P02
+  stage: practice
+  target: Compare negative decimals
+  ao: AO1
+  difficulty: 2
+  prompt: -5.7 ___ -5.07
+  response:
+    type: single_choice
+    keyboard_submit: true
+    options:
+    - <
+    - '='
+    - '>'
+    shuffle_options: false
+  answer:
+    value: <
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: On the number line, the value farther right is greater, so -5.7 < -5.07.
+    on_incorrect_attempt_1: Picture the values on a number line with zero as a reference.
+    on_incorrect_attempt_2: For two negatives, the value closer to zero is greater.
+    worked_explanation: On the number line, the value farther right is greater, so -5.7 < -5.07.
+  mathematical_support:
+    hint_1: Picture the values on a number line with zero as a reference.
+    hint_2: For two negatives, the value closer to zero is greater.
+    worked_solution: On the number line, the value farther right is greater, so -5.7 < -5.07.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null
+      and continue.
+    on_incorrect_attempt_1: Speak the first authored hint, focus the relevant mathematical object, then retry the same
+      item.
+    on_incorrect_attempt_2: Speak the second authored hint, reveal the critical step and worked explanation, then continue
+      or route to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the response area and focus the exact decimal relationship referenced by hint 1; never
+      shake the whole screen.
+    incorrect_attempt_2: Reveal the critical authored mathematical step or representation, then show the worked explanation.
+- id: DEC-04-P03
+  stage: practice
+  target: Order signed decimals
+  ao: AO2
+  difficulty: 3
+  prompt: 'Order from smallest to largest: -1.2, -1.08, -1.25.'
+  response:
+    type: single_choice
+    keyboard_submit: true
+    options:
+    - -1.25, -1.2, -1.08
+    - -1.2, -1.08, -1.25
+    - -1.2, -1.25, -1.08
+    - -1.08, -1.2, -1.25
+    shuffle_options: false
+  answer:
+    value: -1.25, -1.2, -1.08
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: 'Use the number line and place value together: -1.25, -1.2, -1.08.'
+    on_incorrect_attempt_1: Picture the values on a number line with zero as a reference.
+    on_incorrect_attempt_2: For two negatives, the value closer to zero is greater.
+    worked_explanation: 'Use the number line and place value together: -1.25, -1.2, -1.08.'
+  mathematical_support:
+    hint_1: Picture the values on a number line with zero as a reference.
+    hint_2: For two negatives, the value closer to zero is greater.
+    worked_solution: 'Use the number line and place value together: -1.25, -1.2, -1.08.'
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null
+      and continue.
+    on_incorrect_attempt_1: Speak the first authored hint, focus the relevant mathematical object, then retry the same
+      item.
+    on_incorrect_attempt_2: Speak the second authored hint, reveal the critical step and worked explanation, then continue
+      or route to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the response area and focus the exact decimal relationship referenced by hint 1; never
+      shake the whole screen.
+    incorrect_attempt_2: Reveal the critical authored mathematical step or representation, then show the worked explanation.
+- id: DEC-04-P04
+  stage: practice
+  target: Order signed decimals
+  ao: AO2
+  difficulty: 3
+  prompt: 'Order from smallest to largest: -0.9, 0.09, -0.09.'
+  response:
+    type: single_choice
+    keyboard_submit: true
+    options:
+    - -0.9, -0.09, 0.09
+    - -0.9, 0.09, -0.09
+    - 0.09, -0.9, -0.09
+    - 0.09, -0.09, -0.9
+    shuffle_options: false
+  answer:
+    value: -0.9, -0.09, 0.09
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: 'Use the number line and place value together: -0.9, -0.09, 0.09.'
+    on_incorrect_attempt_1: Picture the values on a number line with zero as a reference.
+    on_incorrect_attempt_2: For two negatives, the value closer to zero is greater.
+    worked_explanation: 'Use the number line and place value together: -0.9, -0.09, 0.09.'
+  mathematical_support:
+    hint_1: Picture the values on a number line with zero as a reference.
+    hint_2: For two negatives, the value closer to zero is greater.
+    worked_solution: 'Use the number line and place value together: -0.9, -0.09, 0.09.'
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null
+      and continue.
+    on_incorrect_attempt_1: Speak the first authored hint, focus the relevant mathematical object, then retry the same
+      item.
+    on_incorrect_attempt_2: Speak the second authored hint, reveal the critical step and worked explanation, then continue
+      or route to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the response area and focus the exact decimal relationship referenced by hint 1; never
+      shake the whole screen.
+    incorrect_attempt_2: Reveal the critical authored mathematical step or representation, then show the worked explanation.
+- id: DEC-04-P05
+  stage: practice
+  target: Order signed decimals
+  ao: AO2
+  difficulty: 3
+  prompt: 'Order from smallest to largest: -2.04, -2.4, 0.'
+  response:
+    type: single_choice
+    keyboard_submit: true
+    options:
+    - -2.4, -2.04, 0
+    - -2.04, -2.4, 0
+    - -2.04, 0, -2.4
+    - -2.4, 0, -2.04
+    shuffle_options: false
+  answer:
+    value: -2.4, -2.04, 0
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: 'Use the number line and place value together: -2.4, -2.04, 0.'
+    on_incorrect_attempt_1: Picture the values on a number line with zero as a reference.
+    on_incorrect_attempt_2: For two negatives, the value closer to zero is greater.
+    worked_explanation: 'Use the number line and place value together: -2.4, -2.04, 0.'
+  mathematical_support:
+    hint_1: Picture the values on a number line with zero as a reference.
+    hint_2: For two negatives, the value closer to zero is greater.
+    worked_solution: 'Use the number line and place value together: -2.4, -2.04, 0.'
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null
+      and continue.
+    on_incorrect_attempt_1: Speak the first authored hint, focus the relevant mathematical object, then retry the same
+      item.
+    on_incorrect_attempt_2: Speak the second authored hint, reveal the critical step and worked explanation, then continue
+      or route to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the response area and focus the exact decimal relationship referenced by hint 1; never
+      shake the whole screen.
+    incorrect_attempt_2: Reveal the critical authored mathematical step or representation, then show the worked explanation.
+- id: DEC-04-E01
+  stage: exit
+  target: Order signed decimals
+  ao: AO2
+  difficulty: 3
+  prompt: 'Order from smallest to largest: -0.5, 0, -0.05.'
+  response:
+    type: single_choice
+    keyboard_submit: true
+    options:
+    - -0.5, -0.05, 0
+    - -0.5, 0, -0.05
+    - 0, -0.5, -0.05
+    - 0, -0.05, -0.5
+    shuffle_options: false
+  answer:
+    value: -0.5, -0.05, 0
+  attempt_policy:
+    policy: single_submit_deferred_feedback
+    max_attempts_before_resolution: 1
+    feedback_timing: after_mastery_decision
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: null
+    on_incorrect_attempt_1: No hint or correctness message during the independent exit or confirmation check.
+    on_incorrect_attempt_2: Not applicable; one submission only.
+    worked_explanation: 'After scoring: Use the number line and place value together: -0.5, -0.05, 0.'
+  mathematical_support:
+    hint_1: null
+    hint_2: null
+    worked_solution: 'Use the number line and place value together: -0.5, -0.05, 0.'
+  branching:
+    on_submit: Lock the response and record first-attempt correctness without revealing it immediately.
+    next: Continue the exit sequence; reveal worked feedback only after the mastery decision.
+  success_reaction:
+    mode: silent
+    context_override: null
+    selection_rule: No spoken success reaction in this stage.
+- id: DEC-04-E02
+  stage: exit
+  target: Order signed decimals
+  ao: AO2
+  difficulty: 3
+  prompt: 'Order from smallest to largest: 1.2, -1.2, 0.12.'
+  response:
+    type: single_choice
+    keyboard_submit: true
+    options:
+    - -1.2, 0.12, 1.2
+    - 1.2, -1.2, 0.12
+    - 1.2, 0.12, -1.2
+    - -1.2, 1.2, 0.12
+    shuffle_options: false
+  answer:
+    value: -1.2, 0.12, 1.2
+  attempt_policy:
+    policy: single_submit_deferred_feedback
+    max_attempts_before_resolution: 1
+    feedback_timing: after_mastery_decision
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: null
+    on_incorrect_attempt_1: No hint or correctness message during the independent exit or confirmation check.
+    on_incorrect_attempt_2: Not applicable; one submission only.
+    worked_explanation: 'After scoring: Use the number line and place value together: -1.2, 0.12, 1.2.'
+  mathematical_support:
+    hint_1: null
+    hint_2: null
+    worked_solution: 'Use the number line and place value together: -1.2, 0.12, 1.2.'
+  branching:
+    on_submit: Lock the response and record first-attempt correctness without revealing it immediately.
+    next: Continue the exit sequence; reveal worked feedback only after the mastery decision.
+  success_reaction:
+    mode: silent
+    context_override: null
+    selection_rule: No spoken success reaction in this stage.
+- id: DEC-04-E03
+  stage: confirmation
+  target: Order signed decimals
+  ao: AO2
+  difficulty: 3
+  prompt: 'Order from smallest to largest: -3.3, -3.03, -3.003.'
+  response:
+    type: single_choice
+    keyboard_submit: true
+    options:
+    - -3.3, -3.03, -3.003
+    - -3.3, -3.003, -3.03
+    - -3.03, -3.3, -3.003
+    - -3.03, -3.003, -3.3
+    shuffle_options: false
+  answer:
+    value: -3.3, -3.03, -3.003
+  attempt_policy:
+    policy: single_submit_deferred_feedback
+    max_attempts_before_resolution: 1
+    feedback_timing: after_mastery_decision
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: null
+    on_incorrect_attempt_1: No hint or correctness message during the independent exit or confirmation check.
+    on_incorrect_attempt_2: Not applicable; one submission only.
+    worked_explanation: 'After scoring: Use the number line and place value together: -3.3, -3.03, -3.003.'
+  mathematical_support:
+    hint_1: null
+    hint_2: null
+    worked_solution: 'Use the number line and place value together: -3.3, -3.03, -3.003.'
+  branching:
+    on_submit: Lock the response and record first-attempt correctness without revealing it immediately.
+    next: Continue the exit sequence; reveal worked feedback only after the mastery decision.
+  success_reaction:
+    mode: silent
+    context_override: null
+    selection_rule: No spoken success reaction in this stage.
+- id: DEC-04-E04
+  stage: confirmation
+  target: Order signed decimals
+  ao: AO2
+  difficulty: 3
+  prompt: 'Order from smallest to largest: 0.4, -0.04, -0.4.'
+  response:
+    type: single_choice
+    keyboard_submit: true
+    options:
+    - -0.4, -0.04, 0.4
+    - 0.4, -0.04, -0.4
+    - 0.4, -0.4, -0.04
+    - -0.04, 0.4, -0.4
+    shuffle_options: false
+  answer:
+    value: -0.4, -0.04, 0.4
+  attempt_policy:
+    policy: single_submit_deferred_feedback
+    max_attempts_before_resolution: 1
+    feedback_timing: after_mastery_decision
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: null
+    on_incorrect_attempt_1: No hint or correctness message during the independent exit or confirmation check.
+    on_incorrect_attempt_2: Not applicable; one submission only.
+    worked_explanation: 'After scoring: Use the number line and place value together: -0.4, -0.04, 0.4.'
+  mathematical_support:
+    hint_1: null
+    hint_2: null
+    worked_solution: 'Use the number line and place value together: -0.4, -0.04, 0.4.'
+  branching:
+    on_submit: Lock the response and record first-attempt correctness without revealing it immediately.
+    next: Continue the exit sequence; reveal worked feedback only after the mastery decision.
+  success_reaction:
+    mode: silent
+    context_override: null
+    selection_rule: No spoken success reaction in this stage.
+- id: DEC-04-R01
+  stage: recovery
+  target: Order signed decimals
+  ao: AO2
+  difficulty: 3
+  prompt: 'Order from smallest to largest: -7.01, -7.1, -7.001.'
+  response:
+    type: single_choice
+    keyboard_submit: true
+    options:
+    - -7.1, -7.01, -7.001
+    - -7.01, -7.1, -7.001
+    - -7.01, -7.001, -7.1
+    - -7.1, -7.001, -7.01
+    shuffle_options: false
+  answer:
+    value: -7.1, -7.01, -7.001
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: 'Use the number line and place value together: -7.1, -7.01, -7.001.'
+    on_incorrect_attempt_1: Picture the values on a number line with zero as a reference.
+    on_incorrect_attempt_2: For two negatives, the value closer to zero is greater.
+    worked_explanation: 'Use the number line and place value together: -7.1, -7.01, -7.001.'
+  mathematical_support:
+    hint_1: Picture the values on a number line with zero as a reference.
+    hint_2: For two negatives, the value closer to zero is greater.
+    worked_solution: 'Use the number line and place value together: -7.1, -7.01, -7.001.'
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null
+      and continue.
+    on_incorrect_attempt_1: Speak the first authored hint, focus the relevant mathematical object, then retry the same
+      item.
+    on_incorrect_attempt_2: Speak the second authored hint, reveal the critical step and worked explanation, then continue
+      or route to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the response area and focus the exact decimal relationship referenced by hint 1; never
+      shake the whole screen.
+    incorrect_attempt_2: Reveal the critical authored mathematical step or representation, then show the worked explanation.
+- id: DEC-04-R02
+  stage: recovery
+  target: Order signed decimals
+  ao: AO2
+  difficulty: 3
+  prompt: 'Order from smallest to largest: 2.5, -2.05, -2.5.'
+  response:
+    type: single_choice
+    keyboard_submit: true
+    options:
+    - -2.5, -2.05, 2.5
+    - 2.5, -2.05, -2.5
+    - 2.5, -2.5, -2.05
+    - -2.05, 2.5, -2.5
+    shuffle_options: false
+  answer:
+    value: -2.5, -2.05, 2.5
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: 'Use the number line and place value together: -2.5, -2.05, 2.5.'
+    on_incorrect_attempt_1: Picture the values on a number line with zero as a reference.
+    on_incorrect_attempt_2: For two negatives, the value closer to zero is greater.
+    worked_explanation: 'Use the number line and place value together: -2.5, -2.05, 2.5.'
+  mathematical_support:
+    hint_1: Picture the values on a number line with zero as a reference.
+    hint_2: For two negatives, the value closer to zero is greater.
+    worked_solution: 'Use the number line and place value together: -2.5, -2.05, 2.5.'
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null
+      and continue.
+    on_incorrect_attempt_1: Speak the first authored hint, focus the relevant mathematical object, then retry the same
+      item.
+    on_incorrect_attempt_2: Speak the second authored hint, reveal the critical step and worked explanation, then continue
+      or route to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the response area and focus the exact decimal relationship referenced by hint 1; never
+      shake the whole screen.
+    incorrect_attempt_2: Reveal the critical authored mathematical step or representation, then show the worked explanation.
+- id: DEC-04-R03
+  stage: recovery
+  target: Order signed decimals
+  ao: AO2
+  difficulty: 3
+  prompt: 'Order from smallest to largest: -0.88, -0.8, -0.808.'
+  response:
+    type: single_choice
+    keyboard_submit: true
+    options:
+    - -0.88, -0.808, -0.8
+    - -0.88, -0.8, -0.808
+    - -0.8, -0.88, -0.808
+    - -0.8, -0.808, -0.88
+    shuffle_options: false
+  answer:
+    value: -0.88, -0.808, -0.8
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: 'Use the number line and place value together: -0.88, -0.808, -0.8.'
+    on_incorrect_attempt_1: Picture the values on a number line with zero as a reference.
+    on_incorrect_attempt_2: For two negatives, the value closer to zero is greater.
+    worked_explanation: 'Use the number line and place value together: -0.88, -0.808, -0.8.'
+  mathematical_support:
+    hint_1: Picture the values on a number line with zero as a reference.
+    hint_2: For two negatives, the value closer to zero is greater.
+    worked_solution: 'Use the number line and place value together: -0.88, -0.808, -0.8.'
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null
+      and continue.
+    on_incorrect_attempt_1: Speak the first authored hint, focus the relevant mathematical object, then retry the same
+      item.
+    on_incorrect_attempt_2: Speak the second authored hint, reveal the critical step and worked explanation, then continue
+      or route to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the response area and focus the exact decimal relationship referenced by hint 1; never
+      shake the whole screen.
+    incorrect_attempt_2: Reveal the critical authored mathematical step or representation, then show the worked explanation.
+progress_and_persistence:
+  states:
+  - UNSEEN
+  - NEEDS_WORK
+  - LEARNING
+  - SECURE
+  on_lesson_start: Write LEARNING unless already SECURE and learner explicitly chose to review.
+  commit_points:
+  - after each submitted answer
+  - after each completed teaching checkpoint
+  - on phase transition
+  - on exit completion
+  - on completion screen
+  resume_payload:
+  - skill_id
+  - lesson_attempt_id
+  - current_step_id
+  - submitted_answers
+  - attempt_counts
+  - seen_recovery_items
+  - exit_state
+  - used_ryan_reaction_ids
+  history_policy: Starting again creates a new lesson attempt and does not delete previous attempts.
+analytics_events:
+  minimum_events:
+  - skill_started
+  - step_viewed
+  - answer_submitted
+  - hint_shown
+  - worked_solution_shown
+  - recovery_item_started
+  - phase_completed
+  - exit_completed
+  - skill_completed
+  privacy_note: Store only data required for learning/progress analytics; this file does not define personal profile
+    fields.
+qa:
+  schema_validated: true
+  maths_answers_verified: true
+  curriculum_human_reviewed: false
+  scripts_human_reviewed: false
+  animation_storyboard_human_reviewed: false
+  branching_reference_validated: true
+  engine_render_tested: false
+  reduced_motion_tested: false
+  keyboard_accessibility_tested: false
+  student_calibration_tested: false
+  acceptance_criteria:
+  - Every learner-facing mathematical line is present in the YAML; Codex adds none.
+  - Every question has a canonical answer and exact response type.
+  - Exactly 20 authored question-bank items and 10 teaching scenes are present.
+  - Every interactive non-diagnostic/non-exit item defines correct, first-wrong, second-wrong and worked-resolution behaviour.
+  - Every recovery reference resolves to an authored recovery item in the same skill.
+  - No exit hint or correctness reveal appears before the mastery decision.
+  - Decimal points, signs and units remain attached to the quantities they represent during animation.
+  - Refresh resumes without losing submitted progress or used Ryan reaction history.
+  - The package uses one shared engine rather than a skill-specific route or lesson engine.
+  - Ownership-review aliases never create duplicate mastery states in production.

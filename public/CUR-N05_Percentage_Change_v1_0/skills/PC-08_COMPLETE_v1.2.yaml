@@ -1,0 +1,3586 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "PC-08 - Calculate a percentage change from two amounts",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-18",
+      "sha256": "f6a247eb8d85663306760a84df706782a6b3236ef3ca029d1990cfeff8fc4910"
+    },
+    "authored_scope": "Calculate the percentage change from an original and final amount and state its direction.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "PC08-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "verified_full_desktop_all_six_unsupported_ready_phone_wrong_direction_and_unit_learning_320_390_reference_models_stacked_fraction_real_reload_drafts_locked_answers_decimal_heading_audio_captions",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        12,
+        15,
+        16,
+        17,
+        18
+      ],
+      "source_repairs_consulted": [
+        2,
+        8,
+        9,
+        10,
+        11,
+        13,
+        14,
+        17,
+        18
+      ],
+      "note": "All eighteen source pages, both rendered original-reference diagrams and the complete old configuration reviewed. Restores 25 approved questions and every guided blank, including a real stacked fraction, decimal conversion and complete directional conclusion. Equivalent simplified ratios and exact valid routes accepted. Four-piece addition and five-piece removal compare one changed piece with the unchanged original reference. Six unsupported final answers use the shared documented implementation interpretation because the source gives no fractional threshold. No new Entry, Diagnostic, prerequisite mutation, delayed Retrieval or Strong."
+    }
+  },
+  "identity": {
+    "id": "PC-08",
+    "slug": "calculate-a-percentage-change-from-two-amounts",
+    "title": "Calculate a percentage change from two amounts",
+    "strand": "Number",
+    "cluster": "Percentage Change",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Calculate a percentage change from two amounts, using the original reference and stating increase or decrease.",
+    "success_criteria": [
+      "Identify original and final amounts",
+      "Find the positive difference",
+      "Compare change with original, accepting equivalent ratios",
+      "Convert the share to a percentage",
+      "State increase or decrease separately",
+      "Keep exact values and requested units",
+      "Recognise that equal changes can have different percentage sizes when original amounts differ"
+    ],
+    "boundaries": {
+      "includes": [
+        "Positive amounts and an unambiguous original",
+        "One-step changes in either direction",
+        "Whole and accessible decimal values",
+        "Percentage changes below, equal to or above 100% where appropriate",
+        "Any exact equivalent valid calculation route",
+        "Rounding only if explicitly requested"
+      ],
+      "excludes": [
+        "Reverse percentage and successive changes",
+        "Signed-percentage or percentage-point conventions",
+        "Mandatory multiplier evidence",
+        "Entry, Diagnostic, prerequisite mutation, delayed Retrieval and Strong"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "PC-01",
+      "PA-14",
+      "FDP-06"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for PC-01, PA-14, FDP-06 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "single_choice",
+      "percentage_change_fields"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    },
+    "place_value_profile": true
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "Compare the positive change with the original amount, convert to percent and state the direction separately.",
+    "invariant": "The original is the reference denominator in either direction.",
+    "mathematical_rule": "Percentage change = positive change / original amount × 100%",
+    "must_notice": [
+      "The change differs from the final amount",
+      "The original remains the reference whole",
+      "Direction is separate from positive magnitude",
+      "Same absolute change can have different percentages"
+    ],
+    "common_confusions": [
+      "Final denominator",
+      "Final share instead of change share",
+      "Amount or decimal share submitted as percent",
+      "Missing or reversed direction",
+      "Signed magnitude",
+      "Original measurement unit on a percent result"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "Start from the original amount",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Start from the original amount",
+          "initial_state": "Start from the original amount",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Compare the added piece with the original whole",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "symbolic_math": true,
+            "compact_captions": true,
+            "mode": "change_reference",
+            "original": 80,
+            "final": 100,
+            "change": 20,
+            "parts": 4,
+            "rate": 25,
+            "direction": "increase",
+            "currency": "$",
+            "solved": true,
+            "steps": [],
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "Four equal pieces make the original eighty dollars. Keep this original whole as the reference when the amount changes."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Identify what was added",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Identify what was added",
+          "initial_state": "Identify what was added",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Compare the added piece with the original whole",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "symbolic_math": true,
+            "compact_captions": true,
+            "mode": "change_reference",
+            "original": 80,
+            "final": 100,
+            "change": 20,
+            "parts": 4,
+            "rate": 25,
+            "direction": "increase",
+            "currency": "$",
+            "solved": true,
+            "steps": [],
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "Copy one matching twenty-dollar piece. The final amount contains five pieces of the same size, but only the extra piece is the change."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Compare with the original whole",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Compare with the original whole",
+          "initial_state": "Compare with the original whole",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Compare the added piece with the original whole",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "symbolic_math": true,
+            "compact_captions": true,
+            "mode": "change_reference",
+            "original": 80,
+            "final": 100,
+            "change": 20,
+            "parts": 4,
+            "rate": 25,
+            "direction": "increase",
+            "currency": "$",
+            "solved": true,
+            "steps": [],
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "Compare that extra piece with the four pieces in the original, not the five in the final amount. It matches one quarter of the original: a twenty-five-percent increase."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Keep the original reference for a decrease",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Keep the original reference for a decrease",
+          "initial_state": "Keep the original reference for a decrease",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Compare the removed piece with the original whole",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "symbolic_math": true,
+            "compact_captions": true,
+            "mode": "change_reference",
+            "original": 150,
+            "final": 120,
+            "change": 30,
+            "parts": 5,
+            "rate": 20,
+            "direction": "decrease",
+            "currency": "$",
+            "solved": true,
+            "steps": [],
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "Here five equal pieces make the original one hundred and fifty dollars. The reference is fixed before anything is removed."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Identify what was removed",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Identify what was removed",
+          "initial_state": "Identify what was removed",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Compare the removed piece with the original whole",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "symbolic_math": true,
+            "compact_captions": true,
+            "mode": "change_reference",
+            "original": 150,
+            "final": 120,
+            "change": 30,
+            "parts": 5,
+            "rate": 20,
+            "direction": "decrease",
+            "currency": "$",
+            "solved": true,
+            "steps": [],
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "Take away one thirty-dollar piece. Four unchanged-size pieces remain, making the final one hundred and twenty dollars."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T06"
+      },
+      {
+        "id": "T06",
+        "stage": "teaching",
+        "purpose": "Compare the removed piece with the original",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Compare the removed piece with the original",
+          "initial_state": "Compare the removed piece with the original",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Compare the removed piece with the original whole",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "symbolic_math": true,
+            "compact_captions": true,
+            "mode": "change_reference",
+            "original": 150,
+            "final": 120,
+            "change": 30,
+            "parts": 5,
+            "rate": 20,
+            "direction": "decrease",
+            "currency": "$",
+            "solved": true,
+            "steps": [],
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "The removed piece matches one of the five original pieces, not one of the four remaining pieces. The change is one fifth of the original: a twenty-percent decrease."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T07"
+      },
+      {
+        "id": "T07",
+        "stage": "teaching",
+        "purpose": "Use one reference rule in both directions",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Use one reference rule in both directions",
+          "initial_state": "Use one reference rule in both directions",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "The original is the reference in either direction",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "symbolic_math": true,
+            "compact_captions": true,
+            "mode": "change_rule",
+            "solved": true,
+            "steps": []
+          }
+        },
+        "narration": {
+          "script": "Find the positive size of the change. Divide it by the original amount and convert the share to a percentage. Name increase or decrease separately."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T08"
+      },
+      {
+        "id": "T08",
+        "stage": "teaching",
+        "purpose": "Choose the reference calculation",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Choose the reference calculation",
+          "initial_state": "Choose the reference calculation",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Read the situation",
+            "given": "An amount increases from 50 to 65. Which calculation gives the percentage increase?",
+            "math_text": true,
+            "decimal_math": true,
+            "symbolic_math": true,
+            "compact_captions": true,
+            "mode": "rule",
+            "steps": [
+              "Positive change = 65 − 50.",
+              "Original reference = 50.",
+              "Percentage increase = (65 − 50)/50 × 100."
+            ]
+          }
+        },
+        "narration": {
+          "script": "Choose the calculation for the percentage increase between these two amounts."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "PC-08-C01"
+        },
+        "next_step": "T09"
+      },
+      {
+        "id": "T09",
+        "stage": "teaching",
+        "purpose": "Identify the service-charge amounts",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Identify the service-charge amounts",
+          "initial_state": "Identify the service-charge amounts",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Find the service-charge percentage change",
+            "given": "A monthly service charge changes from $480 to $588.",
+            "math_text": true,
+            "decimal_math": true,
+            "symbolic_math": true,
+            "compact_captions": true,
+            "mode": "role_worked",
+            "solved": true,
+            "steps": [],
+            "stages": [
+              {
+                "title": "Identify before, after and direction",
+                "lines": [
+                  "Original = $480; final = $588.",
+                  "$588 > $480: increase."
+                ]
+              },
+              {
+                "title": "Find the positive change",
+                "lines": [
+                  "588 − 480 = 108.",
+                  "Positive change = $108."
+                ]
+              },
+              {
+                "title": "Compare with the original",
+                "lines": [
+                  "108/480 = 0.225.",
+                  "480 is the original reference."
+                ]
+              },
+              {
+                "title": "Convert and state direction",
+                "lines": [
+                  "0.225 × 100% = 22.5%.",
+                  "Conclusion: 22.5% increase."
+                ]
+              }
+            ],
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "The earlier charge is the original reference. The later charge is larger, so the direction is an increase."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T10"
+      },
+      {
+        "id": "T10",
+        "stage": "teaching",
+        "purpose": "Calculate the positive difference",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Calculate the positive difference",
+          "initial_state": "Calculate the positive difference",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Find the service-charge percentage change",
+            "given": "A monthly service charge changes from $480 to $588.",
+            "math_text": true,
+            "decimal_math": true,
+            "symbolic_math": true,
+            "compact_captions": true,
+            "mode": "role_worked",
+            "solved": true,
+            "steps": [],
+            "stages": [
+              {
+                "title": "Identify before, after and direction",
+                "lines": [
+                  "Original = $480; final = $588.",
+                  "$588 > $480: increase."
+                ]
+              },
+              {
+                "title": "Find the positive change",
+                "lines": [
+                  "588 − 480 = 108.",
+                  "Positive change = $108."
+                ]
+              },
+              {
+                "title": "Compare with the original",
+                "lines": [
+                  "108/480 = 0.225.",
+                  "480 is the original reference."
+                ]
+              },
+              {
+                "title": "Convert and state direction",
+                "lines": [
+                  "0.225 × 100% = 22.5%.",
+                  "Conclusion: 22.5% increase."
+                ]
+              }
+            ],
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "Subtract to find how much the charge changed. This result is an amount of money, not yet a percentage."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T11"
+      },
+      {
+        "id": "T11",
+        "stage": "teaching",
+        "purpose": "Use the charge before the increase",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Use the charge before the increase",
+          "initial_state": "Use the charge before the increase",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Find the service-charge percentage change",
+            "given": "A monthly service charge changes from $480 to $588.",
+            "math_text": true,
+            "decimal_math": true,
+            "symbolic_math": true,
+            "compact_captions": true,
+            "mode": "role_worked",
+            "solved": true,
+            "steps": [],
+            "stages": [
+              {
+                "title": "Identify before, after and direction",
+                "lines": [
+                  "Original = $480; final = $588.",
+                  "$588 > $480: increase."
+                ]
+              },
+              {
+                "title": "Find the positive change",
+                "lines": [
+                  "588 − 480 = 108.",
+                  "Positive change = $108."
+                ]
+              },
+              {
+                "title": "Compare with the original",
+                "lines": [
+                  "108/480 = 0.225.",
+                  "480 is the original reference."
+                ]
+              },
+              {
+                "title": "Convert and state direction",
+                "lines": [
+                  "0.225 × 100% = 22.5%.",
+                  "Conclusion: 22.5% increase."
+                ]
+              }
+            ],
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "Divide that difference by the original charge. The fraction compares the change with its reference, and its decimal gives the same share."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T12"
+      },
+      {
+        "id": "T12",
+        "stage": "teaching",
+        "purpose": "Express the share as a percentage",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Express the share as a percentage",
+          "initial_state": "Express the share as a percentage",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Find the service-charge percentage change",
+            "given": "A monthly service charge changes from $480 to $588.",
+            "math_text": true,
+            "decimal_math": true,
+            "symbolic_math": true,
+            "compact_captions": true,
+            "mode": "role_worked",
+            "solved": true,
+            "steps": [],
+            "stages": [
+              {
+                "title": "Identify before, after and direction",
+                "lines": [
+                  "Original = $480; final = $588.",
+                  "$588 > $480: increase."
+                ]
+              },
+              {
+                "title": "Find the positive change",
+                "lines": [
+                  "588 − 480 = 108.",
+                  "Positive change = $108."
+                ]
+              },
+              {
+                "title": "Compare with the original",
+                "lines": [
+                  "108/480 = 0.225.",
+                  "480 is the original reference."
+                ]
+              },
+              {
+                "title": "Convert and state direction",
+                "lines": [
+                  "0.225 × 100% = 22.5%.",
+                  "Conclusion: 22.5% increase."
+                ]
+              }
+            ],
+            "phase": 4
+          }
+        },
+        "narration": {
+          "script": "Convert the decimal share to a percentage, then attach the direction already established from the two charges."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T13"
+      },
+      {
+        "id": "T13",
+        "stage": "teaching",
+        "purpose": "Explain the original reference",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Explain the original reference",
+          "initial_state": "Explain the original reference",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Read the situation",
+            "given": "Why is 480 used as the denominator in the service-charge percentage-change calculation?",
+            "math_text": true,
+            "decimal_math": true,
+            "symbolic_math": true,
+            "compact_captions": true,
+            "mode": "rule",
+            "steps": [
+              "The charge changes from $480 to $588.",
+              "The original $480 is the 100% reference.",
+              "Compare the $108 change with $480."
+            ]
+          }
+        },
+        "narration": {
+          "script": "Choose why this denominator is used in the service-charge calculation."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "PC-08-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "PC-08-G01",
+        "support_level": "high",
+        "pre_question_script": "Identify the original and final attendance, then name the direction.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "PC-08-G02",
+        "support_level": "high",
+        "pre_question_script": "Complete the positive-difference subtraction.",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "faded",
+        "question_ref": "PC-08-G03",
+        "support_level": "reduced",
+        "pre_question_script": "Enter the comparison fraction and its decimal value.",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "faded",
+        "question_ref": "PC-08-G04",
+        "support_level": "reduced",
+        "pre_question_script": "Convert to a percentage and complete the directional conclusion.",
+        "correct_next": "G05"
+      },
+      "G05": {
+        "stage": "independent_transfer",
+        "question_ref": "PC-08-G05",
+        "support_level": "none",
+        "pre_question_script": "Choose the reference whole for this calculation.",
+        "correct_next": "P01"
+      }
+    },
+    "practice": {
+      "intro_script": "Calculate each percentage change and state its direction. Use paper or a calculator; any exact valid method is accepted.",
+      "question_order": [
+        "PC-08-P01",
+        "PC-08-P02",
+        "PC-08-P03",
+        "PC-08-P04",
+        "PC-08-P05",
+        "PC-08-P06",
+        "PC-08-P07",
+        "PC-08-X01",
+        "PC-08-X02",
+        "PC-08-X03",
+        "PC-08-X04",
+        "PC-08-X05"
+      ],
+      "question_count": 12,
+      "feedback_policy": "No pre-submit worked route or optional hints. Answer-specific clues and sequential working follow demonstrated need, with learner correction required. Percentage, direction and any requested change amount have separate evidence. No unseen procedure is inferred from a numerical answer. No diagnostic activation or prerequisite mutation."
+    },
+    "exit": {
+      "intro_script": "Answer all six final questions independently. State the percentage and direction where requested. Every response locks before any result or working is revealed.",
+      "primary_question_refs": [
+        "PC-08-E01",
+        "PC-08-E02",
+        "PC-08-E03",
+        "PC-08-E04",
+        "PC-08-E05",
+        "PC-08-E06"
+      ],
+      "confirmation_question_refs": [],
+      "submission_policy": "Lock all six responses before any result or working is revealed.",
+      "mastery_policy": {
+        "profile": "all_primary_unsupported_deferred",
+        "source_page": 18,
+        "implementation_interpretation": "The source requires successful completion but gives no fractional threshold. Preserve the shared all-six unsupported rule; calculate and state direction where requested, without imposing a particular calculation route.",
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "Your final responses compared each change with its original reference and kept the percentage and direction consistent. Later retrieval will check that this remains secure.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Keep building percentage-change comparisons",
+      "ryan_script": "Review the saved responses. Compare the positive change with the original amount, convert to a percentage and state the direction separately.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "PC-08-C01",
+      "source_ref": {
+        "page": 4
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "An amount increases from 50 to 65. Which calculation gives the percentage increase?",
+      "target": "Calculate a positive percentage change from the original reference and state its direction",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "(65 − 50)/50 × 100",
+          "(65 − 50)/65 × 100",
+          "50/(65 − 50) × 100",
+          "65/50 × 100"
+        ],
+        "math_layout": "symbolic_compound_fraction"
+      },
+      "answer": {
+        "value": "(65 − 50)/50 × 100"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The selected fraction compares the change with its original reference.",
+        "correct_after_support": "The selected fraction compares the change with its original reference.",
+        "on_correct_math": "Positive change = 65 − 50. → Original reference = 50. → Percentage increase = (65 − 50)/50 × 100.",
+        "on_incorrect_attempt_1": "Identify what changed and which amount was present before the change.",
+        "on_incorrect_attempt_2": "The numerator is the positive difference; the denominator is the original amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Positive change = 65 − 50. → Original reference = 50. → Percentage increase = (65 − 50)/50 × 100."
+      },
+      "mathematical_support": {
+        "hint_1": "Identify what changed and which amount was present before the change.",
+        "hint_2": "The numerator is the positive difference; the denominator is the original amount.",
+        "worked_solution": "Positive change = 65 − 50. → Original reference = 50. → Percentage increase = (65 − 50)/50 × 100."
+      },
+      "working": [
+        "Positive change = 65 − 50.",
+        "Original reference = 50.",
+        "Percentage increase = (65 − 50)/50 × 100."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "An amount increases from 50 to 65. Which calculation gives the percentage increase?",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Positive change = 65 − 50.",
+            "Original reference = 50.",
+            "Percentage increase = (65 − 50)/50 × 100."
+          ]
+        }
+      },
+      "response_feedback": {
+        "(65 − 50)/65 × 100": "This uses the final amount as the reference instead of the original.",
+        "50/(65 − 50) × 100": "This reverses the change and its original reference.",
+        "65/50 × 100": "This compares the final amount, rather than the change, with the original."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-08-C02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "Why is 480 used as the denominator in the service-charge percentage-change calculation?",
+      "target": "Calculate a positive percentage change from the original reference and state its direction",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "It is the larger amount.",
+          "It is the amount after the change.",
+          "It is the original amount before the change.",
+          "It is the amount of the change."
+        ],
+        "math_layout": "symbolic_compound_fraction"
+      },
+      "answer": {
+        "value": "It is the original amount before the change."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The amount before the change is the reference for its percentage.",
+        "correct_after_support": "The amount before the change is the reference for its percentage.",
+        "on_correct_math": "The charge changes from $480 to $588. → The original $480 is the 100% reference. → Compare the $108 change with $480.",
+        "on_incorrect_attempt_1": "Choose the role that fixes the reference whole.",
+        "on_incorrect_attempt_2": "The denominator comes from the amount before the change, not from which number is larger.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "The charge changes from $480 to $588. → The original $480 is the 100% reference. → Compare the $108 change with $480."
+      },
+      "mathematical_support": {
+        "hint_1": "Choose the role that fixes the reference whole.",
+        "hint_2": "The denominator comes from the amount before the change, not from which number is larger.",
+        "worked_solution": "The charge changes from $480 to $588. → The original $480 is the 100% reference. → Compare the $108 change with $480."
+      },
+      "working": [
+        "The charge changes from $480 to $588.",
+        "The original $480 is the 100% reference.",
+        "Compare the $108 change with $480."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "Why is 480 used as the denominator in the service-charge percentage-change calculation?",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "The charge changes from $480 to $588.",
+            "The original $480 is the 100% reference.",
+            "Compare the $108 change with $480."
+          ]
+        }
+      },
+      "response_feedback": {
+        "It is the larger amount.": "Size does not determine the reference; the original amount does.",
+        "It is the amount after the change.": "The amount after the change is the final amount, not the original reference.",
+        "It is the amount of the change.": "The change belongs in the numerator, not the reference denominator."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-08-G01",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "Attendance at an event changes from 1250 people to 1100 people. Identify the original amount, final amount and direction.",
+      "target": "Calculate a positive percentage change from the original reference and state its direction",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "original",
+            "label": "Original amount",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true,
+            "signed_evidence": true
+          },
+          {
+            "key": "final",
+            "label": "Final amount",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true,
+            "signed_evidence": true
+          },
+          {
+            "key": "direction",
+            "label": "Direction",
+            "kind": "choice",
+            "options": [
+              "increase",
+              "decrease"
+            ]
+          }
+        ],
+        "error_values": [],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Give the requested quantities; exact numerical calculations are accepted. Units are printed beside number boxes. State the direction separately. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "original": "1250",
+          "final": "1100",
+          "direction": "decrease"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The original attendance is the reference, and the final attendance is lower.",
+        "correct_after_support": "The original attendance is the reference, and the final attendance is lower.",
+        "on_correct_math": "Original = 1250; final = 1100. → 1100 < 1250, so the direction is decrease.",
+        "on_incorrect_attempt_1": "Use the order of the two attendance figures and compare their sizes.",
+        "on_incorrect_attempt_2": "The working separates the before and after amounts before choosing a direction.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Original = 1250; final = 1100. → 1100 < 1250, so the direction is decrease."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the order of the two attendance figures and compare their sizes.",
+        "hint_2": "The working separates the before and after amounts before choosing a direction.",
+        "worked_solution": "Original = 1250; final = 1100. → 1100 < 1250, so the direction is decrease."
+      },
+      "working": [
+        "Original = 1250; final = 1100.",
+        "1100 < 1250, so the direction is decrease."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "Attendance at an event changes from 1250 people to 1100 people. Identify the original amount, final amount and direction.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Original = 1250; final = 1100.",
+            "1100 < 1250, so the direction is decrease."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_original": "Your final amount and direction are right. Identify the attendance before the change.",
+        "check_final": "Your original amount and direction are right. Identify the attendance after the change.",
+        "check_direction": "Your two amounts are right. Compare the final attendance with the original.",
+        "check_multiple": "Keep the before and after roles in order, then decide whether attendance rose or fell.",
+        "check_unit": "Keep the printed units: a percentage result is not a money or measurement amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-08-G02",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "Attendance at an event changes from 1250 people to 1100 people. Complete the positive-change subtraction: larger amount − smaller amount = change.",
+      "target": "Calculate a positive percentage change from the original reference and state its direction",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "larger",
+            "label": "Larger amount",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true,
+            "signed_evidence": true
+          },
+          {
+            "key": "smaller",
+            "label": "Smaller amount",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true,
+            "signed_evidence": true
+          },
+          {
+            "key": "change",
+            "label": "Positive change",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true,
+            "signed_evidence": true
+          }
+        ],
+        "error_values": [
+          {
+            "field": "change",
+            "value": "-150",
+            "classification": "negative_change"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Give the requested quantities; exact numerical calculations are accepted. Units are printed beside number boxes. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "larger": "1250",
+          "smaller": "1100",
+          "change": "150"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The positive difference measures how much attendance changed.",
+        "correct_after_support": "The positive difference measures how much attendance changed.",
+        "on_correct_math": "1250 − 1100 = 150. → The positive change is 150 people.",
+        "on_incorrect_attempt_1": "Choose the subtraction order that gives the positive size of the change.",
+        "on_incorrect_attempt_2": "The larger attendance minus the smaller attendance gives the positive difference. Direction is recorded separately.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "1250 − 1100 = 150. → The positive change is 150 people."
+      },
+      "mathematical_support": {
+        "hint_1": "Choose the subtraction order that gives the positive size of the change.",
+        "hint_2": "The larger attendance minus the smaller attendance gives the positive difference. Direction is recorded separately.",
+        "worked_solution": "1250 − 1100 = 150. → The positive change is 150 people."
+      },
+      "working": [
+        "1250 − 1100 = 150.",
+        "The positive change is 150 people."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "Attendance at an event changes from 1250 people to 1100 people. Complete the positive-change subtraction: larger amount − smaller amount = change.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "1250 − 1100 = 150.",
+            "The positive change is 150 people."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_larger": "Your other two entries are right. Start this positive-difference subtraction with the larger amount.",
+        "check_smaller": "Your first amount and difference are right. Subtract the smaller attendance.",
+        "check_change": "Your subtraction order is right. Check the positive difference.",
+        "check_multiple": "Complete a true subtraction giving the positive difference, not a signed conclusion.",
+        "negative_change": "This box asks for the positive size of the difference. Record decrease separately.",
+        "check_unit": "Keep the printed units: a percentage result is not a money or measurement amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-08-G03",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "faded",
+      "prompt": "Attendance at an event changes from 1250 people to 1100 people. Write change ÷ original as a fraction, then give its decimal value.",
+      "target": "Calculate a positive percentage change from the original reference and state its direction",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "ratio",
+            "label": "Change over original",
+            "kind": "fraction",
+            "signed_evidence": true
+          },
+          {
+            "key": "decimal",
+            "label": "Decimal share",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true,
+            "signed_evidence": true,
+            "decimal_result_only": true
+          }
+        ],
+        "error_values": [
+          {
+            "field": "ratio",
+            "value": "150/1100",
+            "classification": "final_denominator"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Enter the fraction in the stacked boxes; an equivalent simplified fraction is accepted. Finish the decimal box with its decimal value. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "ratio": {
+            "n": "150",
+            "d": "1250"
+          },
+          "decimal": "0.12"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The fraction and decimal describe the same share of the original attendance.",
+        "correct_after_support": "The fraction and decimal describe the same share of the original attendance.",
+        "on_correct_math": "Change/original = 150/1250 = 3/25. → 150/1250 = 0.12.",
+        "on_incorrect_attempt_1": "Put the positive change over the original attendance, then evaluate the fraction.",
+        "on_incorrect_attempt_2": "The reference remains the attendance before the change. Reducing both fraction parts by the same factor preserves the ratio.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Change/original = 150/1250 = 3/25. → 150/1250 = 0.12."
+      },
+      "mathematical_support": {
+        "hint_1": "Put the positive change over the original attendance, then evaluate the fraction.",
+        "hint_2": "The reference remains the attendance before the change. Reducing both fraction parts by the same factor preserves the ratio.",
+        "worked_solution": "Change/original = 150/1250 = 3/25. → 150/1250 = 0.12."
+      },
+      "working": [
+        "Change/original = 150/1250 = 3/25.",
+        "150/1250 = 0.12."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "Attendance at an event changes from 1250 people to 1100 people. Write change ÷ original as a fraction, then give its decimal value.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Change/original = 150/1250 = 3/25.",
+            "150/1250 = 0.12."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_ratio": "Your decimal is right. Give an equivalent fraction comparing the change with the original attendance.",
+        "check_decimal": "Your fraction is right. Evaluate it as a decimal share, not a percentage yet.",
+        "check_multiple": "Use the positive change over the original attendance and give the same value as a decimal.",
+        "final_denominator": "This fraction compares the change with the final attendance. Keep the original attendance as the reference.",
+        "check_unit": "Keep the printed units: a percentage result is not a money or measurement amount.",
+        "check_decimal_form": "Finish the decimal box with a decimal result. A correct calculation before the equals sign may remain."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-08-G04",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "faded",
+      "prompt": "Attendance at an event changes from 1250 people to 1100 people. Convert the decimal share to a percentage. Complete the conclusion with its percentage and direction.",
+      "target": "Calculate a positive percentage change from the original reference and state its direction",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "percent",
+            "label": "Percentage change",
+            "kind": "number",
+            "unit": "%",
+            "allow_expression": true,
+            "signed_evidence": true
+          },
+          {
+            "key": "conclusion",
+            "label": "Conclusion percentage",
+            "kind": "number",
+            "unit": "%",
+            "allow_expression": true,
+            "signed_evidence": true
+          },
+          {
+            "key": "direction",
+            "label": "Direction",
+            "kind": "choice",
+            "options": [
+              "increase",
+              "decrease"
+            ]
+          }
+        ],
+        "error_values": [],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Give the requested quantities; exact numerical calculations are accepted. Units are printed beside number boxes. State the direction separately. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "percent": "12",
+          "conclusion": "12",
+          "direction": "decrease"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The percentage and the completed conclusion agree, with the direction stated separately.",
+        "correct_after_support": "The percentage and the completed conclusion agree, with the direction stated separately.",
+        "on_correct_math": "0.12 × 100% = 12%. → Percentage change = 12%. → Conclusion: 12% decrease.",
+        "on_incorrect_attempt_1": "Convert the share to a percentage and carry that value into the directional conclusion.",
+        "on_incorrect_attempt_2": "The percentage measures the positive size of the change. The lower final attendance determines its direction.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "0.12 × 100% = 12%. → Percentage change = 12%. → Conclusion: 12% decrease."
+      },
+      "mathematical_support": {
+        "hint_1": "Convert the share to a percentage and carry that value into the directional conclusion.",
+        "hint_2": "The percentage measures the positive size of the change. The lower final attendance determines its direction.",
+        "worked_solution": "0.12 × 100% = 12%. → Percentage change = 12%. → Conclusion: 12% decrease."
+      },
+      "working": [
+        "0.12 × 100% = 12%.",
+        "Percentage change = 12%.",
+        "Conclusion: 12% decrease."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "Attendance at an event changes from 1250 people to 1100 people. Convert the decimal share to a percentage. Complete the conclusion with its percentage and direction.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "0.12 × 100% = 12%.",
+            "Percentage change = 12%.",
+            "Conclusion: 12% decrease."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_percent": "Your conclusion is right. Make the conversion line agree with it.",
+        "check_conclusion": "Your conversion and direction are right. Carry the same percentage into the conclusion.",
+        "check_direction": "Both percentages are right. Compare the final attendance with the original to name the direction.",
+        "check_multiple": "Convert the decimal share to a positive percentage, use it consistently and name the direction.",
+        "check_unit": "Keep the printed units: a percentage result is not a money or measurement amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-08-G05",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "independent_transfer",
+      "prompt": "Which amount represents 100% in this attendance calculation?",
+      "target": "Calculate a positive percentage change from the original reference and state its direction",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "150, the amount lost.",
+          "1100, the final attendance.",
+          "1250, the original attendance.",
+          "2350, the sum of both attendances."
+        ],
+        "math_layout": "symbolic_compound_fraction"
+      },
+      "answer": {
+        "value": "1250, the original attendance."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The original attendance represents the whole used for the percentage comparison.",
+        "correct_after_support": "The original attendance represents the whole used for the percentage comparison.",
+        "on_correct_math": "Original attendance = 1250 = 100%. → The change is measured relative to this original amount.",
+        "on_incorrect_attempt_1": "Identify the attendance used as the reference whole.",
+        "on_incorrect_attempt_2": "The before amount stays the reference even though fewer people attended later.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Original attendance = 1250 = 100%. → The change is measured relative to this original amount."
+      },
+      "mathematical_support": {
+        "hint_1": "Identify the attendance used as the reference whole.",
+        "hint_2": "The before amount stays the reference even though fewer people attended later.",
+        "worked_solution": "Original attendance = 1250 = 100%. → The change is measured relative to this original amount."
+      },
+      "working": [
+        "Original attendance = 1250 = 100%.",
+        "The change is measured relative to this original amount."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "Which amount represents 100% in this attendance calculation?",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Original attendance = 1250 = 100%.",
+            "The change is measured relative to this original amount."
+          ]
+        }
+      },
+      "response_feedback": {
+        "150, the amount lost.": "The loss is only the change, not the original whole.",
+        "1100, the final attendance.": "The final attendance is not the reference whole.",
+        "2350, the sum of both attendances.": "Adding the two amounts does not define the original reference."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-08-P01",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "An amount changes from 80 to 100. Calculate the percentage change and state whether it is an increase or a decrease.",
+      "target": "Calculate a positive percentage change from the original reference and state its direction",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "percent",
+            "label": "Percentage change",
+            "kind": "number",
+            "unit": "%",
+            "allow_expression": true,
+            "signed_evidence": true
+          },
+          {
+            "key": "direction",
+            "label": "Direction",
+            "kind": "choice",
+            "options": [
+              "increase",
+              "decrease"
+            ]
+          }
+        ],
+        "error_values": [
+          {
+            "field": "percent",
+            "value": "-25",
+            "classification": "negative_change"
+          },
+          {
+            "field": "percent",
+            "value": "0.25",
+            "classification": "decimal_not_percent"
+          },
+          {
+            "field": "percent",
+            "value": "125",
+            "classification": "final_share"
+          },
+          {
+            "field": "percent",
+            "value": "20",
+            "classification": "change_not_percent"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Give the requested quantities; exact numerical calculations are accepted. Units are printed beside number boxes. State the direction separately. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "percent": "25",
+          "direction": "increase"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The added amount is one quarter of the original, and the final amount is higher.",
+        "correct_after_support": "The added amount is one quarter of the original, and the final amount is higher.",
+        "on_correct_math": "100 − 80 = 20. → 20/80 = 0.25. → 0.25 × 100% = 25%. → 25% increase.",
+        "on_incorrect_attempt_1": "Compare the positive difference with the amount before the change, then express that share as a percentage.",
+        "on_incorrect_attempt_2": "The working separates the change amount, the original reference and the direction. The final percentage uses no money or measurement unit.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "100 − 80 = 20. → 20/80 = 0.25. → 0.25 × 100% = 25%. → 25% increase."
+      },
+      "mathematical_support": {
+        "hint_1": "Compare the positive difference with the amount before the change, then express that share as a percentage.",
+        "hint_2": "The working separates the change amount, the original reference and the direction. The final percentage uses no money or measurement unit.",
+        "worked_solution": "100 − 80 = 20. → 20/80 = 0.25. → 0.25 × 100% = 25%. → 25% increase."
+      },
+      "working": [
+        "100 − 80 = 20.",
+        "20/80 = 0.25.",
+        "0.25 × 100% = 25%.",
+        "25% increase."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "An amount changes from 80 to 100. Calculate the percentage change and state whether it is an increase or a decrease.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "100 − 80 = 20.",
+            "20/80 = 0.25.",
+            "0.25 × 100% = 25%.",
+            "25% increase."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_percent": "Your direction is right. Find the positive difference, compare it with the original amount and convert that share to a percentage.",
+        "check_direction": "Your percentage is right. Compare the final amount with the original to name the direction.",
+        "check_multiple": "Check the percentage using the original reference, and compare the two amounts to decide the direction.",
+        "negative_change": "Give a positive percentage magnitude. The separate direction box says whether the amount rose or fell.",
+        "decimal_not_percent": "That is the decimal share of the original. Express it as a percentage.",
+        "final_share": "That describes the final amount as a percentage of the original, not the percentage change.",
+        "change_not_percent": "That is the numerical change amount. Compare it with the original before expressing a percentage.",
+        "check_unit": "Keep the printed units: a percentage result is not a money or measurement amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-08-P02",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "An amount changes from 250 to 200. Calculate the percentage change and state whether it is an increase or a decrease.",
+      "target": "Calculate a positive percentage change from the original reference and state its direction",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "percent",
+            "label": "Percentage change",
+            "kind": "number",
+            "unit": "%",
+            "allow_expression": true,
+            "signed_evidence": true
+          },
+          {
+            "key": "direction",
+            "label": "Direction",
+            "kind": "choice",
+            "options": [
+              "increase",
+              "decrease"
+            ]
+          }
+        ],
+        "error_values": [
+          {
+            "field": "percent",
+            "value": "-20",
+            "classification": "negative_change"
+          },
+          {
+            "field": "percent",
+            "value": "0.2",
+            "classification": "decimal_not_percent"
+          },
+          {
+            "field": "percent",
+            "value": "80",
+            "classification": "final_share"
+          },
+          {
+            "field": "percent",
+            "value": "50",
+            "classification": "change_not_percent"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Give the requested quantities; exact numerical calculations are accepted. Units are printed beside number boxes. State the direction separately. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "percent": "20",
+          "direction": "decrease"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The decrease is measured from the original amount before the fall.",
+        "correct_after_support": "The decrease is measured from the original amount before the fall.",
+        "on_correct_math": "250 − 200 = 50. → 50/250 = 0.2. → 0.2 × 100% = 20%. → 20% decrease.",
+        "on_incorrect_attempt_1": "Compare the positive difference with the amount before the change, then express that share as a percentage.",
+        "on_incorrect_attempt_2": "The working separates the change amount, the original reference and the direction. The final percentage uses no money or measurement unit.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "250 − 200 = 50. → 50/250 = 0.2. → 0.2 × 100% = 20%. → 20% decrease."
+      },
+      "mathematical_support": {
+        "hint_1": "Compare the positive difference with the amount before the change, then express that share as a percentage.",
+        "hint_2": "The working separates the change amount, the original reference and the direction. The final percentage uses no money or measurement unit.",
+        "worked_solution": "250 − 200 = 50. → 50/250 = 0.2. → 0.2 × 100% = 20%. → 20% decrease."
+      },
+      "working": [
+        "250 − 200 = 50.",
+        "50/250 = 0.2.",
+        "0.2 × 100% = 20%.",
+        "20% decrease."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "An amount changes from 250 to 200. Calculate the percentage change and state whether it is an increase or a decrease.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "250 − 200 = 50.",
+            "50/250 = 0.2.",
+            "0.2 × 100% = 20%.",
+            "20% decrease."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_percent": "Your direction is right. Find the positive difference, compare it with the original amount and convert that share to a percentage.",
+        "check_direction": "Your percentage is right. Compare the final amount with the original to name the direction.",
+        "check_multiple": "Check the percentage using the original reference, and compare the two amounts to decide the direction.",
+        "negative_change": "Give a positive percentage magnitude. The separate direction box says whether the amount rose or fell.",
+        "decimal_not_percent": "That is the decimal share of the original. Express it as a percentage.",
+        "final_share": "That describes the final amount as a percentage of the original, not the percentage change.",
+        "change_not_percent": "That is the numerical change amount. Compare it with the original before expressing a percentage.",
+        "check_unit": "Keep the printed units: a percentage result is not a money or measurement amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-08-P03",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "A mass changes from 1.6 kg to 2 kg. Calculate the percentage change and state whether it is an increase or a decrease.",
+      "target": "Calculate a positive percentage change from the original reference and state its direction",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "percent",
+            "label": "Percentage change",
+            "kind": "number",
+            "unit": "%",
+            "allow_expression": true,
+            "signed_evidence": true
+          },
+          {
+            "key": "direction",
+            "label": "Direction",
+            "kind": "choice",
+            "options": [
+              "increase",
+              "decrease"
+            ]
+          }
+        ],
+        "error_values": [
+          {
+            "field": "percent",
+            "value": "-25",
+            "classification": "negative_change"
+          },
+          {
+            "field": "percent",
+            "value": "0.25",
+            "classification": "decimal_not_percent"
+          },
+          {
+            "field": "percent",
+            "value": "125",
+            "classification": "final_share"
+          },
+          {
+            "field": "percent",
+            "value": "0.4",
+            "classification": "change_not_percent"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Give the requested quantities; exact numerical calculations are accepted. Units are printed beside number boxes. State the direction separately. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "percent": "25",
+          "direction": "increase"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The mass units cancel in the comparison, leaving a percentage increase.",
+        "correct_after_support": "The mass units cancel in the comparison, leaving a percentage increase.",
+        "on_correct_math": "2 − 1.6 = 0.4. → 0.4/1.6 = 0.25. → 0.25 × 100% = 25%. → 25% increase.",
+        "on_incorrect_attempt_1": "Compare the positive difference with the amount before the change, then express that share as a percentage.",
+        "on_incorrect_attempt_2": "The working separates the change amount, the original reference and the direction. The final percentage uses no money or measurement unit.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "2 − 1.6 = 0.4. → 0.4/1.6 = 0.25. → 0.25 × 100% = 25%. → 25% increase."
+      },
+      "mathematical_support": {
+        "hint_1": "Compare the positive difference with the amount before the change, then express that share as a percentage.",
+        "hint_2": "The working separates the change amount, the original reference and the direction. The final percentage uses no money or measurement unit.",
+        "worked_solution": "2 − 1.6 = 0.4. → 0.4/1.6 = 0.25. → 0.25 × 100% = 25%. → 25% increase."
+      },
+      "working": [
+        "2 − 1.6 = 0.4.",
+        "0.4/1.6 = 0.25.",
+        "0.25 × 100% = 25%.",
+        "25% increase."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A mass changes from 1.6 kg to 2 kg. Calculate the percentage change and state whether it is an increase or a decrease.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "2 − 1.6 = 0.4.",
+            "0.4/1.6 = 0.25.",
+            "0.25 × 100% = 25%.",
+            "25% increase."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_percent": "Your direction is right. Find the positive difference, compare it with the original amount and convert that share to a percentage.",
+        "check_direction": "Your percentage is right. Compare the final amount with the original to name the direction.",
+        "check_multiple": "Check the percentage using the original reference, and compare the two amounts to decide the direction.",
+        "negative_change": "Give a positive percentage magnitude. The separate direction box says whether the amount rose or fell.",
+        "decimal_not_percent": "That is the decimal share of the original. Express it as a percentage.",
+        "final_share": "That describes the final amount as a percentage of the original, not the percentage change.",
+        "change_not_percent": "That is the numerical change amount. Compare it with the original before expressing a percentage.",
+        "check_unit": "Keep the printed units: a percentage result is not a money or measurement amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-08-P04",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "A price changes from $72 to $81. Calculate the percentage change and state whether it is an increase or a decrease.",
+      "target": "Calculate a positive percentage change from the original reference and state its direction",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "percent",
+            "label": "Percentage change",
+            "kind": "number",
+            "unit": "%",
+            "allow_expression": true,
+            "signed_evidence": true
+          },
+          {
+            "key": "direction",
+            "label": "Direction",
+            "kind": "choice",
+            "options": [
+              "increase",
+              "decrease"
+            ]
+          }
+        ],
+        "error_values": [
+          {
+            "field": "percent",
+            "value": "-12.5",
+            "classification": "negative_change"
+          },
+          {
+            "field": "percent",
+            "value": "0.125",
+            "classification": "decimal_not_percent"
+          },
+          {
+            "field": "percent",
+            "value": "112.5",
+            "classification": "final_share"
+          },
+          {
+            "field": "percent",
+            "value": "9",
+            "classification": "change_not_percent"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Give the requested quantities; exact numerical calculations are accepted. Units are printed beside number boxes. State the direction separately. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "percent": "12.5",
+          "direction": "increase"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The exact percentage uses the earlier price as the reference.",
+        "correct_after_support": "The exact percentage uses the earlier price as the reference.",
+        "on_correct_math": "81 − 72 = 9. → 9/72 = 0.125. → 0.125 × 100% = 12.5%. → 12.5% increase.",
+        "on_incorrect_attempt_1": "Compare the positive difference with the amount before the change, then express that share as a percentage.",
+        "on_incorrect_attempt_2": "The working separates the change amount, the original reference and the direction. The final percentage uses no money or measurement unit.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "81 − 72 = 9. → 9/72 = 0.125. → 0.125 × 100% = 12.5%. → 12.5% increase."
+      },
+      "mathematical_support": {
+        "hint_1": "Compare the positive difference with the amount before the change, then express that share as a percentage.",
+        "hint_2": "The working separates the change amount, the original reference and the direction. The final percentage uses no money or measurement unit.",
+        "worked_solution": "81 − 72 = 9. → 9/72 = 0.125. → 0.125 × 100% = 12.5%. → 12.5% increase."
+      },
+      "working": [
+        "81 − 72 = 9.",
+        "9/72 = 0.125.",
+        "0.125 × 100% = 12.5%.",
+        "12.5% increase."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A price changes from $72 to $81. Calculate the percentage change and state whether it is an increase or a decrease.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "81 − 72 = 9.",
+            "9/72 = 0.125.",
+            "0.125 × 100% = 12.5%.",
+            "12.5% increase."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_percent": "Your direction is right. Find the positive difference, compare it with the original amount and convert that share to a percentage.",
+        "check_direction": "Your percentage is right. Compare the final amount with the original to name the direction.",
+        "check_multiple": "Check the percentage using the original reference, and compare the two amounts to decide the direction.",
+        "negative_change": "Give a positive percentage magnitude. The separate direction box says whether the amount rose or fell.",
+        "decimal_not_percent": "That is the decimal share of the original. Express it as a percentage.",
+        "final_share": "That describes the final amount as a percentage of the original, not the percentage change.",
+        "change_not_percent": "That is the numerical change amount. Compare it with the original before expressing a percentage.",
+        "check_unit": "Keep the printed units: a percentage result is not a money or measurement amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-08-P05",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "A population changes from 1200 to 1020. Calculate the percentage change and state whether it is an increase or a decrease.",
+      "target": "Calculate a positive percentage change from the original reference and state its direction",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "percent",
+            "label": "Percentage change",
+            "kind": "number",
+            "unit": "%",
+            "allow_expression": true,
+            "signed_evidence": true
+          },
+          {
+            "key": "direction",
+            "label": "Direction",
+            "kind": "choice",
+            "options": [
+              "increase",
+              "decrease"
+            ]
+          }
+        ],
+        "error_values": [
+          {
+            "field": "percent",
+            "value": "-15",
+            "classification": "negative_change"
+          },
+          {
+            "field": "percent",
+            "value": "0.15",
+            "classification": "decimal_not_percent"
+          },
+          {
+            "field": "percent",
+            "value": "85",
+            "classification": "final_share"
+          },
+          {
+            "field": "percent",
+            "value": "180",
+            "classification": "change_not_percent"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Give the requested quantities; exact numerical calculations are accepted. Units are printed beside number boxes. State the direction separately. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "percent": "15",
+          "direction": "decrease"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The positive reduction is compared with the original population.",
+        "correct_after_support": "The positive reduction is compared with the original population.",
+        "on_correct_math": "1200 − 1020 = 180. → 180/1200 = 0.15. → 0.15 × 100% = 15%. → 15% decrease.",
+        "on_incorrect_attempt_1": "Compare the positive difference with the amount before the change, then express that share as a percentage.",
+        "on_incorrect_attempt_2": "The working separates the change amount, the original reference and the direction. The final percentage uses no money or measurement unit.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "1200 − 1020 = 180. → 180/1200 = 0.15. → 0.15 × 100% = 15%. → 15% decrease."
+      },
+      "mathematical_support": {
+        "hint_1": "Compare the positive difference with the amount before the change, then express that share as a percentage.",
+        "hint_2": "The working separates the change amount, the original reference and the direction. The final percentage uses no money or measurement unit.",
+        "worked_solution": "1200 − 1020 = 180. → 180/1200 = 0.15. → 0.15 × 100% = 15%. → 15% decrease."
+      },
+      "working": [
+        "1200 − 1020 = 180.",
+        "180/1200 = 0.15.",
+        "0.15 × 100% = 15%.",
+        "15% decrease."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A population changes from 1200 to 1020. Calculate the percentage change and state whether it is an increase or a decrease.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "1200 − 1020 = 180.",
+            "180/1200 = 0.15.",
+            "0.15 × 100% = 15%.",
+            "15% decrease."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_percent": "Your direction is right. Find the positive difference, compare it with the original amount and convert that share to a percentage.",
+        "check_direction": "Your percentage is right. Compare the final amount with the original to name the direction.",
+        "check_multiple": "Check the percentage using the original reference, and compare the two amounts to decide the direction.",
+        "negative_change": "Give a positive percentage magnitude. The separate direction box says whether the amount rose or fell.",
+        "decimal_not_percent": "That is the decimal share of the original. Express it as a percentage.",
+        "final_share": "That describes the final amount as a percentage of the original, not the percentage change.",
+        "change_not_percent": "That is the numerical change amount. Compare it with the original before expressing a percentage.",
+        "check_unit": "Keep the printed units: a percentage result is not a money or measurement amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-08-P06",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "A length changes from 48 cm to 60 cm. Calculate the percentage change and state whether it is an increase or a decrease.",
+      "target": "Calculate a positive percentage change from the original reference and state its direction",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "percent",
+            "label": "Percentage change",
+            "kind": "number",
+            "unit": "%",
+            "allow_expression": true,
+            "signed_evidence": true
+          },
+          {
+            "key": "direction",
+            "label": "Direction",
+            "kind": "choice",
+            "options": [
+              "increase",
+              "decrease"
+            ]
+          }
+        ],
+        "error_values": [
+          {
+            "field": "percent",
+            "value": "-25",
+            "classification": "negative_change"
+          },
+          {
+            "field": "percent",
+            "value": "0.25",
+            "classification": "decimal_not_percent"
+          },
+          {
+            "field": "percent",
+            "value": "125",
+            "classification": "final_share"
+          },
+          {
+            "field": "percent",
+            "value": "12",
+            "classification": "change_not_percent"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Give the requested quantities; exact numerical calculations are accepted. Units are printed beside number boxes. State the direction separately. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "percent": "25",
+          "direction": "increase"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The extra length is compared with the original length, not the final length.",
+        "correct_after_support": "The extra length is compared with the original length, not the final length.",
+        "on_correct_math": "60 − 48 = 12. → 12/48 = 0.25. → 0.25 × 100% = 25%. → 25% increase.",
+        "on_incorrect_attempt_1": "Compare the positive difference with the amount before the change, then express that share as a percentage.",
+        "on_incorrect_attempt_2": "The working separates the change amount, the original reference and the direction. The final percentage uses no money or measurement unit.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "60 − 48 = 12. → 12/48 = 0.25. → 0.25 × 100% = 25%. → 25% increase."
+      },
+      "mathematical_support": {
+        "hint_1": "Compare the positive difference with the amount before the change, then express that share as a percentage.",
+        "hint_2": "The working separates the change amount, the original reference and the direction. The final percentage uses no money or measurement unit.",
+        "worked_solution": "60 − 48 = 12. → 12/48 = 0.25. → 0.25 × 100% = 25%. → 25% increase."
+      },
+      "working": [
+        "60 − 48 = 12.",
+        "12/48 = 0.25.",
+        "0.25 × 100% = 25%.",
+        "25% increase."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A length changes from 48 cm to 60 cm. Calculate the percentage change and state whether it is an increase or a decrease.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "60 − 48 = 12.",
+            "12/48 = 0.25.",
+            "0.25 × 100% = 25%.",
+            "25% increase."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_percent": "Your direction is right. Find the positive difference, compare it with the original amount and convert that share to a percentage.",
+        "check_direction": "Your percentage is right. Compare the final amount with the original to name the direction.",
+        "check_multiple": "Check the percentage using the original reference, and compare the two amounts to decide the direction.",
+        "negative_change": "Give a positive percentage magnitude. The separate direction box says whether the amount rose or fell.",
+        "decimal_not_percent": "That is the decimal share of the original. Express it as a percentage.",
+        "final_share": "That describes the final amount as a percentage of the original, not the percentage change.",
+        "change_not_percent": "That is the numerical change amount. Compare it with the original before expressing a percentage.",
+        "check_unit": "Keep the printed units: a percentage result is not a money or measurement amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-08-P07",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "An amount decreases from 160 to 136. Which fraction should be converted to a percentage?",
+      "target": "Calculate a positive percentage change from the original reference and state its direction",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "24/136",
+          "24/160",
+          "136/160",
+          "160/24"
+        ],
+        "math_layout": "symbolic_compound_fraction"
+      },
+      "answer": {
+        "value": "24/160"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "This fraction measures the decrease relative to the original.",
+        "correct_after_support": "This fraction measures the decrease relative to the original.",
+        "on_correct_math": "Positive change = 160 − 136 = 24. → Change/original = 24/160.",
+        "on_incorrect_attempt_1": "Choose the fraction that compares the positive change with the amount before the decrease.",
+        "on_incorrect_attempt_2": "The change is the numerator, and the original remains the denominator.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Positive change = 160 − 136 = 24. → Change/original = 24/160."
+      },
+      "mathematical_support": {
+        "hint_1": "Choose the fraction that compares the positive change with the amount before the decrease.",
+        "hint_2": "The change is the numerator, and the original remains the denominator.",
+        "worked_solution": "Positive change = 160 − 136 = 24. → Change/original = 24/160."
+      },
+      "working": [
+        "Positive change = 160 − 136 = 24.",
+        "Change/original = 24/160."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "An amount decreases from 160 to 136. Which fraction should be converted to a percentage?",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Positive change = 160 − 136 = 24.",
+            "Change/original = 24/160."
+          ]
+        }
+      },
+      "response_feedback": {
+        "24/136": "This uses the final amount as the reference.",
+        "136/160": "This gives the final share of the original, not the change share.",
+        "160/24": "This reverses the change and its original reference."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-08-X01",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A television price changes from $750 to $660. Calculate the percentage change and state whether it is an increase or a decrease.",
+      "target": "Calculate a positive percentage change from the original reference and state its direction",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "percent",
+            "label": "Percentage change",
+            "kind": "number",
+            "unit": "%",
+            "allow_expression": true,
+            "signed_evidence": true
+          },
+          {
+            "key": "direction",
+            "label": "Direction",
+            "kind": "choice",
+            "options": [
+              "increase",
+              "decrease"
+            ]
+          }
+        ],
+        "error_values": [
+          {
+            "field": "percent",
+            "value": "-12",
+            "classification": "negative_change"
+          },
+          {
+            "field": "percent",
+            "value": "0.12",
+            "classification": "decimal_not_percent"
+          },
+          {
+            "field": "percent",
+            "value": "88",
+            "classification": "final_share"
+          },
+          {
+            "field": "percent",
+            "value": "90",
+            "classification": "change_not_percent"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Give the requested quantities; exact numerical calculations are accepted. Units are printed beside number boxes. State the direction separately. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "percent": "12",
+          "direction": "decrease"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The price reduction is compared with the original television price.",
+        "correct_after_support": "The price reduction is compared with the original television price.",
+        "on_correct_math": "750 − 660 = 90. → 90/750 = 0.12. → 0.12 × 100% = 12%. → 12% decrease.",
+        "on_incorrect_attempt_1": "Compare the positive difference with the amount before the change, then express that share as a percentage.",
+        "on_incorrect_attempt_2": "The working separates the change amount, the original reference and the direction. The final percentage uses no money or measurement unit.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "750 − 660 = 90. → 90/750 = 0.12. → 0.12 × 100% = 12%. → 12% decrease."
+      },
+      "mathematical_support": {
+        "hint_1": "Compare the positive difference with the amount before the change, then express that share as a percentage.",
+        "hint_2": "The working separates the change amount, the original reference and the direction. The final percentage uses no money or measurement unit.",
+        "worked_solution": "750 − 660 = 90. → 90/750 = 0.12. → 0.12 × 100% = 12%. → 12% decrease."
+      },
+      "working": [
+        "750 − 660 = 90.",
+        "90/750 = 0.12.",
+        "0.12 × 100% = 12%.",
+        "12% decrease."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A television price changes from $750 to $660. Calculate the percentage change and state whether it is an increase or a decrease.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "750 − 660 = 90.",
+            "90/750 = 0.12.",
+            "0.12 × 100% = 12%.",
+            "12% decrease."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_percent": "Your direction is right. Find the positive difference, compare it with the original amount and convert that share to a percentage.",
+        "check_direction": "Your percentage is right. Compare the final amount with the original to name the direction.",
+        "check_multiple": "Check the percentage using the original reference, and compare the two amounts to decide the direction.",
+        "negative_change": "Give a positive percentage magnitude. The separate direction box says whether the amount rose or fell.",
+        "decimal_not_percent": "That is the decimal share of the original. Express it as a percentage.",
+        "final_share": "That describes the final amount as a percentage of the original, not the percentage change.",
+        "change_not_percent": "That is the numerical change amount. Compare it with the original before expressing a percentage.",
+        "check_unit": "Keep the printed units: a percentage result is not a money or measurement amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-08-X02",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A museum has 2400 visitors in one month and 2244 visitors in the next month. Calculate the percentage change and state whether it is an increase or a decrease.",
+      "target": "Calculate a positive percentage change from the original reference and state its direction",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "percent",
+            "label": "Percentage change",
+            "kind": "number",
+            "unit": "%",
+            "allow_expression": true,
+            "signed_evidence": true
+          },
+          {
+            "key": "direction",
+            "label": "Direction",
+            "kind": "choice",
+            "options": [
+              "increase",
+              "decrease"
+            ]
+          }
+        ],
+        "error_values": [
+          {
+            "field": "percent",
+            "value": "-6.5",
+            "classification": "negative_change"
+          },
+          {
+            "field": "percent",
+            "value": "0.065",
+            "classification": "decimal_not_percent"
+          },
+          {
+            "field": "percent",
+            "value": "93.5",
+            "classification": "final_share"
+          },
+          {
+            "field": "percent",
+            "value": "156",
+            "classification": "change_not_percent"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Give the requested quantities; exact numerical calculations are accepted. Units are printed beside number boxes. State the direction separately. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "percent": "6.5",
+          "direction": "decrease"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The first month supplies the reference for the decrease in visitors.",
+        "correct_after_support": "The first month supplies the reference for the decrease in visitors.",
+        "on_correct_math": "2400 − 2244 = 156. → 156/2400 = 0.065. → 0.065 × 100% = 6.5%. → 6.5% decrease.",
+        "on_incorrect_attempt_1": "Compare the positive difference with the amount before the change, then express that share as a percentage.",
+        "on_incorrect_attempt_2": "The working separates the change amount, the original reference and the direction. The final percentage uses no money or measurement unit.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "2400 − 2244 = 156. → 156/2400 = 0.065. → 0.065 × 100% = 6.5%. → 6.5% decrease."
+      },
+      "mathematical_support": {
+        "hint_1": "Compare the positive difference with the amount before the change, then express that share as a percentage.",
+        "hint_2": "The working separates the change amount, the original reference and the direction. The final percentage uses no money or measurement unit.",
+        "worked_solution": "2400 − 2244 = 156. → 156/2400 = 0.065. → 0.065 × 100% = 6.5%. → 6.5% decrease."
+      },
+      "working": [
+        "2400 − 2244 = 156.",
+        "156/2400 = 0.065.",
+        "0.065 × 100% = 6.5%.",
+        "6.5% decrease."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A museum has 2400 visitors in one month and 2244 visitors in the next month. Calculate the percentage change and state whether it is an increase or a decrease.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "2400 − 2244 = 156.",
+            "156/2400 = 0.065.",
+            "0.065 × 100% = 6.5%.",
+            "6.5% decrease."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_percent": "Your direction is right. Find the positive difference, compare it with the original amount and convert that share to a percentage.",
+        "check_direction": "Your percentage is right. Compare the final amount with the original to name the direction.",
+        "check_multiple": "Check the percentage using the original reference, and compare the two amounts to decide the direction.",
+        "negative_change": "Give a positive percentage magnitude. The separate direction box says whether the amount rose or fell.",
+        "decimal_not_percent": "That is the decimal share of the original. Express it as a percentage.",
+        "final_share": "That describes the final amount as a percentage of the original, not the percentage change.",
+        "change_not_percent": "That is the numerical change amount. Compare it with the original before expressing a percentage.",
+        "check_unit": "Keep the printed units: a percentage result is not a money or measurement amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-08-X03",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A rectangular garden has an original area of 84 m² and a new area of 69.3 m². (a) Find the positive change in area. (b) Find the percentage change and state its direction.",
+      "target": "Calculate a positive percentage change from the original reference and state its direction",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "change",
+            "label": "Change in area",
+            "kind": "number",
+            "unit": "m²",
+            "allow_expression": true,
+            "signed_evidence": true,
+            "unit_suffixes": [
+              "m²",
+              "m2"
+            ]
+          },
+          {
+            "key": "percent",
+            "label": "Percentage change",
+            "kind": "number",
+            "unit": "%",
+            "allow_expression": true,
+            "signed_evidence": true
+          },
+          {
+            "key": "direction",
+            "label": "Direction",
+            "kind": "choice",
+            "options": [
+              "increase",
+              "decrease"
+            ]
+          }
+        ],
+        "error_values": [],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Give the requested quantities; exact numerical calculations are accepted. Units are printed beside number boxes. State the direction separately. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "change": "14.7",
+          "percent": "17.5",
+          "direction": "decrease"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The area difference and its percentage keep distinct units and share the original reference.",
+        "correct_after_support": "The area difference and its percentage keep distinct units and share the original reference.",
+        "on_correct_math": "84 − 69.3 = 14.7 m². → 14.7/84 = 0.175. → 0.175 × 100% = 17.5%. → 17.5% decrease.",
+        "on_incorrect_attempt_1": "Use the given areas to find the positive difference, then compare it with the original area.",
+        "on_incorrect_attempt_2": "The first result retains square metres. The percentage comparison cancels that unit, and the smaller new area fixes the direction.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "84 − 69.3 = 14.7 m². → 14.7/84 = 0.175. → 0.175 × 100% = 17.5%. → 17.5% decrease."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the given areas to find the positive difference, then compare it with the original area.",
+        "hint_2": "The first result retains square metres. The percentage comparison cancels that unit, and the smaller new area fixes the direction.",
+        "worked_solution": "84 − 69.3 = 14.7 m². → 14.7/84 = 0.175. → 0.175 × 100% = 17.5%. → 17.5% decrease."
+      },
+      "working": [
+        "84 − 69.3 = 14.7 m².",
+        "14.7/84 = 0.175.",
+        "0.175 × 100% = 17.5%.",
+        "17.5% decrease."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A rectangular garden has an original area of 84 m² and a new area of 69.3 m². (a) Find the positive change in area. (b) Find the percentage change and state its direction.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "84 − 69.3 = 14.7 m².",
+            "14.7/84 = 0.175.",
+            "0.175 × 100% = 17.5%.",
+            "17.5% decrease."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_change": "Your percentage and direction are right. Give the positive area difference in square metres.",
+        "check_percent": "Your area difference and direction are right. Compare the change with the original area and convert to a percentage.",
+        "check_direction": "Your two values are right. Compare the new area with the original area.",
+        "check_multiple": "Calculate with the given areas, not side lengths. Keep area change and percentage change distinct.",
+        "check_unit": "The area-change box uses square metres; the percentage box uses percent. Do not exchange those units."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-08-X04",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A student calculates 44.8/560 × 100 = 8. The original amount is 560 and the final amount is 515.2. Which conclusion is correct?",
+      "target": "Calculate a positive percentage change from the original reference and state its direction",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "8% increase.",
+          "8% decrease.",
+          "44.8% decrease.",
+          "The denominator should be 515.2."
+        ],
+        "math_layout": "symbolic_compound_fraction"
+      },
+      "answer": {
+        "value": "8% decrease."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The calculated percentage and the downward direction describe the same event.",
+        "correct_after_support": "The calculated percentage and the downward direction describe the same event.",
+        "on_correct_math": "The positive change is 44.8. → 44.8/560 × 100 = 8%. → 515.2 < 560, so the conclusion is 8% decrease.",
+        "on_incorrect_attempt_1": "Read what the calculation measures, then compare the two amounts to choose the direction.",
+        "on_incorrect_attempt_2": "The calculation uses the original reference. The lower final amount makes the percentage a decrease.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "The positive change is 44.8. → 44.8/560 × 100 = 8%. → 515.2 < 560, so the conclusion is 8% decrease."
+      },
+      "mathematical_support": {
+        "hint_1": "Read what the calculation measures, then compare the two amounts to choose the direction.",
+        "hint_2": "The calculation uses the original reference. The lower final amount makes the percentage a decrease.",
+        "worked_solution": "The positive change is 44.8. → 44.8/560 × 100 = 8%. → 515.2 < 560, so the conclusion is 8% decrease."
+      },
+      "working": [
+        "The positive change is 44.8.",
+        "44.8/560 × 100 = 8%.",
+        "515.2 < 560, so the conclusion is 8% decrease."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A student calculates 44.8/560 × 100 = 8. The original amount is 560 and the final amount is 515.2. Which conclusion is correct?",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "The positive change is 44.8.",
+            "44.8/560 × 100 = 8%.",
+            "515.2 < 560, so the conclusion is 8% decrease."
+          ]
+        }
+      },
+      "response_feedback": {
+        "8% increase.": "The final amount is lower than the original, so increase is the wrong direction.",
+        "44.8% decrease.": "This confuses the change amount with the calculated percentage.",
+        "The denominator should be 515.2.": "The original amount is the correct denominator."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true,
+      "prompt_math_layout": "symbolic_compound_fraction"
+    },
+    {
+      "id": "PC-08-X05",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "An original amount a changes to a larger final amount b. Which calculation gives the percentage increase?",
+      "target": "Calculate a positive percentage change from the original reference and state its direction",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "(b − a)/a × 100",
+          "(b − a)/b × 100",
+          "a/(b − a) × 100",
+          "b/a × 100"
+        ],
+        "math_layout": "symbolic_compound_fraction"
+      },
+      "answer": {
+        "value": "(b − a)/a × 100"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The symbolic fraction compares the positive difference with the original.",
+        "correct_after_support": "The symbolic fraction compares the positive difference with the original.",
+        "on_correct_math": "Positive change = b − a. → Original reference = a. → Percentage increase = (b − a)/a × 100.",
+        "on_incorrect_attempt_1": "Keep the original and final roles fixed when the amounts are letters.",
+        "on_incorrect_attempt_2": "Subtract to find the change, then divide by the original reference before converting to a percentage.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Positive change = b − a. → Original reference = a. → Percentage increase = (b − a)/a × 100."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the original and final roles fixed when the amounts are letters.",
+        "hint_2": "Subtract to find the change, then divide by the original reference before converting to a percentage.",
+        "worked_solution": "Positive change = b − a. → Original reference = a. → Percentage increase = (b − a)/a × 100."
+      },
+      "working": [
+        "Positive change = b − a.",
+        "Original reference = a.",
+        "Percentage increase = (b − a)/a × 100."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "An original amount a changes to a larger final amount b. Which calculation gives the percentage increase?",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Positive change = b − a.",
+            "Original reference = a.",
+            "Percentage increase = (b − a)/a × 100."
+          ]
+        }
+      },
+      "response_feedback": {
+        "(b − a)/b × 100": "This uses the final amount as the denominator.",
+        "a/(b − a) × 100": "This puts the original over the change, reversing their roles.",
+        "b/a × 100": "This measures the final share, not the percentage change."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-08-E01",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "A price changes from $320 to $400. Calculate the percentage change and state whether it is an increase or a decrease.",
+      "target": "Calculate a positive percentage change from the original reference and state its direction",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "percent",
+            "label": "Percentage change",
+            "kind": "number",
+            "unit": "%",
+            "allow_expression": true,
+            "signed_evidence": true
+          },
+          {
+            "key": "direction",
+            "label": "Direction",
+            "kind": "choice",
+            "options": [
+              "increase",
+              "decrease"
+            ]
+          }
+        ],
+        "error_values": [
+          {
+            "field": "percent",
+            "value": "-25",
+            "classification": "negative_change"
+          },
+          {
+            "field": "percent",
+            "value": "0.25",
+            "classification": "decimal_not_percent"
+          },
+          {
+            "field": "percent",
+            "value": "125",
+            "classification": "final_share"
+          },
+          {
+            "field": "percent",
+            "value": "80",
+            "classification": "change_not_percent"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Give the requested quantities; exact numerical calculations are accepted. Units are printed beside number boxes. State the direction separately. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "percent": "25",
+          "direction": "increase"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The percentage and direction describe the price change from its original reference.",
+        "correct_after_support": "The percentage and direction describe the price change from its original reference.",
+        "on_correct_math": "400 − 320 = 80. → 80/320 = 0.25. → 0.25 × 100% = 25%. → 25% increase.",
+        "on_incorrect_attempt_1": "Compare the positive difference with the amount before the change, then express that share as a percentage.",
+        "on_incorrect_attempt_2": "The working separates the change amount, the original reference and the direction. The final percentage uses no money or measurement unit.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "400 − 320 = 80. → 80/320 = 0.25. → 0.25 × 100% = 25%. → 25% increase."
+      },
+      "mathematical_support": {
+        "hint_1": "Compare the positive difference with the amount before the change, then express that share as a percentage.",
+        "hint_2": "The working separates the change amount, the original reference and the direction. The final percentage uses no money or measurement unit.",
+        "worked_solution": "400 − 320 = 80. → 80/320 = 0.25. → 0.25 × 100% = 25%. → 25% increase."
+      },
+      "working": [
+        "400 − 320 = 80.",
+        "80/320 = 0.25.",
+        "0.25 × 100% = 25%.",
+        "25% increase."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A price changes from $320 to $400. Calculate the percentage change and state whether it is an increase or a decrease.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "400 − 320 = 80.",
+            "80/320 = 0.25.",
+            "0.25 × 100% = 25%.",
+            "25% increase."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_percent": "Your direction is right. Find the positive difference, compare it with the original amount and convert that share to a percentage.",
+        "check_direction": "Your percentage is right. Compare the final amount with the original to name the direction.",
+        "check_multiple": "Check the percentage using the original reference, and compare the two amounts to decide the direction.",
+        "negative_change": "Give a positive percentage magnitude. The separate direction box says whether the amount rose or fell.",
+        "decimal_not_percent": "That is the decimal share of the original. Express it as a percentage.",
+        "final_share": "That describes the final amount as a percentage of the original, not the percentage change.",
+        "change_not_percent": "That is the numerical change amount. Compare it with the original before expressing a percentage.",
+        "check_unit": "Keep the printed units: a percentage result is not a money or measurement amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-08-E02",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "A length changes from 2.4 m to 1.8 m. Calculate the percentage change and state whether it is an increase or a decrease.",
+      "target": "Calculate a positive percentage change from the original reference and state its direction",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "percent",
+            "label": "Percentage change",
+            "kind": "number",
+            "unit": "%",
+            "allow_expression": true,
+            "signed_evidence": true
+          },
+          {
+            "key": "direction",
+            "label": "Direction",
+            "kind": "choice",
+            "options": [
+              "increase",
+              "decrease"
+            ]
+          }
+        ],
+        "error_values": [
+          {
+            "field": "percent",
+            "value": "-25",
+            "classification": "negative_change"
+          },
+          {
+            "field": "percent",
+            "value": "0.25",
+            "classification": "decimal_not_percent"
+          },
+          {
+            "field": "percent",
+            "value": "75",
+            "classification": "final_share"
+          },
+          {
+            "field": "percent",
+            "value": "0.6",
+            "classification": "change_not_percent"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Give the requested quantities; exact numerical calculations are accepted. Units are printed beside number boxes. State the direction separately. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "percent": "25",
+          "direction": "decrease"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The positive percentage describes the reduction in length.",
+        "correct_after_support": "The positive percentage describes the reduction in length.",
+        "on_correct_math": "2.4 − 1.8 = 0.6. → 0.6/2.4 = 0.25. → 0.25 × 100% = 25%. → 25% decrease.",
+        "on_incorrect_attempt_1": "Compare the positive difference with the amount before the change, then express that share as a percentage.",
+        "on_incorrect_attempt_2": "The working separates the change amount, the original reference and the direction. The final percentage uses no money or measurement unit.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "2.4 − 1.8 = 0.6. → 0.6/2.4 = 0.25. → 0.25 × 100% = 25%. → 25% decrease."
+      },
+      "mathematical_support": {
+        "hint_1": "Compare the positive difference with the amount before the change, then express that share as a percentage.",
+        "hint_2": "The working separates the change amount, the original reference and the direction. The final percentage uses no money or measurement unit.",
+        "worked_solution": "2.4 − 1.8 = 0.6. → 0.6/2.4 = 0.25. → 0.25 × 100% = 25%. → 25% decrease."
+      },
+      "working": [
+        "2.4 − 1.8 = 0.6.",
+        "0.6/2.4 = 0.25.",
+        "0.25 × 100% = 25%.",
+        "25% decrease."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A length changes from 2.4 m to 1.8 m. Calculate the percentage change and state whether it is an increase or a decrease.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "2.4 − 1.8 = 0.6.",
+            "0.6/2.4 = 0.25.",
+            "0.25 × 100% = 25%.",
+            "25% decrease."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_percent": "Your direction is right. Find the positive difference, compare it with the original amount and convert that share to a percentage.",
+        "check_direction": "Your percentage is right. Compare the final amount with the original to name the direction.",
+        "check_multiple": "Check the percentage using the original reference, and compare the two amounts to decide the direction.",
+        "negative_change": "Give a positive percentage magnitude. The separate direction box says whether the amount rose or fell.",
+        "decimal_not_percent": "That is the decimal share of the original. Express it as a percentage.",
+        "final_share": "That describes the final amount as a percentage of the original, not the percentage change.",
+        "change_not_percent": "That is the numerical change amount. Compare it with the original before expressing a percentage.",
+        "check_unit": "Keep the printed units: a percentage result is not a money or measurement amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-08-E03",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "A price changes from $86.40 to $99.36. Calculate the percentage change and state whether it is an increase or a decrease.",
+      "target": "Calculate a positive percentage change from the original reference and state its direction",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "percent",
+            "label": "Percentage change",
+            "kind": "number",
+            "unit": "%",
+            "allow_expression": true,
+            "signed_evidence": true
+          },
+          {
+            "key": "direction",
+            "label": "Direction",
+            "kind": "choice",
+            "options": [
+              "increase",
+              "decrease"
+            ]
+          }
+        ],
+        "error_values": [
+          {
+            "field": "percent",
+            "value": "-15",
+            "classification": "negative_change"
+          },
+          {
+            "field": "percent",
+            "value": "0.15",
+            "classification": "decimal_not_percent"
+          },
+          {
+            "field": "percent",
+            "value": "115",
+            "classification": "final_share"
+          },
+          {
+            "field": "percent",
+            "value": "12.96",
+            "classification": "change_not_percent"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Give the requested quantities; exact numerical calculations are accepted. Units are printed beside number boxes. State the direction separately. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "percent": "15",
+          "direction": "increase"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The exact price difference is compared with the original price.",
+        "correct_after_support": "The exact price difference is compared with the original price.",
+        "on_correct_math": "99.36 − 86.4 = 12.96. → 12.96/86.4 = 0.15. → 0.15 × 100% = 15%. → 15% increase.",
+        "on_incorrect_attempt_1": "Compare the positive difference with the amount before the change, then express that share as a percentage.",
+        "on_incorrect_attempt_2": "The working separates the change amount, the original reference and the direction. The final percentage uses no money or measurement unit.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "99.36 − 86.4 = 12.96. → 12.96/86.4 = 0.15. → 0.15 × 100% = 15%. → 15% increase."
+      },
+      "mathematical_support": {
+        "hint_1": "Compare the positive difference with the amount before the change, then express that share as a percentage.",
+        "hint_2": "The working separates the change amount, the original reference and the direction. The final percentage uses no money or measurement unit.",
+        "worked_solution": "99.36 − 86.4 = 12.96. → 12.96/86.4 = 0.15. → 0.15 × 100% = 15%. → 15% increase."
+      },
+      "working": [
+        "99.36 − 86.4 = 12.96.",
+        "12.96/86.4 = 0.15.",
+        "0.15 × 100% = 15%.",
+        "15% increase."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A price changes from $86.40 to $99.36. Calculate the percentage change and state whether it is an increase or a decrease.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "99.36 − 86.4 = 12.96.",
+            "12.96/86.4 = 0.15.",
+            "0.15 × 100% = 15%.",
+            "15% increase."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_percent": "Your direction is right. Find the positive difference, compare it with the original amount and convert that share to a percentage.",
+        "check_direction": "Your percentage is right. Compare the final amount with the original to name the direction.",
+        "check_multiple": "Check the percentage using the original reference, and compare the two amounts to decide the direction.",
+        "negative_change": "Give a positive percentage magnitude. The separate direction box says whether the amount rose or fell.",
+        "decimal_not_percent": "That is the decimal share of the original. Express it as a percentage.",
+        "final_share": "That describes the final amount as a percentage of the original, not the percentage change.",
+        "change_not_percent": "That is the numerical change amount. Compare it with the original before expressing a percentage.",
+        "check_unit": "Keep the printed units: a percentage result is not a money or measurement amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-08-E04",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "A population changes from 1250 to 1125. Calculate the percentage change and state whether it is an increase or a decrease.",
+      "target": "Calculate a positive percentage change from the original reference and state its direction",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "percent",
+            "label": "Percentage change",
+            "kind": "number",
+            "unit": "%",
+            "allow_expression": true,
+            "signed_evidence": true
+          },
+          {
+            "key": "direction",
+            "label": "Direction",
+            "kind": "choice",
+            "options": [
+              "increase",
+              "decrease"
+            ]
+          }
+        ],
+        "error_values": [
+          {
+            "field": "percent",
+            "value": "-10",
+            "classification": "negative_change"
+          },
+          {
+            "field": "percent",
+            "value": "0.1",
+            "classification": "decimal_not_percent"
+          },
+          {
+            "field": "percent",
+            "value": "90",
+            "classification": "final_share"
+          },
+          {
+            "field": "percent",
+            "value": "125",
+            "classification": "change_not_percent"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Give the requested quantities; exact numerical calculations are accepted. Units are printed beside number boxes. State the direction separately. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "percent": "10",
+          "direction": "decrease"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The change is measured from the original population, with its direction stated.",
+        "correct_after_support": "The change is measured from the original population, with its direction stated.",
+        "on_correct_math": "1250 − 1125 = 125. → 125/1250 = 0.1. → 0.1 × 100% = 10%. → 10% decrease.",
+        "on_incorrect_attempt_1": "Compare the positive difference with the amount before the change, then express that share as a percentage.",
+        "on_incorrect_attempt_2": "The working separates the change amount, the original reference and the direction. The final percentage uses no money or measurement unit.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "1250 − 1125 = 125. → 125/1250 = 0.1. → 0.1 × 100% = 10%. → 10% decrease."
+      },
+      "mathematical_support": {
+        "hint_1": "Compare the positive difference with the amount before the change, then express that share as a percentage.",
+        "hint_2": "The working separates the change amount, the original reference and the direction. The final percentage uses no money or measurement unit.",
+        "worked_solution": "1250 − 1125 = 125. → 125/1250 = 0.1. → 0.1 × 100% = 10%. → 10% decrease."
+      },
+      "working": [
+        "1250 − 1125 = 125.",
+        "125/1250 = 0.1.",
+        "0.1 × 100% = 10%.",
+        "10% decrease."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A population changes from 1250 to 1125. Calculate the percentage change and state whether it is an increase or a decrease.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "1250 − 1125 = 125.",
+            "125/1250 = 0.1.",
+            "0.1 × 100% = 10%.",
+            "10% decrease."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_percent": "Your direction is right. Find the positive difference, compare it with the original amount and convert that share to a percentage.",
+        "check_direction": "Your percentage is right. Compare the final amount with the original to name the direction.",
+        "check_multiple": "Check the percentage using the original reference, and compare the two amounts to decide the direction.",
+        "negative_change": "Give a positive percentage magnitude. The separate direction box says whether the amount rose or fell.",
+        "decimal_not_percent": "That is the decimal share of the original. Express it as a percentage.",
+        "final_share": "That describes the final amount as a percentage of the original, not the percentage change.",
+        "change_not_percent": "That is the numerical change amount. Compare it with the original before expressing a percentage.",
+        "check_unit": "Keep the printed units: a percentage result is not a money or measurement amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-08-E05",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "An original amount x changes to a larger final amount y. Which calculation gives the percentage increase?",
+      "target": "Calculate a positive percentage change from the original reference and state its direction",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "(y − x)/x × 100",
+          "(y − x)/y × 100",
+          "x/(y − x) × 100",
+          "y/x × 100"
+        ],
+        "math_layout": "symbolic_compound_fraction"
+      },
+      "answer": {
+        "value": "(y − x)/x × 100"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The selected calculation keeps the change and its original reference in their correct roles.",
+        "correct_after_support": "The selected calculation keeps the change and its original reference in their correct roles.",
+        "on_correct_math": "Positive change = y − x. → Percentage increase = (y − x)/x × 100.",
+        "on_incorrect_attempt_1": "Identify the positive change and its original reference.",
+        "on_incorrect_attempt_2": "The difference belongs above the original amount in the percentage-change fraction.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Positive change = y − x. → Percentage increase = (y − x)/x × 100."
+      },
+      "mathematical_support": {
+        "hint_1": "Identify the positive change and its original reference.",
+        "hint_2": "The difference belongs above the original amount in the percentage-change fraction.",
+        "worked_solution": "Positive change = y − x. → Percentage increase = (y − x)/x × 100."
+      },
+      "working": [
+        "Positive change = y − x.",
+        "Percentage increase = (y − x)/x × 100."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "An original amount x changes to a larger final amount y. Which calculation gives the percentage increase?",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Positive change = y − x.",
+            "Percentage increase = (y − x)/x × 100."
+          ]
+        }
+      },
+      "response_feedback": {
+        "(y − x)/y × 100": "This uses the final amount as the reference.",
+        "x/(y − x) × 100": "This reverses the reference and the positive change.",
+        "y/x × 100": "This compares the final amount with the original, not the change."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-08-E06",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "The same amount, 20, is added to an original amount of 80 and to an original amount of 100. Which statement is correct?",
+      "target": "Calculate a positive percentage change from the original reference and state its direction",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "The percentage increases are equal because both changes are 20.",
+          "The percentage increase is larger when the original amount is 80.",
+          "The percentage increase is larger when the original amount is 100.",
+          "Neither change can be expressed as a percentage."
+        ],
+        "math_layout": "symbolic_compound_fraction"
+      },
+      "answer": {
+        "value": "The percentage increase is larger when the original amount is 80."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The reference amount matters: equal changes can have different percentage sizes.",
+        "correct_after_support": "The reference amount matters: equal changes can have different percentage sizes.",
+        "on_correct_math": "20/80 × 100 = 25%. → 20/100 × 100 = 20%. → The same change is a larger percentage of the smaller original amount.",
+        "on_incorrect_attempt_1": "Compare the same change with each original reference separately.",
+        "on_incorrect_attempt_2": "The absolute changes match, but their reference wholes differ. A fixed change occupies a larger share of a smaller original.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "20/80 × 100 = 25%. → 20/100 × 100 = 20%. → The same change is a larger percentage of the smaller original amount."
+      },
+      "mathematical_support": {
+        "hint_1": "Compare the same change with each original reference separately.",
+        "hint_2": "The absolute changes match, but their reference wholes differ. A fixed change occupies a larger share of a smaller original.",
+        "worked_solution": "20/80 × 100 = 25%. → 20/100 × 100 = 20%. → The same change is a larger percentage of the smaller original amount."
+      },
+      "working": [
+        "20/80 × 100 = 25%.",
+        "20/100 × 100 = 20%.",
+        "The same change is a larger percentage of the smaller original amount."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "The same amount, 20, is added to an original amount of 80 and to an original amount of 100. Which statement is correct?",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "20/80 × 100 = 25%.",
+            "20/100 × 100 = 20%.",
+            "The same change is a larger percentage of the smaller original amount."
+          ]
+        }
+      },
+      "response_feedback": {
+        "The percentage increases are equal because both changes are 20.": "Equal numerical changes need not be equal percentages when the originals differ.",
+        "The percentage increase is larger when the original amount is 100.": "The fixed change is a smaller share of the larger original amount.",
+        "Neither change can be expressed as a percentage.": "Both changes can be compared with their positive original amounts."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    }
+  ],
+  "canonical_lesson": {
+    "version": "PC08-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

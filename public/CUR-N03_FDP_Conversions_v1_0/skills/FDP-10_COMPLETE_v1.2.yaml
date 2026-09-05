@@ -1,0 +1,2965 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "FDP-10 - Convert a fraction to a percentage using denominator 100",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-23",
+      "sha256": "9e20f87fce09b3dcedc5789fc0949a79eaccd6734a6963941b7841e13988a7c1"
+    },
+    "authored_scope": "Convert a fraction to a percentage by forming an equivalent fraction out of 100.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "FDP10-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "verified_desktop_ready_phone_locked_invalid_working_learning_equal_square_pieces_quarters_pairs_drafts_hints_audio_320_390",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        17,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "source_repairs_consulted": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        21,
+        22
+      ],
+      "note": "All 23 source pages and complete previous configuration reviewed. Restored three-fifths area-preserving repartition and rearrangement, five quarter-pieces with two equal hundred squares, prescribed 11/20 worked example, every guided blank, all 24 active questions and four-item unsupported final check. Optional visible hundredths working is checked alongside percentage; valid routes are not constrained and unseen working is not inferred. No Entry, Diagnostic, prerequisite-state mutation, delayed Retrieval or Strong route."
+    }
+  },
+  "identity": {
+    "id": "FDP-10",
+    "slug": "convert-a-fraction-to-a-percentage-using-denominator-100",
+    "title": "Convert a fraction to a percentage using denominator 100",
+    "strand": "Number",
+    "cluster": "Fractions, Decimals and Percentages",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Convert positive fractions to exact percentages by making equivalent fractions over one hundred.",
+    "success_criteria": [
+      "Interpret percent as parts per hundred.",
+      "Use the same scale factor on numerator and denominator.",
+      "Read the hundredths numerator as the percentage.",
+      "Preserve complete wholes in percentages above one hundred.",
+      "Keep all recorded fraction working consistent with the final percentage."
+    ],
+    "boundaries": {
+      "includes": [
+        "Denominators 2, 4, 5, 10, 20, 25, 50 and 100",
+        "Exact whole-number percentages and selected improper fractions",
+        "Valid multistep equivalent-fraction routes or prior simplification",
+        "The prescribed survey, task, battery and production contexts"
+      ],
+      "excludes": [
+        "Decimal-conversion method, recurring values, rounding and negatives",
+        "Denominators 8, 40 or 125",
+        "Percentage-to-fraction conversion or mixed-form ordering",
+        "Entry, Diagnostic, prerequisite-state mutation and delayed Retrieval"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "FDP-02",
+      "AF-04"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for FDP-02, AF-04 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "single_choice",
+      "integer",
+      "power_ten_fields",
+      "equivalent_percent",
+      "decimal"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    },
+    "place_value_profile": true
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "A percentage counts hundredths of the same reference whole.",
+    "invariant": "Repartitioning and rearranging equal parts preserves both the whole and the selected amount.",
+    "must_notice": [
+      "Both fraction parts use the same multiplier.",
+      "The equivalent hundredths numerator is the percentage.",
+      "Percentages can exceed one hundred without changing the reference whole.",
+      "An already-hundredths fraction needs no further scaling."
+    ],
+    "common_confusions": [
+      "Original numerator copied as the percentage",
+      "Denominator scaled alone or unequal multipliers",
+      "Decimal value given instead of percentage",
+      "Whole-number part lost or percentage capped",
+      "Correct percentage paired with invalid fraction working"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "Connect percent with hundredths",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Connect percent with hundredths",
+          "initial_state": "Connect percent with hundredths",
+          "model": {
+            "kind": "equivalent_percent_conversion",
+            "title": "The same amount, counted in hundredths",
+            "n": 3,
+            "d": 5,
+            "given": "",
+            "steps": [
+              "Keep the same amount while expressing the fraction in hundredths."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "principle",
+            "solved": true,
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "Percent means parts per hundred. Make an equivalent fraction over one hundred, then read its numerator as the percentage."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Begin with three fifths",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Begin with three fifths",
+          "initial_state": "Begin with three fifths",
+          "model": {
+            "kind": "equivalent_percent_conversion",
+            "title": "Repartition three fifths into hundredths",
+            "n": 3,
+            "d": 5,
+            "given": "3/5",
+            "steps": [
+              "Shade 3 of 5 equal parts of one strip.",
+              "Split each fifth into 20 pieces: 3/5 = 60/100 without changing the whole or shaded area.",
+              "Rearrange the same 100 parts as a square: 60 shaded hundredths = 60%."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "repartition",
+            "solved": true,
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "This strip is one whole, split into five equal parts. Keep track of the selected area as we change how finely the strip is divided."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Split each fifth into hundredths",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Split each fifth into hundredths",
+          "initial_state": "Split each fifth into hundredths",
+          "model": {
+            "kind": "equivalent_percent_conversion",
+            "title": "Repartition three fifths into hundredths",
+            "n": 3,
+            "d": 5,
+            "given": "3/5",
+            "steps": [
+              "Shade 3 of 5 equal parts of one strip.",
+              "Split each fifth into 20 pieces: 3/5 = 60/100 without changing the whole or shaded area.",
+              "Rearrange the same 100 parts as a square: 60 shaded hundredths = 60%."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "repartition",
+            "solved": true,
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "Every fifth is split into twenty smaller equal parts. The whole strip and shaded area stay the same; only the number and size of the pieces change."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Rearrange the hundred parts",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Rearrange the hundred parts",
+          "initial_state": "Rearrange the hundred parts",
+          "model": {
+            "kind": "equivalent_percent_conversion",
+            "title": "Repartition three fifths into hundredths",
+            "n": 3,
+            "d": 5,
+            "given": "3/5",
+            "steps": [
+              "Shade 3 of 5 equal parts of one strip.",
+              "Split each fifth into 20 pieces: 3/5 = 60/100 without changing the whole or shaded area.",
+              "Rearrange the same 100 parts as a square: 60 shaded hundredths = 60%."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "repartition",
+            "solved": true,
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "Rearrange the same parts into a hundred square. The shaded count gives the percentage because each piece is one hundredth of the same whole."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Start with five quarter-pieces",
+        "source_ref": {
+          "page": 6
+        },
+        "scene": {
+          "display_title": "Start with five quarter-pieces",
+          "initial_state": "Start with five quarter-pieces",
+          "model": {
+            "kind": "equivalent_percent_conversion",
+            "title": "Express five quarters as a percentage",
+            "n": 5,
+            "d": 4,
+            "given": "5/4",
+            "steps": [
+              "Five equal quarter-pieces contain more than one whole.",
+              "One full hundred square and a quarter of a second show 125 hundredths: 125%."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "quarters",
+            "solved": true,
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "Each piece is a quarter of the same-sized whole. There is enough for one complete whole and an additional quarter."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T06"
+      },
+      {
+        "id": "T06",
+        "stage": "teaching",
+        "purpose": "Keep the amount above one whole",
+        "source_ref": {
+          "page": 6
+        },
+        "scene": {
+          "display_title": "Keep the amount above one whole",
+          "initial_state": "Keep the amount above one whole",
+          "model": {
+            "kind": "equivalent_percent_conversion",
+            "title": "Express five quarters as a percentage",
+            "n": 5,
+            "d": 4,
+            "given": "5/4",
+            "steps": [
+              "Five equal quarter-pieces contain more than one whole.",
+              "One full hundred square and a quarter of a second show 125 hundredths: 125%."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "quarters",
+            "solved": true,
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "The two hundred squares use equal-sized reference wholes. Keep the complete square and the extra quarter, so the percentage is greater than one hundred."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T07"
+      },
+      {
+        "id": "T07",
+        "stage": "teaching",
+        "purpose": "Explain the hundredths numerator",
+        "source_ref": {
+          "page": 6
+        },
+        "scene": {
+          "display_title": "Explain the hundredths numerator",
+          "initial_state": "Explain the hundredths numerator",
+          "model": {
+            "kind": "equivalent_percent_conversion",
+            "title": "Connect hundredths with percent",
+            "n": 3,
+            "d": 5,
+            "given": "3/5",
+            "steps": [
+              "Percent means out of 100.",
+              "An equivalent fraction over 100 counts the same amount in hundredths.",
+              "Its numerator is therefore the percentage."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "rule",
+            "explanation_question": true
+          }
+        },
+        "narration": {
+          "script": "Choose why a numerator over one hundred can be read as a percentage."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "FDP-10-C01"
+        },
+        "next_step": "T08"
+      },
+      {
+        "id": "T08",
+        "stage": "teaching",
+        "purpose": "Reach denominator one hundred",
+        "source_ref": {
+          "page": 7
+        },
+        "scene": {
+          "display_title": "Reach denominator one hundred",
+          "initial_state": "Reach denominator one hundred",
+          "model": {
+            "kind": "equivalent_percent_conversion",
+            "title": "Convert eleven twentieths to a percentage",
+            "n": 11,
+            "d": 20,
+            "given": "11/20",
+            "steps": [
+              "20 × 5 = 100.",
+              "11 × 5 = 55.",
+              "11/20 = 55/100; both fraction parts use the same multiplier.",
+              "55/100 = 55%."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "Begin this worked example by finding the denominator multiplier."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T09"
+      },
+      {
+        "id": "T09",
+        "stage": "teaching",
+        "purpose": "Apply that multiplier to the numerator",
+        "source_ref": {
+          "page": 7
+        },
+        "scene": {
+          "display_title": "Apply that multiplier to the numerator",
+          "initial_state": "Apply that multiplier to the numerator",
+          "model": {
+            "kind": "equivalent_percent_conversion",
+            "title": "Convert eleven twentieths to a percentage",
+            "n": 11,
+            "d": 20,
+            "given": "11/20",
+            "steps": [
+              "20 × 5 = 100.",
+              "11 × 5 = 55.",
+              "11/20 = 55/100; both fraction parts use the same multiplier.",
+              "55/100 = 55%."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "Use the same multiplier on the numerator. This preserves the fraction while changing its parts to hundredths."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T10"
+      },
+      {
+        "id": "T10",
+        "stage": "teaching",
+        "purpose": "Check the equivalent fraction",
+        "source_ref": {
+          "page": 7
+        },
+        "scene": {
+          "display_title": "Check the equivalent fraction",
+          "initial_state": "Check the equivalent fraction",
+          "model": {
+            "kind": "equivalent_percent_conversion",
+            "title": "Convert eleven twentieths to a percentage",
+            "n": 11,
+            "d": 20,
+            "given": "11/20",
+            "steps": [
+              "20 × 5 = 100.",
+              "11 × 5 = 55.",
+              "11/20 = 55/100; both fraction parts use the same multiplier.",
+              "55/100 = 55%."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "Follow both matching multiplication steps. The new fraction counts the original amount in hundredths."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T11"
+      },
+      {
+        "id": "T11",
+        "stage": "teaching",
+        "purpose": "Read the percentage",
+        "source_ref": {
+          "page": 7
+        },
+        "scene": {
+          "display_title": "Read the percentage",
+          "initial_state": "Read the percentage",
+          "model": {
+            "kind": "equivalent_percent_conversion",
+            "title": "Convert eleven twentieths to a percentage",
+            "n": 11,
+            "d": 20,
+            "given": "11/20",
+            "steps": [
+              "20 × 5 = 100.",
+              "11 × 5 = 55.",
+              "11/20 = 55/100; both fraction parts use the same multiplier.",
+              "55/100 = 55%."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 4
+          }
+        },
+        "narration": {
+          "script": "The hundredths numerator now gives the percentage. The visual and percent sign refer to the same reference whole."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T12"
+      },
+      {
+        "id": "T12",
+        "stage": "teaching",
+        "purpose": "Choose a complete correct method",
+        "source_ref": {
+          "page": 7
+        },
+        "scene": {
+          "display_title": "Choose a complete correct method",
+          "initial_state": "Choose a complete correct method",
+          "model": {
+            "kind": "equivalent_percent_conversion",
+            "title": "Check a complete percentage conversion",
+            "n": 13,
+            "d": 25,
+            "given": "13/25",
+            "steps": [
+              "25 × 4 = 100.",
+              "13 × 4 = 52.",
+              "13/25 = 52/100; both fraction parts use the same multiplier.",
+              "52/100 = 52%."
+            ],
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Check both fraction parts and the percentage in each proposed conversion."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "FDP-10-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "FDP-10-G01",
+        "support_level": "high",
+        "pre_question_script": "Find the denominator multiplier.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "FDP-10-G02",
+        "support_level": "high",
+        "pre_question_script": "Enter the numerator multiplier and its product.",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "faded",
+        "question_ref": "FDP-10-G03",
+        "support_level": "reduced",
+        "pre_question_script": "Complete the hundredths numerator and matching percentage.",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "independent_transfer",
+        "question_ref": "FDP-10-G04",
+        "support_level": "none",
+        "pre_question_script": "Explain why the numerator uses that same multiplier.",
+        "correct_next": "P01"
+      }
+    },
+    "practice": {
+      "intro_script": "Express each fraction as a percentage. Use equivalent hundredths; you may record that fraction, and any working you record must preserve the original value. The percent sign is already printed. Keep amounts above one whole.",
+      "question_order": [
+        "FDP-10-P01",
+        "FDP-10-P02",
+        "FDP-10-P03",
+        "FDP-10-P04",
+        "FDP-10-P05",
+        "FDP-10-P06",
+        "FDP-10-P07",
+        "FDP-10-P08",
+        "FDP-10-P09",
+        "FDP-10-X01",
+        "FDP-10-X02",
+        "FDP-10-X03",
+        "FDP-10-X04",
+        "FDP-10-X05"
+      ],
+      "question_count": 14,
+      "feedback_policy": "Specific same-factor, recorded-working, decimal-versus-percent and reference-whole feedback. Correct components remain recognised. Any valid equivalent-fraction route accepted; unseen intermediate working is not assessed."
+    },
+    "exit": {
+      "intro_script": "Complete three percentage conversions and the method check without hints. Each response locks. Any hundredths fraction you record must also be correct. Feedback follows after all four responses are saved.",
+      "primary_question_refs": [
+        "FDP-10-E01",
+        "FDP-10-E02",
+        "FDP-10-E03",
+        "FDP-10-E04"
+      ],
+      "confirmation_question_refs": [],
+      "submission_policy": "No correctness, hundred-square model, working or repair until the full final set is locked.",
+      "mastery_policy": {
+        "profile": "all_primary_unsupported_deferred",
+        "require_all": true,
+        "source_page": 17,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "All final percentages and the method check are correct. Any recorded hundredths fractions also preserve the original values.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Keep the fraction and percentage consistent",
+      "ryan_script": "One or more final responses need another pass. Review the equal scale factor, any recorded hundredths fraction and the percentage of the same reference whole.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "FDP-10-C01",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Why does the numerator of an equivalent fraction over 100 give its percentage?",
+      "target": "Make an equivalent hundredths fraction and express the same value as a percentage",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "A percentage counts equal parts out of 100.",
+          "The percentage is always the original numerator.",
+          "The denominator can be ignored when writing a percentage.",
+          "Every percentage must be less than 100%."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "A percentage counts equal parts out of 100."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Yes. The hundredths numerator counts how many parts per hundred there are.",
+        "correct_after_support": "Yes. The hundredths numerator counts how many parts per hundred there are.",
+        "on_correct_math": "Percent means out of 100. → An equivalent fraction over 100 counts the same amount in hundredths. → Its numerator is therefore the percentage.",
+        "on_incorrect_attempt_1": "Use the meaning of percent and what a hundredths numerator counts.",
+        "on_incorrect_attempt_2": "Use the meaning of percent and what a hundredths numerator counts.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Percent means out of 100. → An equivalent fraction over 100 counts the same amount in hundredths. → Its numerator is therefore the percentage."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the meaning of percent and what a hundredths numerator counts.",
+        "hint_2": "Make the denominator one hundred and apply the same multiplier to the numerator. Read the new numerator as the percentage.",
+        "worked_solution": "Percent means out of 100. → An equivalent fraction over 100 counts the same amount in hundredths. → Its numerator is therefore the percentage."
+      },
+      "working": [
+        "Percent means out of 100.",
+        "An equivalent fraction over 100 counts the same amount in hundredths.",
+        "Its numerator is therefore the percentage."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_percent_conversion",
+          "title": "Connect hundredths with percent",
+          "n": 3,
+          "d": 5,
+          "given": "3/5",
+          "steps": [
+            "Percent means out of 100.",
+            "An equivalent fraction over 100 counts the same amount in hundredths.",
+            "Its numerator is therefore the percentage."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "explanation_question": true
+        }
+      },
+      "response_feedback": {
+        "The percentage is always the original numerator.": "The original numerator must be scaled when the denominator changes. It is not always the percentage.",
+        "The denominator can be ignored when writing a percentage.": "The denominator must be one hundred before the numerator can be read directly as a percentage.",
+        "Every percentage must be less than 100%.": "A percentage can exceed one hundred when the amount is more than the reference whole."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-10-C02",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Which method correctly converts 13/25 to a percentage?",
+      "target": "Make an equivalent hundredths fraction and express the same value as a percentage",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "13/25 = (13 × 4)/(25 × 4) = 52/100 = 52%",
+          "13/25 = 13/100 = 13%",
+          "13/25 = 65/100 = 65%",
+          "13/25 = 0.52%"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "13/25 = (13 × 4)/(25 × 4) = 52/100 = 52%"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both fraction parts use the same multiplier, then the hundredths numerator gives the percentage.",
+        "correct_after_support": "Correct. Both fraction parts use the same multiplier, then the hundredths numerator gives the percentage.",
+        "on_correct_math": "25 × 4 = 100. → 13 × 4 = 52. → 13/25 = 52/100; both fraction parts use the same multiplier. → 52/100 = 52%.",
+        "on_incorrect_attempt_1": "Check that the same multiplier is used on both fraction parts and that the percentage counts hundredths.",
+        "on_incorrect_attempt_2": "Check that the same multiplier is used on both fraction parts and that the percentage counts hundredths.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "25 × 4 = 100. → 13 × 4 = 52. → 13/25 = 52/100; both fraction parts use the same multiplier. → 52/100 = 52%."
+      },
+      "mathematical_support": {
+        "hint_1": "Check that the same multiplier is used on both fraction parts and that the percentage counts hundredths.",
+        "hint_2": "Make the denominator one hundred and apply the same multiplier to the numerator. Read the new numerator as the percentage.",
+        "worked_solution": "25 × 4 = 100. → 13 × 4 = 52. → 13/25 = 52/100; both fraction parts use the same multiplier. → 52/100 = 52%."
+      },
+      "working": [
+        "25 × 4 = 100.",
+        "13 × 4 = 52.",
+        "13/25 = 52/100; both fraction parts use the same multiplier.",
+        "52/100 = 52%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_percent_conversion",
+          "title": "Check a complete percentage conversion",
+          "n": 13,
+          "d": 25,
+          "given": "13/25",
+          "steps": [
+            "25 × 4 = 100.",
+            "13 × 4 = 52.",
+            "13/25 = 52/100; both fraction parts use the same multiplier.",
+            "52/100 = 52%."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "13/25 = 13/100 = 13%": "That changes the denominator without changing the numerator, so it changes the value.",
+        "13/25 = 65/100 = 65%": "The numerator and denominator have not been scaled by the same factor.",
+        "13/25 = 0.52%": "That gives a decimal value with a percent sign attached. The percentage counts parts out of one hundred."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-10-G01",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "guided",
+      "prompt": "Complete the denominator step for 17/25: 25 × ___ = 100.",
+      "target": "Make an equivalent hundredths fraction and express the same value as a percentage",
+      "response": {
+        "type": "integer",
+        "equivalent_scale": true,
+        "input_label": "Denominator multiplier"
+      },
+      "answer": {
+        "value": 4
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. That factor reaches the required denominator of one hundred.",
+        "correct_after_support": "Correct. That factor reaches the required denominator of one hundred.",
+        "on_correct_math": "25 × 4 = 100.",
+        "on_incorrect_attempt_1": "Find the whole-number multiplier that changes twenty-five into one hundred.",
+        "on_incorrect_attempt_2": "Find the whole-number multiplier that changes twenty-five into one hundred.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "25 × 4 = 100."
+      },
+      "mathematical_support": {
+        "hint_1": "Find the whole-number multiplier that changes twenty-five into one hundred.",
+        "hint_2": "Make the denominator one hundred and apply the same multiplier to the numerator. Read the new numerator as the percentage.",
+        "worked_solution": "25 × 4 = 100."
+      },
+      "working": [
+        "25 × 4 = 100."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_percent_conversion",
+          "title": "Find the multiplier to hundredths",
+          "n": 17,
+          "d": 25,
+          "given": "17/25",
+          "steps": [
+            "25 × 4 = 100."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "denominator"
+        }
+      },
+      "response_feedback": {
+        "check_factor": "Check what twenty-five must be multiplied by to make one hundred."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-10-G02",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "guided",
+      "prompt": "Complete both blanks: 17 × ___ = ___. Use the same multiplier as the denominator.",
+      "target": "Make an equivalent hundredths fraction and express the same value as a percentage",
+      "response": {
+        "type": "power_ten_fields",
+        "input_label": "Complete the numerator scaling",
+        "fields": [
+          {
+            "key": "factor",
+            "label": "Numerator multiplier",
+            "type": "integer"
+          },
+          {
+            "key": "product",
+            "label": "Numerator product",
+            "type": "integer"
+          }
+        ]
+      },
+      "answer": {
+        "value": {
+          "factor": 4,
+          "product": 68
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The multiplier matches the denominator and the numerator product is accurate.",
+        "correct_after_support": "Correct. The multiplier matches the denominator and the numerator product is accurate.",
+        "on_correct_math": "Use the same multiplier, 4, on the numerator. → 17 × 4 = 68.",
+        "on_incorrect_attempt_1": "The numerator needs the denominator multiplier too. Then calculate the product.",
+        "on_incorrect_attempt_2": "The numerator needs the denominator multiplier too. Then calculate the product.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Use the same multiplier, 4, on the numerator. → 17 × 4 = 68."
+      },
+      "mathematical_support": {
+        "hint_1": "The numerator needs the denominator multiplier too. Then calculate the product.",
+        "hint_2": "Make the denominator one hundred and apply the same multiplier to the numerator. Read the new numerator as the percentage.",
+        "worked_solution": "Use the same multiplier, 4, on the numerator. → 17 × 4 = 68."
+      },
+      "working": [
+        "Use the same multiplier, 4, on the numerator.",
+        "17 × 4 = 68."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_percent_conversion",
+          "title": "Scale the numerator by the same factor",
+          "n": 17,
+          "d": 25,
+          "given": "17/25",
+          "steps": [
+            "Use the same multiplier, 4, on the numerator.",
+            "17 × 4 = 68."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "numerator"
+        }
+      },
+      "response_feedback": {
+        "check_factor": "Your product is correct. The multiplier must match the one used on the denominator.",
+        "check_product": "Your multiplier is correct. Recalculate seventeen multiplied by that factor.",
+        "check_multiple": "Use the denominator multiplier on the numerator, then calculate the resulting numerator."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-10-G03",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "faded",
+      "prompt": "Complete both forms: 17/25 = ___/100 = ___%.",
+      "target": "Make an equivalent hundredths fraction and express the same value as a percentage",
+      "response": {
+        "type": "equivalent_percent",
+        "original_fraction": {
+          "n": 17,
+          "d": 25
+        },
+        "require_hundredths_working": true
+      },
+      "answer": {
+        "value": {
+          "percent": "68",
+          "n": 68
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Your equivalent fraction and percentage agree with the original value.",
+        "correct_after_support": "Correct. Your equivalent fraction and percentage agree with the original value.",
+        "on_correct_math": "17/25 = 68/100. → 68/100 = 68%.",
+        "on_incorrect_attempt_1": "Record the scaled numerator, then express that same number of hundredths as a percentage.",
+        "on_incorrect_attempt_2": "Record the scaled numerator, then express that same number of hundredths as a percentage.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "17/25 = 68/100. → 68/100 = 68%."
+      },
+      "mathematical_support": {
+        "hint_1": "Record the scaled numerator, then express that same number of hundredths as a percentage.",
+        "hint_2": "Make the denominator one hundred and apply the same multiplier to the numerator. Read the new numerator as the percentage.",
+        "worked_solution": "17/25 = 68/100. → 68/100 = 68%."
+      },
+      "working": [
+        "17/25 = 68/100.",
+        "68/100 = 68%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_percent_conversion",
+          "title": "Match the hundredths fraction and percentage",
+          "n": 17,
+          "d": 25,
+          "given": "17/25",
+          "steps": [
+            "17/25 = 68/100.",
+            "68/100 = 68%."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "fraction_percent"
+        }
+      },
+      "response_feedback": {
+        "check_value": "Make an equivalent fraction over one hundred. Its numerator gives the percentage, including values above one hundred.",
+        "check_n": "Your percentage is correct, but the recorded hundredths numerator changes the original fraction. Scale both fraction parts by the same factor.",
+        "check_percent": "Your hundredths fraction is correct. Read its numerator as the percentage; the percent sign is already printed.",
+        "check_multiple": "Check both the equivalent hundredths numerator and the percentage. They must preserve the original value and agree with each other.",
+        "original_numerator": "That keeps the original numerator even though the denominator must change to one hundred. Scale both by the same factor.",
+        "decimal_instead": "That is the fraction as a decimal, not the requested number of parts per hundred.",
+        "capped": "A percentage may be greater than one hundred. Keep every complete reference whole and the additional amount.",
+        "dropped_whole": "That keeps only the amount beyond the complete whole. Include each whole as one hundred percent.",
+        "wrong_factor": "That uses an incorrect multiplier. Check which factor makes the denominator one hundred."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-10-G04",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "independent_transfer",
+      "prompt": "Why is 17/25 converted to a percentage by multiplying 17 by 4?",
+      "target": "Make an equivalent hundredths fraction and express the same value as a percentage",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "The denominator is multiplied by 4, so the numerator must also be multiplied by 4.",
+          "The numerator stays 17 when the denominator becomes 100.",
+          "The percentage is 17% because the numerator is 17.",
+          "Conversion is impossible because 17 is not a factor of 100."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "The denominator is multiplied by 4, so the numerator must also be multiplied by 4."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Applying the denominator multiplier to the numerator preserves the fraction.",
+        "correct_after_support": "Correct. Applying the denominator multiplier to the numerator preserves the fraction.",
+        "on_correct_math": "25 × 4 = 100. → The numerator must also be multiplied by 4 to keep the value unchanged.",
+        "on_incorrect_attempt_1": "Explain how the equivalent-fraction rule preserves the value.",
+        "on_incorrect_attempt_2": "Explain how the equivalent-fraction rule preserves the value.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "25 × 4 = 100. → The numerator must also be multiplied by 4 to keep the value unchanged."
+      },
+      "mathematical_support": {
+        "hint_1": "Explain how the equivalent-fraction rule preserves the value.",
+        "hint_2": "Make the denominator one hundred and apply the same multiplier to the numerator. Read the new numerator as the percentage.",
+        "worked_solution": "25 × 4 = 100. → The numerator must also be multiplied by 4 to keep the value unchanged."
+      },
+      "working": [
+        "25 × 4 = 100.",
+        "The numerator must also be multiplied by 4 to keep the value unchanged."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_percent_conversion",
+          "title": "Explain why both fraction parts scale equally",
+          "n": 17,
+          "d": 25,
+          "given": "17/25",
+          "steps": [
+            "25 × 4 = 100.",
+            "The numerator must also be multiplied by 4 to keep the value unchanged."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "The numerator stays 17 when the denominator becomes 100.": "Changing only the denominator changes the fraction value.",
+        "The percentage is 17% because the numerator is 17.": "The percentage is the hundredths numerator, not automatically the original numerator.",
+        "Conversion is impossible because 17 is not a factor of 100.": "The denominator, not the numerator, determines the multiplier needed to reach one hundred."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-10-P01",
+      "source_ref": {
+        "page": 9
+      },
+      "stage": "practice",
+      "prompt": "Write 1/2 as a percentage using an equivalent fraction over 100.",
+      "target": "Make an equivalent hundredths fraction and express the same value as a percentage",
+      "response": {
+        "type": "equivalent_percent",
+        "original_fraction": {
+          "n": 1,
+          "d": 2
+        },
+        "require_hundredths_working": false
+      },
+      "answer": {
+        "value": {
+          "percent": "50"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. This percentage describes half of the reference whole.",
+        "correct_after_support": "Correct. This percentage describes half of the reference whole.",
+        "on_correct_math": "2 × 50 = 100. → 1 × 50 = 50. → 1/2 = 50/100; both fraction parts use the same multiplier. → 50/100 = 50%.",
+        "on_incorrect_attempt_1": "Find how many hundredths make one of two equal parts.",
+        "on_incorrect_attempt_2": "Find how many hundredths make one of two equal parts.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "2 × 50 = 100. → 1 × 50 = 50. → 1/2 = 50/100; both fraction parts use the same multiplier. → 50/100 = 50%."
+      },
+      "mathematical_support": {
+        "hint_1": "Find how many hundredths make one of two equal parts.",
+        "hint_2": "Make the denominator one hundred and apply the same multiplier to the numerator. Read the new numerator as the percentage.",
+        "worked_solution": "2 × 50 = 100. → 1 × 50 = 50. → 1/2 = 50/100; both fraction parts use the same multiplier. → 50/100 = 50%."
+      },
+      "working": [
+        "2 × 50 = 100.",
+        "1 × 50 = 50.",
+        "1/2 = 50/100; both fraction parts use the same multiplier.",
+        "50/100 = 50%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_percent_conversion",
+          "title": "Express the same value in hundredths",
+          "n": 1,
+          "d": 2,
+          "given": "1/2",
+          "steps": [
+            "2 × 50 = 100.",
+            "1 × 50 = 50.",
+            "1/2 = 50/100; both fraction parts use the same multiplier.",
+            "50/100 = 50%."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_value": "Make an equivalent fraction over one hundred. Its numerator gives the percentage, including values above one hundred.",
+        "check_n": "Your percentage is correct, but the recorded hundredths numerator changes the original fraction. Scale both fraction parts by the same factor.",
+        "check_percent": "Your hundredths fraction is correct. Read its numerator as the percentage; the percent sign is already printed.",
+        "check_multiple": "Check both the equivalent hundredths numerator and the percentage. They must preserve the original value and agree with each other.",
+        "original_numerator": "That keeps the original numerator even though the denominator must change to one hundred. Scale both by the same factor.",
+        "decimal_instead": "That is the fraction as a decimal, not the requested number of parts per hundred.",
+        "capped": "A percentage may be greater than one hundred. Keep every complete reference whole and the additional amount.",
+        "dropped_whole": "That keeps only the amount beyond the complete whole. Include each whole as one hundred percent.",
+        "wrong_factor": "That uses an incorrect multiplier. Check which factor makes the denominator one hundred."
+      },
+      "response_patterns": [
+        {
+          "value": "1",
+          "classification": "original_numerator"
+        },
+        {
+          "value": ".5",
+          "classification": "decimal_instead"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-10-P02",
+      "source_ref": {
+        "page": 9
+      },
+      "stage": "practice",
+      "prompt": "Write 3/4 as a percentage using an equivalent fraction over 100.",
+      "target": "Make an equivalent hundredths fraction and express the same value as a percentage",
+      "response": {
+        "type": "equivalent_percent",
+        "original_fraction": {
+          "n": 3,
+          "d": 4
+        },
+        "require_hundredths_working": false
+      },
+      "answer": {
+        "value": {
+          "percent": "75"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The percentage retains three of the four equal parts.",
+        "correct_after_support": "Correct. The percentage retains three of the four equal parts.",
+        "on_correct_math": "4 × 25 = 100. → 3 × 25 = 75. → 3/4 = 75/100; both fraction parts use the same multiplier. → 75/100 = 75%.",
+        "on_incorrect_attempt_1": "Scale each quarter into hundredths and keep all three quarters.",
+        "on_incorrect_attempt_2": "Scale each quarter into hundredths and keep all three quarters.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "4 × 25 = 100. → 3 × 25 = 75. → 3/4 = 75/100; both fraction parts use the same multiplier. → 75/100 = 75%."
+      },
+      "mathematical_support": {
+        "hint_1": "Scale each quarter into hundredths and keep all three quarters.",
+        "hint_2": "Make the denominator one hundred and apply the same multiplier to the numerator. Read the new numerator as the percentage.",
+        "worked_solution": "4 × 25 = 100. → 3 × 25 = 75. → 3/4 = 75/100; both fraction parts use the same multiplier. → 75/100 = 75%."
+      },
+      "working": [
+        "4 × 25 = 100.",
+        "3 × 25 = 75.",
+        "3/4 = 75/100; both fraction parts use the same multiplier.",
+        "75/100 = 75%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_percent_conversion",
+          "title": "Express the same value in hundredths",
+          "n": 3,
+          "d": 4,
+          "given": "3/4",
+          "steps": [
+            "4 × 25 = 100.",
+            "3 × 25 = 75.",
+            "3/4 = 75/100; both fraction parts use the same multiplier.",
+            "75/100 = 75%."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_value": "Make an equivalent fraction over one hundred. Its numerator gives the percentage, including values above one hundred.",
+        "check_n": "Your percentage is correct, but the recorded hundredths numerator changes the original fraction. Scale both fraction parts by the same factor.",
+        "check_percent": "Your hundredths fraction is correct. Read its numerator as the percentage; the percent sign is already printed.",
+        "check_multiple": "Check both the equivalent hundredths numerator and the percentage. They must preserve the original value and agree with each other.",
+        "original_numerator": "That keeps the original numerator even though the denominator must change to one hundred. Scale both by the same factor.",
+        "decimal_instead": "That is the fraction as a decimal, not the requested number of parts per hundred.",
+        "capped": "A percentage may be greater than one hundred. Keep every complete reference whole and the additional amount.",
+        "dropped_whole": "That keeps only the amount beyond the complete whole. Include each whole as one hundred percent.",
+        "wrong_factor": "That uses an incorrect multiplier. Check which factor makes the denominator one hundred."
+      },
+      "response_patterns": [
+        {
+          "value": "3",
+          "classification": "original_numerator"
+        },
+        {
+          "value": ".75",
+          "classification": "decimal_instead"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-10-P03",
+      "source_ref": {
+        "page": 9
+      },
+      "stage": "practice",
+      "prompt": "Write 13/20 as a percentage using an equivalent fraction over 100.",
+      "target": "Make an equivalent hundredths fraction and express the same value as a percentage",
+      "response": {
+        "type": "equivalent_percent",
+        "original_fraction": {
+          "n": 13,
+          "d": 20
+        },
+        "require_hundredths_working": false
+      },
+      "answer": {
+        "value": {
+          "percent": "65"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The hundredths count preserves thirteen twentieths.",
+        "correct_after_support": "Correct. The hundredths count preserves thirteen twentieths.",
+        "on_correct_math": "20 × 5 = 100. → 13 × 5 = 65. → 13/20 = 65/100; both fraction parts use the same multiplier. → 65/100 = 65%.",
+        "on_incorrect_attempt_1": "Find the factor from twentieths to hundredths, then use it on the numerator.",
+        "on_incorrect_attempt_2": "Find the factor from twentieths to hundredths, then use it on the numerator.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "20 × 5 = 100. → 13 × 5 = 65. → 13/20 = 65/100; both fraction parts use the same multiplier. → 65/100 = 65%."
+      },
+      "mathematical_support": {
+        "hint_1": "Find the factor from twentieths to hundredths, then use it on the numerator.",
+        "hint_2": "Make the denominator one hundred and apply the same multiplier to the numerator. Read the new numerator as the percentage.",
+        "worked_solution": "20 × 5 = 100. → 13 × 5 = 65. → 13/20 = 65/100; both fraction parts use the same multiplier. → 65/100 = 65%."
+      },
+      "working": [
+        "20 × 5 = 100.",
+        "13 × 5 = 65.",
+        "13/20 = 65/100; both fraction parts use the same multiplier.",
+        "65/100 = 65%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_percent_conversion",
+          "title": "Express the same value in hundredths",
+          "n": 13,
+          "d": 20,
+          "given": "13/20",
+          "steps": [
+            "20 × 5 = 100.",
+            "13 × 5 = 65.",
+            "13/20 = 65/100; both fraction parts use the same multiplier.",
+            "65/100 = 65%."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_value": "Make an equivalent fraction over one hundred. Its numerator gives the percentage, including values above one hundred.",
+        "check_n": "Your percentage is correct, but the recorded hundredths numerator changes the original fraction. Scale both fraction parts by the same factor.",
+        "check_percent": "Your hundredths fraction is correct. Read its numerator as the percentage; the percent sign is already printed.",
+        "check_multiple": "Check both the equivalent hundredths numerator and the percentage. They must preserve the original value and agree with each other.",
+        "original_numerator": "That keeps the original numerator even though the denominator must change to one hundred. Scale both by the same factor.",
+        "decimal_instead": "That is the fraction as a decimal, not the requested number of parts per hundred.",
+        "capped": "A percentage may be greater than one hundred. Keep every complete reference whole and the additional amount.",
+        "dropped_whole": "That keeps only the amount beyond the complete whole. Include each whole as one hundred percent.",
+        "wrong_factor": "That uses an incorrect multiplier. Check which factor makes the denominator one hundred."
+      },
+      "response_patterns": [
+        {
+          "value": "13",
+          "classification": "original_numerator"
+        },
+        {
+          "value": ".65",
+          "classification": "decimal_instead"
+        },
+        {
+          "value": "52",
+          "classification": "wrong_factor"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-10-P04",
+      "source_ref": {
+        "page": 9
+      },
+      "stage": "practice",
+      "prompt": "Write 17/25 as a percentage using an equivalent fraction over 100.",
+      "target": "Make an equivalent hundredths fraction and express the same value as a percentage",
+      "response": {
+        "type": "equivalent_percent",
+        "original_fraction": {
+          "n": 17,
+          "d": 25
+        },
+        "require_hundredths_working": false
+      },
+      "answer": {
+        "value": {
+          "percent": "68"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The percentage has the same value as seventeen twenty-fifths.",
+        "correct_after_support": "Correct. The percentage has the same value as seventeen twenty-fifths.",
+        "on_correct_math": "25 × 4 = 100. → 17 × 4 = 68. → 17/25 = 68/100; both fraction parts use the same multiplier. → 68/100 = 68%.",
+        "on_incorrect_attempt_1": "Use the same scale factor on the numerator and denominator.",
+        "on_incorrect_attempt_2": "Use the same scale factor on the numerator and denominator.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "25 × 4 = 100. → 17 × 4 = 68. → 17/25 = 68/100; both fraction parts use the same multiplier. → 68/100 = 68%."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the same scale factor on the numerator and denominator.",
+        "hint_2": "Make the denominator one hundred and apply the same multiplier to the numerator. Read the new numerator as the percentage.",
+        "worked_solution": "25 × 4 = 100. → 17 × 4 = 68. → 17/25 = 68/100; both fraction parts use the same multiplier. → 68/100 = 68%."
+      },
+      "working": [
+        "25 × 4 = 100.",
+        "17 × 4 = 68.",
+        "17/25 = 68/100; both fraction parts use the same multiplier.",
+        "68/100 = 68%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_percent_conversion",
+          "title": "Express the same value in hundredths",
+          "n": 17,
+          "d": 25,
+          "given": "17/25",
+          "steps": [
+            "25 × 4 = 100.",
+            "17 × 4 = 68.",
+            "17/25 = 68/100; both fraction parts use the same multiplier.",
+            "68/100 = 68%."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_value": "Make an equivalent fraction over one hundred. Its numerator gives the percentage, including values above one hundred.",
+        "check_n": "Your percentage is correct, but the recorded hundredths numerator changes the original fraction. Scale both fraction parts by the same factor.",
+        "check_percent": "Your hundredths fraction is correct. Read its numerator as the percentage; the percent sign is already printed.",
+        "check_multiple": "Check both the equivalent hundredths numerator and the percentage. They must preserve the original value and agree with each other.",
+        "original_numerator": "That keeps the original numerator even though the denominator must change to one hundred. Scale both by the same factor.",
+        "decimal_instead": "That is the fraction as a decimal, not the requested number of parts per hundred.",
+        "capped": "A percentage may be greater than one hundred. Keep every complete reference whole and the additional amount.",
+        "dropped_whole": "That keeps only the amount beyond the complete whole. Include each whole as one hundred percent.",
+        "wrong_factor": "That uses an incorrect multiplier. Check which factor makes the denominator one hundred."
+      },
+      "response_patterns": [
+        {
+          "value": "17",
+          "classification": "original_numerator"
+        },
+        {
+          "value": ".68",
+          "classification": "decimal_instead"
+        },
+        {
+          "value": "85",
+          "classification": "wrong_factor"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-10-P05",
+      "source_ref": {
+        "page": 9
+      },
+      "stage": "practice",
+      "prompt": "Write 9/10 as a percentage using an equivalent fraction over 100.",
+      "target": "Make an equivalent hundredths fraction and express the same value as a percentage",
+      "response": {
+        "type": "equivalent_percent",
+        "original_fraction": {
+          "n": 9,
+          "d": 10
+        },
+        "require_hundredths_working": false
+      },
+      "answer": {
+        "value": {
+          "percent": "90"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The percentage describes the same nine-tenths share.",
+        "correct_after_support": "Correct. The percentage describes the same nine-tenths share.",
+        "on_correct_math": "10 × 10 = 100. → 9 × 10 = 90. → 9/10 = 90/100; both fraction parts use the same multiplier. → 90/100 = 90%.",
+        "on_incorrect_attempt_1": "Each tenth contains ten hundredths. Preserve all nine tenths.",
+        "on_incorrect_attempt_2": "Each tenth contains ten hundredths. Preserve all nine tenths.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "10 × 10 = 100. → 9 × 10 = 90. → 9/10 = 90/100; both fraction parts use the same multiplier. → 90/100 = 90%."
+      },
+      "mathematical_support": {
+        "hint_1": "Each tenth contains ten hundredths. Preserve all nine tenths.",
+        "hint_2": "Make the denominator one hundred and apply the same multiplier to the numerator. Read the new numerator as the percentage.",
+        "worked_solution": "10 × 10 = 100. → 9 × 10 = 90. → 9/10 = 90/100; both fraction parts use the same multiplier. → 90/100 = 90%."
+      },
+      "working": [
+        "10 × 10 = 100.",
+        "9 × 10 = 90.",
+        "9/10 = 90/100; both fraction parts use the same multiplier.",
+        "90/100 = 90%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_percent_conversion",
+          "title": "Express the same value in hundredths",
+          "n": 9,
+          "d": 10,
+          "given": "9/10",
+          "steps": [
+            "10 × 10 = 100.",
+            "9 × 10 = 90.",
+            "9/10 = 90/100; both fraction parts use the same multiplier.",
+            "90/100 = 90%."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_value": "Make an equivalent fraction over one hundred. Its numerator gives the percentage, including values above one hundred.",
+        "check_n": "Your percentage is correct, but the recorded hundredths numerator changes the original fraction. Scale both fraction parts by the same factor.",
+        "check_percent": "Your hundredths fraction is correct. Read its numerator as the percentage; the percent sign is already printed.",
+        "check_multiple": "Check both the equivalent hundredths numerator and the percentage. They must preserve the original value and agree with each other.",
+        "original_numerator": "That keeps the original numerator even though the denominator must change to one hundred. Scale both by the same factor.",
+        "decimal_instead": "That is the fraction as a decimal, not the requested number of parts per hundred.",
+        "capped": "A percentage may be greater than one hundred. Keep every complete reference whole and the additional amount.",
+        "dropped_whole": "That keeps only the amount beyond the complete whole. Include each whole as one hundred percent.",
+        "wrong_factor": "That uses an incorrect multiplier. Check which factor makes the denominator one hundred."
+      },
+      "response_patterns": [
+        {
+          "value": "9",
+          "classification": "original_numerator"
+        },
+        {
+          "value": ".9",
+          "classification": "decimal_instead"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-10-P06",
+      "source_ref": {
+        "page": 9
+      },
+      "stage": "practice",
+      "prompt": "Write 43/50 as a percentage using an equivalent fraction over 100.",
+      "target": "Make an equivalent hundredths fraction and express the same value as a percentage",
+      "response": {
+        "type": "equivalent_percent",
+        "original_fraction": {
+          "n": 43,
+          "d": 50
+        },
+        "require_hundredths_working": false
+      },
+      "answer": {
+        "value": {
+          "percent": "86"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Scaling both fraction parts keeps the same forty-three fiftieths.",
+        "correct_after_support": "Correct. Scaling both fraction parts keeps the same forty-three fiftieths.",
+        "on_correct_math": "50 × 2 = 100. → 43 × 2 = 86. → 43/50 = 86/100; both fraction parts use the same multiplier. → 86/100 = 86%.",
+        "on_incorrect_attempt_1": "Find the multiplier that changes fifty equal parts into one hundred.",
+        "on_incorrect_attempt_2": "Find the multiplier that changes fifty equal parts into one hundred.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "50 × 2 = 100. → 43 × 2 = 86. → 43/50 = 86/100; both fraction parts use the same multiplier. → 86/100 = 86%."
+      },
+      "mathematical_support": {
+        "hint_1": "Find the multiplier that changes fifty equal parts into one hundred.",
+        "hint_2": "Make the denominator one hundred and apply the same multiplier to the numerator. Read the new numerator as the percentage.",
+        "worked_solution": "50 × 2 = 100. → 43 × 2 = 86. → 43/50 = 86/100; both fraction parts use the same multiplier. → 86/100 = 86%."
+      },
+      "working": [
+        "50 × 2 = 100.",
+        "43 × 2 = 86.",
+        "43/50 = 86/100; both fraction parts use the same multiplier.",
+        "86/100 = 86%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_percent_conversion",
+          "title": "Express the same value in hundredths",
+          "n": 43,
+          "d": 50,
+          "given": "43/50",
+          "steps": [
+            "50 × 2 = 100.",
+            "43 × 2 = 86.",
+            "43/50 = 86/100; both fraction parts use the same multiplier.",
+            "86/100 = 86%."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_value": "Make an equivalent fraction over one hundred. Its numerator gives the percentage, including values above one hundred.",
+        "check_n": "Your percentage is correct, but the recorded hundredths numerator changes the original fraction. Scale both fraction parts by the same factor.",
+        "check_percent": "Your hundredths fraction is correct. Read its numerator as the percentage; the percent sign is already printed.",
+        "check_multiple": "Check both the equivalent hundredths numerator and the percentage. They must preserve the original value and agree with each other.",
+        "original_numerator": "That keeps the original numerator even though the denominator must change to one hundred. Scale both by the same factor.",
+        "decimal_instead": "That is the fraction as a decimal, not the requested number of parts per hundred.",
+        "capped": "A percentage may be greater than one hundred. Keep every complete reference whole and the additional amount.",
+        "dropped_whole": "That keeps only the amount beyond the complete whole. Include each whole as one hundred percent.",
+        "wrong_factor": "That uses an incorrect multiplier. Check which factor makes the denominator one hundred."
+      },
+      "response_patterns": [
+        {
+          "value": "43",
+          "classification": "original_numerator"
+        },
+        {
+          "value": ".86",
+          "classification": "decimal_instead"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-10-P07",
+      "source_ref": {
+        "page": 9
+      },
+      "stage": "practice",
+      "prompt": "Write 23/100 as a percentage using an equivalent fraction over 100.",
+      "target": "Make an equivalent hundredths fraction and express the same value as a percentage",
+      "response": {
+        "type": "equivalent_percent",
+        "original_fraction": {
+          "n": 23,
+          "d": 100
+        },
+        "require_hundredths_working": false
+      },
+      "answer": {
+        "value": {
+          "percent": "23"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The fraction already counts parts out of one hundred, so no value change is needed.",
+        "correct_after_support": "Correct. The fraction already counts parts out of one hundred, so no value change is needed.",
+        "on_correct_math": "100 × 1 = 100. → 23 × 1 = 23. → 23/100 = 23/100; both fraction parts use the same multiplier. → 23/100 = 23%.",
+        "on_incorrect_attempt_1": "Check whether the denominator already describes hundredths.",
+        "on_incorrect_attempt_2": "Check whether the denominator already describes hundredths.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "100 × 1 = 100. → 23 × 1 = 23. → 23/100 = 23/100; both fraction parts use the same multiplier. → 23/100 = 23%."
+      },
+      "mathematical_support": {
+        "hint_1": "Check whether the denominator already describes hundredths.",
+        "hint_2": "Make the denominator one hundred and apply the same multiplier to the numerator. Read the new numerator as the percentage.",
+        "worked_solution": "100 × 1 = 100. → 23 × 1 = 23. → 23/100 = 23/100; both fraction parts use the same multiplier. → 23/100 = 23%."
+      },
+      "working": [
+        "100 × 1 = 100.",
+        "23 × 1 = 23.",
+        "23/100 = 23/100; both fraction parts use the same multiplier.",
+        "23/100 = 23%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_percent_conversion",
+          "title": "Express the same value in hundredths",
+          "n": 23,
+          "d": 100,
+          "given": "23/100",
+          "steps": [
+            "100 × 1 = 100.",
+            "23 × 1 = 23.",
+            "23/100 = 23/100; both fraction parts use the same multiplier.",
+            "23/100 = 23%."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_value": "Make an equivalent fraction over one hundred. Its numerator gives the percentage, including values above one hundred.",
+        "check_n": "Your percentage is correct, but the recorded hundredths numerator changes the original fraction. Scale both fraction parts by the same factor.",
+        "check_percent": "Your hundredths fraction is correct. Read its numerator as the percentage; the percent sign is already printed.",
+        "check_multiple": "Check both the equivalent hundredths numerator and the percentage. They must preserve the original value and agree with each other.",
+        "original_numerator": "That keeps the original numerator even though the denominator must change to one hundred. Scale both by the same factor.",
+        "decimal_instead": "That is the fraction as a decimal, not the requested number of parts per hundred.",
+        "capped": "A percentage may be greater than one hundred. Keep every complete reference whole and the additional amount.",
+        "dropped_whole": "That keeps only the amount beyond the complete whole. Include each whole as one hundred percent.",
+        "wrong_factor": "That uses an incorrect multiplier. Check which factor makes the denominator one hundred.",
+        "scaled_again": "The denominator is already one hundred. Multiplying the numerator again changes the amount."
+      },
+      "response_patterns": [
+        {
+          "value": ".23",
+          "classification": "decimal_instead"
+        },
+        {
+          "value": "2300",
+          "classification": "scaled_again"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-10-P08",
+      "source_ref": {
+        "page": 9
+      },
+      "stage": "practice",
+      "prompt": "Write 7/4 as a percentage using an equivalent fraction over 100.",
+      "target": "Make an equivalent hundredths fraction and express the same value as a percentage",
+      "response": {
+        "type": "equivalent_percent",
+        "original_fraction": {
+          "n": 7,
+          "d": 4
+        },
+        "require_hundredths_working": false
+      },
+      "answer": {
+        "value": {
+          "percent": "175"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The percentage includes one complete whole and three more quarters.",
+        "correct_after_support": "Correct. The percentage includes one complete whole and three more quarters.",
+        "on_correct_math": "4 × 25 = 100. → 7 × 25 = 175. → 7/4 = 175/100; both fraction parts use the same multiplier. → 175/100 = 175%.",
+        "on_incorrect_attempt_1": "Keep the complete whole as well as the remaining quarters when counting hundredths.",
+        "on_incorrect_attempt_2": "Keep the complete whole as well as the remaining quarters when counting hundredths.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "4 × 25 = 100. → 7 × 25 = 175. → 7/4 = 175/100; both fraction parts use the same multiplier. → 175/100 = 175%."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the complete whole as well as the remaining quarters when counting hundredths.",
+        "hint_2": "Make the denominator one hundred and apply the same multiplier to the numerator. Read the new numerator as the percentage.",
+        "worked_solution": "4 × 25 = 100. → 7 × 25 = 175. → 7/4 = 175/100; both fraction parts use the same multiplier. → 175/100 = 175%."
+      },
+      "working": [
+        "4 × 25 = 100.",
+        "7 × 25 = 175.",
+        "7/4 = 175/100; both fraction parts use the same multiplier.",
+        "175/100 = 175%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_percent_conversion",
+          "title": "Express the same value in hundredths",
+          "n": 7,
+          "d": 4,
+          "given": "7/4",
+          "steps": [
+            "4 × 25 = 100.",
+            "7 × 25 = 175.",
+            "7/4 = 175/100; both fraction parts use the same multiplier.",
+            "175/100 = 175%."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_value": "Make an equivalent fraction over one hundred. Its numerator gives the percentage, including values above one hundred.",
+        "check_n": "Your percentage is correct, but the recorded hundredths numerator changes the original fraction. Scale both fraction parts by the same factor.",
+        "check_percent": "Your hundredths fraction is correct. Read its numerator as the percentage; the percent sign is already printed.",
+        "check_multiple": "Check both the equivalent hundredths numerator and the percentage. They must preserve the original value and agree with each other.",
+        "original_numerator": "That keeps the original numerator even though the denominator must change to one hundred. Scale both by the same factor.",
+        "decimal_instead": "That is the fraction as a decimal, not the requested number of parts per hundred.",
+        "capped": "A percentage may be greater than one hundred. Keep every complete reference whole and the additional amount.",
+        "dropped_whole": "That keeps only the amount beyond the complete whole. Include each whole as one hundred percent.",
+        "wrong_factor": "That uses an incorrect multiplier. Check which factor makes the denominator one hundred."
+      },
+      "response_patterns": [
+        {
+          "value": "7",
+          "classification": "original_numerator"
+        },
+        {
+          "value": "1.75",
+          "classification": "decimal_instead"
+        },
+        {
+          "value": "100",
+          "classification": "capped"
+        },
+        {
+          "value": "75",
+          "classification": "dropped_whole"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-10-P09",
+      "source_ref": {
+        "page": 9
+      },
+      "stage": "practice",
+      "prompt": "Which conversion chain for 27/50 is correct?",
+      "target": "Make an equivalent hundredths fraction and express the same value as a percentage",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "27/50 = 54/100 = 54%",
+          "27/50 = 27/100 = 27%",
+          "27/50 = 54/50 = 54%",
+          "27/50 = 135/100 = 135%"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "27/50 = 54/100 = 54%"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Every equality preserves the original value.",
+        "correct_after_support": "Correct. Every equality preserves the original value.",
+        "on_correct_math": "50 × 2 = 100. → 27 × 2 = 54. → 27/50 = 54/100; both fraction parts use the same multiplier. → 54/100 = 54%.",
+        "on_incorrect_attempt_1": "Check that both fraction parts change by the same factor before reading the percentage.",
+        "on_incorrect_attempt_2": "Check that both fraction parts change by the same factor before reading the percentage.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "50 × 2 = 100. → 27 × 2 = 54. → 27/50 = 54/100; both fraction parts use the same multiplier. → 54/100 = 54%."
+      },
+      "mathematical_support": {
+        "hint_1": "Check that both fraction parts change by the same factor before reading the percentage.",
+        "hint_2": "Make the denominator one hundred and apply the same multiplier to the numerator. Read the new numerator as the percentage.",
+        "worked_solution": "50 × 2 = 100. → 27 × 2 = 54. → 27/50 = 54/100; both fraction parts use the same multiplier. → 54/100 = 54%."
+      },
+      "working": [
+        "50 × 2 = 100.",
+        "27 × 2 = 54.",
+        "27/50 = 54/100; both fraction parts use the same multiplier.",
+        "54/100 = 54%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_percent_conversion",
+          "title": "Check every equality in the chain",
+          "n": 27,
+          "d": 50,
+          "given": "27/50",
+          "steps": [
+            "50 × 2 = 100.",
+            "27 × 2 = 54.",
+            "27/50 = 54/100; both fraction parts use the same multiplier.",
+            "54/100 = 54%."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "27/50 = 27/100 = 27%": "The denominator changes while the numerator stays fixed, so that fraction is not equivalent.",
+        "27/50 = 54/50 = 54%": "Doubling only the numerator changes the fraction; the displayed fraction also does not equal the displayed percentage.",
+        "27/50 = 135/100 = 135%": "The numerator was multiplied by five but the denominator by two, so the value is not preserved."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-10-X01",
+      "source_ref": {
+        "page": 19
+      },
+      "stage": "practice",
+      "prompt": "In a survey, 17/20 of the students choose option A. What percentage of students choose option A?",
+      "target": "Make an equivalent hundredths fraction and express the same value as a percentage",
+      "response": {
+        "type": "decimal",
+        "equivalent_percent_fraction": {
+          "n": 17,
+          "d": 20
+        },
+        "input_label": "Percentage",
+        "suffix": "%"
+      },
+      "answer": {
+        "value": "85"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The percentage describes the same share of surveyed students.",
+        "correct_after_support": "Correct. The percentage describes the same share of surveyed students.",
+        "on_correct_math": "20 × 5 = 100. → 17 × 5 = 85. → 17/20 = 85/100; both fraction parts use the same multiplier. → 85/100 = 85%.",
+        "on_incorrect_attempt_1": "Keep the whole surveyed group as the reference and express the same share in hundredths.",
+        "on_incorrect_attempt_2": "Keep the whole surveyed group as the reference and express the same share in hundredths.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "20 × 5 = 100. → 17 × 5 = 85. → 17/20 = 85/100; both fraction parts use the same multiplier. → 85/100 = 85%."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the whole surveyed group as the reference and express the same share in hundredths.",
+        "hint_2": "Make the denominator one hundred and apply the same multiplier to the numerator. Read the new numerator as the percentage.",
+        "worked_solution": "20 × 5 = 100. → 17 × 5 = 85. → 17/20 = 85/100; both fraction parts use the same multiplier. → 85/100 = 85%."
+      },
+      "working": [
+        "20 × 5 = 100.",
+        "17 × 5 = 85.",
+        "17/20 = 85/100; both fraction parts use the same multiplier.",
+        "85/100 = 85%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_percent_conversion",
+          "title": "Students choosing option A",
+          "n": 17,
+          "d": 20,
+          "given": "17/20",
+          "steps": [
+            "20 × 5 = 100.",
+            "17 × 5 = 85.",
+            "17/20 = 85/100; both fraction parts use the same multiplier.",
+            "85/100 = 85%."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_value": "Make an equivalent fraction over one hundred. Its numerator gives the percentage, including values above one hundred.",
+        "check_n": "Your percentage is correct, but the recorded hundredths numerator changes the original fraction. Scale both fraction parts by the same factor.",
+        "check_percent": "Your hundredths fraction is correct. Read its numerator as the percentage; the percent sign is already printed.",
+        "check_multiple": "Check both the equivalent hundredths numerator and the percentage. They must preserve the original value and agree with each other.",
+        "original_numerator": "That keeps the original numerator even though the denominator must change to one hundred. Scale both by the same factor.",
+        "decimal_instead": "That is the fraction as a decimal, not the requested number of parts per hundred.",
+        "capped": "A percentage may be greater than one hundred. Keep every complete reference whole and the additional amount.",
+        "dropped_whole": "That keeps only the amount beyond the complete whole. Include each whole as one hundred percent.",
+        "wrong_factor": "That uses an incorrect multiplier. Check which factor makes the denominator one hundred."
+      },
+      "response_patterns": [
+        {
+          "value": "17",
+          "classification": "original_numerator"
+        },
+        {
+          "value": ".85",
+          "classification": "decimal_instead"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-10-X02",
+      "source_ref": {
+        "page": 19
+      },
+      "stage": "practice",
+      "prompt": "A machine completes 23/25 of a task. What percentage of the task is complete?",
+      "target": "Make an equivalent hundredths fraction and express the same value as a percentage",
+      "response": {
+        "type": "decimal",
+        "equivalent_percent_fraction": {
+          "n": 23,
+          "d": 25
+        },
+        "input_label": "Percentage",
+        "suffix": "%"
+      },
+      "answer": {
+        "value": "92"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The percentage retains the same completed portion of the task.",
+        "correct_after_support": "Correct. The percentage retains the same completed portion of the task.",
+        "on_correct_math": "25 × 4 = 100. → 23 × 4 = 92. → 23/25 = 92/100; both fraction parts use the same multiplier. → 92/100 = 92%.",
+        "on_incorrect_attempt_1": "Use the complete task as the reference whole and preserve its completed share.",
+        "on_incorrect_attempt_2": "Use the complete task as the reference whole and preserve its completed share.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "25 × 4 = 100. → 23 × 4 = 92. → 23/25 = 92/100; both fraction parts use the same multiplier. → 92/100 = 92%."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the complete task as the reference whole and preserve its completed share.",
+        "hint_2": "Make the denominator one hundred and apply the same multiplier to the numerator. Read the new numerator as the percentage.",
+        "worked_solution": "25 × 4 = 100. → 23 × 4 = 92. → 23/25 = 92/100; both fraction parts use the same multiplier. → 92/100 = 92%."
+      },
+      "working": [
+        "25 × 4 = 100.",
+        "23 × 4 = 92.",
+        "23/25 = 92/100; both fraction parts use the same multiplier.",
+        "92/100 = 92%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_percent_conversion",
+          "title": "The completed share of a machine task",
+          "n": 23,
+          "d": 25,
+          "given": "23/25",
+          "steps": [
+            "25 × 4 = 100.",
+            "23 × 4 = 92.",
+            "23/25 = 92/100; both fraction parts use the same multiplier.",
+            "92/100 = 92%."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_value": "Make an equivalent fraction over one hundred. Its numerator gives the percentage, including values above one hundred.",
+        "check_n": "Your percentage is correct, but the recorded hundredths numerator changes the original fraction. Scale both fraction parts by the same factor.",
+        "check_percent": "Your hundredths fraction is correct. Read its numerator as the percentage; the percent sign is already printed.",
+        "check_multiple": "Check both the equivalent hundredths numerator and the percentage. They must preserve the original value and agree with each other.",
+        "original_numerator": "That keeps the original numerator even though the denominator must change to one hundred. Scale both by the same factor.",
+        "decimal_instead": "That is the fraction as a decimal, not the requested number of parts per hundred.",
+        "capped": "A percentage may be greater than one hundred. Keep every complete reference whole and the additional amount.",
+        "dropped_whole": "That keeps only the amount beyond the complete whole. Include each whole as one hundred percent.",
+        "wrong_factor": "That uses an incorrect multiplier. Check which factor makes the denominator one hundred."
+      },
+      "response_patterns": [
+        {
+          "value": "23",
+          "classification": "original_numerator"
+        },
+        {
+          "value": ".92",
+          "classification": "decimal_instead"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-10-X03",
+      "source_ref": {
+        "page": 19
+      },
+      "stage": "practice",
+      "prompt": "A battery has 9/10 of its full charge remaining. What percentage of full charge remains?",
+      "target": "Make an equivalent hundredths fraction and express the same value as a percentage",
+      "response": {
+        "type": "decimal",
+        "equivalent_percent_fraction": {
+          "n": 9,
+          "d": 10
+        },
+        "input_label": "Percentage",
+        "suffix": "%"
+      },
+      "answer": {
+        "value": "90"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The percentage describes the charge remaining, using full charge as the whole.",
+        "correct_after_support": "Correct. The percentage describes the charge remaining, using full charge as the whole.",
+        "on_correct_math": "10 × 10 = 100. → 9 × 10 = 90. → 9/10 = 90/100; both fraction parts use the same multiplier. → 90/100 = 90%.",
+        "on_incorrect_attempt_1": "Count the remaining charge in hundredths of the full battery charge.",
+        "on_incorrect_attempt_2": "Count the remaining charge in hundredths of the full battery charge.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "10 × 10 = 100. → 9 × 10 = 90. → 9/10 = 90/100; both fraction parts use the same multiplier. → 90/100 = 90%."
+      },
+      "mathematical_support": {
+        "hint_1": "Count the remaining charge in hundredths of the full battery charge.",
+        "hint_2": "Make the denominator one hundred and apply the same multiplier to the numerator. Read the new numerator as the percentage.",
+        "worked_solution": "10 × 10 = 100. → 9 × 10 = 90. → 9/10 = 90/100; both fraction parts use the same multiplier. → 90/100 = 90%."
+      },
+      "working": [
+        "10 × 10 = 100.",
+        "9 × 10 = 90.",
+        "9/10 = 90/100; both fraction parts use the same multiplier.",
+        "90/100 = 90%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_percent_conversion",
+          "title": "Remaining battery charge",
+          "n": 9,
+          "d": 10,
+          "given": "9/10",
+          "steps": [
+            "10 × 10 = 100.",
+            "9 × 10 = 90.",
+            "9/10 = 90/100; both fraction parts use the same multiplier.",
+            "90/100 = 90%."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_value": "Make an equivalent fraction over one hundred. Its numerator gives the percentage, including values above one hundred.",
+        "check_n": "Your percentage is correct, but the recorded hundredths numerator changes the original fraction. Scale both fraction parts by the same factor.",
+        "check_percent": "Your hundredths fraction is correct. Read its numerator as the percentage; the percent sign is already printed.",
+        "check_multiple": "Check both the equivalent hundredths numerator and the percentage. They must preserve the original value and agree with each other.",
+        "original_numerator": "That keeps the original numerator even though the denominator must change to one hundred. Scale both by the same factor.",
+        "decimal_instead": "That is the fraction as a decimal, not the requested number of parts per hundred.",
+        "capped": "A percentage may be greater than one hundred. Keep every complete reference whole and the additional amount.",
+        "dropped_whole": "That keeps only the amount beyond the complete whole. Include each whole as one hundred percent.",
+        "wrong_factor": "That uses an incorrect multiplier. Check which factor makes the denominator one hundred.",
+        "used_complement": "That describes the used charge. The question asks for the charge remaining."
+      },
+      "response_patterns": [
+        {
+          "value": "9",
+          "classification": "original_numerator"
+        },
+        {
+          "value": ".9",
+          "classification": "decimal_instead"
+        },
+        {
+          "value": "10",
+          "classification": "used_complement"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-10-X04",
+      "source_ref": {
+        "page": 19
+      },
+      "stage": "practice",
+      "prompt": "A factory produces 6/5 of its original daily target. What percentage of the original target has it produced?",
+      "target": "Make an equivalent hundredths fraction and express the same value as a percentage",
+      "response": {
+        "type": "decimal",
+        "equivalent_percent_fraction": {
+          "n": 6,
+          "d": 5
+        },
+        "input_label": "Percentage",
+        "suffix": "%"
+      },
+      "answer": {
+        "value": "120"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The percentage keeps the original target as the reference and includes the additional production.",
+        "correct_after_support": "Correct. The percentage keeps the original target as the reference and includes the additional production.",
+        "on_correct_math": "5 × 20 = 100. → 6 × 20 = 120. → 6/5 = 120/100; both fraction parts use the same multiplier. → 120/100 = 120%.",
+        "on_incorrect_attempt_1": "Keep the original target as one whole, even though production is greater than that target.",
+        "on_incorrect_attempt_2": "Keep the original target as one whole, even though production is greater than that target.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "5 × 20 = 100. → 6 × 20 = 120. → 6/5 = 120/100; both fraction parts use the same multiplier. → 120/100 = 120%."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the original target as one whole, even though production is greater than that target.",
+        "hint_2": "Make the denominator one hundred and apply the same multiplier to the numerator. Read the new numerator as the percentage.",
+        "worked_solution": "5 × 20 = 100. → 6 × 20 = 120. → 6/5 = 120/100; both fraction parts use the same multiplier. → 120/100 = 120%."
+      },
+      "working": [
+        "5 × 20 = 100.",
+        "6 × 20 = 120.",
+        "6/5 = 120/100; both fraction parts use the same multiplier.",
+        "120/100 = 120%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_percent_conversion",
+          "title": "Production compared with the original daily target",
+          "n": 6,
+          "d": 5,
+          "given": "6/5",
+          "steps": [
+            "5 × 20 = 100.",
+            "6 × 20 = 120.",
+            "6/5 = 120/100; both fraction parts use the same multiplier.",
+            "120/100 = 120%."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_value": "Make an equivalent fraction over one hundred. Its numerator gives the percentage, including values above one hundred.",
+        "check_n": "Your percentage is correct, but the recorded hundredths numerator changes the original fraction. Scale both fraction parts by the same factor.",
+        "check_percent": "Your hundredths fraction is correct. Read its numerator as the percentage; the percent sign is already printed.",
+        "check_multiple": "Check both the equivalent hundredths numerator and the percentage. They must preserve the original value and agree with each other.",
+        "original_numerator": "That keeps the original numerator even though the denominator must change to one hundred. Scale both by the same factor.",
+        "decimal_instead": "That is the fraction as a decimal, not the requested number of parts per hundred.",
+        "capped": "A percentage may be greater than one hundred. Keep every complete reference whole and the additional amount.",
+        "dropped_whole": "That keeps only the amount beyond the complete whole. Include each whole as one hundred percent.",
+        "wrong_factor": "That uses an incorrect multiplier. Check which factor makes the denominator one hundred."
+      },
+      "response_patterns": [
+        {
+          "value": "6",
+          "classification": "original_numerator"
+        },
+        {
+          "value": "1.2",
+          "classification": "decimal_instead"
+        },
+        {
+          "value": "100",
+          "classification": "capped"
+        },
+        {
+          "value": "20",
+          "classification": "dropped_whole"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-10-X05",
+      "source_ref": {
+        "page": 19
+      },
+      "stage": "practice",
+      "prompt": "Which is the correct first step for converting 27/50 to a percentage?",
+      "target": "Make an equivalent hundredths fraction and express the same value as a percentage",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Multiply both numerator and denominator by 2.",
+          "Multiply only the denominator by 2.",
+          "Multiply the numerator by 2 and the denominator by 5.",
+          "Write 27% because the numerator is 27."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "Multiply both numerator and denominator by 2."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. That first step makes hundredths and keeps the fraction equivalent.",
+        "correct_after_support": "Correct. That first step makes hundredths and keeps the fraction equivalent.",
+        "on_correct_math": "50 × 2 = 100. → Multiply the numerator by 2 as well to preserve the value.",
+        "on_incorrect_attempt_1": "Choose a step that reaches denominator one hundred without changing the value.",
+        "on_incorrect_attempt_2": "Choose a step that reaches denominator one hundred without changing the value.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "50 × 2 = 100. → Multiply the numerator by 2 as well to preserve the value."
+      },
+      "mathematical_support": {
+        "hint_1": "Choose a step that reaches denominator one hundred without changing the value.",
+        "hint_2": "Make the denominator one hundred and apply the same multiplier to the numerator. Read the new numerator as the percentage.",
+        "worked_solution": "50 × 2 = 100. → Multiply the numerator by 2 as well to preserve the value."
+      },
+      "working": [
+        "50 × 2 = 100.",
+        "Multiply the numerator by 2 as well to preserve the value."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_percent_conversion",
+          "title": "Choose an equivalent-hundredths first step",
+          "n": 27,
+          "d": 50,
+          "given": "27/50",
+          "steps": [
+            "50 × 2 = 100.",
+            "Multiply the numerator by 2 as well to preserve the value."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "Multiply only the denominator by 2.": "Changing the denominator alone does not preserve the fraction.",
+        "Multiply the numerator by 2 and the denominator by 5.": "Different multipliers on the two fraction parts change the value.",
+        "Write 27% because the numerator is 27.": "The original numerator cannot be read as a percentage until the fraction is expressed in hundredths."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-10-E01",
+      "source_ref": {
+        "page": 17
+      },
+      "stage": "exit",
+      "prompt": "Final check: write 13/25 as a percentage.",
+      "target": "Make an equivalent hundredths fraction and express the same value as a percentage",
+      "response": {
+        "type": "equivalent_percent",
+        "original_fraction": {
+          "n": 13,
+          "d": 25
+        },
+        "require_hundredths_working": false
+      },
+      "answer": {
+        "value": {
+          "percent": "52"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The final percentage and any recorded hundredths fraction preserve the original value.",
+        "correct_after_support": "Correct. The final percentage and any recorded hundredths fraction preserve the original value.",
+        "on_correct_math": "25 × 4 = 100. → 13 × 4 = 52. → 13/25 = 52/100; both fraction parts use the same multiplier. → 52/100 = 52%.",
+        "on_incorrect_attempt_1": "Review the equal scale factor and any recorded hundredths numerator.",
+        "on_incorrect_attempt_2": "Review the equal scale factor and any recorded hundredths numerator.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "25 × 4 = 100. → 13 × 4 = 52. → 13/25 = 52/100; both fraction parts use the same multiplier. → 52/100 = 52%."
+      },
+      "mathematical_support": {
+        "hint_1": "Review the equal scale factor and any recorded hundredths numerator.",
+        "hint_2": "Make the denominator one hundred and apply the same multiplier to the numerator. Read the new numerator as the percentage.",
+        "worked_solution": "25 × 4 = 100. → 13 × 4 = 52. → 13/25 = 52/100; both fraction parts use the same multiplier. → 52/100 = 52%."
+      },
+      "working": [
+        "25 × 4 = 100.",
+        "13 × 4 = 52.",
+        "13/25 = 52/100; both fraction parts use the same multiplier.",
+        "52/100 = 52%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_percent_conversion",
+          "title": "Express the same value in hundredths",
+          "n": 13,
+          "d": 25,
+          "given": "13/25",
+          "steps": [
+            "25 × 4 = 100.",
+            "13 × 4 = 52.",
+            "13/25 = 52/100; both fraction parts use the same multiplier.",
+            "52/100 = 52%."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_value": "Make an equivalent fraction over one hundred. Its numerator gives the percentage, including values above one hundred.",
+        "check_n": "Your percentage is correct, but the recorded hundredths numerator changes the original fraction. Scale both fraction parts by the same factor.",
+        "check_percent": "Your hundredths fraction is correct. Read its numerator as the percentage; the percent sign is already printed.",
+        "check_multiple": "Check both the equivalent hundredths numerator and the percentage. They must preserve the original value and agree with each other.",
+        "original_numerator": "That keeps the original numerator even though the denominator must change to one hundred. Scale both by the same factor.",
+        "decimal_instead": "That is the fraction as a decimal, not the requested number of parts per hundred.",
+        "capped": "A percentage may be greater than one hundred. Keep every complete reference whole and the additional amount.",
+        "dropped_whole": "That keeps only the amount beyond the complete whole. Include each whole as one hundred percent.",
+        "wrong_factor": "That uses an incorrect multiplier. Check which factor makes the denominator one hundred."
+      },
+      "response_patterns": [
+        {
+          "value": "13",
+          "classification": "original_numerator"
+        },
+        {
+          "value": ".52",
+          "classification": "decimal_instead"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-10-E02",
+      "source_ref": {
+        "page": 17
+      },
+      "stage": "exit",
+      "prompt": "Final check: write 17/20 as a percentage.",
+      "target": "Make an equivalent hundredths fraction and express the same value as a percentage",
+      "response": {
+        "type": "equivalent_percent",
+        "original_fraction": {
+          "n": 17,
+          "d": 20
+        },
+        "require_hundredths_working": false
+      },
+      "answer": {
+        "value": {
+          "percent": "85"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The final percentage gives the exact equivalent number of hundredths.",
+        "correct_after_support": "Correct. The final percentage gives the exact equivalent number of hundredths.",
+        "on_correct_math": "20 × 5 = 100. → 17 × 5 = 85. → 17/20 = 85/100; both fraction parts use the same multiplier. → 85/100 = 85%.",
+        "on_incorrect_attempt_1": "Review how the denominator reaches one hundred and the numerator changes with it.",
+        "on_incorrect_attempt_2": "Review how the denominator reaches one hundred and the numerator changes with it.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "20 × 5 = 100. → 17 × 5 = 85. → 17/20 = 85/100; both fraction parts use the same multiplier. → 85/100 = 85%."
+      },
+      "mathematical_support": {
+        "hint_1": "Review how the denominator reaches one hundred and the numerator changes with it.",
+        "hint_2": "Make the denominator one hundred and apply the same multiplier to the numerator. Read the new numerator as the percentage.",
+        "worked_solution": "20 × 5 = 100. → 17 × 5 = 85. → 17/20 = 85/100; both fraction parts use the same multiplier. → 85/100 = 85%."
+      },
+      "working": [
+        "20 × 5 = 100.",
+        "17 × 5 = 85.",
+        "17/20 = 85/100; both fraction parts use the same multiplier.",
+        "85/100 = 85%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_percent_conversion",
+          "title": "Express the same value in hundredths",
+          "n": 17,
+          "d": 20,
+          "given": "17/20",
+          "steps": [
+            "20 × 5 = 100.",
+            "17 × 5 = 85.",
+            "17/20 = 85/100; both fraction parts use the same multiplier.",
+            "85/100 = 85%."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_value": "Make an equivalent fraction over one hundred. Its numerator gives the percentage, including values above one hundred.",
+        "check_n": "Your percentage is correct, but the recorded hundredths numerator changes the original fraction. Scale both fraction parts by the same factor.",
+        "check_percent": "Your hundredths fraction is correct. Read its numerator as the percentage; the percent sign is already printed.",
+        "check_multiple": "Check both the equivalent hundredths numerator and the percentage. They must preserve the original value and agree with each other.",
+        "original_numerator": "That keeps the original numerator even though the denominator must change to one hundred. Scale both by the same factor.",
+        "decimal_instead": "That is the fraction as a decimal, not the requested number of parts per hundred.",
+        "capped": "A percentage may be greater than one hundred. Keep every complete reference whole and the additional amount.",
+        "dropped_whole": "That keeps only the amount beyond the complete whole. Include each whole as one hundred percent.",
+        "wrong_factor": "That uses an incorrect multiplier. Check which factor makes the denominator one hundred."
+      },
+      "response_patterns": [
+        {
+          "value": "17",
+          "classification": "original_numerator"
+        },
+        {
+          "value": ".85",
+          "classification": "decimal_instead"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-10-E03",
+      "source_ref": {
+        "page": 17
+      },
+      "stage": "exit",
+      "prompt": "Final check: write 9/4 as a percentage.",
+      "target": "Make an equivalent hundredths fraction and express the same value as a percentage",
+      "response": {
+        "type": "equivalent_percent",
+        "original_fraction": {
+          "n": 9,
+          "d": 4
+        },
+        "require_hundredths_working": false
+      },
+      "answer": {
+        "value": {
+          "percent": "225"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The final percentage retains two complete wholes and one further quarter.",
+        "correct_after_support": "Correct. The final percentage retains two complete wholes and one further quarter.",
+        "on_correct_math": "4 × 25 = 100. → 9 × 25 = 225. → 9/4 = 225/100; both fraction parts use the same multiplier. → 225/100 = 225%.",
+        "on_incorrect_attempt_1": "Review all complete wholes and the extra quarter against the same reference whole.",
+        "on_incorrect_attempt_2": "Review all complete wholes and the extra quarter against the same reference whole.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "4 × 25 = 100. → 9 × 25 = 225. → 9/4 = 225/100; both fraction parts use the same multiplier. → 225/100 = 225%."
+      },
+      "mathematical_support": {
+        "hint_1": "Review all complete wholes and the extra quarter against the same reference whole.",
+        "hint_2": "Make the denominator one hundred and apply the same multiplier to the numerator. Read the new numerator as the percentage.",
+        "worked_solution": "4 × 25 = 100. → 9 × 25 = 225. → 9/4 = 225/100; both fraction parts use the same multiplier. → 225/100 = 225%."
+      },
+      "working": [
+        "4 × 25 = 100.",
+        "9 × 25 = 225.",
+        "9/4 = 225/100; both fraction parts use the same multiplier.",
+        "225/100 = 225%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_percent_conversion",
+          "title": "Express the same value in hundredths",
+          "n": 9,
+          "d": 4,
+          "given": "9/4",
+          "steps": [
+            "4 × 25 = 100.",
+            "9 × 25 = 225.",
+            "9/4 = 225/100; both fraction parts use the same multiplier.",
+            "225/100 = 225%."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_value": "Make an equivalent fraction over one hundred. Its numerator gives the percentage, including values above one hundred.",
+        "check_n": "Your percentage is correct, but the recorded hundredths numerator changes the original fraction. Scale both fraction parts by the same factor.",
+        "check_percent": "Your hundredths fraction is correct. Read its numerator as the percentage; the percent sign is already printed.",
+        "check_multiple": "Check both the equivalent hundredths numerator and the percentage. They must preserve the original value and agree with each other.",
+        "original_numerator": "That keeps the original numerator even though the denominator must change to one hundred. Scale both by the same factor.",
+        "decimal_instead": "That is the fraction as a decimal, not the requested number of parts per hundred.",
+        "capped": "A percentage may be greater than one hundred. Keep every complete reference whole and the additional amount.",
+        "dropped_whole": "That keeps only the amount beyond the complete whole. Include each whole as one hundred percent.",
+        "wrong_factor": "That uses an incorrect multiplier. Check which factor makes the denominator one hundred."
+      },
+      "response_patterns": [
+        {
+          "value": "9",
+          "classification": "original_numerator"
+        },
+        {
+          "value": "2.25",
+          "classification": "decimal_instead"
+        },
+        {
+          "value": "100",
+          "classification": "capped"
+        },
+        {
+          "value": "25",
+          "classification": "dropped_whole"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-10-E04",
+      "source_ref": {
+        "page": 17
+      },
+      "stage": "exit",
+      "prompt": "Final method check: which statement correctly describes fraction-to-percentage conversion?",
+      "target": "Make an equivalent hundredths fraction and express the same value as a percentage",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Make an equivalent fraction over 100 using the same multiplier on both parts, then read its numerator as the percentage.",
+          "Change only the denominator to 100 and keep the original numerator.",
+          "Divide the numerator by 100 and put a percent sign after the result.",
+          "Reduce any percentage above 100% to 100%."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "Make an equivalent fraction over 100 using the same multiplier on both parts, then read its numerator as the percentage."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The rule preserves the value and expresses it as parts per hundred.",
+        "correct_after_support": "Correct. The rule preserves the value and expresses it as parts per hundred.",
+        "on_correct_math": "Use the same multiplier on numerator and denominator to make an equivalent fraction over 100. → Read the hundredths numerator as the percentage and include the percent sign. → Keep percentages above 100% when the fraction exceeds the reference whole.",
+        "on_incorrect_attempt_1": "Review the equivalent-fraction rule and the meaning of percent.",
+        "on_incorrect_attempt_2": "Review the equivalent-fraction rule and the meaning of percent.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Use the same multiplier on numerator and denominator to make an equivalent fraction over 100. → Read the hundredths numerator as the percentage and include the percent sign. → Keep percentages above 100% when the fraction exceeds the reference whole."
+      },
+      "mathematical_support": {
+        "hint_1": "Review the equivalent-fraction rule and the meaning of percent.",
+        "hint_2": "Make the denominator one hundred and apply the same multiplier to the numerator. Read the new numerator as the percentage.",
+        "worked_solution": "Use the same multiplier on numerator and denominator to make an equivalent fraction over 100. → Read the hundredths numerator as the percentage and include the percent sign. → Keep percentages above 100% when the fraction exceeds the reference whole."
+      },
+      "working": [
+        "Use the same multiplier on numerator and denominator to make an equivalent fraction over 100.",
+        "Read the hundredths numerator as the percentage and include the percent sign.",
+        "Keep percentages above 100% when the fraction exceeds the reference whole."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_percent_conversion",
+          "title": "Choose the equivalent-hundredths rule",
+          "n": 13,
+          "d": 25,
+          "given": "Choose the correct statement.",
+          "steps": [
+            "Use the same multiplier on numerator and denominator to make an equivalent fraction over 100.",
+            "Read the hundredths numerator as the percentage and include the percent sign.",
+            "Keep percentages above 100% when the fraction exceeds the reference whole."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "Change only the denominator to 100 and keep the original numerator.": "Changing only the denominator changes the fraction value.",
+        "Divide the numerator by 100 and put a percent sign after the result.": "That does not make an equivalent fraction over one hundred.",
+        "Reduce any percentage above 100% to 100%.": "Capping the percentage loses any amount above the original reference whole."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    }
+  ],
+  "canonical_lesson": {
+    "version": "FDP10-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

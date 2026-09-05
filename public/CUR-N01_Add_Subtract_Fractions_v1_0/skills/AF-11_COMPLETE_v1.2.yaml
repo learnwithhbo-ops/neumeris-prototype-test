@@ -1,0 +1,2215 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "AF-11 - Convert between mixed numbers and improper fractions",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-18",
+      "sha256": "306255016b3ea426c93ca6a581bcc3dd9abff09a6be00e835ba39c9bfcda84bb"
+    },
+    "authored_scope": "Convert accurately between mixed numbers and improper fractions.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "AF11-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "verified_desktop_secure_mobile_unfinished_mixed_final_both_directions_grouping_partial_resume_narration_and_320_390_layouts",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        14,
+        16
+      ],
+      "source_repairs_consulted": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        17,
+        18
+      ],
+      "note": "All 18 source pages read and active pages visually checked. Both key models and both worked examples retained. All guided numeric blanks are covered; the final mixed-number entry captures all three parts together. Original denominators and proper mixed fractional parts are required; simplification is not added. Page 14’s explicit three-item mastery decision governs over page 18’s shorter completion summary. Direction-specific evidence and local repairs avoid conflating the two conversion skills. Entry, Diagnostic and delayed Retrieval remain excluded."
+    }
+  },
+  "identity": {
+    "id": "AF-11",
+    "slug": "convert-between-mixed-numbers-and-improper-fractions",
+    "title": "Convert between mixed numbers and improper fractions",
+    "strand": "Number",
+    "cluster": "Adding and Subtracting Fractions",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Convert in both directions between positive mixed numbers and improper fractions, retaining the original denominator.",
+    "success_criteria": [
+      "Count denominator-many parts in each whole, then add the extra numerator.",
+      "Retain the denominator.",
+      "Divide the improper numerator by the denominator.",
+      "Map quotient to wholes and remainder to numerator, leaving a proper fractional part.",
+      "Keep separate evidence for each conversion direction."
+    ],
+    "boundaries": {
+      "includes": [
+        "Positive mixed numbers and improper fractions",
+        "Initial denominators 2–12",
+        "Both conversion directions",
+        "Proper fractional part with retained denominator",
+        "Exact rope, flour and water contexts"
+      ],
+      "excludes": [
+        "Addition or subtraction of mixed numbers",
+        "Exchanging wholes",
+        "Negative values",
+        "Decimal conversion",
+        "Unrequested simplification",
+        "Entry, Diagnostic and delayed Retrieval routes"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [],
+    "entry_assumptions": [
+      "The learner can read the quantities and use the required whole-number arithmetic."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "integer",
+      "fraction",
+      "mixed_number",
+      "single_choice"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    }
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "One whole contains denominator-many equal fractional parts.",
+    "invariant": "Conversion changes the written form, not the amount or part size.",
+    "mathematical_rule": "Mixed to improper: whole × denominator + numerator. Improper to mixed: divide and map quotient and remainder.",
+    "must_notice": [
+      "Include the extra numerator.",
+      "Keep the original denominator.",
+      "The quotient counts wholes and the remainder counts leftover parts."
+    ],
+    "common_confusions": [
+      "Adding whole and numerator directly",
+      "Omitting the extra numerator",
+      "Changing denominator",
+      "Reversing quotient and remainder",
+      "Leaving an improper fractional part"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "Count equal parts across wholes",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Count equal parts across wholes",
+          "initial_state": "Count equal parts across wholes",
+          "model": {
+            "kind": "mixed_conversion",
+            "direction": "mixed_to_improper",
+            "whole": 2,
+            "n": 1,
+            "d": 3,
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Each whole here contains three thirds. Keep track of the complete wholes and the extra third."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "One fraction counts all the parts",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "One fraction counts all the parts",
+          "initial_state": "One fraction counts all the parts",
+          "model": {
+            "kind": "mixed_conversion",
+            "direction": "mixed_to_improper",
+            "whole": 2,
+            "n": 1,
+            "d": 3,
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true
+          }
+        },
+        "narration": {
+          "script": "Count the thirds in both wholes, then include the extra third. Their size stays the same, so the denominator does not change."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Group parts back into wholes",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Group parts back into wholes",
+          "initial_state": "Group parts back into wholes",
+          "model": {
+            "kind": "mixed_conversion",
+            "direction": "improper_to_mixed",
+            "numerator": 11,
+            "d": 4,
+            "object": "parts",
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true
+          }
+        },
+        "narration": {
+          "script": "For the reverse conversion, group the quarters into complete wholes. The complete groups give the whole number, and the leftover quarters give the numerator."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Choose the conversion calculation",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Choose the conversion calculation",
+          "initial_state": "Choose the conversion calculation",
+          "model": {
+            "kind": "mixed_conversion",
+            "direction": "mixed_to_improper",
+            "whole": 3,
+            "n": 2,
+            "d": 5,
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Choose the calculation that counts every fifth in the mixed number."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "AF-11-C01"
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Convert four and three sevenths",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Convert four and three sevenths",
+          "initial_state": "Convert four and three sevenths",
+          "model": {
+            "kind": "mixed_conversion",
+            "direction": "mixed_to_improper",
+            "whole": 4,
+            "n": 3,
+            "d": 7,
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true
+          }
+        },
+        "narration": {
+          "script": "Follow the parts from all four wholes into the count, then add the extra three sevenths. The fraction still counts sevenths."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T06"
+      },
+      {
+        "id": "T06",
+        "stage": "teaching",
+        "purpose": "Convert seventeen fifths",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Convert seventeen fifths",
+          "initial_state": "Convert seventeen fifths",
+          "model": {
+            "kind": "mixed_conversion",
+            "direction": "improper_to_mixed",
+            "numerator": 17,
+            "d": 5,
+            "object": "parts",
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true
+          }
+        },
+        "narration": {
+          "script": "Make complete groups of fifths. Use the quotient for the wholes and the remainder for the leftover fifths, keeping the denominator."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T07"
+      },
+      {
+        "id": "T07",
+        "stage": "teaching",
+        "purpose": "Check the complete method",
+        "source_ref": {
+          "page": 6
+        },
+        "scene": {
+          "display_title": "Check the complete method",
+          "initial_state": "Check the complete method",
+          "model": {
+            "kind": "mixed_conversion",
+            "direction": "mixed_to_improper",
+            "whole": 2,
+            "n": 4,
+            "d": 9,
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Check that the method counts both the wholes and the extra fractional parts."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "AF-11-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "AF-11-G01",
+        "support_level": "high",
+        "pre_question_script": "First convert three and two fifths, then convert fourteen thirds in the other direction.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "AF-11-G02",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "faded",
+        "question_ref": "AF-11-G03",
+        "support_level": "reduced",
+        "pre_question_script": "",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "faded",
+        "question_ref": "AF-11-G04",
+        "support_level": "reduced",
+        "pre_question_script": "",
+        "correct_next": "G05"
+      },
+      "G05": {
+        "stage": "guided",
+        "question_ref": "AF-11-G05",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G06"
+      },
+      "G06": {
+        "stage": "faded",
+        "question_ref": "AF-11-G06",
+        "support_level": "reduced",
+        "pre_question_script": "",
+        "correct_next": "G07"
+      },
+      "G07": {
+        "stage": "faded",
+        "question_ref": "AF-11-G07",
+        "support_level": "reduced",
+        "pre_question_script": "",
+        "correct_next": "G08"
+      },
+      "G08": {
+        "stage": "independent_transfer",
+        "question_ref": "AF-11-G08",
+        "support_level": "none",
+        "pre_question_script": "",
+        "correct_next": "P01"
+      }
+    },
+    "practice": {
+      "intro_script": "Convert in both directions, then use the same reasoning for rope, flour and water. Check the requested form each time.",
+      "question_order": [
+        "AF-11-P01",
+        "AF-11-P02",
+        "AF-11-P03",
+        "AF-11-P04",
+        "AF-11-P05",
+        "AF-11-P06",
+        "AF-11-P07",
+        "AF-11-X01",
+        "AF-11-X02",
+        "AF-11-X03",
+        "AF-11-X04"
+      ],
+      "question_count": 11
+    },
+    "exit": {
+      "intro_script": "Complete one conversion in each direction, then select the correct statement. Keep the original denominators. No hints are available and each response locks after submission.",
+      "primary_question_refs": [
+        "AF-11-E01",
+        "AF-11-E02",
+        "AF-11-E03"
+      ],
+      "confirmation_question_refs": [],
+      "mastery_policy": {
+        "profile": "all_primary_unsupported",
+        "require_all": true,
+        "source_page": 14,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "You converted correctly in both directions, keeping the part size fixed and placing the complete wholes and leftover parts correctly.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Check the conversion direction",
+      "ryan_script": "One or more final checks need another pass. Use the feedback for the conversion direction that needs work, and keep the denominator fixed.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "AF-11-C01",
+      "source_ref": {
+        "page": 4
+      },
+      "stage": "practice",
+      "prompt": "Which calculation converts 3 2/5 to an improper fraction?",
+      "target": "Convert the number without changing its value or part size",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "(3 + 2)/5",
+          "(3 × 5 + 2)/5",
+          "(3 × 2 + 5)/5",
+          "(3 + 5 + 2)/5"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "(3 × 5 + 2)/5"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Exactly. That calculation counts the fifths in all three wholes and the extra two fifths.",
+        "correct_after_support": "Exactly. That calculation counts the fifths in all three wholes and the extra two fifths.",
+        "on_correct_math": "Each whole contains five fifths. → Count 3 × 5 fifths, then add two more fifths. → Use (3 × 5 + 2)/5.",
+        "on_incorrect_attempt_1": "The whole number counts groups, and the denominator tells you how many parts each group contains.",
+        "on_incorrect_attempt_2": "Multiply the whole number by five, then add two, keeping denominator five. Select that calculation.",
+        "on_locked_incorrect": "Response recorded. Review the conversion in this direction after the final check.",
+        "worked_explanation": "Each whole contains five fifths. → Count 3 × 5 fifths, then add two more fifths. → Use (3 × 5 + 2)/5."
+      },
+      "mathematical_support": {
+        "hint_1": "The whole number counts groups, and the denominator tells you how many parts each group contains.",
+        "hint_2": "Each whole contains denominator-many parts. Count the wholes’ parts, then include the extra fractional parts.",
+        "worked_solution": "Each whole contains five fifths. → Count 3 × 5 fifths, then add two more fifths. → Use (3 × 5 + 2)/5."
+      },
+      "working": [
+        "Each whole contains five fifths.",
+        "Count 3 × 5 fifths, then add two more fifths.",
+        "Use (3 × 5 + 2)/5."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_conversion",
+          "direction": "mixed_to_improper",
+          "whole": 3,
+          "n": 2,
+          "d": 5,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "(3 + 2)/5": "The three wholes each contain five fifths. They are not just three individual fifths.",
+        "(3 × 2 + 5)/5": "The denominator, not the extra numerator, gives the number of fractional parts in each whole.",
+        "(3 + 5 + 2)/5": "Adding the labels does not count three groups of five. The whole-number contribution uses multiplication."
+      },
+      "conversion_direction": "mixed_to_improper"
+    },
+    {
+      "id": "AF-11-C02",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Which method correctly converts 2 4/9 to an improper fraction?",
+      "target": "Convert the number without changing its value or part size",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "2 × 9 + 4 = 22; 2 4/9 = 22/9",
+          "2 + 4 = 6; 2 4/9 = 6/9",
+          "2 × 4 + 9 = 17; 2 4/9 = 17/9",
+          "2 × 9 = 18; 2 4/9 = 18/9"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "2 × 9 + 4 = 22; 2 4/9 = 22/9"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both the complete wholes and the extra ninths are included.",
+        "correct_after_support": "Correct. Both the complete wholes and the extra ninths are included.",
+        "on_correct_math": "2 × 9 = 18 ninths in the wholes. → 18 + 4 = 22 ninths altogether. → 2 4/9 = 22/9.",
+        "on_incorrect_attempt_1": "Count the ninths in the two wholes, then include the four extra ninths.",
+        "on_incorrect_attempt_2": "The complete method multiplies two by nine, adds four, and retains denominator nine. Select that line.",
+        "on_locked_incorrect": "Response recorded. Review the conversion in this direction after the final check.",
+        "worked_explanation": "2 × 9 = 18 ninths in the wholes. → 18 + 4 = 22 ninths altogether. → 2 4/9 = 22/9."
+      },
+      "mathematical_support": {
+        "hint_1": "Count the ninths in the two wholes, then include the four extra ninths.",
+        "hint_2": "Each whole contains denominator-many parts. Count the wholes’ parts, then include the extra fractional parts.",
+        "worked_solution": "2 × 9 = 18 ninths in the wholes. → 18 + 4 = 22 ninths altogether. → 2 4/9 = 22/9."
+      },
+      "working": [
+        "2 × 9 = 18 ninths in the wholes.",
+        "18 + 4 = 22 ninths altogether.",
+        "2 4/9 = 22/9."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_conversion",
+          "direction": "mixed_to_improper",
+          "whole": 2,
+          "n": 4,
+          "d": 9,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "2 + 4 = 6; 2 4/9 = 6/9": "Two wholes contain more than two ninths. Multiply by the denominator first.",
+        "2 × 4 + 9 = 17; 2 4/9 = 17/9": "The two complete wholes must be multiplied by nine, not by the extra numerator.",
+        "2 × 9 = 18; 2 4/9 = 18/9": "That line counts the two wholes but leaves out the four extra ninths."
+      },
+      "conversion_direction": "mixed_to_improper"
+    },
+    {
+      "id": "AF-11-G01",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "guided",
+      "prompt": "For 3 2/5, complete 3 × 5 = ?.",
+      "target": "Convert the number without changing its value or part size",
+      "response": {
+        "type": "integer",
+        "input_label": "Parts in the wholes"
+      },
+      "answer": {
+        "value": 15
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The three wholes contain fifteen fifths.",
+        "correct_after_support": "Correct. The three wholes contain fifteen fifths.",
+        "on_correct_math": "Each whole has 5 fifths. → 3 × 5 = 15.",
+        "on_incorrect_attempt_1": "Count three groups of five.",
+        "on_incorrect_attempt_2": "Three groups of five make fifteen. Enter fifteen.",
+        "on_locked_incorrect": "Response recorded. Review the conversion in this direction after the final check.",
+        "worked_explanation": "Each whole has 5 fifths. → 3 × 5 = 15."
+      },
+      "mathematical_support": {
+        "hint_1": "Count three groups of five.",
+        "hint_2": "Each whole contains denominator-many parts. Count the wholes’ parts, then include the extra fractional parts.",
+        "worked_solution": "Each whole has 5 fifths. → 3 × 5 = 15."
+      },
+      "working": [
+        "Each whole has 5 fifths.",
+        "3 × 5 = 15."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "mixed_conversion_steps",
+          "label": "Count parts in the wholes",
+          "expression": "3 × 5 = ?",
+          "completed": "3 × 5 = 15",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {},
+      "conversion_direction": "mixed_to_improper"
+    },
+    {
+      "id": "AF-11-G02",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "guided",
+      "prompt": "Carry the whole-number contribution into ? + 2.",
+      "target": "Convert the number without changing its value or part size",
+      "response": {
+        "type": "integer",
+        "input_label": "Whole-number contribution"
+      },
+      "answer": {
+        "value": 15
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Add the extra two fifths to the fifteen already counted.",
+        "correct_after_support": "Correct. Add the extra two fifths to the fifteen already counted.",
+        "on_correct_math": "The wholes contain 15 fifths. → Add the extra 2 fifths to 15.",
+        "on_incorrect_attempt_1": "Use the number of fifths counted in the complete wholes.",
+        "on_incorrect_attempt_2": "The wholes contributed fifteen fifths. Enter fifteen.",
+        "on_locked_incorrect": "Response recorded. Review the conversion in this direction after the final check.",
+        "worked_explanation": "The wholes contain 15 fifths. → Add the extra 2 fifths to 15."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the number of fifths counted in the complete wholes.",
+        "hint_2": "Each whole contains denominator-many parts. Count the wholes’ parts, then include the extra fractional parts.",
+        "worked_solution": "The wholes contain 15 fifths. → Add the extra 2 fifths to 15."
+      },
+      "working": [
+        "The wholes contain 15 fifths.",
+        "Add the extra 2 fifths to 15."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "mixed_conversion_steps",
+          "label": "Include the extra fraction",
+          "expression": "? + 2",
+          "completed": "15 + 2",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {},
+      "conversion_direction": "mixed_to_improper"
+    },
+    {
+      "id": "AF-11-G03",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "faded",
+      "prompt": "Complete the total number of fifths: 15 + 2 = ?.",
+      "target": "Convert the number without changing its value or part size",
+      "response": {
+        "type": "integer",
+        "input_label": "Total fifths"
+      },
+      "answer": {
+        "value": 17
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. There are seventeen fifths altogether.",
+        "correct_after_support": "Correct. There are seventeen fifths altogether.",
+        "on_correct_math": "15 fifths + 2 fifths = 17 fifths.",
+        "on_incorrect_attempt_1": "Combine the parts from the wholes and the extra fraction.",
+        "on_incorrect_attempt_2": "Fifteen and two make seventeen. Enter seventeen.",
+        "on_locked_incorrect": "Response recorded. Review the conversion in this direction after the final check.",
+        "worked_explanation": "15 fifths + 2 fifths = 17 fifths."
+      },
+      "mathematical_support": {
+        "hint_1": "Combine the parts from the wholes and the extra fraction.",
+        "hint_2": "Each whole contains denominator-many parts. Count the wholes’ parts, then include the extra fractional parts.",
+        "worked_solution": "15 fifths + 2 fifths = 17 fifths."
+      },
+      "working": [
+        "15 fifths + 2 fifths = 17 fifths."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "mixed_conversion_steps",
+          "label": "Count every fifth",
+          "expression": "15 + 2 = ?",
+          "completed": "15 + 2 = 17",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {},
+      "conversion_direction": "mixed_to_improper"
+    },
+    {
+      "id": "AF-11-G04",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "faded",
+      "prompt": "Complete the numerator: 3 2/5 = ?/5.",
+      "target": "Convert the number without changing its value or part size",
+      "response": {
+        "type": "integer",
+        "input_label": "Improper numerator"
+      },
+      "answer": {
+        "value": 17
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Seventeen fifths is the same value as three and two fifths.",
+        "correct_after_support": "Correct. Seventeen fifths is the same value as three and two fifths.",
+        "on_correct_math": "The total count is 17 fifths. → 3 2/5 = 17/5.",
+        "on_incorrect_attempt_1": "Use the total number of fifths, keeping their part size.",
+        "on_incorrect_attempt_2": "Seventeen is the numerator and five stays the denominator. Enter seventeen.",
+        "on_locked_incorrect": "Response recorded. Review the conversion in this direction after the final check.",
+        "worked_explanation": "The total count is 17 fifths. → 3 2/5 = 17/5."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the total number of fifths, keeping their part size.",
+        "hint_2": "Each whole contains denominator-many parts. Count the wholes’ parts, then include the extra fractional parts.",
+        "worked_solution": "The total count is 17 fifths. → 3 2/5 = 17/5."
+      },
+      "working": [
+        "The total count is 17 fifths.",
+        "3 2/5 = 17/5."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "mixed_conversion_steps",
+          "label": "Keep the denominator",
+          "expression": "3 2/5 = ?/5",
+          "completed": "3 2/5 = 17/5",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {},
+      "conversion_direction": "mixed_to_improper"
+    },
+    {
+      "id": "AF-11-G05",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "guided",
+      "prompt": "For 14/3, how many complete groups of 3 fit in 14?",
+      "target": "Convert the number without changing its value or part size",
+      "response": {
+        "type": "integer",
+        "input_label": "Quotient"
+      },
+      "answer": {
+        "value": 4
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Four complete groups of thirds form four wholes.",
+        "correct_after_support": "Correct. Four complete groups of thirds form four wholes.",
+        "on_correct_math": "3 × 4 = 12. → 3 × 5 = 15, which exceeds 14. → Four complete groups fit.",
+        "on_incorrect_attempt_1": "Use the largest multiple of three that does not exceed fourteen.",
+        "on_incorrect_attempt_2": "Four groups use twelve parts; a fifth group would need fifteen. Enter four.",
+        "on_locked_incorrect": "Response recorded. Review the conversion in this direction after the final check.",
+        "worked_explanation": "3 × 4 = 12. → 3 × 5 = 15, which exceeds 14. → Four complete groups fit."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the largest multiple of three that does not exceed fourteen.",
+        "hint_2": "Divide the numerator by the denominator. Complete groups give the whole number, and the leftover parts give the fractional numerator.",
+        "worked_solution": "3 × 4 = 12. → 3 × 5 = 15, which exceeds 14. → Four complete groups fit."
+      },
+      "working": [
+        "3 × 4 = 12.",
+        "3 × 5 = 15, which exceeds 14.",
+        "Four complete groups fit."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "mixed_conversion_steps",
+          "label": "Find the quotient",
+          "expression": "14 ÷ 3: quotient ?",
+          "completed": "14 ÷ 3: quotient 4",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {},
+      "conversion_direction": "improper_to_mixed"
+    },
+    {
+      "id": "AF-11-G06",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "faded",
+      "prompt": "Four groups of 3 use 12 parts. What remainder is left from 14?",
+      "target": "Convert the number without changing its value or part size",
+      "response": {
+        "type": "integer",
+        "input_label": "Remainder"
+      },
+      "answer": {
+        "value": 2
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Two thirds remain outside the complete groups.",
+        "correct_after_support": "Correct. Two thirds remain outside the complete groups.",
+        "on_correct_math": "14 − 12 = 2. → Two thirds remain after making the complete wholes.",
+        "on_incorrect_attempt_1": "Take the parts used in complete groups from the original numerator.",
+        "on_incorrect_attempt_2": "Fourteen minus twelve is two. Enter two.",
+        "on_locked_incorrect": "Response recorded. Review the conversion in this direction after the final check.",
+        "worked_explanation": "14 − 12 = 2. → Two thirds remain after making the complete wholes."
+      },
+      "mathematical_support": {
+        "hint_1": "Take the parts used in complete groups from the original numerator.",
+        "hint_2": "Divide the numerator by the denominator. Complete groups give the whole number, and the leftover parts give the fractional numerator.",
+        "worked_solution": "14 − 12 = 2. → Two thirds remain after making the complete wholes."
+      },
+      "working": [
+        "14 − 12 = 2.",
+        "Two thirds remain after making the complete wholes."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "mixed_conversion_steps",
+          "label": "Find the leftover count",
+          "expression": "14 − 12 = ?",
+          "completed": "14 − 12 = 2",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {},
+      "conversion_direction": "improper_to_mixed"
+    },
+    {
+      "id": "AF-11-G07",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "faded",
+      "prompt": "Use the quotient and remainder to write 14/3 as a mixed number.",
+      "target": "Convert the number without changing its value or part size",
+      "response": {
+        "type": "mixed_number",
+        "conversion_profile": "original_parts",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "4 2/3"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The complete groups form the whole-number part, and the remainder counts the leftover fractional parts.",
+        "correct_after_support": "Correct. The complete groups form the whole-number part, and the remainder counts the leftover fractional parts.",
+        "on_correct_math": "14 ÷ 3 = 4 remainder 2. → 4 complete groups form the wholes; 2 parts remain. → 14/3 = 4 2/3; retain denominator 3.",
+        "on_incorrect_attempt_1": "Find how many complete groups of 3 fit in 14, then count the remainder.",
+        "on_incorrect_attempt_2": "Follow the division line. Put the quotient in the whole-number field, the remainder above the fraction bar, and retain the denominator.",
+        "on_locked_incorrect": "Response recorded. Review the conversion in this direction after the final check.",
+        "worked_explanation": "14 ÷ 3 = 4 remainder 2. → 4 complete groups form the wholes; 2 parts remain. → 14/3 = 4 2/3; retain denominator 3."
+      },
+      "mathematical_support": {
+        "hint_1": "Find how many complete groups of 3 fit in 14, then count the remainder.",
+        "hint_2": "Divide the numerator by the denominator. Complete groups give the whole number, and the leftover parts give the fractional numerator.",
+        "worked_solution": "14 ÷ 3 = 4 remainder 2. → 4 complete groups form the wholes; 2 parts remain. → 14/3 = 4 2/3; retain denominator 3."
+      },
+      "working": [
+        "14 ÷ 3 = 4 remainder 2.",
+        "4 complete groups form the wholes; 2 parts remain.",
+        "14/3 = 4 2/3; retain denominator 3."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "mixed_conversion_steps",
+          "label": "Map the division result",
+          "expression": "14/3 = ?",
+          "completed": "14/3 = 4 2/3",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "wrong_form": "The fractional part must be less than one whole. Move every complete group into the whole-number part.",
+        "swapped_quotient_remainder": "The quotient and remainder are reversed. The complete groups are the whole number; the leftover count is the numerator.",
+        "changed_denominator": "The original denominator names the part size and must be retained.",
+        "incorrect_arithmetic": "Recheck how many complete denominator-sized groups fit, then count the parts left over."
+      },
+      "conversion_direction": "improper_to_mixed",
+      "conversion_target": {
+        "whole": 4,
+        "n": 2,
+        "d": 3
+      },
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-11-G08",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "independent_transfer",
+      "prompt": "Which statement is correct when an improper fraction is converted to a mixed number?",
+      "target": "Convert the number without changing its value or part size",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "The quotient becomes the whole number and the remainder becomes the numerator.",
+          "The remainder becomes the whole number and the quotient becomes the denominator.",
+          "The denominator becomes the whole number.",
+          "The numerator and denominator are added."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "The quotient becomes the whole number and the remainder becomes the numerator."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The quotient and remainder have different jobs, and the denominator is retained.",
+        "correct_after_support": "Correct. The quotient and remainder have different jobs, and the denominator is retained.",
+        "on_correct_math": "Division counts complete groups and leftover parts. → The complete-group count is the whole number. → The remainder is the numerator; the denominator stays unchanged.",
+        "on_incorrect_attempt_1": "Think about which division result counts complete wholes and which counts leftover parts.",
+        "on_incorrect_attempt_2": "The quotient counts complete wholes and the remainder counts leftover fractional parts. Select that statement.",
+        "on_locked_incorrect": "Response recorded. Review the conversion in this direction after the final check.",
+        "worked_explanation": "Division counts complete groups and leftover parts. → The complete-group count is the whole number. → The remainder is the numerator; the denominator stays unchanged."
+      },
+      "mathematical_support": {
+        "hint_1": "Think about which division result counts complete wholes and which counts leftover parts.",
+        "hint_2": "Divide the numerator by the denominator. Complete groups give the whole number, and the leftover parts give the fractional numerator.",
+        "worked_solution": "Division counts complete groups and leftover parts. → The complete-group count is the whole number. → The remainder is the numerator; the denominator stays unchanged."
+      },
+      "working": [
+        "Division counts complete groups and leftover parts.",
+        "The complete-group count is the whole number.",
+        "The remainder is the numerator; the denominator stays unchanged."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "mixed_conversion_steps",
+          "label": "Place each division result",
+          "expression": "Quotient and remainder: choose below",
+          "completed": "Quotient → whole number; remainder → numerator.",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {},
+      "conversion_direction": "improper_to_mixed"
+    },
+    {
+      "id": "AF-11-P01",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Write 2 3/4 as an improper fraction.",
+      "target": "Convert the number without changing its value or part size",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": false,
+        "show_authored_label": true,
+        "input_label": "Improper fraction",
+        "conversion_profile": "original_parts",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "11/4"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. You counted every fractional part in the wholes and the extra fraction, keeping the part size.",
+        "correct_after_support": "Correct. You counted every fractional part in the wholes and the extra fraction, keeping the part size.",
+        "on_correct_math": "2 × 4 = 8 fractional parts in the wholes. → 8 + 3 = 11 fractional parts altogether. → 2 3/4 = 11/4; keep denominator 4.",
+        "on_incorrect_attempt_1": "First count the parts in 2 complete wholes. Each whole contains 4 of these parts.",
+        "on_incorrect_attempt_2": "Follow the multiplication, then include the extra fractional parts. Keep the original denominator and correct your fraction.",
+        "on_locked_incorrect": "Response recorded. Review the conversion in this direction after the final check.",
+        "worked_explanation": "2 × 4 = 8 fractional parts in the wholes. → 8 + 3 = 11 fractional parts altogether. → 2 3/4 = 11/4; keep denominator 4."
+      },
+      "mathematical_support": {
+        "hint_1": "First count the parts in 2 complete wholes. Each whole contains 4 of these parts.",
+        "hint_2": "Each whole contains denominator-many parts. Count the wholes’ parts, then include the extra fractional parts.",
+        "worked_solution": "2 × 4 = 8 fractional parts in the wholes. → 8 + 3 = 11 fractional parts altogether. → 2 3/4 = 11/4; keep denominator 4."
+      },
+      "working": [
+        "2 × 4 = 8 fractional parts in the wholes.",
+        "8 + 3 = 11 fractional parts altogether.",
+        "2 3/4 = 11/4; keep denominator 4."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_conversion",
+          "direction": "mixed_to_improper",
+          "whole": 2,
+          "n": 3,
+          "d": 4,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "omitted_whole": "Adding the whole number straight to the numerator misses the fractional parts inside each whole.",
+        "omitted_fraction": "That counts the complete wholes only. Include the extra fractional numerator too.",
+        "changed_denominator": "The denominator names the part size. It must stay unchanged in this conversion.",
+        "incorrect_arithmetic": "Recheck the multiplication for the complete wholes, then add the extra numerator."
+      },
+      "conversion_direction": "mixed_to_improper",
+      "conversion_target": {
+        "whole": 2,
+        "n": 3,
+        "d": 4
+      },
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-11-P02",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Write 5 1/6 as an improper fraction.",
+      "target": "Convert the number without changing its value or part size",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": false,
+        "show_authored_label": true,
+        "input_label": "Improper fraction",
+        "conversion_profile": "original_parts",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "31/6"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. You counted every fractional part in the wholes and the extra fraction, keeping the part size.",
+        "correct_after_support": "Correct. You counted every fractional part in the wholes and the extra fraction, keeping the part size.",
+        "on_correct_math": "5 × 6 = 30 fractional parts in the wholes. → 30 + 1 = 31 fractional parts altogether. → 5 1/6 = 31/6; keep denominator 6.",
+        "on_incorrect_attempt_1": "First count the parts in 5 complete wholes. Each whole contains 6 of these parts.",
+        "on_incorrect_attempt_2": "Follow the multiplication, then include the extra fractional parts. Keep the original denominator and correct your fraction.",
+        "on_locked_incorrect": "Response recorded. Review the conversion in this direction after the final check.",
+        "worked_explanation": "5 × 6 = 30 fractional parts in the wholes. → 30 + 1 = 31 fractional parts altogether. → 5 1/6 = 31/6; keep denominator 6."
+      },
+      "mathematical_support": {
+        "hint_1": "First count the parts in 5 complete wholes. Each whole contains 6 of these parts.",
+        "hint_2": "Each whole contains denominator-many parts. Count the wholes’ parts, then include the extra fractional parts.",
+        "worked_solution": "5 × 6 = 30 fractional parts in the wholes. → 30 + 1 = 31 fractional parts altogether. → 5 1/6 = 31/6; keep denominator 6."
+      },
+      "working": [
+        "5 × 6 = 30 fractional parts in the wholes.",
+        "30 + 1 = 31 fractional parts altogether.",
+        "5 1/6 = 31/6; keep denominator 6."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_conversion",
+          "direction": "mixed_to_improper",
+          "whole": 5,
+          "n": 1,
+          "d": 6,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "omitted_whole": "Adding the whole number straight to the numerator misses the fractional parts inside each whole.",
+        "omitted_fraction": "That counts the complete wholes only. Include the extra fractional numerator too.",
+        "changed_denominator": "The denominator names the part size. It must stay unchanged in this conversion.",
+        "incorrect_arithmetic": "Recheck the multiplication for the complete wholes, then add the extra numerator."
+      },
+      "conversion_direction": "mixed_to_improper",
+      "conversion_target": {
+        "whole": 5,
+        "n": 1,
+        "d": 6
+      },
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-11-P03",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Write 13/4 as a mixed number.",
+      "target": "Convert the number without changing its value or part size",
+      "response": {
+        "type": "mixed_number",
+        "conversion_profile": "original_parts",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "3 1/4"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The complete groups form the whole-number part, and the remainder counts the leftover fractional parts.",
+        "correct_after_support": "Correct. The complete groups form the whole-number part, and the remainder counts the leftover fractional parts.",
+        "on_correct_math": "13 ÷ 4 = 3 remainder 1. → 3 complete groups form the wholes; 1 parts remain. → 13/4 = 3 1/4; retain denominator 4.",
+        "on_incorrect_attempt_1": "Find how many complete groups of 4 fit in 13, then count the remainder.",
+        "on_incorrect_attempt_2": "Follow the division line. Put the quotient in the whole-number field, the remainder above the fraction bar, and retain the denominator.",
+        "on_locked_incorrect": "Response recorded. Review the conversion in this direction after the final check.",
+        "worked_explanation": "13 ÷ 4 = 3 remainder 1. → 3 complete groups form the wholes; 1 parts remain. → 13/4 = 3 1/4; retain denominator 4."
+      },
+      "mathematical_support": {
+        "hint_1": "Find how many complete groups of 4 fit in 13, then count the remainder.",
+        "hint_2": "Divide the numerator by the denominator. Complete groups give the whole number, and the leftover parts give the fractional numerator.",
+        "worked_solution": "13 ÷ 4 = 3 remainder 1. → 3 complete groups form the wholes; 1 parts remain. → 13/4 = 3 1/4; retain denominator 4."
+      },
+      "working": [
+        "13 ÷ 4 = 3 remainder 1.",
+        "3 complete groups form the wholes; 1 parts remain.",
+        "13/4 = 3 1/4; retain denominator 4."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_conversion",
+          "direction": "improper_to_mixed",
+          "numerator": 13,
+          "d": 4,
+          "object": "parts",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "wrong_form": "The fractional part must be less than one whole. Move every complete group into the whole-number part.",
+        "swapped_quotient_remainder": "The quotient and remainder are reversed. The complete groups are the whole number; the leftover count is the numerator.",
+        "changed_denominator": "The original denominator names the part size and must be retained.",
+        "incorrect_arithmetic": "Recheck how many complete denominator-sized groups fit, then count the parts left over."
+      },
+      "conversion_direction": "improper_to_mixed",
+      "conversion_target": {
+        "whole": 3,
+        "n": 1,
+        "d": 4
+      },
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-11-P04",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Write 23/5 as a mixed number.",
+      "target": "Convert the number without changing its value or part size",
+      "response": {
+        "type": "mixed_number",
+        "conversion_profile": "original_parts",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "4 3/5"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The complete groups form the whole-number part, and the remainder counts the leftover fractional parts.",
+        "correct_after_support": "Correct. The complete groups form the whole-number part, and the remainder counts the leftover fractional parts.",
+        "on_correct_math": "23 ÷ 5 = 4 remainder 3. → 4 complete groups form the wholes; 3 parts remain. → 23/5 = 4 3/5; retain denominator 5.",
+        "on_incorrect_attempt_1": "Find how many complete groups of 5 fit in 23, then count the remainder.",
+        "on_incorrect_attempt_2": "Follow the division line. Put the quotient in the whole-number field, the remainder above the fraction bar, and retain the denominator.",
+        "on_locked_incorrect": "Response recorded. Review the conversion in this direction after the final check.",
+        "worked_explanation": "23 ÷ 5 = 4 remainder 3. → 4 complete groups form the wholes; 3 parts remain. → 23/5 = 4 3/5; retain denominator 5."
+      },
+      "mathematical_support": {
+        "hint_1": "Find how many complete groups of 5 fit in 23, then count the remainder.",
+        "hint_2": "Divide the numerator by the denominator. Complete groups give the whole number, and the leftover parts give the fractional numerator.",
+        "worked_solution": "23 ÷ 5 = 4 remainder 3. → 4 complete groups form the wholes; 3 parts remain. → 23/5 = 4 3/5; retain denominator 5."
+      },
+      "working": [
+        "23 ÷ 5 = 4 remainder 3.",
+        "4 complete groups form the wholes; 3 parts remain.",
+        "23/5 = 4 3/5; retain denominator 5."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_conversion",
+          "direction": "improper_to_mixed",
+          "numerator": 23,
+          "d": 5,
+          "object": "parts",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "wrong_form": "The fractional part must be less than one whole. Move every complete group into the whole-number part.",
+        "swapped_quotient_remainder": "The quotient and remainder are reversed. The complete groups are the whole number; the leftover count is the numerator.",
+        "changed_denominator": "The original denominator names the part size and must be retained.",
+        "incorrect_arithmetic": "Recheck how many complete denominator-sized groups fit, then count the parts left over."
+      },
+      "conversion_direction": "improper_to_mixed",
+      "conversion_target": {
+        "whole": 4,
+        "n": 3,
+        "d": 5
+      },
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-11-P05",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Write 6 2/7 as an improper fraction.",
+      "target": "Convert the number without changing its value or part size",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": false,
+        "show_authored_label": true,
+        "input_label": "Improper fraction",
+        "conversion_profile": "original_parts",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "44/7"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. You counted every fractional part in the wholes and the extra fraction, keeping the part size.",
+        "correct_after_support": "Correct. You counted every fractional part in the wholes and the extra fraction, keeping the part size.",
+        "on_correct_math": "6 × 7 = 42 fractional parts in the wholes. → 42 + 2 = 44 fractional parts altogether. → 6 2/7 = 44/7; keep denominator 7.",
+        "on_incorrect_attempt_1": "First count the parts in 6 complete wholes. Each whole contains 7 of these parts.",
+        "on_incorrect_attempt_2": "Follow the multiplication, then include the extra fractional parts. Keep the original denominator and correct your fraction.",
+        "on_locked_incorrect": "Response recorded. Review the conversion in this direction after the final check.",
+        "worked_explanation": "6 × 7 = 42 fractional parts in the wholes. → 42 + 2 = 44 fractional parts altogether. → 6 2/7 = 44/7; keep denominator 7."
+      },
+      "mathematical_support": {
+        "hint_1": "First count the parts in 6 complete wholes. Each whole contains 7 of these parts.",
+        "hint_2": "Each whole contains denominator-many parts. Count the wholes’ parts, then include the extra fractional parts.",
+        "worked_solution": "6 × 7 = 42 fractional parts in the wholes. → 42 + 2 = 44 fractional parts altogether. → 6 2/7 = 44/7; keep denominator 7."
+      },
+      "working": [
+        "6 × 7 = 42 fractional parts in the wholes.",
+        "42 + 2 = 44 fractional parts altogether.",
+        "6 2/7 = 44/7; keep denominator 7."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_conversion",
+          "direction": "mixed_to_improper",
+          "whole": 6,
+          "n": 2,
+          "d": 7,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "omitted_whole": "Adding the whole number straight to the numerator misses the fractional parts inside each whole.",
+        "omitted_fraction": "That counts the complete wholes only. Include the extra fractional numerator too.",
+        "changed_denominator": "The denominator names the part size. It must stay unchanged in this conversion.",
+        "incorrect_arithmetic": "Recheck the multiplication for the complete wholes, then add the extra numerator."
+      },
+      "conversion_direction": "mixed_to_improper",
+      "conversion_target": {
+        "whole": 6,
+        "n": 2,
+        "d": 7
+      },
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-11-P06",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Write 29/6 as a mixed number.",
+      "target": "Convert the number without changing its value or part size",
+      "response": {
+        "type": "mixed_number",
+        "conversion_profile": "original_parts",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "4 5/6"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The complete groups form the whole-number part, and the remainder counts the leftover fractional parts.",
+        "correct_after_support": "Correct. The complete groups form the whole-number part, and the remainder counts the leftover fractional parts.",
+        "on_correct_math": "29 ÷ 6 = 4 remainder 5. → 4 complete groups form the wholes; 5 parts remain. → 29/6 = 4 5/6; retain denominator 6.",
+        "on_incorrect_attempt_1": "Find how many complete groups of 6 fit in 29, then count the remainder.",
+        "on_incorrect_attempt_2": "Follow the division line. Put the quotient in the whole-number field, the remainder above the fraction bar, and retain the denominator.",
+        "on_locked_incorrect": "Response recorded. Review the conversion in this direction after the final check.",
+        "worked_explanation": "29 ÷ 6 = 4 remainder 5. → 4 complete groups form the wholes; 5 parts remain. → 29/6 = 4 5/6; retain denominator 6."
+      },
+      "mathematical_support": {
+        "hint_1": "Find how many complete groups of 6 fit in 29, then count the remainder.",
+        "hint_2": "Divide the numerator by the denominator. Complete groups give the whole number, and the leftover parts give the fractional numerator.",
+        "worked_solution": "29 ÷ 6 = 4 remainder 5. → 4 complete groups form the wholes; 5 parts remain. → 29/6 = 4 5/6; retain denominator 6."
+      },
+      "working": [
+        "29 ÷ 6 = 4 remainder 5.",
+        "4 complete groups form the wholes; 5 parts remain.",
+        "29/6 = 4 5/6; retain denominator 6."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_conversion",
+          "direction": "improper_to_mixed",
+          "numerator": 29,
+          "d": 6,
+          "object": "parts",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "wrong_form": "The fractional part must be less than one whole. Move every complete group into the whole-number part.",
+        "swapped_quotient_remainder": "The quotient and remainder are reversed. The complete groups are the whole number; the leftover count is the numerator.",
+        "changed_denominator": "The original denominator names the part size and must be retained.",
+        "incorrect_arithmetic": "Recheck how many complete denominator-sized groups fit, then count the parts left over."
+      },
+      "conversion_direction": "improper_to_mixed",
+      "conversion_target": {
+        "whole": 4,
+        "n": 5,
+        "d": 6
+      },
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-11-P07",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "For 18/5, which mixed number has the same value?",
+      "target": "Convert the number without changing its value or part size",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "3 3/5",
+          "5 3/5",
+          "3 5/3",
+          "2 8/5"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "3 3/5"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Three complete groups of fifths leave three fifths.",
+        "correct_after_support": "Correct. Three complete groups of fifths leave three fifths.",
+        "on_correct_math": "18 ÷ 5 = 3 remainder 3. → Three complete groups form wholes and three fifths remain. → 18/5 = 3 3/5.",
+        "on_incorrect_attempt_1": "A mixed number has a proper fractional part, and the original part size stays fixed.",
+        "on_incorrect_attempt_2": "Three groups of five use fifteen parts, with three parts left. Select three and three fifths.",
+        "on_locked_incorrect": "Response recorded. Review the conversion in this direction after the final check.",
+        "worked_explanation": "18 ÷ 5 = 3 remainder 3. → Three complete groups form wholes and three fifths remain. → 18/5 = 3 3/5."
+      },
+      "mathematical_support": {
+        "hint_1": "A mixed number has a proper fractional part, and the original part size stays fixed.",
+        "hint_2": "Divide the numerator by the denominator. Complete groups give the whole number, and the leftover parts give the fractional numerator.",
+        "worked_solution": "18 ÷ 5 = 3 remainder 3. → Three complete groups form wholes and three fifths remain. → 18/5 = 3 3/5."
+      },
+      "working": [
+        "18 ÷ 5 = 3 remainder 3.",
+        "Three complete groups form wholes and three fifths remain.",
+        "18/5 = 3 3/5."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_conversion",
+          "direction": "improper_to_mixed",
+          "numerator": 18,
+          "d": 5,
+          "object": "parts",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "5 3/5": "Five complete groups of five would need twenty-five parts, more than eighteen.",
+        "3 5/3": "The remainder belongs above the original denominator five, not underneath it.",
+        "2 8/5": "That has the correct value, but its fractional part contains another whole. A completed mixed number needs a proper fractional part."
+      },
+      "conversion_direction": "improper_to_mixed"
+    },
+    {
+      "id": "AF-11-X01",
+      "source_ref": {
+        "page": 16
+      },
+      "stage": "practice",
+      "prompt": "A piece of rope is 3 2/5 metres long. Write this length as an improper fraction of a metre.",
+      "target": "Convert the number without changing its value or part size",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": false,
+        "show_authored_label": true,
+        "input_label": "Improper fraction",
+        "conversion_profile": "original_parts",
+        "suffix": "m"
+      },
+      "answer": {
+        "value": "17/5"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The same rope length is now counted entirely in fifths of a metre.",
+        "correct_after_support": "Correct. The same rope length is now counted entirely in fifths of a metre.",
+        "on_correct_math": "3 × 5 = 15 fractional parts in the wholes. → 15 + 2 = 17 fractional parts altogether. → 3 2/5 = 17/5; keep denominator 5.",
+        "on_incorrect_attempt_1": "First count the parts in 3 complete wholes. Each whole contains 5 of these parts.",
+        "on_incorrect_attempt_2": "Follow the multiplication, then include the extra fractional parts. Keep the original denominator and correct your fraction.",
+        "on_locked_incorrect": "Response recorded. Review the conversion in this direction after the final check.",
+        "worked_explanation": "3 × 5 = 15 fractional parts in the wholes. → 15 + 2 = 17 fractional parts altogether. → 3 2/5 = 17/5; keep denominator 5."
+      },
+      "mathematical_support": {
+        "hint_1": "First count the parts in 3 complete wholes. Each whole contains 5 of these parts.",
+        "hint_2": "Each whole contains denominator-many parts. Count the wholes’ parts, then include the extra fractional parts.",
+        "worked_solution": "3 × 5 = 15 fractional parts in the wholes. → 15 + 2 = 17 fractional parts altogether. → 3 2/5 = 17/5; keep denominator 5."
+      },
+      "working": [
+        "3 × 5 = 15 fractional parts in the wholes.",
+        "15 + 2 = 17 fractional parts altogether.",
+        "3 2/5 = 17/5; keep denominator 5."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_conversion",
+          "direction": "mixed_to_improper",
+          "whole": 3,
+          "n": 2,
+          "d": 5,
+          "object": "rope",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "omitted_whole": "Adding the whole number straight to the numerator misses the fractional parts inside each whole.",
+        "omitted_fraction": "That counts the complete wholes only. Include the extra fractional numerator too.",
+        "changed_denominator": "The denominator names the part size. It must stay unchanged in this conversion.",
+        "incorrect_arithmetic": "Recheck the multiplication for the complete wholes, then add the extra numerator."
+      },
+      "conversion_direction": "mixed_to_improper",
+      "conversion_target": {
+        "whole": 3,
+        "n": 2,
+        "d": 5
+      },
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-11-X02",
+      "source_ref": {
+        "page": 16
+      },
+      "stage": "practice",
+      "prompt": "A baker uses 17/4 kg of flour. Write this mass as a mixed number.",
+      "target": "Convert the number without changing its value or part size",
+      "response": {
+        "type": "mixed_number",
+        "conversion_profile": "original_parts",
+        "suffix": "kg"
+      },
+      "answer": {
+        "value": "4 1/4"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The baker’s flour mass is four whole kilograms and one quarter kilogram.",
+        "correct_after_support": "Correct. The baker’s flour mass is four whole kilograms and one quarter kilogram.",
+        "on_correct_math": "17 ÷ 4 = 4 remainder 1. → 4 complete groups form the wholes; 1 parts remain. → 17/4 = 4 1/4; retain denominator 4.",
+        "on_incorrect_attempt_1": "Find how many complete groups of 4 fit in 17, then count the remainder.",
+        "on_incorrect_attempt_2": "Follow the division line. Put the quotient in the whole-number field, the remainder above the fraction bar, and retain the denominator.",
+        "on_locked_incorrect": "Response recorded. Review the conversion in this direction after the final check.",
+        "worked_explanation": "17 ÷ 4 = 4 remainder 1. → 4 complete groups form the wholes; 1 parts remain. → 17/4 = 4 1/4; retain denominator 4."
+      },
+      "mathematical_support": {
+        "hint_1": "Find how many complete groups of 4 fit in 17, then count the remainder.",
+        "hint_2": "Divide the numerator by the denominator. Complete groups give the whole number, and the leftover parts give the fractional numerator.",
+        "worked_solution": "17 ÷ 4 = 4 remainder 1. → 4 complete groups form the wholes; 1 parts remain. → 17/4 = 4 1/4; retain denominator 4."
+      },
+      "working": [
+        "17 ÷ 4 = 4 remainder 1.",
+        "4 complete groups form the wholes; 1 parts remain.",
+        "17/4 = 4 1/4; retain denominator 4."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_conversion",
+          "direction": "improper_to_mixed",
+          "numerator": 17,
+          "d": 4,
+          "object": "flour",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "wrong_form": "The fractional part must be less than one whole. Move every complete group into the whole-number part.",
+        "swapped_quotient_remainder": "The quotient and remainder are reversed. The complete groups are the whole number; the leftover count is the numerator.",
+        "changed_denominator": "The original denominator names the part size and must be retained.",
+        "incorrect_arithmetic": "Recheck how many complete denominator-sized groups fit, then count the parts left over."
+      },
+      "conversion_direction": "improper_to_mixed",
+      "conversion_target": {
+        "whole": 4,
+        "n": 1,
+        "d": 4
+      },
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-11-X03",
+      "source_ref": {
+        "page": 16
+      },
+      "stage": "practice",
+      "prompt": "A container holds 2 3/7 litres of water. Write this amount as an improper fraction.",
+      "target": "Convert the number without changing its value or part size",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": false,
+        "show_authored_label": true,
+        "input_label": "Improper fraction",
+        "conversion_profile": "original_parts",
+        "suffix": "litres"
+      },
+      "answer": {
+        "value": "17/7"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The water amount is now counted entirely in sevenths of a litre.",
+        "correct_after_support": "Correct. The water amount is now counted entirely in sevenths of a litre.",
+        "on_correct_math": "2 × 7 = 14 fractional parts in the wholes. → 14 + 3 = 17 fractional parts altogether. → 2 3/7 = 17/7; keep denominator 7.",
+        "on_incorrect_attempt_1": "First count the parts in 2 complete wholes. Each whole contains 7 of these parts.",
+        "on_incorrect_attempt_2": "Follow the multiplication, then include the extra fractional parts. Keep the original denominator and correct your fraction.",
+        "on_locked_incorrect": "Response recorded. Review the conversion in this direction after the final check.",
+        "worked_explanation": "2 × 7 = 14 fractional parts in the wholes. → 14 + 3 = 17 fractional parts altogether. → 2 3/7 = 17/7; keep denominator 7."
+      },
+      "mathematical_support": {
+        "hint_1": "First count the parts in 2 complete wholes. Each whole contains 7 of these parts.",
+        "hint_2": "Each whole contains denominator-many parts. Count the wholes’ parts, then include the extra fractional parts.",
+        "worked_solution": "2 × 7 = 14 fractional parts in the wholes. → 14 + 3 = 17 fractional parts altogether. → 2 3/7 = 17/7; keep denominator 7."
+      },
+      "working": [
+        "2 × 7 = 14 fractional parts in the wholes.",
+        "14 + 3 = 17 fractional parts altogether.",
+        "2 3/7 = 17/7; keep denominator 7."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_conversion",
+          "direction": "mixed_to_improper",
+          "whole": 2,
+          "n": 3,
+          "d": 7,
+          "object": "water",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "omitted_whole": "Adding the whole number straight to the numerator misses the fractional parts inside each whole.",
+        "omitted_fraction": "That counts the complete wholes only. Include the extra fractional numerator too.",
+        "changed_denominator": "The denominator names the part size. It must stay unchanged in this conversion.",
+        "incorrect_arithmetic": "Recheck the multiplication for the complete wholes, then add the extra numerator."
+      },
+      "conversion_direction": "mixed_to_improper",
+      "conversion_target": {
+        "whole": 2,
+        "n": 3,
+        "d": 7
+      },
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-11-X04",
+      "source_ref": {
+        "page": 16
+      },
+      "stage": "practice",
+      "prompt": "To write 29/6 as a mixed number, which calculation should the student use first?",
+      "target": "Convert the number without changing its value or part size",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "29 + 6",
+          "29 − 6",
+          "29 × 6",
+          "29 ÷ 6"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "29 ÷ 6"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Division gives the whole-number count and the remainder.",
+        "correct_after_support": "Correct. Division gives the whole-number count and the remainder.",
+        "on_correct_math": "Count complete groups of six within twenty-nine. → Division gives the quotient and remainder. → Use 29 ÷ 6 first.",
+        "on_incorrect_attempt_1": "Choose the operation that counts complete equal-sized groups and leaves a remainder.",
+        "on_incorrect_attempt_2": "Dividing twenty-nine by six finds complete groups and leftover parts. Select division.",
+        "on_locked_incorrect": "Response recorded. Review the conversion in this direction after the final check.",
+        "worked_explanation": "Count complete groups of six within twenty-nine. → Division gives the quotient and remainder. → Use 29 ÷ 6 first."
+      },
+      "mathematical_support": {
+        "hint_1": "Choose the operation that counts complete equal-sized groups and leaves a remainder.",
+        "hint_2": "Divide the numerator by the denominator. Complete groups give the whole number, and the leftover parts give the fractional numerator.",
+        "worked_solution": "Count complete groups of six within twenty-nine. → Division gives the quotient and remainder. → Use 29 ÷ 6 first."
+      },
+      "working": [
+        "Count complete groups of six within twenty-nine.",
+        "Division gives the quotient and remainder.",
+        "Use 29 ÷ 6 first."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_conversion",
+          "direction": "improper_to_mixed",
+          "numerator": 29,
+          "d": 6,
+          "object": "parts",
+          "math_text": true,
+          "compact_captions": true,
+          "method_choice": true
+        }
+      },
+      "response_feedback": {
+        "29 + 6": "Adding does not find complete groups of sixths.",
+        "29 − 6": "A single subtraction removes one group but does not directly find the quotient and remainder.",
+        "29 × 6": "Multiplication would create more parts, rather than group the parts already given."
+      },
+      "conversion_direction": "improper_to_mixed"
+    },
+    {
+      "id": "AF-11-E01",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "exit",
+      "prompt": "Write 3 2/5 as an improper fraction.",
+      "target": "Convert the number without changing its value or part size",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": false,
+        "show_authored_label": true,
+        "input_label": "Improper fraction",
+        "conversion_profile": "original_parts",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "17/5"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. You counted every fractional part in the wholes and the extra fraction, keeping the part size.",
+        "correct_after_support": "Correct. You counted every fractional part in the wholes and the extra fraction, keeping the part size.",
+        "on_correct_math": "3 × 5 = 15 fractional parts in the wholes. → 15 + 2 = 17 fractional parts altogether. → 3 2/5 = 17/5; keep denominator 5.",
+        "on_incorrect_attempt_1": "First count the parts in 3 complete wholes. Each whole contains 5 of these parts.",
+        "on_incorrect_attempt_2": "Follow the multiplication, then include the extra fractional parts. Keep the original denominator and correct your fraction.",
+        "on_locked_incorrect": "Response recorded. Review the conversion in this direction after the final check.",
+        "worked_explanation": "3 × 5 = 15 fractional parts in the wholes. → 15 + 2 = 17 fractional parts altogether. → 3 2/5 = 17/5; keep denominator 5."
+      },
+      "mathematical_support": {
+        "hint_1": "First count the parts in 3 complete wholes. Each whole contains 5 of these parts.",
+        "hint_2": "Each whole contains denominator-many parts. Count the wholes’ parts, then include the extra fractional parts.",
+        "worked_solution": "3 × 5 = 15 fractional parts in the wholes. → 15 + 2 = 17 fractional parts altogether. → 3 2/5 = 17/5; keep denominator 5."
+      },
+      "working": [
+        "3 × 5 = 15 fractional parts in the wholes.",
+        "15 + 2 = 17 fractional parts altogether.",
+        "3 2/5 = 17/5; keep denominator 5."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_conversion",
+          "direction": "mixed_to_improper",
+          "whole": 3,
+          "n": 2,
+          "d": 5,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "omitted_whole": "Adding the whole number straight to the numerator misses the fractional parts inside each whole.",
+        "omitted_fraction": "That counts the complete wholes only. Include the extra fractional numerator too.",
+        "changed_denominator": "The denominator names the part size. It must stay unchanged in this conversion.",
+        "incorrect_arithmetic": "Recheck the multiplication for the complete wholes, then add the extra numerator."
+      },
+      "conversion_direction": "mixed_to_improper",
+      "conversion_target": {
+        "whole": 3,
+        "n": 2,
+        "d": 5
+      },
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-11-E02",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "exit",
+      "prompt": "Write 19/6 as a mixed number.",
+      "target": "Convert the number without changing its value or part size",
+      "response": {
+        "type": "mixed_number",
+        "conversion_profile": "original_parts",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "3 1/6"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The complete groups form the whole-number part, and the remainder counts the leftover fractional parts.",
+        "correct_after_support": "Correct. The complete groups form the whole-number part, and the remainder counts the leftover fractional parts.",
+        "on_correct_math": "19 ÷ 6 = 3 remainder 1. → 3 complete groups form the wholes; 1 parts remain. → 19/6 = 3 1/6; retain denominator 6.",
+        "on_incorrect_attempt_1": "Find how many complete groups of 6 fit in 19, then count the remainder.",
+        "on_incorrect_attempt_2": "Follow the division line. Put the quotient in the whole-number field, the remainder above the fraction bar, and retain the denominator.",
+        "on_locked_incorrect": "Response recorded. Review the conversion in this direction after the final check.",
+        "worked_explanation": "19 ÷ 6 = 3 remainder 1. → 3 complete groups form the wholes; 1 parts remain. → 19/6 = 3 1/6; retain denominator 6."
+      },
+      "mathematical_support": {
+        "hint_1": "Find how many complete groups of 6 fit in 19, then count the remainder.",
+        "hint_2": "Divide the numerator by the denominator. Complete groups give the whole number, and the leftover parts give the fractional numerator.",
+        "worked_solution": "19 ÷ 6 = 3 remainder 1. → 3 complete groups form the wholes; 1 parts remain. → 19/6 = 3 1/6; retain denominator 6."
+      },
+      "working": [
+        "19 ÷ 6 = 3 remainder 1.",
+        "3 complete groups form the wholes; 1 parts remain.",
+        "19/6 = 3 1/6; retain denominator 6."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_conversion",
+          "direction": "improper_to_mixed",
+          "numerator": 19,
+          "d": 6,
+          "object": "parts",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "wrong_form": "The fractional part must be less than one whole. Move every complete group into the whole-number part.",
+        "swapped_quotient_remainder": "The quotient and remainder are reversed. The complete groups are the whole number; the leftover count is the numerator.",
+        "changed_denominator": "The original denominator names the part size and must be retained.",
+        "incorrect_arithmetic": "Recheck how many complete denominator-sized groups fit, then count the parts left over."
+      },
+      "conversion_direction": "improper_to_mixed",
+      "conversion_target": {
+        "whole": 3,
+        "n": 1,
+        "d": 6
+      },
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-11-E03",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "exit",
+      "prompt": "Which statement is correct?",
+      "target": "Convert the number without changing its value or part size",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "For a mixed number, multiply the whole number by the denominator and add the numerator.",
+          "For a mixed number, add the whole number and numerator only.",
+          "For an improper fraction, the remainder becomes the whole number.",
+          "The denominator must change during every conversion."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "For a mixed number, multiply the whole number by the denominator and add the numerator."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Recorded. The complete wholes and extra parts are counted without changing their size.",
+        "correct_after_support": "Recorded. The complete wholes and extra parts are counted without changing their size.",
+        "on_correct_math": "Each whole contains denominator-many fractional parts. → Multiply to count those parts, then include the original numerator. → The denominator remains unchanged.",
+        "on_incorrect_attempt_1": "No hints are available in the final check.",
+        "on_incorrect_attempt_2": "The final response is locked.",
+        "on_locked_incorrect": "Response recorded. Review the conversion in this direction after the final check.",
+        "worked_explanation": "Each whole contains denominator-many fractional parts. → Multiply to count those parts, then include the original numerator. → The denominator remains unchanged."
+      },
+      "mathematical_support": {
+        "hint_1": "No hints are available in the final check.",
+        "hint_2": "Keep the value and part size unchanged when changing notation.",
+        "worked_solution": "Each whole contains denominator-many fractional parts. → Multiply to count those parts, then include the original numerator. → The denominator remains unchanged."
+      },
+      "working": [
+        "Each whole contains denominator-many fractional parts.",
+        "Multiply to count those parts, then include the original numerator.",
+        "The denominator remains unchanged."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "mixed_conversion_steps",
+          "label": "Converting without changing value",
+          "expression": "Choose the correct conversion statement",
+          "completed": "Whole × denominator + numerator; retain denominator.",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    }
+  ],
+  "canonical_lesson": {
+    "version": "AF11-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

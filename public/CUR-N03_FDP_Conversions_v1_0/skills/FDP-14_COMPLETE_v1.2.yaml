@@ -1,0 +1,3888 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "FDP-14 - Order fractions, decimals and percentages",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-27",
+      "sha256": "a6c8a5b30ad8983ad74492c8793bfb08e3351e8f6b6826987357c20f72667b9a"
+    },
+    "authored_scope": "Order mixed fractions, decimals and percentages while preserving their original forms in the answer.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "FDP14-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "verified_desktop_ready_phone_locked_rounded_work_learning_equal_wholes_original_accounting_drafts_hints_audio_320_390",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        20,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "source_repairs_consulted": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        25,
+        26
+      ],
+      "note": "All 27 approved pages and the previous configuration reviewed. Restored equal whole bars, above-one boxes, four-stage 0.48/1/2/52% worked example, all guided numeric blanks and original-form order, all 24 source questions and five-item unsupported final. Source-prescribed repeated inputs in practice/final are retained intentionally. Recorded rounded or otherwise invalid common-form work cannot establish readiness. No Entry, Diagnostic, prerequisite-state mutation, delayed Retrieval or Strong route."
+    }
+  },
+  "identity": {
+    "id": "FDP-14",
+    "slug": "order-fractions-decimals-and-percentages",
+    "title": "Order fractions, decimals and percentages",
+    "strand": "Number",
+    "cluster": "Fractions, Decimals and Percentages",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Order three to five positive fractions, decimals and percentages exactly in either direction, returning each original representation once.",
+    "success_criteria": [
+      "Convert every value to a suitable exact common form.",
+      "Keep original-to-common-form mappings.",
+      "Follow ascending or descending direction.",
+      "Preserve all originals exactly once.",
+      "Distinguish recurring fractions from rounded decimals.",
+      "Keep any recorded working exact."
+    ],
+    "boundaries": {
+      "includes": [
+        "Positive proper/improper fractions, decimals and percentages below, equal to or above one",
+        "Exact terminating forms and accessible common-denominator routes",
+        "Student, tank, factory and runner proportion contexts"
+      ],
+      "excludes": [
+        "Negative values",
+        "Percentage amounts, change and reverse percentages",
+        "Rounded equality",
+        "Entry, Diagnostic, prerequisite-state mutation and delayed Retrieval"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "FDP-13",
+      "FDP-03",
+      "FDP-04",
+      "FDP-05",
+      "FDP-08",
+      "FDP-09",
+      "FDP-10",
+      "FDP-11"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for FDP-13, FDP-03, FDP-04, FDP-05, FDP-08, FDP-09, FDP-10, FDP-11 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "single_choice",
+      "fdp_ordering"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    },
+    "place_value_profile": true
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "One common form allows all unchanged quantities to be ordered on the same scale.",
+    "invariant": "Every quantity retains its exact value and its identity when converted and returned.",
+    "must_notice": [
+      "All values need the same form.",
+      "Direction is part of the question.",
+      "Every original appears once.",
+      "A mapping table prevents lost or duplicated originals.",
+      "Two thirds is less than 0.67, not exactly equal to it."
+    ],
+    "common_confusions": [
+      "Only some values converted",
+      "Printed digits compared",
+      "Direction reversed",
+      "Original omitted or duplicated",
+      "Common-form values substituted for original answer forms",
+      "Rounded recurring fraction treated as equal",
+      "Correct-looking order with incorrect visible work"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "Keep a link to every original",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Keep a link to every original",
+          "initial_state": "Keep a link to every original",
+          "model": {
+            "kind": "fdp_ordering",
+            "title": "Order values without losing their identities",
+            "items": [],
+            "direction": "ascending",
+            "route": "percent",
+            "common": [],
+            "commonOrder": [],
+            "given": "",
+            "steps": [
+              "Choose percentages as a convenient exact common form.",
+              ".",
+              ".",
+              "Return to the original forms: . Every original appears exactly once."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "principle",
+            "solved": true,
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "Convert every quantity to one exact common form. Order those values in the requested direction, then return each original once."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Use the same-sized whole",
+        "source_ref": {
+          "page": 6
+        },
+        "scene": {
+          "display_title": "Use the same-sized whole",
+          "initial_state": "Use the same-sized whole",
+          "model": {
+            "kind": "fdp_ordering",
+            "title": "Compare three lengths for one whole",
+            "items": [
+              {
+                "label": "55%",
+                "value": "55%"
+              },
+              {
+                "label": "3/5",
+                "value": "3/5"
+              },
+              {
+                "label": "0.62",
+                "value": "0.62"
+              }
+            ],
+            "direction": "ascending",
+            "route": "percent",
+            "common": [
+              "55%",
+              "60%",
+              "62%"
+            ],
+            "commonOrder": [
+              "55%",
+              "60%",
+              "62%"
+            ],
+            "given": "55%, 3/5, 0.62",
+            "steps": [
+              "All three bars represent the same-sized whole.",
+              "The shaded endpoints are 0.55, 0.60 and 0.62.",
+              "55% < 3/5 < 0.62."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "bars",
+            "solved": true,
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "These bars all use the same-sized whole, so their shaded lengths can be compared directly."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Compare the shaded endpoints",
+        "source_ref": {
+          "page": 6
+        },
+        "scene": {
+          "display_title": "Compare the shaded endpoints",
+          "initial_state": "Compare the shaded endpoints",
+          "model": {
+            "kind": "fdp_ordering",
+            "title": "Compare three lengths for one whole",
+            "items": [
+              {
+                "label": "55%",
+                "value": "55%"
+              },
+              {
+                "label": "3/5",
+                "value": "3/5"
+              },
+              {
+                "label": "0.62",
+                "value": "0.62"
+              }
+            ],
+            "direction": "ascending",
+            "route": "percent",
+            "common": [
+              "55%",
+              "60%",
+              "62%"
+            ],
+            "commonOrder": [
+              "55%",
+              "60%",
+              "62%"
+            ],
+            "given": "55%, 3/5, 0.62",
+            "steps": [
+              "All three bars represent the same-sized whole.",
+              "The shaded endpoints are 0.55, 0.60 and 0.62.",
+              "55% < 3/5 < 0.62."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "bars",
+            "solved": true,
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "The fraction covers three equal fifths. On the shared scale its endpoint lies between the percentage and the decimal."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Write the increasing originals",
+        "source_ref": {
+          "page": 6
+        },
+        "scene": {
+          "display_title": "Write the increasing originals",
+          "initial_state": "Write the increasing originals",
+          "model": {
+            "kind": "fdp_ordering",
+            "title": "Compare three lengths for one whole",
+            "items": [
+              {
+                "label": "55%",
+                "value": "55%"
+              },
+              {
+                "label": "3/5",
+                "value": "3/5"
+              },
+              {
+                "label": "0.62",
+                "value": "0.62"
+              }
+            ],
+            "direction": "ascending",
+            "route": "percent",
+            "common": [
+              "55%",
+              "60%",
+              "62%"
+            ],
+            "commonOrder": [
+              "55%",
+              "60%",
+              "62%"
+            ],
+            "given": "55%, 3/5, 0.62",
+            "steps": [
+              "All three bars represent the same-sized whole.",
+              "The shaded endpoints are 0.55, 0.60 and 0.62.",
+              "55% < 3/5 < 0.62."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "bars",
+            "solved": true,
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "Read the shaded lengths from shortest to longest, then write their original forms in that order."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Show values above one whole",
+        "source_ref": {
+          "page": 7
+        },
+        "scene": {
+          "display_title": "Show values above one whole",
+          "initial_state": "Show values above one whole",
+          "model": {
+            "kind": "fdp_ordering",
+            "title": "Keep whole boxes the same size",
+            "items": [
+              {
+                "label": "125%",
+                "value": "125%"
+              },
+              {
+                "label": "1.3",
+                "value": "1.3"
+              },
+              {
+                "label": "7/5",
+                "value": "7/5"
+              }
+            ],
+            "direction": "ascending",
+            "route": "percent",
+            "common": [
+              "125%",
+              "130%",
+              "140%"
+            ],
+            "commonOrder": [
+              "125%",
+              "130%",
+              "140%"
+            ],
+            "given": "125%, 1.3, 7/5",
+            "steps": [
+              "Each row uses two equally sized whole boxes.",
+              "All three fill one whole; compare an extra quarter, three tenths and two fifths.",
+              "125% < 1.3 < 7/5."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "above",
+            "solved": true,
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "Each row now has two equal whole boxes. Every value fills the first whole and part of the second."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T06"
+      },
+      {
+        "id": "T06",
+        "stage": "teaching",
+        "purpose": "Compare the extra parts",
+        "source_ref": {
+          "page": 7
+        },
+        "scene": {
+          "display_title": "Compare the extra parts",
+          "initial_state": "Compare the extra parts",
+          "model": {
+            "kind": "fdp_ordering",
+            "title": "Keep whole boxes the same size",
+            "items": [
+              {
+                "label": "125%",
+                "value": "125%"
+              },
+              {
+                "label": "1.3",
+                "value": "1.3"
+              },
+              {
+                "label": "7/5",
+                "value": "7/5"
+              }
+            ],
+            "direction": "ascending",
+            "route": "percent",
+            "common": [
+              "125%",
+              "130%",
+              "140%"
+            ],
+            "commonOrder": [
+              "125%",
+              "130%",
+              "140%"
+            ],
+            "given": "125%, 1.3, 7/5",
+            "steps": [
+              "Each row uses two equally sized whole boxes.",
+              "All three fill one whole; compare an extra quarter, three tenths and two fifths.",
+              "125% < 1.3 < 7/5."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "above",
+            "solved": true,
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "The whole parts match. Compare the remaining quarter, three tenths and two fifths using the same-sized second box."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T07"
+      },
+      {
+        "id": "T07",
+        "stage": "teaching",
+        "purpose": "Preserve the complete values",
+        "source_ref": {
+          "page": 7
+        },
+        "scene": {
+          "display_title": "Preserve the complete values",
+          "initial_state": "Preserve the complete values",
+          "model": {
+            "kind": "fdp_ordering",
+            "title": "Keep whole boxes the same size",
+            "items": [
+              {
+                "label": "125%",
+                "value": "125%"
+              },
+              {
+                "label": "1.3",
+                "value": "1.3"
+              },
+              {
+                "label": "7/5",
+                "value": "7/5"
+              }
+            ],
+            "direction": "ascending",
+            "route": "percent",
+            "common": [
+              "125%",
+              "130%",
+              "140%"
+            ],
+            "commonOrder": [
+              "125%",
+              "130%",
+              "140%"
+            ],
+            "given": "125%, 1.3, 7/5",
+            "steps": [
+              "Each row uses two equally sized whole boxes.",
+              "All three fill one whole; compare an extra quarter, three tenths and two fifths.",
+              "125% < 1.3 < 7/5."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "above",
+            "solved": true,
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "The extra parts increase down the rows. Keep each complete original value when writing the increasing order."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T08"
+      },
+      {
+        "id": "T08",
+        "stage": "teaching",
+        "purpose": "Explain the original forms",
+        "source_ref": {
+          "page": 7
+        },
+        "scene": {
+          "display_title": "Explain the original forms",
+          "initial_state": "Explain the original forms",
+          "model": {
+            "kind": "fdp_ordering",
+            "title": "Keep working values connected to their originals",
+            "items": [
+              {
+                "label": "55%",
+                "value": "55%"
+              },
+              {
+                "label": "3/5",
+                "value": "3/5"
+              },
+              {
+                "label": "0.62",
+                "value": "0.62"
+              }
+            ],
+            "direction": "ascending",
+            "route": "percent",
+            "common": [
+              "55%",
+              "60%",
+              "62%"
+            ],
+            "commonOrder": [
+              "55%",
+              "60%",
+              "62%"
+            ],
+            "given": "",
+            "steps": [
+              "A common form lets unchanged quantities be compared.",
+              "Keep each working value beside its original.",
+              "Return every original representation once in the requested order."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "rule"
+          }
+        },
+        "narration": {
+          "script": "Choose why the ordered answer should return to the original representations."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "FDP-14-C01"
+        },
+        "next_step": "T09"
+      },
+      {
+        "id": "T09",
+        "stage": "teaching",
+        "purpose": "Choose a common form",
+        "source_ref": {
+          "page": 8
+        },
+        "scene": {
+          "display_title": "Choose a common form",
+          "initial_state": "Choose a common form",
+          "model": {
+            "kind": "fdp_ordering",
+            "title": "Order forty-eight hundredths, one half and fifty-two percent",
+            "items": [
+              {
+                "label": "0.48",
+                "value": "0.48"
+              },
+              {
+                "label": "1/2",
+                "value": "1/2"
+              },
+              {
+                "label": "52%",
+                "value": "52%"
+              }
+            ],
+            "direction": "ascending",
+            "route": "percent",
+            "common": [
+              "48%",
+              "50%",
+              "52%"
+            ],
+            "commonOrder": [
+              "48%",
+              "50%",
+              "52%"
+            ],
+            "given": "0.48, 1/2, 52%",
+            "steps": [
+              "Choose percentages as a convenient exact common form.",
+              "0.48 = 48%; 1/2 = 50%; 52% = 52%.",
+              "48% < 50% < 52%.",
+              "Return to the original forms: 0.48 < 1/2 < 52%. Every original appears exactly once."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "alternative": "An exact decimal route also works: 0.48 < 0.50 < 0.52.",
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "Percentages are convenient for this worked example. The same exact order could also be found with decimals."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T10"
+      },
+      {
+        "id": "T10",
+        "stage": "teaching",
+        "purpose": "Convert every quantity",
+        "source_ref": {
+          "page": 8
+        },
+        "scene": {
+          "display_title": "Convert every quantity",
+          "initial_state": "Convert every quantity",
+          "model": {
+            "kind": "fdp_ordering",
+            "title": "Order forty-eight hundredths, one half and fifty-two percent",
+            "items": [
+              {
+                "label": "0.48",
+                "value": "0.48"
+              },
+              {
+                "label": "1/2",
+                "value": "1/2"
+              },
+              {
+                "label": "52%",
+                "value": "52%"
+              }
+            ],
+            "direction": "ascending",
+            "route": "percent",
+            "common": [
+              "48%",
+              "50%",
+              "52%"
+            ],
+            "commonOrder": [
+              "48%",
+              "50%",
+              "52%"
+            ],
+            "given": "0.48, 1/2, 52%",
+            "steps": [
+              "Choose percentages as a convenient exact common form.",
+              "0.48 = 48%; 1/2 = 50%; 52% = 52%.",
+              "48% < 50% < 52%.",
+              "Return to the original forms: 0.48 < 1/2 < 52%. Every original appears exactly once."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "alternative": "An exact decimal route also works: 0.48 < 0.50 < 0.52.",
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "Keep a table linking every original to its percentage. No value is dropped or changed by the conversion."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T11"
+      },
+      {
+        "id": "T11",
+        "stage": "teaching",
+        "purpose": "Order the common values",
+        "source_ref": {
+          "page": 8
+        },
+        "scene": {
+          "display_title": "Order the common values",
+          "initial_state": "Order the common values",
+          "model": {
+            "kind": "fdp_ordering",
+            "title": "Order forty-eight hundredths, one half and fifty-two percent",
+            "items": [
+              {
+                "label": "0.48",
+                "value": "0.48"
+              },
+              {
+                "label": "1/2",
+                "value": "1/2"
+              },
+              {
+                "label": "52%",
+                "value": "52%"
+              }
+            ],
+            "direction": "ascending",
+            "route": "percent",
+            "common": [
+              "48%",
+              "50%",
+              "52%"
+            ],
+            "commonOrder": [
+              "48%",
+              "50%",
+              "52%"
+            ],
+            "given": "0.48, 1/2, 52%",
+            "steps": [
+              "Choose percentages as a convenient exact common form.",
+              "0.48 = 48%; 1/2 = 50%; 52% = 52%.",
+              "48% < 50% < 52%.",
+              "Return to the original forms: 0.48 < 1/2 < 52%. Every original appears exactly once."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "alternative": "An exact decimal route also works: 0.48 < 0.50 < 0.52.",
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "The instruction asks for smallest to largest. Read the common percentage values in increasing order."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T12"
+      },
+      {
+        "id": "T12",
+        "stage": "teaching",
+        "purpose": "Return to the originals",
+        "source_ref": {
+          "page": 8
+        },
+        "scene": {
+          "display_title": "Return to the originals",
+          "initial_state": "Return to the originals",
+          "model": {
+            "kind": "fdp_ordering",
+            "title": "Order forty-eight hundredths, one half and fifty-two percent",
+            "items": [
+              {
+                "label": "0.48",
+                "value": "0.48"
+              },
+              {
+                "label": "1/2",
+                "value": "1/2"
+              },
+              {
+                "label": "52%",
+                "value": "52%"
+              }
+            ],
+            "direction": "ascending",
+            "route": "percent",
+            "common": [
+              "48%",
+              "50%",
+              "52%"
+            ],
+            "commonOrder": [
+              "48%",
+              "50%",
+              "52%"
+            ],
+            "given": "0.48, 1/2, 52%",
+            "steps": [
+              "Choose percentages as a convenient exact common form.",
+              "0.48 = 48%; 1/2 = 50%; 52% = 52%.",
+              "48% < 50% < 52%.",
+              "Return to the original forms: 0.48 < 1/2 < 52%. Every original appears exactly once."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "alternative": "An exact decimal route also works: 0.48 < 0.50 < 0.52.",
+            "phase": 4
+          }
+        },
+        "narration": {
+          "script": "Use the table to return each ordered value to its original form, and check that all three appear exactly once."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T13"
+      },
+      {
+        "id": "T13",
+        "stage": "teaching",
+        "purpose": "Check the complete method",
+        "source_ref": {
+          "page": 8
+        },
+        "scene": {
+          "display_title": "Check the complete method",
+          "initial_state": "Check the complete method",
+          "model": {
+            "kind": "fdp_ordering",
+            "title": "Choose a justified ordering method",
+            "items": [
+              {
+                "label": "0.48",
+                "value": "0.48"
+              },
+              {
+                "label": "1/2",
+                "value": "1/2"
+              },
+              {
+                "label": "52%",
+                "value": "52%"
+              }
+            ],
+            "direction": "ascending",
+            "route": "percent",
+            "common": [
+              "48%",
+              "50%",
+              "52%"
+            ],
+            "commonOrder": [
+              "48%",
+              "50%",
+              "52%"
+            ],
+            "given": "0.48, 1/2, 52%",
+            "steps": [
+              "Choose percentages as a convenient exact common form.",
+              "0.48 = 48%; 1/2 = 50%; 52% = 52%.",
+              "48% < 50% < 52%.",
+              "Return to the original forms: 0.48 < 1/2 < 52%. Every original appears exactly once."
+            ],
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Choose the method that justifies the order by comparing all three exact values."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "FDP-14-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "FDP-14-G01",
+        "support_level": "high",
+        "pre_question_script": "Complete both percentage conversions.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "FDP-14-G02",
+        "support_level": "high",
+        "pre_question_script": "Enter the common percentage values in increasing order.",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "faded",
+        "question_ref": "FDP-14-G03",
+        "support_level": "reduced",
+        "pre_question_script": "Return every original form once, keeping the increasing order.",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "independent_transfer",
+        "question_ref": "FDP-14-G04",
+        "support_level": "none",
+        "pre_question_script": "Choose the correct increasing list of original forms.",
+        "correct_next": "P01"
+      }
+    },
+    "practice": {
+      "intro_script": "Order each set in the requested direction using every original once. Use any exact method. If you record optional working, preserve every value in the chosen common form. Do not replace exact fractions with rounded equality.",
+      "question_order": [
+        "FDP-14-P01",
+        "FDP-14-P02",
+        "FDP-14-P03",
+        "FDP-14-P04",
+        "FDP-14-P05",
+        "FDP-14-P06",
+        "FDP-14-P07",
+        "FDP-14-P08",
+        "FDP-14-X01",
+        "FDP-14-X02",
+        "FDP-14-X03",
+        "FDP-14-X04",
+        "FDP-14-X05"
+      ],
+      "question_count": 13,
+      "feedback_policy": "Answer-dependent evidence distinguishes field conversion, original accounting, direction and invalid recorded exactness; no confirmed diagnosis is inferred."
+    },
+    "exit": {
+      "intro_script": "Complete four ordering tasks and the method check without hints. Use every original once and keep any recorded working exact. Each response locks; feedback follows after all five are saved.",
+      "primary_question_refs": [
+        "FDP-14-E01",
+        "FDP-14-E02",
+        "FDP-14-E03",
+        "FDP-14-E04",
+        "FDP-14-E05"
+      ],
+      "confirmation_question_refs": [],
+      "submission_policy": "Withhold correctness, conversions, solutions and repair until all five final answers are locked.",
+      "mastery_policy": {
+        "profile": "all_primary_unsupported_deferred",
+        "require_all": true,
+        "source_page": 20,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "All final lists and the method check are correct. Every original appears once, directions are correct and any recorded working preserves exact values.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Keep every original and exact value",
+      "ryan_script": "One or more final responses need another pass. Review exact conversions, the requested direction and whether each original appears once.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "FDP-14-C01",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Why should the final ordered list usually use the original forms?",
+      "target": "Order exact mixed representations in the requested direction, returning every original once",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "The common forms are working values; the question asks for the original quantities to be placed in order.",
+          "Converted values are always incorrect.",
+          "Fractions must always be written before decimals.",
+          "The quantity with the longest notation must be placed last."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "The common forms are working values; the question asks for the original quantities to be placed in order."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Common forms help with comparison, while the final list keeps the requested originals.",
+        "correct_after_support": "Correct. Common forms help with comparison, while the final list keeps the requested originals.",
+        "on_correct_math": "A common form lets unchanged quantities be compared. → Keep each working value beside its original. → Return every original representation once in the requested order.",
+        "on_incorrect_attempt_1": "Distinguish the working representation from the quantity the question asks you to place.",
+        "on_incorrect_attempt_2": "Distinguish the working representation from the quantity the question asks you to place.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "A common form lets unchanged quantities be compared. → Keep each working value beside its original. → Return every original representation once in the requested order."
+      },
+      "mathematical_support": {
+        "hint_1": "Distinguish the working representation from the quantity the question asks you to place.",
+        "hint_2": "Keep every conversion exact and beside its original. Compare all values in the same form, follow the requested direction and return each original once.",
+        "worked_solution": "A common form lets unchanged quantities be compared. → Keep each working value beside its original. → Return every original representation once in the requested order."
+      },
+      "working": [
+        "A common form lets unchanged quantities be compared.",
+        "Keep each working value beside its original.",
+        "Return every original representation once in the requested order."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_ordering",
+          "title": "Keep working values connected to their originals",
+          "items": [
+            {
+              "label": "55%",
+              "value": "55%"
+            },
+            {
+              "label": "3/5",
+              "value": "3/5"
+            },
+            {
+              "label": "0.62",
+              "value": "0.62"
+            }
+          ],
+          "direction": "ascending",
+          "route": "percent",
+          "common": [
+            "55%",
+            "60%",
+            "62%"
+          ],
+          "commonOrder": [
+            "55%",
+            "60%",
+            "62%"
+          ],
+          "given": "",
+          "steps": [
+            "A common form lets unchanged quantities be compared.",
+            "Keep each working value beside its original.",
+            "Return every original representation once in the requested order."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "Converted values are always incorrect.": "Exact conversions are valid working values; they are not incorrect simply because their form changes.",
+        "Fractions must always be written before decimals.": "Value determines order, not whether an item is written as a fraction or decimal.",
+        "The quantity with the longest notation must be placed last.": "The length of the printed notation does not determine a quantity’s size."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-14-C02",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Which method orders 0.48, 1/2 and 52% correctly?",
+      "target": "Order exact mixed representations in the requested direction, returning every original once",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Convert all three to percentages, order 48% < 50% < 52%, then write 0.48 < 1/2 < 52%.",
+          "Compare 48, 1 and 52, then place 1/2 first because 1 is smallest.",
+          "Convert only 52% to 0.52 and leave the fraction unconverted.",
+          "Write the values in the same order as the question."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "Convert all three to percentages, order 48% < 50% < 52%, then write 0.48 < 1/2 < 52%."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Every quantity is converted, compared and then returned to its original form.",
+        "correct_after_support": "Correct. Every quantity is converted, compared and then returned to its original form.",
+        "on_correct_math": "Choose percentages as a convenient exact common form. → 0.48 = 48%; 1/2 = 50%; 52% = 52%. → 48% < 50% < 52%. → Return to the original forms: 0.48 < 1/2 < 52%. Every original appears exactly once.",
+        "on_incorrect_attempt_1": "Check that all three unchanged values are compared on the same scale.",
+        "on_incorrect_attempt_2": "Check that all three unchanged values are compared on the same scale.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose percentages as a convenient exact common form. → 0.48 = 48%; 1/2 = 50%; 52% = 52%. → 48% < 50% < 52%. → Return to the original forms: 0.48 < 1/2 < 52%. Every original appears exactly once."
+      },
+      "mathematical_support": {
+        "hint_1": "Check that all three unchanged values are compared on the same scale.",
+        "hint_2": "Keep every conversion exact and beside its original. Compare all values in the same form, follow the requested direction and return each original once.",
+        "worked_solution": "Choose percentages as a convenient exact common form. → 0.48 = 48%; 1/2 = 50%; 52% = 52%. → 48% < 50% < 52%. → Return to the original forms: 0.48 < 1/2 < 52%. Every original appears exactly once."
+      },
+      "working": [
+        "Choose percentages as a convenient exact common form.",
+        "0.48 = 48%; 1/2 = 50%; 52% = 52%.",
+        "48% < 50% < 52%.",
+        "Return to the original forms: 0.48 < 1/2 < 52%. Every original appears exactly once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_ordering",
+          "title": "Choose a justified ordering method",
+          "items": [
+            {
+              "label": "0.48",
+              "value": "0.48"
+            },
+            {
+              "label": "1/2",
+              "value": "1/2"
+            },
+            {
+              "label": "52%",
+              "value": "52%"
+            }
+          ],
+          "direction": "ascending",
+          "route": "percent",
+          "common": [
+            "48%",
+            "50%",
+            "52%"
+          ],
+          "commonOrder": [
+            "48%",
+            "50%",
+            "52%"
+          ],
+          "given": "0.48, 1/2, 52%",
+          "steps": [
+            "Choose percentages as a convenient exact common form.",
+            "0.48 = 48%; 1/2 = 50%; 52% = 52%.",
+            "48% < 50% < 52%.",
+            "Return to the original forms: 0.48 < 1/2 < 52%. Every original appears exactly once."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "Compare 48, 1 and 52, then place 1/2 first because 1 is smallest.": "Those printed integers belong to different representations; comparing them does not compare the quantities.",
+        "Convert only 52% to 0.52 and leave the fraction unconverted.": "That leaves one value outside the common form and does not establish the full order.",
+        "Write the values in the same order as the question.": "These particular inputs happen to be in ascending order, but copying question order is not a valid ordering method."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-14-G01",
+      "source_ref": {
+        "page": 9
+      },
+      "stage": "guided",
+      "prompt": "Use percentages as the common form. 65% stays 65%. Complete the percentage values for 0.7 and 3/4.",
+      "target": "Order exact mixed representations in the requested direction, returning every original once",
+      "response": {
+        "type": "fdp_ordering",
+        "input_label": "Complete both percentage blanks",
+        "fields": [
+          {
+            "key": "decimalPercent",
+            "label": "Percentage for 0.7"
+          },
+          {
+            "key": "fractionPercent",
+            "label": "Percentage for 3/4"
+          }
+        ]
+      },
+      "answer": {
+        "value": {
+          "decimalPercent": "70",
+          "fractionPercent": "75"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both entries preserve their originals on the percentage scale.",
+        "correct_after_support": "Correct. Both entries preserve their originals on the percentage scale.",
+        "on_correct_math": "0.7 = 70%. → 3/4 = 75%.",
+        "on_incorrect_attempt_1": "Convert both remaining quantities to the same percent scale as the given value.",
+        "on_incorrect_attempt_2": "Convert both remaining quantities to the same percent scale as the given value.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "0.7 = 70%. → 3/4 = 75%."
+      },
+      "mathematical_support": {
+        "hint_1": "Convert both remaining quantities to the same percent scale as the given value.",
+        "hint_2": "Keep every conversion exact and beside its original. Compare all values in the same form, follow the requested direction and return each original once.",
+        "worked_solution": "0.7 = 70%. → 3/4 = 75%."
+      },
+      "working": [
+        "0.7 = 70%.",
+        "3/4 = 75%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_ordering",
+          "title": "Convert the other two guided values",
+          "items": [
+            {
+              "label": "65%",
+              "value": "65%"
+            },
+            {
+              "label": "0.7",
+              "value": "0.7"
+            },
+            {
+              "label": "3/4",
+              "value": "3/4"
+            }
+          ],
+          "direction": "ascending",
+          "route": "percent",
+          "common": [
+            "65%",
+            "70%",
+            "75%"
+          ],
+          "commonOrder": [
+            "65%",
+            "70%",
+            "75%"
+          ],
+          "given": "65%, 0.7, 3/4",
+          "steps": [
+            "0.7 = 70%.",
+            "3/4 = 75%."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "guided_convert"
+        }
+      },
+      "response_feedback": {
+        "check_decimalPercent": "The fraction conversion is correct. Recheck the percent number equivalent to the decimal.",
+        "check_fractionPercent": "The decimal conversion is correct. Recheck the percent number equivalent to three quarters.",
+        "check_multiple": "Recheck both conversions to percentages; preserve each original value."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-14-G02",
+      "source_ref": {
+        "page": 9
+      },
+      "stage": "guided",
+      "prompt": "Order the common percentage values for 65%, 0.7 and 3/4 from smallest to largest. Complete all three percentage blanks.",
+      "target": "Order exact mixed representations in the requested direction, returning every original once",
+      "response": {
+        "type": "fdp_ordering",
+        "input_label": "Smallest percentage to largest percentage",
+        "fields": [
+          {
+            "key": "first",
+            "label": "First percentage"
+          },
+          {
+            "key": "second",
+            "label": "Second percentage"
+          },
+          {
+            "key": "third",
+            "label": "Third percentage"
+          }
+        ]
+      },
+      "answer": {
+        "value": {
+          "first": "65",
+          "second": "70",
+          "third": "75"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The percentage numbers increase from the first position to the last.",
+        "correct_after_support": "Correct. The percentage numbers increase from the first position to the last.",
+        "on_correct_math": "The common percentage values are 65%, 70%, 75%. → Ascending order is 65% < 70% < 75%.",
+        "on_incorrect_attempt_1": "Place the smallest percentage first, the middle value next and the largest last.",
+        "on_incorrect_attempt_2": "Place the smallest percentage first, the middle value next and the largest last.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The common percentage values are 65%, 70%, 75%. → Ascending order is 65% < 70% < 75%."
+      },
+      "mathematical_support": {
+        "hint_1": "Place the smallest percentage first, the middle value next and the largest last.",
+        "hint_2": "Keep every conversion exact and beside its original. Compare all values in the same form, follow the requested direction and return each original once.",
+        "worked_solution": "The common percentage values are 65%, 70%, 75%. → Ascending order is 65% < 70% < 75%."
+      },
+      "working": [
+        "The common percentage values are 65%, 70%, 75%.",
+        "Ascending order is 65% < 70% < 75%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_ordering",
+          "title": "Order the common-form percentages",
+          "items": [
+            {
+              "label": "65%",
+              "value": "65%"
+            },
+            {
+              "label": "0.7",
+              "value": "0.7"
+            },
+            {
+              "label": "3/4",
+              "value": "3/4"
+            }
+          ],
+          "direction": "ascending",
+          "route": "percent",
+          "common": [
+            "65%",
+            "70%",
+            "75%"
+          ],
+          "commonOrder": [
+            "65%",
+            "70%",
+            "75%"
+          ],
+          "given": "65%, 0.7, 3/4",
+          "steps": [
+            "The common percentage values are 65%, 70%, 75%.",
+            "Ascending order is 65% < 70% < 75%."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "guided_order"
+        }
+      },
+      "response_feedback": {
+        "check_first": "The other two positions are correct. Check the smallest percentage in the first position.",
+        "check_second": "The first and last positions are correct. Check the middle percentage.",
+        "check_third": "The first two positions are correct. Check the largest percentage in the final position.",
+        "check_multiple": "Check each converted percentage and the smallest-to-largest direction; use all three values once."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-14-G03",
+      "source_ref": {
+        "page": 9
+      },
+      "stage": "faded",
+      "prompt": "Write the original forms 65%, 0.7 and 3/4 from smallest to largest.",
+      "target": "Order exact mixed representations in the requested direction, returning every original once",
+      "response": {
+        "type": "fdp_ordering",
+        "items": [
+          {
+            "label": "65%",
+            "value": "65%"
+          },
+          {
+            "label": "0.7",
+            "value": "0.7"
+          },
+          {
+            "label": "3/4",
+            "value": "3/4"
+          }
+        ],
+        "direction": "ascending",
+        "allow_working": false
+      },
+      "answer": {
+        "value": {
+          "order": [
+            "65%",
+            "0.7",
+            "3/4"
+          ]
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Every original appears once and keeps the order of its common-form value.",
+        "correct_after_support": "Correct. Every original appears once and keeps the order of its common-form value.",
+        "on_correct_math": "Choose percentages as a convenient exact common form. → 65% = 65%; 0.7 = 70%; 3/4 = 75%. → 65% < 70% < 75%. → Return to the original forms: 65% < 0.7 < 3/4. Every original appears exactly once.",
+        "on_incorrect_attempt_1": "Match each ordered percentage back to its original representation.",
+        "on_incorrect_attempt_2": "Match each ordered percentage back to its original representation.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose percentages as a convenient exact common form. → 65% = 65%; 0.7 = 70%; 3/4 = 75%. → 65% < 70% < 75%. → Return to the original forms: 65% < 0.7 < 3/4. Every original appears exactly once."
+      },
+      "mathematical_support": {
+        "hint_1": "Match each ordered percentage back to its original representation.",
+        "hint_2": "Keep every conversion exact and beside its original. Compare all values in the same form, follow the requested direction and return each original once.",
+        "worked_solution": "Choose percentages as a convenient exact common form. → 65% = 65%; 0.7 = 70%; 3/4 = 75%. → 65% < 70% < 75%. → Return to the original forms: 65% < 0.7 < 3/4. Every original appears exactly once."
+      },
+      "working": [
+        "Choose percentages as a convenient exact common form.",
+        "65% = 65%; 0.7 = 70%; 3/4 = 75%.",
+        "65% < 70% < 75%.",
+        "Return to the original forms: 65% < 0.7 < 3/4. Every original appears exactly once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_ordering",
+          "title": "Return the originals in the same order",
+          "items": [
+            {
+              "label": "65%",
+              "value": "65%"
+            },
+            {
+              "label": "0.7",
+              "value": "0.7"
+            },
+            {
+              "label": "3/4",
+              "value": "3/4"
+            }
+          ],
+          "direction": "ascending",
+          "route": "percent",
+          "common": [
+            "65%",
+            "70%",
+            "75%"
+          ],
+          "commonOrder": [
+            "65%",
+            "70%",
+            "75%"
+          ],
+          "given": "65%, 0.7, 3/4",
+          "steps": [
+            "Choose percentages as a convenient exact common form.",
+            "65% = 65%; 0.7 = 70%; 3/4 = 75%.",
+            "65% < 70% < 75%.",
+            "Return to the original forms: 65% < 0.7 < 3/4. Every original appears exactly once."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_accounting": "Use every original exactly once. One has been repeated, omitted or replaced by a converted working value.",
+        "check_direction": "Every original is present once. Recheck their exact values: this list must run from smallest to largest.",
+        "check_work": "At least one recorded conversion does not preserve its original exactly in the chosen common form. Recheck each conversion beside its original."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-14-G04",
+      "source_ref": {
+        "page": 9
+      },
+      "stage": "independent_transfer",
+      "prompt": "Which ordered list is correct from smallest to largest?",
+      "target": "Order exact mixed representations in the requested direction, returning every original once",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "65%, 0.7, 3/4",
+          "3/4, 0.7, 65%",
+          "0.7, 65%, 3/4",
+          "65%, 3/4, 0.7"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "65%, 0.7, 3/4"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The original forms follow the increasing common-form values.",
+        "correct_after_support": "Correct. The original forms follow the increasing common-form values.",
+        "on_correct_math": "Choose percentages as a convenient exact common form. → 65% = 65%; 0.7 = 70%; 3/4 = 75%. → 65% < 70% < 75%. → Return to the original forms: 65% < 0.7 < 3/4. Every original appears exactly once.",
+        "on_incorrect_attempt_1": "Check every neighbouring pair on the same percentage scale.",
+        "on_incorrect_attempt_2": "Check every neighbouring pair on the same percentage scale.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose percentages as a convenient exact common form. → 65% = 65%; 0.7 = 70%; 3/4 = 75%. → 65% < 70% < 75%. → Return to the original forms: 65% < 0.7 < 3/4. Every original appears exactly once."
+      },
+      "mathematical_support": {
+        "hint_1": "Check every neighbouring pair on the same percentage scale.",
+        "hint_2": "Keep every conversion exact and beside its original. Compare all values in the same form, follow the requested direction and return each original once.",
+        "worked_solution": "Choose percentages as a convenient exact common form. → 65% = 65%; 0.7 = 70%; 3/4 = 75%. → 65% < 70% < 75%. → Return to the original forms: 65% < 0.7 < 3/4. Every original appears exactly once."
+      },
+      "working": [
+        "Choose percentages as a convenient exact common form.",
+        "65% = 65%; 0.7 = 70%; 3/4 = 75%.",
+        "65% < 70% < 75%.",
+        "Return to the original forms: 65% < 0.7 < 3/4. Every original appears exactly once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_ordering",
+          "title": "Check the guided order",
+          "items": [
+            {
+              "label": "65%",
+              "value": "65%"
+            },
+            {
+              "label": "0.7",
+              "value": "0.7"
+            },
+            {
+              "label": "3/4",
+              "value": "3/4"
+            }
+          ],
+          "direction": "ascending",
+          "route": "percent",
+          "common": [
+            "65%",
+            "70%",
+            "75%"
+          ],
+          "commonOrder": [
+            "65%",
+            "70%",
+            "75%"
+          ],
+          "given": "65%, 0.7, 3/4",
+          "steps": [
+            "Choose percentages as a convenient exact common form.",
+            "65% = 65%; 0.7 = 70%; 3/4 = 75%.",
+            "65% < 70% < 75%.",
+            "Return to the original forms: 65% < 0.7 < 3/4. Every original appears exactly once."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "3/4, 0.7, 65%": "That reverses the requested direction; the list must begin with the smallest.",
+        "0.7, 65%, 3/4": "The first two quantities are reversed. Compare them on the same scale.",
+        "65%, 3/4, 0.7": "The last two quantities are reversed. Check the exact fraction value."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-14-P01",
+      "source_ref": {
+        "page": 10
+      },
+      "stage": "practice",
+      "prompt": "Order 0.46, 45%, 1/2 from smallest to largest. Use the original forms.",
+      "target": "Order exact mixed representations in the requested direction, returning every original once",
+      "response": {
+        "type": "fdp_ordering",
+        "items": [
+          {
+            "label": "0.46",
+            "value": "0.46"
+          },
+          {
+            "label": "45%",
+            "value": "45%"
+          },
+          {
+            "label": "1/2",
+            "value": "1/2"
+          }
+        ],
+        "direction": "ascending",
+        "allow_working": true
+      },
+      "answer": {
+        "value": {
+          "order": [
+            "45%",
+            "0.46",
+            "1/2"
+          ]
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The percentage comes first, followed by the decimal and the fraction.",
+        "correct_after_support": "Correct. The percentage comes first, followed by the decimal and the fraction.",
+        "on_correct_math": "Choose percentages as a convenient exact common form. → 0.46 = 46%; 45% = 45%; 1/2 = 50%. → 45% < 46% < 50%. → Return to the original forms: 45% < 0.46 < 1/2. Every original appears exactly once.",
+        "on_incorrect_attempt_1": "Compare the hundredths after expressing all three in one exact form.",
+        "on_incorrect_attempt_2": "Compare the hundredths after expressing all three in one exact form.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose percentages as a convenient exact common form. → 0.46 = 46%; 45% = 45%; 1/2 = 50%. → 45% < 46% < 50%. → Return to the original forms: 45% < 0.46 < 1/2. Every original appears exactly once."
+      },
+      "mathematical_support": {
+        "hint_1": "Compare the hundredths after expressing all three in one exact form.",
+        "hint_2": "Keep every conversion exact and beside its original. Compare all values in the same form, follow the requested direction and return each original once.",
+        "worked_solution": "Choose percentages as a convenient exact common form. → 0.46 = 46%; 45% = 45%; 1/2 = 50%. → 45% < 46% < 50%. → Return to the original forms: 45% < 0.46 < 1/2. Every original appears exactly once."
+      },
+      "working": [
+        "Choose percentages as a convenient exact common form.",
+        "0.46 = 46%; 45% = 45%; 1/2 = 50%.",
+        "45% < 46% < 50%.",
+        "Return to the original forms: 45% < 0.46 < 1/2. Every original appears exactly once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_ordering",
+          "title": "Order the original representations",
+          "items": [
+            {
+              "label": "0.46",
+              "value": "0.46"
+            },
+            {
+              "label": "45%",
+              "value": "45%"
+            },
+            {
+              "label": "1/2",
+              "value": "1/2"
+            }
+          ],
+          "direction": "ascending",
+          "route": "percent",
+          "common": [
+            "46%",
+            "45%",
+            "50%"
+          ],
+          "commonOrder": [
+            "45%",
+            "46%",
+            "50%"
+          ],
+          "given": "0.46, 45%, 1/2",
+          "steps": [
+            "Choose percentages as a convenient exact common form.",
+            "0.46 = 46%; 45% = 45%; 1/2 = 50%.",
+            "45% < 46% < 50%.",
+            "Return to the original forms: 45% < 0.46 < 1/2. Every original appears exactly once."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_accounting": "Use every original exactly once. One has been repeated, omitted or replaced by a converted working value.",
+        "check_direction": "Every original is present once. Recheck their exact values: this list must run from smallest to largest.",
+        "check_work": "At least one recorded conversion does not preserve its original exactly in the chosen common form. Recheck each conversion beside its original."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-14-P02",
+      "source_ref": {
+        "page": 10
+      },
+      "stage": "practice",
+      "prompt": "Order 3/4, 0.72, 70% from largest to smallest. Use the original forms.",
+      "target": "Order exact mixed representations in the requested direction, returning every original once",
+      "response": {
+        "type": "fdp_ordering",
+        "items": [
+          {
+            "label": "3/4",
+            "value": "3/4"
+          },
+          {
+            "label": "0.72",
+            "value": "0.72"
+          },
+          {
+            "label": "70%",
+            "value": "70%"
+          }
+        ],
+        "direction": "descending",
+        "allow_working": true
+      },
+      "answer": {
+        "value": {
+          "order": [
+            "3/4",
+            "0.72",
+            "70%"
+          ]
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. All three original values decrease in the requested order.",
+        "correct_after_support": "Correct. All three original values decrease in the requested order.",
+        "on_correct_math": "Choose percentages as a convenient exact common form. → 3/4 = 75%; 0.72 = 72%; 70% = 70%. → 75% > 72% > 70%. → Return to the original forms: 3/4 > 0.72 > 70%. Every original appears exactly once.",
+        "on_incorrect_attempt_1": "This list must start with the largest value; check the direction after converting.",
+        "on_incorrect_attempt_2": "This list must start with the largest value; check the direction after converting.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose percentages as a convenient exact common form. → 3/4 = 75%; 0.72 = 72%; 70% = 70%. → 75% > 72% > 70%. → Return to the original forms: 3/4 > 0.72 > 70%. Every original appears exactly once."
+      },
+      "mathematical_support": {
+        "hint_1": "This list must start with the largest value; check the direction after converting.",
+        "hint_2": "Keep every conversion exact and beside its original. Compare all values in the same form, follow the requested direction and return each original once.",
+        "worked_solution": "Choose percentages as a convenient exact common form. → 3/4 = 75%; 0.72 = 72%; 70% = 70%. → 75% > 72% > 70%. → Return to the original forms: 3/4 > 0.72 > 70%. Every original appears exactly once."
+      },
+      "working": [
+        "Choose percentages as a convenient exact common form.",
+        "3/4 = 75%; 0.72 = 72%; 70% = 70%.",
+        "75% > 72% > 70%.",
+        "Return to the original forms: 3/4 > 0.72 > 70%. Every original appears exactly once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_ordering",
+          "title": "Order the original representations",
+          "items": [
+            {
+              "label": "3/4",
+              "value": "3/4"
+            },
+            {
+              "label": "0.72",
+              "value": "0.72"
+            },
+            {
+              "label": "70%",
+              "value": "70%"
+            }
+          ],
+          "direction": "descending",
+          "route": "percent",
+          "common": [
+            "75%",
+            "72%",
+            "70%"
+          ],
+          "commonOrder": [
+            "75%",
+            "72%",
+            "70%"
+          ],
+          "given": "3/4, 0.72, 70%",
+          "steps": [
+            "Choose percentages as a convenient exact common form.",
+            "3/4 = 75%; 0.72 = 72%; 70% = 70%.",
+            "75% > 72% > 70%.",
+            "Return to the original forms: 3/4 > 0.72 > 70%. Every original appears exactly once."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_accounting": "Use every original exactly once. One has been repeated, omitted or replaced by a converted working value.",
+        "check_direction": "Every original is present once. Recheck their exact values: this list must run from largest to smallest.",
+        "check_work": "At least one recorded conversion does not preserve its original exactly in the chosen common form. Recheck each conversion beside its original."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-14-P03",
+      "source_ref": {
+        "page": 10
+      },
+      "stage": "practice",
+      "prompt": "Order 6/5, 125%, 1.3 from smallest to largest. Use the original forms.",
+      "target": "Order exact mixed representations in the requested direction, returning every original once",
+      "response": {
+        "type": "fdp_ordering",
+        "items": [
+          {
+            "label": "6/5",
+            "value": "6/5"
+          },
+          {
+            "label": "125%",
+            "value": "125%"
+          },
+          {
+            "label": "1.3",
+            "value": "1.3"
+          }
+        ],
+        "direction": "ascending",
+        "allow_working": true
+      },
+      "answer": {
+        "value": {
+          "order": [
+            "6/5",
+            "125%",
+            "1.3"
+          ]
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The increasing order preserves all three values above one whole.",
+        "correct_after_support": "Correct. The increasing order preserves all three values above one whole.",
+        "on_correct_math": "Choose percentages as a convenient exact common form. → 6/5 = 120%; 125% = 125%; 1.3 = 130%. → 120% < 125% < 130%. → Return to the original forms: 6/5 < 125% < 1.3. Every original appears exactly once.",
+        "on_incorrect_attempt_1": "Keep the complete whole in each value, then compare the extra parts.",
+        "on_incorrect_attempt_2": "Keep the complete whole in each value, then compare the extra parts.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose percentages as a convenient exact common form. → 6/5 = 120%; 125% = 125%; 1.3 = 130%. → 120% < 125% < 130%. → Return to the original forms: 6/5 < 125% < 1.3. Every original appears exactly once."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the complete whole in each value, then compare the extra parts.",
+        "hint_2": "Keep every conversion exact and beside its original. Compare all values in the same form, follow the requested direction and return each original once.",
+        "worked_solution": "Choose percentages as a convenient exact common form. → 6/5 = 120%; 125% = 125%; 1.3 = 130%. → 120% < 125% < 130%. → Return to the original forms: 6/5 < 125% < 1.3. Every original appears exactly once."
+      },
+      "working": [
+        "Choose percentages as a convenient exact common form.",
+        "6/5 = 120%; 125% = 125%; 1.3 = 130%.",
+        "120% < 125% < 130%.",
+        "Return to the original forms: 6/5 < 125% < 1.3. Every original appears exactly once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_ordering",
+          "title": "Order the original representations",
+          "items": [
+            {
+              "label": "6/5",
+              "value": "6/5"
+            },
+            {
+              "label": "125%",
+              "value": "125%"
+            },
+            {
+              "label": "1.3",
+              "value": "1.3"
+            }
+          ],
+          "direction": "ascending",
+          "route": "percent",
+          "common": [
+            "120%",
+            "125%",
+            "130%"
+          ],
+          "commonOrder": [
+            "120%",
+            "125%",
+            "130%"
+          ],
+          "given": "6/5, 125%, 1.3",
+          "steps": [
+            "Choose percentages as a convenient exact common form.",
+            "6/5 = 120%; 125% = 125%; 1.3 = 130%.",
+            "120% < 125% < 130%.",
+            "Return to the original forms: 6/5 < 125% < 1.3. Every original appears exactly once."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_accounting": "Use every original exactly once. One has been repeated, omitted or replaced by a converted working value.",
+        "check_direction": "Every original is present once. Recheck their exact values: this list must run from smallest to largest.",
+        "check_work": "At least one recorded conversion does not preserve its original exactly in the chosen common form. Recheck each conversion beside its original."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-14-P04",
+      "source_ref": {
+        "page": 10
+      },
+      "stage": "practice",
+      "prompt": "Order 7/8, 86%, 0.9 from largest to smallest. Use the original forms.",
+      "target": "Order exact mixed representations in the requested direction, returning every original once",
+      "response": {
+        "type": "fdp_ordering",
+        "items": [
+          {
+            "label": "7/8",
+            "value": "7/8"
+          },
+          {
+            "label": "86%",
+            "value": "86%"
+          },
+          {
+            "label": "0.9",
+            "value": "0.9"
+          }
+        ],
+        "direction": "descending",
+        "allow_working": true
+      },
+      "answer": {
+        "value": {
+          "order": [
+            "0.9",
+            "7/8",
+            "86%"
+          ]
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The exact fraction belongs between the other two proportions.",
+        "correct_after_support": "Correct. The exact fraction belongs between the other two proportions.",
+        "on_correct_math": "Choose percentages as a convenient exact common form. → 7/8 = 87.5%; 86% = 86%; 0.9 = 90%. → 90% > 87.5% > 86%. → Return to the original forms: 0.9 > 7/8 > 86%. Every original appears exactly once.",
+        "on_incorrect_attempt_1": "Keep the full exact fraction conversion and begin with the largest proportion.",
+        "on_incorrect_attempt_2": "Keep the full exact fraction conversion and begin with the largest proportion.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose percentages as a convenient exact common form. → 7/8 = 87.5%; 86% = 86%; 0.9 = 90%. → 90% > 87.5% > 86%. → Return to the original forms: 0.9 > 7/8 > 86%. Every original appears exactly once."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the full exact fraction conversion and begin with the largest proportion.",
+        "hint_2": "Keep every conversion exact and beside its original. Compare all values in the same form, follow the requested direction and return each original once.",
+        "worked_solution": "Choose percentages as a convenient exact common form. → 7/8 = 87.5%; 86% = 86%; 0.9 = 90%. → 90% > 87.5% > 86%. → Return to the original forms: 0.9 > 7/8 > 86%. Every original appears exactly once."
+      },
+      "working": [
+        "Choose percentages as a convenient exact common form.",
+        "7/8 = 87.5%; 86% = 86%; 0.9 = 90%.",
+        "90% > 87.5% > 86%.",
+        "Return to the original forms: 0.9 > 7/8 > 86%. Every original appears exactly once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_ordering",
+          "title": "Order the original representations",
+          "items": [
+            {
+              "label": "7/8",
+              "value": "7/8"
+            },
+            {
+              "label": "86%",
+              "value": "86%"
+            },
+            {
+              "label": "0.9",
+              "value": "0.9"
+            }
+          ],
+          "direction": "descending",
+          "route": "percent",
+          "common": [
+            "87.5%",
+            "86%",
+            "90%"
+          ],
+          "commonOrder": [
+            "90%",
+            "87.5%",
+            "86%"
+          ],
+          "given": "7/8, 86%, 0.9",
+          "steps": [
+            "Choose percentages as a convenient exact common form.",
+            "7/8 = 87.5%; 86% = 86%; 0.9 = 90%.",
+            "90% > 87.5% > 86%.",
+            "Return to the original forms: 0.9 > 7/8 > 86%. Every original appears exactly once."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_accounting": "Use every original exactly once. One has been repeated, omitted or replaced by a converted working value.",
+        "check_direction": "Every original is present once. Recheck their exact values: this list must run from largest to smallest.",
+        "check_work": "At least one recorded conversion does not preserve its original exactly in the chosen common form. Recheck each conversion beside its original."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-14-P05",
+      "source_ref": {
+        "page": 10
+      },
+      "stage": "practice",
+      "prompt": "Order 2/3, 65%, 0.67 from smallest to largest. Use the original forms.",
+      "target": "Order exact mixed representations in the requested direction, returning every original once",
+      "response": {
+        "type": "fdp_ordering",
+        "items": [
+          {
+            "label": "2/3",
+            "value": "2/3"
+          },
+          {
+            "label": "65%",
+            "value": "65%"
+          },
+          {
+            "label": "0.67",
+            "value": "0.67"
+          }
+        ],
+        "direction": "ascending",
+        "allow_working": true
+      },
+      "answer": {
+        "value": {
+          "order": [
+            "65%",
+            "2/3",
+            "0.67"
+          ]
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The exact fraction lies strictly between the percentage and the decimal.",
+        "correct_after_support": "Correct. The exact fraction lies strictly between the percentage and the decimal.",
+        "on_correct_math": "Choose exact fractions with denominator 300; keep two thirds exact. → 2/3 = 200/300; 65% = 195/300; 0.67 = 201/300. → 195/300 < 200/300 < 201/300. → Return to the original forms: 65% < 2/3 < 0.67. Every original appears exactly once.",
+        "on_incorrect_attempt_1": "Use an exact common denominator so that rounding cannot merge two different values.",
+        "on_incorrect_attempt_2": "Use an exact common denominator so that rounding cannot merge two different values.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose exact fractions with denominator 300; keep two thirds exact. → 2/3 = 200/300; 65% = 195/300; 0.67 = 201/300. → 195/300 < 200/300 < 201/300. → Return to the original forms: 65% < 2/3 < 0.67. Every original appears exactly once."
+      },
+      "mathematical_support": {
+        "hint_1": "Use an exact common denominator so that rounding cannot merge two different values.",
+        "hint_2": "Keep every conversion exact and beside its original. Compare all values in the same form, follow the requested direction and return each original once.",
+        "worked_solution": "Choose exact fractions with denominator 300; keep two thirds exact. → 2/3 = 200/300; 65% = 195/300; 0.67 = 201/300. → 195/300 < 200/300 < 201/300. → Return to the original forms: 65% < 2/3 < 0.67. Every original appears exactly once."
+      },
+      "working": [
+        "Choose exact fractions with denominator 300; keep two thirds exact.",
+        "2/3 = 200/300; 65% = 195/300; 0.67 = 201/300.",
+        "195/300 < 200/300 < 201/300.",
+        "Return to the original forms: 65% < 2/3 < 0.67. Every original appears exactly once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_ordering",
+          "title": "Order the original representations",
+          "items": [
+            {
+              "label": "2/3",
+              "value": "2/3"
+            },
+            {
+              "label": "65%",
+              "value": "65%"
+            },
+            {
+              "label": "0.67",
+              "value": "0.67"
+            }
+          ],
+          "direction": "ascending",
+          "route": "fraction",
+          "common": [
+            "200/300",
+            "195/300",
+            "201/300"
+          ],
+          "commonOrder": [
+            "195/300",
+            "200/300",
+            "201/300"
+          ],
+          "given": "2/3, 65%, 0.67",
+          "steps": [
+            "Choose exact fractions with denominator 300; keep two thirds exact.",
+            "2/3 = 200/300; 65% = 195/300; 0.67 = 201/300.",
+            "195/300 < 200/300 < 201/300.",
+            "Return to the original forms: 65% < 2/3 < 0.67. Every original appears exactly once."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_accounting": "Use every original exactly once. One has been repeated, omitted or replaced by a converted working value.",
+        "check_direction": "Every original is present once. Recheck their exact values: this list must run from smallest to largest.",
+        "check_work": "At least one recorded conversion does not preserve its original exactly in the chosen common form. Recheck each conversion beside its original. A rounded decimal is not exactly two thirds."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-14-P06",
+      "source_ref": {
+        "page": 10
+      },
+      "stage": "practice",
+      "prompt": "Order 1.45, 140%, 3/2 from largest to smallest. Use the original forms.",
+      "target": "Order exact mixed representations in the requested direction, returning every original once",
+      "response": {
+        "type": "fdp_ordering",
+        "items": [
+          {
+            "label": "1.45",
+            "value": "1.45"
+          },
+          {
+            "label": "140%",
+            "value": "140%"
+          },
+          {
+            "label": "3/2",
+            "value": "3/2"
+          }
+        ],
+        "direction": "descending",
+        "allow_working": true
+      },
+      "answer": {
+        "value": {
+          "order": [
+            "3/2",
+            "1.45",
+            "140%"
+          ]
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The original values decrease without losing their complete wholes.",
+        "correct_after_support": "Correct. The original values decrease without losing their complete wholes.",
+        "on_correct_math": "Choose percentages as a convenient exact common form. → 1.45 = 145%; 140% = 140%; 3/2 = 150%. → 150% > 145% > 140%. → Return to the original forms: 3/2 > 1.45 > 140%. Every original appears exactly once.",
+        "on_incorrect_attempt_1": "Keep the whole-number parts and compare the amounts above one in descending order.",
+        "on_incorrect_attempt_2": "Keep the whole-number parts and compare the amounts above one in descending order.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose percentages as a convenient exact common form. → 1.45 = 145%; 140% = 140%; 3/2 = 150%. → 150% > 145% > 140%. → Return to the original forms: 3/2 > 1.45 > 140%. Every original appears exactly once."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the whole-number parts and compare the amounts above one in descending order.",
+        "hint_2": "Keep every conversion exact and beside its original. Compare all values in the same form, follow the requested direction and return each original once.",
+        "worked_solution": "Choose percentages as a convenient exact common form. → 1.45 = 145%; 140% = 140%; 3/2 = 150%. → 150% > 145% > 140%. → Return to the original forms: 3/2 > 1.45 > 140%. Every original appears exactly once."
+      },
+      "working": [
+        "Choose percentages as a convenient exact common form.",
+        "1.45 = 145%; 140% = 140%; 3/2 = 150%.",
+        "150% > 145% > 140%.",
+        "Return to the original forms: 3/2 > 1.45 > 140%. Every original appears exactly once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_ordering",
+          "title": "Order the original representations",
+          "items": [
+            {
+              "label": "1.45",
+              "value": "1.45"
+            },
+            {
+              "label": "140%",
+              "value": "140%"
+            },
+            {
+              "label": "3/2",
+              "value": "3/2"
+            }
+          ],
+          "direction": "descending",
+          "route": "percent",
+          "common": [
+            "145%",
+            "140%",
+            "150%"
+          ],
+          "commonOrder": [
+            "150%",
+            "145%",
+            "140%"
+          ],
+          "given": "1.45, 140%, 3/2",
+          "steps": [
+            "Choose percentages as a convenient exact common form.",
+            "1.45 = 145%; 140% = 140%; 3/2 = 150%.",
+            "150% > 145% > 140%.",
+            "Return to the original forms: 3/2 > 1.45 > 140%. Every original appears exactly once."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_accounting": "Use every original exactly once. One has been repeated, omitted or replaced by a converted working value.",
+        "check_direction": "Every original is present once. Recheck their exact values: this list must run from largest to smallest.",
+        "check_work": "At least one recorded conversion does not preserve its original exactly in the chosen common form. Recheck each conversion beside its original."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-14-P07",
+      "source_ref": {
+        "page": 10
+      },
+      "stage": "practice",
+      "prompt": "Order 0.305, 31%, 3/10, 0.32 from smallest to largest. Use the original forms.",
+      "target": "Order exact mixed representations in the requested direction, returning every original once",
+      "response": {
+        "type": "fdp_ordering",
+        "items": [
+          {
+            "label": "0.305",
+            "value": "0.305"
+          },
+          {
+            "label": "31%",
+            "value": "31%"
+          },
+          {
+            "label": "3/10",
+            "value": "3/10"
+          },
+          {
+            "label": "0.32",
+            "value": "0.32"
+          }
+        ],
+        "direction": "ascending",
+        "allow_working": true
+      },
+      "answer": {
+        "value": {
+          "order": [
+            "3/10",
+            "0.305",
+            "31%",
+            "0.32"
+          ]
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. All four originals are present once and their exact values increase.",
+        "correct_after_support": "Correct. All four originals are present once and their exact values increase.",
+        "on_correct_math": "Choose percentages as a convenient exact common form. → 0.305 = 30.5%; 31% = 31%; 3/10 = 30%; 0.32 = 32%. → 30% < 30.5% < 31% < 32%. → Return to the original forms: 3/10 < 0.305 < 31% < 0.32. Every original appears exactly once.",
+        "on_incorrect_attempt_1": "Align place values and retain every exact digit; count all four original values.",
+        "on_incorrect_attempt_2": "Align place values and retain every exact digit; count all four original values.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose percentages as a convenient exact common form. → 0.305 = 30.5%; 31% = 31%; 3/10 = 30%; 0.32 = 32%. → 30% < 30.5% < 31% < 32%. → Return to the original forms: 3/10 < 0.305 < 31% < 0.32. Every original appears exactly once."
+      },
+      "mathematical_support": {
+        "hint_1": "Align place values and retain every exact digit; count all four original values.",
+        "hint_2": "Keep every conversion exact and beside its original. Compare all values in the same form, follow the requested direction and return each original once.",
+        "worked_solution": "Choose percentages as a convenient exact common form. → 0.305 = 30.5%; 31% = 31%; 3/10 = 30%; 0.32 = 32%. → 30% < 30.5% < 31% < 32%. → Return to the original forms: 3/10 < 0.305 < 31% < 0.32. Every original appears exactly once."
+      },
+      "working": [
+        "Choose percentages as a convenient exact common form.",
+        "0.305 = 30.5%; 31% = 31%; 3/10 = 30%; 0.32 = 32%.",
+        "30% < 30.5% < 31% < 32%.",
+        "Return to the original forms: 3/10 < 0.305 < 31% < 0.32. Every original appears exactly once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_ordering",
+          "title": "Order the original representations",
+          "items": [
+            {
+              "label": "0.305",
+              "value": "0.305"
+            },
+            {
+              "label": "31%",
+              "value": "31%"
+            },
+            {
+              "label": "3/10",
+              "value": "3/10"
+            },
+            {
+              "label": "0.32",
+              "value": "0.32"
+            }
+          ],
+          "direction": "ascending",
+          "route": "percent",
+          "common": [
+            "30.5%",
+            "31%",
+            "30%",
+            "32%"
+          ],
+          "commonOrder": [
+            "30%",
+            "30.5%",
+            "31%",
+            "32%"
+          ],
+          "given": "0.305, 31%, 3/10, 0.32",
+          "steps": [
+            "Choose percentages as a convenient exact common form.",
+            "0.305 = 30.5%; 31% = 31%; 3/10 = 30%; 0.32 = 32%.",
+            "30% < 30.5% < 31% < 32%.",
+            "Return to the original forms: 3/10 < 0.305 < 31% < 0.32. Every original appears exactly once."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_accounting": "Use every original exactly once. One has been repeated, omitted or replaced by a converted working value.",
+        "check_direction": "Every original is present once. Recheck their exact values: this list must run from smallest to largest.",
+        "check_work": "At least one recorded conversion does not preserve its original exactly in the chosen common form. Recheck each conversion beside its original."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-14-P08",
+      "source_ref": {
+        "page": 10
+      },
+      "stage": "practice",
+      "prompt": "A student orders 0.58, 3/5 and 63% from smallest to largest. Which answer is correct?",
+      "target": "Order exact mixed representations in the requested direction, returning every original once",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "0.58, 3/5, 63%",
+          "3/5, 0.58, 63%",
+          "63%, 3/5, 0.58",
+          "0.58, 63%, 3/5"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "0.58, 3/5, 63%"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The fraction belongs in the middle of the increasing list.",
+        "correct_after_support": "Correct. The fraction belongs in the middle of the increasing list.",
+        "on_correct_math": "Choose percentages as a convenient exact common form. → 0.58 = 58%; 3/5 = 60%; 63% = 63%. → 58% < 60% < 63%. → Return to the original forms: 0.58 < 3/5 < 63%. Every original appears exactly once.",
+        "on_incorrect_attempt_1": "Compare the fraction exactly with both remaining values in one common form.",
+        "on_incorrect_attempt_2": "Compare the fraction exactly with both remaining values in one common form.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose percentages as a convenient exact common form. → 0.58 = 58%; 3/5 = 60%; 63% = 63%. → 58% < 60% < 63%. → Return to the original forms: 0.58 < 3/5 < 63%. Every original appears exactly once."
+      },
+      "mathematical_support": {
+        "hint_1": "Compare the fraction exactly with both remaining values in one common form.",
+        "hint_2": "Keep every conversion exact and beside its original. Compare all values in the same form, follow the requested direction and return each original once.",
+        "worked_solution": "Choose percentages as a convenient exact common form. → 0.58 = 58%; 3/5 = 60%; 63% = 63%. → 58% < 60% < 63%. → Return to the original forms: 0.58 < 3/5 < 63%. Every original appears exactly once."
+      },
+      "working": [
+        "Choose percentages as a convenient exact common form.",
+        "0.58 = 58%; 3/5 = 60%; 63% = 63%.",
+        "58% < 60% < 63%.",
+        "Return to the original forms: 0.58 < 3/5 < 63%. Every original appears exactly once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_ordering",
+          "title": "Check the independent order",
+          "items": [
+            {
+              "label": "0.58",
+              "value": "0.58"
+            },
+            {
+              "label": "3/5",
+              "value": "3/5"
+            },
+            {
+              "label": "63%",
+              "value": "63%"
+            }
+          ],
+          "direction": "ascending",
+          "route": "percent",
+          "common": [
+            "58%",
+            "60%",
+            "63%"
+          ],
+          "commonOrder": [
+            "58%",
+            "60%",
+            "63%"
+          ],
+          "given": "0.58, 3/5, 63%",
+          "steps": [
+            "Choose percentages as a convenient exact common form.",
+            "0.58 = 58%; 3/5 = 60%; 63% = 63%.",
+            "58% < 60% < 63%.",
+            "Return to the original forms: 0.58 < 3/5 < 63%. Every original appears exactly once."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "3/5, 0.58, 63%": "The first two quantities are reversed; check their exact common-form values.",
+        "63%, 3/5, 0.58": "That list runs from largest to smallest, opposite to the instruction.",
+        "0.58, 63%, 3/5": "The last two quantities are reversed after conversion."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-14-X01",
+      "source_ref": {
+        "page": 22
+      },
+      "stage": "practice",
+      "prompt": "Three students have completed the proportions shown of the same online course. Write the students from the least completed to the most completed.",
+      "target": "Order exact mixed representations in the requested direction, returning every original once",
+      "response": {
+        "type": "fdp_ordering",
+        "items": [
+          {
+            "label": "Aisha",
+            "value": "0.68"
+          },
+          {
+            "label": "Bilal",
+            "value": "3/4"
+          },
+          {
+            "label": "Cara",
+            "value": "72%"
+          }
+        ],
+        "direction": "ascending",
+        "allow_working": true
+      },
+      "answer": {
+        "value": {
+          "order": [
+            "Aisha",
+            "Cara",
+            "Bilal"
+          ]
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The names follow the increasing completed proportions of the same course.",
+        "correct_after_support": "Correct. The names follow the increasing completed proportions of the same course.",
+        "on_correct_math": "Choose percentages as a convenient exact common form. → Aisha (0.68) = 68%; Bilal (3/4) = 75%; Cara (72%) = 72%. → 68% < 72% < 75%. → Return to the original forms: Aisha < Cara < Bilal. Every original appears exactly once.",
+        "on_incorrect_attempt_1": "Compare all three proportions exactly, then put the student names in that order.",
+        "on_incorrect_attempt_2": "Compare all three proportions exactly, then put the student names in that order.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose percentages as a convenient exact common form. → Aisha (0.68) = 68%; Bilal (3/4) = 75%; Cara (72%) = 72%. → 68% < 72% < 75%. → Return to the original forms: Aisha < Cara < Bilal. Every original appears exactly once."
+      },
+      "mathematical_support": {
+        "hint_1": "Compare all three proportions exactly, then put the student names in that order.",
+        "hint_2": "Keep every conversion exact and beside its original. Compare all values in the same form, follow the requested direction and return each original once.",
+        "worked_solution": "Choose percentages as a convenient exact common form. → Aisha (0.68) = 68%; Bilal (3/4) = 75%; Cara (72%) = 72%. → 68% < 72% < 75%. → Return to the original forms: Aisha < Cara < Bilal. Every original appears exactly once."
+      },
+      "working": [
+        "Choose percentages as a convenient exact common form.",
+        "Aisha (0.68) = 68%; Bilal (3/4) = 75%; Cara (72%) = 72%.",
+        "68% < 72% < 75%.",
+        "Return to the original forms: Aisha < Cara < Bilal. Every original appears exactly once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_ordering",
+          "title": "Order the completed course proportions",
+          "items": [
+            {
+              "label": "Aisha",
+              "value": "0.68"
+            },
+            {
+              "label": "Bilal",
+              "value": "3/4"
+            },
+            {
+              "label": "Cara",
+              "value": "72%"
+            }
+          ],
+          "direction": "ascending",
+          "route": "percent",
+          "common": [
+            "68%",
+            "75%",
+            "72%"
+          ],
+          "commonOrder": [
+            "68%",
+            "72%",
+            "75%"
+          ],
+          "given": "",
+          "steps": [
+            "Choose percentages as a convenient exact common form.",
+            "Aisha (0.68) = 68%; Bilal (3/4) = 75%; Cara (72%) = 72%.",
+            "68% < 72% < 75%.",
+            "Return to the original forms: Aisha < Cara < Bilal. Every original appears exactly once."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "context": "Proportion of the same online course completed"
+        }
+      },
+      "response_feedback": {
+        "check_accounting": "Use every original exactly once. One has been repeated, omitted or replaced by a converted working value.",
+        "check_direction": "Every original is present once. Recheck their exact values: this list must run from smallest to largest.",
+        "check_work": "At least one recorded conversion does not preserve its original exactly in the chosen common form. Recheck each conversion beside its original."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-14-X02",
+      "source_ref": {
+        "page": 22
+      },
+      "stage": "practice",
+      "prompt": "Three water tanks are filled to the proportions shown. Write the tanks from fullest to least full.",
+      "target": "Order exact mixed representations in the requested direction, returning every original once",
+      "response": {
+        "type": "fdp_ordering",
+        "items": [
+          {
+            "label": "P",
+            "value": "85%"
+          },
+          {
+            "label": "Q",
+            "value": "0.9"
+          },
+          {
+            "label": "R",
+            "value": "7/8"
+          }
+        ],
+        "direction": "descending",
+        "allow_working": true
+      },
+      "answer": {
+        "value": {
+          "order": [
+            "Q",
+            "R",
+            "P"
+          ]
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The tank labels follow decreasing fullness proportions; capacities are not needed.",
+        "correct_after_support": "Correct. The tank labels follow decreasing fullness proportions; capacities are not needed.",
+        "on_correct_math": "Choose percentages as a convenient exact common form. → P (85%) = 85%; Q (0.9) = 90%; R (7/8) = 87.5%. → 90% > 87.5% > 85%. → Return to the original forms: Q > R > P. Every original appears exactly once.",
+        "on_incorrect_attempt_1": "Compare how full each tank is as a proportion, not its capacity, and start with the greatest share.",
+        "on_incorrect_attempt_2": "Compare how full each tank is as a proportion, not its capacity, and start with the greatest share.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose percentages as a convenient exact common form. → P (85%) = 85%; Q (0.9) = 90%; R (7/8) = 87.5%. → 90% > 87.5% > 85%. → Return to the original forms: Q > R > P. Every original appears exactly once."
+      },
+      "mathematical_support": {
+        "hint_1": "Compare how full each tank is as a proportion, not its capacity, and start with the greatest share.",
+        "hint_2": "Keep every conversion exact and beside its original. Compare all values in the same form, follow the requested direction and return each original once.",
+        "worked_solution": "Choose percentages as a convenient exact common form. → P (85%) = 85%; Q (0.9) = 90%; R (7/8) = 87.5%. → 90% > 87.5% > 85%. → Return to the original forms: Q > R > P. Every original appears exactly once."
+      },
+      "working": [
+        "Choose percentages as a convenient exact common form.",
+        "P (85%) = 85%; Q (0.9) = 90%; R (7/8) = 87.5%.",
+        "90% > 87.5% > 85%.",
+        "Return to the original forms: Q > R > P. Every original appears exactly once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_ordering",
+          "title": "Order the tank fullness proportions",
+          "items": [
+            {
+              "label": "P",
+              "value": "85%"
+            },
+            {
+              "label": "Q",
+              "value": "0.9"
+            },
+            {
+              "label": "R",
+              "value": "7/8"
+            }
+          ],
+          "direction": "descending",
+          "route": "percent",
+          "common": [
+            "85%",
+            "90%",
+            "87.5%"
+          ],
+          "commonOrder": [
+            "90%",
+            "87.5%",
+            "85%"
+          ],
+          "given": "",
+          "steps": [
+            "Choose percentages as a convenient exact common form.",
+            "P (85%) = 85%; Q (0.9) = 90%; R (7/8) = 87.5%.",
+            "90% > 87.5% > 85%.",
+            "Return to the original forms: Q > R > P. Every original appears exactly once."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "context": "Proportion of each tank that is full"
+        }
+      },
+      "response_feedback": {
+        "check_accounting": "Use every original exactly once. One has been repeated, omitted or replaced by a converted working value.",
+        "check_direction": "Every original is present once. Recheck their exact values: this list must run from largest to smallest.",
+        "check_work": "At least one recorded conversion does not preserve its original exactly in the chosen common form. Recheck each conversion beside its original."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-14-X03",
+      "source_ref": {
+        "page": 23
+      },
+      "stage": "practice",
+      "prompt": "Three factories produce the proportions shown of their daily targets. Write the factories from the lowest proportion of target to the highest.",
+      "target": "Order exact mixed representations in the requested direction, returning every original once",
+      "response": {
+        "type": "fdp_ordering",
+        "items": [
+          {
+            "label": "X",
+            "value": "125%"
+          },
+          {
+            "label": "Y",
+            "value": "1.3"
+          },
+          {
+            "label": "Z",
+            "value": "7/5"
+          }
+        ],
+        "direction": "ascending",
+        "allow_working": true
+      },
+      "answer": {
+        "value": {
+          "order": [
+            "X",
+            "Y",
+            "Z"
+          ]
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The labels increase by proportion of each factory’s own target, not by absolute production.",
+        "correct_after_support": "Correct. The labels increase by proportion of each factory’s own target, not by absolute production.",
+        "on_correct_math": "Choose percentages as a convenient exact common form. → X (125%) = 125%; Y (1.3) = 130%; Z (7/5) = 140%. → 125% < 130% < 140%. → Return to the original forms: X < Y < Z. Every original appears exactly once.",
+        "on_incorrect_attempt_1": "Use each daily target as its own whole. Compare the target proportions rather than absolute production totals.",
+        "on_incorrect_attempt_2": "Use each daily target as its own whole. Compare the target proportions rather than absolute production totals.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose percentages as a convenient exact common form. → X (125%) = 125%; Y (1.3) = 130%; Z (7/5) = 140%. → 125% < 130% < 140%. → Return to the original forms: X < Y < Z. Every original appears exactly once."
+      },
+      "mathematical_support": {
+        "hint_1": "Use each daily target as its own whole. Compare the target proportions rather than absolute production totals.",
+        "hint_2": "Keep every conversion exact and beside its original. Compare all values in the same form, follow the requested direction and return each original once.",
+        "worked_solution": "Choose percentages as a convenient exact common form. → X (125%) = 125%; Y (1.3) = 130%; Z (7/5) = 140%. → 125% < 130% < 140%. → Return to the original forms: X < Y < Z. Every original appears exactly once."
+      },
+      "working": [
+        "Choose percentages as a convenient exact common form.",
+        "X (125%) = 125%; Y (1.3) = 130%; Z (7/5) = 140%.",
+        "125% < 130% < 140%.",
+        "Return to the original forms: X < Y < Z. Every original appears exactly once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_ordering",
+          "title": "Order proportions of production targets",
+          "items": [
+            {
+              "label": "X",
+              "value": "125%"
+            },
+            {
+              "label": "Y",
+              "value": "1.3"
+            },
+            {
+              "label": "Z",
+              "value": "7/5"
+            }
+          ],
+          "direction": "ascending",
+          "route": "percent",
+          "common": [
+            "125%",
+            "130%",
+            "140%"
+          ],
+          "commonOrder": [
+            "125%",
+            "130%",
+            "140%"
+          ],
+          "given": "",
+          "steps": [
+            "Choose percentages as a convenient exact common form.",
+            "X (125%) = 125%; Y (1.3) = 130%; Z (7/5) = 140%.",
+            "125% < 130% < 140%.",
+            "Return to the original forms: X < Y < Z. Every original appears exactly once."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "context": "Production as a proportion of each factory’s own daily target"
+        }
+      },
+      "response_feedback": {
+        "check_accounting": "Use every original exactly once. One has been repeated, omitted or replaced by a converted working value.",
+        "check_direction": "Every original is present once. Recheck their exact values: this list must run from smallest to largest.",
+        "check_work": "At least one recorded conversion does not preserve its original exactly in the chosen common form. Recheck each conversion beside its original."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-14-X04",
+      "source_ref": {
+        "page": 23
+      },
+      "stage": "practice",
+      "prompt": "Four runners have completed these proportions of a training programme: 0.48, 47%, 1/2 and 0.52. Write the proportions from greatest to least using the original forms.",
+      "target": "Order exact mixed representations in the requested direction, returning every original once",
+      "response": {
+        "type": "fdp_ordering",
+        "items": [
+          {
+            "label": "0.48",
+            "value": "0.48"
+          },
+          {
+            "label": "47%",
+            "value": "47%"
+          },
+          {
+            "label": "1/2",
+            "value": "1/2"
+          },
+          {
+            "label": "0.52",
+            "value": "0.52"
+          }
+        ],
+        "direction": "descending",
+        "allow_working": true
+      },
+      "answer": {
+        "value": {
+          "order": [
+            "0.52",
+            "1/2",
+            "0.48",
+            "47%"
+          ]
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The four original training proportions decrease from the first position to the last.",
+        "correct_after_support": "Correct. The four original training proportions decrease from the first position to the last.",
+        "on_correct_math": "Choose percentages as a convenient exact common form. → 0.48 = 48%; 47% = 47%; 1/2 = 50%; 0.52 = 52%. → 52% > 50% > 48% > 47%. → Return to the original forms: 0.52 > 1/2 > 0.48 > 47%. Every original appears exactly once.",
+        "on_incorrect_attempt_1": "Keep all four original proportions and reverse the increasing comparison to give greatest first.",
+        "on_incorrect_attempt_2": "Keep all four original proportions and reverse the increasing comparison to give greatest first.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose percentages as a convenient exact common form. → 0.48 = 48%; 47% = 47%; 1/2 = 50%; 0.52 = 52%. → 52% > 50% > 48% > 47%. → Return to the original forms: 0.52 > 1/2 > 0.48 > 47%. Every original appears exactly once."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep all four original proportions and reverse the increasing comparison to give greatest first.",
+        "hint_2": "Keep every conversion exact and beside its original. Compare all values in the same form, follow the requested direction and return each original once.",
+        "worked_solution": "Choose percentages as a convenient exact common form. → 0.48 = 48%; 47% = 47%; 1/2 = 50%; 0.52 = 52%. → 52% > 50% > 48% > 47%. → Return to the original forms: 0.52 > 1/2 > 0.48 > 47%. Every original appears exactly once."
+      },
+      "working": [
+        "Choose percentages as a convenient exact common form.",
+        "0.48 = 48%; 47% = 47%; 1/2 = 50%; 0.52 = 52%.",
+        "52% > 50% > 48% > 47%.",
+        "Return to the original forms: 0.52 > 1/2 > 0.48 > 47%. Every original appears exactly once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_ordering",
+          "title": "Order completed training proportions",
+          "items": [
+            {
+              "label": "0.48",
+              "value": "0.48"
+            },
+            {
+              "label": "47%",
+              "value": "47%"
+            },
+            {
+              "label": "1/2",
+              "value": "1/2"
+            },
+            {
+              "label": "0.52",
+              "value": "0.52"
+            }
+          ],
+          "direction": "descending",
+          "route": "percent",
+          "common": [
+            "48%",
+            "47%",
+            "50%",
+            "52%"
+          ],
+          "commonOrder": [
+            "52%",
+            "50%",
+            "48%",
+            "47%"
+          ],
+          "given": "0.48, 47%, 1/2, 0.52",
+          "steps": [
+            "Choose percentages as a convenient exact common form.",
+            "0.48 = 48%; 47% = 47%; 1/2 = 50%; 0.52 = 52%.",
+            "52% > 50% > 48% > 47%.",
+            "Return to the original forms: 0.52 > 1/2 > 0.48 > 47%. Every original appears exactly once."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_accounting": "Use every original exactly once. One has been repeated, omitted or replaced by a converted working value.",
+        "check_direction": "Every original is present once. Recheck their exact values: this list must run from largest to smallest.",
+        "check_work": "At least one recorded conversion does not preserve its original exactly in the chosen common form. Recheck each conversion beside its original."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-14-X05",
+      "source_ref": {
+        "page": 23
+      },
+      "stage": "practice",
+      "prompt": "Which method orders 65%, 2/3 and 0.67 exactly?",
+      "target": "Order exact mixed representations in the requested direction, returning every original once",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Use denominator 300: 65% = 195/300, 2/3 = 200/300 and 0.67 = 201/300.",
+          "Round 2/3 to 0.67 and state that the last two values are equal.",
+          "Compare the printed numbers 65, 2 and 67.",
+          "Convert only 65% and leave the other two forms unchanged."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "Use denominator 300: 65% = 195/300, 2/3 = 200/300 and 0.67 = 201/300."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The common denominator keeps all three values exact and distinct.",
+        "correct_after_support": "Correct. The common denominator keeps all three values exact and distinct.",
+        "on_correct_math": "Choose exact fractions with denominator 300; keep two thirds exact. → 65% = 195/300; 2/3 = 200/300; 0.67 = 201/300. → 195/300 < 200/300 < 201/300. → Return to the original forms: 65% < 2/3 < 0.67. Every original appears exactly once.",
+        "on_incorrect_attempt_1": "Choose a method that preserves all three exact quantities as the same-sized parts.",
+        "on_incorrect_attempt_2": "Choose a method that preserves all three exact quantities as the same-sized parts.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose exact fractions with denominator 300; keep two thirds exact. → 65% = 195/300; 2/3 = 200/300; 0.67 = 201/300. → 195/300 < 200/300 < 201/300. → Return to the original forms: 65% < 2/3 < 0.67. Every original appears exactly once."
+      },
+      "mathematical_support": {
+        "hint_1": "Choose a method that preserves all three exact quantities as the same-sized parts.",
+        "hint_2": "Keep every conversion exact and beside its original. Compare all values in the same form, follow the requested direction and return each original once.",
+        "worked_solution": "Choose exact fractions with denominator 300; keep two thirds exact. → 65% = 195/300; 2/3 = 200/300; 0.67 = 201/300. → 195/300 < 200/300 < 201/300. → Return to the original forms: 65% < 2/3 < 0.67. Every original appears exactly once."
+      },
+      "working": [
+        "Choose exact fractions with denominator 300; keep two thirds exact.",
+        "65% = 195/300; 2/3 = 200/300; 0.67 = 201/300.",
+        "195/300 < 200/300 < 201/300.",
+        "Return to the original forms: 65% < 2/3 < 0.67. Every original appears exactly once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_ordering",
+          "title": "Keep the three nearby values distinct",
+          "items": [
+            {
+              "label": "65%",
+              "value": "65%"
+            },
+            {
+              "label": "2/3",
+              "value": "2/3"
+            },
+            {
+              "label": "0.67",
+              "value": "0.67"
+            }
+          ],
+          "direction": "ascending",
+          "route": "fraction",
+          "common": [
+            "195/300",
+            "200/300",
+            "201/300"
+          ],
+          "commonOrder": [
+            "195/300",
+            "200/300",
+            "201/300"
+          ],
+          "given": "65%, 2/3, 0.67",
+          "steps": [
+            "Choose exact fractions with denominator 300; keep two thirds exact.",
+            "65% = 195/300; 2/3 = 200/300; 0.67 = 201/300.",
+            "195/300 < 200/300 < 201/300.",
+            "Return to the original forms: 65% < 2/3 < 0.67. Every original appears exactly once."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "Round 2/3 to 0.67 and state that the last two values are equal.": "The rounded decimal is not exactly two thirds. It cannot justify tying two different quantities.",
+        "Compare the printed numbers 65, 2 and 67.": "Those integers are parts of different representations, not comparable common-form values.",
+        "Convert only 65% and leave the other two forms unchanged.": "That does not express all three quantities in a common form or establish their order."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-14-E01",
+      "source_ref": {
+        "page": 20
+      },
+      "stage": "exit",
+      "prompt": "Final check: order 42%, 0.45 and 1/2 from smallest to largest. Use the original forms.",
+      "target": "Order exact mixed representations in the requested direction, returning every original once",
+      "response": {
+        "type": "fdp_ordering",
+        "items": [
+          {
+            "label": "42%",
+            "value": "42%"
+          },
+          {
+            "label": "0.45",
+            "value": "0.45"
+          },
+          {
+            "label": "1/2",
+            "value": "1/2"
+          }
+        ],
+        "direction": "ascending",
+        "allow_working": true
+      },
+      "answer": {
+        "value": {
+          "order": [
+            "42%",
+            "0.45",
+            "1/2"
+          ]
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Each original is present once in increasing order, with any recorded conversions valid.",
+        "correct_after_support": "Correct. Each original is present once in increasing order, with any recorded conversions valid.",
+        "on_correct_math": "Choose percentages as a convenient exact common form. → 42% = 42%; 0.45 = 45%; 1/2 = 50%. → 42% < 45% < 50%. → Return to the original forms: 42% < 0.45 < 1/2. Every original appears exactly once.",
+        "on_incorrect_attempt_1": "Review every exact value and the requested direction.",
+        "on_incorrect_attempt_2": "Review every exact value and the requested direction.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose percentages as a convenient exact common form. → 42% = 42%; 0.45 = 45%; 1/2 = 50%. → 42% < 45% < 50%. → Return to the original forms: 42% < 0.45 < 1/2. Every original appears exactly once."
+      },
+      "mathematical_support": {
+        "hint_1": "Review every exact value and the requested direction.",
+        "hint_2": "Keep every conversion exact and beside its original. Compare all values in the same form, follow the requested direction and return each original once.",
+        "worked_solution": "Choose percentages as a convenient exact common form. → 42% = 42%; 0.45 = 45%; 1/2 = 50%. → 42% < 45% < 50%. → Return to the original forms: 42% < 0.45 < 1/2. Every original appears exactly once."
+      },
+      "working": [
+        "Choose percentages as a convenient exact common form.",
+        "42% = 42%; 0.45 = 45%; 1/2 = 50%.",
+        "42% < 45% < 50%.",
+        "Return to the original forms: 42% < 0.45 < 1/2. Every original appears exactly once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_ordering",
+          "title": "Order the original representations",
+          "items": [
+            {
+              "label": "42%",
+              "value": "42%"
+            },
+            {
+              "label": "0.45",
+              "value": "0.45"
+            },
+            {
+              "label": "1/2",
+              "value": "1/2"
+            }
+          ],
+          "direction": "ascending",
+          "route": "percent",
+          "common": [
+            "42%",
+            "45%",
+            "50%"
+          ],
+          "commonOrder": [
+            "42%",
+            "45%",
+            "50%"
+          ],
+          "given": "42%, 0.45, 1/2",
+          "steps": [
+            "Choose percentages as a convenient exact common form.",
+            "42% = 42%; 0.45 = 45%; 1/2 = 50%.",
+            "42% < 45% < 50%.",
+            "Return to the original forms: 42% < 0.45 < 1/2. Every original appears exactly once."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_accounting": "Use every original exactly once. One has been repeated, omitted or replaced by a converted working value.",
+        "check_direction": "Every original is present once. Recheck their exact values: this list must run from smallest to largest.",
+        "check_work": "At least one recorded conversion does not preserve its original exactly in the chosen common form. Recheck each conversion beside its original."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-14-E02",
+      "source_ref": {
+        "page": 20
+      },
+      "stage": "exit",
+      "prompt": "Final check: order 0.8, 3/4 and 78% from largest to smallest. Use the original forms.",
+      "target": "Order exact mixed representations in the requested direction, returning every original once",
+      "response": {
+        "type": "fdp_ordering",
+        "items": [
+          {
+            "label": "0.8",
+            "value": "0.8"
+          },
+          {
+            "label": "3/4",
+            "value": "3/4"
+          },
+          {
+            "label": "78%",
+            "value": "78%"
+          }
+        ],
+        "direction": "descending",
+        "allow_working": true
+      },
+      "answer": {
+        "value": {
+          "order": [
+            "0.8",
+            "78%",
+            "3/4"
+          ]
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The final list decreases while preserving each original and any recorded working.",
+        "correct_after_support": "Correct. The final list decreases while preserving each original and any recorded working.",
+        "on_correct_math": "Choose percentages as a convenient exact common form. → 0.8 = 80%; 3/4 = 75%; 78% = 78%. → 80% > 78% > 75%. → Return to the original forms: 0.8 > 78% > 3/4. Every original appears exactly once.",
+        "on_incorrect_attempt_1": "Review the exact values and begin with the largest.",
+        "on_incorrect_attempt_2": "Review the exact values and begin with the largest.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose percentages as a convenient exact common form. → 0.8 = 80%; 3/4 = 75%; 78% = 78%. → 80% > 78% > 75%. → Return to the original forms: 0.8 > 78% > 3/4. Every original appears exactly once."
+      },
+      "mathematical_support": {
+        "hint_1": "Review the exact values and begin with the largest.",
+        "hint_2": "Keep every conversion exact and beside its original. Compare all values in the same form, follow the requested direction and return each original once.",
+        "worked_solution": "Choose percentages as a convenient exact common form. → 0.8 = 80%; 3/4 = 75%; 78% = 78%. → 80% > 78% > 75%. → Return to the original forms: 0.8 > 78% > 3/4. Every original appears exactly once."
+      },
+      "working": [
+        "Choose percentages as a convenient exact common form.",
+        "0.8 = 80%; 3/4 = 75%; 78% = 78%.",
+        "80% > 78% > 75%.",
+        "Return to the original forms: 0.8 > 78% > 3/4. Every original appears exactly once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_ordering",
+          "title": "Order the original representations",
+          "items": [
+            {
+              "label": "0.8",
+              "value": "0.8"
+            },
+            {
+              "label": "3/4",
+              "value": "3/4"
+            },
+            {
+              "label": "78%",
+              "value": "78%"
+            }
+          ],
+          "direction": "descending",
+          "route": "percent",
+          "common": [
+            "80%",
+            "75%",
+            "78%"
+          ],
+          "commonOrder": [
+            "80%",
+            "78%",
+            "75%"
+          ],
+          "given": "0.8, 3/4, 78%",
+          "steps": [
+            "Choose percentages as a convenient exact common form.",
+            "0.8 = 80%; 3/4 = 75%; 78% = 78%.",
+            "80% > 78% > 75%.",
+            "Return to the original forms: 0.8 > 78% > 3/4. Every original appears exactly once."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_accounting": "Use every original exactly once. One has been repeated, omitted or replaced by a converted working value.",
+        "check_direction": "Every original is present once. Recheck their exact values: this list must run from largest to smallest.",
+        "check_work": "At least one recorded conversion does not preserve its original exactly in the chosen common form. Recheck each conversion beside its original."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-14-E03",
+      "source_ref": {
+        "page": 20
+      },
+      "stage": "exit",
+      "prompt": "Final check: order 6/5, 125% and 1.3 from smallest to largest. Use the original forms.",
+      "target": "Order exact mixed representations in the requested direction, returning every original once",
+      "response": {
+        "type": "fdp_ordering",
+        "items": [
+          {
+            "label": "6/5",
+            "value": "6/5"
+          },
+          {
+            "label": "125%",
+            "value": "125%"
+          },
+          {
+            "label": "1.3",
+            "value": "1.3"
+          }
+        ],
+        "direction": "ascending",
+        "allow_working": true
+      },
+      "answer": {
+        "value": {
+          "order": [
+            "6/5",
+            "125%",
+            "1.3"
+          ]
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The final order retains every whole and the exact portions beyond it.",
+        "correct_after_support": "Correct. The final order retains every whole and the exact portions beyond it.",
+        "on_correct_math": "Choose percentages as a convenient exact common form. → 6/5 = 120%; 125% = 125%; 1.3 = 130%. → 120% < 125% < 130%. → Return to the original forms: 6/5 < 125% < 1.3. Every original appears exactly once.",
+        "on_incorrect_attempt_1": "Review the full values, including their complete wholes.",
+        "on_incorrect_attempt_2": "Review the full values, including their complete wholes.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose percentages as a convenient exact common form. → 6/5 = 120%; 125% = 125%; 1.3 = 130%. → 120% < 125% < 130%. → Return to the original forms: 6/5 < 125% < 1.3. Every original appears exactly once."
+      },
+      "mathematical_support": {
+        "hint_1": "Review the full values, including their complete wholes.",
+        "hint_2": "Keep every conversion exact and beside its original. Compare all values in the same form, follow the requested direction and return each original once.",
+        "worked_solution": "Choose percentages as a convenient exact common form. → 6/5 = 120%; 125% = 125%; 1.3 = 130%. → 120% < 125% < 130%. → Return to the original forms: 6/5 < 125% < 1.3. Every original appears exactly once."
+      },
+      "working": [
+        "Choose percentages as a convenient exact common form.",
+        "6/5 = 120%; 125% = 125%; 1.3 = 130%.",
+        "120% < 125% < 130%.",
+        "Return to the original forms: 6/5 < 125% < 1.3. Every original appears exactly once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_ordering",
+          "title": "Order the original representations",
+          "items": [
+            {
+              "label": "6/5",
+              "value": "6/5"
+            },
+            {
+              "label": "125%",
+              "value": "125%"
+            },
+            {
+              "label": "1.3",
+              "value": "1.3"
+            }
+          ],
+          "direction": "ascending",
+          "route": "percent",
+          "common": [
+            "120%",
+            "125%",
+            "130%"
+          ],
+          "commonOrder": [
+            "120%",
+            "125%",
+            "130%"
+          ],
+          "given": "6/5, 125%, 1.3",
+          "steps": [
+            "Choose percentages as a convenient exact common form.",
+            "6/5 = 120%; 125% = 125%; 1.3 = 130%.",
+            "120% < 125% < 130%.",
+            "Return to the original forms: 6/5 < 125% < 1.3. Every original appears exactly once."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_accounting": "Use every original exactly once. One has been repeated, omitted or replaced by a converted working value.",
+        "check_direction": "Every original is present once. Recheck their exact values: this list must run from smallest to largest.",
+        "check_work": "At least one recorded conversion does not preserve its original exactly in the chosen common form. Recheck each conversion beside its original."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-14-E04",
+      "source_ref": {
+        "page": 20
+      },
+      "stage": "exit",
+      "prompt": "Final check: order 65%, 2/3 and 0.67 from smallest to largest. Keep values exact and use the original forms.",
+      "target": "Order exact mixed representations in the requested direction, returning every original once",
+      "response": {
+        "type": "fdp_ordering",
+        "items": [
+          {
+            "label": "65%",
+            "value": "65%"
+          },
+          {
+            "label": "2/3",
+            "value": "2/3"
+          },
+          {
+            "label": "0.67",
+            "value": "0.67"
+          }
+        ],
+        "direction": "ascending",
+        "allow_working": true
+      },
+      "answer": {
+        "value": {
+          "order": [
+            "65%",
+            "2/3",
+            "0.67"
+          ]
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The exact quantities remain distinct, and any recorded working preserves them.",
+        "correct_after_support": "Correct. The exact quantities remain distinct, and any recorded working preserves them.",
+        "on_correct_math": "Choose exact fractions with denominator 300; keep two thirds exact. → 65% = 195/300; 2/3 = 200/300; 0.67 = 201/300. → 195/300 < 200/300 < 201/300. → Return to the original forms: 65% < 2/3 < 0.67. Every original appears exactly once.",
+        "on_incorrect_attempt_1": "Review the three exact values without merging a fraction with its rounded approximation.",
+        "on_incorrect_attempt_2": "Review the three exact values without merging a fraction with its rounded approximation.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose exact fractions with denominator 300; keep two thirds exact. → 65% = 195/300; 2/3 = 200/300; 0.67 = 201/300. → 195/300 < 200/300 < 201/300. → Return to the original forms: 65% < 2/3 < 0.67. Every original appears exactly once."
+      },
+      "mathematical_support": {
+        "hint_1": "Review the three exact values without merging a fraction with its rounded approximation.",
+        "hint_2": "Keep every conversion exact and beside its original. Compare all values in the same form, follow the requested direction and return each original once.",
+        "worked_solution": "Choose exact fractions with denominator 300; keep two thirds exact. → 65% = 195/300; 2/3 = 200/300; 0.67 = 201/300. → 195/300 < 200/300 < 201/300. → Return to the original forms: 65% < 2/3 < 0.67. Every original appears exactly once."
+      },
+      "working": [
+        "Choose exact fractions with denominator 300; keep two thirds exact.",
+        "65% = 195/300; 2/3 = 200/300; 0.67 = 201/300.",
+        "195/300 < 200/300 < 201/300.",
+        "Return to the original forms: 65% < 2/3 < 0.67. Every original appears exactly once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_ordering",
+          "title": "Order the original representations",
+          "items": [
+            {
+              "label": "65%",
+              "value": "65%"
+            },
+            {
+              "label": "2/3",
+              "value": "2/3"
+            },
+            {
+              "label": "0.67",
+              "value": "0.67"
+            }
+          ],
+          "direction": "ascending",
+          "route": "fraction",
+          "common": [
+            "195/300",
+            "200/300",
+            "201/300"
+          ],
+          "commonOrder": [
+            "195/300",
+            "200/300",
+            "201/300"
+          ],
+          "given": "65%, 2/3, 0.67",
+          "steps": [
+            "Choose exact fractions with denominator 300; keep two thirds exact.",
+            "65% = 195/300; 2/3 = 200/300; 0.67 = 201/300.",
+            "195/300 < 200/300 < 201/300.",
+            "Return to the original forms: 65% < 2/3 < 0.67. Every original appears exactly once."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_accounting": "Use every original exactly once. One has been repeated, omitted or replaced by a converted working value.",
+        "check_direction": "Every original is present once. Recheck their exact values: this list must run from smallest to largest.",
+        "check_work": "At least one recorded conversion does not preserve its original exactly in the chosen common form. Recheck each conversion beside its original. A rounded decimal is not exactly two thirds."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-14-E05",
+      "source_ref": {
+        "page": 20
+      },
+      "stage": "exit",
+      "prompt": "Final method check: which statement is correct?",
+      "target": "Order exact mixed representations in the requested direction, returning every original once",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Convert every quantity to a common form, order the common values in the requested direction, then write the original forms in that order.",
+          "Convert only the fraction because decimals and percentages can always be compared directly.",
+          "Ascending means largest to smallest.",
+          "A rounded decimal may be treated as exactly equal to the fraction it approximates."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "Convert every quantity to a common form, order the common values in the requested direction, then write the original forms in that order."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The rule preserves exact values and returns every original in the requested direction.",
+        "correct_after_support": "Correct. The rule preserves exact values and returns every original in the requested direction.",
+        "on_correct_math": "Convert every quantity to one suitable exact common form. → Order the common values in the requested direction. → Write every original form exactly once in that order.",
+        "on_incorrect_attempt_1": "Review complete conversion, exactness, direction and the original forms.",
+        "on_incorrect_attempt_2": "Review complete conversion, exactness, direction and the original forms.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Convert every quantity to one suitable exact common form. → Order the common values in the requested direction. → Write every original form exactly once in that order."
+      },
+      "mathematical_support": {
+        "hint_1": "Review complete conversion, exactness, direction and the original forms.",
+        "hint_2": "Keep every conversion exact and beside its original. Compare all values in the same form, follow the requested direction and return each original once.",
+        "worked_solution": "Convert every quantity to one suitable exact common form. → Order the common values in the requested direction. → Write every original form exactly once in that order."
+      },
+      "working": [
+        "Convert every quantity to one suitable exact common form.",
+        "Order the common values in the requested direction.",
+        "Write every original form exactly once in that order."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_ordering",
+          "title": "Choose the exact ordering rule",
+          "items": [
+            {
+              "label": "42%",
+              "value": "42%"
+            },
+            {
+              "label": "0.45",
+              "value": "0.45"
+            },
+            {
+              "label": "1/2",
+              "value": "1/2"
+            }
+          ],
+          "direction": "ascending",
+          "route": "percent",
+          "common": [
+            "42%",
+            "45%",
+            "50%"
+          ],
+          "commonOrder": [
+            "42%",
+            "45%",
+            "50%"
+          ],
+          "given": "",
+          "steps": [
+            "Convert every quantity to one suitable exact common form.",
+            "Order the common values in the requested direction.",
+            "Write every original form exactly once in that order."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "Convert only the fraction because decimals and percentages can always be compared directly.": "A decimal and a percentage use different scales; converting only the fraction does not establish one common form.",
+        "Ascending means largest to smallest.": "Ascending starts with the smallest, not the largest.",
+        "A rounded decimal may be treated as exactly equal to the fraction it approximates.": "A rounded approximation is not exactly the original fraction and cannot establish equality."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    }
+  ],
+  "canonical_lesson": {
+    "version": "FDP14-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

@@ -1,0 +1,2456 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "FDP-05 - Convert a percentage to a decimal",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-19",
+      "sha256": "12d7ebe5db3ef7974223306a18db06c1906ea3c50b43316d42bd8414bc7216e6"
+    },
+    "authored_scope": "Convert percentages to decimals across the Foundation range.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "FDP05-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "verified_desktop_ready_phone_locked_one_division_failure_pair_drafts_fixed_point_charts_hints_audio_320_390",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        14,
+        16,
+        17,
+        18,
+        19
+      ],
+      "source_repairs_consulted": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        17,
+        18
+      ],
+      "note": "All 19 source pages and the previous bulk configuration reviewed; active pages rendered. Restored every active item, both second-division blanks and the full five-item unsupported final check. All division charts and labels are direction-specific. The repeated 0.4% independent/final question is source-prescribed. No diagnostic confirmation, prerequisite mutation, delayed Retrieval or Strong route is active."
+    }
+  },
+  "identity": {
+    "id": "FDP-05",
+    "slug": "convert-a-percentage-to-a-decimal",
+    "title": "Convert a percentage to a decimal",
+    "strand": "Number",
+    "cluster": "Fractions, Decimals and Percentages",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Convert an exact percentage to an equivalent decimal by dividing its numerical value by 100, then removing the percent sign.",
+    "success_criteria": [
+      "Divide by 100 or divide by 10 twice.",
+      "Make every digit one hundredth as valuable.",
+      "Retain or insert every necessary placeholder zero.",
+      "Remove the percent sign after numerical conversion.",
+      "Convert percentages below 1%, between 1% and 100%, and above 100%.",
+      "Interpret the decimal against the original reference whole."
+    ],
+    "boundaries": {
+      "includes": [
+        "Exact whole-number and decimal percentages",
+        "Placeholder zeros through ten-thousandths in active source items",
+        "Percentages below 1% and above 100%",
+        "Short contextual percentage-to-decimal conversion"
+      ],
+      "excludes": [
+        "Decimal-to-percentage or fraction conversion",
+        "Recurring decimals and rounding",
+        "Percentage of an amount",
+        "Percentage increase, decrease or reverse percentages",
+        "Entry, Diagnostic, prerequisite routing, mixed-method selection and delayed Retrieval"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "FDP-01",
+      "FDP-02",
+      "FDP-03",
+      "FDP-04"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for FDP-01, FDP-02, FDP-03, FDP-04 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "single_choice",
+      "decimal",
+      "decimal_scale_pair"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    },
+    "place_value_profile": true
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "A percentage value divided by 100 gives its decimal proportion.",
+    "invariant": "Percentage and decimal notation describe the same proportion, using different numerical units.",
+    "must_notice": [
+      "Division by 100 equals division by 10 twice.",
+      "Digits change place value while the chart decimal point stays fixed.",
+      "The percent sign is removed only after the numerical conversion.",
+      "Percentages above 100% give decimals above one.",
+      "Percentages below 1% give decimals below one hundredth."
+    ],
+    "common_confusions": [
+      "Sign removed without scaling",
+      "Only one division by ten",
+      "Wrong conversion direction",
+      "Lost placeholder zeros",
+      "Whole-number part dropped",
+      "Third division applied unnecessarily"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "From percent to hundredths",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "From percent to hundredths",
+          "initial_state": "From percent to hundredths",
+          "model": {
+            "kind": "decimal_scaling",
+            "title": "The same selected part",
+            "decimal": "37",
+            "scale_direction": -1,
+            "given": "37% = 37/100 = 0.37",
+            "steps": [
+              "37 ÷ 10 = 3.7.",
+              "3.7 ÷ 10 = 0.37; together, divide the original percentage value by 100.",
+              "37% = 0.37."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "bridge",
+            "hundredths": 37,
+            "solved": true,
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "The shaded part does not change. The percent sign means parts per hundred, so divide the numerical value by one hundred before removing the sign."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Start with the percentage value",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Start with the percentage value",
+          "initial_state": "Start with the percentage value",
+          "model": {
+            "kind": "decimal_scaling",
+            "title": "Track a percentage below one",
+            "decimal": "0.6",
+            "scale_direction": -1,
+            "given": "Convert 0.6%",
+            "steps": [
+              "The digit 6 starts in tenths."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 1,
+            "chart_power": 0
+          }
+        },
+        "narration": {
+          "script": "Begin with the numerical percentage value. Its nonzero digit is in tenths. The decimal point stays fixed in the chart."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Divide by ten once",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Divide by ten once",
+          "initial_state": "Divide by ten once",
+          "model": {
+            "kind": "decimal_scaling",
+            "title": "Track a percentage below one",
+            "decimal": "0.6",
+            "scale_direction": -1,
+            "given": "Convert 0.6%",
+            "steps": [
+              "0.6 ÷ 10 = 0.06.",
+              "0.06 ÷ 10 = 0.006; together, divide the original percentage value by 100.",
+              "0.6% = 0.006."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 1,
+            "chart_power": 1
+          }
+        },
+        "narration": {
+          "script": "The first division makes each digit one tenth as valuable. A zero holds the newly empty tenths place."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Divide by ten again",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Divide by ten again",
+          "initial_state": "Divide by ten again",
+          "model": {
+            "kind": "decimal_scaling",
+            "title": "Track a percentage below one",
+            "decimal": "0.6",
+            "scale_direction": -1,
+            "given": "Convert 0.6%",
+            "steps": [
+              "0.6 ÷ 10 = 0.06.",
+              "0.06 ÷ 10 = 0.006; together, divide the original percentage value by 100.",
+              "0.6% = 0.006."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 3,
+            "chart_power": 2
+          }
+        },
+        "narration": {
+          "script": "The second division puts the nonzero digit in thousandths. Keep both empty places, then remove the percent sign from the completed decimal."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Retain the complete whole",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Retain the complete whole",
+          "initial_state": "Retain the complete whole",
+          "model": {
+            "kind": "decimal_scaling",
+            "title": "More than one whole",
+            "decimal": "124",
+            "scale_direction": -1,
+            "given": "124%",
+            "steps": [
+              "124% = 100% + 24%.",
+              "100% = 1 and 24% = 0.24.",
+              "124% = 1.24."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "wholes",
+            "reference_decimal": "1.24",
+            "solved": true,
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "The first hundred percent is one whole. Convert the additional part as well; the complete decimal must remain greater than one."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T06"
+      },
+      {
+        "id": "T06",
+        "stage": "teaching",
+        "purpose": "Explain the small proportion",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Explain the small proportion",
+          "initial_state": "Explain the small proportion",
+          "model": {
+            "kind": "decimal_scaling",
+            "title": "Explain the small percentage",
+            "decimal": "0.6",
+            "scale_direction": -1,
+            "given": "0.6% = 0.006",
+            "steps": [
+              "0.6 ÷ 10 = 0.06.",
+              "0.06 ÷ 10 = 0.006; together, divide the original percentage value by 100.",
+              "0.6% = 0.006."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "explanation_question": true
+          }
+        },
+        "narration": {
+          "script": "Choose the explanation that converts the numerical value before removing the percent sign."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "FDP-05-C01"
+        },
+        "next_step": "T07"
+      },
+      {
+        "id": "T07",
+        "stage": "teaching",
+        "purpose": "First division in the worked example",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "First division in the worked example",
+          "initial_state": "First division in the worked example",
+          "model": {
+            "kind": "decimal_scaling",
+            "title": "Write 4.8% as a decimal",
+            "decimal": "4.8",
+            "scale_direction": -1,
+            "given": "Convert 4.8%",
+            "steps": [
+              "4.8 ÷ 10 = 0.48.",
+              "0.48 ÷ 10 = 0.048; together, divide the original percentage value by 100.",
+              "4.8% = 0.048."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 1,
+            "chart_power": 1
+          }
+        },
+        "narration": {
+          "script": "Divide the percentage value by ten once. Track both digits and preserve the zero before the decimal point."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T08"
+      },
+      {
+        "id": "T08",
+        "stage": "teaching",
+        "purpose": "Second division in the worked example",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Second division in the worked example",
+          "initial_state": "Second division in the worked example",
+          "model": {
+            "kind": "decimal_scaling",
+            "title": "Write 4.8% as a decimal",
+            "decimal": "4.8",
+            "scale_direction": -1,
+            "given": "Convert 4.8%",
+            "steps": [
+              "4.8 ÷ 10 = 0.48.",
+              "0.48 ÷ 10 = 0.048; together, divide the original percentage value by 100.",
+              "4.8% = 0.048."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 2,
+            "chart_power": 2
+          }
+        },
+        "narration": {
+          "script": "Divide the first result by ten again. The extra zero now holds the empty tenths place."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T09"
+      },
+      {
+        "id": "T09",
+        "stage": "teaching",
+        "purpose": "Complete the decimal notation",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Complete the decimal notation",
+          "initial_state": "Complete the decimal notation",
+          "model": {
+            "kind": "decimal_scaling",
+            "title": "Write 4.8% as a decimal",
+            "decimal": "4.8",
+            "scale_direction": -1,
+            "given": "Convert 4.8%",
+            "steps": [
+              "4.8 ÷ 10 = 0.48.",
+              "0.48 ÷ 10 = 0.048; together, divide the original percentage value by 100.",
+              "4.8% = 0.048."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 3,
+            "chart_power": 2
+          }
+        },
+        "narration": {
+          "script": "Both divisions are complete. Remove the percent sign and keep the zeros that preserve the exact proportion."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T10"
+      },
+      {
+        "id": "T10",
+        "stage": "teaching",
+        "purpose": "Choose the correct method",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Choose the correct method",
+          "initial_state": "Choose the correct method",
+          "model": {
+            "kind": "decimal_scaling",
+            "title": "Keep the amount above one whole",
+            "decimal": "135",
+            "scale_direction": -1,
+            "given": "135%",
+            "steps": [
+              "135 ÷ 10 = 13.5.",
+              "13.5 ÷ 10 = 1.35; together, divide the original percentage value by 100.",
+              "135% = 1.35."
+            ],
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Check the operation and the reference whole when converting this larger percentage."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "FDP-05-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "FDP-05-G01",
+        "support_level": "high",
+        "pre_question_script": "Complete the first division only.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "faded",
+        "question_ref": "FDP-05-G02",
+        "support_level": "reduced",
+        "pre_question_script": "Enter the previous result yourself, then calculate the second quotient.",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "faded",
+        "question_ref": "FDP-05-G03",
+        "support_level": "reduced",
+        "pre_question_script": "Complete the decimal equivalence without a percent sign.",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "independent_transfer",
+        "question_ref": "FDP-05-G04",
+        "support_level": "none",
+        "pre_question_script": "Choose the explanation for the exact proportion.",
+        "correct_next": "P01"
+      }
+    },
+    "practice": {
+      "intro_script": "Convert each percentage exactly, then work in context. Keep every necessary zero and include complete wholes where the percentage exceeds one hundred.",
+      "question_order": [
+        "FDP-05-P01",
+        "FDP-05-P02",
+        "FDP-05-P03",
+        "FDP-05-P04",
+        "FDP-05-P05",
+        "FDP-05-P06",
+        "FDP-05-P07",
+        "FDP-05-P08",
+        "FDP-05-X01",
+        "FDP-05-X02",
+        "FDP-05-X03",
+        "FDP-05-X04"
+      ],
+      "question_count": 12,
+      "feedback_policy": "Question-specific scaling, zero-placement and magnitude feedback; sequential working; learner correction required."
+    },
+    "exit": {
+      "intro_script": "Complete four conversions and one method check without hints or charts. Each response locks. Feedback waits until all five are saved.",
+      "primary_question_refs": [
+        "FDP-05-E01",
+        "FDP-05-E02",
+        "FDP-05-E03",
+        "FDP-05-E04",
+        "FDP-05-E05"
+      ],
+      "confirmation_question_refs": [],
+      "submission_policy": "No model or correctness feedback until the complete final set is saved.",
+      "mastery_policy": {
+        "profile": "all_primary_unsupported_deferred",
+        "require_all": true,
+        "source_page": 14,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "All final conversions and the method check are correct. You kept the direction, exact place values and whole-number parts across the different percentage sizes.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Keep the exact decimal proportion",
+      "ryan_script": "One or more final responses need another pass. Review both divisions, preserve the empty places and keep any complete whole.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "FDP-05-C01",
+      "source_ref": {
+        "page": 4
+      },
+      "stage": "practice",
+      "prompt": "Why is 0.6% equal to 0.006?",
+      "target": "Convert an exact percentage to its decimal proportion while preserving place value",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Dividing 0.6 by 100 gives 0.006, and the percent sign is then removed.",
+          "The percent sign is removed without changing the number, so the answer is 0.6.",
+          "Dividing by 10 once gives 0.06, which is sufficient.",
+          "A percentage cannot be less than 1%, so 0.6% rounds to 0.01."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "Dividing 0.6 by 100 gives 0.006, and the percent sign is then removed."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Yes. The numerical value is converted from parts per hundred before the sign is removed.",
+        "correct_after_support": "Yes. The numerical value is converted from parts per hundred before the sign is removed.",
+        "on_correct_math": "0.6 ÷ 10 = 0.06. → 0.06 ÷ 10 = 0.006; together, divide the original percentage value by 100. → 0.6% = 0.006.",
+        "on_incorrect_attempt_1": "Choose the explanation that preserves the exact proportion and accounts for the percent sign.",
+        "on_incorrect_attempt_2": "Choose the explanation that preserves the exact proportion and accounts for the percent sign.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "0.6 ÷ 10 = 0.06. → 0.06 ÷ 10 = 0.006; together, divide the original percentage value by 100. → 0.6% = 0.006."
+      },
+      "mathematical_support": {
+        "hint_1": "Choose the explanation that preserves the exact proportion and accounts for the percent sign.",
+        "hint_2": "Follow each digit through both divisions, keeping the decimal point fixed. Preserve every empty place with a zero.",
+        "worked_solution": "0.6 ÷ 10 = 0.06. → 0.06 ÷ 10 = 0.006; together, divide the original percentage value by 100. → 0.6% = 0.006."
+      },
+      "working": [
+        "0.6 ÷ 10 = 0.06.",
+        "0.06 ÷ 10 = 0.006; together, divide the original percentage value by 100.",
+        "0.6% = 0.006."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Explain the small percentage",
+          "decimal": "0.6",
+          "scale_direction": -1,
+          "given": "0.6% = 0.006",
+          "steps": [
+            "0.6 ÷ 10 = 0.06.",
+            "0.06 ÷ 10 = 0.006; together, divide the original percentage value by 100.",
+            "0.6% = 0.006."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "explanation_question": true
+        }
+      },
+      "response_feedback": {
+        "The percent sign is removed without changing the number, so the answer is 0.6.": "Removing the sign alone changes the proportion; the numerical value must be converted.",
+        "Dividing by 10 once gives 0.06, which is sufficient.": "That records only the first division. A second division is still needed.",
+        "A percentage cannot be less than 1%, so 0.6% rounds to 0.01.": "Percentages may be below one percent. Keep the exact value instead of rounding it."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-05-C02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "Which method correctly converts 135% to a decimal?",
+      "target": "Convert an exact percentage to its decimal proportion while preserving place value",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "135 ÷ 100 = 1.35, so 135% = 1.35.",
+          "135 ÷ 10 = 13.5, so 135% = 13.5.",
+          "135 × 100 = 13500, so 135% = 13500.",
+          "Remove the percent sign without changing the value, so 135% = 135."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "135 ÷ 100 = 1.35, so 135% = 1.35."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Dividing the percentage value gives a decimal that still includes the whole and extra part.",
+        "correct_after_support": "Correct. Dividing the percentage value gives a decimal that still includes the whole and extra part.",
+        "on_correct_math": "135 ÷ 10 = 13.5. → 13.5 ÷ 10 = 1.35; together, divide the original percentage value by 100. → 135% = 1.35.",
+        "on_incorrect_attempt_1": "Check the direction and full size of the scaling, while retaining the complete whole.",
+        "on_incorrect_attempt_2": "Check the direction and full size of the scaling, while retaining the complete whole.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "135 ÷ 10 = 13.5. → 13.5 ÷ 10 = 1.35; together, divide the original percentage value by 100. → 135% = 1.35."
+      },
+      "mathematical_support": {
+        "hint_1": "Check the direction and full size of the scaling, while retaining the complete whole.",
+        "hint_2": "Follow each digit through both divisions, keeping the decimal point fixed. Preserve every empty place with a zero.",
+        "worked_solution": "135 ÷ 10 = 13.5. → 13.5 ÷ 10 = 1.35; together, divide the original percentage value by 100. → 135% = 1.35."
+      },
+      "working": [
+        "135 ÷ 10 = 13.5.",
+        "13.5 ÷ 10 = 1.35; together, divide the original percentage value by 100.",
+        "135% = 1.35."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Keep the amount above one whole",
+          "decimal": "135",
+          "scale_direction": -1,
+          "given": "135%",
+          "steps": [
+            "135 ÷ 10 = 13.5.",
+            "13.5 ÷ 10 = 1.35; together, divide the original percentage value by 100.",
+            "135% = 1.35."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "135 ÷ 10 = 13.5, so 135% = 13.5.": "That divides by ten only, leaving the numerical value ten times too large.",
+        "135 × 100 = 13500, so 135% = 13500.": "That multiplies instead of dividing, using the reverse conversion direction.",
+        "Remove the percent sign without changing the value, so 135% = 135.": "That removes the sign but leaves the numerical percentage value unchanged."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-05-G01",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "Divide 7.2 by 10 once. Enter the result.",
+      "target": "Convert an exact percentage to its decimal proportion while preserving place value",
+      "response": {
+        "type": "decimal",
+        "input_label": "Quotient",
+        "allow_leading_decimal_point": true,
+        "scale_source": "7.2",
+        "scale_power": -1
+      },
+      "answer": {
+        "value": "0.72"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The first division makes every digit one tenth as valuable.",
+        "correct_after_support": "Correct. The first division makes every digit one tenth as valuable.",
+        "on_correct_math": "7.2 ÷ 10 = 0.72.",
+        "on_incorrect_attempt_1": "This blank asks for the first division only, not the final decimal proportion.",
+        "on_incorrect_attempt_2": "Move each digit to a place one tenth as valuable. Stop after this single change.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "7.2 ÷ 10 = 0.72."
+      },
+      "mathematical_support": {
+        "hint_1": "This blank asks for the first division only, not the final decimal proportion.",
+        "hint_2": "Move each digit to a place one tenth as valuable. Stop after this single change.",
+        "worked_solution": "7.2 ÷ 10 = 0.72."
+      },
+      "working": [
+        "7.2 ÷ 10 = 0.72."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "First division by ten",
+          "decimal": "7.2",
+          "scale_direction": -1,
+          "given": "7.2 ÷ 10 = ?",
+          "steps": [
+            "7.2 ÷ 10 = 0.72."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "chart_power": 1
+        }
+      },
+      "response_feedback": {
+        "unchanged": "That leaves the starting number unchanged. Complete the first division.",
+        "one_move_far": "That has already divided by one hundred. This blank asks for only the first division.",
+        "reverse": "That makes the number larger. Division by ten makes it smaller."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-05-G02",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "faded",
+      "prompt": "Continue from your first result: complete both blanks in ___ ÷ 10 = ___.",
+      "target": "Convert an exact percentage to its decimal proportion while preserving place value",
+      "response": {
+        "type": "decimal_scale_pair",
+        "scale_direction": -1
+      },
+      "answer": {
+        "value": {
+          "input": "0.72",
+          "output": "0.072"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The first result is carried into the second division, with its new placeholder zero.",
+        "correct_after_support": "Correct. The first result is carried into the second division, with its new placeholder zero.",
+        "on_correct_math": "The first result is 0.72. → 0.72 ÷ 10 = 0.072.",
+        "on_incorrect_attempt_1": "Enter your first result on the left, then divide that value by ten.",
+        "on_incorrect_attempt_2": "Enter your first result on the left, then divide that value by ten.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The first result is 0.72. → 0.72 ÷ 10 = 0.072."
+      },
+      "mathematical_support": {
+        "hint_1": "Enter your first result on the left, then divide that value by ten.",
+        "hint_2": "Follow each digit through both divisions, keeping the decimal point fixed. Preserve every empty place with a zero.",
+        "worked_solution": "The first result is 0.72. → 0.72 ÷ 10 = 0.072."
+      },
+      "working": [
+        "The first result is 0.72.",
+        "0.72 ÷ 10 = 0.072."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Second division by ten",
+          "decimal": "7.2",
+          "scale_direction": -1,
+          "given": "? ÷ 10 = ?",
+          "steps": [
+            "The first result is 0.72.",
+            "0.72 ÷ 10 = 0.072."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_input": "Your quotient is correct. The starting blank must contain the result after the first division.",
+        "check_output": "Your starting value is correct. Divide it by ten once more for the quotient.",
+        "check_both": "The left blank needs the first result. The right blank needs the result after the second division."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-05-G03",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "faded",
+      "prompt": "Complete the decimal equivalence: 7.2% = ___.",
+      "target": "Convert an exact percentage to its decimal proportion while preserving place value",
+      "response": {
+        "type": "decimal",
+        "input_label": "Decimal",
+        "allow_leading_decimal_point": true,
+        "scale_source": "7.2",
+        "scale_power": -2
+      },
+      "answer": {
+        "value": "0.072"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both divisions are complete, and the decimal proportion no longer uses the percent sign.",
+        "correct_after_support": "Correct. Both divisions are complete, and the decimal proportion no longer uses the percent sign.",
+        "on_correct_math": "7.2 ÷ 10 = 0.72. → 0.72 ÷ 10 = 0.072; together, divide the original percentage value by 100. → 7.2% = 0.072.",
+        "on_incorrect_attempt_1": "Use the result after both divisions. The completed decimal has no percent sign.",
+        "on_incorrect_attempt_2": "Use the result after both divisions. The completed decimal has no percent sign.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "7.2 ÷ 10 = 0.72. → 0.72 ÷ 10 = 0.072; together, divide the original percentage value by 100. → 7.2% = 0.072."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the result after both divisions. The completed decimal has no percent sign.",
+        "hint_2": "Follow each digit through both divisions, keeping the decimal point fixed. Preserve every empty place with a zero.",
+        "worked_solution": "7.2 ÷ 10 = 0.72. → 0.72 ÷ 10 = 0.072; together, divide the original percentage value by 100. → 7.2% = 0.072."
+      },
+      "working": [
+        "7.2 ÷ 10 = 0.72.",
+        "0.72 ÷ 10 = 0.072; together, divide the original percentage value by 100.",
+        "7.2% = 0.072."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Remove the sign after conversion",
+          "decimal": "7.2",
+          "scale_direction": -1,
+          "given": "7.2% = ?",
+          "steps": [
+            "7.2 ÷ 10 = 0.72.",
+            "0.72 ÷ 10 = 0.072; together, divide the original percentage value by 100.",
+            "7.2% = 0.072."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "unchanged": "That removes the sign without converting the numerical percentage value.",
+        "one_move_short": "That is the first result only. Complete the second division.",
+        "one_move_far": "That divides once too often, making the decimal ten times too small.",
+        "reverse": "That multiplies instead of dividing, using the opposite conversion direction."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-05-G04",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "independent_transfer",
+      "prompt": "Which statement correctly explains the conversion of 7.2%?",
+      "target": "Convert an exact percentage to its decimal proportion while preserving place value",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "7.2% = 7.2 because the percent sign is only a label.",
+          "7.2% = 0.72 because dividing by 10 once is sufficient.",
+          "7.2% = 0.072 because dividing by 100 makes each digit one hundredth as valuable.",
+          "7.2% = 0.0072 because the decimal point must move three places."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "7.2% = 0.072 because dividing by 100 makes each digit one hundredth as valuable."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Yes. The explanation preserves the full factor and the correct zero placement.",
+        "correct_after_support": "Yes. The explanation preserves the full factor and the correct zero placement.",
+        "on_correct_math": "7.2 ÷ 10 = 0.72. → 0.72 ÷ 10 = 0.072; together, divide the original percentage value by 100. → 7.2% = 0.072.",
+        "on_incorrect_attempt_1": "Choose the exact equivalence whose reason accounts for both divisions.",
+        "on_incorrect_attempt_2": "Choose the exact equivalence whose reason accounts for both divisions.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "7.2 ÷ 10 = 0.72. → 0.72 ÷ 10 = 0.072; together, divide the original percentage value by 100. → 7.2% = 0.072."
+      },
+      "mathematical_support": {
+        "hint_1": "Choose the exact equivalence whose reason accounts for both divisions.",
+        "hint_2": "Follow each digit through both divisions, keeping the decimal point fixed. Preserve every empty place with a zero.",
+        "worked_solution": "7.2 ÷ 10 = 0.72. → 0.72 ÷ 10 = 0.072; together, divide the original percentage value by 100. → 7.2% = 0.072."
+      },
+      "working": [
+        "7.2 ÷ 10 = 0.72.",
+        "0.72 ÷ 10 = 0.072; together, divide the original percentage value by 100.",
+        "7.2% = 0.072."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Explain the full division",
+          "decimal": "7.2",
+          "scale_direction": -1,
+          "given": "7.2%",
+          "steps": [
+            "7.2 ÷ 10 = 0.72.",
+            "0.72 ÷ 10 = 0.072; together, divide the original percentage value by 100.",
+            "7.2% = 0.072."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "7.2% = 7.2 because the percent sign is only a label.": "The sign means parts per hundred. Removing it without numerical conversion changes the proportion.",
+        "7.2% = 0.72 because dividing by 10 once is sufficient.": "One division by ten is only the first part of the conversion.",
+        "7.2% = 0.0072 because the decimal point must move three places.": "That includes a third division, making the result too small."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-05-P01",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Write 60% as a decimal.",
+      "target": "Convert an exact percentage to its decimal proportion while preserving place value",
+      "response": {
+        "type": "decimal",
+        "input_label": "Decimal",
+        "allow_leading_decimal_point": true,
+        "scale_source": "60",
+        "scale_power": -2
+      },
+      "answer": {
+        "value": "0.6"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Your decimal describes the same sixty-hundredths share of one whole.",
+        "correct_after_support": "Correct. Your decimal describes the same sixty-hundredths share of one whole.",
+        "on_correct_math": "60 ÷ 10 = 6. → 6 ÷ 10 = 0.6; together, divide the original percentage value by 100. → 60% = 0.6.",
+        "on_incorrect_attempt_1": "The percentage represents more than half but less than one whole. Keep that size in decimal notation.",
+        "on_incorrect_attempt_2": "The percentage represents more than half but less than one whole. Keep that size in decimal notation.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "60 ÷ 10 = 6. → 6 ÷ 10 = 0.6; together, divide the original percentage value by 100. → 60% = 0.6."
+      },
+      "mathematical_support": {
+        "hint_1": "The percentage represents more than half but less than one whole. Keep that size in decimal notation.",
+        "hint_2": "Follow each digit through both divisions, keeping the decimal point fixed. Preserve every empty place with a zero.",
+        "worked_solution": "60 ÷ 10 = 6. → 6 ÷ 10 = 0.6; together, divide the original percentage value by 100. → 60% = 0.6."
+      },
+      "working": [
+        "60 ÷ 10 = 6.",
+        "6 ÷ 10 = 0.6; together, divide the original percentage value by 100.",
+        "60% = 0.6."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Convert 60% to a decimal",
+          "decimal": "60",
+          "scale_direction": -1,
+          "given": "60%",
+          "steps": [
+            "60 ÷ 10 = 6.",
+            "6 ÷ 10 = 0.6; together, divide the original percentage value by 100.",
+            "60% = 0.6."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "unchanged": "That removes the sign but leaves the percentage number unchanged.",
+        "one_move_short": "That divides by ten only and gives several wholes instead of a part of one.",
+        "one_move_far": "That adds a third division and makes the selected part too small.",
+        "reverse": "That multiplies instead of dividing the percentage number."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-05-P02",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Write 42% as a decimal.",
+      "target": "Convert an exact percentage to its decimal proportion while preserving place value",
+      "response": {
+        "type": "decimal",
+        "input_label": "Decimal",
+        "allow_leading_decimal_point": true,
+        "scale_source": "42",
+        "scale_power": -2
+      },
+      "answer": {
+        "value": "0.42"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both significant digits remain in their hundredths-based proportion.",
+        "correct_after_support": "Correct. Both significant digits remain in their hundredths-based proportion.",
+        "on_correct_math": "42 ÷ 10 = 4.2. → 4.2 ÷ 10 = 0.42; together, divide the original percentage value by 100. → 42% = 0.42.",
+        "on_incorrect_attempt_1": "Write the given number of hundredths as a proportion of one whole.",
+        "on_incorrect_attempt_2": "Write the given number of hundredths as a proportion of one whole.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "42 ÷ 10 = 4.2. → 4.2 ÷ 10 = 0.42; together, divide the original percentage value by 100. → 42% = 0.42."
+      },
+      "mathematical_support": {
+        "hint_1": "Write the given number of hundredths as a proportion of one whole.",
+        "hint_2": "Follow each digit through both divisions, keeping the decimal point fixed. Preserve every empty place with a zero.",
+        "worked_solution": "42 ÷ 10 = 4.2. → 4.2 ÷ 10 = 0.42; together, divide the original percentage value by 100. → 42% = 0.42."
+      },
+      "working": [
+        "42 ÷ 10 = 4.2.",
+        "4.2 ÷ 10 = 0.42; together, divide the original percentage value by 100.",
+        "42% = 0.42."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Convert 42% to a decimal",
+          "decimal": "42",
+          "scale_direction": -1,
+          "given": "42%",
+          "steps": [
+            "42 ÷ 10 = 4.2.",
+            "4.2 ÷ 10 = 0.42; together, divide the original percentage value by 100.",
+            "42% = 0.42."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "unchanged": "That leaves the number as forty-two instead of converting its percentage unit.",
+        "one_move_short": "That stops after the first division and is still larger than one whole.",
+        "one_move_far": "That divides one time too many and makes the part ten times too small.",
+        "reverse": "That uses multiplication, which is the wrong direction for this conversion."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-05-P03",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Write 7.5% as a decimal.",
+      "target": "Convert an exact percentage to its decimal proportion while preserving place value",
+      "response": {
+        "type": "decimal",
+        "input_label": "Decimal",
+        "allow_leading_decimal_point": true,
+        "scale_source": "7.5",
+        "scale_power": -2
+      },
+      "answer": {
+        "value": "0.075"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decimal preserves the half-percent part without rounding.",
+        "correct_after_support": "Correct. The decimal preserves the half-percent part without rounding.",
+        "on_correct_math": "7.5 ÷ 10 = 0.75. → 0.75 ÷ 10 = 0.075; together, divide the original percentage value by 100. → 7.5% = 0.075.",
+        "on_incorrect_attempt_1": "Keep the exact value of this decimal percentage, including the needed empty place.",
+        "on_incorrect_attempt_2": "Keep the exact value of this decimal percentage, including the needed empty place.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "7.5 ÷ 10 = 0.75. → 0.75 ÷ 10 = 0.075; together, divide the original percentage value by 100. → 7.5% = 0.075."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the exact value of this decimal percentage, including the needed empty place.",
+        "hint_2": "Follow each digit through both divisions, keeping the decimal point fixed. Preserve every empty place with a zero.",
+        "worked_solution": "7.5 ÷ 10 = 0.75. → 0.75 ÷ 10 = 0.075; together, divide the original percentage value by 100. → 7.5% = 0.075."
+      },
+      "working": [
+        "7.5 ÷ 10 = 0.75.",
+        "0.75 ÷ 10 = 0.075; together, divide the original percentage value by 100.",
+        "7.5% = 0.075."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Convert 7.5% to a decimal",
+          "decimal": "7.5",
+          "scale_direction": -1,
+          "given": "7.5%",
+          "steps": [
+            "7.5 ÷ 10 = 0.75.",
+            "0.75 ÷ 10 = 0.075; together, divide the original percentage value by 100.",
+            "7.5% = 0.075."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "unchanged": "That removes the sign without converting the percentage value.",
+        "one_move_short": "That is only the result after one division.",
+        "one_move_far": "That places an extra zero before the significant digits by dividing once too often.",
+        "reverse": "That increases the numerical value instead of converting it to a proportion."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-05-P04",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Write 130% as a decimal.",
+      "target": "Convert an exact percentage to its decimal proportion while preserving place value",
+      "response": {
+        "type": "decimal",
+        "input_label": "Decimal",
+        "allow_leading_decimal_point": true,
+        "scale_source": "130",
+        "scale_power": -2
+      },
+      "answer": {
+        "value": "1.3"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decimal includes one whole and the additional three tenths.",
+        "correct_after_support": "Correct. The decimal includes one whole and the additional three tenths.",
+        "on_correct_math": "130 ÷ 10 = 13. → 13 ÷ 10 = 1.3; together, divide the original percentage value by 100. → 130% = 1.3.",
+        "on_incorrect_attempt_1": "The percentage includes a complete whole. The decimal must retain it.",
+        "on_incorrect_attempt_2": "The percentage includes a complete whole. The decimal must retain it.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "130 ÷ 10 = 13. → 13 ÷ 10 = 1.3; together, divide the original percentage value by 100. → 130% = 1.3."
+      },
+      "mathematical_support": {
+        "hint_1": "The percentage includes a complete whole. The decimal must retain it.",
+        "hint_2": "Follow each digit through both divisions, keeping the decimal point fixed. Preserve every empty place with a zero.",
+        "worked_solution": "130 ÷ 10 = 13. → 13 ÷ 10 = 1.3; together, divide the original percentage value by 100. → 130% = 1.3."
+      },
+      "working": [
+        "130 ÷ 10 = 13.",
+        "13 ÷ 10 = 1.3; together, divide the original percentage value by 100.",
+        "130% = 1.3."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Convert 130% to a decimal",
+          "decimal": "130",
+          "scale_direction": -1,
+          "given": "130%",
+          "steps": [
+            "130 ÷ 10 = 13.",
+            "13 ÷ 10 = 1.3; together, divide the original percentage value by 100.",
+            "130% = 1.3."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "unchanged": "That leaves the percentage number unchanged.",
+        "one_move_short": "That completes only one division, leaving thirteen wholes.",
+        "one_move_far": "That goes one division too far and wrongly makes the result less than one whole.",
+        "reverse": "That makes the number larger using the opposite direction.",
+        "dropped_whole": "That keeps only the extra three tenths and drops the first complete whole."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-05-P05",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Write 208% as a decimal.",
+      "target": "Convert an exact percentage to its decimal proportion while preserving place value",
+      "response": {
+        "type": "decimal",
+        "input_label": "Decimal",
+        "allow_leading_decimal_point": true,
+        "scale_source": "208",
+        "scale_power": -2
+      },
+      "answer": {
+        "value": "2.08"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both wholes and the extra hundredths survive the conversion.",
+        "correct_after_support": "Correct. Both wholes and the extra hundredths survive the conversion.",
+        "on_correct_math": "208 ÷ 10 = 20.8. → 20.8 ÷ 10 = 2.08; together, divide the original percentage value by 100. → 208% = 2.08.",
+        "on_incorrect_attempt_1": "Preserve both complete wholes and the additional hundredths.",
+        "on_incorrect_attempt_2": "Preserve both complete wholes and the additional hundredths.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "208 ÷ 10 = 20.8. → 20.8 ÷ 10 = 2.08; together, divide the original percentage value by 100. → 208% = 2.08."
+      },
+      "mathematical_support": {
+        "hint_1": "Preserve both complete wholes and the additional hundredths.",
+        "hint_2": "Follow each digit through both divisions, keeping the decimal point fixed. Preserve every empty place with a zero.",
+        "worked_solution": "208 ÷ 10 = 20.8. → 20.8 ÷ 10 = 2.08; together, divide the original percentage value by 100. → 208% = 2.08."
+      },
+      "working": [
+        "208 ÷ 10 = 20.8.",
+        "20.8 ÷ 10 = 2.08; together, divide the original percentage value by 100.",
+        "208% = 2.08."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Convert 208% to a decimal",
+          "decimal": "208",
+          "scale_direction": -1,
+          "given": "208%",
+          "steps": [
+            "208 ÷ 10 = 20.8.",
+            "20.8 ÷ 10 = 2.08; together, divide the original percentage value by 100.",
+            "208% = 2.08."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "unchanged": "That changes only the notation, leaving the numerical value unconverted.",
+        "one_move_short": "That stops at the first quotient instead of completing both divisions.",
+        "one_move_far": "That divides once too often and loses the more-than-two-wholes size.",
+        "reverse": "That scales in the wrong direction, making the numerical value larger.",
+        "dropped_whole": "That describes only the extra hundredths and omits both complete wholes."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-05-P06",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Write 0.4% as a decimal.",
+      "target": "Convert an exact percentage to its decimal proportion while preserving place value",
+      "response": {
+        "type": "decimal",
+        "input_label": "Decimal",
+        "allow_leading_decimal_point": true,
+        "scale_source": "0.4",
+        "scale_power": -2
+      },
+      "answer": {
+        "value": "0.004"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The digit reaches thousandths, with both empty places retained.",
+        "correct_after_support": "Correct. The digit reaches thousandths, with both empty places retained.",
+        "on_correct_math": "0.4 ÷ 10 = 0.04. → 0.04 ÷ 10 = 0.004; together, divide the original percentage value by 100. → 0.4% = 0.004.",
+        "on_incorrect_attempt_1": "A percentage below one percent becomes a decimal below one hundredth.",
+        "on_incorrect_attempt_2": "A percentage below one percent becomes a decimal below one hundredth.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "0.4 ÷ 10 = 0.04. → 0.04 ÷ 10 = 0.004; together, divide the original percentage value by 100. → 0.4% = 0.004."
+      },
+      "mathematical_support": {
+        "hint_1": "A percentage below one percent becomes a decimal below one hundredth.",
+        "hint_2": "Follow each digit through both divisions, keeping the decimal point fixed. Preserve every empty place with a zero.",
+        "worked_solution": "0.4 ÷ 10 = 0.04. → 0.04 ÷ 10 = 0.004; together, divide the original percentage value by 100. → 0.4% = 0.004."
+      },
+      "working": [
+        "0.4 ÷ 10 = 0.04.",
+        "0.04 ÷ 10 = 0.004; together, divide the original percentage value by 100.",
+        "0.4% = 0.004."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Convert 0.4% to a decimal",
+          "decimal": "0.4",
+          "scale_direction": -1,
+          "given": "0.4%",
+          "steps": [
+            "0.4 ÷ 10 = 0.04.",
+            "0.04 ÷ 10 = 0.004; together, divide the original percentage value by 100.",
+            "0.4% = 0.004."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "unchanged": "That removes the sign but leaves the original small percentage number unchanged.",
+        "one_move_short": "That moves the digit only into hundredths. One division remains.",
+        "one_move_far": "That moves the digit into ten-thousandths, one place too far.",
+        "reverse": "That makes a tiny proportion larger by multiplying in the wrong direction."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-05-P07",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Write 0.09% as a decimal.",
+      "target": "Convert an exact percentage to its decimal proportion while preserving place value",
+      "response": {
+        "type": "decimal",
+        "input_label": "Decimal",
+        "allow_leading_decimal_point": true,
+        "scale_source": "0.09",
+        "scale_power": -2
+      },
+      "answer": {
+        "value": "0.0009"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The digit finishes in ten-thousandths, with the placeholder zeros intact.",
+        "correct_after_support": "Correct. The digit finishes in ten-thousandths, with the placeholder zeros intact.",
+        "on_correct_math": "0.09 ÷ 10 = 0.009. → 0.009 ÷ 10 = 0.0009; together, divide the original percentage value by 100. → 0.09% = 0.0009.",
+        "on_incorrect_attempt_1": "Start with the digit in hundredths and preserve the empty places through both divisions.",
+        "on_incorrect_attempt_2": "Start with the digit in hundredths and preserve the empty places through both divisions.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "0.09 ÷ 10 = 0.009. → 0.009 ÷ 10 = 0.0009; together, divide the original percentage value by 100. → 0.09% = 0.0009."
+      },
+      "mathematical_support": {
+        "hint_1": "Start with the digit in hundredths and preserve the empty places through both divisions.",
+        "hint_2": "Follow each digit through both divisions, keeping the decimal point fixed. Preserve every empty place with a zero.",
+        "worked_solution": "0.09 ÷ 10 = 0.009. → 0.009 ÷ 10 = 0.0009; together, divide the original percentage value by 100. → 0.09% = 0.0009."
+      },
+      "working": [
+        "0.09 ÷ 10 = 0.009.",
+        "0.009 ÷ 10 = 0.0009; together, divide the original percentage value by 100.",
+        "0.09% = 0.0009."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Convert 0.09% to a decimal",
+          "decimal": "0.09",
+          "scale_direction": -1,
+          "given": "0.09%",
+          "steps": [
+            "0.09 ÷ 10 = 0.009.",
+            "0.009 ÷ 10 = 0.0009; together, divide the original percentage value by 100.",
+            "0.09% = 0.0009."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "unchanged": "That keeps the original numerical percentage value instead of converting it.",
+        "one_move_short": "That stops with the digit in thousandths after only one division.",
+        "one_move_far": "That divides once too often and puts the digit beyond ten-thousandths.",
+        "reverse": "That moves the digit towards larger place values instead of smaller ones."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-05-P08",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Which conversion of 56% is correct?",
+      "target": "Convert an exact percentage to its decimal proportion while preserving place value",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "56% = 5.6",
+          "56% = 0.56",
+          "56% = 0.056",
+          "56% = 5600"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "56% = 0.56"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decimal is the exact proportion represented by the percentage.",
+        "correct_after_support": "Correct. The decimal is the exact proportion represented by the percentage.",
+        "on_correct_math": "56 ÷ 10 = 5.6. → 5.6 ÷ 10 = 0.56; together, divide the original percentage value by 100. → 56% = 0.56.",
+        "on_incorrect_attempt_1": "Check whether the numerical value has been divided by the full factor required.",
+        "on_incorrect_attempt_2": "Check whether the numerical value has been divided by the full factor required.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "56 ÷ 10 = 5.6. → 5.6 ÷ 10 = 0.56; together, divide the original percentage value by 100. → 56% = 0.56."
+      },
+      "mathematical_support": {
+        "hint_1": "Check whether the numerical value has been divided by the full factor required.",
+        "hint_2": "Follow each digit through both divisions, keeping the decimal point fixed. Preserve every empty place with a zero.",
+        "worked_solution": "56 ÷ 10 = 5.6. → 5.6 ÷ 10 = 0.56; together, divide the original percentage value by 100. → 56% = 0.56."
+      },
+      "working": [
+        "56 ÷ 10 = 5.6.",
+        "5.6 ÷ 10 = 0.56; together, divide the original percentage value by 100.",
+        "56% = 0.56."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Check the decimal proportion",
+          "decimal": "56",
+          "scale_direction": -1,
+          "given": "56%",
+          "steps": [
+            "56 ÷ 10 = 5.6.",
+            "5.6 ÷ 10 = 0.56; together, divide the original percentage value by 100.",
+            "56% = 0.56."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "56% = 5.6": "That uses one division by ten only.",
+        "56% = 0.056": "That uses a third division by ten and makes the proportion too small.",
+        "56% = 5600": "That multiplies by one hundred instead of dividing."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-05-X01",
+      "source_ref": {
+        "page": 16
+      },
+      "stage": "practice",
+      "prompt": "A school survey shows that 68% of the students travel to school by bus. Write 68% as a decimal.",
+      "target": "Convert an exact percentage to its decimal proportion while preserving place value",
+      "response": {
+        "type": "decimal",
+        "input_label": "Decimal",
+        "allow_leading_decimal_point": true,
+        "scale_source": "68",
+        "scale_power": -2
+      },
+      "answer": {
+        "value": "0.68"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decimal describes the same share of surveyed students travelling by bus.",
+        "correct_after_support": "Correct. The decimal describes the same share of surveyed students travelling by bus.",
+        "on_correct_math": "68 ÷ 10 = 6.8. → 6.8 ÷ 10 = 0.68; together, divide the original percentage value by 100. → 68% = 0.68.",
+        "on_incorrect_attempt_1": "Keep the same selected students and the same full survey as the reference group.",
+        "on_incorrect_attempt_2": "Keep the same selected students and the same full survey as the reference group.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "68 ÷ 10 = 6.8. → 6.8 ÷ 10 = 0.68; together, divide the original percentage value by 100. → 68% = 0.68."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the same selected students and the same full survey as the reference group.",
+        "hint_2": "Follow each digit through both divisions, keeping the decimal point fixed. Preserve every empty place with a zero.",
+        "worked_solution": "68 ÷ 10 = 6.8. → 6.8 ÷ 10 = 0.68; together, divide the original percentage value by 100. → 68% = 0.68."
+      },
+      "working": [
+        "68 ÷ 10 = 6.8.",
+        "6.8 ÷ 10 = 0.68; together, divide the original percentage value by 100.",
+        "68% = 0.68."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Students travelling by bus",
+          "decimal": "68",
+          "scale_direction": -1,
+          "given": "68%",
+          "steps": [
+            "68 ÷ 10 = 6.8.",
+            "6.8 ÷ 10 = 0.68; together, divide the original percentage value by 100.",
+            "68% = 0.68."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "unchanged": "That removes the sign but leaves the number of hundredths unconverted.",
+        "one_move_short": "That gives several wholes, which cannot describe this selected part of the survey.",
+        "one_move_far": "That understates the bus-travelling share by an extra factor of ten.",
+        "reverse": "That uses reverse scaling and makes a part of the survey far larger than the whole."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-05-X02",
+      "source_ref": {
+        "page": 16
+      },
+      "stage": "practice",
+      "prompt": "A charity collects 108% of its fundraising target. Write 108% as a decimal proportion of the target.",
+      "target": "Convert an exact percentage to its decimal proportion while preserving place value",
+      "response": {
+        "type": "decimal",
+        "input_label": "Decimal",
+        "allow_leading_decimal_point": true,
+        "scale_source": "108",
+        "scale_power": -2
+      },
+      "answer": {
+        "value": "1.08"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decimal proportion includes the full target and the extra amount.",
+        "correct_after_support": "Correct. The decimal proportion includes the full target and the extra amount.",
+        "on_correct_math": "108 ÷ 10 = 10.8. → 10.8 ÷ 10 = 1.08; together, divide the original percentage value by 100. → 108% = 1.08.",
+        "on_incorrect_attempt_1": "The target is the reference whole. Retain the reached target and the additional collection.",
+        "on_incorrect_attempt_2": "The target is the reference whole. Retain the reached target and the additional collection.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "108 ÷ 10 = 10.8. → 10.8 ÷ 10 = 1.08; together, divide the original percentage value by 100. → 108% = 1.08."
+      },
+      "mathematical_support": {
+        "hint_1": "The target is the reference whole. Retain the reached target and the additional collection.",
+        "hint_2": "Follow each digit through both divisions, keeping the decimal point fixed. Preserve every empty place with a zero.",
+        "worked_solution": "108 ÷ 10 = 10.8. → 10.8 ÷ 10 = 1.08; together, divide the original percentage value by 100. → 108% = 1.08."
+      },
+      "working": [
+        "108 ÷ 10 = 10.8.",
+        "10.8 ÷ 10 = 1.08; together, divide the original percentage value by 100.",
+        "108% = 1.08."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Fundraising compared with the target",
+          "decimal": "108",
+          "scale_direction": -1,
+          "given": "108%",
+          "steps": [
+            "108 ÷ 10 = 10.8.",
+            "10.8 ÷ 10 = 1.08; together, divide the original percentage value by 100.",
+            "108% = 1.08."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "wholes",
+          "reference_decimal": "1.08"
+        }
+      },
+      "response_feedback": {
+        "unchanged": "That leaves the percentage number unchanged instead of describing a proportion of the target.",
+        "one_move_short": "That stops after one division and overstates the collected proportion.",
+        "one_move_far": "That divides too far, making a collection above target look below target.",
+        "reverse": "That multiplies instead of converting the percentage to a decimal proportion.",
+        "dropped_whole": "That describes only the extra collection, omitting the whole target."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-05-X03",
+      "source_ref": {
+        "page": 16
+      },
+      "stage": "practice",
+      "prompt": "The percentage of manufactured parts that fail a quality check is 0.6%. Write this percentage as a decimal proportion.",
+      "target": "Convert an exact percentage to its decimal proportion while preserving place value",
+      "response": {
+        "type": "decimal",
+        "input_label": "Decimal",
+        "allow_leading_decimal_point": true,
+        "scale_source": "0.6",
+        "scale_power": -2
+      },
+      "answer": {
+        "value": "0.006"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The failure proportion remains small, with the necessary zero placeholders.",
+        "correct_after_support": "Correct. The failure proportion remains small, with the necessary zero placeholders.",
+        "on_correct_math": "0.6 ÷ 10 = 0.06. → 0.06 ÷ 10 = 0.006; together, divide the original percentage value by 100. → 0.6% = 0.006.",
+        "on_incorrect_attempt_1": "Keep the small failed proportion exact. It is below one hundredth of all checked parts.",
+        "on_incorrect_attempt_2": "Keep the small failed proportion exact. It is below one hundredth of all checked parts.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "0.6 ÷ 10 = 0.06. → 0.06 ÷ 10 = 0.006; together, divide the original percentage value by 100. → 0.6% = 0.006."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the small failed proportion exact. It is below one hundredth of all checked parts.",
+        "hint_2": "Follow each digit through both divisions, keeping the decimal point fixed. Preserve every empty place with a zero.",
+        "worked_solution": "0.6 ÷ 10 = 0.06. → 0.06 ÷ 10 = 0.006; together, divide the original percentage value by 100. → 0.6% = 0.006."
+      },
+      "working": [
+        "0.6 ÷ 10 = 0.06.",
+        "0.06 ÷ 10 = 0.006; together, divide the original percentage value by 100.",
+        "0.6% = 0.006."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Parts failing a quality check",
+          "decimal": "0.6",
+          "scale_direction": -1,
+          "given": "0.6%",
+          "steps": [
+            "0.6 ÷ 10 = 0.06.",
+            "0.06 ÷ 10 = 0.006; together, divide the original percentage value by 100.",
+            "0.6% = 0.006."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "unchanged": "That leaves the failure percentage number unchanged after removing its sign.",
+        "one_move_short": "That stops after one division and overstates the failed proportion.",
+        "one_move_far": "That adds an extra division and understates the failed proportion.",
+        "reverse": "That uses the opposite direction, turning a tiny failure proportion into many wholes."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-05-X04",
+      "source_ref": {
+        "page": 16
+      },
+      "stage": "practice",
+      "prompt": "A digital display records a battery level of 47%. Which calculation gives the battery level as a decimal proportion?",
+      "target": "Convert an exact percentage to its decimal proportion while preserving place value",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "47 ÷ 100",
+          "47 ÷ 10",
+          "47 × 100",
+          "47 + 100"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "47 ÷ 100"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. That operation converts the charge percentage to its decimal proportion.",
+        "correct_after_support": "Correct. That operation converts the charge percentage to its decimal proportion.",
+        "on_correct_math": "Choose division by 100 to convert the percentage value. → 47 ÷ 100 = 0.47, so 47% = 0.47.",
+        "on_incorrect_attempt_1": "Choose the operation that rewrites the stated charge as a proportion of full capacity.",
+        "on_incorrect_attempt_2": "Choose the operation that rewrites the stated charge as a proportion of full capacity.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose division by 100 to convert the percentage value. → 47 ÷ 100 = 0.47, so 47% = 0.47."
+      },
+      "mathematical_support": {
+        "hint_1": "Choose the operation that rewrites the stated charge as a proportion of full capacity.",
+        "hint_2": "Follow each digit through both divisions, keeping the decimal point fixed. Preserve every empty place with a zero.",
+        "worked_solution": "Choose division by 100 to convert the percentage value. → 47 ÷ 100 = 0.47, so 47% = 0.47."
+      },
+      "working": [
+        "Choose division by 100 to convert the percentage value.",
+        "47 ÷ 100 = 0.47, so 47% = 0.47."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Choose the battery conversion",
+          "decimal": "47",
+          "scale_direction": -1,
+          "given": "47% of full battery capacity",
+          "steps": [
+            "Choose division by 100 to convert the percentage value.",
+            "47 ÷ 100 = 0.47, so 47% = 0.47."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "47 ÷ 10": "That divides by ten only, rather than the complete factor.",
+        "47 × 100": "That multiplies, using the inverse conversion direction.",
+        "47 + 100": "Adding one hundred is not a percentage-to-decimal conversion."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-05-E01",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "exit",
+      "prompt": "Final check: write 73% as a decimal.",
+      "target": "Convert an exact percentage to its decimal proportion while preserving place value",
+      "response": {
+        "type": "decimal",
+        "input_label": "Decimal",
+        "allow_leading_decimal_point": true,
+        "scale_source": "73",
+        "scale_power": -2
+      },
+      "answer": {
+        "value": "0.73"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The final decimal preserves the seventy-three-hundredths proportion.",
+        "correct_after_support": "Correct. The final decimal preserves the seventy-three-hundredths proportion.",
+        "on_correct_math": "73 ÷ 10 = 7.3. → 7.3 ÷ 10 = 0.73; together, divide the original percentage value by 100. → 73% = 0.73.",
+        "on_incorrect_attempt_1": "Review the full conversion from hundredths to a proportion.",
+        "on_incorrect_attempt_2": "Review the full conversion from hundredths to a proportion.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "73 ÷ 10 = 7.3. → 7.3 ÷ 10 = 0.73; together, divide the original percentage value by 100. → 73% = 0.73."
+      },
+      "mathematical_support": {
+        "hint_1": "Review the full conversion from hundredths to a proportion.",
+        "hint_2": "Follow each digit through both divisions, keeping the decimal point fixed. Preserve every empty place with a zero.",
+        "worked_solution": "73 ÷ 10 = 7.3. → 7.3 ÷ 10 = 0.73; together, divide the original percentage value by 100. → 73% = 0.73."
+      },
+      "working": [
+        "73 ÷ 10 = 7.3.",
+        "7.3 ÷ 10 = 0.73; together, divide the original percentage value by 100.",
+        "73% = 0.73."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Convert 73% to a decimal",
+          "decimal": "73",
+          "scale_direction": -1,
+          "given": "73%",
+          "steps": [
+            "73 ÷ 10 = 7.3.",
+            "7.3 ÷ 10 = 0.73; together, divide the original percentage value by 100.",
+            "73% = 0.73."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "unchanged": "That leaves the numerical percentage value unchanged.",
+        "one_move_short": "That completes only the first division by ten.",
+        "one_move_far": "That divides one time too many and makes the final proportion too small.",
+        "reverse": "That uses the reverse scaling direction."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-05-E02",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "exit",
+      "prompt": "Final check: write 5.8% as a decimal.",
+      "target": "Convert an exact percentage to its decimal proportion while preserving place value",
+      "response": {
+        "type": "decimal",
+        "input_label": "Decimal",
+        "allow_leading_decimal_point": true,
+        "scale_source": "5.8",
+        "scale_power": -2
+      },
+      "answer": {
+        "value": "0.058"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The final decimal keeps the exact value of the decimal percentage.",
+        "correct_after_support": "Correct. The final decimal keeps the exact value of the decimal percentage.",
+        "on_correct_math": "5.8 ÷ 10 = 0.58. → 0.58 ÷ 10 = 0.058; together, divide the original percentage value by 100. → 5.8% = 0.058.",
+        "on_incorrect_attempt_1": "Review both divisions and every needed zero.",
+        "on_incorrect_attempt_2": "Review both divisions and every needed zero.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "5.8 ÷ 10 = 0.58. → 0.58 ÷ 10 = 0.058; together, divide the original percentage value by 100. → 5.8% = 0.058."
+      },
+      "mathematical_support": {
+        "hint_1": "Review both divisions and every needed zero.",
+        "hint_2": "Follow each digit through both divisions, keeping the decimal point fixed. Preserve every empty place with a zero.",
+        "worked_solution": "5.8 ÷ 10 = 0.58. → 0.58 ÷ 10 = 0.058; together, divide the original percentage value by 100. → 5.8% = 0.058."
+      },
+      "working": [
+        "5.8 ÷ 10 = 0.58.",
+        "0.58 ÷ 10 = 0.058; together, divide the original percentage value by 100.",
+        "5.8% = 0.058."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Convert 5.8% to a decimal",
+          "decimal": "5.8",
+          "scale_direction": -1,
+          "given": "5.8%",
+          "steps": [
+            "5.8 ÷ 10 = 0.58.",
+            "0.58 ÷ 10 = 0.058; together, divide the original percentage value by 100.",
+            "5.8% = 0.058."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "unchanged": "That removes the sign without converting the numerical value.",
+        "one_move_short": "That stops after one division rather than two.",
+        "one_move_far": "That inserts an extra place-value change and makes the proportion too small.",
+        "reverse": "That increases the numerical value instead of dividing it."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-05-E03",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "exit",
+      "prompt": "Final check: write 126% as a decimal.",
+      "target": "Convert an exact percentage to its decimal proportion while preserving place value",
+      "response": {
+        "type": "decimal",
+        "input_label": "Decimal",
+        "allow_leading_decimal_point": true,
+        "scale_source": "126",
+        "scale_power": -2
+      },
+      "answer": {
+        "value": "1.26"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The final decimal retains the full whole and the additional hundredths.",
+        "correct_after_support": "Correct. The final decimal retains the full whole and the additional hundredths.",
+        "on_correct_math": "126 ÷ 10 = 12.6. → 12.6 ÷ 10 = 1.26; together, divide the original percentage value by 100. → 126% = 1.26.",
+        "on_incorrect_attempt_1": "Review the complete whole as well as the additional part.",
+        "on_incorrect_attempt_2": "Review the complete whole as well as the additional part.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "126 ÷ 10 = 12.6. → 12.6 ÷ 10 = 1.26; together, divide the original percentage value by 100. → 126% = 1.26."
+      },
+      "mathematical_support": {
+        "hint_1": "Review the complete whole as well as the additional part.",
+        "hint_2": "Follow each digit through both divisions, keeping the decimal point fixed. Preserve every empty place with a zero.",
+        "worked_solution": "126 ÷ 10 = 12.6. → 12.6 ÷ 10 = 1.26; together, divide the original percentage value by 100. → 126% = 1.26."
+      },
+      "working": [
+        "126 ÷ 10 = 12.6.",
+        "12.6 ÷ 10 = 1.26; together, divide the original percentage value by 100.",
+        "126% = 1.26."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Convert 126% to a decimal",
+          "decimal": "126",
+          "scale_direction": -1,
+          "given": "126%",
+          "steps": [
+            "126 ÷ 10 = 12.6.",
+            "12.6 ÷ 10 = 1.26; together, divide the original percentage value by 100.",
+            "126% = 1.26."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "unchanged": "That leaves the original percentage number unconverted.",
+        "one_move_short": "That divides by ten only and leaves the numerical value too large.",
+        "one_move_far": "That goes one division too far, wrongly making this amount less than one whole.",
+        "reverse": "That multiplies instead of dividing the percentage value.",
+        "dropped_whole": "That drops the complete whole and keeps only the additional part."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-05-E04",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "exit",
+      "prompt": "Final check: write 0.4% as a decimal.",
+      "target": "Convert an exact percentage to its decimal proportion while preserving place value",
+      "response": {
+        "type": "decimal",
+        "input_label": "Decimal",
+        "allow_leading_decimal_point": true,
+        "scale_source": "0.4",
+        "scale_power": -2
+      },
+      "answer": {
+        "value": "0.004"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The final decimal places the digit in thousandths and keeps the empty places.",
+        "correct_after_support": "Correct. The final decimal places the digit in thousandths and keeps the empty places.",
+        "on_correct_math": "0.4 ÷ 10 = 0.04. → 0.04 ÷ 10 = 0.004; together, divide the original percentage value by 100. → 0.4% = 0.004.",
+        "on_incorrect_attempt_1": "Review where the digit finishes after exactly two divisions.",
+        "on_incorrect_attempt_2": "Review where the digit finishes after exactly two divisions.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "0.4 ÷ 10 = 0.04. → 0.04 ÷ 10 = 0.004; together, divide the original percentage value by 100. → 0.4% = 0.004."
+      },
+      "mathematical_support": {
+        "hint_1": "Review where the digit finishes after exactly two divisions.",
+        "hint_2": "Follow each digit through both divisions, keeping the decimal point fixed. Preserve every empty place with a zero.",
+        "worked_solution": "0.4 ÷ 10 = 0.04. → 0.04 ÷ 10 = 0.004; together, divide the original percentage value by 100. → 0.4% = 0.004."
+      },
+      "working": [
+        "0.4 ÷ 10 = 0.04.",
+        "0.04 ÷ 10 = 0.004; together, divide the original percentage value by 100.",
+        "0.4% = 0.004."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Convert 0.4% to a decimal",
+          "decimal": "0.4",
+          "scale_direction": -1,
+          "given": "0.4%",
+          "steps": [
+            "0.4 ÷ 10 = 0.04.",
+            "0.04 ÷ 10 = 0.004; together, divide the original percentage value by 100.",
+            "0.4% = 0.004."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "unchanged": "That changes only the sign, not the numerical percentage value.",
+        "one_move_short": "That stops in hundredths after only one division.",
+        "one_move_far": "That moves the digit into ten-thousandths instead of stopping in thousandths.",
+        "reverse": "That makes the small percentage number larger using the wrong direction."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-05-E05",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "exit",
+      "prompt": "Final method check: which statement is correct?",
+      "target": "Convert an exact percentage to its decimal proportion while preserving place value",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Divide the percentage value by 100, then remove the percent sign.",
+          "Divide the percentage value by 10, then remove the percent sign.",
+          "Remove the percent sign without changing the numerical value.",
+          "Multiply the percentage value by 100, then remove the percent sign."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "Divide the percentage value by 100, then remove the percent sign."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The rule includes the full division before the percent sign is removed.",
+        "correct_after_support": "Correct. The rule includes the full division before the percent sign is removed.",
+        "on_correct_math": "Divide the percentage value by 100. → Remove the percent sign after numerical conversion.",
+        "on_incorrect_attempt_1": "Review the direction, size of the scaling and when the sign is removed.",
+        "on_incorrect_attempt_2": "Review the direction, size of the scaling and when the sign is removed.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Divide the percentage value by 100. → Remove the percent sign after numerical conversion."
+      },
+      "mathematical_support": {
+        "hint_1": "Review the direction, size of the scaling and when the sign is removed.",
+        "hint_2": "Follow each digit through both divisions, keeping the decimal point fixed. Preserve every empty place with a zero.",
+        "worked_solution": "Divide the percentage value by 100. → Remove the percent sign after numerical conversion."
+      },
+      "working": [
+        "Divide the percentage value by 100.",
+        "Remove the percent sign after numerical conversion."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Choose the full decimal conversion",
+          "decimal": "37",
+          "scale_direction": -1,
+          "given": "Choose the correct statement.",
+          "steps": [
+            "Divide the percentage value by 100.",
+            "Remove the percent sign after numerical conversion."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "Divide the percentage value by 10, then remove the percent sign.": "That includes only the first division by ten.",
+        "Remove the percent sign without changing the numerical value.": "That removes the sign but leaves the numerical value unconverted.",
+        "Multiply the percentage value by 100, then remove the percent sign.": "That uses multiplication, which is the opposite conversion direction."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    }
+  ],
+  "canonical_lesson": {
+    "version": "FDP05-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Revily responsive preview</title>
+  <style>
+    body { margin: 16px; font: 16px system-ui, sans-serif; background: #e9eeed; color: #163c3c; }
+    h1 { font-size: 20px; }
+    nav { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; }
+    a, button { color: #164e63; padding: 8px; background: white; border: 0; border-radius: 6px; }
+    iframe { display: block; height: 900px; border: 1px solid #819997; background: white; }
+  </style>
+</head>
+<body>
+  <h1>Exact-width lesson preview</h1>
+  <p>This QA page opens the normal lesson and its saved progress. It does not supply answers or alter lesson state.</p>
+  <nav aria-label="Preview widths"></nav>
+  <p><button id="view-diagram" type="button">View diagram</button> <button id="view-answer" type="button">View answer area</button></p>
+  <output aria-label="Responsive measurements">Loading the lesson…</output>
+  <iframe title="Lesson at selected width"></iframe>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const route = params.get('route') || 'multiply-divide-fractions/MD-08';
+    const widths = [320, 390, 768, 1280];
+    const requested = Number(params.get('width'));
+    const width = widths.includes(requested) ? requested : 390;
+    if (!/^[a-z-]+\/(?:FRA|DEC|AF|MD|FDP|PA|PC)-\d{2}$/.test(route)) throw new Error('Use a registered topic/lesson route.');
+    document.querySelector('h1').textContent = `${route.split('/')[1]} at ${width}px`;
+    for (const size of widths) {
+      const link = document.createElement('a');
+      link.textContent = `${size}px`;
+      link.href = `?route=${encodeURIComponent(route)}&width=${size}`;
+      if (size === width) link.setAttribute('aria-current', 'page');
+      document.querySelector('nav').append(link);
+    }
+    const frame = document.querySelector('iframe');
+    frame.style.width = `${width}px`;
+    document.querySelector('#view-diagram').onclick = () => frame.contentDocument.querySelector('.math-canvas')?.scrollIntoView({block:'start'});
+    document.querySelector('#view-answer').onclick = () => frame.contentDocument.querySelector('form')?.scrollIntoView({block:'start'});
+    frame.addEventListener('load', () => {
+      const doc = frame.contentDocument;
+      let pending;
+      const measure = () => {
+        const visible = selector => [...doc.querySelectorAll(selector)].filter(el => {
+          const style = frame.contentWindow.getComputedStyle(el);
+          return el.getBoundingClientRect().height > 0 && style.visibility !== 'hidden' && style.clip === 'auto';
+        });
+        const controls = visible('button, input');
+        const outOfBounds = visible('.os-visual svg text').filter(el => {
+          const bounds = el.getBoundingClientRect();
+          return bounds.left < 0 || bounds.right > frame.contentWindow.innerWidth;
+        }).map(el => el.textContent);
+        document.querySelector('output').textContent = JSON.stringify({
+          viewport: frame.contentWindow.innerWidth,
+          contentWidth: doc.documentElement.clientWidth,
+          documentWidth: doc.documentElement.scrollWidth,
+          horizontalOverflow: doc.documentElement.scrollWidth > doc.documentElement.clientWidth,
+          heading: doc.querySelector('h1')?.textContent || 'Loading',
+          minimumControlHeight: controls.length ? Math.min(...controls.map(el => el.getBoundingClientRect().height)) : null,
+          smallControls: controls.filter(el => el.getBoundingClientRect().height < 44).map(el => ({name:el.getAttribute('aria-label') || el.textContent || el.id,height:el.getBoundingClientRect().height,clip:frame.contentWindow.getComputedStyle(el).clip,visibility:frame.contentWindow.getComputedStyle(el).visibility})),
+          outOfBoundsLabels: outOfBounds
+        });
+      };
+      measure();
+      pending = setTimeout(measure, 150);
+      setTimeout(measure, 600);
+    });
+    frame.src = `../#/${route}`;
+  </script>
+</body>
+</html>

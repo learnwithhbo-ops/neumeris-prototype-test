@@ -1,0 +1,2361 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "AF-13 - Add mixed numbers with regrouping",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-18",
+      "sha256": "df698715f43b5afeb71e643db3f3a6616365e666f07caf59bf4f067ec89d649d"
+    },
+    "authored_scope": "Add mixed numbers and regroup an improper fractional total.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "AF13-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "verified_desktop_secure_mobile_unsimplified_locked_final_five_regrouping_stages_exact_extra_whole_and_320_390_layouts",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        4,
+        5,
+        6,
+        7,
+        13,
+        15,
+        16
+      ],
+      "source_repairs_consulted": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        17,
+        18
+      ],
+      "note": "All 18 source pages read; active pages rendered and checked. Source key, worked, all guided blanks, independent, recognition, context and mastery items retained. Five-stage addition visuals expose the extra whole separately and include it exactly once. Simplest mixed form is required where explicitly instructed; context calculations retain exact-equivalent acceptance. Observable form/value errors are distinguished without inventing an internal method. Valid all-improper methods are accepted when the final requested form is supplied. Source-prescribed repeated quantities are not described as fresh. Entry, Diagnostic and delayed Retrieval are excluded."
+    }
+  },
+  "identity": {
+    "id": "AF-13",
+    "slug": "add-mixed-numbers-with-regrouping",
+    "title": "Add mixed numbers with regrouping",
+    "strand": "Number",
+    "cluster": "Adding and Subtracting Fractions",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Add positive mixed numbers when the fractional sum contains one whole, then regroup that whole exactly once and give the requested final form.",
+    "success_criteria": [
+      "Add the original whole-number parts.",
+      "Add the fractional parts using a common denominator.",
+      "Regroup exactly one complete whole from the fractional total.",
+      "Include that whole once in the final total.",
+      "Use a proper simplified fractional part when mixed simplest form is requested."
+    ],
+    "boundaries": {
+      "includes": [
+        "Two positive mixed numbers",
+        "Fractional totals at least one and below two",
+        "Exactly one additional whole",
+        "Equal and unequal denominators",
+        "Simplified mixed form for explicit guided, independent and final instructions",
+        "Exact equivalent forms for unqualified context questions"
+      ],
+      "excludes": [
+        "Fractional totals of two wholes or more",
+        "Subtraction and exchanging",
+        "Negative mixed numbers",
+        "Entry, Diagnostic and delayed Retrieval routes"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "AF-11",
+      "AF-12"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for AF-11, AF-12 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "integer",
+      "mixed_number",
+      "fraction",
+      "single_choice"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    }
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "An improper fractional total contributes one additional whole and a fractional remainder.",
+    "invariant": "Regrouping changes the representation, not the amount; count the new whole exactly once.",
+    "mathematical_rule": "Original whole sum + one regrouped whole + proper fractional remainder.",
+    "must_notice": [
+      "The original wholes remain in the total.",
+      "The denominator retains the part size before simplification.",
+      "Simplify the proper remainder when requested."
+    ],
+    "common_confusions": [
+      "Unfinished improper fractional part",
+      "Losing the new whole",
+      "Counting the new whole twice",
+      "Incorrect fraction addition or conversion",
+      "Unsimplified remainder"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "Track the original wholes and quarters",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Track the original wholes and quarters",
+          "initial_state": "Track the original wholes and quarters",
+          "model": {
+            "kind": "mixed_add_regroup",
+            "left": {
+              "whole": 2,
+              "n": 3,
+              "d": 4
+            },
+            "right": {
+              "whole": 1,
+              "n": 2,
+              "d": 4
+            },
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Keep the complete wholes separate while you look at the two fractional parts. Both fractions already count quarters."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Five quarters make another whole",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Five quarters make another whole",
+          "initial_state": "Five quarters make another whole",
+          "model": {
+            "kind": "mixed_add_regroup",
+            "left": {
+              "whole": 2,
+              "n": 3,
+              "d": 4
+            },
+            "right": {
+              "whole": 1,
+              "n": 2,
+              "d": 4
+            },
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true
+          }
+        },
+        "narration": {
+          "script": "The combined quarters contain a complete group of four and a quarter left over. Add the new whole to the original wholes exactly once."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Explain the need to regroup",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Explain the need to regroup",
+          "initial_state": "Explain the need to regroup",
+          "model": {
+            "kind": "mixed_conversion",
+            "direction": "improper_to_mixed",
+            "numerator": 5,
+            "d": 4,
+            "object": "parts",
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Choose the explanation that compares the number of parts with the number needed for a whole."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "AF-13-C01"
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Match eighths, then regroup",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Match eighths, then regroup",
+          "initial_state": "Match eighths, then regroup",
+          "model": {
+            "kind": "mixed_add_regroup",
+            "left": {
+              "whole": 2,
+              "n": 3,
+              "d": 8
+            },
+            "right": {
+              "whole": 1,
+              "n": 3,
+              "d": 4
+            },
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true
+          }
+        },
+        "narration": {
+          "script": "Rename the three quarters as eighths before combining the fractional parts. Make one complete whole from their sum, then include it once with the original wholes."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Check the complete regrouping method",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Check the complete regrouping method",
+          "initial_state": "Check the complete regrouping method",
+          "model": {
+            "kind": "mixed_add_regroup",
+            "left": {
+              "whole": 1,
+              "n": 5,
+              "d": 6
+            },
+            "right": {
+              "whole": 2,
+              "n": 1,
+              "d": 2
+            },
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Check the original wholes, matching fractions, regrouping and final form."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "AF-13-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "AF-13-G01",
+        "support_level": "high",
+        "pre_question_script": "Now add three and five sixths to two and one half, completing each stage of the method.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "AF-13-G02",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "faded",
+        "question_ref": "AF-13-G03",
+        "support_level": "reduced",
+        "pre_question_script": "",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "faded",
+        "question_ref": "AF-13-G04",
+        "support_level": "reduced",
+        "pre_question_script": "",
+        "correct_next": "G05"
+      },
+      "G05": {
+        "stage": "faded",
+        "question_ref": "AF-13-G05",
+        "support_level": "reduced",
+        "pre_question_script": "",
+        "correct_next": "G06"
+      },
+      "G06": {
+        "stage": "faded",
+        "question_ref": "AF-13-G06",
+        "support_level": "reduced",
+        "pre_question_script": "",
+        "correct_next": "G07"
+      },
+      "G07": {
+        "stage": "independent_transfer",
+        "question_ref": "AF-13-G07",
+        "support_level": "none",
+        "pre_question_script": "",
+        "correct_next": "P01"
+      }
+    },
+    "practice": {
+      "intro_script": "Write the calculation answers as mixed numbers in simplest form. Then use the same reasoning for the four applications, following each question’s instructions.",
+      "question_order": [
+        "AF-13-P01",
+        "AF-13-P02",
+        "AF-13-P03",
+        "AF-13-P04",
+        "AF-13-P05",
+        "AF-13-P06",
+        "AF-13-P07",
+        "AF-13-X01",
+        "AF-13-X02",
+        "AF-13-X03",
+        "AF-13-X04"
+      ],
+      "question_count": 11
+    },
+    "exit": {
+      "intro_script": "Complete two additions in simplest mixed-number form, then select the correct method. No hints are available, and each response locks after submission.",
+      "primary_question_refs": [
+        "AF-13-E01",
+        "AF-13-E02",
+        "AF-13-E03"
+      ],
+      "confirmation_question_refs": [],
+      "mastery_policy": {
+        "profile": "all_primary_unsupported",
+        "require_all": true,
+        "source_page": 13,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "You regrouped the fractional total, counted the additional whole once and completed the requested simplest mixed-number form.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Check the regrouping stage",
+      "ryan_script": "One or more final checks need another pass. Use the feedback to focus on the new whole, the fractional remainder or its simplest form.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "AF-13-C01",
+      "source_ref": {
+        "page": 4
+      },
+      "stage": "practice",
+      "prompt": "Why must the fractional total 5/4 be regrouped?",
+      "target": "Regroup exactly one additional whole and write the requested final form",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Its numerator is greater than its denominator, so it contains at least one whole.",
+          "Every fraction in a mixed-number question must be regrouped.",
+          "Its denominator is 4.",
+          "The whole-number parts have already been added."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "Its numerator is greater than its denominator, so it contains at least one whole."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Exactly. There are enough quarters to make a whole, with a quarter left over.",
+        "correct_after_support": "Exactly. There are enough quarters to make a whole, with a quarter left over.",
+        "on_correct_math": "Five quarters contain one complete group of four quarters. → Four quarters make one whole; one quarter remains. → 5/4 = 1 1/4.",
+        "on_incorrect_attempt_1": "Compare the number of quarters with the number needed for one whole.",
+        "on_incorrect_attempt_2": "Five quarters contain more than the four quarters needed for one whole. Select the numerator-and-denominator explanation.",
+        "on_locked_incorrect": "Response recorded. Review the addition and regrouping after the final check.",
+        "worked_explanation": "Five quarters contain one complete group of four quarters. → Four quarters make one whole; one quarter remains. → 5/4 = 1 1/4."
+      },
+      "mathematical_support": {
+        "hint_1": "Compare the number of quarters with the number needed for one whole.",
+        "hint_2": "Match the fractional part sizes. Count the full whole in their sum, then add it to the original whole-number total exactly once.",
+        "worked_solution": "Five quarters contain one complete group of four quarters. → Four quarters make one whole; one quarter remains. → 5/4 = 1 1/4."
+      },
+      "working": [
+        "Five quarters contain one complete group of four quarters.",
+        "Four quarters make one whole; one quarter remains.",
+        "5/4 = 1 1/4."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_conversion",
+          "direction": "improper_to_mixed",
+          "numerator": 5,
+          "d": 4,
+          "object": "parts",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "Every fraction in a mixed-number question must be regrouped.": "Regrouping depends on the size of the fractional total. A proper fractional total does not create a whole.",
+        "Its denominator is 4.": "The denominator tells you the part size, but the numerator tells you whether enough parts are present for a whole.",
+        "The whole-number parts have already been added.": "Adding the original wholes does not determine whether the fractional total contains another whole."
+      }
+    },
+    {
+      "id": "AF-13-C02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "Which method correctly works out 1 5/6 + 2 1/2?",
+      "target": "Regroup exactly one additional whole and write the requested final form",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "1 + 2 = 3; 5/6 + 1/2 = 5/6 + 3/6 = 8/6 = 1 2/6 = 1 1/3; answer 4 1/3",
+          "1 + 2 = 3; 5/6 + 1/2 = 6/12; answer 3 6/12",
+          "1 + 2 = 3; 5/6 + 1/2 = 8/6; answer 3 8/6",
+          "1 5/6 + 2 1/2 = 3/11"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "1 + 2 = 3; 5/6 + 1/2 = 5/6 + 3/6 = 8/6 = 1 2/6 = 1 1/3; answer 4 1/3"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The method accounts for the original wholes, the new whole and the simplified remainder.",
+        "correct_after_support": "Correct. The method accounts for the original wholes, the new whole and the simplified remainder.",
+        "on_correct_math": "1 + 2 = 3 original wholes. → 1/2 = 3/6. → 5/6 + 3/6 = 8/6. → 8/6 = 1 2/6 = 1 1/3. → 3 + 1 1/3 = 4 1/3.",
+        "on_incorrect_attempt_1": "Check the fraction addition, the regrouping and whether the new whole reaches the final total.",
+        "on_incorrect_attempt_2": "The complete method renames the half, regroups the eight sixths, simplifies the remainder and includes the additional whole once.",
+        "on_locked_incorrect": "Response recorded. Review the addition and regrouping after the final check.",
+        "worked_explanation": "1 + 2 = 3 original wholes. → 1/2 = 3/6. → 5/6 + 3/6 = 8/6. → 8/6 = 1 2/6 = 1 1/3. → 3 + 1 1/3 = 4 1/3."
+      },
+      "mathematical_support": {
+        "hint_1": "Check the fraction addition, the regrouping and whether the new whole reaches the final total.",
+        "hint_2": "Match the fractional part sizes. Count the full whole in their sum, then add it to the original whole-number total exactly once.",
+        "worked_solution": "1 + 2 = 3 original wholes. → 1/2 = 3/6. → 5/6 + 3/6 = 8/6. → 8/6 = 1 2/6 = 1 1/3. → 3 + 1 1/3 = 4 1/3."
+      },
+      "working": [
+        "1 + 2 = 3 original wholes.",
+        "1/2 = 3/6.",
+        "5/6 + 3/6 = 8/6.",
+        "8/6 = 1 2/6 = 1 1/3.",
+        "3 + 1 1/3 = 4 1/3."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_add_regroup",
+          "left": {
+            "whole": 1,
+            "n": 5,
+            "d": 6
+          },
+          "right": {
+            "whole": 2,
+            "n": 1,
+            "d": 2
+          },
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "1 + 2 = 3; 5/6 + 1/2 = 6/12; answer 3 6/12": "The original wholes are added correctly, but the denominators must not be added. Rename the half as sixths.",
+        "1 + 2 = 3; 5/6 + 1/2 = 8/6; answer 3 8/6": "That has the correct value, but the fractional part is still improper. Regroup the eight sixths and include the whole it creates.",
+        "1 5/6 + 2 1/2 = 3/11": "That fraction loses the complete wholes and does not represent the sum of the two mixed values."
+      }
+    },
+    {
+      "id": "AF-13-G01",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "For 3 5/6 + 2 1/2, complete 3 + 2 = ?.",
+      "target": "Regroup exactly one additional whole and write the requested final form",
+      "response": {
+        "type": "integer",
+        "input_label": "Original whole-number total"
+      },
+      "answer": {
+        "value": 5
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Five is the original whole-number total, before regrouping.",
+        "correct_after_support": "Correct. Five is the original whole-number total, before regrouping.",
+        "on_correct_math": "3 + 2 = 5",
+        "on_incorrect_attempt_1": "Add the complete wholes from both mixed numbers before considering the fractional total.",
+        "on_incorrect_attempt_2": "Three plus two is five. Enter five.",
+        "on_locked_incorrect": "Response recorded. Review the addition and regrouping after the final check.",
+        "worked_explanation": "3 + 2 = 5"
+      },
+      "mathematical_support": {
+        "hint_1": "Add the complete wholes from both mixed numbers before considering the fractional total.",
+        "hint_2": "Match the fractional part sizes. Count the full whole in their sum, then add it to the original whole-number total exactly once.",
+        "worked_solution": "3 + 2 = 5"
+      },
+      "working": [
+        "3 + 2 = 5"
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "mixed_regroup_steps",
+          "label": "Count the original wholes",
+          "expression": "3 + 2 = ?",
+          "completed": "3 + 2 = 5",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-13-G02",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "Complete the equivalent fraction: 1/2 = ?/6.",
+      "target": "Regroup exactly one additional whole and write the requested final form",
+      "response": {
+        "type": "integer",
+        "input_label": "Equivalent numerator"
+      },
+      "answer": {
+        "value": 3
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The half is now written as matching sixths.",
+        "correct_after_support": "Correct. The half is now written as matching sixths.",
+        "on_correct_math": "1/2 = 3/6",
+        "on_incorrect_attempt_1": "The denominator is multiplied by three. Use the same factor for the numerator.",
+        "on_incorrect_attempt_2": "A half is three sixths. Enter three.",
+        "on_locked_incorrect": "Response recorded. Review the addition and regrouping after the final check.",
+        "worked_explanation": "1/2 = 3/6"
+      },
+      "mathematical_support": {
+        "hint_1": "The denominator is multiplied by three. Use the same factor for the numerator.",
+        "hint_2": "Match the fractional part sizes. Count the full whole in their sum, then add it to the original whole-number total exactly once.",
+        "worked_solution": "1/2 = 3/6"
+      },
+      "working": [
+        "1/2 = 3/6"
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "mixed_regroup_steps",
+          "label": "Rename the half",
+          "expression": "1/2 = ?/6",
+          "completed": "1/2 = 3/6",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-13-G03",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "faded",
+      "prompt": "Carry the renamed numerator into 5/6 + ?/6.",
+      "target": "Regroup exactly one additional whole and write the requested final form",
+      "response": {
+        "type": "integer",
+        "input_label": "Second numerator"
+      },
+      "answer": {
+        "value": 3
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both terms now count sixths.",
+        "correct_after_support": "Correct. Both terms now count sixths.",
+        "on_correct_math": "5/6 + 3/6",
+        "on_incorrect_attempt_1": "Use the equivalent numerator from the previous step.",
+        "on_incorrect_attempt_2": "The half contributes three sixths. Enter three.",
+        "on_locked_incorrect": "Response recorded. Review the addition and regrouping after the final check.",
+        "worked_explanation": "5/6 + 3/6"
+      },
+      "mathematical_support": {
+        "hint_1": "Use the equivalent numerator from the previous step.",
+        "hint_2": "Match the fractional part sizes. Count the full whole in their sum, then add it to the original whole-number total exactly once.",
+        "worked_solution": "5/6 + 3/6"
+      },
+      "working": [
+        "5/6 + 3/6"
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "mixed_regroup_steps",
+          "label": "Use matching fractional parts",
+          "expression": "5/6 + ?/6",
+          "completed": "5/6 + 3/6",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-13-G04",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "faded",
+      "prompt": "Complete the fractional sum: 5/6 + 3/6 = ?/6.",
+      "target": "Regroup exactly one additional whole and write the requested final form",
+      "response": {
+        "type": "integer",
+        "input_label": "Fractional total numerator"
+      },
+      "answer": {
+        "value": 8
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The fractional total contains enough sixths to make a whole.",
+        "correct_after_support": "Correct. The fractional total contains enough sixths to make a whole.",
+        "on_correct_math": "5/6 + 3/6 = 8/6",
+        "on_incorrect_attempt_1": "Add the counts of sixths and keep their part size.",
+        "on_incorrect_attempt_2": "Five and three make eight. Enter eight.",
+        "on_locked_incorrect": "Response recorded. Review the addition and regrouping after the final check.",
+        "worked_explanation": "5/6 + 3/6 = 8/6"
+      },
+      "mathematical_support": {
+        "hint_1": "Add the counts of sixths and keep their part size.",
+        "hint_2": "Match the fractional part sizes. Count the full whole in their sum, then add it to the original whole-number total exactly once.",
+        "worked_solution": "5/6 + 3/6 = 8/6"
+      },
+      "working": [
+        "5/6 + 3/6 = 8/6"
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "mixed_regroup_steps",
+          "label": "Add the fractional counts",
+          "expression": "5/6 + 3/6 = ?/6",
+          "completed": "5/6 + 3/6 = 8/6",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-13-G05",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "faded",
+      "prompt": "Regroup 8/6. Give the mixed number in its simplest form.",
+      "target": "Regroup exactly one additional whole and write the requested final form",
+      "response": {
+        "type": "mixed_number",
+        "require_proper_fractional_part": true,
+        "require_simplest_form": true
+      },
+      "answer": {
+        "value": "1 1/3"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The fractional sum creates one whole and a simplified remainder of one third.",
+        "correct_after_support": "Correct. The fractional sum creates one whole and a simplified remainder of one third.",
+        "on_correct_math": "8 ÷ 6 = 1 remainder 2. → Six sixths make one whole and two sixths remain. → 8/6 = 1 2/6 = 1 1/3.",
+        "on_incorrect_attempt_1": "Count one complete group of six, then write and simplify the fractional remainder.",
+        "on_incorrect_attempt_2": "The division gives one whole and two sixths. The leftover two sixths simplify to one third.",
+        "on_locked_incorrect": "Response recorded. Review the addition and regrouping after the final check.",
+        "worked_explanation": "8 ÷ 6 = 1 remainder 2. → Six sixths make one whole and two sixths remain. → 8/6 = 1 2/6 = 1 1/3."
+      },
+      "mathematical_support": {
+        "hint_1": "Count one complete group of six, then write and simplify the fractional remainder.",
+        "hint_2": "Match the fractional part sizes. Count the full whole in their sum, then add it to the original whole-number total exactly once.",
+        "worked_solution": "8 ÷ 6 = 1 remainder 2. → Six sixths make one whole and two sixths remain. → 8/6 = 1 2/6 = 1 1/3."
+      },
+      "working": [
+        "8 ÷ 6 = 1 remainder 2.",
+        "Six sixths make one whole and two sixths remain.",
+        "8/6 = 1 2/6 = 1 1/3."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_conversion",
+          "direction": "improper_to_mixed",
+          "numerator": 8,
+          "d": 6,
+          "object": "parts",
+          "math_text": true,
+          "compact_captions": true,
+          "simplify_result": true
+        }
+      },
+      "response_feedback": {
+        "unfinished_mixed": "The value is right, but the fractional part still contains a complete whole. Regroup it to finish the requested mixed-number form.",
+        "simplify_only": "The regrouping is right. Only the proper fractional part needs simplifying.",
+        "mixed_form_required": "That fraction has the correct value, and an improper-fraction method is valid. This question asks for the final answer as a mixed number.",
+        "lost_whole": "The fractional remainder is right, but the whole created by regrouping is missing from the total.",
+        "double_whole": "The fractional remainder is right, but the additional whole has been counted twice.",
+        "changed_denominator": "The complete whole is accounted for, but the remainder must keep the common denominator before simplification. The old numerator is not the new denominator.",
+        "fractional_part": "The final whole-number part matches. Check the fractional addition and the remainder left after making a complete whole.",
+        "whole_part": "The fractional remainder matches. Check the original whole-number addition and include exactly one regrouped whole.",
+        "check_value": "Check the value of both mixed numbers, the fractional sum and the regrouped whole. An all-improper-fractions method is valid too."
+      },
+      "evidence_profile": "mixed_regroup_stages",
+      "regrouping_target": {
+        "originalWhole": 0,
+        "rawNumerator": 8,
+        "common": 6,
+        "finalWhole": 1,
+        "remainder": 2,
+        "n": 1,
+        "d": 3
+      }
+    },
+    {
+      "id": "AF-13-G06",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "faded",
+      "prompt": "Work out 3 5/6 + 2 1/2. Give your answer as a mixed number in its simplest form.",
+      "target": "Regroup exactly one additional whole and write the requested final form",
+      "response": {
+        "type": "mixed_number",
+        "require_proper_fractional_part": true,
+        "require_simplest_form": true
+      },
+      "answer": {
+        "value": "6 1/3"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The whole created from the fractional parts has been added once to the five original wholes.",
+        "correct_after_support": "Correct. The whole created from the fractional parts has been added once to the five original wholes.",
+        "on_correct_math": "3 + 2 = 5 original wholes. → 5/6 = 5/6; 1/2 = 3/6. → 5/6 + 3/6 = 8/6. → 8/6 = 1 2/6 = 1 1/3. → 5 + 1 1/3 = 6 1/3; count the new whole once.",
+        "on_incorrect_attempt_1": "Work out the fractional sum using matching parts. Keep the original whole-number total separate while you regroup.",
+        "on_incorrect_attempt_2": "Follow the fractional sum into one new whole and a remainder, then add that whole once to the original whole-number total.",
+        "on_locked_incorrect": "Response recorded. Review the addition and regrouping after the final check.",
+        "worked_explanation": "3 + 2 = 5 original wholes. → 5/6 = 5/6; 1/2 = 3/6. → 5/6 + 3/6 = 8/6. → 8/6 = 1 2/6 = 1 1/3. → 5 + 1 1/3 = 6 1/3; count the new whole once."
+      },
+      "mathematical_support": {
+        "hint_1": "Work out the fractional sum using matching parts. Keep the original whole-number total separate while you regroup.",
+        "hint_2": "Match the fractional part sizes. Count the full whole in their sum, then add it to the original whole-number total exactly once.",
+        "worked_solution": "3 + 2 = 5 original wholes. → 5/6 = 5/6; 1/2 = 3/6. → 5/6 + 3/6 = 8/6. → 8/6 = 1 2/6 = 1 1/3. → 5 + 1 1/3 = 6 1/3; count the new whole once."
+      },
+      "working": [
+        "3 + 2 = 5 original wholes.",
+        "5/6 = 5/6; 1/2 = 3/6.",
+        "5/6 + 3/6 = 8/6.",
+        "8/6 = 1 2/6 = 1 1/3.",
+        "5 + 1 1/3 = 6 1/3; count the new whole once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_add_regroup",
+          "left": {
+            "whole": 3,
+            "n": 5,
+            "d": 6
+          },
+          "right": {
+            "whole": 2,
+            "n": 1,
+            "d": 2
+          },
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "unfinished_mixed": "The value is right, but the fractional part still contains a complete whole. Regroup it to finish the requested mixed-number form.",
+        "simplify_only": "The addition and regrouped value are right. Only the proper fractional part needs simplifying.",
+        "mixed_form_required": "That fraction has the correct value, and an improper-fraction method is valid. This question asks for the final answer as a mixed number.",
+        "lost_whole": "The fractional remainder is right, but the whole created by regrouping is missing from the total.",
+        "double_whole": "The fractional remainder is right, but the additional whole has been counted twice.",
+        "changed_denominator": "The complete whole is accounted for, but the remainder must keep the common denominator before simplification. The old numerator is not the new denominator.",
+        "fractional_part": "The final whole-number part matches. Check the fractional addition and the remainder left after making a complete whole.",
+        "whole_part": "The fractional remainder matches. Check the original whole-number addition and include exactly one regrouped whole.",
+        "check_value": "Check the value of both mixed numbers, the fractional sum and the regrouped whole. An all-improper-fractions method is valid too."
+      },
+      "evidence_profile": "mixed_regroup_stages",
+      "regrouping_target": {
+        "originalWhole": 5,
+        "rawNumerator": 8,
+        "common": 6,
+        "finalWhole": 6,
+        "remainder": 2,
+        "n": 1,
+        "d": 3
+      },
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-13-G07",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "independent_transfer",
+      "prompt": "After the original whole-number parts have been added, what should happen to the whole created from the fractional parts?",
+      "target": "Regroup exactly one additional whole and write the requested final form",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "It is added once to the whole-number total.",
+          "It replaces the whole-number total.",
+          "It is ignored because it came from a fraction.",
+          "It is added twice to the whole-number total."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "It is added once to the whole-number total."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The new whole is neither lost nor counted twice.",
+        "correct_after_support": "Correct. The new whole is neither lost nor counted twice.",
+        "on_correct_math": "Keep the original whole-number total. → The fractional sum contributes one additional whole. → Add that whole exactly once.",
+        "on_incorrect_attempt_1": "The regrouped whole is additional to the complete wholes already counted.",
+        "on_incorrect_attempt_2": "Keep the original total and add the new whole once. Select that statement.",
+        "on_locked_incorrect": "Response recorded. Review the addition and regrouping after the final check.",
+        "worked_explanation": "Keep the original whole-number total. → The fractional sum contributes one additional whole. → Add that whole exactly once."
+      },
+      "mathematical_support": {
+        "hint_1": "The regrouped whole is additional to the complete wholes already counted.",
+        "hint_2": "Match the fractional part sizes. Count the full whole in their sum, then add it to the original whole-number total exactly once.",
+        "worked_solution": "Keep the original whole-number total. → The fractional sum contributes one additional whole. → Add that whole exactly once."
+      },
+      "working": [
+        "Keep the original whole-number total.",
+        "The fractional sum contributes one additional whole.",
+        "Add that whole exactly once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "mixed_regroup_steps",
+          "label": "Track the new whole",
+          "expression": "Original wholes and one regrouped whole: choose below",
+          "completed": "Add the new whole exactly once.",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "It replaces the whole-number total.": "Replacing the original total would lose the complete wholes already in the mixed numbers.",
+        "It is ignored because it came from a fraction.": "A whole made from fractional parts has the same value as any other whole and must be included.",
+        "It is added twice to the whole-number total.": "Only one new whole is formed. Counting it twice makes the answer one whole too large."
+      }
+    },
+    {
+      "id": "AF-13-P01",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Work out 1 3/5 + 2 4/5. Give your answer as a mixed number in its simplest form.",
+      "target": "Regroup exactly one additional whole and write the requested final form",
+      "response": {
+        "type": "mixed_number",
+        "require_proper_fractional_part": true,
+        "require_simplest_form": true
+      },
+      "answer": {
+        "value": "4 2/5"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Seven fifths supply one new whole and two fifths, alongside the original wholes.",
+        "correct_after_support": "Correct. Seven fifths supply one new whole and two fifths, alongside the original wholes.",
+        "on_correct_math": "1 + 2 = 3 original wholes. → 3/5 = 3/5; 4/5 = 4/5. → 3/5 + 4/5 = 7/5. → 7/5 = 1 2/5. → 3 + 1 2/5 = 4 2/5; count the new whole once.",
+        "on_incorrect_attempt_1": "Work out the fractional sum using matching parts. Keep the original whole-number total separate while you regroup.",
+        "on_incorrect_attempt_2": "Follow the fractional sum into one new whole and a remainder, then add that whole once to the original whole-number total.",
+        "on_locked_incorrect": "Response recorded. Review the addition and regrouping after the final check.",
+        "worked_explanation": "1 + 2 = 3 original wholes. → 3/5 = 3/5; 4/5 = 4/5. → 3/5 + 4/5 = 7/5. → 7/5 = 1 2/5. → 3 + 1 2/5 = 4 2/5; count the new whole once."
+      },
+      "mathematical_support": {
+        "hint_1": "Work out the fractional sum using matching parts. Keep the original whole-number total separate while you regroup.",
+        "hint_2": "Match the fractional part sizes. Count the full whole in their sum, then add it to the original whole-number total exactly once.",
+        "worked_solution": "1 + 2 = 3 original wholes. → 3/5 = 3/5; 4/5 = 4/5. → 3/5 + 4/5 = 7/5. → 7/5 = 1 2/5. → 3 + 1 2/5 = 4 2/5; count the new whole once."
+      },
+      "working": [
+        "1 + 2 = 3 original wholes.",
+        "3/5 = 3/5; 4/5 = 4/5.",
+        "3/5 + 4/5 = 7/5.",
+        "7/5 = 1 2/5.",
+        "3 + 1 2/5 = 4 2/5; count the new whole once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_add_regroup",
+          "left": {
+            "whole": 1,
+            "n": 3,
+            "d": 5
+          },
+          "right": {
+            "whole": 2,
+            "n": 4,
+            "d": 5
+          },
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "unfinished_mixed": "The value is right, but the fractional part still contains a complete whole. Regroup it to finish the requested mixed-number form.",
+        "simplify_only": "The addition and regrouped value are right. Only the proper fractional part needs simplifying.",
+        "mixed_form_required": "That fraction has the correct value, and an improper-fraction method is valid. This question asks for the final answer as a mixed number.",
+        "lost_whole": "The fractional remainder is right, but the whole created by regrouping is missing from the total.",
+        "double_whole": "The fractional remainder is right, but the additional whole has been counted twice.",
+        "changed_denominator": "The complete whole is accounted for, but the remainder must keep the common denominator before simplification. The old numerator is not the new denominator.",
+        "fractional_part": "The final whole-number part matches. Check the fractional addition and the remainder left after making a complete whole.",
+        "whole_part": "The fractional remainder matches. Check the original whole-number addition and include exactly one regrouped whole.",
+        "check_value": "Check the value of both mixed numbers, the fractional sum and the regrouped whole. An all-improper-fractions method is valid too."
+      },
+      "evidence_profile": "mixed_regroup_stages",
+      "regrouping_target": {
+        "originalWhole": 3,
+        "rawNumerator": 7,
+        "common": 5,
+        "finalWhole": 4,
+        "remainder": 2,
+        "n": 2,
+        "d": 5
+      },
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-13-P02",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Work out 2 5/8 + 1 1/2. Give your answer as a mixed number in its simplest form.",
+      "target": "Regroup exactly one additional whole and write the requested final form",
+      "response": {
+        "type": "mixed_number",
+        "require_proper_fractional_part": true,
+        "require_simplest_form": true
+      },
+      "answer": {
+        "value": "4 1/8"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The half was renamed as eighths, and the full group of eight was included once.",
+        "correct_after_support": "Correct. The half was renamed as eighths, and the full group of eight was included once.",
+        "on_correct_math": "2 + 1 = 3 original wholes. → 5/8 = 5/8; 1/2 = 4/8. → 5/8 + 4/8 = 9/8. → 9/8 = 1 1/8. → 3 + 1 1/8 = 4 1/8; count the new whole once.",
+        "on_incorrect_attempt_1": "Work out the fractional sum using matching parts. Keep the original whole-number total separate while you regroup.",
+        "on_incorrect_attempt_2": "Follow the fractional sum into one new whole and a remainder, then add that whole once to the original whole-number total.",
+        "on_locked_incorrect": "Response recorded. Review the addition and regrouping after the final check.",
+        "worked_explanation": "2 + 1 = 3 original wholes. → 5/8 = 5/8; 1/2 = 4/8. → 5/8 + 4/8 = 9/8. → 9/8 = 1 1/8. → 3 + 1 1/8 = 4 1/8; count the new whole once."
+      },
+      "mathematical_support": {
+        "hint_1": "Work out the fractional sum using matching parts. Keep the original whole-number total separate while you regroup.",
+        "hint_2": "Match the fractional part sizes. Count the full whole in their sum, then add it to the original whole-number total exactly once.",
+        "worked_solution": "2 + 1 = 3 original wholes. → 5/8 = 5/8; 1/2 = 4/8. → 5/8 + 4/8 = 9/8. → 9/8 = 1 1/8. → 3 + 1 1/8 = 4 1/8; count the new whole once."
+      },
+      "working": [
+        "2 + 1 = 3 original wholes.",
+        "5/8 = 5/8; 1/2 = 4/8.",
+        "5/8 + 4/8 = 9/8.",
+        "9/8 = 1 1/8.",
+        "3 + 1 1/8 = 4 1/8; count the new whole once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_add_regroup",
+          "left": {
+            "whole": 2,
+            "n": 5,
+            "d": 8
+          },
+          "right": {
+            "whole": 1,
+            "n": 1,
+            "d": 2
+          },
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "unfinished_mixed": "The value is right, but the fractional part still contains a complete whole. Regroup it to finish the requested mixed-number form.",
+        "simplify_only": "The addition and regrouped value are right. Only the proper fractional part needs simplifying.",
+        "mixed_form_required": "That fraction has the correct value, and an improper-fraction method is valid. This question asks for the final answer as a mixed number.",
+        "lost_whole": "The fractional remainder is right, but the whole created by regrouping is missing from the total.",
+        "double_whole": "The fractional remainder is right, but the additional whole has been counted twice.",
+        "changed_denominator": "The complete whole is accounted for, but the remainder must keep the common denominator before simplification. The old numerator is not the new denominator.",
+        "fractional_part": "The final whole-number part matches. Check the fractional addition and the remainder left after making a complete whole.",
+        "whole_part": "The fractional remainder matches. Check the original whole-number addition and include exactly one regrouped whole.",
+        "check_value": "Check the value of both mixed numbers, the fractional sum and the regrouped whole. An all-improper-fractions method is valid too."
+      },
+      "evidence_profile": "mixed_regroup_stages",
+      "regrouping_target": {
+        "originalWhole": 3,
+        "rawNumerator": 9,
+        "common": 8,
+        "finalWhole": 4,
+        "remainder": 1,
+        "n": 1,
+        "d": 8
+      },
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-13-P03",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Work out 3 2/3 + 2 5/6. Give your answer as a mixed number in its simplest form.",
+      "target": "Regroup exactly one additional whole and write the requested final form",
+      "response": {
+        "type": "mixed_number",
+        "require_proper_fractional_part": true,
+        "require_simplest_form": true
+      },
+      "answer": {
+        "value": "6 1/2"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The extra whole from the sixths is included, with the remainder simplified to one half.",
+        "correct_after_support": "Correct. The extra whole from the sixths is included, with the remainder simplified to one half.",
+        "on_correct_math": "3 + 2 = 5 original wholes. → 2/3 = 4/6; 5/6 = 5/6. → 4/6 + 5/6 = 9/6. → 9/6 = 1 3/6 = 1 1/2. → 5 + 1 1/2 = 6 1/2; count the new whole once.",
+        "on_incorrect_attempt_1": "Work out the fractional sum using matching parts. Keep the original whole-number total separate while you regroup.",
+        "on_incorrect_attempt_2": "Follow the fractional sum into one new whole and a remainder, then add that whole once to the original whole-number total.",
+        "on_locked_incorrect": "Response recorded. Review the addition and regrouping after the final check.",
+        "worked_explanation": "3 + 2 = 5 original wholes. → 2/3 = 4/6; 5/6 = 5/6. → 4/6 + 5/6 = 9/6. → 9/6 = 1 3/6 = 1 1/2. → 5 + 1 1/2 = 6 1/2; count the new whole once."
+      },
+      "mathematical_support": {
+        "hint_1": "Work out the fractional sum using matching parts. Keep the original whole-number total separate while you regroup.",
+        "hint_2": "Match the fractional part sizes. Count the full whole in their sum, then add it to the original whole-number total exactly once.",
+        "worked_solution": "3 + 2 = 5 original wholes. → 2/3 = 4/6; 5/6 = 5/6. → 4/6 + 5/6 = 9/6. → 9/6 = 1 3/6 = 1 1/2. → 5 + 1 1/2 = 6 1/2; count the new whole once."
+      },
+      "working": [
+        "3 + 2 = 5 original wholes.",
+        "2/3 = 4/6; 5/6 = 5/6.",
+        "4/6 + 5/6 = 9/6.",
+        "9/6 = 1 3/6 = 1 1/2.",
+        "5 + 1 1/2 = 6 1/2; count the new whole once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_add_regroup",
+          "left": {
+            "whole": 3,
+            "n": 2,
+            "d": 3
+          },
+          "right": {
+            "whole": 2,
+            "n": 5,
+            "d": 6
+          },
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "unfinished_mixed": "The value is right, but the fractional part still contains a complete whole. Regroup it to finish the requested mixed-number form.",
+        "simplify_only": "The addition and regrouped value are right. Only the proper fractional part needs simplifying.",
+        "mixed_form_required": "That fraction has the correct value, and an improper-fraction method is valid. This question asks for the final answer as a mixed number.",
+        "lost_whole": "The fractional remainder is right, but the whole created by regrouping is missing from the total.",
+        "double_whole": "The fractional remainder is right, but the additional whole has been counted twice.",
+        "changed_denominator": "The complete whole is accounted for, but the remainder must keep the common denominator before simplification. The old numerator is not the new denominator.",
+        "fractional_part": "The final whole-number part matches. Check the fractional addition and the remainder left after making a complete whole.",
+        "whole_part": "The fractional remainder matches. Check the original whole-number addition and include exactly one regrouped whole.",
+        "check_value": "Check the value of both mixed numbers, the fractional sum and the regrouped whole. An all-improper-fractions method is valid too."
+      },
+      "evidence_profile": "mixed_regroup_stages",
+      "regrouping_target": {
+        "originalWhole": 5,
+        "rawNumerator": 9,
+        "common": 6,
+        "finalWhole": 6,
+        "remainder": 3,
+        "n": 1,
+        "d": 2
+      },
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-13-P04",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Work out 1 7/10 + 4 3/5. Give your answer as a mixed number in its simplest form.",
+      "target": "Regroup exactly one additional whole and write the requested final form",
+      "response": {
+        "type": "mixed_number",
+        "require_proper_fractional_part": true,
+        "require_simplest_form": true
+      },
+      "answer": {
+        "value": "6 3/10"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. After matching the tenths, one complete group moved into the whole-number total.",
+        "correct_after_support": "Correct. After matching the tenths, one complete group moved into the whole-number total.",
+        "on_correct_math": "1 + 4 = 5 original wholes. → 7/10 = 7/10; 3/5 = 6/10. → 7/10 + 6/10 = 13/10. → 13/10 = 1 3/10. → 5 + 1 3/10 = 6 3/10; count the new whole once.",
+        "on_incorrect_attempt_1": "Work out the fractional sum using matching parts. Keep the original whole-number total separate while you regroup.",
+        "on_incorrect_attempt_2": "Follow the fractional sum into one new whole and a remainder, then add that whole once to the original whole-number total.",
+        "on_locked_incorrect": "Response recorded. Review the addition and regrouping after the final check.",
+        "worked_explanation": "1 + 4 = 5 original wholes. → 7/10 = 7/10; 3/5 = 6/10. → 7/10 + 6/10 = 13/10. → 13/10 = 1 3/10. → 5 + 1 3/10 = 6 3/10; count the new whole once."
+      },
+      "mathematical_support": {
+        "hint_1": "Work out the fractional sum using matching parts. Keep the original whole-number total separate while you regroup.",
+        "hint_2": "Match the fractional part sizes. Count the full whole in their sum, then add it to the original whole-number total exactly once.",
+        "worked_solution": "1 + 4 = 5 original wholes. → 7/10 = 7/10; 3/5 = 6/10. → 7/10 + 6/10 = 13/10. → 13/10 = 1 3/10. → 5 + 1 3/10 = 6 3/10; count the new whole once."
+      },
+      "working": [
+        "1 + 4 = 5 original wholes.",
+        "7/10 = 7/10; 3/5 = 6/10.",
+        "7/10 + 6/10 = 13/10.",
+        "13/10 = 1 3/10.",
+        "5 + 1 3/10 = 6 3/10; count the new whole once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_add_regroup",
+          "left": {
+            "whole": 1,
+            "n": 7,
+            "d": 10
+          },
+          "right": {
+            "whole": 4,
+            "n": 3,
+            "d": 5
+          },
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "unfinished_mixed": "The value is right, but the fractional part still contains a complete whole. Regroup it to finish the requested mixed-number form.",
+        "simplify_only": "The addition and regrouped value are right. Only the proper fractional part needs simplifying.",
+        "mixed_form_required": "That fraction has the correct value, and an improper-fraction method is valid. This question asks for the final answer as a mixed number.",
+        "lost_whole": "The fractional remainder is right, but the whole created by regrouping is missing from the total.",
+        "double_whole": "The fractional remainder is right, but the additional whole has been counted twice.",
+        "changed_denominator": "The complete whole is accounted for, but the remainder must keep the common denominator before simplification. The old numerator is not the new denominator.",
+        "fractional_part": "The final whole-number part matches. Check the fractional addition and the remainder left after making a complete whole.",
+        "whole_part": "The fractional remainder matches. Check the original whole-number addition and include exactly one regrouped whole.",
+        "check_value": "Check the value of both mixed numbers, the fractional sum and the regrouped whole. An all-improper-fractions method is valid too."
+      },
+      "evidence_profile": "mixed_regroup_stages",
+      "regrouping_target": {
+        "originalWhole": 5,
+        "rawNumerator": 13,
+        "common": 10,
+        "finalWhole": 6,
+        "remainder": 3,
+        "n": 3,
+        "d": 10
+      },
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-13-P05",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Work out 4 5/12 + 2 3/4. Give your answer as a mixed number in its simplest form.",
+      "target": "Regroup exactly one additional whole and write the requested final form",
+      "response": {
+        "type": "mixed_number",
+        "require_proper_fractional_part": true,
+        "require_simplest_form": true
+      },
+      "answer": {
+        "value": "7 1/6"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The quarter-parts were matched to twelfths, and the regrouped remainder was simplified.",
+        "correct_after_support": "Correct. The quarter-parts were matched to twelfths, and the regrouped remainder was simplified.",
+        "on_correct_math": "4 + 2 = 6 original wholes. → 5/12 = 5/12; 3/4 = 9/12. → 5/12 + 9/12 = 14/12. → 14/12 = 1 2/12 = 1 1/6. → 6 + 1 1/6 = 7 1/6; count the new whole once.",
+        "on_incorrect_attempt_1": "Work out the fractional sum using matching parts. Keep the original whole-number total separate while you regroup.",
+        "on_incorrect_attempt_2": "Follow the fractional sum into one new whole and a remainder, then add that whole once to the original whole-number total.",
+        "on_locked_incorrect": "Response recorded. Review the addition and regrouping after the final check.",
+        "worked_explanation": "4 + 2 = 6 original wholes. → 5/12 = 5/12; 3/4 = 9/12. → 5/12 + 9/12 = 14/12. → 14/12 = 1 2/12 = 1 1/6. → 6 + 1 1/6 = 7 1/6; count the new whole once."
+      },
+      "mathematical_support": {
+        "hint_1": "Work out the fractional sum using matching parts. Keep the original whole-number total separate while you regroup.",
+        "hint_2": "Match the fractional part sizes. Count the full whole in their sum, then add it to the original whole-number total exactly once.",
+        "worked_solution": "4 + 2 = 6 original wholes. → 5/12 = 5/12; 3/4 = 9/12. → 5/12 + 9/12 = 14/12. → 14/12 = 1 2/12 = 1 1/6. → 6 + 1 1/6 = 7 1/6; count the new whole once."
+      },
+      "working": [
+        "4 + 2 = 6 original wholes.",
+        "5/12 = 5/12; 3/4 = 9/12.",
+        "5/12 + 9/12 = 14/12.",
+        "14/12 = 1 2/12 = 1 1/6.",
+        "6 + 1 1/6 = 7 1/6; count the new whole once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_add_regroup",
+          "left": {
+            "whole": 4,
+            "n": 5,
+            "d": 12
+          },
+          "right": {
+            "whole": 2,
+            "n": 3,
+            "d": 4
+          },
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "unfinished_mixed": "The value is right, but the fractional part still contains a complete whole. Regroup it to finish the requested mixed-number form.",
+        "simplify_only": "The addition and regrouped value are right. Only the proper fractional part needs simplifying.",
+        "mixed_form_required": "That fraction has the correct value, and an improper-fraction method is valid. This question asks for the final answer as a mixed number.",
+        "lost_whole": "The fractional remainder is right, but the whole created by regrouping is missing from the total.",
+        "double_whole": "The fractional remainder is right, but the additional whole has been counted twice.",
+        "changed_denominator": "The complete whole is accounted for, but the remainder must keep the common denominator before simplification. The old numerator is not the new denominator.",
+        "fractional_part": "The final whole-number part matches. Check the fractional addition and the remainder left after making a complete whole.",
+        "whole_part": "The fractional remainder matches. Check the original whole-number addition and include exactly one regrouped whole.",
+        "check_value": "Check the value of both mixed numbers, the fractional sum and the regrouped whole. An all-improper-fractions method is valid too."
+      },
+      "evidence_profile": "mixed_regroup_stages",
+      "regrouping_target": {
+        "originalWhole": 6,
+        "rawNumerator": 14,
+        "common": 12,
+        "finalWhole": 7,
+        "remainder": 2,
+        "n": 1,
+        "d": 6
+      },
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-13-P06",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Work out 2 7/9 + 3 5/9. Give your answer as a mixed number in its simplest form.",
+      "target": "Regroup exactly one additional whole and write the requested final form",
+      "response": {
+        "type": "mixed_number",
+        "require_proper_fractional_part": true,
+        "require_simplest_form": true
+      },
+      "answer": {
+        "value": "6 1/3"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The ninths form one extra whole and a remainder that simplifies to one third.",
+        "correct_after_support": "Correct. The ninths form one extra whole and a remainder that simplifies to one third.",
+        "on_correct_math": "2 + 3 = 5 original wholes. → 7/9 = 7/9; 5/9 = 5/9. → 7/9 + 5/9 = 12/9. → 12/9 = 1 3/9 = 1 1/3. → 5 + 1 1/3 = 6 1/3; count the new whole once.",
+        "on_incorrect_attempt_1": "Work out the fractional sum using matching parts. Keep the original whole-number total separate while you regroup.",
+        "on_incorrect_attempt_2": "Follow the fractional sum into one new whole and a remainder, then add that whole once to the original whole-number total.",
+        "on_locked_incorrect": "Response recorded. Review the addition and regrouping after the final check.",
+        "worked_explanation": "2 + 3 = 5 original wholes. → 7/9 = 7/9; 5/9 = 5/9. → 7/9 + 5/9 = 12/9. → 12/9 = 1 3/9 = 1 1/3. → 5 + 1 1/3 = 6 1/3; count the new whole once."
+      },
+      "mathematical_support": {
+        "hint_1": "Work out the fractional sum using matching parts. Keep the original whole-number total separate while you regroup.",
+        "hint_2": "Match the fractional part sizes. Count the full whole in their sum, then add it to the original whole-number total exactly once.",
+        "worked_solution": "2 + 3 = 5 original wholes. → 7/9 = 7/9; 5/9 = 5/9. → 7/9 + 5/9 = 12/9. → 12/9 = 1 3/9 = 1 1/3. → 5 + 1 1/3 = 6 1/3; count the new whole once."
+      },
+      "working": [
+        "2 + 3 = 5 original wholes.",
+        "7/9 = 7/9; 5/9 = 5/9.",
+        "7/9 + 5/9 = 12/9.",
+        "12/9 = 1 3/9 = 1 1/3.",
+        "5 + 1 1/3 = 6 1/3; count the new whole once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_add_regroup",
+          "left": {
+            "whole": 2,
+            "n": 7,
+            "d": 9
+          },
+          "right": {
+            "whole": 3,
+            "n": 5,
+            "d": 9
+          },
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "unfinished_mixed": "The value is right, but the fractional part still contains a complete whole. Regroup it to finish the requested mixed-number form.",
+        "simplify_only": "The addition and regrouped value are right. Only the proper fractional part needs simplifying.",
+        "mixed_form_required": "That fraction has the correct value, and an improper-fraction method is valid. This question asks for the final answer as a mixed number.",
+        "lost_whole": "The fractional remainder is right, but the whole created by regrouping is missing from the total.",
+        "double_whole": "The fractional remainder is right, but the additional whole has been counted twice.",
+        "changed_denominator": "The complete whole is accounted for, but the remainder must keep the common denominator before simplification. The old numerator is not the new denominator.",
+        "fractional_part": "The final whole-number part matches. Check the fractional addition and the remainder left after making a complete whole.",
+        "whole_part": "The fractional remainder matches. Check the original whole-number addition and include exactly one regrouped whole.",
+        "check_value": "Check the value of both mixed numbers, the fractional sum and the regrouped whole. An all-improper-fractions method is valid too."
+      },
+      "evidence_profile": "mixed_regroup_stages",
+      "regrouping_target": {
+        "originalWhole": 5,
+        "rawNumerator": 12,
+        "common": 9,
+        "finalWhole": 6,
+        "remainder": 3,
+        "n": 1,
+        "d": 3
+      },
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-13-P07",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Which answer is correct for 2 4/7 + 1 5/7?",
+      "target": "Regroup exactly one additional whole and write the requested final form",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "3 9/7",
+          "4 2/7",
+          "4 2/9",
+          "3 2/7"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "4 2/7"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The new whole is included and the fractional remainder still counts sevenths.",
+        "correct_after_support": "Correct. The new whole is included and the fractional remainder still counts sevenths.",
+        "on_correct_math": "2 + 1 = 3 original wholes. → Both fractional parts already count sevenths. → 4/7 + 5/7 = 9/7. → 9/7 = 1 2/7. → 3 + 1 2/7 = 4 2/7.",
+        "on_incorrect_attempt_1": "Track the original wholes, then the complete whole and leftover parts in nine sevenths.",
+        "on_incorrect_attempt_2": "Nine sevenths make one new whole and two sevenths. Include that whole once in the total.",
+        "on_locked_incorrect": "Response recorded. Review the addition and regrouping after the final check.",
+        "worked_explanation": "2 + 1 = 3 original wholes. → Both fractional parts already count sevenths. → 4/7 + 5/7 = 9/7. → 9/7 = 1 2/7. → 3 + 1 2/7 = 4 2/7."
+      },
+      "mathematical_support": {
+        "hint_1": "Track the original wholes, then the complete whole and leftover parts in nine sevenths.",
+        "hint_2": "Match the fractional part sizes. Count the full whole in their sum, then add it to the original whole-number total exactly once.",
+        "worked_solution": "2 + 1 = 3 original wholes. → Both fractional parts already count sevenths. → 4/7 + 5/7 = 9/7. → 9/7 = 1 2/7. → 3 + 1 2/7 = 4 2/7."
+      },
+      "working": [
+        "2 + 1 = 3 original wholes.",
+        "Both fractional parts already count sevenths.",
+        "4/7 + 5/7 = 9/7.",
+        "9/7 = 1 2/7.",
+        "3 + 1 2/7 = 4 2/7."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_add_regroup",
+          "left": {
+            "whole": 2,
+            "n": 4,
+            "d": 7
+          },
+          "right": {
+            "whole": 1,
+            "n": 5,
+            "d": 7
+          },
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "3 9/7": "The value is right, but the fractional part remains improper. Regroup the nine sevenths.",
+        "4 2/9": "The denominator names the original part size. The leftover parts are sevenths, not ninths.",
+        "3 2/7": "The fractional remainder is right, but the additional whole has been lost."
+      }
+    },
+    {
+      "id": "AF-13-X01",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "One piece of ribbon is 2 3/4 metres long and a second piece is 1 5/8 metres long. What is the total length of the two pieces?",
+      "target": "Regroup exactly one additional whole and write the requested final form",
+      "response": {
+        "type": "fraction",
+        "allow_mixed_number": true,
+        "default_form": "mixed",
+        "require_all_mixed_fields": true,
+        "input_label": "Your total",
+        "suffix": "m"
+      },
+      "answer": {
+        "value": "4 3/8"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The two ribbon lengths include a complete extra metre from their fractional parts.",
+        "correct_after_support": "Correct. The two ribbon lengths include a complete extra metre from their fractional parts.",
+        "on_correct_math": "2 + 1 = 3 original wholes. → 3/4 = 6/8; 5/8 = 5/8. → 6/8 + 5/8 = 11/8. → 11/8 = 1 3/8. → 3 + 1 3/8 = 4 3/8 m; count the new whole once.",
+        "on_incorrect_attempt_1": "Work out the fractional sum using matching parts. Keep the original whole-number total separate while you regroup.",
+        "on_incorrect_attempt_2": "Follow the fractional sum into one new whole and a remainder, then add that whole once to the original whole-number total.",
+        "on_locked_incorrect": "Response recorded. Review the addition and regrouping after the final check.",
+        "worked_explanation": "2 + 1 = 3 original wholes. → 3/4 = 6/8; 5/8 = 5/8. → 6/8 + 5/8 = 11/8. → 11/8 = 1 3/8. → 3 + 1 3/8 = 4 3/8 m; count the new whole once."
+      },
+      "mathematical_support": {
+        "hint_1": "Work out the fractional sum using matching parts. Keep the original whole-number total separate while you regroup.",
+        "hint_2": "Match the fractional part sizes. Count the full whole in their sum, then add it to the original whole-number total exactly once.",
+        "worked_solution": "2 + 1 = 3 original wholes. → 3/4 = 6/8; 5/8 = 5/8. → 6/8 + 5/8 = 11/8. → 11/8 = 1 3/8. → 3 + 1 3/8 = 4 3/8 m; count the new whole once."
+      },
+      "working": [
+        "2 + 1 = 3 original wholes.",
+        "3/4 = 6/8; 5/8 = 5/8.",
+        "6/8 + 5/8 = 11/8.",
+        "11/8 = 1 3/8.",
+        "3 + 1 3/8 = 4 3/8 m; count the new whole once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_add_regroup",
+          "left": {
+            "whole": 2,
+            "n": 3,
+            "d": 4
+          },
+          "right": {
+            "whole": 1,
+            "n": 5,
+            "d": 8
+          },
+          "object": "ribbon",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "unfinished_mixed": "The value is right, but the fractional part still contains a complete whole. Regroup it to finish the requested mixed-number form.",
+        "simplify_only": "The addition and regrouped value are right. Only the proper fractional part needs simplifying.",
+        "mixed_form_required": "That fraction has the correct value, and an improper-fraction method is valid. This question asks for the final answer as a mixed number.",
+        "lost_whole": "The fractional remainder is right, but the whole created by regrouping is missing from the total.",
+        "double_whole": "The fractional remainder is right, but the additional whole has been counted twice.",
+        "changed_denominator": "The complete whole is accounted for, but the remainder must keep the common denominator before simplification. The old numerator is not the new denominator.",
+        "fractional_part": "The final whole-number part matches. Check the fractional addition and the remainder left after making a complete whole.",
+        "whole_part": "The fractional remainder matches. Check the original whole-number addition and include exactly one regrouped whole.",
+        "check_value": "Check the value of both mixed numbers, the fractional sum and the regrouped whole. An all-improper-fractions method is valid too."
+      },
+      "evidence_profile": "mixed_regroup_stages",
+      "regrouping_target": {
+        "originalWhole": 3,
+        "rawNumerator": 11,
+        "common": 8,
+        "finalWhole": 4,
+        "remainder": 3,
+        "n": 3,
+        "d": 8
+      },
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-13-X02",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A tank contains 1 5/6 litres of water. A further 2 3/4 litres is added. How much water is in the tank now?",
+      "target": "Regroup exactly one additional whole and write the requested final form",
+      "response": {
+        "type": "fraction",
+        "allow_mixed_number": true,
+        "default_form": "mixed",
+        "require_all_mixed_fields": true,
+        "input_label": "Your total",
+        "suffix": "litres"
+      },
+      "answer": {
+        "value": "4 7/12"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both water amounts are included, with matching fractions of a litre.",
+        "correct_after_support": "Correct. Both water amounts are included, with matching fractions of a litre.",
+        "on_correct_math": "1 + 2 = 3 original wholes. → 5/6 = 10/12; 3/4 = 9/12. → 10/12 + 9/12 = 19/12. → 19/12 = 1 7/12. → 3 + 1 7/12 = 4 7/12 litres; count the new whole once.",
+        "on_incorrect_attempt_1": "Work out the fractional sum using matching parts. Keep the original whole-number total separate while you regroup.",
+        "on_incorrect_attempt_2": "Follow the fractional sum into one new whole and a remainder, then add that whole once to the original whole-number total.",
+        "on_locked_incorrect": "Response recorded. Review the addition and regrouping after the final check.",
+        "worked_explanation": "1 + 2 = 3 original wholes. → 5/6 = 10/12; 3/4 = 9/12. → 10/12 + 9/12 = 19/12. → 19/12 = 1 7/12. → 3 + 1 7/12 = 4 7/12 litres; count the new whole once."
+      },
+      "mathematical_support": {
+        "hint_1": "Work out the fractional sum using matching parts. Keep the original whole-number total separate while you regroup.",
+        "hint_2": "Match the fractional part sizes. Count the full whole in their sum, then add it to the original whole-number total exactly once.",
+        "worked_solution": "1 + 2 = 3 original wholes. → 5/6 = 10/12; 3/4 = 9/12. → 10/12 + 9/12 = 19/12. → 19/12 = 1 7/12. → 3 + 1 7/12 = 4 7/12 litres; count the new whole once."
+      },
+      "working": [
+        "1 + 2 = 3 original wholes.",
+        "5/6 = 10/12; 3/4 = 9/12.",
+        "10/12 + 9/12 = 19/12.",
+        "19/12 = 1 7/12.",
+        "3 + 1 7/12 = 4 7/12 litres; count the new whole once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_add_regroup",
+          "left": {
+            "whole": 1,
+            "n": 5,
+            "d": 6
+          },
+          "right": {
+            "whole": 2,
+            "n": 3,
+            "d": 4
+          },
+          "object": "water",
+          "math_text": true,
+          "compact_captions": true,
+          "container": "tank"
+        }
+      },
+      "response_feedback": {
+        "unfinished_mixed": "The value is right, but the fractional part still contains a complete whole. Regroup it to finish the requested mixed-number form.",
+        "simplify_only": "The addition and regrouped value are right. Only the proper fractional part needs simplifying.",
+        "mixed_form_required": "That fraction has the correct value, and an improper-fraction method is valid. This question asks for the final answer as a mixed number.",
+        "lost_whole": "The fractional remainder is right, but the whole created by regrouping is missing from the total.",
+        "double_whole": "The fractional remainder is right, but the additional whole has been counted twice.",
+        "changed_denominator": "The complete whole is accounted for, but the remainder must keep the common denominator before simplification. The old numerator is not the new denominator.",
+        "fractional_part": "The final whole-number part matches. Check the fractional addition and the remainder left after making a complete whole.",
+        "whole_part": "The fractional remainder matches. Check the original whole-number addition and include exactly one regrouped whole.",
+        "check_value": "Check the value of both mixed numbers, the fractional sum and the regrouped whole. An all-improper-fractions method is valid too."
+      },
+      "evidence_profile": "mixed_regroup_stages",
+      "regrouping_target": {
+        "originalWhole": 3,
+        "rawNumerator": 19,
+        "common": 12,
+        "finalWhole": 4,
+        "remainder": 7,
+        "n": 7,
+        "d": 12
+      },
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-13-X03",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "Maya walks 3 7/10 km in the morning and 2 4/5 km in the afternoon. How far does Maya walk altogether?",
+      "target": "Regroup exactly one additional whole and write the requested final form",
+      "response": {
+        "type": "fraction",
+        "allow_mixed_number": true,
+        "default_form": "mixed",
+        "require_all_mixed_fields": true,
+        "input_label": "Your total",
+        "suffix": "km"
+      },
+      "answer": {
+        "value": "6 1/2"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The two walks combine into the total distance, including the kilometre formed from the fractional parts.",
+        "correct_after_support": "Correct. The two walks combine into the total distance, including the kilometre formed from the fractional parts.",
+        "on_correct_math": "3 + 2 = 5 original wholes. → 7/10 = 7/10; 4/5 = 8/10. → 7/10 + 8/10 = 15/10. → 15/10 = 1 5/10 = 1 1/2. → 5 + 1 1/2 = 6 1/2 km; count the new whole once.",
+        "on_incorrect_attempt_1": "Work out the fractional sum using matching parts. Keep the original whole-number total separate while you regroup.",
+        "on_incorrect_attempt_2": "Follow the fractional sum into one new whole and a remainder, then add that whole once to the original whole-number total.",
+        "on_locked_incorrect": "Response recorded. Review the addition and regrouping after the final check.",
+        "worked_explanation": "3 + 2 = 5 original wholes. → 7/10 = 7/10; 4/5 = 8/10. → 7/10 + 8/10 = 15/10. → 15/10 = 1 5/10 = 1 1/2. → 5 + 1 1/2 = 6 1/2 km; count the new whole once."
+      },
+      "mathematical_support": {
+        "hint_1": "Work out the fractional sum using matching parts. Keep the original whole-number total separate while you regroup.",
+        "hint_2": "Match the fractional part sizes. Count the full whole in their sum, then add it to the original whole-number total exactly once.",
+        "worked_solution": "3 + 2 = 5 original wholes. → 7/10 = 7/10; 4/5 = 8/10. → 7/10 + 8/10 = 15/10. → 15/10 = 1 5/10 = 1 1/2. → 5 + 1 1/2 = 6 1/2 km; count the new whole once."
+      },
+      "working": [
+        "3 + 2 = 5 original wholes.",
+        "7/10 = 7/10; 4/5 = 8/10.",
+        "7/10 + 8/10 = 15/10.",
+        "15/10 = 1 5/10 = 1 1/2.",
+        "5 + 1 1/2 = 6 1/2 km; count the new whole once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_add_regroup",
+          "left": {
+            "whole": 3,
+            "n": 7,
+            "d": 10
+          },
+          "right": {
+            "whole": 2,
+            "n": 4,
+            "d": 5
+          },
+          "object": "walk",
+          "math_text": true,
+          "compact_captions": true,
+          "person": "Maya"
+        }
+      },
+      "response_feedback": {
+        "unfinished_mixed": "The value is right, but the fractional part still contains a complete whole. Regroup it to finish the requested mixed-number form.",
+        "simplify_only": "The addition and regrouped value are right. Only the proper fractional part needs simplifying.",
+        "mixed_form_required": "That fraction has the correct value, and an improper-fraction method is valid. This question asks for the final answer as a mixed number.",
+        "lost_whole": "The fractional remainder is right, but the whole created by regrouping is missing from the total.",
+        "double_whole": "The fractional remainder is right, but the additional whole has been counted twice.",
+        "changed_denominator": "The complete whole is accounted for, but the remainder must keep the common denominator before simplification. The old numerator is not the new denominator.",
+        "fractional_part": "The final whole-number part matches. Check the fractional addition and the remainder left after making a complete whole.",
+        "whole_part": "The fractional remainder matches. Check the original whole-number addition and include exactly one regrouped whole.",
+        "check_value": "Check the value of both mixed numbers, the fractional sum and the regrouped whole. An all-improper-fractions method is valid too."
+      },
+      "evidence_profile": "mixed_regroup_stages",
+      "regrouping_target": {
+        "originalWhole": 5,
+        "rawNumerator": 15,
+        "common": 10,
+        "finalWhole": 6,
+        "remainder": 5,
+        "n": 1,
+        "d": 2
+      },
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-13-X04",
+      "source_ref": {
+        "page": 16
+      },
+      "stage": "practice",
+      "prompt": "A recipe uses 1 7/8 kg of flour for bread and 2 3/8 kg for cakes. Which calculation finds the total mass of flour?",
+      "target": "Regroup exactly one additional whole and write the requested final form",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "1 7/8 + 2 3/8",
+          "2 3/8 − 1 7/8",
+          "1 7/8 × 2 3/8",
+          "2 3/8 ÷ 1 7/8"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "1 7/8 + 2 3/8"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Addition combines both flour masses into the total required.",
+        "correct_after_support": "Correct. Addition combines both flour masses into the total required.",
+        "on_correct_math": "Both flour masses are needed. → Combining the masses calls for addition. → Use 1 7/8 + 2 3/8.",
+        "on_incorrect_attempt_1": "Decide whether you are combining the two masses, comparing them, or counting groups.",
+        "on_incorrect_attempt_2": "The total includes the bread flour and cake flour together. Select addition.",
+        "on_locked_incorrect": "Response recorded. Review the addition and regrouping after the final check.",
+        "worked_explanation": "Both flour masses are needed. → Combining the masses calls for addition. → Use 1 7/8 + 2 3/8."
+      },
+      "mathematical_support": {
+        "hint_1": "Decide whether you are combining the two masses, comparing them, or counting groups.",
+        "hint_2": "Match the fractional part sizes. Count the full whole in their sum, then add it to the original whole-number total exactly once.",
+        "worked_solution": "Both flour masses are needed. → Combining the masses calls for addition. → Use 1 7/8 + 2 3/8."
+      },
+      "working": [
+        "Both flour masses are needed.",
+        "Combining the masses calls for addition.",
+        "Use 1 7/8 + 2 3/8."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_add_regroup",
+          "left": {
+            "whole": 1,
+            "n": 7,
+            "d": 8
+          },
+          "right": {
+            "whole": 2,
+            "n": 3,
+            "d": 8
+          },
+          "object": "flour",
+          "math_text": true,
+          "compact_captions": true,
+          "operation_choice": true
+        }
+      },
+      "response_feedback": {
+        "2 3/8 − 1 7/8": "That finds the difference between the masses, not their total.",
+        "1 7/8 × 2 3/8": "The question combines two masses; neither is a scaling factor for the other.",
+        "2 3/8 ÷ 1 7/8": "Division compares the masses by a ratio, rather than combining them."
+      }
+    },
+    {
+      "id": "AF-13-E01",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "exit",
+      "prompt": "Work out 2 5/6 + 1 1/2. Give your answer as a mixed number in its simplest form.",
+      "target": "Regroup exactly one additional whole and write the requested final form",
+      "response": {
+        "type": "mixed_number",
+        "require_proper_fractional_part": true,
+        "require_simplest_form": true
+      },
+      "answer": {
+        "value": "4 1/3"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Recorded. The regrouped whole is included once and the remaining fraction is simplest.",
+        "correct_after_support": "Recorded. The regrouped whole is included once and the remaining fraction is simplest.",
+        "on_correct_math": "2 + 1 = 3 original wholes. → 5/6 = 5/6; 1/2 = 3/6. → 5/6 + 3/6 = 8/6. → 8/6 = 1 2/6 = 1 1/3. → 3 + 1 1/3 = 4 1/3; count the new whole once.",
+        "on_incorrect_attempt_1": "Work out the fractional sum using matching parts. Keep the original whole-number total separate while you regroup.",
+        "on_incorrect_attempt_2": "Follow the fractional sum into one new whole and a remainder, then add that whole once to the original whole-number total.",
+        "on_locked_incorrect": "Response recorded. Review the addition and regrouping after the final check.",
+        "worked_explanation": "2 + 1 = 3 original wholes. → 5/6 = 5/6; 1/2 = 3/6. → 5/6 + 3/6 = 8/6. → 8/6 = 1 2/6 = 1 1/3. → 3 + 1 1/3 = 4 1/3; count the new whole once."
+      },
+      "mathematical_support": {
+        "hint_1": "Work out the fractional sum using matching parts. Keep the original whole-number total separate while you regroup.",
+        "hint_2": "Match the fractional part sizes. Count the full whole in their sum, then add it to the original whole-number total exactly once.",
+        "worked_solution": "2 + 1 = 3 original wholes. → 5/6 = 5/6; 1/2 = 3/6. → 5/6 + 3/6 = 8/6. → 8/6 = 1 2/6 = 1 1/3. → 3 + 1 1/3 = 4 1/3; count the new whole once."
+      },
+      "working": [
+        "2 + 1 = 3 original wholes.",
+        "5/6 = 5/6; 1/2 = 3/6.",
+        "5/6 + 3/6 = 8/6.",
+        "8/6 = 1 2/6 = 1 1/3.",
+        "3 + 1 1/3 = 4 1/3; count the new whole once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_add_regroup",
+          "left": {
+            "whole": 2,
+            "n": 5,
+            "d": 6
+          },
+          "right": {
+            "whole": 1,
+            "n": 1,
+            "d": 2
+          },
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "unfinished_mixed": "The value is right, but the fractional part still contains a complete whole. Regroup it to finish the requested mixed-number form.",
+        "simplify_only": "The addition and regrouped value are right. Only the proper fractional part needs simplifying.",
+        "mixed_form_required": "That fraction has the correct value, and an improper-fraction method is valid. This question asks for the final answer as a mixed number.",
+        "lost_whole": "The fractional remainder is right, but the whole created by regrouping is missing from the total.",
+        "double_whole": "The fractional remainder is right, but the additional whole has been counted twice.",
+        "changed_denominator": "The complete whole is accounted for, but the remainder must keep the common denominator before simplification. The old numerator is not the new denominator.",
+        "fractional_part": "The final whole-number part matches. Check the fractional addition and the remainder left after making a complete whole.",
+        "whole_part": "The fractional remainder matches. Check the original whole-number addition and include exactly one regrouped whole.",
+        "check_value": "Check the value of both mixed numbers, the fractional sum and the regrouped whole. An all-improper-fractions method is valid too."
+      },
+      "evidence_profile": "mixed_regroup_stages",
+      "regrouping_target": {
+        "originalWhole": 3,
+        "rawNumerator": 8,
+        "common": 6,
+        "finalWhole": 4,
+        "remainder": 2,
+        "n": 1,
+        "d": 3
+      },
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-13-E02",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "exit",
+      "prompt": "Work out 1 7/12 + 3 2/3. Give your answer as a mixed number in its simplest form.",
+      "target": "Regroup exactly one additional whole and write the requested final form",
+      "response": {
+        "type": "mixed_number",
+        "require_proper_fractional_part": true,
+        "require_simplest_form": true
+      },
+      "answer": {
+        "value": "5 1/4"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Recorded. Matching twelfths formed an additional whole, and the remainder was simplified.",
+        "correct_after_support": "Recorded. Matching twelfths formed an additional whole, and the remainder was simplified.",
+        "on_correct_math": "1 + 3 = 4 original wholes. → 7/12 = 7/12; 2/3 = 8/12. → 7/12 + 8/12 = 15/12. → 15/12 = 1 3/12 = 1 1/4. → 4 + 1 1/4 = 5 1/4; count the new whole once.",
+        "on_incorrect_attempt_1": "Work out the fractional sum using matching parts. Keep the original whole-number total separate while you regroup.",
+        "on_incorrect_attempt_2": "Follow the fractional sum into one new whole and a remainder, then add that whole once to the original whole-number total.",
+        "on_locked_incorrect": "Response recorded. Review the addition and regrouping after the final check.",
+        "worked_explanation": "1 + 3 = 4 original wholes. → 7/12 = 7/12; 2/3 = 8/12. → 7/12 + 8/12 = 15/12. → 15/12 = 1 3/12 = 1 1/4. → 4 + 1 1/4 = 5 1/4; count the new whole once."
+      },
+      "mathematical_support": {
+        "hint_1": "Work out the fractional sum using matching parts. Keep the original whole-number total separate while you regroup.",
+        "hint_2": "Match the fractional part sizes. Count the full whole in their sum, then add it to the original whole-number total exactly once.",
+        "worked_solution": "1 + 3 = 4 original wholes. → 7/12 = 7/12; 2/3 = 8/12. → 7/12 + 8/12 = 15/12. → 15/12 = 1 3/12 = 1 1/4. → 4 + 1 1/4 = 5 1/4; count the new whole once."
+      },
+      "working": [
+        "1 + 3 = 4 original wholes.",
+        "7/12 = 7/12; 2/3 = 8/12.",
+        "7/12 + 8/12 = 15/12.",
+        "15/12 = 1 3/12 = 1 1/4.",
+        "4 + 1 1/4 = 5 1/4; count the new whole once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_add_regroup",
+          "left": {
+            "whole": 1,
+            "n": 7,
+            "d": 12
+          },
+          "right": {
+            "whole": 3,
+            "n": 2,
+            "d": 3
+          },
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "unfinished_mixed": "The value is right, but the fractional part still contains a complete whole. Regroup it to finish the requested mixed-number form.",
+        "simplify_only": "The addition and regrouped value are right. Only the proper fractional part needs simplifying.",
+        "mixed_form_required": "That fraction has the correct value, and an improper-fraction method is valid. This question asks for the final answer as a mixed number.",
+        "lost_whole": "The fractional remainder is right, but the whole created by regrouping is missing from the total.",
+        "double_whole": "The fractional remainder is right, but the additional whole has been counted twice.",
+        "changed_denominator": "The complete whole is accounted for, but the remainder must keep the common denominator before simplification. The old numerator is not the new denominator.",
+        "fractional_part": "The final whole-number part matches. Check the fractional addition and the remainder left after making a complete whole.",
+        "whole_part": "The fractional remainder matches. Check the original whole-number addition and include exactly one regrouped whole.",
+        "check_value": "Check the value of both mixed numbers, the fractional sum and the regrouped whole. An all-improper-fractions method is valid too."
+      },
+      "evidence_profile": "mixed_regroup_stages",
+      "regrouping_target": {
+        "originalWhole": 4,
+        "rawNumerator": 15,
+        "common": 12,
+        "finalWhole": 5,
+        "remainder": 3,
+        "n": 1,
+        "d": 4
+      },
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-13-E03",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "exit",
+      "prompt": "Which method correctly works out 3 4/5 + 2 3/5?",
+      "target": "Regroup exactly one additional whole and write the requested final form",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "3 + 2 = 5; 4/5 + 3/5 = 7/5 = 1 2/5; answer 6 2/5",
+          "3 + 2 = 5; 4/5 + 3/5 = 7/5; answer 5 7/5",
+          "3 + 2 = 5; 4/5 + 3/5 = 7/10; answer 5 7/10",
+          "3 4/5 + 2 3/5 = 5/7"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "3 + 2 = 5; 4/5 + 3/5 = 7/5 = 1 2/5; answer 6 2/5"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Recorded. The method regroups the fractional total and counts the new whole once.",
+        "correct_after_support": "Recorded. The method regroups the fractional total and counts the new whole once.",
+        "on_correct_math": "3 + 2 = 5 original wholes. → The fractional parts already count fifths. → 4/5 + 3/5 = 7/5. → 7/5 = 1 2/5. → 5 + 1 2/5 = 6 2/5.",
+        "on_incorrect_attempt_1": "No hints are available in the final check.",
+        "on_incorrect_attempt_2": "The final response is locked.",
+        "on_locked_incorrect": "Response recorded. Review the addition and regrouping after the final check.",
+        "worked_explanation": "3 + 2 = 5 original wholes. → The fractional parts already count fifths. → 4/5 + 3/5 = 7/5. → 7/5 = 1 2/5. → 5 + 1 2/5 = 6 2/5."
+      },
+      "mathematical_support": {
+        "hint_1": "No hints are available in the final check.",
+        "hint_2": "Match the fractional part sizes. Count the full whole in their sum, then add it to the original whole-number total exactly once.",
+        "worked_solution": "3 + 2 = 5 original wholes. → The fractional parts already count fifths. → 4/5 + 3/5 = 7/5. → 7/5 = 1 2/5. → 5 + 1 2/5 = 6 2/5."
+      },
+      "working": [
+        "3 + 2 = 5 original wholes.",
+        "The fractional parts already count fifths.",
+        "4/5 + 3/5 = 7/5.",
+        "7/5 = 1 2/5.",
+        "5 + 1 2/5 = 6 2/5."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_add_regroup",
+          "left": {
+            "whole": 3,
+            "n": 4,
+            "d": 5
+          },
+          "right": {
+            "whole": 2,
+            "n": 3,
+            "d": 5
+          },
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    }
+  ],
+  "canonical_lesson": {
+    "version": "AF13-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

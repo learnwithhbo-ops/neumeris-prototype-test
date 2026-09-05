@@ -1,0 +1,1805 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "MD-05 - Multiply two proper fractions",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-18",
+      "sha256": "a6897a1bd642c0c85ca1c51f567593caa39646890e0ea9ab30487b0b3fef6183"
+    },
+    "authored_scope": "Multiply two positive proper fractions exactly, in either factor order, with no required simplification or cancellation.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "MD05-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "preview_checked_2026-09-03",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        4,
+        5,
+        6,
+        7,
+        13,
+        15,
+        16,
+        17,
+        18
+      ],
+      "source_repairs_consulted": [
+        10,
+        11,
+        12
+      ],
+      "note": "All approved pages read and p4–6 inspected visually. Source p15 ribbon application is held out because it duplicates the exact E01 mastery factors. The source P02 practice product has the same answer as E01 but different factors; retained as approved. Entry, Diagnostic and delayed Retrieval remain inactive.",
+      "held_out_source_items": [
+        {
+          "page": 15,
+          "item": "GCSE application 3: 3/7 of 5/8 metre",
+          "reason": "Exact duplicate of the first unsupported mastery product."
+        }
+      ]
+    }
+  },
+  "identity": {
+    "id": "MD-05",
+    "slug": "multiply-two-proper-fractions",
+    "title": "Multiply two proper fractions",
+    "strand": "Number",
+    "cluster": "Multiplying and Dividing Fractions",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Multiply two positive proper fractions and write the exact product as a fraction.",
+    "success_criteria": [
+      "Multiply the two numerators.",
+      "Multiply the two denominators.",
+      "Keep numerator and denominator roles aligned.",
+      "Accept any exact equivalent fractional product.",
+      "Interpret a fraction of a fraction relative to the original whole."
+    ],
+    "boundaries": {
+      "includes": [
+        "Two positive proper fractions, in either factor order.",
+        "Exact fractions and valid equivalent fractions.",
+        "Area, bar, fraction-of-fraction and other mathematically valid methods."
+      ],
+      "excludes": [
+        "Required simplification",
+        "Cancellation before multiplication",
+        "Whole-number and mixed-number factors",
+        "Division",
+        "Decimal approximations",
+        "Multi-step problems",
+        "Diagnostic and delayed Retrieval layers"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "MD-04"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for MD-04 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "single_choice",
+      "fraction",
+      "integer"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    }
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "Multiply the numerators and multiply the denominators.",
+    "invariant": "The numerator product counts selected small parts; the denominator product counts all equal small parts in the same original whole.",
+    "mathematical_rule": "a/b × c/d = (a × c)/(b × d)",
+    "must_notice": [
+      "The reference whole stays fixed.",
+      "Both partitions determine the size of a small part.",
+      "Only the overlap is selected."
+    ],
+    "common_confusions": [
+      "Keeping one denominator",
+      "Adding fraction parts",
+      "Multiplying diagonally",
+      "Inverting a factor when multiplying"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "Shade the first fraction",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Shade the first fraction",
+          "initial_state": "Shade the first fraction",
+          "model": {
+            "kind": "fraction_product",
+            "a": 2,
+            "b": 3,
+            "c": 4,
+            "d": 5,
+            "object": "area",
+            "target": "Exact fractional product",
+            "math_text": true,
+            "phase": "columns",
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Start with four fifths of one whole. Keep this same whole as we take a fraction of the shaded part."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Partition in the other direction",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Partition in the other direction",
+          "initial_state": "Partition in the other direction",
+          "model": {
+            "kind": "fraction_product",
+            "a": 2,
+            "b": 3,
+            "c": 4,
+            "d": 5,
+            "object": "area",
+            "target": "Exact fractional product",
+            "math_text": true,
+            "phase": "partition",
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Split each fifth into thirds. The row and column partitions now describe equal small parts of the original whole."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Select the overlap",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Select the overlap",
+          "initial_state": "Select the overlap",
+          "model": {
+            "kind": "fraction_product",
+            "a": 2,
+            "b": 3,
+            "c": 4,
+            "d": 5,
+            "object": "area",
+            "target": "Exact fractional product",
+            "math_text": true,
+            "solved": true,
+            "annotation": "2/3 × 4/5 = 8/15",
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Take two of the three rows across the shaded columns. Only the overlap belongs to the requested product."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Explain the denominator",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Explain the denominator",
+          "initial_state": "Explain the denominator",
+          "model": null
+        },
+        "narration": {
+          "script": "What explains the denominator in the product?"
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "MD-05-C01"
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Multiply the numerator counts",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Multiply the numerator counts",
+          "initial_state": "Multiply the numerator counts",
+          "model": {
+            "kind": "fraction_product",
+            "a": 3,
+            "b": 5,
+            "c": 2,
+            "d": 7,
+            "object": "area",
+            "target": "Exact fractional product",
+            "math_text": true,
+            "phase": "numerator",
+            "annotation": "3 × 2 = 6",
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Now take three fifths of two sevenths. Multiply the numerator counts to find the selected small parts."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T06"
+      },
+      {
+        "id": "T06",
+        "stage": "teaching",
+        "purpose": "Multiply the denominator counts",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Multiply the denominator counts",
+          "initial_state": "Multiply the denominator counts",
+          "model": {
+            "kind": "fraction_product",
+            "a": 3,
+            "b": 5,
+            "c": 2,
+            "d": 7,
+            "object": "area",
+            "target": "Exact fractional product",
+            "math_text": true,
+            "phase": "denominator",
+            "previous": "Numerator product: 6",
+            "annotation": "5 × 7 = 35",
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Use both denominator counts to find how many equal small parts make the original whole."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T07"
+      },
+      {
+        "id": "T07",
+        "stage": "teaching",
+        "purpose": "Write the exact fraction",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Write the exact fraction",
+          "initial_state": "Write the exact fraction",
+          "model": {
+            "kind": "fraction_product",
+            "a": 3,
+            "b": 5,
+            "c": 2,
+            "d": 7,
+            "object": "area",
+            "target": "Exact fractional product",
+            "math_text": true,
+            "solved": true,
+            "annotation": "3/5 × 2/7 = 6/35",
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Put the selected-part count over the total equal-part count. The answer stays exact; no decimal rounding is needed."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T08"
+      },
+      {
+        "id": "T08",
+        "stage": "teaching",
+        "purpose": "Recognise the complete method",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Recognise the complete method",
+          "initial_state": "Recognise the complete method",
+          "model": null
+        },
+        "narration": {
+          "script": "Check that both parts of the fraction follow the multiplication method."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "MD-05-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "MD-05-G01",
+        "support_level": "high",
+        "pre_question_script": "Use the numerator factors without changing their positions.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "MD-05-G02",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "guided",
+        "question_ref": "MD-05-G03",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "guided",
+        "question_ref": "MD-05-G04",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "F01"
+      },
+      "F01": {
+        "stage": "faded",
+        "question_ref": "MD-05-P01",
+        "support_level": "reduced",
+        "pre_question_script": "Try the full calculation. Support is available if you need it.",
+        "correct_next": "I01"
+      },
+      "I01": {
+        "stage": "independent_transfer",
+        "question_ref": "MD-05-P02",
+        "support_level": "none",
+        "pre_question_script": "Use any mathematically valid method and keep the answer exact.",
+        "correct_next": "P03"
+      }
+    },
+    "practice": {
+      "intro_script": "Use the fraction relationships as the numbers and contexts change. Keep the original whole in mind.",
+      "question_order": [
+        "MD-05-P03",
+        "MD-05-P04",
+        "MD-05-P05",
+        "MD-05-P06",
+        "MD-05-X01",
+        "MD-05-X02",
+        "MD-05-X04"
+      ]
+    },
+    "exit": {
+      "intro_script": "Complete two products and a method check independently. No hints are available in these final checks.",
+      "primary_question_refs": [
+        "MD-05-E01",
+        "MD-05-E02",
+        "MD-05-E03"
+      ],
+      "confirmation_question_refs": [],
+      "mastery_policy": {
+        "profile": "all_primary_unsupported",
+        "require_all": true,
+        "source_page": 13,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "You independently used both numerator and denominator products to find exact fractions of the original whole.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Keep building fraction products",
+      "ryan_script": "One or more final checks need more practice. Keep selected-part counts and total equal-part counts in their correct positions.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "MD-05-C01",
+      "source_ref": {
+        "page": 4
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "Why does the denominator become 15 when 2/3 × 4/5 is calculated?",
+      "target": "Exact fractional product",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Three rows and five columns create fifteen equal parts.",
+          "The denominators are added because three plus five is eight.",
+          "The larger denominator is always used.",
+          "The denominators are ignored when fractions are multiplied."
+        ]
+      },
+      "answer": {
+        "value": "Three rows and five columns create fifteen equal parts."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Both partitions count: together they determine the size of the small parts.",
+        "correct_after_support": "Both partitions count: together they determine the size of the small parts.",
+        "on_correct_math": "Each fifth is split into three equal parts. → 3 × 5 = 15 equal small parts in the whole.",
+        "on_incorrect_attempt_1": "Think about how the second partition changes the size of each piece.",
+        "on_incorrect_attempt_2": "Compare the two directions of partition in the grid.",
+        "worked_explanation": "Each fifth is split into three equal parts. → 3 × 5 = 15 equal small parts in the whole."
+      },
+      "mathematical_support": {
+        "hint_1": "Think about how the second partition changes the size of each piece.",
+        "hint_2": "Every column is divided into the same number of rows.",
+        "worked_solution": "Each fifth is split into three equal parts. → 3 × 5 = 15 equal small parts in the whole."
+      },
+      "working": [
+        "Each fifth is split into three equal parts.",
+        "3 × 5 = 15 equal small parts in the whole."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_product",
+          "a": 2,
+          "b": 3,
+          "c": 4,
+          "d": 5,
+          "object": "area",
+          "target": "Exact fractional product",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "The denominators are added because three plus five is eight.": "Adding the counts does not count every small cell in the rectangle.",
+        "The larger denominator is always used.": "Keeping only one denominator leaves out one direction of partition.",
+        "The denominators are ignored when fractions are multiplied.": "The denominators determine how the reference whole is partitioned."
+      }
+    },
+    {
+      "id": "MD-05-C02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "Which method gives the correct product of 3/5 and 2/7 here?",
+      "target": "Exact fractional product",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "3/5 × 2/7 = (3 × 2)/(5 × 7) = 6/35",
+          "3/5 × 2/7 = (3 + 2)/(5 + 7) = 5/12",
+          "3/5 × 2/7 = (3 × 7)/(5 × 2) = 21/10",
+          "3/5 × 2/7 = (3 × 2)/7 = 6/7"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "3/5 × 2/7 = (3 × 2)/(5 × 7) = 6/35"
+      },
+      "policy": {
+        "scored": false,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true,
+        "engagementOnly": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That method counts selected parts and all equal parts separately.",
+        "correct_after_support": "That method counts selected parts and all equal parts separately.",
+        "on_correct_math": "Multiply the numerators: 3 × 2 = 6. → Multiply the denominators: 5 × 7 = 35. → The exact product is 6/35.",
+        "on_incorrect_attempt_1": "Check which numbers count selected parts and which describe the partitions.",
+        "on_incorrect_attempt_2": "Compare the numerator line with the denominator line in the working.",
+        "worked_explanation": "Multiply the numerators: 3 × 2 = 6. → Multiply the denominators: 5 × 7 = 35. → The exact product is 6/35."
+      },
+      "mathematical_support": {
+        "hint_1": "Check which numbers count selected parts and which describe the partitions.",
+        "hint_2": "Numerators pair with numerators; denominators pair with denominators.",
+        "worked_solution": "Multiply the numerators: 3 × 2 = 6. → Multiply the denominators: 5 × 7 = 35. → The exact product is 6/35."
+      },
+      "working": [
+        "Multiply the numerators: 3 × 2 = 6.",
+        "Multiply the denominators: 5 × 7 = 35.",
+        "The exact product is 6/35."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_product",
+          "a": 3,
+          "b": 5,
+          "c": 2,
+          "d": 7,
+          "object": "area",
+          "target": "Exact fractional product",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "3/5 × 2/7 = (3 + 2)/(5 + 7) = 5/12": "That adds the fraction parts, but the operation is multiplication.",
+        "3/5 × 2/7 = (3 × 7)/(5 × 2) = 21/10": "That pairs numbers diagonally and changes the requested product.",
+        "3/5 × 2/7 = (3 × 2)/7 = 6/7": "That keeps only one denominator, so one partition of the whole is missing."
+      }
+    },
+    {
+      "id": "MD-05-G01",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "For 2/3 × 4/7, multiply the numerators: 2 × 4 = ?",
+      "target": "Numerator product",
+      "response": {
+        "type": "integer",
+        "input_label": "Numerator product",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 8
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The numerator product counts the selected small parts.",
+        "correct_after_support": "The numerator product counts the selected small parts.",
+        "on_correct_math": "2 × 4 = 8 selected small parts.",
+        "on_incorrect_attempt_1": "The top numbers count the selected rows and columns.",
+        "on_incorrect_attempt_2": "Count the selected rows across the selected columns.",
+        "worked_explanation": "2 × 4 = 8 selected small parts."
+      },
+      "mathematical_support": {
+        "hint_1": "The top numbers count the selected rows and columns.",
+        "hint_2": "Use two equal groups of four, not their sum.",
+        "worked_solution": "2 × 4 = 8 selected small parts."
+      },
+      "working": [
+        "2 × 4 = 8 selected small parts."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_product",
+          "a": 2,
+          "b": 3,
+          "c": 4,
+          "d": 7,
+          "object": "area",
+          "target": "Numerator product",
+          "math_text": true,
+          "resultScope": "numerator",
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "6": "That adds the two numerator numbers instead of multiplying them."
+      }
+    },
+    {
+      "id": "MD-05-G02",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "Multiply the denominators for 2/3 × 4/7: 3 × 7 = ?",
+      "target": "Denominator product",
+      "response": {
+        "type": "integer",
+        "input_label": "Denominator product",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 21
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The denominator now counts every equal small part in the whole.",
+        "correct_after_support": "The denominator now counts every equal small part in the whole.",
+        "on_correct_math": "3 × 7 = 21 equal parts in the whole.",
+        "on_incorrect_attempt_1": "Both directions of partition must be included.",
+        "on_incorrect_attempt_2": "Use both partitions to correct the total number of parts.",
+        "worked_explanation": "3 × 7 = 21 equal parts in the whole."
+      },
+      "mathematical_support": {
+        "hint_1": "Both directions of partition must be included.",
+        "hint_2": "Count all the equal cells, not just one row or one column.",
+        "worked_solution": "3 × 7 = 21 equal parts in the whole."
+      },
+      "working": [
+        "3 × 7 = 21 equal parts in the whole."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_product",
+          "a": 2,
+          "b": 3,
+          "c": 4,
+          "d": 7,
+          "object": "area",
+          "target": "Denominator product",
+          "math_text": true,
+          "resultScope": "denominator",
+          "previous": "Numerator product: 8",
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "3": "That keeps only the rows and leaves out the column partition.",
+        "7": "That keeps only the columns and leaves out the row partition.",
+        "10": "That adds the denominator numbers; it does not count all cells."
+      }
+    },
+    {
+      "id": "MD-05-G03",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "Complete the product: 2/3 × 4/7 = ?",
+      "target": "Exact fractional product",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "input_label": "Your exact fraction",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "8/21"
+      },
+      "policy": {
+        "scored": false,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true,
+        "engagementOnly": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Your fraction connects the selected parts to the original whole.",
+        "correct_after_support": "Your fraction connects the selected parts to the original whole.",
+        "on_correct_math": "The numerator product is 8. → The denominator product is 21. → The exact product is 8/21.",
+        "on_incorrect_attempt_1": "Use the two products you have just found.",
+        "on_incorrect_attempt_2": "Combine the two products in their correct positions.",
+        "worked_explanation": "The numerator product is 8. → The denominator product is 21. → The exact product is 8/21."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the two products you have just found.",
+        "hint_2": "The selected-part count goes over the total equal-part count.",
+        "worked_solution": "The numerator product is 8. → The denominator product is 21. → The exact product is 8/21."
+      },
+      "working": [
+        "The numerator product is 8.",
+        "The denominator product is 21.",
+        "The exact product is 8/21."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_product",
+          "a": 2,
+          "b": 3,
+          "c": 4,
+          "d": 7,
+          "object": "area",
+          "target": "Exact fractional product",
+          "math_text": true,
+          "previous": "Numerator product: 8. Denominator product: 21.",
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "8/7": "The denominator needs both partitions, not only the seventh-sized columns.",
+        "6/10": "That adds the fraction parts instead of multiplying them.",
+        "21/8": "The selected-part count belongs on top; the total equal-part count belongs underneath."
+      }
+    },
+    {
+      "id": "MD-05-G04",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "Which statement explains 2/3 × 4/7 correctly?",
+      "target": "Exact fractional product",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Two thirds of four sevenths is eight twenty-firsts.",
+          "Two thirds of four sevenths is six elevenths.",
+          "Two thirds of four sevenths is eight sevenths.",
+          "The fractions must have the same denominator before they can be multiplied."
+        ]
+      },
+      "answer": {
+        "value": "Two thirds of four sevenths is eight twenty-firsts."
+      },
+      "policy": {
+        "scored": false,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true,
+        "engagementOnly": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That statement links the fractional selection to the original whole.",
+        "correct_after_support": "That statement links the fractional selection to the original whole.",
+        "on_correct_math": "Two selected rows cross four selected columns. → The whole has three rows and seven columns. → The selected fraction is 8/21.",
+        "on_incorrect_attempt_1": "The answer must refer to the original whole, not just the shaded part.",
+        "on_incorrect_attempt_2": "Compare what is selected with how the whole is partitioned.",
+        "worked_explanation": "Two selected rows cross four selected columns. → The whole has three rows and seven columns. → The selected fraction is 8/21."
+      },
+      "mathematical_support": {
+        "hint_1": "The answer must refer to the original whole, not just the shaded part.",
+        "hint_2": "A common denominator is not required to form the two partitions.",
+        "worked_solution": "Two selected rows cross four selected columns. → The whole has three rows and seven columns. → The selected fraction is 8/21."
+      },
+      "working": [
+        "Two selected rows cross four selected columns.",
+        "The whole has three rows and seven columns.",
+        "The selected fraction is 8/21."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_product",
+          "a": 2,
+          "b": 3,
+          "c": 4,
+          "d": 7,
+          "object": "area",
+          "target": "Exact fractional product",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "Two thirds of four sevenths is six elevenths.": "That fraction does not use the numerator and denominator products.",
+        "Two thirds of four sevenths is eight sevenths.": "Keeping sevenths ignores the second partition into thirds.",
+        "The fractions must have the same denominator before they can be multiplied.": "Different denominators can describe the two directions of partition directly."
+      }
+    },
+    {
+      "id": "MD-05-P01",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "faded",
+      "prompt": "Work out 2/5 × 3/7.",
+      "target": "Exact fractional product",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "input_label": "Your exact fraction",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "6/35"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The numerator and denominator products describe the same partitioned whole.",
+        "correct_after_support": "The numerator and denominator products describe the same partitioned whole.",
+        "on_correct_math": "2 × 3 = 6 selected parts. → 5 × 7 = 35 equal parts in the original whole. → Exact product: 6/35.",
+        "on_incorrect_attempt_1": "Check that both fraction factors are used without changing their values.",
+        "on_incorrect_attempt_2": "Compare the two numerator factors and the two denominator factors separately.",
+        "worked_explanation": "2 × 3 = 6 selected parts. → 5 × 7 = 35 equal parts in the original whole. → Exact product: 6/35."
+      },
+      "mathematical_support": {
+        "hint_1": "Check that both fraction factors are used without changing their values.",
+        "hint_2": "Use 2 and 3 for the selected-part count, and 5 and 7 for the equal-part count.",
+        "worked_solution": "2 × 3 = 6 selected parts. → 5 × 7 = 35 equal parts in the original whole. → Exact product: 6/35."
+      },
+      "working": [
+        "2 × 3 = 6 selected parts.",
+        "5 × 7 = 35 equal parts in the original whole.",
+        "Exact product: 6/35."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_product",
+          "a": 2,
+          "b": 5,
+          "c": 3,
+          "d": 7,
+          "object": "area",
+          "target": "Exact fractional product",
+          "math_text": true,
+          "stage": "faded",
+          "reaction": "The numerator and denominator products describe the same partitioned whole.",
+          "correction": "Compare the two numerator factors and the two denominator factors separately.",
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "6/7": "That keeps only one denominator, leaving out one partition of the whole.",
+        "6/5": "That keeps only one denominator, leaving out one partition of the whole.",
+        "5/12": "That adds the fraction parts instead of multiplying them.",
+        "14/15": "That changes one fraction to its reciprocal. The requested operation is multiplication."
+      }
+    },
+    {
+      "id": "MD-05-P02",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "independent_transfer",
+      "prompt": "Work out 3/8 × 5/7.",
+      "target": "Exact fractional product",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "input_label": "Your exact fraction",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "15/56"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Your exact fraction keeps both directions of partition.",
+        "correct_after_support": "Your exact fraction keeps both directions of partition.",
+        "on_correct_math": "3 × 5 = 15 selected parts. → 8 × 7 = 56 equal parts in the original whole. → Exact product: 15/56.",
+        "on_incorrect_attempt_1": "Check that both fraction factors are used without changing their values.",
+        "on_incorrect_attempt_2": "Check the selected-part count against the total equal-part count.",
+        "worked_explanation": "3 × 5 = 15 selected parts. → 8 × 7 = 56 equal parts in the original whole. → Exact product: 15/56."
+      },
+      "mathematical_support": {
+        "hint_1": "Check that both fraction factors are used without changing their values.",
+        "hint_2": "Use 3 and 5 for the selected-part count, and 8 and 7 for the equal-part count.",
+        "worked_solution": "3 × 5 = 15 selected parts. → 8 × 7 = 56 equal parts in the original whole. → Exact product: 15/56."
+      },
+      "working": [
+        "3 × 5 = 15 selected parts.",
+        "8 × 7 = 56 equal parts in the original whole.",
+        "Exact product: 15/56."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_product",
+          "a": 3,
+          "b": 8,
+          "c": 5,
+          "d": 7,
+          "object": "area",
+          "target": "Exact fractional product",
+          "math_text": true,
+          "stage": "independent_transfer",
+          "reaction": "Your exact fraction keeps both directions of partition.",
+          "correction": "Check the selected-part count against the total equal-part count.",
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "15/7": "That keeps only one denominator, leaving out one partition of the whole.",
+        "15/8": "That keeps only one denominator, leaving out one partition of the whole.",
+        "8/15": "That adds the fraction parts instead of multiplying them.",
+        "21/40": "That changes one fraction to its reciprocal. The requested operation is multiplication."
+      }
+    },
+    {
+      "id": "MD-05-P03",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Work out 4/9 × 2/5.",
+      "target": "Exact fractional product",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "input_label": "Your exact fraction",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "8/45"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Both factors have been preserved in the exact product.",
+        "correct_after_support": "Both factors have been preserved in the exact product.",
+        "on_correct_math": "4 × 2 = 8 selected parts. → 9 × 5 = 45 equal parts in the original whole. → Exact product: 8/45.",
+        "on_incorrect_attempt_1": "Check that both fraction factors are used without changing their values.",
+        "on_incorrect_attempt_2": "Check the two multiplication facts without swapping numerator and denominator roles.",
+        "worked_explanation": "4 × 2 = 8 selected parts. → 9 × 5 = 45 equal parts in the original whole. → Exact product: 8/45."
+      },
+      "mathematical_support": {
+        "hint_1": "Check that both fraction factors are used without changing their values.",
+        "hint_2": "Use 4 and 2 for the selected-part count, and 9 and 5 for the equal-part count.",
+        "worked_solution": "4 × 2 = 8 selected parts. → 9 × 5 = 45 equal parts in the original whole. → Exact product: 8/45."
+      },
+      "working": [
+        "4 × 2 = 8 selected parts.",
+        "9 × 5 = 45 equal parts in the original whole.",
+        "Exact product: 8/45."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_product",
+          "a": 4,
+          "b": 9,
+          "c": 2,
+          "d": 5,
+          "object": "area",
+          "target": "Exact fractional product",
+          "math_text": true,
+          "reaction": "Both factors have been preserved in the exact product.",
+          "correction": "Check the two multiplication facts without swapping numerator and denominator roles.",
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "8/5": "That keeps only one denominator, leaving out one partition of the whole.",
+        "8/9": "That keeps only one denominator, leaving out one partition of the whole.",
+        "6/14": "That adds the fraction parts instead of multiplying them.",
+        "20/18": "That changes one fraction to its reciprocal. The requested operation is multiplication."
+      }
+    },
+    {
+      "id": "MD-05-P04",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Work out 5/11 × 3/4.",
+      "target": "Exact fractional product",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "input_label": "Your exact fraction",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "15/44"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The product describes a part of the original whole, not an added fraction.",
+        "correct_after_support": "The product describes a part of the original whole, not an added fraction.",
+        "on_correct_math": "5 × 3 = 15 selected parts. → 11 × 4 = 44 equal parts in the original whole. → Exact product: 15/44.",
+        "on_incorrect_attempt_1": "Check that both fraction factors are used without changing their values.",
+        "on_incorrect_attempt_2": "Use the two selections together, keeping the reference whole fixed.",
+        "worked_explanation": "5 × 3 = 15 selected parts. → 11 × 4 = 44 equal parts in the original whole. → Exact product: 15/44."
+      },
+      "mathematical_support": {
+        "hint_1": "Check that both fraction factors are used without changing their values.",
+        "hint_2": "Use 5 and 3 for the selected-part count, and 11 and 4 for the equal-part count.",
+        "worked_solution": "5 × 3 = 15 selected parts. → 11 × 4 = 44 equal parts in the original whole. → Exact product: 15/44."
+      },
+      "working": [
+        "5 × 3 = 15 selected parts.",
+        "11 × 4 = 44 equal parts in the original whole.",
+        "Exact product: 15/44."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_product",
+          "a": 5,
+          "b": 11,
+          "c": 3,
+          "d": 4,
+          "object": "area",
+          "target": "Exact fractional product",
+          "math_text": true,
+          "reaction": "The product describes a part of the original whole, not an added fraction.",
+          "correction": "Use the two selections together, keeping the reference whole fixed.",
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "15/4": "That keeps only one denominator, leaving out one partition of the whole.",
+        "15/11": "That keeps only one denominator, leaving out one partition of the whole.",
+        "8/15": "That adds the fraction parts instead of multiplying them.",
+        "20/33": "That changes one fraction to its reciprocal. The requested operation is multiplication."
+      }
+    },
+    {
+      "id": "MD-05-P05",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Work out 7/12 × 5/13.",
+      "target": "Exact fractional product",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "input_label": "Your exact fraction",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "35/156"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The larger denominator still counts equal small parts of one whole.",
+        "correct_after_support": "The larger denominator still counts equal small parts of one whole.",
+        "on_correct_math": "7 × 5 = 35 selected parts. → 12 × 13 = 156 equal parts in the original whole. → Exact product: 35/156.",
+        "on_incorrect_attempt_1": "Check that both fraction factors are used without changing their values.",
+        "on_incorrect_attempt_2": "Keep the two whole-number products separate before writing the fraction.",
+        "worked_explanation": "7 × 5 = 35 selected parts. → 12 × 13 = 156 equal parts in the original whole. → Exact product: 35/156."
+      },
+      "mathematical_support": {
+        "hint_1": "Check that both fraction factors are used without changing their values.",
+        "hint_2": "Use 7 and 5 for the selected-part count, and 12 and 13 for the equal-part count.",
+        "worked_solution": "7 × 5 = 35 selected parts. → 12 × 13 = 156 equal parts in the original whole. → Exact product: 35/156."
+      },
+      "working": [
+        "7 × 5 = 35 selected parts.",
+        "12 × 13 = 156 equal parts in the original whole.",
+        "Exact product: 35/156."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_product",
+          "a": 7,
+          "b": 12,
+          "c": 5,
+          "d": 13,
+          "object": "area",
+          "target": "Exact fractional product",
+          "math_text": true,
+          "reaction": "The larger denominator still counts equal small parts of one whole.",
+          "correction": "Keep the two whole-number products separate before writing the fraction.",
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "35/13": "That keeps only one denominator, leaving out one partition of the whole.",
+        "35/12": "That keeps only one denominator, leaving out one partition of the whole.",
+        "12/25": "That adds the fraction parts instead of multiplying them.",
+        "91/60": "That changes one fraction to its reciprocal. The requested operation is multiplication."
+      }
+    },
+    {
+      "id": "MD-05-P06",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "A student calculates 3/7 × 4/11. Which answer is correct?",
+      "target": "Exact fractional product",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "12/77",
+          "7/18",
+          "12/11",
+          "7/77"
+        ]
+      },
+      "answer": {
+        "value": "12/77"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That answer counts the selected cells out of all the equal cells.",
+        "correct_after_support": "That answer counts the selected cells out of all the equal cells.",
+        "on_correct_math": "3 × 4 = 12 selected parts. → 7 × 11 = 77 equal parts in the whole. → The exact product is 12/77.",
+        "on_incorrect_attempt_1": "Check the numerator and denominator calculations independently.",
+        "on_incorrect_attempt_2": "Compare each part of the chosen fraction with its multiplication line.",
+        "worked_explanation": "3 × 4 = 12 selected parts. → 7 × 11 = 77 equal parts in the whole. → The exact product is 12/77."
+      },
+      "mathematical_support": {
+        "hint_1": "Check the numerator and denominator calculations independently.",
+        "hint_2": "Both numerator numbers are multiplied, and both denominator numbers are multiplied.",
+        "worked_solution": "3 × 4 = 12 selected parts. → 7 × 11 = 77 equal parts in the whole. → The exact product is 12/77."
+      },
+      "working": [
+        "3 × 4 = 12 selected parts.",
+        "7 × 11 = 77 equal parts in the whole.",
+        "The exact product is 12/77."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_product",
+          "a": 3,
+          "b": 7,
+          "c": 4,
+          "d": 11,
+          "object": "area",
+          "target": "Exact fractional product",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "7/18": "That adds the numerators and denominators.",
+        "12/11": "The numerator product is correct, but one denominator is missing.",
+        "7/77": "The denominator product is correct, but the numerator numbers were added."
+      }
+    },
+    {
+      "id": "MD-05-X01",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "Four fifths of a field is used for crops. Two thirds of the crop area is used for vegetables. What fraction of the whole field is used for vegetables?",
+      "target": "Fraction of the whole field",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "input_label": "Your exact fraction",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "8/15"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Your fraction refers to the vegetables as part of the full field.",
+        "correct_after_support": "Your fraction refers to the vegetables as part of the full field.",
+        "on_correct_math": "2 × 4 = 8 selected parts. → 3 × 5 = 15 equal parts in the original whole. → Exact product: 8/15.",
+        "on_incorrect_attempt_1": "The requested fraction is of the whole field, not just of the crop area.",
+        "on_incorrect_attempt_2": "Track the crop area first, then the vegetable area inside it.",
+        "worked_explanation": "2 × 4 = 8 selected parts. → 3 × 5 = 15 equal parts in the original whole. → Exact product: 8/15."
+      },
+      "mathematical_support": {
+        "hint_1": "The requested fraction is of the whole field, not just of the crop area.",
+        "hint_2": "Use 2 and 4 for the selected-part count, and 3 and 5 for the equal-part count.",
+        "worked_solution": "2 × 4 = 8 selected parts. → 3 × 5 = 15 equal parts in the original whole. → Exact product: 8/15."
+      },
+      "working": [
+        "2 × 4 = 8 selected parts.",
+        "3 × 5 = 15 equal parts in the original whole.",
+        "Exact product: 8/15."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_product",
+          "a": 2,
+          "b": 3,
+          "c": 4,
+          "d": 5,
+          "object": "field",
+          "target": "Fraction of the whole field",
+          "math_text": true,
+          "prompt": "Four fifths of a field is used for crops. Two thirds of the crop area is used for vegetables. What fraction of the whole field is used for vegetables?",
+          "clue": "The requested fraction is of the whole field, not just of the crop area.",
+          "reaction": "Your fraction refers to the vegetables as part of the full field.",
+          "correction": "Track the crop area first, then the vegetable area inside it.",
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "8/5": "That keeps only one denominator, leaving out one partition of the whole.",
+        "8/3": "That keeps only one denominator, leaving out one partition of the whole.",
+        "6/8": "That adds the fraction parts instead of multiplying them.",
+        "10/12": "That changes one fraction to its reciprocal. The requested operation is multiplication."
+      }
+    },
+    {
+      "id": "MD-05-X02",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A water tank is 4/7 full. A factory uses 3/5 of the water in the tank. What fraction of the tank’s total capacity is used?",
+      "target": "Fraction of total tank capacity used",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "input_label": "Your exact fraction",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "12/35"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The answer refers to the used water as a fraction of full capacity.",
+        "correct_after_support": "The answer refers to the used water as a fraction of full capacity.",
+        "on_correct_math": "3 × 4 = 12 selected parts. → 5 × 7 = 35 equal parts in the original whole. → Exact product: 12/35.",
+        "on_incorrect_attempt_1": "Distinguish the water currently in the tank from the tank’s full capacity.",
+        "on_incorrect_attempt_2": "Select the used portion inside the water that was initially available.",
+        "worked_explanation": "3 × 4 = 12 selected parts. → 5 × 7 = 35 equal parts in the original whole. → Exact product: 12/35."
+      },
+      "mathematical_support": {
+        "hint_1": "Distinguish the water currently in the tank from the tank’s full capacity.",
+        "hint_2": "Use 3 and 4 for the selected-part count, and 5 and 7 for the equal-part count.",
+        "worked_solution": "3 × 4 = 12 selected parts. → 5 × 7 = 35 equal parts in the original whole. → Exact product: 12/35."
+      },
+      "working": [
+        "3 × 4 = 12 selected parts.",
+        "5 × 7 = 35 equal parts in the original whole.",
+        "Exact product: 12/35."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_product",
+          "a": 3,
+          "b": 5,
+          "c": 4,
+          "d": 7,
+          "object": "tank",
+          "target": "Fraction of total tank capacity used",
+          "math_text": true,
+          "prompt": "A water tank is 4/7 full. A factory uses 3/5 of the water in the tank. What fraction of the tank’s total capacity is used?",
+          "clue": "Distinguish the water currently in the tank from the tank’s full capacity.",
+          "reaction": "The answer refers to the used water as a fraction of full capacity.",
+          "correction": "Select the used portion inside the water that was initially available.",
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "12/7": "That keeps only one denominator, leaving out one partition of the whole.",
+        "12/5": "That keeps only one denominator, leaving out one partition of the whole.",
+        "7/12": "That adds the fraction parts instead of multiplying them.",
+        "21/20": "That changes one fraction to its reciprocal. The requested operation is multiplication."
+      }
+    },
+    {
+      "id": "MD-05-X04",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A container is 3/5 full. Aisha uses 2/7 of the liquid in the container. Which calculation finds the fraction of the container’s capacity that she uses?",
+      "target": "Calculation for the used capacity",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "3/5 × 2/7",
+          "3/5 + 2/7",
+          "3/5 ÷ 2/7",
+          "2/7 − 3/5"
+        ]
+      },
+      "answer": {
+        "value": "3/5 × 2/7"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Multiplication selects part of the liquid that is already available.",
+        "correct_after_support": "Multiplication selects part of the liquid that is already available.",
+        "on_correct_math": "The available liquid is 3/5 of full capacity. → Aisha uses 2/7 of that available liquid. → 3/5 × 2/7 = 6/35 of full capacity.",
+        "on_incorrect_attempt_1": "The second fraction selects part of the liquid already in the container.",
+        "on_incorrect_attempt_2": "Keep the full capacity as the reference while selecting part of the available liquid.",
+        "worked_explanation": "The available liquid is 3/5 of full capacity. → Aisha uses 2/7 of that available liquid. → 3/5 × 2/7 = 6/35 of full capacity."
+      },
+      "mathematical_support": {
+        "hint_1": "The second fraction selects part of the liquid already in the container.",
+        "hint_2": "The question asks for a portion of the available amount, not a count of portions.",
+        "worked_solution": "The available liquid is 3/5 of full capacity. → Aisha uses 2/7 of that available liquid. → 3/5 × 2/7 = 6/35 of full capacity."
+      },
+      "working": [
+        "The available liquid is 3/5 of full capacity.",
+        "Aisha uses 2/7 of that available liquid.",
+        "3/5 × 2/7 = 6/35 of full capacity."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_product",
+          "a": 2,
+          "b": 7,
+          "c": 3,
+          "d": 5,
+          "object": "container",
+          "target": "Calculation for the used capacity",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "3/5 + 2/7": "That adds fractions instead of selecting part of the liquid.",
+        "3/5 ÷ 2/7": "That counts how many portions fit; it does not find the amount used.",
+        "2/7 − 3/5": "Those fractions refer to different wholes and cannot be subtracted in that way."
+      }
+    },
+    {
+      "id": "MD-05-E01",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "exit",
+      "prompt": "Work out 3/7 × 5/8.",
+      "target": "Exact fractional product",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "input_label": "Your exact fraction",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "15/56"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Your product keeps the numerator and denominator roles aligned.",
+        "correct_after_support": "Your product keeps the numerator and denominator roles aligned.",
+        "on_correct_math": "3 × 5 = 15 selected parts. → 7 × 8 = 56 equal parts in the original whole. → Exact product: 15/56.",
+        "on_incorrect_attempt_1": "Check that both fraction factors are used without changing their values.",
+        "on_incorrect_attempt_2": "Compare the two products with their positions in the exact fraction.",
+        "worked_explanation": "3 × 5 = 15 selected parts. → 7 × 8 = 56 equal parts in the original whole. → Exact product: 15/56.",
+        "on_locked_incorrect": "Compare the selected parts with all the equal parts in the working."
+      },
+      "mathematical_support": {
+        "hint_1": "Check that both fraction factors are used without changing their values.",
+        "hint_2": "Use 3 and 5 for the selected-part count, and 7 and 8 for the equal-part count.",
+        "worked_solution": "3 × 5 = 15 selected parts. → 7 × 8 = 56 equal parts in the original whole. → Exact product: 15/56."
+      },
+      "working": [
+        "3 × 5 = 15 selected parts.",
+        "7 × 8 = 56 equal parts in the original whole.",
+        "Exact product: 15/56."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_product",
+          "a": 3,
+          "b": 7,
+          "c": 5,
+          "d": 8,
+          "object": "area",
+          "target": "Exact fractional product",
+          "math_text": true,
+          "stage": "exit",
+          "reaction": "Your product keeps the numerator and denominator roles aligned.",
+          "correction": "Compare the two products with their positions in the exact fraction.",
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "15/8": "That keeps only one denominator, leaving out one partition of the whole.",
+        "15/7": "That keeps only one denominator, leaving out one partition of the whole.",
+        "8/15": "That adds the fraction parts instead of multiplying them.",
+        "24/35": "That changes one fraction to its reciprocal. The requested operation is multiplication."
+      }
+    },
+    {
+      "id": "MD-05-E02",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "exit",
+      "prompt": "Work out 4/9 × 2/7.",
+      "target": "Exact fractional product",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "input_label": "Your exact fraction",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "8/63"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The exact product accounts for both partitions of the whole.",
+        "correct_after_support": "The exact product accounts for both partitions of the whole.",
+        "on_correct_math": "4 × 2 = 8 selected parts. → 9 × 7 = 63 equal parts in the original whole. → Exact product: 8/63.",
+        "on_incorrect_attempt_1": "Check that both fraction factors are used without changing their values.",
+        "on_incorrect_attempt_2": "Check that neither factor has been inverted or partly omitted.",
+        "worked_explanation": "4 × 2 = 8 selected parts. → 9 × 7 = 63 equal parts in the original whole. → Exact product: 8/63.",
+        "on_locked_incorrect": "Compare the selected parts with all the equal parts in the working."
+      },
+      "mathematical_support": {
+        "hint_1": "Check that both fraction factors are used without changing their values.",
+        "hint_2": "Use 4 and 2 for the selected-part count, and 9 and 7 for the equal-part count.",
+        "worked_solution": "4 × 2 = 8 selected parts. → 9 × 7 = 63 equal parts in the original whole. → Exact product: 8/63."
+      },
+      "working": [
+        "4 × 2 = 8 selected parts.",
+        "9 × 7 = 63 equal parts in the original whole.",
+        "Exact product: 8/63."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_product",
+          "a": 4,
+          "b": 9,
+          "c": 2,
+          "d": 7,
+          "object": "area",
+          "target": "Exact fractional product",
+          "math_text": true,
+          "stage": "exit",
+          "reaction": "The exact product accounts for both partitions of the whole.",
+          "correction": "Check that neither factor has been inverted or partly omitted.",
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "8/7": "That keeps only one denominator, leaving out one partition of the whole.",
+        "8/9": "That keeps only one denominator, leaving out one partition of the whole.",
+        "6/16": "That adds the fraction parts instead of multiplying them.",
+        "28/18": "That changes one fraction to its reciprocal. The requested operation is multiplication."
+      }
+    },
+    {
+      "id": "MD-05-E03",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "exit",
+      "prompt": "Which statement correctly describes multiplying two proper fractions?",
+      "target": "Fraction multiplication method",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Multiply numerator by numerator and denominator by denominator.",
+          "Add the numerators and add the denominators.",
+          "Multiply each numerator by the opposite denominator.",
+          "Turn the second fraction upside down before every multiplication."
+        ]
+      },
+      "answer": {
+        "value": "Multiply numerator by numerator and denominator by denominator."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That method preserves both fraction values and their roles.",
+        "correct_after_support": "That method preserves both fraction values and their roles.",
+        "on_correct_math": "The numerator product counts selected small parts. → The denominator product counts all equal small parts in the whole. → Area, bar and other exact valid methods are also accepted.",
+        "on_incorrect_attempt_1": "Keep selected-part counts separate from total-part counts.",
+        "on_incorrect_attempt_2": "Compare the selected-part count with the whole’s equal-part count.",
+        "worked_explanation": "The numerator product counts selected small parts. → The denominator product counts all equal small parts in the whole. → Area, bar and other exact valid methods are also accepted.",
+        "on_locked_incorrect": "Compare the selected parts with all the equal parts in the working."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep selected-part counts separate from total-part counts.",
+        "hint_2": "The multiplication sign does not require a reciprocal.",
+        "worked_solution": "The numerator product counts selected small parts. → The denominator product counts all equal small parts in the whole. → Area, bar and other exact valid methods are also accepted."
+      },
+      "working": [
+        "The numerator product counts selected small parts.",
+        "The denominator product counts all equal small parts in the whole.",
+        "Area, bar and other exact valid methods are also accepted."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_product_rule",
+          "object": "relationship",
+          "target": "Fraction multiplication method",
+          "math_text": true,
+          "compact_captions": true
+        }
+      }
+    }
+  ],
+  "canonical_lesson": {
+    "version": "MD05-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

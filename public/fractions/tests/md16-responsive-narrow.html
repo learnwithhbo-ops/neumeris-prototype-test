@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MD-16 exact 390px responsive QA</title>
+  <style>body{font:16px system-ui;margin:18px;background:#eef1ef;color:#233936}iframe{width:390px;max-width:100%;height:1100px;border:1px solid #68847c;background:#fff}output{display:block;margin-bottom:12px}</style>
+</head>
+<body>
+  <output id="result">Checking the 390px lesson-visual viewport…</output>
+  <iframe id="preview" title="MD-16 visuals at exactly 390 pixels" src="md16-responsive.html"></iframe>
+  <script>
+    const frame=document.querySelector('#preview');
+    frame.addEventListener('load',()=>{
+      const doc=frame.contentDocument;
+      frame.style.height=doc.documentElement.scrollHeight+'px';
+      document.querySelector('#result').textContent='Viewport '+frame.contentWindow.innerWidth+'px; content '+doc.documentElement.scrollWidth+'px; '+doc.querySelectorAll('#fixtures>section').length+' visual families.';
+    });
+  </script>
+</body>
+</html>

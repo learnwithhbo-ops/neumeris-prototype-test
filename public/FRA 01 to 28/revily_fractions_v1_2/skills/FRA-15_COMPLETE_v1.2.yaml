@@ -1,0 +1,1852 @@
+schema_version: '1.2'
+spec_intent:
+  source_of_truth: true
+  codex_role: implementation_only
+  codex_must_not_invent:
+  - mathematics
+  - question wording
+  - answers
+  - Ryan dialogue
+  - hints
+  - worked solutions
+  - animation storyboards
+  - branching behaviour
+  - mastery rules
+  - lesson sequence
+  - success reactions
+  - reaction sequencing
+  allowed_engine_interpretation: Codex may implement responsive layout, reusable components, state handling and animation
+    mechanics only where they preserve the authored behaviour in this file. The runtime engine may select among exact approved
+    Ryan reaction lines according to the referenced Ryan dialogue profile; it may not generate or paraphrase dialogue.
+identity:
+  id: FRA-15
+  slug: express-one-quantity-as-a-fraction-of-another
+  title: Express One Quantity as a Fraction of Another
+  strand: Number
+  cluster: Fractions
+  tier: GCSE Foundation
+  status: spec_complete_pending_human_review_v1_2
+  estimated_minutes:
+    min: 24
+    max: 30
+curriculum:
+  basis: England GCSE Mathematics / national curriculum spine; board-neutral Revily Fractions Registry mapping.
+  role: direct_gcse
+  official_mapping:
+    direct_gcse_refs:
+    - source: England GCSE Mathematics / national curriculum spine
+      ref: 'DfE GCSE Ratio content: express one quantity as a fraction of another'
+      relationship: Directly or materially assessed through express one quantity as a fraction of another.
+    - source: England GCSE Mathematics / national curriculum spine
+      ref: AQA R3
+      relationship: Directly or materially assessed through express one quantity as a fraction of another.
+    supports_gcse_refs: []
+    registry_compatibility: Revily Fractions Curriculum Registry v0.9 Draft; atomic ID preserved.
+  learning_objective: Express one quantity as a fraction of another, preserving the correct comparison order and simplifying
+    when requested.
+  success_criteria:
+  - Complete a direct example of express one quantity as a fraction of another accurately.
+  - Explain or use the mathematical invariant rather than relying on a surface pattern.
+  - Transfer the idea to a fresh representation or GCSE-style context without initial support.
+  boundaries:
+    includes:
+    - Fractions below one
+    - Fractions above one
+    - Same-unit quantities
+    - Contextual comparisons
+    excludes:
+    - Ratio notation as the target
+    - Percentage conversion
+    - Hidden unit conversions
+dependencies:
+  required_skill_refs:
+  - FRA-01
+  - FRA-02
+  - FRA-10
+  entry_assumptions:
+  - Matched units before forming the fraction.
+  downstream_rule: Do not store leads_to. Derive downstream relationships from other skill prerequisite references and the
+    approved curriculum graph.
+engine_capability_requirements:
+  input_types:
+  - integer
+  - fraction
+  - single_choice
+  - yes_no
+  - comparison_symbol
+  - mixed_number
+  - ordered_sequence
+  visual_primitives:
+  - quantity_compare
+  - fraction_input
+  - integer_input
+  - single_choice
+  - comparison_symbol
+  - caption_layer
+  - progress_indicator
+  animation_actions:
+  - fade_in
+  - highlight
+  - subdivide
+  - shade
+  - move
+  - morph
+  - reveal_equation
+  - draw_arrow
+  - group
+  - ungroup
+  - combine
+  - remove
+  - crossfade_label
+  - ghost_non_focus
+  audio_capabilities:
+  - queued_tts_or_audio
+  - caption_sync
+  - narration_animation_sync
+  - pause_for_input
+  - cancel_on_navigation
+  state_capabilities:
+  - attempt_count
+  - step_resume
+  - skill_state
+  - diagnostic_evidence
+  - exit_score
+  - confirmation_branch
+  - used_ryan_reaction_ids
+experience_contract:
+  target_session_minutes:
+    min: 24
+    max: 30
+  ordered_phases:
+  - teaching
+  - guided
+  - faded
+  - independent_transfer
+  - practice
+  - exit
+  - completion
+  navigation:
+    default: linear_forward
+    back_button: May revisit completed explanatory screens but must not reset recorded submitted answers.
+    refresh_resume: Resume the current skill at the latest committed step.
+    start_again: Reset current lesson attempt only; preserve historical completion records.
+  global_ui_copy:
+    submit: Check answer
+    continue: Continue
+    try_again: Try again
+    show_me: Show me
+    finish: Finish
+    continue_learning: Continue learning
+    stop_for_today: Finish for today
+  progress_indicator:
+    show: true
+    student_facing_style: phase_progress_without_raw_internal_ids
+    do_not_show: Do not expose YAML ids, attempt counters or AO labels to the learner.
+  interaction_rules:
+  - Never auto-submit a mathematical answer.
+  - Disable Continue until the current required interaction is resolved.
+  - Do not use success confetti.
+  - Do not shake the entire screen on an error.
+  - Keep keyboard focus predictable after retry.
+voice_and_script:
+  performer_name: Ryan
+  dialogue_profile_ref: RYAN_DIALOGUE_PROFILE_v1.yaml
+  script_ownership: All mathematical narration, prompts, hints, worked explanations and completion scripts in this file are
+    exact authored content. The engine may select only generic reactions from the referenced Ryan profile and may not generate
+    or paraphrase dialogue.
+  delivery_style:
+  - Natural UK English
+  - Warm, conversational and encouraging
+  - Praise should respond to understanding, independence or recovery rather than merely announce correctness
+  - No one-word success reactions
+  - No repeated praise lead-ins anywhere in the same lesson attempt
+  - Do not begin a new slide by repeating praise or a conclusion that was just spoken
+  - Use pauses to let the learner inspect visuals
+  success_reaction_policy:
+    mode: engine_select_from_authored_profile
+    generation_allowed: false
+    selection_state_scope: lesson_attempt
+    persist_selection_history_on_refresh_resume: true
+    derive_context_from:
+    - stage
+    - attempt_count
+    - recovery_status
+    - practice_streak
+    no_repeat:
+    - reaction_id
+    - exact_text
+    - lead_family
+    fallback_when_pool_exhausted: Speak only the item-specific mathematical follow-up. Never repeat or invent praise.
+    diagnostic: silent
+    exit_and_confirmation: silent_until_completion_result
+    selection: Engine selects an unused approved Ryan reaction appropriate to context without replacement; no exact text or
+      lead family repeats within a lesson attempt.
+    exhaustion: If the eligible bank is exhausted, speak only the question-specific mathematical follow-up. Never repeat or
+      generate praise.
+  adjacent_speech_policy:
+    after_success: Do not play a second generic acknowledgement before the next scene.
+    next_scene: Begin directly with new mathematical content.
+    semantic_echo: The next scene must not restate the same mathematical conclusion just delivered in success feedback.
+    item_math_feedback: May follow the selected generic reaction only when it adds mathematical value.
+  caption_policy: Every spoken line must be captioned verbatim. Captions stay visible long enough to be read and disappear
+    before the next unrelated line.
+visual_language:
+  scene_rules:
+    composition: Single central teaching canvas. The mathematical object is always the largest visual element; controls remain
+      below or beside it without covering the model.
+    labels: Labels sit beside the exact object they describe. Symbolic notation remains close enough to the visual model to
+      make the connection obvious.
+    motion: Motion must reveal mathematical structure only. No decorative bouncing, confetti or unrelated character animation.
+    focus: At each narration beat, de-emphasise non-essential objects and emphasise only the mathematical relationship being
+      discussed.
+  semantic_roles:
+  - whole
+  - selected_quantity
+  - partition_or_unit
+  - current_operation
+  - unchanged_invariant
+  - student_focus
+  - error
+  - success
+  style_direction:
+  - Professional educational vector style
+  - Clean geometry and legible fraction typography
+  - Use multiple semantic colours consistently rather than a single monochrome palette
+  - Maintain high contrast and uncluttered spacing
+  - Animation timing should feel deliberate rather than game-like
+  primary_visual_contract:
+    primitive: quantity_compare
+    purpose: “A as a fraction of B” means A/B in that order.
+    rules:
+    - The same mathematical role keeps the same semantic colour within the lesson.
+    - A transformation must preserve every quantity declared invariant by the concept model.
+    - Do not animate an operation before Ryan has established what the motion means.
+  animation_blueprint:
+    setup: Place quantity A and quantity B in two labelled bars with the exact wording “A as a fraction of B” above them.
+    transform: Move A into the numerator slot and B into the denominator slot in the same left-to-right wording order; if
+      simplest form is requested, then run the FRA-10 reduction animation.
+    contrast: Reverse the fraction briefly as a ghost to show it answers the opposite question; allow fractions greater than
+      one when A>B.
+    error: Highlight the wording order and units before any simplification.
+    summary: Finish with first named quantity / second named quantity, then simplify only if requested.
+  reduced_motion: Replace long translations or subdivision movement with two-state morphs/crossfades while preserving all
+    mathematical labels, intermediate states and narration meaning.
+diagnostic:
+  purpose: Determine whether this atomic skill needs teaching. Each diagnostic item targets this skill directly; do not infer
+    a misconception label from a distractor in V1.
+  question_refs:
+  - FRA-15-D01
+  - FRA-15-D02
+  presentation: Two separate short items. No hints, worked solutions, correctness reveal or Ryan praise during diagnosis.
+  scoring:
+    2_of_2: DIAGNOSTIC_SECURE
+    0_or_1_of_2: NEEDS_WORK
+  routing: After all diagnostic skills are scored, start at the earliest non-secure skill in prerequisite order.
+concept_model:
+  core_idea: “A as a fraction of B” means A/B in that order.
+  invariant: The wording fixes which quantity belongs in the numerator and which belongs in the denominator.
+  mathematical_rule: First named quantity goes on top; second named quantity goes on bottom; simplify only when requested.
+  vocabulary:
+  - as a fraction of
+  - comparison order
+  - numerator
+  - denominator
+  - simplest form
+  must_notice:
+  - “A as a fraction of B” means A/B in that order.
+  - The wording fixes which quantity belongs in the numerator and which belongs in the denominator.
+  - First named quantity goes on top; second named quantity goes on bottom; simplify only when requested.
+  common_confusions:
+  - Reverses the requested comparison order.
+  - Uses part over total automatically even when wording asks A as a fraction of B.
+  - Forces every answer to be below one.
+lesson:
+  teaching_steps:
+  - id: T01
+    stage: teaching
+    purpose: Establish the core idea before any procedure is introduced.
+    estimated_seconds: 35
+    scene:
+      layout: Single central teaching canvas with the mathematical model dominant and Ryan captions below the model.
+      objects:
+      - 'quantity_compare: Place quantity A and quantity B in two labelled bars with the exact wording “A as a fraction of
+        B” above them. Ryan line for this scene is fixed as: The wording ''A as a fraction of B'' fixes the order. A goes
+        on top; B goes underneath. Render every numerical or symbolic example literally named in that line; add no alternative
+        example.'
+      initial_state: 'Place quantity A and quantity B in two labelled bars with the exact wording “A as a fraction of B” above
+        them. Ryan line for this scene is fixed as: The wording ''A as a fraction of B'' fixes the order. A goes on top; B
+        goes underneath. Render every numerical or symbolic example literally named in that line; add no alternative example.'
+    narration:
+      script: The wording 'A as a fraction of B' fixes the order. A goes on top; B goes underneath.
+      delivery: Warm, conversational, with a short pause before the key mathematical phrase.
+      sync_cues:
+      - cue: key mathematical phrase
+        action: fade_in on exact mathematical objects named by the scene narration or linked question prompt
+    animation_timeline:
+    - id: T01-A01
+      trigger: narration cue
+      action: fade_in
+      target: exact mathematical objects named by the scene narration or linked question prompt
+      from: 'Place quantity A and quantity B in two labelled bars with the exact wording “A as a fraction of B” above them.
+        Ryan line for this scene is fixed as: The wording ''A as a fraction of B'' fixes the order. A goes on top; B goes
+        underneath. Render every numerical or symbolic example literally named in that line; add no alternative example.'
+      to: 'Place quantity A and quantity B in two labelled bars with the exact wording “A as a fraction of B” above them.
+        End with this invariant still true and visibly inspectable: The wording fixes which quantity belongs in the numerator
+        and which belongs in the denominator.'
+      duration_ms: 750
+      easing: ease-in-out
+      semantic_purpose: Establish the core idea before any procedure is introduced.
+    learner_interaction:
+      question_ref: null
+      input_position: directly beneath the mathematical model
+      auto_focus: false
+    branching:
+      continue:
+        ryan_script: null
+        visual_action: Keep the final mathematical state visible until Continue is selected.
+        next_step: T02
+    next_step: T02
+  - id: T02
+    stage: teaching
+    purpose: Make the invariant visible through the primary mathematical model.
+    estimated_seconds: 35
+    scene:
+      layout: Single central teaching canvas with the mathematical model dominant and Ryan captions below the model.
+      objects:
+      - 'quantity_compare: Place quantity A and quantity B in two labelled bars with the exact wording “A as a fraction of
+        B” above them. Ryan line for this scene is fixed as: Six as a fraction of fifteen is 6/15. We have not asked what
+        fraction of a total is shaded; we are comparing one named quantity directly with another. Render every numerical or
+        symbolic example literally named in that line; add no alternative example.'
+      initial_state: 'Place quantity A and quantity B in two labelled bars with the exact wording “A as a fraction of B” above
+        them. Ryan line for this scene is fixed as: Six as a fraction of fifteen is 6/15. We have not asked what fraction
+        of a total is shaded; we are comparing one named quantity directly with another. Render every numerical or symbolic
+        example literally named in that line; add no alternative example.'
+    narration:
+      script: Six as a fraction of fifteen is 6/15. We have not asked what fraction of a total is shaded; we are comparing
+        one named quantity directly with another.
+      delivery: Warm, conversational, with a short pause before the key mathematical phrase.
+      sync_cues:
+      - cue: key mathematical phrase
+        action: partition_or_group on exact mathematical objects named by the scene narration or linked question prompt
+    animation_timeline:
+    - id: T02-A01
+      trigger: narration cue
+      action: partition_or_group
+      target: exact mathematical objects named by the scene narration or linked question prompt
+      from: 'Place quantity A and quantity B in two labelled bars with the exact wording “A as a fraction of B” above them.
+        Ryan line for this scene is fixed as: Six as a fraction of fifteen is 6/15. We have not asked what fraction of a total
+        is shaded; we are comparing one named quantity directly with another. Render every numerical or symbolic example literally
+        named in that line; add no alternative example.'
+      to: 'Move A into the numerator slot and B into the denominator slot in the same left-to-right wording order; if simplest
+        form is requested, then run the FRA-10 reduction animation. End with this invariant still true and visibly inspectable:
+        The wording fixes which quantity belongs in the numerator and which belongs in the denominator.'
+      duration_ms: 800
+      easing: ease-in-out
+      semantic_purpose: Make the invariant visible through the primary mathematical model.
+    learner_interaction:
+      question_ref: null
+      input_position: directly beneath the mathematical model
+      auto_focus: false
+    branching:
+      continue:
+        ryan_script: null
+        visual_action: Keep the final mathematical state visible until Continue is selected.
+        next_step: T03
+    next_step: T03
+  - id: T03
+    stage: teaching
+    purpose: Require the learner to act on the first visible relationship.
+    estimated_seconds: 45
+    scene:
+      layout: Single central teaching canvas with the mathematical model dominant and Ryan captions below the model.
+      objects:
+      - 'quantity_compare: Interactive checkpoint. Place quantity A and quantity B in two labelled bars with the exact wording
+        “A as a fraction of B” above them. Render the exact quantities/representation required by this authored prompt: Express
+        3 as a fraction of 10. Do not pre-fill the learner answer.'
+      initial_state: 'Interactive checkpoint. Place quantity A and quantity B in two labelled bars with the exact wording
+        “A as a fraction of B” above them. Render the exact quantities/representation required by this authored prompt: Express
+        3 as a fraction of 10. Do not pre-fill the learner answer.'
+    narration:
+      script: Write this comparison in the order the sentence gives you.
+      delivery: Warm, conversational, with a short pause before the key mathematical phrase.
+      sync_cues:
+      - cue: key mathematical phrase
+        action: highlight on exact mathematical objects named by the scene narration or linked question prompt
+    animation_timeline:
+    - id: T03-A01
+      trigger: narration cue
+      action: highlight
+      target: exact mathematical objects named by the scene narration or linked question prompt
+      from: 'Interactive checkpoint. Place quantity A and quantity B in two labelled bars with the exact wording “A as a fraction
+        of B” above them. Render the exact quantities/representation required by this authored prompt: Express 3 as a fraction
+        of 10. Do not pre-fill the learner answer.'
+      to: 'After resolution, preserve the submitted prompt quantities and apply this authored error/correctness model if needed:
+        Highlight the wording order and units before any simplification. Keep the concept invariant visible: The wording fixes
+        which quantity belongs in the numerator and which belongs in the denominator.'
+      duration_ms: 850
+      easing: ease-in-out
+      semantic_purpose: Require the learner to act on the first visible relationship.
+    learner_interaction:
+      question_ref: FRA-15-C01
+      input_position: directly beneath the mathematical model
+      auto_focus: true
+    branching:
+      correct:
+        ryan_script: Use the exact success-reaction selection policy, then the question-specific mathematical follow-up.
+        visual_action: Apply the question-specific correct visual feedback only.
+        next_step: T04
+      incorrect_attempt_1:
+        ryan_script: Use the exact question-specific first hint.
+        visual_action: Highlight only the mathematical feature named by the hint.
+        next_step: T03
+      incorrect_attempt_2:
+        ryan_script: Use the exact question-specific second hint and worked explanation.
+        visual_action: Reveal the critical relationship and run the authored recovery item when referenced.
+        next_step: FRA-15-R01
+    next_step: T04
+  - id: T04
+    stage: teaching
+    purpose: Connect the visual relationship to precise mathematical language or notation.
+    estimated_seconds: 35
+    scene:
+      layout: Single central teaching canvas with the mathematical model dominant and Ryan captions below the model.
+      objects:
+      - 'quantity_compare: Move A into the numerator slot and B into the denominator slot in the same left-to-right wording
+        order; if simplest form is requested, then run the FRA-10 reduction animation. Ryan line for this scene is fixed as:
+        The answer can be greater than one. Twelve as a fraction of eight is 12/8 because the first quantity is larger. Render
+        every numerical or symbolic example literally named in that line; add no alternative example.'
+      initial_state: 'Move A into the numerator slot and B into the denominator slot in the same left-to-right wording order;
+        if simplest form is requested, then run the FRA-10 reduction animation. Ryan line for this scene is fixed as: The
+        answer can be greater than one. Twelve as a fraction of eight is 12/8 because the first quantity is larger. Render
+        every numerical or symbolic example literally named in that line; add no alternative example.'
+    narration:
+      script: The answer can be greater than one. Twelve as a fraction of eight is 12/8 because the first quantity is larger.
+      delivery: Warm, conversational, with a short pause before the key mathematical phrase.
+      sync_cues:
+      - cue: key mathematical phrase
+        action: reveal_equation on exact mathematical objects named by the scene narration or linked question prompt
+    animation_timeline:
+    - id: T04-A01
+      trigger: narration cue
+      action: reveal_equation
+      target: exact mathematical objects named by the scene narration or linked question prompt
+      from: 'Move A into the numerator slot and B into the denominator slot in the same left-to-right wording order; if simplest
+        form is requested, then run the FRA-10 reduction animation. Ryan line for this scene is fixed as: The answer can be
+        greater than one. Twelve as a fraction of eight is 12/8 because the first quantity is larger. Render every numerical
+        or symbolic example literally named in that line; add no alternative example.'
+      to: 'Reverse the fraction briefly as a ghost to show it answers the opposite question; allow fractions greater than
+        one when A>B. End with this invariant still true and visibly inspectable: The wording fixes which quantity belongs
+        in the numerator and which belongs in the denominator.'
+      duration_ms: 900
+      easing: ease-in-out
+      semantic_purpose: Connect the visual relationship to precise mathematical language or notation.
+    learner_interaction:
+      question_ref: null
+      input_position: directly beneath the mathematical model
+      auto_focus: false
+    branching:
+      continue:
+        ryan_script: null
+        visual_action: Keep the final mathematical state visible until Continue is selected.
+        next_step: T05
+    next_step: T05
+  - id: T05
+    stage: teaching
+    purpose: Show a second example that varies surface features while preserving the same structure.
+    estimated_seconds: 35
+    scene:
+      layout: Single central teaching canvas with the mathematical model dominant and Ryan captions below the model.
+      objects:
+      - 'quantity_compare: Place quantity A and quantity B in two labelled bars with the exact wording “A as a fraction of
+        B” above them. Ryan line for this scene is fixed as: If the question asks for simplest form, simplify after you have
+        written the comparison in the correct order. Render every numerical or symbolic example literally named in that line;
+        add no alternative example.'
+      initial_state: 'Place quantity A and quantity B in two labelled bars with the exact wording “A as a fraction of B” above
+        them. Ryan line for this scene is fixed as: If the question asks for simplest form, simplify after you have written
+        the comparison in the correct order. Render every numerical or symbolic example literally named in that line; add
+        no alternative example.'
+    narration:
+      script: If the question asks for simplest form, simplify after you have written the comparison in the correct order.
+      delivery: Warm, conversational, with a short pause before the key mathematical phrase.
+      sync_cues:
+      - cue: key mathematical phrase
+        action: transform_representation on exact mathematical objects named by the scene narration or linked question prompt
+    animation_timeline:
+    - id: T05-A01
+      trigger: narration cue
+      action: transform_representation
+      target: exact mathematical objects named by the scene narration or linked question prompt
+      from: 'Place quantity A and quantity B in two labelled bars with the exact wording “A as a fraction of B” above them.
+        Ryan line for this scene is fixed as: If the question asks for simplest form, simplify after you have written the
+        comparison in the correct order. Render every numerical or symbolic example literally named in that line; add no alternative
+        example.'
+      to: 'Move A into the numerator slot and B into the denominator slot in the same left-to-right wording order; if simplest
+        form is requested, then run the FRA-10 reduction animation. End with this invariant still true and visibly inspectable:
+        The wording fixes which quantity belongs in the numerator and which belongs in the denominator.'
+      duration_ms: 950
+      easing: ease-in-out
+      semantic_purpose: Show a second example that varies surface features while preserving the same structure.
+    learner_interaction:
+      question_ref: null
+      input_position: directly beneath the mathematical model
+      auto_focus: false
+    branching:
+      continue:
+        ryan_script: null
+        visual_action: Keep the final mathematical state visible until Continue is selected.
+        next_step: T06
+    next_step: T06
+  - id: T06
+    stage: teaching
+    purpose: Require a second learner decision with reduced prompting.
+    estimated_seconds: 45
+    scene:
+      layout: Single central teaching canvas with the mathematical model dominant and Ryan captions below the model.
+      objects:
+      - 'quantity_compare: Interactive checkpoint. Place quantity A and quantity B in two labelled bars with the exact wording
+        “A as a fraction of B” above them. Render the exact quantities/representation required by this authored prompt: Express
+        14 as a fraction of 21 in its simplest form. Do not pre-fill the learner answer.'
+      initial_state: 'Interactive checkpoint. Place quantity A and quantity B in two labelled bars with the exact wording
+        “A as a fraction of B” above them. Render the exact quantities/representation required by this authored prompt: Express
+        14 as a fraction of 21 in its simplest form. Do not pre-fill the learner answer.'
+    narration:
+      script: Build the fraction first, then simplify this one.
+      delivery: Warm, conversational, with a short pause before the key mathematical phrase.
+      sync_cues:
+      - cue: key mathematical phrase
+        action: highlight on exact mathematical objects named by the scene narration or linked question prompt
+    animation_timeline:
+    - id: T06-A01
+      trigger: narration cue
+      action: highlight
+      target: exact mathematical objects named by the scene narration or linked question prompt
+      from: 'Interactive checkpoint. Place quantity A and quantity B in two labelled bars with the exact wording “A as a fraction
+        of B” above them. Render the exact quantities/representation required by this authored prompt: Express 14 as a fraction
+        of 21 in its simplest form. Do not pre-fill the learner answer.'
+      to: 'After resolution, preserve the submitted prompt quantities and apply this authored error/correctness model if needed:
+        Highlight the wording order and units before any simplification. Keep the concept invariant visible: The wording fixes
+        which quantity belongs in the numerator and which belongs in the denominator.'
+      duration_ms: 1000
+      easing: ease-in-out
+      semantic_purpose: Require a second learner decision with reduced prompting.
+    learner_interaction:
+      question_ref: FRA-15-C02
+      input_position: directly beneath the mathematical model
+      auto_focus: true
+    branching:
+      correct:
+        ryan_script: Use the exact success-reaction selection policy, then the question-specific mathematical follow-up.
+        visual_action: Apply the question-specific correct visual feedback only.
+        next_step: T07
+      incorrect_attempt_1:
+        ryan_script: Use the exact question-specific first hint.
+        visual_action: Highlight only the mathematical feature named by the hint.
+        next_step: T06
+      incorrect_attempt_2:
+        ryan_script: Use the exact question-specific second hint and worked explanation.
+        visual_action: Reveal the critical relationship and run the authored recovery item when referenced.
+        next_step: FRA-15-R02
+    next_step: T07
+  - id: T07
+    stage: teaching
+    purpose: State the general rule only after the learner has seen why it works.
+    estimated_seconds: 35
+    scene:
+      layout: Single central teaching canvas with the mathematical model dominant and Ryan captions below the model.
+      objects:
+      - 'quantity_compare: Move A into the numerator slot and B into the denominator slot in the same left-to-right wording
+        order; if simplest form is requested, then run the FRA-10 reduction animation. Ryan line for this scene is fixed as:
+        The safest habit is to read the sentence literally: first quantity over second quantity. Render every numerical or
+        symbolic example literally named in that line; add no alternative example.'
+      initial_state: 'Move A into the numerator slot and B into the denominator slot in the same left-to-right wording order;
+        if simplest form is requested, then run the FRA-10 reduction animation. Ryan line for this scene is fixed as: The
+        safest habit is to read the sentence literally: first quantity over second quantity. Render every numerical or symbolic
+        example literally named in that line; add no alternative example.'
+    narration:
+      script: 'The safest habit is to read the sentence literally: first quantity over second quantity.'
+      delivery: Warm, conversational, with a short pause before the key mathematical phrase.
+      sync_cues:
+      - cue: key mathematical phrase
+        action: reveal_rule on exact mathematical objects named by the scene narration or linked question prompt
+    animation_timeline:
+    - id: T07-A01
+      trigger: narration cue
+      action: reveal_rule
+      target: exact mathematical objects named by the scene narration or linked question prompt
+      from: 'Move A into the numerator slot and B into the denominator slot in the same left-to-right wording order; if simplest
+        form is requested, then run the FRA-10 reduction animation. Ryan line for this scene is fixed as: The safest habit
+        is to read the sentence literally: first quantity over second quantity. Render every numerical or symbolic example
+        literally named in that line; add no alternative example.'
+      to: 'Finish with first named quantity / second named quantity, then simplify only if requested. End with this invariant
+        still true and visibly inspectable: The wording fixes which quantity belongs in the numerator and which belongs in
+        the denominator.'
+      duration_ms: 1050
+      easing: ease-in-out
+      semantic_purpose: State the general rule only after the learner has seen why it works.
+    learner_interaction:
+      question_ref: null
+      input_position: directly beneath the mathematical model
+      auto_focus: false
+    branching:
+      continue:
+        ryan_script: null
+        visual_action: Keep the final mathematical state visible until Continue is selected.
+        next_step: T08
+    next_step: T08
+  - id: T08
+    stage: teaching
+    purpose: Check the common trap or boundary case before support fades.
+    estimated_seconds: 45
+    scene:
+      layout: Single central teaching canvas with the mathematical model dominant and Ryan captions below the model.
+      objects:
+      - 'quantity_compare: Interactive checkpoint. Place quantity A and quantity B in two labelled bars with the exact wording
+        “A as a fraction of B” above them. Render the exact quantities/representation required by this authored prompt: Express
+        9 as a fraction of 6. Do not pre-fill the learner answer.'
+      initial_state: 'Interactive checkpoint. Place quantity A and quantity B in two labelled bars with the exact wording
+        “A as a fraction of B” above them. Render the exact quantities/representation required by this authored prompt: Express
+        9 as a fraction of 6. Do not pre-fill the learner answer.'
+    narration:
+      script: Use that order on a case where the answer is greater than one.
+      delivery: Warm, conversational, with a short pause before the key mathematical phrase.
+      sync_cues:
+      - cue: key mathematical phrase
+        action: highlight_error_boundary on exact mathematical objects named by the scene narration or linked question prompt
+    animation_timeline:
+    - id: T08-A01
+      trigger: narration cue
+      action: highlight_error_boundary
+      target: exact mathematical objects named by the scene narration or linked question prompt
+      from: 'Interactive checkpoint. Place quantity A and quantity B in two labelled bars with the exact wording “A as a fraction
+        of B” above them. Render the exact quantities/representation required by this authored prompt: Express 9 as a fraction
+        of 6. Do not pre-fill the learner answer.'
+      to: 'After resolution, preserve the submitted prompt quantities and apply this authored error/correctness model if needed:
+        Highlight the wording order and units before any simplification. Keep the concept invariant visible: The wording fixes
+        which quantity belongs in the numerator and which belongs in the denominator.'
+      duration_ms: 1100
+      easing: ease-in-out
+      semantic_purpose: Check the common trap or boundary case before support fades.
+    learner_interaction:
+      question_ref: FRA-15-C03
+      input_position: directly beneath the mathematical model
+      auto_focus: true
+    branching:
+      correct:
+        ryan_script: Use the exact success-reaction selection policy, then the question-specific mathematical follow-up.
+        visual_action: Apply the question-specific correct visual feedback only.
+        next_step: T09
+      incorrect_attempt_1:
+        ryan_script: Use the exact question-specific first hint.
+        visual_action: Highlight only the mathematical feature named by the hint.
+        next_step: T08
+      incorrect_attempt_2:
+        ryan_script: Use the exact question-specific second hint and worked explanation.
+        visual_action: Reveal the critical relationship and run the authored recovery item when referenced.
+        next_step: FRA-15-R03
+    next_step: T09
+  - id: T09
+    stage: teaching
+    purpose: Consolidate what changes and what remains invariant.
+    estimated_seconds: 35
+    scene:
+      layout: Single central teaching canvas with the mathematical model dominant and Ryan captions below the model.
+      objects:
+      - 'quantity_compare: Reverse the fraction briefly as a ghost to show it answers the opposite question; allow fractions
+        greater than one when A>B. Ryan line for this scene is fixed as: This skill connects naturally to ratio and probability
+        later, but the comparison order must stay precise. Render every numerical or symbolic example literally named in that
+        line; add no alternative example.'
+      initial_state: 'Reverse the fraction briefly as a ghost to show it answers the opposite question; allow fractions greater
+        than one when A>B. Ryan line for this scene is fixed as: This skill connects naturally to ratio and probability later,
+        but the comparison order must stay precise. Render every numerical or symbolic example literally named in that line;
+        add no alternative example.'
+    narration:
+      script: This skill connects naturally to ratio and probability later, but the comparison order must stay precise.
+      delivery: Warm, conversational, with a short pause before the key mathematical phrase.
+      sync_cues:
+      - cue: key mathematical phrase
+        action: compare_change_and_invariant on exact mathematical objects named by the scene narration or linked question
+          prompt
+    animation_timeline:
+    - id: T09-A01
+      trigger: narration cue
+      action: compare_change_and_invariant
+      target: exact mathematical objects named by the scene narration or linked question prompt
+      from: 'Reverse the fraction briefly as a ghost to show it answers the opposite question; allow fractions greater than
+        one when A>B. Ryan line for this scene is fixed as: This skill connects naturally to ratio and probability later,
+        but the comparison order must stay precise. Render every numerical or symbolic example literally named in that line;
+        add no alternative example.'
+      to: 'Finish with first named quantity / second named quantity, then simplify only if requested. End with this invariant
+        still true and visibly inspectable: The wording fixes which quantity belongs in the numerator and which belongs in
+        the denominator.'
+      duration_ms: 1150
+      easing: ease-in-out
+      semantic_purpose: Consolidate what changes and what remains invariant.
+    learner_interaction:
+      question_ref: null
+      input_position: directly beneath the mathematical model
+      auto_focus: false
+    branching:
+      continue:
+        ryan_script: null
+        visual_action: Keep the final mathematical state visible until Continue is selected.
+        next_step: T10
+    next_step: T10
+  - id: T10
+    stage: teaching
+    purpose: Transition from teaching into guided-to-independent transfer without repeating praise.
+    estimated_seconds: 35
+    scene:
+      layout: Single central teaching canvas with the mathematical model dominant and Ryan captions below the model.
+      objects:
+      - 'quantity_compare: Place quantity A and quantity B in two labelled bars with the exact wording “A as a fraction of
+        B” above them. Ryan line for this scene is fixed as: Now I will remove the wording cues and let you set up the fraction
+        yourself. Render every numerical or symbolic example literally named in that line; add no alternative example.'
+      initial_state: 'Place quantity A and quantity B in two labelled bars with the exact wording “A as a fraction of B” above
+        them. Ryan line for this scene is fixed as: Now I will remove the wording cues and let you set up the fraction yourself.
+        Render every numerical or symbolic example literally named in that line; add no alternative example.'
+    narration:
+      script: Now I will remove the wording cues and let you set up the fraction yourself.
+      delivery: Warm, conversational, with a short pause before the key mathematical phrase.
+      sync_cues:
+      - cue: key mathematical phrase
+        action: fade_scaffolds on exact mathematical objects named by the scene narration or linked question prompt
+    animation_timeline:
+    - id: T10-A01
+      trigger: narration cue
+      action: fade_scaffolds
+      target: exact mathematical objects named by the scene narration or linked question prompt
+      from: 'Place quantity A and quantity B in two labelled bars with the exact wording “A as a fraction of B” above them.
+        Ryan line for this scene is fixed as: Now I will remove the wording cues and let you set up the fraction yourself.
+        Render every numerical or symbolic example literally named in that line; add no alternative example.'
+      to: 'Finish with first named quantity / second named quantity, then simplify only if requested. End with this invariant
+        still true and visibly inspectable: The wording fixes which quantity belongs in the numerator and which belongs in
+        the denominator.'
+      duration_ms: 1200
+      easing: ease-in-out
+      semantic_purpose: Transition from teaching into guided-to-independent transfer without repeating praise.
+    learner_interaction:
+      question_ref: null
+      input_position: directly beneath the mathematical model
+      auto_focus: false
+    branching:
+      continue:
+        ryan_script: null
+        visual_action: Keep the final mathematical state visible until Continue is selected.
+        next_step: G01
+    next_step: G01
+  transfer_steps:
+    G01:
+      stage: guided
+      question_ref: FRA-15-G01
+      support_level: high
+      estimated_seconds: 100
+      pre_question_script: I will keep the key structure visible on this one. You make the mathematical decision; use the
+        picture if you need it.
+      visual_before_answer: Show the primary quantity_compare with the key invariant labelled, but do not fill the answer.
+      correct_next: F01
+      recovery_ref: FRA-15-R01
+    F01:
+      stage: faded
+      question_ref: FRA-15-F01
+      support_level: reduced
+      estimated_seconds: 110
+      pre_question_script: This time I am taking away one layer of support. The structure is still there, but you need to
+        choose the key step yourself.
+      visual_before_answer: Show only the essential quantity_compare with no worked numerical labels.
+      correct_next: I01
+      recovery_ref: FRA-15-R02
+    I01:
+      stage: independent_transfer
+      question_ref: FRA-15-I01
+      support_level: none
+      estimated_seconds: 120
+      pre_question_script: Now take this one independently. I will not point to the method before you answer.
+      visual_before_answer: Show only the exact representation required by the question; no hint arrows, method labels or
+        pre-filled steps.
+      correct_next: P01
+      recovery_ref: FRA-15-R03
+  practice:
+    intro_script: You have the idea. Here are five short questions that change the surface a little each time. I will help
+      if you genuinely get stuck, but I want you making the first move.
+    question_order:
+    - FRA-15-P01
+    - FRA-15-P02
+    - FRA-15-P03
+    - FRA-15-P04
+    - FRA-15-P05
+    question_count: 5
+    feedback_policy: First wrong attempt gives the authored focused hint; second wrong attempt reveals the critical visual
+      step and exact worked explanation. Supported correctness is learning evidence, not exit mastery.
+    between_question_transition: Use at most one unused Ryan success reaction after a correct submission. If the next question
+      or scene has its own spoken introduction, do not add a transition line.
+  exit:
+    intro_script: Last check. Two fresh questions, no hints while you are answering. I am stepping out of the method now so
+      we can see whether the idea is really yours.
+    primary_question_refs:
+    - FRA-15-E01
+    - FRA-15-E02
+    confirmation_question_refs:
+    - FRA-15-E03
+    - FRA-15-E04
+    submission_policy: One submission per exit item. Do not reveal correctness or give mathematical hints until both primary
+      exit items have been completed and the mastery branch has been chosen.
+    mastery_logic:
+      2_correct_of_2: SECURE
+      1_correct_of_2: Ask one unused confirmation item. Correct -> SECURE. Incorrect -> NEEDS_WORK.
+      0_correct_of_2: NEEDS_WORK
+    confirmation_selection: Use E03 first unless it has already appeared in the current lesson attempt; otherwise use E04.
+completion:
+  secure:
+    title: Skill complete
+    ryan_script: That was a strong finish. You have learned express one quantity as a fraction of another and, more importantly,
+      you used the idea independently at the end. You can stop here for today, or keep going while it is feeling clear.
+    state_write: SECURE
+    buttons:
+    - Finish for today
+    - Continue learning
+  needs_work:
+    title: One more pass will help
+    ryan_script: You have made progress with express one quantity as a fraction of another, but I do not want to rush you
+      past it while the final check is still shaky. We will give this idea one more focused pass and make the key step feel
+      automatic.
+    state_write: NEEDS_WORK
+    buttons:
+    - Try this skill again
+    - Finish for today
+question_bank:
+- id: FRA-15-D01
+  stage: diagnostic
+  target: Express one quantity as a fraction of another
+  ao: AO1
+  difficulty: 2
+  prompt: Express 6 as a fraction of 15.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 6/15
+  attempt_policy:
+    policy: single_submit_silent
+    max_attempts_before_resolution: 1
+    feedback_timing: none_during_diagnostic
+    submit_label: Next
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: null
+    on_incorrect_attempt_1: Record the response silently and move on.
+    on_incorrect_attempt_2: Not applicable.
+    worked_explanation: No worked solution is shown during this assessment item.
+  mathematical_support:
+    hint_1: null
+    hint_2: null
+    worked_solution: No worked solution is shown during this assessment item.
+  branching:
+    on_submit: Record correctness as diagnostic evidence, do not reveal correctness, advance to the next diagnostic item.
+    next: Next diagnostic item or diagnostic routing result.
+  success_reaction:
+    mode: silent
+    context_override: null
+    selection_rule: No generic success reaction is spoken in diagnostic or exit assessment.
+  visual:
+    primitive: quantity_compare
+    description: 'Render the exact mathematical relationship in: Express 6 as a fraction of 15.'
+    action: highlight
+- id: FRA-15-D02
+  stage: diagnostic
+  target: Express one quantity as a fraction of another
+  ao: AO2
+  difficulty: 2
+  prompt: Express 12 as a fraction of 8.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 12/8
+  attempt_policy:
+    policy: single_submit_silent
+    max_attempts_before_resolution: 1
+    feedback_timing: none_during_diagnostic
+    submit_label: Next
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: null
+    on_incorrect_attempt_1: Record the response silently and move on.
+    on_incorrect_attempt_2: Not applicable.
+    worked_explanation: No worked solution is shown during this assessment item.
+  mathematical_support:
+    hint_1: null
+    hint_2: null
+    worked_solution: No worked solution is shown during this assessment item.
+  branching:
+    on_submit: Record correctness as diagnostic evidence, do not reveal correctness, advance to the next diagnostic item.
+    next: Next diagnostic item or diagnostic routing result.
+  success_reaction:
+    mode: silent
+    context_override: null
+    selection_rule: No generic success reaction is spoken in diagnostic or exit assessment.
+  visual:
+    primitive: quantity_compare
+    description: 'Render the exact mathematical relationship in: Express 12 as a fraction of 8.'
+    action: highlight
+- id: FRA-15-C01
+  stage: teaching_checkpoint
+  target: Express one quantity as a fraction of another
+  ao: AO1
+  difficulty: 2
+  prompt: Express 3 as a fraction of 10.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 3/10
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: “3 as a fraction of 10” means 3/10 in that order.
+    on_incorrect_attempt_1: 'Use the mathematical relationship before you calculate: Read the phrase in order: the first quantity
+      goes over the second quantity.'
+    on_incorrect_attempt_2: I am going to expose the missing step now. Follow the highlighted express one quantity as a fraction
+      of another, then compare it with the full working.
+    worked_explanation: “3 as a fraction of 10” means 3/10 in that order.
+  mathematical_support:
+    hint_1: 'Use the mathematical relationship before you calculate: Read the phrase in order: the first quantity goes over
+      the second quantity.'
+    hint_2: I am going to expose the missing step now. Follow the highlighted express one quantity as a fraction of another,
+      then compare it with the full working.
+    worked_solution: “3 as a fraction of 10” means 3/10 in that order.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual:
+    primitive: quantity_compare
+    description: 'Render the exact mathematical relationship in: Express 3 as a fraction of 10.'
+    action: highlight
+  recovery_item_ref: FRA-15-R01
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-15-C02
+  stage: teaching_checkpoint
+  target: Express one quantity as a fraction of another
+  ao: AO1
+  difficulty: 2
+  prompt: Express 14 as a fraction of 21 in its simplest form.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 2/3
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: “14 as a fraction of 21” means 14/21 in that order. Simplify by the common factor 7 to get 2/3.
+    on_incorrect_attempt_1: 'Take a second look at what stays fixed: Read the phrase in order: the first quantity goes over
+      the second quantity.'
+    on_incorrect_attempt_2: I am going to expose the missing step now. Follow the highlighted express one quantity as a fraction
+      of another, then compare it with the full working.
+    worked_explanation: “14 as a fraction of 21” means 14/21 in that order. Simplify by the common factor 7 to get 2/3.
+  mathematical_support:
+    hint_1: 'Take a second look at what stays fixed: Read the phrase in order: the first quantity goes over the second quantity.'
+    hint_2: I am going to expose the missing step now. Follow the highlighted express one quantity as a fraction of another,
+      then compare it with the full working.
+    worked_solution: “14 as a fraction of 21” means 14/21 in that order. Simplify by the common factor 7 to get 2/3.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual:
+    primitive: quantity_compare
+    description: 'Render the exact mathematical relationship in: Express 14 as a fraction of 21 in its simplest form.'
+    action: highlight
+  recovery_item_ref: FRA-15-R02
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-15-C03
+  stage: teaching_checkpoint
+  target: Express one quantity as a fraction of another
+  ao: AO2
+  difficulty: 2
+  prompt: Express 9 as a fraction of 6.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 9/6
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: “9 as a fraction of 6” means 9/6 in that order.
+    on_incorrect_attempt_1: 'Narrow it down to the key step: Read the phrase in order: the first quantity goes over the second
+      quantity.'
+    on_incorrect_attempt_2: I am going to expose the missing step now. Follow the highlighted express one quantity as a fraction
+      of another, then compare it with the full working.
+    worked_explanation: “9 as a fraction of 6” means 9/6 in that order.
+  mathematical_support:
+    hint_1: 'Narrow it down to the key step: Read the phrase in order: the first quantity goes over the second quantity.'
+    hint_2: I am going to expose the missing step now. Follow the highlighted express one quantity as a fraction of another,
+      then compare it with the full working.
+    worked_solution: “9 as a fraction of 6” means 9/6 in that order.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual:
+    primitive: quantity_compare
+    description: 'Render the exact mathematical relationship in: Express 9 as a fraction of 6.'
+    action: highlight
+  recovery_item_ref: FRA-15-R03
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-15-G01
+  stage: guided
+  target: Express one quantity as a fraction of another
+  ao: AO1
+  difficulty: 2
+  prompt: Express 5 as a fraction of 20 in its simplest form.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 1/4
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: “5 as a fraction of 20” means 5/20 in that order. Simplify by the common factor 5 to get 1/4.
+    on_incorrect_attempt_1: 'Read the information in the order the method needs it: Read the phrase in order: the first quantity
+      goes over the second quantity.'
+    on_incorrect_attempt_2: I am going to expose the missing step now. Follow the highlighted express one quantity as a fraction
+      of another, then compare it with the full working.
+    worked_explanation: “5 as a fraction of 20” means 5/20 in that order. Simplify by the common factor 5 to get 1/4.
+  mathematical_support:
+    hint_1: 'Read the information in the order the method needs it: Read the phrase in order: the first quantity goes over
+      the second quantity.'
+    hint_2: I am going to expose the missing step now. Follow the highlighted express one quantity as a fraction of another,
+      then compare it with the full working.
+    worked_solution: “5 as a fraction of 20” means 5/20 in that order. Simplify by the common factor 5 to get 1/4.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual:
+    primitive: quantity_compare
+    description: 'Render the exact mathematical relationship in: Express 5 as a fraction of 20 in its simplest form.'
+    action: highlight
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-15-F01
+  stage: faded
+  target: Express one quantity as a fraction of another
+  ao: AO1
+  difficulty: 2
+  prompt: Express 18 as a fraction of 30 in its simplest form.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 3/5
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: “18 as a fraction of 30” means 18/30 in that order. Simplify by the common factor 6 to get 3/5.
+    on_incorrect_attempt_1: 'Before changing anything, check this: Read the phrase in order: the first quantity goes over
+      the second quantity.'
+    on_incorrect_attempt_2: I am going to expose the missing step now. Follow the highlighted express one quantity as a fraction
+      of another, then compare it with the full working.
+    worked_explanation: “18 as a fraction of 30” means 18/30 in that order. Simplify by the common factor 6 to get 3/5.
+  mathematical_support:
+    hint_1: 'Before changing anything, check this: Read the phrase in order: the first quantity goes over the second quantity.'
+    hint_2: I am going to expose the missing step now. Follow the highlighted express one quantity as a fraction of another,
+      then compare it with the full working.
+    worked_solution: “18 as a fraction of 30” means 18/30 in that order. Simplify by the common factor 6 to get 3/5.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual:
+    primitive: quantity_compare
+    description: 'Render the exact mathematical relationship in: Express 18 as a fraction of 30 in its simplest form.'
+    action: highlight
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-15-I01
+  stage: independent_transfer
+  target: Express one quantity as a fraction of another
+  ao: AO2
+  difficulty: 2
+  prompt: Express 24 as a fraction of 16 in its simplest form.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 3/2
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: “24 as a fraction of 16” means 24/16 in that order. Simplify by the common factor 8 to get 3/2.
+    on_incorrect_attempt_1: 'Use the visual clue that matters here: Read the phrase in order: the first quantity goes over
+      the second quantity.'
+    on_incorrect_attempt_2: I am going to expose the missing step now. Follow the highlighted express one quantity as a fraction
+      of another, then compare it with the full working.
+    worked_explanation: “24 as a fraction of 16” means 24/16 in that order. Simplify by the common factor 8 to get 3/2.
+  mathematical_support:
+    hint_1: 'Use the visual clue that matters here: Read the phrase in order: the first quantity goes over the second quantity.'
+    hint_2: I am going to expose the missing step now. Follow the highlighted express one quantity as a fraction of another,
+      then compare it with the full working.
+    worked_solution: “24 as a fraction of 16” means 24/16 in that order. Simplify by the common factor 8 to get 3/2.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual:
+    primitive: quantity_compare
+    description: 'Render the exact mathematical relationship in: Express 24 as a fraction of 16 in its simplest form.'
+    action: highlight
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-15-P01
+  stage: practice
+  target: Express one quantity as a fraction of another
+  ao: AO1
+  difficulty: 2
+  prompt: Express 7 as a fraction of 12.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 7/12
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: “7 as a fraction of 12” means 7/12 in that order.
+    on_incorrect_attempt_1: 'Treat the numbers as evidence for the rule: Read the phrase in order: the first quantity goes
+      over the second quantity.'
+    on_incorrect_attempt_2: I am going to expose the missing step now. Follow the highlighted express one quantity as a fraction
+      of another, then compare it with the full working.
+    worked_explanation: “7 as a fraction of 12” means 7/12 in that order.
+  mathematical_support:
+    hint_1: 'Treat the numbers as evidence for the rule: Read the phrase in order: the first quantity goes over the second
+      quantity.'
+    hint_2: I am going to expose the missing step now. Follow the highlighted express one quantity as a fraction of another,
+      then compare it with the full working.
+    worked_solution: “7 as a fraction of 12” means 7/12 in that order.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual:
+    primitive: quantity_compare
+    description: 'Render the exact mathematical relationship in: Express 7 as a fraction of 12.'
+    action: highlight
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-15-P02
+  stage: practice
+  target: Express one quantity as a fraction of another
+  ao: AO1
+  difficulty: 2
+  prompt: Express 20 as a fraction of 50 in its simplest form.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 2/5
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: “20 as a fraction of 50” means 20/50 in that order. Simplify by the common factor 10 to get 2/5.
+    on_incorrect_attempt_1: 'One careful check will unlock this: Read the phrase in order: the first quantity goes over the
+      second quantity.'
+    on_incorrect_attempt_2: I am going to expose the missing step now. Follow the highlighted express one quantity as a fraction
+      of another, then compare it with the full working.
+    worked_explanation: “20 as a fraction of 50” means 20/50 in that order. Simplify by the common factor 10 to get 2/5.
+  mathematical_support:
+    hint_1: 'One careful check will unlock this: Read the phrase in order: the first quantity goes over the second quantity.'
+    hint_2: I am going to expose the missing step now. Follow the highlighted express one quantity as a fraction of another,
+      then compare it with the full working.
+    worked_solution: “20 as a fraction of 50” means 20/50 in that order. Simplify by the common factor 10 to get 2/5.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual:
+    primitive: quantity_compare
+    description: 'Render the exact mathematical relationship in: Express 20 as a fraction of 50 in its simplest form.'
+    action: highlight
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-15-P03
+  stage: practice
+  target: Express one quantity as a fraction of another
+  ao: AO2
+  difficulty: 2
+  prompt: Express 15 as a fraction of 9 in its simplest form.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 5/3
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: “15 as a fraction of 9” means 15/9 in that order. Simplify by the common factor 3 to get 5/3.
+    on_incorrect_attempt_1: 'Do not restart the whole problem; focus here: Read the phrase in order: the first quantity goes
+      over the second quantity.'
+    on_incorrect_attempt_2: I am going to expose the missing step now. Follow the highlighted express one quantity as a fraction
+      of another, then compare it with the full working.
+    worked_explanation: “15 as a fraction of 9” means 15/9 in that order. Simplify by the common factor 3 to get 5/3.
+  mathematical_support:
+    hint_1: 'Do not restart the whole problem; focus here: Read the phrase in order: the first quantity goes over the second
+      quantity.'
+    hint_2: I am going to expose the missing step now. Follow the highlighted express one quantity as a fraction of another,
+      then compare it with the full working.
+    worked_solution: “15 as a fraction of 9” means 15/9 in that order. Simplify by the common factor 3 to get 5/3.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual:
+    primitive: quantity_compare
+    description: 'Render the exact mathematical relationship in: Express 15 as a fraction of 9 in its simplest form.'
+    action: highlight
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-15-P04
+  stage: practice
+  target: Express one quantity as a fraction of another
+  ao: AO1
+  difficulty: 2
+  prompt: Express 28 as a fraction of 42 in its simplest form.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 2/3
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: “28 as a fraction of 42” means 28/42 in that order. Simplify by the common factor 14 to get 2/3.
+    on_incorrect_attempt_1: 'Anchor yourself to the invariant: Read the phrase in order: the first quantity goes over the
+      second quantity.'
+    on_incorrect_attempt_2: I am going to expose the missing step now. Follow the highlighted express one quantity as a fraction
+      of another, then compare it with the full working.
+    worked_explanation: “28 as a fraction of 42” means 28/42 in that order. Simplify by the common factor 14 to get 2/3.
+  mathematical_support:
+    hint_1: 'Anchor yourself to the invariant: Read the phrase in order: the first quantity goes over the second quantity.'
+    hint_2: I am going to expose the missing step now. Follow the highlighted express one quantity as a fraction of another,
+      then compare it with the full working.
+    worked_solution: “28 as a fraction of 42” means 28/42 in that order. Simplify by the common factor 14 to get 2/3.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual:
+    primitive: quantity_compare
+    description: 'Render the exact mathematical relationship in: Express 28 as a fraction of 42 in its simplest form.'
+    action: highlight
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-15-P05
+  stage: practice
+  target: Express one quantity as a fraction of another
+  ao: AO2
+  difficulty: 2
+  prompt: Express 45 as a fraction of 30 in its simplest form.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 3/2
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: “45 as a fraction of 30” means 45/30 in that order. Simplify by the common factor 15 to get 3/2.
+    on_incorrect_attempt_1: 'Use the part of the method you already know: Read the phrase in order: the first quantity goes
+      over the second quantity.'
+    on_incorrect_attempt_2: I am going to expose the missing step now. Follow the highlighted express one quantity as a fraction
+      of another, then compare it with the full working.
+    worked_explanation: “45 as a fraction of 30” means 45/30 in that order. Simplify by the common factor 15 to get 3/2.
+  mathematical_support:
+    hint_1: 'Use the part of the method you already know: Read the phrase in order: the first quantity goes over the second
+      quantity.'
+    hint_2: I am going to expose the missing step now. Follow the highlighted express one quantity as a fraction of another,
+      then compare it with the full working.
+    worked_solution: “45 as a fraction of 30” means 45/30 in that order. Simplify by the common factor 15 to get 3/2.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual:
+    primitive: quantity_compare
+    description: 'Render the exact mathematical relationship in: Express 45 as a fraction of 30 in its simplest form.'
+    action: highlight
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-15-E01
+  stage: exit
+  target: Express one quantity as a fraction of another
+  ao: AO1
+  difficulty: 2
+  prompt: Express 8 as a fraction of 20 in its simplest form.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 2/5
+  attempt_policy:
+    policy: single_submit_silent
+    max_attempts_before_resolution: 1
+    feedback_timing: deferred_until_exit_decision
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: null
+    on_incorrect_attempt_1: null
+    on_incorrect_attempt_2: Not applicable.
+    worked_explanation: No worked solution is shown during this assessment item.
+  mathematical_support:
+    hint_1: null
+    hint_2: null
+    worked_solution: No worked solution is shown during this assessment item.
+  branching:
+    on_submit: Record the response without correctness feedback. The exit controller decides mastery only after the required
+      exit items are complete.
+    next: Next exit item or mastery decision.
+  success_reaction:
+    mode: silent
+    context_override: null
+    selection_rule: No generic success reaction is spoken in diagnostic or exit assessment.
+  visual:
+    primitive: quantity_compare
+    description: 'Render the exact mathematical relationship in: Express 8 as a fraction of 20 in its simplest form.'
+    action: highlight
+- id: FRA-15-E02
+  stage: exit
+  target: Express one quantity as a fraction of another
+  ao: AO1
+  difficulty: 2
+  prompt: Express 21 as a fraction of 14 in its simplest form.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 3/2
+  attempt_policy:
+    policy: single_submit_silent
+    max_attempts_before_resolution: 1
+    feedback_timing: deferred_until_exit_decision
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: null
+    on_incorrect_attempt_1: null
+    on_incorrect_attempt_2: Not applicable.
+    worked_explanation: No worked solution is shown during this assessment item.
+  mathematical_support:
+    hint_1: null
+    hint_2: null
+    worked_solution: No worked solution is shown during this assessment item.
+  branching:
+    on_submit: Record the response without correctness feedback. The exit controller decides mastery only after the required
+      exit items are complete.
+    next: Next exit item or mastery decision.
+  success_reaction:
+    mode: silent
+    context_override: null
+    selection_rule: No generic success reaction is spoken in diagnostic or exit assessment.
+  visual:
+    primitive: quantity_compare
+    description: 'Render the exact mathematical relationship in: Express 21 as a fraction of 14 in its simplest form.'
+    action: highlight
+- id: FRA-15-E03
+  stage: confirmation
+  target: Express one quantity as a fraction of another
+  ao: AO1
+  difficulty: 2
+  prompt: Express 11 as a fraction of 25.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 11/25
+  attempt_policy:
+    policy: single_submit_silent
+    max_attempts_before_resolution: 1
+    feedback_timing: deferred_until_exit_decision
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: null
+    on_incorrect_attempt_1: null
+    on_incorrect_attempt_2: Not applicable.
+    worked_explanation: No worked solution is shown during this assessment item.
+  mathematical_support:
+    hint_1: null
+    hint_2: null
+    worked_solution: No worked solution is shown during this assessment item.
+  branching:
+    on_submit: Record the response without correctness feedback. The exit controller decides mastery only after the required
+      exit items are complete.
+    next: Next exit item or mastery decision.
+  success_reaction:
+    mode: silent
+    context_override: null
+    selection_rule: No generic success reaction is spoken in diagnostic or exit assessment.
+  visual:
+    primitive: quantity_compare
+    description: 'Render the exact mathematical relationship in: Express 11 as a fraction of 25.'
+    action: highlight
+- id: FRA-15-E04
+  stage: confirmation
+  target: Express one quantity as a fraction of another
+  ao: AO1
+  difficulty: 2
+  prompt: Express 32 as a fraction of 48 in its simplest form.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 2/3
+  attempt_policy:
+    policy: single_submit_silent
+    max_attempts_before_resolution: 1
+    feedback_timing: deferred_until_exit_decision
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: null
+    on_incorrect_attempt_1: null
+    on_incorrect_attempt_2: Not applicable.
+    worked_explanation: No worked solution is shown during this assessment item.
+  mathematical_support:
+    hint_1: null
+    hint_2: null
+    worked_solution: No worked solution is shown during this assessment item.
+  branching:
+    on_submit: Record the response without correctness feedback. The exit controller decides mastery only after the required
+      exit items are complete.
+    next: Next exit item or mastery decision.
+  success_reaction:
+    mode: silent
+    context_override: null
+    selection_rule: No generic success reaction is spoken in diagnostic or exit assessment.
+  visual:
+    primitive: quantity_compare
+    description: 'Render the exact mathematical relationship in: Express 32 as a fraction of 48 in its simplest form.'
+    action: highlight
+- id: FRA-15-R01
+  stage: recovery
+  target: Express one quantity as a fraction of another
+  ao: AO1
+  difficulty: 2
+  prompt: Express 2 as a fraction of 5.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 2/5
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: “2 as a fraction of 5” means 2/5 in that order.
+    on_incorrect_attempt_1: 'Pause on the mathematical meaning first: Read the phrase in order: the first quantity goes over
+      the second quantity.'
+    on_incorrect_attempt_2: I am going to expose the missing step now. Follow the highlighted express one quantity as a fraction
+      of another, then compare it with the full working.
+    worked_explanation: “2 as a fraction of 5” means 2/5 in that order.
+  mathematical_support:
+    hint_1: 'Pause on the mathematical meaning first: Read the phrase in order: the first quantity goes over the second quantity.'
+    hint_2: I am going to expose the missing step now. Follow the highlighted express one quantity as a fraction of another,
+      then compare it with the full working.
+    worked_solution: “2 as a fraction of 5” means 2/5 in that order.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual:
+    primitive: quantity_compare
+    description: 'Render the exact mathematical relationship in: Express 2 as a fraction of 5.'
+    action: highlight
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-15-R02
+  stage: recovery
+  target: Express one quantity as a fraction of another
+  ao: AO1
+  difficulty: 2
+  prompt: Express 6 as a fraction of 9 in its simplest form.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 2/3
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: “6 as a fraction of 9” means 6/9 in that order. Simplify by the common factor 3 to get 2/3.
+    on_incorrect_attempt_1: 'The quickest route is to notice this: Read the phrase in order: the first quantity goes over
+      the second quantity.'
+    on_incorrect_attempt_2: I am going to expose the missing step now. Follow the highlighted express one quantity as a fraction
+      of another, then compare it with the full working.
+    worked_explanation: “6 as a fraction of 9” means 6/9 in that order. Simplify by the common factor 3 to get 2/3.
+  mathematical_support:
+    hint_1: 'The quickest route is to notice this: Read the phrase in order: the first quantity goes over the second quantity.'
+    hint_2: I am going to expose the missing step now. Follow the highlighted express one quantity as a fraction of another,
+      then compare it with the full working.
+    worked_solution: “6 as a fraction of 9” means 6/9 in that order. Simplify by the common factor 3 to get 2/3.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual:
+    primitive: quantity_compare
+    description: 'Render the exact mathematical relationship in: Express 6 as a fraction of 9 in its simplest form.'
+    action: highlight
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-15-R03
+  stage: recovery
+  target: Express one quantity as a fraction of another
+  ao: AO1
+  difficulty: 2
+  prompt: Express 9 as a fraction of 3.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 9/3
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: “9 as a fraction of 3” means 9/3 in that order.
+    on_incorrect_attempt_1: 'Keep your attention on the feature that cannot change: Read the phrase in order: the first quantity
+      goes over the second quantity.'
+    on_incorrect_attempt_2: I am going to expose the missing step now. Follow the highlighted express one quantity as a fraction
+      of another, then compare it with the full working.
+    worked_explanation: “9 as a fraction of 3” means 9/3 in that order.
+  mathematical_support:
+    hint_1: 'Keep your attention on the feature that cannot change: Read the phrase in order: the first quantity goes over
+      the second quantity.'
+    hint_2: I am going to expose the missing step now. Follow the highlighted express one quantity as a fraction of another,
+      then compare it with the full working.
+    worked_solution: “9 as a fraction of 3” means 9/3 in that order.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual:
+    primitive: quantity_compare
+    description: 'Render the exact mathematical relationship in: Express 9 as a fraction of 3.'
+    action: highlight
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+progress_and_persistence:
+  states:
+  - UNSEEN
+  - NEEDS_WORK
+  - LEARNING
+  - SECURE
+  on_lesson_start: Write LEARNING unless already SECURE and learner explicitly chose to review.
+  commit_points:
+  - after each submitted answer
+  - after each completed teaching checkpoint
+  - on phase transition
+  - on exit completion
+  - on completion screen
+  resume_payload:
+  - skill_id
+  - lesson_attempt_id
+  - current_step_id
+  - submitted_answers
+  - attempt_counts
+  - seen_recovery_items
+  - exit_state
+  history_policy: Starting again creates a new lesson attempt and does not delete previous attempts.
+analytics_events:
+  minimum_events:
+  - skill_started
+  - step_viewed
+  - answer_submitted
+  - hint_shown
+  - worked_solution_shown
+  - recovery_item_started
+  - phase_completed
+  - exit_completed
+  - skill_completed
+  privacy_note: Store only data required for learning/progress analytics; this file does not define personal profile fields.
+qa:
+  schema_validated: true
+  maths_answers_verified: true
+  curriculum_human_reviewed: false
+  scripts_human_reviewed: false
+  animation_storyboard_human_reviewed: false
+  branching_reference_validated: true
+  engine_render_tested: false
+  reduced_motion_tested: false
+  keyboard_accessibility_tested: false
+  student_calibration_tested: false
+  acceptance_criteria:
+  - Every learner-facing mathematical line is present in this YAML; Codex adds none.
+  - Every question has a canonical answer and exact response type.
+  - Every interactive non-diagnostic/non-exit item defines correct, first-wrong, second-wrong and worked-resolution behaviour.
+  - Every teaching checkpoint recovery reference points to an existing authored recovery item.
+  - No diagnostic distractor maps to a misconception label in V1.
+  - No exit hint or correctness reveal appears before the mastery decision.
+  - The primary visual preserves the concept-model invariant during every transformation.
+  - Refresh resumes without losing submitted progress or used Ryan reaction history.
+  - No skill-specific route or lesson engine is introduced; this skill renders through the shared engine.

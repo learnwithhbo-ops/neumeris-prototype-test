@@ -1,0 +1,2219 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "MD-10 - Divide a fraction by a whole number",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-17",
+      "sha256": "f3640bfc3e2b9497ee63acf856fabb3664fb97bf0b71d525520ab2ca891e45dd"
+    },
+    "authored_scope": "The approved equal-sharing visual, reciprocal worked method, graduated practice and unlabelled sharing applications.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "MD10-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "preview_checked_2026-09-03",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        3,
+        4,
+        5,
+        6,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "source_repairs_consulted": [
+        9,
+        10,
+        11
+      ],
+      "note": "All 17 source pages and p3–5 diagrams reviewed. Exact direct numerator division is valid, not a misconception. The source applications revisit the teaching, guided and practice pairs in new contexts; these are not unseen mastery evidence. Both final fraction-divisor pairs are fresh. Contexts accept exact equivalents because those source prompts do not request simplest form. Future Diagnostic and Retrieval layers remain inactive."
+    }
+  },
+  "identity": {
+    "id": "MD-10",
+    "slug": "divide-a-fraction-by-a-whole-number",
+    "title": "Divide a fraction by a whole number",
+    "strand": "Number",
+    "cluster": "Multiplying and Dividing Fractions",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Divide a positive fraction by a positive whole number and simplify the exact result where required.",
+    "success_criteria": [
+      "Keep the first fraction unchanged.",
+      "Use the reciprocal of the divisor only.",
+      "Multiply accurately and simplify when requested.",
+      "Recognise that sharing by a whole number greater than one makes each positive share smaller.",
+      "Apply a valid exact method in a sharing or cutting context."
+    ],
+    "boundaries": {
+      "includes": [
+        "Positive proper and improper fractions",
+        "Positive whole-number divisors",
+        "Exact reciprocal, direct and cancellation methods",
+        "Simplest form when explicitly requested",
+        "Equal-sharing and equal-length contexts"
+      ],
+      "excludes": [
+        "A whole number divided by a fraction",
+        "Division by another fraction",
+        "Mixed-number starting values",
+        "Zero divisors",
+        "Negative numbers",
+        "Decimals",
+        "Algebraic fractions",
+        "Multi-step operation selection",
+        "Diagnostic and delayed Retrieval layers"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "MD-09",
+      "MD-05",
+      "AF-03",
+      "MD-06"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for MD-09, MD-05, AF-03, MD-06 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "single_choice",
+      "fraction"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    }
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "Division by a positive whole number shares the original amount equally.",
+    "invariant": "The equal shares combine to restore the original fractional amount.",
+    "mathematical_rule": "Keep the first fraction and multiply by the reciprocal of the whole-number divisor. Valid exact direct methods are also accepted.",
+    "must_notice": [
+      "Only the divisor becomes its reciprocal.",
+      "Every share is smaller when the divisor is greater than one.",
+      "The same amount may need a simpler final fraction."
+    ],
+    "common_confusions": [
+      "Multiplying by the divisor",
+      "Reversing the first fraction or both values",
+      "Dividing the denominator, making the fraction larger",
+      "Leaving a requested simplification unfinished"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "Share a fractional amount",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Share a fractional amount",
+          "initial_state": "Share a fractional amount",
+          "model": {
+            "kind": "fraction_share",
+            "n": 3,
+            "d": 4,
+            "divisor": 2,
+            "object": "bar",
+            "target": "Amount in each equal share",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "given"
+          }
+        },
+        "narration": {
+          "script": "Dividing this fraction by two means sharing the existing amount into two equal parts."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Make smaller equal parts",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Make smaller equal parts",
+          "initial_state": "Make smaller equal parts",
+          "model": {
+            "kind": "fraction_share",
+            "n": 3,
+            "d": 4,
+            "divisor": 2,
+            "object": "bar",
+            "target": "Amount in each equal share",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "partition"
+          }
+        },
+        "narration": {
+          "script": "Split every quarter into two equal pieces. The same three quarters are now six eighths; no amount has been added."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Find each equal share",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Find each equal share",
+          "initial_state": "Find each equal share",
+          "model": {
+            "kind": "fraction_share",
+            "n": 3,
+            "d": 4,
+            "divisor": 2,
+            "object": "bar",
+            "target": "Amount in each equal share",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "shares"
+          }
+        },
+        "narration": {
+          "script": "Share the six eighths equally. Each share contains three eighths, and the two shares combine to restore the original amount."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Connect sharing with the reciprocal",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Connect sharing with the reciprocal",
+          "initial_state": "Connect sharing with the reciprocal",
+          "model": {
+            "kind": "fraction_share",
+            "n": 3,
+            "d": 4,
+            "divisor": 2,
+            "object": "symbolic",
+            "target": "Amount in each equal share",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "multiply"
+          }
+        },
+        "narration": {
+          "script": "Taking one of two equal shares is the same as multiplying the original amount by one half. The first fraction stays unchanged."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Explain the equal shares",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Explain the equal shares",
+          "initial_state": "Explain the equal shares",
+          "model": null
+        },
+        "narration": {
+          "script": "Choose the explanation that connects the original fraction to its equal shares."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "MD-10-C01"
+        },
+        "next_step": "T06"
+      },
+      {
+        "id": "T06",
+        "stage": "teaching",
+        "purpose": "Keep the starting fraction",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Keep the starting fraction",
+          "initial_state": "Keep the starting fraction",
+          "model": {
+            "kind": "fraction_share",
+            "n": 8,
+            "d": 15,
+            "divisor": 4,
+            "object": "symbolic",
+            "target": "Amount in each equal share",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "keep"
+          }
+        },
+        "narration": {
+          "script": "For the next example, keep the fractional amount unchanged. It is the amount being shared."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T07"
+      },
+      {
+        "id": "T07",
+        "stage": "teaching",
+        "purpose": "Represent the divisor",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Represent the divisor",
+          "initial_state": "Represent the divisor",
+          "model": {
+            "kind": "fraction_share",
+            "n": 8,
+            "d": 15,
+            "divisor": 4,
+            "object": "symbolic",
+            "target": "Amount in each equal share",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "whole_divisor"
+          }
+        },
+        "narration": {
+          "script": "Write the whole-number divisor over one without changing its value."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T08"
+      },
+      {
+        "id": "T08",
+        "stage": "teaching",
+        "purpose": "Use the divisor’s reciprocal",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Use the divisor’s reciprocal",
+          "initial_state": "Use the divisor’s reciprocal",
+          "model": {
+            "kind": "fraction_share",
+            "n": 8,
+            "d": 15,
+            "divisor": 4,
+            "object": "symbolic",
+            "target": "Amount in each equal share",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "reciprocal"
+          }
+        },
+        "narration": {
+          "script": "Exchange the two positions in the divisor’s fraction. Do not reverse the first fraction."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T09"
+      },
+      {
+        "id": "T09",
+        "stage": "teaching",
+        "purpose": "Write an equivalent multiplication",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Write an equivalent multiplication",
+          "initial_state": "Write an equivalent multiplication",
+          "model": {
+            "kind": "fraction_share",
+            "n": 8,
+            "d": 15,
+            "divisor": 4,
+            "object": "symbolic",
+            "target": "Amount in each equal share",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "multiply"
+          }
+        },
+        "narration": {
+          "script": "The division becomes multiplication by the reciprocal. This new calculation has the same result as the original division."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T10"
+      },
+      {
+        "id": "T10",
+        "stage": "teaching",
+        "purpose": "Multiply the fraction parts",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Multiply the fraction parts",
+          "initial_state": "Multiply the fraction parts",
+          "model": {
+            "kind": "fraction_share",
+            "n": 8,
+            "d": 15,
+            "divisor": 4,
+            "object": "symbolic",
+            "target": "Amount in each equal share",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "raw"
+          }
+        },
+        "narration": {
+          "script": "Multiply the numerator numbers and the denominator numbers. This gives an exact fraction before simplification."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T11"
+      },
+      {
+        "id": "T11",
+        "stage": "teaching",
+        "purpose": "Simplify the exact result",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Simplify the exact result",
+          "initial_state": "Simplify the exact result",
+          "model": {
+            "kind": "fraction_share",
+            "n": 8,
+            "d": 15,
+            "divisor": 4,
+            "object": "symbolic",
+            "target": "Amount in each equal share",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "simplified"
+          }
+        },
+        "narration": {
+          "script": "Both parts share a common factor. Divide them equally to finish in simplest form without changing the share’s value."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T12"
+      },
+      {
+        "id": "T12",
+        "stage": "teaching",
+        "purpose": "Recognise the valid method",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Recognise the valid method",
+          "initial_state": "Recognise the valid method",
+          "model": null
+        },
+        "narration": {
+          "script": "Check which method keeps the first fraction and changes only the divisor. Your choice here is unscored."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "MD-10-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "MD-10-G01",
+        "support_level": "high",
+        "pre_question_script": "Keep the first fraction and start with the divisor.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "MD-10-G02",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "guided",
+        "question_ref": "MD-10-G03",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "guided",
+        "question_ref": "MD-10-G04",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G05"
+      },
+      "G05": {
+        "stage": "guided",
+        "question_ref": "MD-10-G05",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "F01"
+      },
+      "F01": {
+        "stage": "faded",
+        "question_ref": "MD-10-P01",
+        "support_level": "reduced",
+        "pre_question_script": "Choose your first step and complete the calculation. Support is optional.",
+        "correct_next": "I01"
+      },
+      "I01": {
+        "stage": "independent_transfer",
+        "question_ref": "MD-10-P02",
+        "support_level": "none",
+        "pre_question_script": "Any valid exact method is accepted. Give the requested final form.",
+        "correct_next": "P03"
+      }
+    },
+    "practice": {
+      "intro_script": "Find the exact result and use simplest form when requested. In each application, decide how the given amount is related to the unknown.",
+      "question_order": [
+        "MD-10-P03",
+        "MD-10-P04",
+        "MD-10-P05",
+        "MD-10-P06",
+        "MD-10-X01",
+        "MD-10-X02",
+        "MD-10-X03",
+        "MD-10-X04"
+      ]
+    },
+    "exit": {
+      "intro_script": "Complete two new divisions in simplest form and a method check without support. Each answer locks after submission, and no hints are available.",
+      "primary_question_refs": [
+        "MD-10-E01",
+        "MD-10-E02",
+        "MD-10-E03"
+      ],
+      "confirmation_question_refs": [],
+      "mastery_policy": {
+        "profile": "all_primary_unsupported",
+        "require_all": true,
+        "source_page": 12,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "You independently divided fractional amounts by whole numbers, simplified the results and identified the valid reciprocal method.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Keep building fraction division",
+      "ryan_script": "One or more final checks need practice. Keep the starting fraction unchanged and check the divisor, the exact result and its final form.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "MD-10-C01",
+      "source_ref": {
+        "page": 4
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "The calculation is 3/4 ÷ 2 = 3/8. Why is this correct?",
+      "target": "Amount in each equal share",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Three quarters are shared into two equal groups, so each group contains three eighths.",
+          "The denominator 4 is divided by 2.",
+          "Dividing by 2 doubles the fraction.",
+          "The numerator and denominator are both divided by 2."
+        ]
+      },
+      "answer": {
+        "value": "Three quarters are shared into two equal groups, so each group contains three eighths."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Each equal share is half the original fractional amount.",
+        "correct_after_support": "Each equal share is half the original fractional amount.",
+        "on_correct_math": "Split each quarter into two eighths: 3/4 = 6/8. → Share the six eighths equally: each share is 3/8.",
+        "on_incorrect_attempt_1": "Connect the division with the amount in each equal share.",
+        "on_incorrect_attempt_2": "Follow the repartitioned amount into its two equal shares.",
+        "worked_explanation": "Split each quarter into two eighths: 3/4 = 6/8. → Share the six eighths equally: each share is 3/8."
+      },
+      "mathematical_support": {
+        "hint_1": "Connect the division with the amount in each equal share.",
+        "hint_2": "The total amount stays fixed while each share becomes smaller.",
+        "worked_solution": "Split each quarter into two eighths: 3/4 = 6/8. → Share the six eighths equally: each share is 3/8."
+      },
+      "working": [
+        "Split each quarter into two eighths: 3/4 = 6/8.",
+        "Share the six eighths equally: each share is 3/8."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_share",
+          "n": 3,
+          "d": 4,
+          "divisor": 2,
+          "object": "symbolic",
+          "target": "Amount in each equal share",
+          "math_text": true,
+          "compact_captions": true,
+          "phase": "stated_result",
+          "working_phases": [
+            "partition",
+            "shares"
+          ]
+        }
+      },
+      "response_feedback": {
+        "The denominator 4 is divided by 2.": "Dividing that denominator would make the fraction larger, not make a smaller share.",
+        "Dividing by 2 doubles the fraction.": "Doubling produces two copies. Here the original amount is shared between two groups.",
+        "The numerator and denominator are both divided by 2.": "Dividing both parts by the same number preserves the original value; it does not halve it."
+      }
+    },
+    {
+      "id": "MD-10-C02",
+      "source_ref": {
+        "page": 4
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "For 8/15 ÷ 4, which method has been used correctly?",
+      "target": "Amount in each equal share",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "8/15 ÷ 4 = 8/15 × 1/4 = 8/60 = 2/15",
+          "8/15 ÷ 4 = 8/15 × 4/1 = 32/15",
+          "8/15 ÷ 4 = 15/8 × 1/4 = 15/32",
+          "8/15 ÷ 4 = 8/(15 ÷ 4)"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "8/15 ÷ 4 = 8/15 × 1/4 = 8/60 = 2/15"
+      },
+      "policy": {
+        "scored": false,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true,
+        "engagementOnly": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That route keeps the first fraction and uses the divisor’s reciprocal.",
+        "correct_after_support": "That route keeps the first fraction and uses the divisor’s reciprocal.",
+        "on_correct_math": "Keep the original amount: 8/15. → Write the divisor as 4/1, then use its reciprocal 1/4. → 8/15 ÷ 4 = 8/15 × 1/4. → 8 × 1 = 8; 15 × 4 = 60. The product is 8/60. → 8/60 = 2/15. Divide both parts by the same common factor.",
+        "on_incorrect_attempt_1": "Check which number becomes its reciprocal.",
+        "on_incorrect_attempt_2": "Compare the unchanged first fraction, the changed divisor and the simplified result.",
+        "worked_explanation": "Keep the original amount: 8/15. → Write the divisor as 4/1, then use its reciprocal 1/4. → 8/15 ÷ 4 = 8/15 × 1/4. → 8 × 1 = 8; 15 × 4 = 60. The product is 8/60. → 8/60 = 2/15. Divide both parts by the same common factor."
+      },
+      "mathematical_support": {
+        "hint_1": "Check which number becomes its reciprocal.",
+        "hint_2": "The first fraction stays fixed, and the final share must be smaller.",
+        "worked_solution": "Keep the original amount: 8/15. → Write the divisor as 4/1, then use its reciprocal 1/4. → 8/15 ÷ 4 = 8/15 × 1/4. → 8 × 1 = 8; 15 × 4 = 60. The product is 8/60. → 8/60 = 2/15. Divide both parts by the same common factor."
+      },
+      "working": [
+        "Keep the original amount: 8/15.",
+        "Write the divisor as 4/1, then use its reciprocal 1/4.",
+        "8/15 ÷ 4 = 8/15 × 1/4.",
+        "8 × 1 = 8; 15 × 4 = 60. The product is 8/60.",
+        "8/60 = 2/15. Divide both parts by the same common factor."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_share",
+          "n": 8,
+          "d": 15,
+          "divisor": 4,
+          "object": "symbolic",
+          "target": "Amount in each equal share",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "keep",
+            "reciprocal",
+            "multiply",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "8/15 ÷ 4 = 8/15 × 4/1 = 32/15": "That multiplies by the original divisor, so the amount grows instead of being shared.",
+        "8/15 ÷ 4 = 15/8 × 1/4 = 15/32": "The first fraction has been reversed. It is the starting amount and must stay unchanged.",
+        "8/15 ÷ 4 = 8/(15 ÷ 4)": "Dividing the denominator makes the fraction larger. It does not give one of four equal shares."
+      }
+    },
+    {
+      "id": "MD-10-G01",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "For 9/10 ÷ 3, first find the reciprocal of the whole-number divisor.",
+      "target": "Amount in each equal share",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "require_simplest_form": false,
+        "show_authored_label": true,
+        "input_label": "Your exact fraction",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "1/3"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The divisor’s reciprocal is ready for the multiplication.",
+        "correct_after_support": "The divisor’s reciprocal is ready for the multiplication.",
+        "on_correct_math": "Write the divisor as 3/1. → Exchange its numerator and denominator to give 1/3.",
+        "on_incorrect_attempt_1": "Identify the divisor, not the first fraction.",
+        "on_incorrect_attempt_2": "Compare the divisor with its exchanged fraction, then enter that reciprocal.",
+        "worked_explanation": "Write the divisor as 3/1. → Exchange its numerator and denominator to give 1/3."
+      },
+      "mathematical_support": {
+        "hint_1": "Identify the divisor, not the first fraction.",
+        "hint_2": "Write that whole number over one before exchanging its two positions.",
+        "worked_solution": "Write the divisor as 3/1. → Exchange its numerator and denominator to give 1/3."
+      },
+      "working": [
+        "Write the divisor as 3/1.",
+        "Exchange its numerator and denominator to give 1/3."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_share",
+          "n": 9,
+          "d": 10,
+          "divisor": 3,
+          "object": "symbolic",
+          "target": "Amount in each equal share",
+          "math_text": true,
+          "compact_captions": true,
+          "phase": "divisor_given",
+          "resultScope": "reciprocal",
+          "support_phases": [
+            "whole_divisor",
+            "reciprocal"
+          ],
+          "working_phases": [
+            "keep",
+            "reciprocal",
+            "multiply",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "3/1": "That is the divisor itself, not its reciprocal.",
+        "10/9": "That reverses the first fraction instead of finding the reciprocal of the divisor."
+      }
+    },
+    {
+      "id": "MD-10-G02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "Complete the equivalent multiplication: 9/10 ÷ 3 = 9/10 × ?",
+      "target": "Amount in each equal share",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "require_simplest_form": false,
+        "show_authored_label": true,
+        "input_label": "Your exact fraction",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "1/3"
+      },
+      "policy": {
+        "scored": false,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true,
+        "engagementOnly": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That multiplier completes the equivalent calculation.",
+        "correct_after_support": "That multiplier completes the equivalent calculation.",
+        "on_correct_math": "Division by 3 uses the reciprocal 1/3. → 9/10 ÷ 3 = 9/10 × 1/3.",
+        "on_incorrect_attempt_1": "Use the reciprocal you have just found.",
+        "on_incorrect_attempt_2": "Compare the missing multiplier with the reciprocal of the divisor.",
+        "worked_explanation": "Division by 3 uses the reciprocal 1/3. → 9/10 ÷ 3 = 9/10 × 1/3."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the reciprocal you have just found.",
+        "hint_2": "The first fraction must stay unchanged.",
+        "worked_solution": "Division by 3 uses the reciprocal 1/3. → 9/10 ÷ 3 = 9/10 × 1/3."
+      },
+      "working": [
+        "Division by 3 uses the reciprocal 1/3.",
+        "9/10 ÷ 3 = 9/10 × 1/3."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_share",
+          "n": 9,
+          "d": 10,
+          "divisor": 3,
+          "object": "symbolic",
+          "target": "Amount in each equal share",
+          "math_text": true,
+          "compact_captions": true,
+          "phase": "missing_multiplier",
+          "resultScope": "multiply",
+          "support_phases": [
+            "reciprocal",
+            "multiply"
+          ],
+          "working_phases": [
+            "keep",
+            "reciprocal",
+            "multiply",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "3/1": "That would multiply by three instead of finding a third of the original amount.",
+        "10/9": "That is the reciprocal of the first fraction, not of the divisor."
+      }
+    },
+    {
+      "id": "MD-10-G03",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "Multiply 9/10 × 1/3. Enter the numerator and denominator products without simplifying yet.",
+      "target": "Amount in each equal share",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": false,
+        "require_simplest_form": false,
+        "show_authored_label": true,
+        "input_label": "Unsimplified fraction product",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "9/30"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The raw product is ready for the simplification step.",
+        "correct_after_support": "The raw product is ready for the simplification step.",
+        "on_correct_math": "9 × 1 = 9; 10 × 3 = 30. The unsimplified product is 9/30.",
+        "on_incorrect_attempt_1": "Multiply the two numerator numbers and the two denominator numbers.",
+        "on_incorrect_attempt_2": "Compare the numerator product and denominator product before simplifying.",
+        "worked_explanation": "9 × 1 = 9; 10 × 3 = 30. The unsimplified product is 9/30."
+      },
+      "mathematical_support": {
+        "hint_1": "Multiply the two numerator numbers and the two denominator numbers.",
+        "hint_2": "This intermediate box asks for the raw products before simplification.",
+        "worked_solution": "9 × 1 = 9; 10 × 3 = 30. The unsimplified product is 9/30."
+      },
+      "working": [
+        "9 × 1 = 9; 10 × 3 = 30. The unsimplified product is 9/30."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_share",
+          "n": 9,
+          "d": 10,
+          "divisor": 3,
+          "object": "symbolic",
+          "target": "Amount in each equal share",
+          "math_text": true,
+          "compact_captions": true,
+          "phase": "multiply",
+          "resultScope": "raw",
+          "support_phases": [
+            "raw"
+          ],
+          "working_phases": [
+            "keep",
+            "reciprocal",
+            "multiply",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "3/10": "That is the correct simplified value. This intermediate step asks for the two raw products first.",
+        "27/10": "That multiplies by three instead of by the reciprocal."
+      }
+    },
+    {
+      "id": "MD-10-G04",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "Now write 9/30 in simplest form to finish 9/10 ÷ 3.",
+      "target": "Amount in each equal share",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": false,
+        "require_simplest_form": true,
+        "show_authored_label": true,
+        "input_label": "Your fraction in simplest form",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "3/10"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The simplified share keeps the same exact value.",
+        "correct_after_support": "The simplified share keeps the same exact value.",
+        "on_correct_math": "Both parts of 9/30 have common factor 3. → 9 ÷ 3 = 3; 30 ÷ 3 = 10. The simplest form is 3/10.",
+        "on_incorrect_attempt_1": "Use the same common factor on both fraction parts.",
+        "on_incorrect_attempt_2": "Compare the equal divisions applied to both parts of the fraction.",
+        "worked_explanation": "Both parts of 9/30 have common factor 3. → 9 ÷ 3 = 3; 30 ÷ 3 = 10. The simplest form is 3/10.",
+        "on_equivalent_unfinished": "Your fraction has the correct value, but it is not yet in simplest form. Divide both parts by a common factor."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the same common factor on both fraction parts.",
+        "hint_2": "Check that no common factor greater than one remains.",
+        "worked_solution": "Both parts of 9/30 have common factor 3. → 9 ÷ 3 = 3; 30 ÷ 3 = 10. The simplest form is 3/10."
+      },
+      "working": [
+        "Both parts of 9/30 have common factor 3.",
+        "9 ÷ 3 = 3; 30 ÷ 3 = 10. The simplest form is 3/10."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_share",
+          "n": 9,
+          "d": 10,
+          "divisor": 3,
+          "object": "symbolic",
+          "target": "Amount in each equal share",
+          "math_text": true,
+          "compact_captions": true,
+          "phase": "raw",
+          "resultScope": "simplified",
+          "support_phases": [
+            "raw",
+            "simplified"
+          ],
+          "working_phases": [
+            "keep",
+            "reciprocal",
+            "multiply",
+            "raw",
+            "simplified"
+          ]
+        }
+      }
+    },
+    {
+      "id": "MD-10-G05",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "Which statement explains 9/10 ÷ 3 correctly?",
+      "target": "Amount in each equal share",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Dividing 9/10 by 3 gives three equal shares of 3/10.",
+          "Dividing 9/10 by 3 makes the fraction three times larger.",
+          "The reciprocal of 3 is 3/1.",
+          "The first fraction must be reversed before multiplying."
+        ]
+      },
+      "answer": {
+        "value": "Dividing 9/10 by 3 gives three equal shares of 3/10."
+      },
+      "policy": {
+        "scored": false,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true,
+        "engagementOnly": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The shares combine to give the original amount, so their size is reasonable.",
+        "correct_after_support": "The shares combine to give the original amount, so their size is reasonable.",
+        "on_correct_math": "The original 9/10 can be partitioned into 27/30 without changing its value. → Each of three equal shares is 9/30 = 3/10.",
+        "on_incorrect_attempt_1": "Compare the original total with the amount in each share.",
+        "on_incorrect_attempt_2": "Compare each share with the original total, not with three copies of it.",
+        "worked_explanation": "The original 9/10 can be partitioned into 27/30 without changing its value. → Each of three equal shares is 9/30 = 3/10."
+      },
+      "mathematical_support": {
+        "hint_1": "Compare the original total with the amount in each share.",
+        "hint_2": "Three equal shares must combine to restore the original amount.",
+        "worked_solution": "The original 9/10 can be partitioned into 27/30 without changing its value. → Each of three equal shares is 9/30 = 3/10."
+      },
+      "working": [
+        "The original 9/10 can be partitioned into 27/30 without changing its value.",
+        "Each of three equal shares is 9/30 = 3/10."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_share",
+          "n": 9,
+          "d": 10,
+          "divisor": 3,
+          "object": "symbolic",
+          "target": "Amount in each equal share",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "partition",
+            "shares"
+          ]
+        }
+      },
+      "response_feedback": {
+        "Dividing 9/10 by 3 makes the fraction three times larger.": "Sharing a fixed positive amount between three groups makes each share smaller.",
+        "The reciprocal of 3 is 3/1.": "That fraction still equals three; its two positions have not been exchanged.",
+        "The first fraction must be reversed before multiplying.": "The first fraction is the amount being shared and stays unchanged."
+      }
+    },
+    {
+      "id": "MD-10-P01",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "faded",
+      "prompt": "Work out 3/5 ÷ 2. Give your answer in simplest form.",
+      "target": "Amount in each equal share",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": false,
+        "require_simplest_form": true,
+        "show_authored_label": true,
+        "input_label": "Your fraction in simplest form",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "3/10"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That exact fraction is one of the two equal shares.",
+        "correct_after_support": "That exact fraction is one of the two equal shares.",
+        "on_correct_math": "Keep the original amount: 3/5. → Write the divisor as 2/1, then use its reciprocal 1/2. → 3/5 ÷ 2 = 3/5 × 1/2. → 3 × 1 = 3; 5 × 2 = 10. The product is 3/10. → 3/10 is already in simplest form.",
+        "on_incorrect_attempt_1": "Check which quantity is being shared and which number is the divisor.",
+        "on_incorrect_attempt_2": "Compare the unchanged starting amount with the reciprocal multiplication.",
+        "worked_explanation": "Keep the original amount: 3/5. → Write the divisor as 2/1, then use its reciprocal 1/2. → 3/5 ÷ 2 = 3/5 × 1/2. → 3 × 1 = 3; 5 × 2 = 10. The product is 3/10. → 3/10 is already in simplest form.",
+        "on_equivalent_unfinished": "Your fraction has the correct value, but it is not yet in simplest form. Divide both parts by a common factor."
+      },
+      "mathematical_support": {
+        "hint_1": "Check which quantity is being shared and which number is the divisor.",
+        "hint_2": "Keep the first fraction and use the reciprocal of the divisor. Check the requested final form.",
+        "worked_solution": "Keep the original amount: 3/5. → Write the divisor as 2/1, then use its reciprocal 1/2. → 3/5 ÷ 2 = 3/5 × 1/2. → 3 × 1 = 3; 5 × 2 = 10. The product is 3/10. → 3/10 is already in simplest form."
+      },
+      "working": [
+        "Keep the original amount: 3/5.",
+        "Write the divisor as 2/1, then use its reciprocal 1/2.",
+        "3/5 ÷ 2 = 3/5 × 1/2.",
+        "3 × 1 = 3; 5 × 2 = 10. The product is 3/10.",
+        "3/10 is already in simplest form."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_share",
+          "n": 3,
+          "d": 5,
+          "divisor": 2,
+          "object": "symbolic",
+          "target": "Amount in each equal share",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "keep",
+            "reciprocal",
+            "multiply",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "6/5": "That value is larger than the original amount. Check whether division became multiplication, or whether the denominator was divided instead of multiplied.",
+        "5/6": "That value comes from reversing the original fraction. Keep the amount being shared unchanged.",
+        "10/3": "That value reverses the original fraction as well as the divisor. Only the divisor changes to its reciprocal.",
+        "3/5": "That repeats the total amount before it has been shared."
+      }
+    },
+    {
+      "id": "MD-10-P02",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "independent_transfer",
+      "prompt": "Work out 7/8 ÷ 3. Give your answer in simplest form.",
+      "target": "Amount in each equal share",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": false,
+        "require_simplest_form": true,
+        "show_authored_label": true,
+        "input_label": "Your fraction in simplest form",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "7/24"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Each share is smaller than the original amount and is already in simplest form.",
+        "correct_after_support": "Each share is smaller than the original amount and is already in simplest form.",
+        "on_correct_math": "Keep the original amount: 7/8. → Write the divisor as 3/1, then use its reciprocal 1/3. → 7/8 ÷ 3 = 7/8 × 1/3. → 7 × 1 = 7; 8 × 3 = 24. The product is 7/24. → 7/24 is already in simplest form.",
+        "on_incorrect_attempt_1": "Check which quantity is being shared and which number is the divisor.",
+        "on_incorrect_attempt_2": "Check the divisor’s reciprocal and the denominator product.",
+        "worked_explanation": "Keep the original amount: 7/8. → Write the divisor as 3/1, then use its reciprocal 1/3. → 7/8 ÷ 3 = 7/8 × 1/3. → 7 × 1 = 7; 8 × 3 = 24. The product is 7/24. → 7/24 is already in simplest form.",
+        "on_equivalent_unfinished": "Your fraction has the correct value, but it is not yet in simplest form. Divide both parts by a common factor."
+      },
+      "mathematical_support": {
+        "hint_1": "Check which quantity is being shared and which number is the divisor.",
+        "hint_2": "Keep the first fraction and use the reciprocal of the divisor. Check the requested final form.",
+        "worked_solution": "Keep the original amount: 7/8. → Write the divisor as 3/1, then use its reciprocal 1/3. → 7/8 ÷ 3 = 7/8 × 1/3. → 7 × 1 = 7; 8 × 3 = 24. The product is 7/24. → 7/24 is already in simplest form."
+      },
+      "working": [
+        "Keep the original amount: 7/8.",
+        "Write the divisor as 3/1, then use its reciprocal 1/3.",
+        "7/8 ÷ 3 = 7/8 × 1/3.",
+        "7 × 1 = 7; 8 × 3 = 24. The product is 7/24.",
+        "7/24 is already in simplest form."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_share",
+          "n": 7,
+          "d": 8,
+          "divisor": 3,
+          "object": "symbolic",
+          "target": "Amount in each equal share",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "keep",
+            "reciprocal",
+            "multiply",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "21/8": "That value is larger than the original amount. Check whether division became multiplication, or whether the denominator was divided instead of multiplied.",
+        "8/21": "That value comes from reversing the original fraction. Keep the amount being shared unchanged.",
+        "24/7": "That value reverses the original fraction as well as the divisor. Only the divisor changes to its reciprocal.",
+        "7/8": "That repeats the total amount before it has been shared."
+      }
+    },
+    {
+      "id": "MD-10-P03",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Work out 5/6 ÷ 5. Give your answer in simplest form.",
+      "target": "Amount in each equal share",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": false,
+        "require_simplest_form": true,
+        "show_authored_label": true,
+        "input_label": "Your fraction in simplest form",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "1/6"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The exact share has been fully simplified.",
+        "correct_after_support": "The exact share has been fully simplified.",
+        "on_correct_math": "Keep the original amount: 5/6. → Write the divisor as 5/1, then use its reciprocal 1/5. → 5/6 ÷ 5 = 5/6 × 1/5. → 5 × 1 = 5; 6 × 5 = 30. The product is 5/30. → 5/30 = 1/6. Divide both parts by the same common factor.",
+        "on_incorrect_attempt_1": "Check which quantity is being shared and which number is the divisor.",
+        "on_incorrect_attempt_2": "Check the division and then preserve its value while simplifying.",
+        "worked_explanation": "Keep the original amount: 5/6. → Write the divisor as 5/1, then use its reciprocal 1/5. → 5/6 ÷ 5 = 5/6 × 1/5. → 5 × 1 = 5; 6 × 5 = 30. The product is 5/30. → 5/30 = 1/6. Divide both parts by the same common factor.",
+        "on_equivalent_unfinished": "Your fraction has the correct value, but it is not yet in simplest form. Divide both parts by a common factor."
+      },
+      "mathematical_support": {
+        "hint_1": "Check which quantity is being shared and which number is the divisor.",
+        "hint_2": "Keep the first fraction and use the reciprocal of the divisor. Check the requested final form.",
+        "worked_solution": "Keep the original amount: 5/6. → Write the divisor as 5/1, then use its reciprocal 1/5. → 5/6 ÷ 5 = 5/6 × 1/5. → 5 × 1 = 5; 6 × 5 = 30. The product is 5/30. → 5/30 = 1/6. Divide both parts by the same common factor."
+      },
+      "working": [
+        "Keep the original amount: 5/6.",
+        "Write the divisor as 5/1, then use its reciprocal 1/5.",
+        "5/6 ÷ 5 = 5/6 × 1/5.",
+        "5 × 1 = 5; 6 × 5 = 30. The product is 5/30.",
+        "5/30 = 1/6. Divide both parts by the same common factor."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_share",
+          "n": 5,
+          "d": 6,
+          "divisor": 5,
+          "object": "symbolic",
+          "target": "Amount in each equal share",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "keep",
+            "reciprocal",
+            "multiply",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "25/6": "That value is larger than the original amount. Check whether division became multiplication, or whether the denominator was divided instead of multiplied.",
+        "6/25": "That value comes from reversing the original fraction. Keep the amount being shared unchanged.",
+        "30/5": "That value reverses the original fraction as well as the divisor. Only the divisor changes to its reciprocal.",
+        "5/6": "That repeats the total amount before it has been shared."
+      }
+    },
+    {
+      "id": "MD-10-P04",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Work out 12/13 ÷ 4. Give your answer in simplest form.",
+      "target": "Amount in each equal share",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": false,
+        "require_simplest_form": true,
+        "show_authored_label": true,
+        "input_label": "Your fraction in simplest form",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "3/13"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That fraction gives one of the four equal shares.",
+        "correct_after_support": "That fraction gives one of the four equal shares.",
+        "on_correct_math": "Keep the original amount: 12/13. → Write the divisor as 4/1, then use its reciprocal 1/4. → 12/13 ÷ 4 = 12/13 × 1/4. → 12 × 1 = 12; 13 × 4 = 52. The product is 12/52. → 12/52 = 3/13. Divide both parts by the same common factor.",
+        "on_incorrect_attempt_1": "Check which quantity is being shared and which number is the divisor.",
+        "on_incorrect_attempt_2": "Compare a valid reciprocal route with your own exact method.",
+        "worked_explanation": "Keep the original amount: 12/13. → Write the divisor as 4/1, then use its reciprocal 1/4. → 12/13 ÷ 4 = 12/13 × 1/4. → 12 × 1 = 12; 13 × 4 = 52. The product is 12/52. → 12/52 = 3/13. Divide both parts by the same common factor.",
+        "on_equivalent_unfinished": "Your fraction has the correct value, but it is not yet in simplest form. Divide both parts by a common factor."
+      },
+      "mathematical_support": {
+        "hint_1": "Check which quantity is being shared and which number is the divisor.",
+        "hint_2": "Keep the first fraction and use the reciprocal of the divisor. Check the requested final form.",
+        "worked_solution": "Keep the original amount: 12/13. → Write the divisor as 4/1, then use its reciprocal 1/4. → 12/13 ÷ 4 = 12/13 × 1/4. → 12 × 1 = 12; 13 × 4 = 52. The product is 12/52. → 12/52 = 3/13. Divide both parts by the same common factor."
+      },
+      "working": [
+        "Keep the original amount: 12/13.",
+        "Write the divisor as 4/1, then use its reciprocal 1/4.",
+        "12/13 ÷ 4 = 12/13 × 1/4.",
+        "12 × 1 = 12; 13 × 4 = 52. The product is 12/52.",
+        "12/52 = 3/13. Divide both parts by the same common factor."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_share",
+          "n": 12,
+          "d": 13,
+          "divisor": 4,
+          "object": "symbolic",
+          "target": "Amount in each equal share",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "keep",
+            "reciprocal",
+            "multiply",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "48/13": "That value is larger than the original amount. Check whether division became multiplication, or whether the denominator was divided instead of multiplied.",
+        "13/48": "That value comes from reversing the original fraction. Keep the amount being shared unchanged.",
+        "52/12": "That value reverses the original fraction as well as the divisor. Only the divisor changes to its reciprocal.",
+        "12/13": "That repeats the total amount before it has been shared."
+      }
+    },
+    {
+      "id": "MD-10-P05",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Work out 9/14 ÷ 6. Give your answer in simplest form.",
+      "target": "Amount in each equal share",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": false,
+        "require_simplest_form": true,
+        "show_authored_label": true,
+        "input_label": "Your fraction in simplest form",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "3/28"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The simplified fraction is the exact amount in each share.",
+        "correct_after_support": "The simplified fraction is the exact amount in each share.",
+        "on_correct_math": "Keep the original amount: 9/14. → Write the divisor as 6/1, then use its reciprocal 1/6. → 9/14 ÷ 6 = 9/14 × 1/6. → 9 × 1 = 9; 14 × 6 = 84. The product is 9/84. → 9/84 = 3/28. Divide both parts by the same common factor.",
+        "on_incorrect_attempt_1": "Check which quantity is being shared and which number is the divisor.",
+        "on_incorrect_attempt_2": "Check the raw quotient and then divide both fraction parts by a common factor.",
+        "worked_explanation": "Keep the original amount: 9/14. → Write the divisor as 6/1, then use its reciprocal 1/6. → 9/14 ÷ 6 = 9/14 × 1/6. → 9 × 1 = 9; 14 × 6 = 84. The product is 9/84. → 9/84 = 3/28. Divide both parts by the same common factor.",
+        "on_equivalent_unfinished": "Your fraction has the correct value, but it is not yet in simplest form. Divide both parts by a common factor."
+      },
+      "mathematical_support": {
+        "hint_1": "Check which quantity is being shared and which number is the divisor.",
+        "hint_2": "Keep the first fraction and use the reciprocal of the divisor. Check the requested final form.",
+        "worked_solution": "Keep the original amount: 9/14. → Write the divisor as 6/1, then use its reciprocal 1/6. → 9/14 ÷ 6 = 9/14 × 1/6. → 9 × 1 = 9; 14 × 6 = 84. The product is 9/84. → 9/84 = 3/28. Divide both parts by the same common factor."
+      },
+      "working": [
+        "Keep the original amount: 9/14.",
+        "Write the divisor as 6/1, then use its reciprocal 1/6.",
+        "9/14 ÷ 6 = 9/14 × 1/6.",
+        "9 × 1 = 9; 14 × 6 = 84. The product is 9/84.",
+        "9/84 = 3/28. Divide both parts by the same common factor."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_share",
+          "n": 9,
+          "d": 14,
+          "divisor": 6,
+          "object": "symbolic",
+          "target": "Amount in each equal share",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "keep",
+            "reciprocal",
+            "multiply",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "54/14": "That value is larger than the original amount. Check whether division became multiplication, or whether the denominator was divided instead of multiplied.",
+        "14/54": "That value comes from reversing the original fraction. Keep the amount being shared unchanged.",
+        "84/9": "That value reverses the original fraction as well as the divisor. Only the divisor changes to its reciprocal.",
+        "9/14": "That repeats the total amount before it has been shared."
+      }
+    },
+    {
+      "id": "MD-10-P06",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "A student calculates 4/7 ÷ 5. Which answer is correct?",
+      "target": "Amount in each equal share",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "4/35",
+          "20/7",
+          "7/20",
+          "4/2"
+        ]
+      },
+      "answer": {
+        "value": "4/35"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That fraction describes one fifth of the original amount.",
+        "correct_after_support": "That fraction describes one fifth of the original amount.",
+        "on_correct_math": "Keep the original amount: 4/7. → Write the divisor as 5/1, then use its reciprocal 1/5. → 4/7 ÷ 5 = 4/7 × 1/5. → 4 × 1 = 4; 7 × 5 = 35. The product is 4/35. → 4/35 is already in simplest form.",
+        "on_incorrect_attempt_1": "A positive amount shared between five groups gives smaller shares.",
+        "on_incorrect_attempt_2": "Check which proposed value follows a valid reciprocal multiplication.",
+        "worked_explanation": "Keep the original amount: 4/7. → Write the divisor as 5/1, then use its reciprocal 1/5. → 4/7 ÷ 5 = 4/7 × 1/5. → 4 × 1 = 4; 7 × 5 = 35. The product is 4/35. → 4/35 is already in simplest form."
+      },
+      "mathematical_support": {
+        "hint_1": "A positive amount shared between five groups gives smaller shares.",
+        "hint_2": "Only the divisor changes to its reciprocal.",
+        "worked_solution": "Keep the original amount: 4/7. → Write the divisor as 5/1, then use its reciprocal 1/5. → 4/7 ÷ 5 = 4/7 × 1/5. → 4 × 1 = 4; 7 × 5 = 35. The product is 4/35. → 4/35 is already in simplest form."
+      },
+      "working": [
+        "Keep the original amount: 4/7.",
+        "Write the divisor as 5/1, then use its reciprocal 1/5.",
+        "4/7 ÷ 5 = 4/7 × 1/5.",
+        "4 × 1 = 4; 7 × 5 = 35. The product is 4/35.",
+        "4/35 is already in simplest form."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_share",
+          "n": 4,
+          "d": 7,
+          "divisor": 5,
+          "object": "symbolic",
+          "target": "Amount in each equal share",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "keep",
+            "reciprocal",
+            "multiply",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "20/7": "That makes five copies of the original amount instead of five equal shares.",
+        "7/20": "That reverses the first fraction as well as replacing the divisor.",
+        "4/2": "Subtracting five from the denominator does not represent division by five."
+      }
+    },
+    {
+      "id": "MD-10-X01",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "practice",
+      "prompt": "A jug contains 3/4 litre of juice. The juice is shared equally between 2 glasses. Work out the amount of juice in each glass.",
+      "target": "Amount in each equal share",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "require_simplest_form": false,
+        "show_authored_label": true,
+        "input_label": "Your exact fraction",
+        "suffix": "litre"
+      },
+      "answer": {
+        "value": "3/8"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That is the amount of juice in each glass, not the total in both glasses.",
+        "correct_after_support": "That is the amount of juice in each glass, not the total in both glasses.",
+        "on_correct_math": "Keep the original amount: 3/4. → Write the divisor as 2/1, then use its reciprocal 1/2. → 3/4 ÷ 2 = 3/4 × 1/2. → 3 × 1 = 3; 4 × 2 = 8. The product is 3/8. → 3/8 is already in simplest form.",
+        "on_incorrect_attempt_1": "Identify the total juice and the number of equal glasses.",
+        "on_incorrect_attempt_2": "Connect the total juice to the amount in one equal glass.",
+        "worked_explanation": "Keep the original amount: 3/4. → Write the divisor as 2/1, then use its reciprocal 1/2. → 3/4 ÷ 2 = 3/4 × 1/2. → 3 × 1 = 3; 4 × 2 = 8. The product is 3/8. → 3/8 is already in simplest form."
+      },
+      "mathematical_support": {
+        "hint_1": "Identify the total juice and the number of equal glasses.",
+        "hint_2": "Each glass must receive the same part of the fixed total.",
+        "worked_solution": "Keep the original amount: 3/4. → Write the divisor as 2/1, then use its reciprocal 1/2. → 3/4 ÷ 2 = 3/4 × 1/2. → 3 × 1 = 3; 4 × 2 = 8. The product is 3/8. → 3/8 is already in simplest form."
+      },
+      "working": [
+        "Keep the original amount: 3/4.",
+        "Write the divisor as 2/1, then use its reciprocal 1/2.",
+        "3/4 ÷ 2 = 3/4 × 1/2.",
+        "3 × 1 = 3; 4 × 2 = 8. The product is 3/8.",
+        "3/8 is already in simplest form."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_share",
+          "n": 3,
+          "d": 4,
+          "divisor": 2,
+          "object": "juice",
+          "target": "Amount in each equal share",
+          "math_text": true,
+          "compact_captions": true,
+          "unit": "litre",
+          "working_phases": [
+            "keep",
+            "reciprocal",
+            "multiply",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "6/4": "That value is larger than the original amount. Check whether division became multiplication, or whether the denominator was divided instead of multiplied.",
+        "4/6": "That value comes from reversing the original fraction. Keep the amount being shared unchanged.",
+        "8/3": "That value reverses the original fraction as well as the divisor. Only the divisor changes to its reciprocal.",
+        "3/4": "That repeats the total amount before it has been shared."
+      }
+    },
+    {
+      "id": "MD-10-X02",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "practice",
+      "prompt": "A piece of ribbon is 5/6 metre long. It is cut into 5 equal pieces. Work out the length of each piece.",
+      "target": "Amount in each equal share",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "require_simplest_form": false,
+        "show_authored_label": true,
+        "input_label": "Your exact fraction",
+        "suffix": "m"
+      },
+      "answer": {
+        "value": "1/6"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That is the length of one equal piece of ribbon.",
+        "correct_after_support": "That is the length of one equal piece of ribbon.",
+        "on_correct_math": "Keep the original amount: 5/6. → Write the divisor as 5/1, then use its reciprocal 1/5. → 5/6 ÷ 5 = 5/6 × 1/5. → 5 × 1 = 5; 6 × 5 = 30. The product is 5/30. → 5/30 = 1/6. Divide both parts by the same common factor.",
+        "on_incorrect_attempt_1": "The given length belongs to the entire ribbon before cutting.",
+        "on_incorrect_attempt_2": "Compare one piece with the original ribbon length and the number of pieces.",
+        "worked_explanation": "Keep the original amount: 5/6. → Write the divisor as 5/1, then use its reciprocal 1/5. → 5/6 ÷ 5 = 5/6 × 1/5. → 5 × 1 = 5; 6 × 5 = 30. The product is 5/30. → 5/30 = 1/6. Divide both parts by the same common factor."
+      },
+      "mathematical_support": {
+        "hint_1": "The given length belongs to the entire ribbon before cutting.",
+        "hint_2": "Five equal piece lengths must add back to the given ribbon length.",
+        "worked_solution": "Keep the original amount: 5/6. → Write the divisor as 5/1, then use its reciprocal 1/5. → 5/6 ÷ 5 = 5/6 × 1/5. → 5 × 1 = 5; 6 × 5 = 30. The product is 5/30. → 5/30 = 1/6. Divide both parts by the same common factor."
+      },
+      "working": [
+        "Keep the original amount: 5/6.",
+        "Write the divisor as 5/1, then use its reciprocal 1/5.",
+        "5/6 ÷ 5 = 5/6 × 1/5.",
+        "5 × 1 = 5; 6 × 5 = 30. The product is 5/30.",
+        "5/30 = 1/6. Divide both parts by the same common factor."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_share",
+          "n": 5,
+          "d": 6,
+          "divisor": 5,
+          "object": "ribbon",
+          "target": "Amount in each equal share",
+          "math_text": true,
+          "compact_captions": true,
+          "unit": "m",
+          "working_phases": [
+            "keep",
+            "reciprocal",
+            "multiply",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "25/6": "That value is larger than the original amount. Check whether division became multiplication, or whether the denominator was divided instead of multiplied.",
+        "6/25": "That value comes from reversing the original fraction. Keep the amount being shared unchanged.",
+        "30/5": "That value reverses the original fraction as well as the divisor. Only the divisor changes to its reciprocal.",
+        "5/6": "That repeats the total amount before it has been shared."
+      }
+    },
+    {
+      "id": "MD-10-X03",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "practice",
+      "prompt": "A baker has 7/8 kg of dough. The dough is divided equally into 4 portions. Work out the mass of each portion.",
+      "target": "Amount in each equal share",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "require_simplest_form": false,
+        "show_authored_label": true,
+        "input_label": "Your exact fraction",
+        "suffix": "kg"
+      },
+      "answer": {
+        "value": "7/32"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The answer gives the mass of each dough portion.",
+        "correct_after_support": "The answer gives the mass of each dough portion.",
+        "on_correct_math": "Keep the original amount: 7/8. → Write the divisor as 4/1, then use its reciprocal 1/4. → 7/8 ÷ 4 = 7/8 × 1/4. → 7 × 1 = 7; 8 × 4 = 32. The product is 7/32. → 7/32 is already in simplest form.",
+        "on_incorrect_attempt_1": "The given mass belongs to all the dough, not to one portion.",
+        "on_incorrect_attempt_2": "Keep the total mass fixed while finding one equal portion.",
+        "worked_explanation": "Keep the original amount: 7/8. → Write the divisor as 4/1, then use its reciprocal 1/4. → 7/8 ÷ 4 = 7/8 × 1/4. → 7 × 1 = 7; 8 × 4 = 32. The product is 7/32. → 7/32 is already in simplest form."
+      },
+      "mathematical_support": {
+        "hint_1": "The given mass belongs to all the dough, not to one portion.",
+        "hint_2": "Four equal masses must combine to make the original mass.",
+        "worked_solution": "Keep the original amount: 7/8. → Write the divisor as 4/1, then use its reciprocal 1/4. → 7/8 ÷ 4 = 7/8 × 1/4. → 7 × 1 = 7; 8 × 4 = 32. The product is 7/32. → 7/32 is already in simplest form."
+      },
+      "working": [
+        "Keep the original amount: 7/8.",
+        "Write the divisor as 4/1, then use its reciprocal 1/4.",
+        "7/8 ÷ 4 = 7/8 × 1/4.",
+        "7 × 1 = 7; 8 × 4 = 32. The product is 7/32.",
+        "7/32 is already in simplest form."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_share",
+          "n": 7,
+          "d": 8,
+          "divisor": 4,
+          "object": "dough",
+          "target": "Amount in each equal share",
+          "math_text": true,
+          "compact_captions": true,
+          "unit": "kg",
+          "working_phases": [
+            "keep",
+            "reciprocal",
+            "multiply",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "28/8": "That value is larger than the original amount. Check whether division became multiplication, or whether the denominator was divided instead of multiplied.",
+        "8/28": "That value comes from reversing the original fraction. Keep the amount being shared unchanged.",
+        "32/7": "That value reverses the original fraction as well as the divisor. Only the divisor changes to its reciprocal.",
+        "7/8": "That repeats the total amount before it has been shared."
+      }
+    },
+    {
+      "id": "MD-10-X04",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "practice",
+      "prompt": "A container holds 9/10 litre of paint. The paint is poured equally into 3 smaller containers. Which calculation finds the amount in each smaller container?",
+      "target": "Amount in each equal share",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "9/10 ÷ 3",
+          "9/10 × 3",
+          "3 ÷ 9/10",
+          "9/10 + 3"
+        ]
+      },
+      "answer": {
+        "value": "9/10 ÷ 3"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That calculation finds the amount in one smaller container.",
+        "correct_after_support": "That calculation finds the amount in one smaller container.",
+        "on_correct_math": "The known amount is the total paint, and three equal smaller amounts are required. → The calculation is 9/10 ÷ 3.",
+        "on_incorrect_attempt_1": "Identify whether the unknown is a total amount or one of the equal shares.",
+        "on_incorrect_attempt_2": "Match the known total and the unknown share to the chosen operation.",
+        "worked_explanation": "The known amount is the total paint, and three equal smaller amounts are required. → The calculation is 9/10 ÷ 3."
+      },
+      "mathematical_support": {
+        "hint_1": "Identify whether the unknown is a total amount or one of the equal shares.",
+        "hint_2": "The available paint is fixed while it is distributed among the containers.",
+        "worked_solution": "The known amount is the total paint, and three equal smaller amounts are required. → The calculation is 9/10 ÷ 3."
+      },
+      "working": [
+        "The known amount is the total paint, and three equal smaller amounts are required.",
+        "The calculation is 9/10 ÷ 3."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_share",
+          "n": 9,
+          "d": 10,
+          "divisor": 3,
+          "object": "paint",
+          "target": "Amount in each equal share",
+          "math_text": true,
+          "compact_captions": true,
+          "unit": "litre",
+          "working_phases": [
+            "given",
+            "division"
+          ]
+        }
+      },
+      "response_feedback": {
+        "9/10 × 3": "That would make three copies of the paint, not share the available amount.",
+        "3 ÷ 9/10": "That reverses the roles of the amount of paint and the container count.",
+        "9/10 + 3": "Adding a container count to a volume does not find the amount in each container."
+      }
+    },
+    {
+      "id": "MD-10-E01",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "Work out 7/12 ÷ 2. Give your answer in simplest form.",
+      "target": "Amount in each equal share",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": false,
+        "require_simplest_form": true,
+        "show_authored_label": true,
+        "input_label": "Your fraction in simplest form",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "7/24"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The fraction has been divided accurately and the answer is in simplest form.",
+        "correct_after_support": "The fraction has been divided accurately and the answer is in simplest form.",
+        "on_correct_math": "Keep the original amount: 7/12. → Write the divisor as 2/1, then use its reciprocal 1/2. → 7/12 ÷ 2 = 7/12 × 1/2. → 7 × 1 = 7; 12 × 2 = 24. The product is 7/24. → 7/24 is already in simplest form.",
+        "on_incorrect_attempt_1": "Check which quantity is being shared and which number is the divisor.",
+        "on_incorrect_attempt_2": "Compare the starting amount, divisor and exact share.",
+        "worked_explanation": "Keep the original amount: 7/12. → Write the divisor as 2/1, then use its reciprocal 1/2. → 7/12 ÷ 2 = 7/12 × 1/2. → 7 × 1 = 7; 12 × 2 = 24. The product is 7/24. → 7/24 is already in simplest form.",
+        "on_equivalent_unfinished": "Your fraction has the correct value, but it is not yet in simplest form. Divide both parts by a common factor.",
+        "on_locked_incorrect": "Compare the starting amount, divisor and exact share."
+      },
+      "mathematical_support": {
+        "hint_1": "Check which quantity is being shared and which number is the divisor.",
+        "hint_2": "Keep the first fraction and use the reciprocal of the divisor. Check the requested final form.",
+        "worked_solution": "Keep the original amount: 7/12. → Write the divisor as 2/1, then use its reciprocal 1/2. → 7/12 ÷ 2 = 7/12 × 1/2. → 7 × 1 = 7; 12 × 2 = 24. The product is 7/24. → 7/24 is already in simplest form."
+      },
+      "working": [
+        "Keep the original amount: 7/12.",
+        "Write the divisor as 2/1, then use its reciprocal 1/2.",
+        "7/12 ÷ 2 = 7/12 × 1/2.",
+        "7 × 1 = 7; 12 × 2 = 24. The product is 7/24.",
+        "7/24 is already in simplest form."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_share",
+          "n": 7,
+          "d": 12,
+          "divisor": 2,
+          "object": "symbolic",
+          "target": "Amount in each equal share",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "keep",
+            "reciprocal",
+            "multiply",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "14/12": "That value is larger than the original amount. Check whether division became multiplication, or whether the denominator was divided instead of multiplied.",
+        "12/14": "That value comes from reversing the original fraction. Keep the amount being shared unchanged.",
+        "24/7": "That value reverses the original fraction as well as the divisor. Only the divisor changes to its reciprocal.",
+        "7/12": "That repeats the total amount before it has been shared."
+      },
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "MD-10-E02",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "Work out 15/16 ÷ 5. Give your answer in simplest form.",
+      "target": "Amount in each equal share",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": false,
+        "require_simplest_form": true,
+        "show_authored_label": true,
+        "input_label": "Your fraction in simplest form",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "3/16"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The final share is exact and fully simplified.",
+        "correct_after_support": "The final share is exact and fully simplified.",
+        "on_correct_math": "Keep the original amount: 15/16. → Write the divisor as 5/1, then use its reciprocal 1/5. → 15/16 ÷ 5 = 15/16 × 1/5. → 15 × 1 = 15; 16 × 5 = 80. The product is 15/80. → 15/80 = 3/16. Divide both parts by the same common factor.",
+        "on_incorrect_attempt_1": "Check which quantity is being shared and which number is the divisor.",
+        "on_incorrect_attempt_2": "Compare the reciprocal multiplication and its simplification.",
+        "worked_explanation": "Keep the original amount: 15/16. → Write the divisor as 5/1, then use its reciprocal 1/5. → 15/16 ÷ 5 = 15/16 × 1/5. → 15 × 1 = 15; 16 × 5 = 80. The product is 15/80. → 15/80 = 3/16. Divide both parts by the same common factor.",
+        "on_equivalent_unfinished": "Your fraction has the correct value, but it is not yet in simplest form. Divide both parts by a common factor.",
+        "on_locked_incorrect": "Compare the reciprocal multiplication and its simplification."
+      },
+      "mathematical_support": {
+        "hint_1": "Check which quantity is being shared and which number is the divisor.",
+        "hint_2": "Keep the first fraction and use the reciprocal of the divisor. Check the requested final form.",
+        "worked_solution": "Keep the original amount: 15/16. → Write the divisor as 5/1, then use its reciprocal 1/5. → 15/16 ÷ 5 = 15/16 × 1/5. → 15 × 1 = 15; 16 × 5 = 80. The product is 15/80. → 15/80 = 3/16. Divide both parts by the same common factor."
+      },
+      "working": [
+        "Keep the original amount: 15/16.",
+        "Write the divisor as 5/1, then use its reciprocal 1/5.",
+        "15/16 ÷ 5 = 15/16 × 1/5.",
+        "15 × 1 = 15; 16 × 5 = 80. The product is 15/80.",
+        "15/80 = 3/16. Divide both parts by the same common factor."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_share",
+          "n": 15,
+          "d": 16,
+          "divisor": 5,
+          "object": "symbolic",
+          "target": "Amount in each equal share",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "keep",
+            "reciprocal",
+            "multiply",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "75/16": "That value is larger than the original amount. Check whether division became multiplication, or whether the denominator was divided instead of multiplied.",
+        "16/75": "That value comes from reversing the original fraction. Keep the amount being shared unchanged.",
+        "80/15": "That value reverses the original fraction as well as the divisor. Only the divisor changes to its reciprocal.",
+        "15/16": "That repeats the total amount before it has been shared."
+      },
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "MD-10-E03",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "Which statement correctly describes division of a fraction by a whole number?",
+      "target": "A valid fraction-division method",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Keep the fraction and multiply by the reciprocal of the whole number.",
+          "Reverse the first fraction and multiply by the whole number.",
+          "Divide the denominator by the whole number.",
+          "Multiply the fraction by the whole number."
+        ]
+      },
+      "answer": {
+        "value": "Keep the fraction and multiply by the reciprocal of the whole number."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That statement identifies the divisor as the number whose reciprocal is used.",
+        "correct_after_support": "That statement identifies the divisor as the number whose reciprocal is used.",
+        "on_correct_math": "The first fraction is the amount being divided and stays unchanged. → Change division to multiplication by the reciprocal of the divisor. → Multiply accurately and simplify the exact result where required.",
+        "on_incorrect_attempt_1": "Identify which number is the divisor.",
+        "on_incorrect_attempt_2": "Compare the roles of the unchanged amount and the changed divisor.",
+        "worked_explanation": "The first fraction is the amount being divided and stays unchanged. → Change division to multiplication by the reciprocal of the divisor. → Multiply accurately and simplify the exact result where required.",
+        "on_locked_incorrect": "Compare the roles of the unchanged amount and the changed divisor."
+      },
+      "mathematical_support": {
+        "hint_1": "Identify which number is the divisor.",
+        "hint_2": "The replacement multiplication must have the same value as the original division.",
+        "worked_solution": "The first fraction is the amount being divided and stays unchanged. → Change division to multiplication by the reciprocal of the divisor. → Multiply accurately and simplify the exact result where required."
+      },
+      "working": [
+        "The first fraction is the amount being divided and stays unchanged.",
+        "Change division to multiplication by the reciprocal of the divisor.",
+        "Multiply accurately and simplify the exact result where required."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_share_rule",
+          "object": "relationship",
+          "target": "A valid fraction-division method",
+          "math_text": true,
+          "compact_captions": true
+        }
+      }
+    }
+  ],
+  "canonical_lesson": {
+    "version": "MD10-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

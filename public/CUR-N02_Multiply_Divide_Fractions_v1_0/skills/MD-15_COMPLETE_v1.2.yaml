@@ -1,0 +1,1646 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "MD-15 - Choose whether to multiply or divide fractions",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-18",
+      "sha256": "9e3c17086fc824dbf61614874593e441c1ec06490381a3c063dc071027512166"
+    },
+    "authored_scope": "Choose multiplication or division from the relationship in a fraction problem.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "MD15-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "preview_checked_2026-09-03",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        3,
+        4,
+        5,
+        6,
+        13,
+        17,
+        18
+      ],
+      "source_repairs_consulted": [
+        9,
+        10,
+        11
+      ],
+      "note": "No separate storyboard or implementation packet exists for MD-15 in the supplied files; this mapping instantiates the approved PDF and repository teaching standard. See docs/REVILY_MD15_REFINEMENT.md for the QA record and outstanding audio gate."
+    }
+  },
+  "identity": {
+    "id": "MD-15",
+    "slug": "choose-whether-to-multiply-or-divide-fractions",
+    "title": "Choose whether to multiply or divide fractions",
+    "strand": "Number",
+    "cluster": "Multiplying and Dividing Fractions",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Interpret a one-step fraction question, choose multiplication or division from its structure, and calculate an exact answer.",
+    "success_criteria": [
+      "Use multiplication to find a fraction of a known amount; use division to count fractional groups or reconstruct a whole.",
+      "The requested quantity and the known whole determine the operation, not one keyword.",
+      "Use the sequence: Identify what is known; Identify what must be found; Decide between scaling, grouping and reconstruction; Write the complete calculation before evaluating.",
+      "Complete a context question with the requested form and unit."
+    ],
+    "boundaries": {
+      "includes": [
+        "Choose multiplication or division from the relationship in a fraction problem.",
+        "Direct calculation",
+        "Concept and method checks",
+        "Short GCSE-style transfer"
+      ],
+      "excludes": [
+        "Diagnostic route",
+        "Delayed retrieval route",
+        "Algebraic generalisation beyond the approved packet"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "MD-01",
+      "MD-02",
+      "MD-03",
+      "MD-04",
+      "MD-08",
+      "MD-09",
+      "MD-14"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for MD-01, MD-02, MD-03, MD-04, MD-08, MD-09, MD-14 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "single_choice",
+      "exact_number"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    }
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use only the explicit quantity model. Never infer a model or numbers from prompt text."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "Use multiplication to find a fraction of a known amount; use division to count fractional groups or reconstruct a whole.",
+    "invariant": "The requested quantity and the known whole determine the operation, not one keyword.",
+    "mathematical_rule": "Identify what is known; Identify what must be found; Decide between scaling, grouping and reconstruction; Write the complete calculation before evaluating",
+    "must_notice": [
+      "Identify what is known",
+      "Identify what must be found",
+      "Decide between scaling, grouping and reconstruction",
+      "Write the complete calculation before evaluating"
+    ],
+    "common_confusions": [
+      "always multiplying when a fraction appears",
+      "always dividing when the answer may be larger",
+      "reversing dividend and divisor"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "What are we trying to find?",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "What are we trying to find?",
+          "initial_state": "What are we trying to find?",
+          "model": {
+            "kind": "decision",
+            "object": "relationships"
+          }
+        },
+        "narration": {
+          "script": "The operation depends on the missing quantity. A part, a number of groups, and a whole are three different questions."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Take a fraction of a known quantity",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Take a fraction of a known quantity",
+          "initial_state": "Take a fraction of a known quantity",
+          "model": {
+            "kind": "fraction_of",
+            "total": "12",
+            "n": 3,
+            "d": 4,
+            "object": "counters",
+            "unit": "",
+            "target": "Amount selected",
+            "solved": true,
+            "result": "9",
+            "showUnits": true
+          }
+        },
+        "narration": {
+          "script": "The whole is known. The highlighted groups show which part of it we want."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Count fraction-sized groups",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Count fraction-sized groups",
+          "initial_state": "Count fraction-sized groups",
+          "model": {
+            "kind": "groups",
+            "total": "3",
+            "n": 1,
+            "d": 4,
+            "object": "quantity",
+            "unit": "",
+            "target": "Number of groups",
+            "solved": true,
+            "result": "12"
+          }
+        },
+        "narration": {
+          "script": "Here we count quarter-sized groups across three wholes. The pieces are the same size throughout."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Explain the ribbon",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Explain the ribbon",
+          "initial_state": "Explain the ribbon",
+          "model": null
+        },
+        "narration": {
+          "script": "Look at what the unknown number counts."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "MD-15-C01"
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "A fraction of the water",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "A fraction of the water",
+          "initial_state": "A fraction of the water",
+          "model": {
+            "kind": "fraction_of",
+            "total": "24",
+            "n": 5,
+            "d": 8,
+            "object": "tank",
+            "unit": "L",
+            "target": "Water used"
+          }
+        },
+        "narration": {
+          "script": "The tank volume is our known whole. We want the amount used, not the number of tanks."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T06"
+      },
+      {
+        "id": "T06",
+        "stage": "teaching",
+        "purpose": "Find one eighth first",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Find one eighth first",
+          "initial_state": "Find one eighth first",
+          "model": {
+            "kind": "fraction_of",
+            "total": "24",
+            "n": 5,
+            "d": 8,
+            "object": "tank",
+            "unit": "L",
+            "target": "Water used",
+            "showParts": true,
+            "annotation": "One eighth: 24 ÷ 8 = 3 L"
+          }
+        },
+        "narration": {
+          "script": "Split the known volume into eight equal shares. This gives the value of one share."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T07"
+      },
+      {
+        "id": "T07",
+        "stage": "teaching",
+        "purpose": "Use five of the eight shares",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Use five of the eight shares",
+          "initial_state": "Use five of the eight shares",
+          "model": {
+            "kind": "fraction_of",
+            "total": "24",
+            "n": 5,
+            "d": 8,
+            "object": "tank",
+            "unit": "L",
+            "target": "Water used",
+            "solved": true,
+            "result": "15",
+            "annotation": "5/8 × 24 = 5 × 3 = 15 L"
+          }
+        },
+        "narration": {
+          "script": "Now select five shares. The highlighted volume and calculation describe the same water."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T08"
+      },
+      {
+        "id": "T08",
+        "stage": "teaching",
+        "purpose": "Match the method we just used",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Match the method we just used",
+          "initial_state": "Match the method we just used",
+          "model": null
+        },
+        "narration": {
+          "script": "Choose the calculation that represents the tank example."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "MD-15-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "MD-15-G01",
+        "support_level": "high",
+        "pre_question_script": "Let’s keep the full roll and one piece separate.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "MD-15-G02",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "guided",
+        "question_ref": "MD-15-G03",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "guided",
+        "question_ref": "MD-15-G04",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G05"
+      },
+      "G05": {
+        "stage": "guided",
+        "question_ref": "MD-15-G05",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "F01"
+      },
+      "F01": {
+        "stage": "faded",
+        "question_ref": "MD-15-P01",
+        "support_level": "medium",
+        "pre_question_script": "This time, choose the operation and calculate. Ask for a clue only if you need one.",
+        "correct_next": "I01"
+      },
+      "I01": {
+        "stage": "independent_transfer",
+        "question_ref": "MD-15-P02",
+        "support_level": "none",
+        "pre_question_script": "Choose your own method. You can work on paper before entering the exact answer.",
+        "correct_next": "P03"
+      }
+    },
+    "practice": {
+      "intro_script": "Keep deciding what the unknown represents. The contexts now vary.",
+      "question_order": [
+        "MD-15-P03",
+        "MD-15-P04",
+        "MD-15-P05",
+        "MD-15-P06",
+        "MD-15-P07"
+      ]
+    },
+    "exit": {
+      "intro_script": "Try these four checks without hints. Give exact answers and use the quantities to choose your method.",
+      "primary_question_refs": [
+        "MD-15-E01",
+        "MD-15-E02",
+        "MD-15-E03",
+        "MD-15-E04"
+      ],
+      "confirmation_question_refs": [],
+      "mastery_policy": {
+        "profile": "all_primary_unsupported",
+        "require_all": true,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING",
+        "source_page": 13,
+        "note": "No delayed retrieval is activated. A supported correction is not fresh mastery evidence."
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "You answered all four checks independently. You can distinguish a part, a group count, and a whole.",
+      "buttons": [
+        "Back to topic"
+      ],
+      "state_write": "READY_FOR_RETRIEVAL"
+    },
+    "needs_work": {
+      "title": "Keep building these relationships",
+      "ryan_script": "One or more final checks need more practice. Review the worked answers; this attempt is not marked ready for retrieval.",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ],
+      "state_write": "LEARNING"
+    }
+  },
+  "question_bank": [
+    {
+      "id": "MD-15-C01",
+      "stage": "teaching_checkpoint",
+      "target": "Number of pieces",
+      "source_ref": {
+        "page": 3,
+        "section": "Teaching and guided example"
+      },
+      "prompt": "A 3-metre ribbon is cut into lengths of 3/4 metre. Why is division required?",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "The question asks how many 3/4-metre groups fit into 3 metres.",
+          "Every question containing a fraction uses division.",
+          "The answer must be smaller than 3.",
+          "The denominator is larger than the numerator."
+        ]
+      },
+      "answer": {
+        "value": "The question asks how many 3/4-metre groups fit into 3 metres."
+      },
+      "policy": {
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "scored": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Yes—the unknown counts pieces, not a fraction of the ribbon.",
+        "on_correct_math": "The total is 3 m; each piece is 3/4 m. → Count pieces: 3 ÷ 3/4. → 3 × 4/3 = 4 pieces.",
+        "on_incorrect_attempt_1": "What does the missing number count: metres, or pieces?",
+        "on_incorrect_attempt_2": "Follow the working one line at a time, then correct your answer.",
+        "worked_explanation": "The total is 3 m; each piece is 3/4 m. → Count pieces: 3 ÷ 3/4. → 3 × 4/3 = 4 pieces.",
+        "correct_after_support": "Your correction now matches this relationship. Compare it with the working before continuing."
+      },
+      "mathematical_support": {
+        "hint_1": "What does the missing number count: metres, or pieces?",
+        "hint_2": "The size of one piece is known. Relate it to the length of the whole ribbon.",
+        "worked_solution": "The total is 3 m; each piece is 3/4 m. → Count pieces: 3 ÷ 3/4. → 3 × 4/3 = 4 pieces."
+      },
+      "working": [
+        "The total is 3 m; each piece is 3/4 m.",
+        "Count pieces: 3 ÷ 3/4.",
+        "3 × 4/3 = 4 pieces."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "groups",
+          "total": "3",
+          "n": 3,
+          "d": 4,
+          "object": "ribbon",
+          "unit": "m",
+          "target": "Number of pieces"
+        }
+      },
+      "response_feedback": {
+        "Every question containing a fraction uses division.": "A fraction can appear in either operation. What are we trying to count here?",
+        "The answer must be smaller than 3.": "The ribbon length and the number of pieces have different units. Answer size does not choose the operation.",
+        "The denominator is larger than the numerator.": "The numerator and denominator describe one piece. Look at how that piece relates to the total ribbon."
+      }
+    },
+    {
+      "id": "MD-15-C02",
+      "stage": "teaching_checkpoint",
+      "target": "Water used",
+      "source_ref": {
+        "page": 4,
+        "section": "Teaching and guided example"
+      },
+      "prompt": "The tank contains 24 litres and 5/8 of the water is used. Which calculation represents the example?",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "5/8 × 24",
+          "24 ÷ 5/8",
+          "5/8 ÷ 24",
+          "24 − 5/8"
+        ]
+      },
+      "answer": {
+        "value": "5/8 × 24"
+      },
+      "policy": {
+        "scored": false,
+        "engagementOnly": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That calculation selects five eighths of the known water volume.",
+        "on_correct_math": "Known total: 24 L. → Water used: 5/8 × 24. → 24 ÷ 8 = 3; 5 × 3 = 15 L.",
+        "on_incorrect_attempt_1": "Is 24 litres the whole amount, or the amount in five parts?",
+        "on_incorrect_attempt_2": "Follow the working one line at a time, then correct your answer.",
+        "worked_explanation": "Known total: 24 L. → Water used: 5/8 × 24. → 24 ÷ 8 = 3; 5 × 3 = 15 L.",
+        "correct_after_support": "Your correction now matches this relationship. Compare it with the working before continuing."
+      },
+      "mathematical_support": {
+        "hint_1": "Is 24 litres the whole amount, or the amount in five parts?",
+        "hint_2": "We want five of the eight equal parts of the known total.",
+        "worked_solution": "Known total: 24 L. → Water used: 5/8 × 24. → 24 ÷ 8 = 3; 5 × 3 = 15 L."
+      },
+      "working": [
+        "Known total: 24 L.",
+        "Water used: 5/8 × 24.",
+        "24 ÷ 8 = 3; 5 × 3 = 15 L."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_of",
+          "total": "24",
+          "n": 5,
+          "d": 8,
+          "object": "tank",
+          "unit": "L",
+          "target": "Water used"
+        }
+      },
+      "response_feedback": {
+        "24 ÷ 5/8": "That would count groups or rebuild a whole. Here the whole tank volume is already known.",
+        "5/8 ÷ 24": "That divides the fraction by the volume. We need a fraction of the known volume.",
+        "24 − 5/8": "Five eighths is a fraction of the water, not five eighths of a litre to subtract."
+      }
+    },
+    {
+      "id": "MD-15-G01",
+      "stage": "guided",
+      "target": "Number of pieces",
+      "source_ref": {
+        "page": 5,
+        "section": "Teaching and guided example"
+      },
+      "prompt": "A 5-metre roll of ribbon is cut into pieces that are each 5/6 metre long. What is the known total length?",
+      "response": {
+        "type": "exact_number",
+        "input_label": "Total length",
+        "suffix": "m"
+      },
+      "answer": {
+        "value": "5"
+      },
+      "policy": {
+        "scored": false,
+        "engagementOnly": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That is the full roll, before any cuts.",
+        "on_correct_math": "Known total length: 5 m.",
+        "on_incorrect_attempt_1": "Look for the length of the roll before it is cut.",
+        "on_incorrect_attempt_2": "Follow the working one line at a time, then correct your answer.",
+        "worked_explanation": "Known total length: 5 m.",
+        "correct_after_support": "Your correction now matches this relationship. Compare it with the working before continuing."
+      },
+      "mathematical_support": {
+        "hint_1": "Look for the length of the roll before it is cut.",
+        "hint_2": "Do not confuse the full roll with the length of one piece.",
+        "worked_solution": "Known total length: 5 m."
+      },
+      "working": [
+        "Known total length: 5 m."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "groups",
+          "total": "5",
+          "n": 5,
+          "d": 6,
+          "object": "ribbon",
+          "unit": "m",
+          "target": "Number of pieces"
+        }
+      },
+      "reveal_model_on_submit": false
+    },
+    {
+      "id": "MD-15-G02",
+      "stage": "guided",
+      "target": "Number of pieces",
+      "source_ref": {
+        "page": 5,
+        "section": "Teaching and guided example"
+      },
+      "prompt": "What is the length of one piece cut from this roll?",
+      "response": {
+        "type": "exact_number",
+        "input_label": "Length of one piece",
+        "suffix": "m"
+      },
+      "answer": {
+        "value": "5/6"
+      },
+      "policy": {
+        "scored": false,
+        "engagementOnly": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That measurement belongs to a single piece.",
+        "on_correct_math": "One piece measures 5/6 m.",
+        "on_incorrect_attempt_1": "Use the measurement attached to each piece.",
+        "on_incorrect_attempt_2": "Follow the working one line at a time, then correct your answer.",
+        "worked_explanation": "One piece measures 5/6 m.",
+        "correct_after_support": "Your correction now matches this relationship. Compare it with the working before continuing."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the measurement attached to each piece.",
+        "hint_2": "The full roll and one piece have different lengths.",
+        "worked_solution": "One piece measures 5/6 m."
+      },
+      "working": [
+        "One piece measures 5/6 m."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "groups",
+          "total": "5",
+          "n": 5,
+          "d": 6,
+          "object": "ribbon",
+          "unit": "m",
+          "target": "Number of pieces"
+        }
+      },
+      "reveal_model_on_submit": false
+    },
+    {
+      "id": "MD-15-G03",
+      "stage": "guided",
+      "target": "Number of pieces",
+      "source_ref": {
+        "page": 5,
+        "section": "Teaching and guided example"
+      },
+      "prompt": "Which calculation finds how many 5/6-metre pieces fit into the 5-metre roll?",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "5 × 5/6",
+          "5/6 ÷ 5",
+          "5 ÷ 5/6",
+          "5 + 5/6"
+        ]
+      },
+      "answer": {
+        "value": "5 ÷ 5/6"
+      },
+      "policy": {
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "scored": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The total comes first; the size of one piece comes second.",
+        "on_correct_math": "Total length ÷ length of one piece. → 5 ÷ 5/6.",
+        "on_incorrect_attempt_1": "The total length is known. What is the unknown counting?",
+        "on_incorrect_attempt_2": "Follow the working one line at a time, then correct your answer.",
+        "worked_explanation": "Total length ÷ length of one piece. → 5 ÷ 5/6.",
+        "correct_after_support": "Your correction now matches this relationship. Compare it with the working before continuing."
+      },
+      "mathematical_support": {
+        "hint_1": "The total length is known. What is the unknown counting?",
+        "hint_2": "Put the total before the division sign and one piece after it.",
+        "worked_solution": "Total length ÷ length of one piece. → 5 ÷ 5/6."
+      },
+      "working": [
+        "Total length ÷ length of one piece.",
+        "5 ÷ 5/6."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "groups",
+          "total": "5",
+          "n": 5,
+          "d": 6,
+          "object": "ribbon",
+          "unit": "m",
+          "target": "Number of pieces"
+        }
+      },
+      "reveal_model_on_submit": false,
+      "response_feedback": {
+        "5/6 ÷ 5": "That reverses the roles. We are fitting pieces into the whole roll, not fitting rolls into a piece.",
+        "5 × 5/6": "That finds five sixths of the roll. This question asks for the number of equal pieces."
+      }
+    },
+    {
+      "id": "MD-15-G04",
+      "stage": "guided",
+      "target": "Number of pieces",
+      "source_ref": {
+        "page": 5,
+        "section": "Teaching and guided example"
+      },
+      "prompt": "Now calculate the number of pieces: 5 ÷ 5/6 = 5 × 6/5 = ?",
+      "response": {
+        "type": "exact_number",
+        "input_label": "Number of pieces",
+        "suffix": "pieces"
+      },
+      "answer": {
+        "value": "6"
+      },
+      "policy": {
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "scored": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Those equal pieces cover the full ribbon with no length left over.",
+        "on_correct_math": "5 ÷ 5/6 = 5 × 6/5. → The factors of 5 cancel. → 6 pieces; each is 5/6 m.",
+        "on_incorrect_attempt_1": "You have already chosen division. Check the cancellation in the product.",
+        "on_incorrect_attempt_2": "Follow the working one line at a time, then correct your answer.",
+        "worked_explanation": "5 ÷ 5/6 = 5 × 6/5. → The factors of 5 cancel. → 6 pieces; each is 5/6 m.",
+        "correct_after_support": "Your correction now matches this relationship. Compare it with the working before continuing."
+      },
+      "mathematical_support": {
+        "hint_1": "You have already chosen division. Check the cancellation in the product.",
+        "hint_2": "The whole-number factor cancels with the denominator.",
+        "worked_solution": "5 ÷ 5/6 = 5 × 6/5. → The factors of 5 cancel. → 6 pieces; each is 5/6 m."
+      },
+      "working": [
+        "5 ÷ 5/6 = 5 × 6/5.",
+        "The factors of 5 cancel.",
+        "6 pieces; each is 5/6 m."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "groups",
+          "total": "5",
+          "n": 5,
+          "d": 6,
+          "object": "ribbon",
+          "unit": "m",
+          "target": "Number of pieces",
+          "previous": "Chosen calculation: 5 ÷ 5/6"
+        }
+      }
+    },
+    {
+      "id": "MD-15-G05",
+      "stage": "guided",
+      "target": "Number of pieces",
+      "source_ref": {
+        "page": 5,
+        "section": "Teaching and guided example"
+      },
+      "prompt": "Which statement explains the ribbon calculation?",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Divide 5 by 5/6 because the question asks how many 5/6-metre pieces fit into 5 metres.",
+          "Multiply because the word metre appears twice.",
+          "Divide 5/6 by 5 because the smaller number must be first.",
+          "Add because the pieces are joined to the roll."
+        ]
+      },
+      "answer": {
+        "value": "Divide 5 by 5/6 because the question asks how many 5/6-metre pieces fit into 5 metres."
+      },
+      "policy": {
+        "scored": false,
+        "engagementOnly": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That explanation uses the roles of the quantities.",
+        "on_correct_math": "Number of pieces = total length ÷ length per piece. → 5 ÷ 5/6 = 6 pieces.",
+        "on_incorrect_attempt_1": "Choose the statement about the quantities, not the words.",
+        "on_incorrect_attempt_2": "Follow the working one line at a time, then correct your answer.",
+        "worked_explanation": "Number of pieces = total length ÷ length per piece. → 5 ÷ 5/6 = 6 pieces.",
+        "correct_after_support": "Your correction now matches this relationship. Compare it with the working before continuing."
+      },
+      "mathematical_support": {
+        "hint_1": "Choose the statement about the quantities, not the words.",
+        "hint_2": "The same word can appear in a multiplication or a division question.",
+        "worked_solution": "Number of pieces = total length ÷ length per piece. → 5 ÷ 5/6 = 6 pieces."
+      },
+      "working": [
+        "Number of pieces = total length ÷ length per piece.",
+        "5 ÷ 5/6 = 6 pieces."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "groups",
+          "total": "5",
+          "n": 5,
+          "d": 6,
+          "object": "ribbon",
+          "unit": "m",
+          "target": "Number of pieces"
+        }
+      }
+    },
+    {
+      "id": "MD-15-P01",
+      "stage": "faded",
+      "target": "Amount selected",
+      "source_ref": {
+        "page": 6,
+        "section": "Independent Practice"
+      },
+      "prompt": "Find 3/4 of 20.",
+      "response": {
+        "type": "exact_number",
+        "input_label": "Amount selected",
+        "suffix": "",
+        "accept_equivalent_notation": true
+      },
+      "answer": {
+        "value": "15"
+      },
+      "policy": {
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "scored": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "You found a fraction of a known whole.",
+        "on_correct_math": "3/4 × 20. → 20 ÷ 4 = 5. → 3 × 5 = 15.",
+        "on_incorrect_attempt_1": "You know the whole amount. Find one of its four equal parts.",
+        "on_incorrect_attempt_2": "Follow the working one line at a time, then correct your answer.",
+        "worked_explanation": "3/4 × 20. → 20 ÷ 4 = 5. → 3 × 5 = 15.",
+        "correct_after_support": "Your correction now matches this relationship. Compare it with the working before continuing."
+      },
+      "mathematical_support": {
+        "hint_1": "You know the whole amount. Find one of its four equal parts.",
+        "hint_2": "Then take three of those parts.",
+        "worked_solution": "3/4 × 20. → 20 ÷ 4 = 5. → 3 × 5 = 15."
+      },
+      "working": [
+        "3/4 × 20.",
+        "20 ÷ 4 = 5.",
+        "3 × 5 = 15."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_of",
+          "total": "20",
+          "n": 3,
+          "d": 4,
+          "object": "quantity",
+          "unit": "",
+          "target": "Amount selected"
+        }
+      }
+    },
+    {
+      "id": "MD-15-P02",
+      "stage": "independent_transfer",
+      "target": "Number of portions",
+      "source_ref": {
+        "page": 6,
+        "section": "Independent Practice"
+      },
+      "prompt": "A bag contains 4 kg of rice. Each portion is 2/5 kg. How many portions can be made?",
+      "response": {
+        "type": "exact_number",
+        "input_label": "Number of portions",
+        "suffix": "portions"
+      },
+      "answer": {
+        "value": "10"
+      },
+      "policy": {
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "scored": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The portions account for all the rice in the bag.",
+        "on_correct_math": "Number of portions = 4 ÷ 2/5. → 4 × 5/2 = 20/2. → 10 portions.",
+        "on_incorrect_attempt_1": "Are we finding a mass, or counting portions of a known mass?",
+        "on_incorrect_attempt_2": "Follow the working one line at a time, then correct your answer.",
+        "worked_explanation": "Number of portions = 4 ÷ 2/5. → 4 × 5/2 = 20/2. → 10 portions.",
+        "correct_after_support": "Your correction now matches this relationship. Compare it with the working before continuing."
+      },
+      "mathematical_support": {
+        "hint_1": "Are we finding a mass, or counting portions of a known mass?",
+        "hint_2": "Start with the total rice and divide by the mass of one portion.",
+        "worked_solution": "Number of portions = 4 ÷ 2/5. → 4 × 5/2 = 20/2. → 10 portions."
+      },
+      "working": [
+        "Number of portions = 4 ÷ 2/5.",
+        "4 × 5/2 = 20/2.",
+        "10 portions."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "groups",
+          "total": "4",
+          "n": 2,
+          "d": 5,
+          "object": "rice",
+          "unit": "kg",
+          "target": "Number of portions"
+        }
+      }
+    },
+    {
+      "id": "MD-15-P03",
+      "stage": "practice",
+      "target": "Whole number",
+      "source_ref": {
+        "page": 6,
+        "section": "Independent Practice"
+      },
+      "prompt": "Five sixths of a number is 25. Work out the number.",
+      "response": {
+        "type": "exact_number",
+        "input_label": "Whole number",
+        "suffix": "",
+        "accept_equivalent_notation": true
+      },
+      "answer": {
+        "value": "30"
+      },
+      "policy": {
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "scored": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "You rebuilt the whole from its known part.",
+        "on_correct_math": "Whole = 25 ÷ 5/6. → One sixth = 25 ÷ 5 = 5. → Six sixths = 5 × 6 = 30.",
+        "on_incorrect_attempt_1": "Is 25 the whole, or only five of its equal parts?",
+        "on_incorrect_attempt_2": "Follow the working one line at a time, then correct your answer.",
+        "worked_explanation": "Whole = 25 ÷ 5/6. → One sixth = 25 ÷ 5 = 5. → Six sixths = 5 × 6 = 30.",
+        "correct_after_support": "Your correction now matches this relationship. Compare it with the working before continuing."
+      },
+      "mathematical_support": {
+        "hint_1": "Is 25 the whole, or only five of its equal parts?",
+        "hint_2": "Find one sixth from the five known sixths, then rebuild all six.",
+        "worked_solution": "Whole = 25 ÷ 5/6. → One sixth = 25 ÷ 5 = 5. → Six sixths = 5 × 6 = 30."
+      },
+      "working": [
+        "Whole = 25 ÷ 5/6.",
+        "One sixth = 25 ÷ 5 = 5.",
+        "Six sixths = 5 × 6 = 30."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "whole",
+          "known": "25",
+          "n": 5,
+          "d": 6,
+          "object": "quantity",
+          "target": "Whole number"
+        }
+      }
+    },
+    {
+      "id": "MD-15-P04",
+      "stage": "practice",
+      "target": "Number of bottles",
+      "source_ref": {
+        "page": 6,
+        "section": "Independent Practice"
+      },
+      "prompt": "A container holds 2 1/2 litres of juice. Each bottle holds 1/2 litre. How many bottles can be filled?",
+      "response": {
+        "type": "exact_number",
+        "input_label": "Number of bottles",
+        "suffix": "bottles"
+      },
+      "answer": {
+        "value": "5"
+      },
+      "policy": {
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "scored": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Each bottle takes one half-litre group from the container.",
+        "on_correct_math": "Number of bottles = 2 1/2 ÷ 1/2. → 5/2 × 2 = 5. → 5 bottles.",
+        "on_incorrect_attempt_1": "The missing number counts bottles, not litres.",
+        "on_incorrect_attempt_2": "Follow the working one line at a time, then correct your answer.",
+        "worked_explanation": "Number of bottles = 2 1/2 ÷ 1/2. → 5/2 × 2 = 5. → 5 bottles.",
+        "correct_after_support": "Your correction now matches this relationship. Compare it with the working before continuing."
+      },
+      "mathematical_support": {
+        "hint_1": "The missing number counts bottles, not litres.",
+        "hint_2": "Count half-litre groups in the total juice volume.",
+        "worked_solution": "Number of bottles = 2 1/2 ÷ 1/2. → 5/2 × 2 = 5. → 5 bottles."
+      },
+      "working": [
+        "Number of bottles = 2 1/2 ÷ 1/2.",
+        "5/2 × 2 = 5.",
+        "5 bottles."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "groups",
+          "total": "2 1/2",
+          "n": 1,
+          "d": 2,
+          "object": "bottle",
+          "unit": "L",
+          "target": "Number of bottles"
+        }
+      }
+    },
+    {
+      "id": "MD-15-P05",
+      "stage": "practice",
+      "target": "Your exact answer",
+      "source_ref": {
+        "page": 6,
+        "section": "Independent Practice"
+      },
+      "prompt": "Find 3/4 of 2/5.",
+      "response": {
+        "type": "exact_number",
+        "input_label": "Your exact answer",
+        "suffix": "",
+        "accept_equivalent_notation": true
+      },
+      "answer": {
+        "value": "3/10"
+      },
+      "policy": {
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "scored": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The overlap represents three quarters of the two-fifths region.",
+        "on_correct_math": "3/4 × 2/5. → (3 × 2)/(4 × 5) = 6/20. → 6/20 = 3/10.",
+        "on_incorrect_attempt_1": "The known quantity is two fifths of one whole.",
+        "on_incorrect_attempt_2": "Follow the working one line at a time, then correct your answer.",
+        "worked_explanation": "3/4 × 2/5. → (3 × 2)/(4 × 5) = 6/20. → 6/20 = 3/10.",
+        "correct_after_support": "Your correction now matches this relationship. Compare it with the working before continuing."
+      },
+      "mathematical_support": {
+        "hint_1": "The known quantity is two fifths of one whole.",
+        "hint_2": "Take three quarters of that quantity, not three quarters of the whole square.",
+        "worked_solution": "3/4 × 2/5. → (3 × 2)/(4 × 5) = 6/20. → 6/20 = 3/10."
+      },
+      "working": [
+        "3/4 × 2/5.",
+        "(3 × 2)/(4 × 5) = 6/20.",
+        "6/20 = 3/10."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_of",
+          "total": "2/5",
+          "n": 3,
+          "d": 4,
+          "object": "area",
+          "unit": "",
+          "target": "Your exact answer"
+        }
+      }
+    },
+    {
+      "id": "MD-15-P06",
+      "stage": "practice",
+      "target": "Number of groups",
+      "source_ref": {
+        "page": 6,
+        "section": "Independent Practice"
+      },
+      "prompt": "How many groups of 3/8 are in 2 1/4?",
+      "response": {
+        "type": "exact_number",
+        "input_label": "Number of groups",
+        "suffix": "",
+        "accept_equivalent_notation": true
+      },
+      "answer": {
+        "value": "6"
+      },
+      "policy": {
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "scored": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That many three-eighths groups make the given total.",
+        "on_correct_math": "2 1/4 = 9/4. → 9/4 ÷ 3/8 = 9/4 × 8/3. → 72/12 = 6 groups.",
+        "on_incorrect_attempt_1": "Count groups in the total. Keep those two quantities in order.",
+        "on_incorrect_attempt_2": "Follow the working one line at a time, then correct your answer.",
+        "worked_explanation": "2 1/4 = 9/4. → 9/4 ÷ 3/8 = 9/4 × 8/3. → 72/12 = 6 groups.",
+        "correct_after_support": "Your correction now matches this relationship. Compare it with the working before continuing."
+      },
+      "mathematical_support": {
+        "hint_1": "Count groups in the total. Keep those two quantities in order.",
+        "hint_2": "Convert the mixed number first; then divide by the group size.",
+        "worked_solution": "2 1/4 = 9/4. → 9/4 ÷ 3/8 = 9/4 × 8/3. → 72/12 = 6 groups."
+      },
+      "working": [
+        "2 1/4 = 9/4.",
+        "9/4 ÷ 3/8 = 9/4 × 8/3.",
+        "72/12 = 6 groups."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "groups",
+          "total": "2 1/4",
+          "n": 3,
+          "d": 8,
+          "object": "quantity",
+          "unit": "",
+          "target": "Number of groups"
+        }
+      }
+    },
+    {
+      "id": "MD-15-P07",
+      "stage": "practice",
+      "target": "Number of batches",
+      "source_ref": {
+        "page": 6,
+        "section": "Independent Practice"
+      },
+      "prompt": "A baker has 6 kg of flour. Each batch uses 3/4 kg. Which calculation finds the number of batches?",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "6 × 3/4",
+          "3/4 ÷ 6",
+          "6 ÷ 3/4",
+          "6 − 3/4"
+        ]
+      },
+      "answer": {
+        "value": "6 ÷ 3/4"
+      },
+      "policy": {
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "scored": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That counts batches from the available flour.",
+        "on_correct_math": "Total flour ÷ flour per batch. → 6 ÷ 3/4 = 6 × 4/3. → 8 batches.",
+        "on_incorrect_attempt_1": "Which quantity is unknown: flour mass, or the number of batches?",
+        "on_incorrect_attempt_2": "Follow the working one line at a time, then correct your answer.",
+        "worked_explanation": "Total flour ÷ flour per batch. → 6 ÷ 3/4 = 6 × 4/3. → 8 batches.",
+        "correct_after_support": "Your correction now matches this relationship. Compare it with the working before continuing."
+      },
+      "mathematical_support": {
+        "hint_1": "Which quantity is unknown: flour mass, or the number of batches?",
+        "hint_2": "The total is divided into groups of the stated batch size.",
+        "worked_solution": "Total flour ÷ flour per batch. → 6 ÷ 3/4 = 6 × 4/3. → 8 batches."
+      },
+      "working": [
+        "Total flour ÷ flour per batch.",
+        "6 ÷ 3/4 = 6 × 4/3.",
+        "8 batches."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "groups",
+          "total": "6",
+          "n": 3,
+          "d": 4,
+          "object": "flour",
+          "unit": "kg",
+          "target": "Number of batches"
+        }
+      }
+    },
+    {
+      "id": "MD-15-E01",
+      "stage": "exit",
+      "target": "Number of students",
+      "source_ref": {
+        "page": 13,
+        "section": "Immediate Mastery"
+      },
+      "prompt": "A class has 40 students. Seven tenths bring a packed lunch. How many students bring a packed lunch?",
+      "response": {
+        "type": "exact_number",
+        "input_label": "Number of students",
+        "suffix": "",
+        "accept_equivalent_notation": true
+      },
+      "answer": {
+        "value": "28"
+      },
+      "policy": {
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "scored": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Your answer selects the lunch group from the whole class.",
+        "on_correct_math": "7/10 × 40. → 40 ÷ 10 = 4. → 7 × 4 = 28 students.",
+        "on_incorrect_attempt_1": "Which amount is the whole class?",
+        "on_incorrect_attempt_2": "Follow the working one line at a time, then correct your answer.",
+        "worked_explanation": "7/10 × 40. → 40 ÷ 10 = 4. → 7 × 4 = 28 students.",
+        "correct_after_support": "Your correction now matches this relationship. Compare it with the working before continuing.",
+        "on_locked_incorrect": "The class size is the known whole. Use the worked fraction-of calculation to check your count."
+      },
+      "mathematical_support": {
+        "hint_1": "Which amount is the whole class?",
+        "hint_2": "Find the stated fraction of that known total.",
+        "worked_solution": "7/10 × 40. → 40 ÷ 10 = 4. → 7 × 4 = 28 students."
+      },
+      "working": [
+        "7/10 × 40.",
+        "40 ÷ 10 = 4.",
+        "7 × 4 = 28 students."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_of",
+          "total": "40",
+          "n": 7,
+          "d": 10,
+          "object": "students",
+          "unit": "",
+          "target": "Number of students"
+        }
+      }
+    },
+    {
+      "id": "MD-15-E02",
+      "stage": "exit",
+      "target": "Number of pieces",
+      "source_ref": {
+        "page": 13,
+        "section": "Immediate Mastery"
+      },
+      "prompt": "A wire is 3 metres long. It is cut into pieces that are each 3/8 metre long. How many pieces are made?",
+      "response": {
+        "type": "exact_number",
+        "input_label": "Number of pieces",
+        "suffix": "pieces"
+      },
+      "answer": {
+        "value": "8"
+      },
+      "policy": {
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "scored": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Those equal wire pieces use the full length.",
+        "on_correct_math": "3 ÷ 3/8. → 3 × 8/3 = 8. → 8 pieces.",
+        "on_incorrect_attempt_1": "What does the answer count?",
+        "on_incorrect_attempt_2": "Follow the working one line at a time, then correct your answer.",
+        "worked_explanation": "3 ÷ 3/8. → 3 × 8/3 = 8. → 8 pieces.",
+        "correct_after_support": "Your correction now matches this relationship. Compare it with the working before continuing.",
+        "on_locked_incorrect": "The answer counts equal wire pieces. Compare total length divided by the piece length."
+      },
+      "mathematical_support": {
+        "hint_1": "What does the answer count?",
+        "hint_2": "Relate the total length to the length of one piece.",
+        "worked_solution": "3 ÷ 3/8. → 3 × 8/3 = 8. → 8 pieces."
+      },
+      "working": [
+        "3 ÷ 3/8.",
+        "3 × 8/3 = 8.",
+        "8 pieces."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "groups",
+          "total": "3",
+          "n": 3,
+          "d": 8,
+          "object": "wire",
+          "unit": "m",
+          "target": "Number of pieces"
+        }
+      }
+    },
+    {
+      "id": "MD-15-E03",
+      "stage": "exit",
+      "target": "Whole number",
+      "source_ref": {
+        "page": 13,
+        "section": "Immediate Mastery"
+      },
+      "prompt": "Two thirds of a number is 14. Work out the number.",
+      "response": {
+        "type": "exact_number",
+        "input_label": "Whole number",
+        "suffix": "",
+        "accept_equivalent_notation": true
+      },
+      "answer": {
+        "value": "21"
+      },
+      "policy": {
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "scored": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Your answer restores the missing whole.",
+        "on_correct_math": "Whole = 14 ÷ 2/3. → One third = 14 ÷ 2 = 7. → Three thirds = 7 × 3 = 21.",
+        "on_incorrect_attempt_1": "Is the given number the whole?",
+        "on_incorrect_attempt_2": "Follow the working one line at a time, then correct your answer.",
+        "worked_explanation": "Whole = 14 ÷ 2/3. → One third = 14 ÷ 2 = 7. → Three thirds = 7 × 3 = 21.",
+        "correct_after_support": "Your correction now matches this relationship. Compare it with the working before continuing.",
+        "on_locked_incorrect": "The given number describes only two thirds. Compare how the working rebuilds the whole."
+      },
+      "mathematical_support": {
+        "hint_1": "Is the given number the whole?",
+        "hint_2": "Rebuild the whole from its two known thirds.",
+        "worked_solution": "Whole = 14 ÷ 2/3. → One third = 14 ÷ 2 = 7. → Three thirds = 7 × 3 = 21."
+      },
+      "working": [
+        "Whole = 14 ÷ 2/3.",
+        "One third = 14 ÷ 2 = 7.",
+        "Three thirds = 7 × 3 = 21."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "whole",
+          "known": "14",
+          "n": 2,
+          "d": 3,
+          "object": "quantity",
+          "target": "Whole number"
+        }
+      }
+    },
+    {
+      "id": "MD-15-E04",
+      "stage": "exit",
+      "target": "Choose the relationship",
+      "source_ref": {
+        "page": 13,
+        "section": "Immediate Mastery"
+      },
+      "prompt": "Which statement is correct?",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Multiply to find a fraction of a known quantity; divide to count fraction-sized groups or rebuild the whole.",
+          "Multiply when the answer is smaller and divide when it is larger.",
+          "The word each always means multiplication.",
+          "In division, put the smaller number first."
+        ]
+      },
+      "answer": {
+        "value": "Multiply to find a fraction of a known quantity; divide to count fraction-sized groups or rebuild the whole."
+      },
+      "policy": {
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "scored": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That rule covers the three different structures.",
+        "on_correct_math": "A fraction of a known quantity: multiply. → Counting groups or rebuilding the whole: divide. → Choose from the relationship, not a keyword or the expected answer size.",
+        "on_incorrect_attempt_1": "Does the statement work for all three kinds of question?",
+        "on_incorrect_attempt_2": "Follow the working one line at a time, then correct your answer.",
+        "worked_explanation": "A fraction of a known quantity: multiply. → Counting groups or rebuilding the whole: divide. → Choose from the relationship, not a keyword or the expected answer size.",
+        "correct_after_support": "Your correction now matches this relationship. Compare it with the working before continuing.",
+        "on_locked_incorrect": "That shortcut does not work for every structure. Compare the three quantity relationships."
+      },
+      "mathematical_support": {
+        "hint_1": "Does the statement work for all three kinds of question?",
+        "hint_2": "The roles of the given quantities determine the operation.",
+        "worked_solution": "A fraction of a known quantity: multiply. → Counting groups or rebuilding the whole: divide. → Choose from the relationship, not a keyword or the expected answer size."
+      },
+      "working": [
+        "A fraction of a known quantity: multiply.",
+        "Counting groups or rebuilding the whole: divide.",
+        "Choose from the relationship, not a keyword or the expected answer size."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decision",
+          "assessment": true,
+          "object": "relationships",
+          "target": "Choose the relationship"
+        }
+      },
+      "response_feedback": {
+        "Multiply when the answer is smaller and divide when it is larger.": "The expected answer size is not a reliable operation rule.",
+        "The word each always means multiplication.": "Each can describe known groups or a group size. The unknown quantity matters.",
+        "In division, put the smaller number first.": "Division order follows the quantity roles, not their sizes."
+      }
+    }
+  ],
+  "canonical_lesson": {
+    "version": "MD15-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

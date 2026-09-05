@@ -1,0 +1,2854 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "PA-12 - Find a Percentage of Money",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-17",
+      "sha256": "e39b0850996abe7a8fbd1375963c711e499f4b5b03c40a76b6caa0f516ddd94f"
+    },
+    "authored_scope": "Find a percentage of money using pounds and pence accurately and round only when required.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "PA12-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "verified_desktop_ready_phone_correct_amounts_incomplete_notation_learning_320_390_pence_units_exact_rounding_drafts_keyboard_audio_captions",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        13,
+        15,
+        16,
+        17
+      ],
+      "source_repairs_consulted": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        16,
+        17
+      ],
+      "note": "All seventeen approved pages, rendered diagrams and complete previous configuration reviewed. Restores proportional pence pieces, exact nearest-penny position, prescribed worked/guided sequence and all 25 active questions. Numeric value, standard notation and exact-before-rounding working are distinct evidence. Final working may use either explicitly selected unit and any valid method; the final answer unit is provided as pounds, not independently inferred. No Entry, Diagnostic, prerequisite mutation, delayed Retrieval or Strong state."
+    }
+  },
+  "identity": {
+    "id": "PA-12",
+    "slug": "find-a-percentage-of-money",
+    "title": "Find a Percentage of Money",
+    "strand": "Number",
+    "cluster": "Finding Percentages of Amounts",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Find a percentage of money using pounds and pence accurately and round only when required.",
+    "success_criteria": [
+      "Treat the money amount as the whole, calculate with consistent units, then write the result in valid money notation.",
+      "One pound is 100 pence; changing units must not change the monetary value.",
+      "Use the sequence: Identify the money whole; Choose a percentage method; Calculate in pounds or pence consistently; Round to the nearest penny only if needed; Write £ and two decimal places where appropriate.",
+      "Complete a context question with the requested form and unit."
+    ],
+    "boundaries": {
+      "includes": [
+        "Find a percentage of money using pounds and pence accurately and round only when required.",
+        "Direct calculation",
+        "Concept and method checks",
+        "Short GCSE-style transfer"
+      ],
+      "excludes": [
+        "Diagnostic route",
+        "Delayed retrieval route",
+        "Algebraic generalisation beyond the approved packet"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "PA-01",
+      "PA-02",
+      "PA-10",
+      "PA-11",
+      "FDP-01"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for PA-01, PA-02, PA-10, PA-11, FDP-01 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "single_choice",
+      "money_percentage_amount"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    },
+    "place_value_profile": true
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "Treat the money amount as the whole, calculate with consistent units, then write the result in valid money notation.",
+    "invariant": "One pound is 100 pence; changing units must not change the monetary value.",
+    "mathematical_rule": "Identify the money whole; Choose a percentage method; Calculate in pounds or pence consistently; Round to the nearest penny only if needed; Write £ and two decimal places where appropriate",
+    "must_notice": [
+      "Identify the money whole",
+      "Choose a percentage method",
+      "Calculate in pounds or pence consistently",
+      "Round to the nearest penny only if needed",
+      "Write £ and two decimal places where appropriate"
+    ],
+    "common_confusions": [
+      "mixing pounds and pence",
+      "rounding during an intermediate step",
+      "dropping a zero in money notation"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "Keep the money value consistent",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Keep the money value consistent",
+          "initial_state": "Keep the money value consistent",
+          "model": {
+            "kind": "money_percentage_amount",
+            "title": "Percentage amounts with money",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "principle",
+            "solved": true,
+            "steps": []
+          }
+        },
+        "narration": {
+          "script": "A percentage still selects a share of the original whole. Pounds and pence are different units for the same value. Keep exact amounts during the calculation and round fractional pennies only at the end."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Take a tenth in pence",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Take a tenth in pence",
+          "initial_state": "Take a tenth in pence",
+          "model": {
+            "kind": "money_percentage_amount",
+            "title": "Take percentage shares without changing the money value",
+            "given": "15% of £18.40",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "pieces",
+            "solved": true,
+            "steps": [],
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "The complete money amount is represented in pence and divided into ten equal chunks. The blue tenth is selected."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Magnify and halve the next tenth",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Magnify and halve the next tenth",
+          "initial_state": "Magnify and halve the next tenth",
+          "model": {
+            "kind": "money_percentage_amount",
+            "title": "Take percentage shares without changing the money value",
+            "given": "15% of £18.40",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "pieces",
+            "solved": true,
+            "steps": [],
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "The magnified next tenth has the same value as the first. Split it into two equal halves and select the gold half for five percent."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Combine the selected money",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Combine the selected money",
+          "initial_state": "Combine the selected money",
+          "model": {
+            "kind": "money_percentage_amount",
+            "title": "Take percentage shares without changing the money value",
+            "given": "15% of £18.40",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "pieces",
+            "solved": true,
+            "steps": [],
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "The full tenth is worth twice the half-tenth, so its selected piece is twice as long. Add their pence, then convert that same value back to pounds."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Keep the exact result first",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Keep the exact result first",
+          "initial_state": "Keep the exact result first",
+          "model": {
+            "kind": "money_percentage_amount",
+            "title": "Round a fractional penny only at the end",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "rounding",
+            "solved": true,
+            "steps": [],
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "A percentage calculation can produce a fractional penny. Keep the complete exact amount before deciding how to round it."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T06"
+      },
+      {
+        "id": "T06",
+        "stage": "teaching",
+        "purpose": "Locate the exact fractional penny",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Locate the exact fractional penny",
+          "initial_state": "Locate the exact fractional penny",
+          "model": {
+            "kind": "money_percentage_amount",
+            "title": "Round a fractional penny only at the end",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "rounding",
+            "solved": true,
+            "steps": [],
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "The exact amount lies near the upper end of the interval between neighbouring pennies. Compare its distance from each end, using the midpoint as a reference."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T07"
+      },
+      {
+        "id": "T07",
+        "stage": "teaching",
+        "purpose": "Record the nearer whole penny",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Record the nearer whole penny",
+          "initial_state": "Record the nearer whole penny",
+          "model": {
+            "kind": "money_percentage_amount",
+            "title": "Round a fractional penny only at the end",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "rounding",
+            "solved": true,
+            "steps": [],
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "The upper whole penny is nearer. The final pounds answer records that rounded value with two pence digits. Only the final answer has been rounded."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T08"
+      },
+      {
+        "id": "T08",
+        "stage": "teaching",
+        "purpose": "Choose a complete pence plan",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Choose a complete pence plan",
+          "initial_state": "Choose a complete pence plan",
+          "model": {
+            "kind": "money_percentage_amount",
+            "title": "Choose a complete money plan",
+            "given": "15% of £18.40",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "steps": [
+              "£18.40 = 1840p.",
+              "10% = 184p and 5% = 92p.",
+              "184p + 92p = 276p = £2.76."
+            ],
+            "mode": "rule"
+          }
+        },
+        "narration": {
+          "script": "Choose the plan that preserves the original money through the calculation and both unit conversions."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "PA-12-C01"
+        },
+        "next_step": "T09"
+      },
+      {
+        "id": "T09",
+        "stage": "teaching",
+        "purpose": "Begin with an exact tenth",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Begin with an exact tenth",
+          "initial_state": "Begin with an exact tenth",
+          "model": {
+            "kind": "money_percentage_amount",
+            "title": "Use exact benchmark amounts",
+            "given": "35% of £46.80",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "worked",
+            "solved": true,
+            "stages": [
+              {
+                "title": "Find a tenth",
+                "lines": [
+                  "10% of £46.80 = £4.68."
+                ]
+              },
+              {
+                "title": "Build the two shares",
+                "lines": [
+                  "30% = 3 × £4.68 = £14.04.",
+                  "5% = £4.68 ÷ 2 = £2.34."
+                ]
+              },
+              {
+                "title": "Combine and record",
+                "lines": [
+                  "£14.04 + £2.34 = £16.38.",
+                  "Every amount is already an exact whole number of pennies."
+                ]
+              }
+            ],
+            "steps": [],
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "Use a convenient tenth of this original price. Keep the complete pence value as you build the other shares."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T10"
+      },
+      {
+        "id": "T10",
+        "stage": "teaching",
+        "purpose": "Build thirty percent and five percent",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Build thirty percent and five percent",
+          "initial_state": "Build thirty percent and five percent",
+          "model": {
+            "kind": "money_percentage_amount",
+            "title": "Use exact benchmark amounts",
+            "given": "35% of £46.80",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "worked",
+            "solved": true,
+            "stages": [
+              {
+                "title": "Find a tenth",
+                "lines": [
+                  "10% of £46.80 = £4.68."
+                ]
+              },
+              {
+                "title": "Build the two shares",
+                "lines": [
+                  "30% = 3 × £4.68 = £14.04.",
+                  "5% = £4.68 ÷ 2 = £2.34."
+                ]
+              },
+              {
+                "title": "Combine and record",
+                "lines": [
+                  "£14.04 + £2.34 = £16.38.",
+                  "Every amount is already an exact whole number of pennies."
+                ]
+              }
+            ],
+            "steps": [],
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "Three copies of the tenth give the larger share. Half of the same tenth gives the smaller share. Both remain exact money amounts."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T11"
+      },
+      {
+        "id": "T11",
+        "stage": "teaching",
+        "purpose": "Combine the exact selected shares",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Combine the exact selected shares",
+          "initial_state": "Combine the exact selected shares",
+          "model": {
+            "kind": "money_percentage_amount",
+            "title": "Use exact benchmark amounts",
+            "given": "35% of £46.80",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "worked",
+            "solved": true,
+            "stages": [
+              {
+                "title": "Find a tenth",
+                "lines": [
+                  "10% of £46.80 = £4.68."
+                ]
+              },
+              {
+                "title": "Build the two shares",
+                "lines": [
+                  "30% = 3 × £4.68 = £14.04.",
+                  "5% = £4.68 ÷ 2 = £2.34."
+                ]
+              },
+              {
+                "title": "Combine and record",
+                "lines": [
+                  "£14.04 + £2.34 = £16.38.",
+                  "Every amount is already an exact whole number of pennies."
+                ]
+              }
+            ],
+            "steps": [],
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "Add the two shares and record the total in pounds. Inspect the pence places to decide whether rounding is needed."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T12"
+      },
+      {
+        "id": "T12",
+        "stage": "teaching",
+        "purpose": "Explain the precision in this example",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Explain the precision in this example",
+          "initial_state": "Explain the precision in this example",
+          "model": {
+            "kind": "money_percentage_amount",
+            "title": "Decide whether this calculation needs rounding",
+            "given": "35% of £46.80",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "steps": [
+              "10% of £46.80 = £4.68.",
+              "30% = £14.04 and 5% = £2.34.",
+              "£14.04 + £2.34 = £16.38.",
+              "Each amount is already an exact whole number of pennies."
+            ],
+            "mode": "rule"
+          }
+        },
+        "narration": {
+          "script": "Choose why this particular calculation did not need rounding."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "PA-12-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "PA-12-G01",
+        "support_level": "high",
+        "pre_question_script": "Choose a convenient fractional description of the percentage.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "faded",
+        "question_ref": "PA-12-G02",
+        "support_level": "reduced",
+        "pre_question_script": "Complete the divisor and the money quotient.",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "faded",
+        "question_ref": "PA-12-G03",
+        "support_level": "reduced",
+        "pre_question_script": "Record the result in standard money notation.",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "independent_transfer",
+        "question_ref": "PA-12-G04",
+        "support_level": "none",
+        "pre_question_script": "Choose the money form that preserves the calculator value and its unit.",
+        "correct_next": "P01"
+      }
+    },
+    "practice": {
+      "intro_script": "Find each requested money share using any valid method. Record pounds with two pence digits. Working is optional here; if you record it, select its unit and keep it exact. Round only where requested, at the final penny.",
+      "question_order": [
+        "PA-12-P01",
+        "PA-12-P02",
+        "PA-12-P03",
+        "PA-12-P04",
+        "PA-12-P05",
+        "PA-12-P06",
+        "PA-12-P07",
+        "PA-12-P08",
+        "PA-12-P09",
+        "PA-12-P10",
+        "PA-12-P11",
+        "PA-12-P12",
+        "PA-12-X01",
+        "PA-12-X02",
+        "PA-12-X03",
+        "PA-12-X04"
+      ],
+      "question_count": 16,
+      "feedback_policy": "No optional hints. Specific submitted-error feedback, progressive working and learner-entered correction. Equivalent shorter money notation is numerically correct but does not establish secure conventional notation."
+    },
+    "exit": {
+      "intro_script": "Complete all three final questions without hints. Show each exact calculation and name its unit; record the final answer in pounds with two pence digits. Round only the requested final answer. All responses lock before feedback.",
+      "primary_question_refs": [
+        "PA-12-E01",
+        "PA-12-E02",
+        "PA-12-E03"
+      ],
+      "confirmation_question_refs": [],
+      "submission_policy": "Withhold correctness and working until all three responses are saved.",
+      "mastery_policy": {
+        "profile": "all_primary_unsupported_deferred",
+        "require_all": true,
+        "source_page": 13,
+        "money_evidence_rule": "standard_notation_and_exact_method",
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "All three final money calculations are correct without help. Your exact working preserves the units, your notation shows both pence digits, and rounding occurs only at the requested final step.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Keep building money precision",
+      "ryan_script": "Review the saved amounts, notation and exact methods. A shorter equivalent form can have the right value while still needing standard money notation. Ready for retrieval requires all three final checks without help.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "PA-12-C01",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "Which plan correctly finds 15% of £18.40 using pence?",
+      "target": "Calculate a percentage of money with consistent units and final-only rounding",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Convert £18.40 to 1840p; find 184p and 92p, add them, then convert 276p to £2.76.",
+          "Convert £18.40 to 184p, then find 15% of that number of pence.",
+          "Find 15% of 18.40p, then use the same digits as a number of pounds.",
+          "Round £18.40 to £18 before calculating 15%."
+        ]
+      },
+      "answer": {
+        "value": "Convert £18.40 to 1840p; find 184p and 92p, add them, then convert 276p to £2.76."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The plan preserves the original value through both unit conversions.",
+        "correct_after_support": "Correct. The plan preserves the original value through both unit conversions.",
+        "on_correct_math": "£18.40 = 1840p. → 10% = 184p and 5% = 92p. → 184p + 92p = 276p = £2.76.",
+        "on_incorrect_attempt_1": "The conversion must preserve the complete value, and both selected parts must use the same unit.",
+        "on_incorrect_attempt_2": "Follow the pence conversion, the two selected shares and the final pounds conversion in the working. Choose the complete matching plan.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "£18.40 = 1840p. → 10% = 184p and 5% = 92p. → 184p + 92p = 276p = £2.76."
+      },
+      "mathematical_support": {
+        "hint_1": "The conversion must preserve the complete value, and both selected parts must use the same unit.",
+        "hint_2": "Follow the pence conversion, the two selected shares and the final pounds conversion in the working. Choose the complete matching plan.",
+        "worked_solution": "£18.40 = 1840p. → 10% = 184p and 5% = 92p. → 184p + 92p = 276p = £2.76."
+      },
+      "working": [
+        "£18.40 = 1840p.",
+        "10% = 184p and 5% = 92p.",
+        "184p + 92p = 276p = £2.76."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "money_percentage_amount",
+          "title": "Choose a complete money plan",
+          "given": "15% of £18.40",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "steps": [
+            "£18.40 = 1840p.",
+            "10% = 184p and 5% = 92p.",
+            "184p + 92p = 276p = £2.76."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "Convert £18.40 to 184p, then find 15% of that number of pence.": "There are one hundred pence in each pound. Check the starting conversion before taking the percentage.",
+        "Find 15% of 18.40p, then use the same digits as a number of pounds.": "Changing a pence label to a pounds label without changing the number changes the value.",
+        "Round £18.40 to £18 before calculating 15%.": "Rounding the original whole before finding its percentage changes the amount being selected."
+      },
+      "evidence_profile": "place_value_conversion",
+      "correct_feedback_by_evidence": false,
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-12-C02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "In the worked calculation of 35% of £46.80, why was no rounding needed?",
+      "target": "Calculate a percentage of money with consistent units and final-only rounding",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Every intermediate amount and the final answer are exact whole-penny amounts.",
+          "Money answers must always be rounded to the nearest pound.",
+          "Money calculations never need rounding.",
+          "Pence digits should be removed whenever an intermediate amount ends in zero."
+        ]
+      },
+      "answer": {
+        "value": "Every intermediate amount and the final answer are exact whole-penny amounts."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. These particular amounts already end at whole pennies.",
+        "correct_after_support": "Correct. These particular amounts already end at whole pennies.",
+        "on_correct_math": "10% of £46.80 = £4.68. → 30% = £14.04 and 5% = £2.34. → £14.04 + £2.34 = £16.38. → Each amount is already an exact whole number of pennies.",
+        "on_incorrect_attempt_1": "Inspect the actual penny values in this example; do not make a rule about all money calculations.",
+        "on_incorrect_attempt_2": "The displayed intermediate amounts and their sum contain no fractional penny. Choose the explanation that applies to these exact values.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "10% of £46.80 = £4.68. → 30% = £14.04 and 5% = £2.34. → £14.04 + £2.34 = £16.38. → Each amount is already an exact whole number of pennies."
+      },
+      "mathematical_support": {
+        "hint_1": "Inspect the actual penny values in this example; do not make a rule about all money calculations.",
+        "hint_2": "The displayed intermediate amounts and their sum contain no fractional penny. Choose the explanation that applies to these exact values.",
+        "worked_solution": "10% of £46.80 = £4.68. → 30% = £14.04 and 5% = £2.34. → £14.04 + £2.34 = £16.38. → Each amount is already an exact whole number of pennies."
+      },
+      "working": [
+        "10% of £46.80 = £4.68.",
+        "30% = £14.04 and 5% = £2.34.",
+        "£14.04 + £2.34 = £16.38.",
+        "Each amount is already an exact whole number of pennies."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "money_percentage_amount",
+          "title": "Decide whether this calculation needs rounding",
+          "given": "35% of £46.80",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "steps": [
+            "10% of £46.80 = £4.68.",
+            "30% = £14.04 and 5% = £2.34.",
+            "£14.04 + £2.34 = £16.38.",
+            "Each amount is already an exact whole number of pennies."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "Money answers must always be rounded to the nearest pound.": "Rounding to whole pounds would discard real pence and is not requested.",
+        "Money calculations never need rounding.": "Other percentage calculations can produce fractional pennies, even though this one does not.",
+        "Pence digits should be removed whenever an intermediate amount ends in zero.": "A zero digit does not authorise removing the pence places or changing a money value."
+      },
+      "evidence_profile": "place_value_conversion",
+      "correct_feedback_by_evidence": false,
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-12-G01",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "For 12.5% of £28.80, which fraction gives an efficient method?",
+      "target": "Calculate a percentage of money with consistent units and final-only rounding",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "one eighth of the whole",
+          "one half of the whole",
+          "the whole divided by 12.5",
+          "12.5 tenths of the whole"
+        ]
+      },
+      "answer": {
+        "value": "one eighth of the whole"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Equal eighths provide a convenient route for this amount.",
+        "correct_after_support": "Correct. Equal eighths provide a convenient route for this amount.",
+        "on_correct_math": "Eight equal 12.5% shares make 100%. → 12.5% = 1/8, so divide the original amount into eight equal groups.",
+        "on_incorrect_attempt_1": "Count how many equal copies of the stated percentage complete the whole.",
+        "on_incorrect_attempt_2": "Match the equal-share description in the working to the percentage before dividing any money.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Eight equal 12.5% shares make 100%. → 12.5% = 1/8, so divide the original amount into eight equal groups."
+      },
+      "mathematical_support": {
+        "hint_1": "Count how many equal copies of the stated percentage complete the whole.",
+        "hint_2": "Match the equal-share description in the working to the percentage before dividing any money.",
+        "worked_solution": "Eight equal 12.5% shares make 100%. → 12.5% = 1/8, so divide the original amount into eight equal groups."
+      },
+      "working": [
+        "Eight equal 12.5% shares make 100%.",
+        "12.5% = 1/8, so divide the original amount into eight equal groups."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "money_percentage_amount",
+          "title": "Choose an equal-share route",
+          "given": "12.5% of £28.80",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "steps": [
+            "Eight equal 12.5% shares make 100%.",
+            "12.5% = 1/8, so divide the original amount into eight equal groups."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "one half of the whole": "One half represents fifty percent, which is a different share.",
+        "the whole divided by 12.5": "The percentage number is not itself the number of equal groups.",
+        "12.5 tenths of the whole": "Twelve and a half tenths exceeds one whole, unlike this percentage."
+      },
+      "evidence_profile": "place_value_conversion",
+      "correct_feedback_by_evidence": false,
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-12-G02",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "faded",
+      "prompt": "Complete the selected division: £28.80 ÷ ___ = £___.",
+      "target": "Calculate a percentage of money with consistent units and final-only rounding",
+      "response": {
+        "type": "money_percentage_amount",
+        "mode": "fields",
+        "fields": [
+          {
+            "key": "divisor",
+            "label": "Divisor"
+          },
+          {
+            "key": "quotient",
+            "label": "Quotient in pounds",
+            "money": true
+          }
+        ]
+      },
+      "answer": {
+        "value": {
+          "divisor": "8",
+          "quotient": "3.60"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The division gives the value of one equal eighth.",
+        "correct_after_support": "Correct. The division gives the value of one equal eighth.",
+        "on_correct_math": "£28.80 ÷ 8 = £3.60. → The quotient is one eighth of the original money.",
+        "on_incorrect_attempt_1": "The divisor counts equal groups; the quotient records money in one group.",
+        "on_incorrect_attempt_2": "Compare each blank with its role in the displayed division. Keep the quotient in pounds.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "£28.80 ÷ 8 = £3.60. → The quotient is one eighth of the original money."
+      },
+      "mathematical_support": {
+        "hint_1": "The divisor counts equal groups; the quotient records money in one group.",
+        "hint_2": "Compare each blank with its role in the displayed division. Keep the quotient in pounds.",
+        "worked_solution": "£28.80 ÷ 8 = £3.60. → The quotient is one eighth of the original money."
+      },
+      "working": [
+        "£28.80 ÷ 8 = £3.60.",
+        "The quotient is one eighth of the original money."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "money_percentage_amount",
+          "title": "Divide the money into equal shares",
+          "given": "12.5% of £28.80",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "steps": [
+            "£28.80 ÷ 8 = £3.60.",
+            "The quotient is one eighth of the original money."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_divisor": "The money quotient is correct. Recheck the group count for eighths.",
+        "check_quotient": "The divisor is correct. Recheck how much money belongs in one group.",
+        "check_multiple": "Check the equal-group count first, then divide the original pound amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "correct_feedback_by_evidence": true,
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-12-G03",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "faded",
+      "prompt": "Record 12.5% of £28.80 using standard money notation.",
+      "target": "Calculate a percentage of money with consistent units and final-only rounding",
+      "response": {
+        "type": "money_percentage_amount",
+        "mode": "fields",
+        "require_notation": true,
+        "fields": [
+          {
+            "key": "amount",
+            "label": "Final answer in pounds",
+            "money": true
+          }
+        ]
+      },
+      "answer": {
+        "value": {
+          "amount": "3.60"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The value and its two-digit pence notation are both complete.",
+        "correct_after_support": "Correct. The value and its two-digit pence notation are both complete.",
+        "on_correct_math": "£28.80 ÷ 8 = £3.60. → Write two pence digits: £3.60.",
+        "on_incorrect_attempt_1": "Use the calculated quotient and keep both pence digits when recording pounds.",
+        "on_incorrect_attempt_2": "The final statement shows the same value in standard money notation. Record that value with both pence places.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "£28.80 ÷ 8 = £3.60. → Write two pence digits: £3.60."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the calculated quotient and keep both pence digits when recording pounds.",
+        "hint_2": "The final statement shows the same value in standard money notation. Record that value with both pence places.",
+        "worked_solution": "£28.80 ÷ 8 = £3.60. → Write two pence digits: £3.60."
+      },
+      "working": [
+        "£28.80 ÷ 8 = £3.60.",
+        "Write two pence digits: £3.60."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "money_percentage_amount",
+          "title": "Record the calculated money value",
+          "given": "12.5% of £28.80",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "steps": [
+            "£28.80 ÷ 8 = £3.60.",
+            "Write two pence digits: £3.60."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_amount": "Recheck the value of the selected eighth, keeping the answer in pounds.",
+        "equivalent_money_notation": "Your amount is numerically correct. Write both pence digits to show standard money notation."
+      },
+      "evidence_profile": "place_value_conversion",
+      "correct_feedback_by_evidence": true,
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-12-G04",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "independent_transfer",
+      "prompt": "A calculator displays 3.6 for the amount in pounds. Which is the correct standard money form and explanation?",
+      "target": "Calculate a percentage of money with consistent units and final-only rounding",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "£3.60; the final zero records the ones-pence column.",
+          "3.6p; a calculator display can be labelled pence without conversion.",
+          "£36; the decimal point can be removed.",
+          "£3.06; a zero should be inserted immediately after the decimal point."
+        ]
+      },
+      "answer": {
+        "value": "£3.60; the final zero records the ones-pence column."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The added trailing zero completes the notation without changing the value.",
+        "correct_after_support": "Correct. The added trailing zero completes the notation without changing the value.",
+        "on_correct_math": "3.6 pounds is 3 pounds and 60 pence. → £3.6 and £3.60 have the same value. → Standard notation uses two pence digits: £3.60. The last zero occupies the ones-pence column.",
+        "on_incorrect_attempt_1": "Preserve the value and the pounds unit while completing the pence columns.",
+        "on_incorrect_attempt_2": "Read how the tenths-of-a-pound digit becomes tens of pence in the working. The added zero must not move that digit.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "3.6 pounds is 3 pounds and 60 pence. → £3.6 and £3.60 have the same value. → Standard notation uses two pence digits: £3.60. The last zero occupies the ones-pence column."
+      },
+      "mathematical_support": {
+        "hint_1": "Preserve the value and the pounds unit while completing the pence columns.",
+        "hint_2": "Read how the tenths-of-a-pound digit becomes tens of pence in the working. The added zero must not move that digit.",
+        "worked_solution": "3.6 pounds is 3 pounds and 60 pence. → £3.6 and £3.60 have the same value. → Standard notation uses two pence digits: £3.60. The last zero occupies the ones-pence column."
+      },
+      "working": [
+        "3.6 pounds is 3 pounds and 60 pence.",
+        "£3.6 and £3.60 have the same value.",
+        "Standard notation uses two pence digits: £3.60. The last zero occupies the ones-pence column."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "money_percentage_amount",
+          "title": "Interpret the calculator display",
+          "given": "Calculator result in pounds: 3.6",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "steps": [
+            "3.6 pounds is 3 pounds and 60 pence.",
+            "£3.6 and £3.60 have the same value.",
+            "Standard notation uses two pence digits: £3.60. The last zero occupies the ones-pence column."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "3.6p; a calculator display can be labelled pence without conversion.": "The calculator result is in pounds; labelling those same digits as pence changes the value.",
+        "£36; the decimal point can be removed.": "Removing the decimal point makes the amount ten times as large.",
+        "£3.06; a zero should be inserted immediately after the decimal point.": "Inserting a zero before the six moves it to a different place and changes the amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "correct_feedback_by_evidence": false,
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-12-P01",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Find 10% of £37.50.",
+      "target": "Calculate a percentage of money with consistent units and final-only rounding",
+      "response": {
+        "type": "money_percentage_amount",
+        "whole": "37.50",
+        "percent": 10,
+        "round_nearest_penny": false,
+        "require_working": false
+      },
+      "answer": {
+        "value": {
+          "amount": "3.75"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The tenth is recorded as a pounds-and-pence amount.",
+        "correct_after_support": "Correct. The tenth is recorded as a pounds-and-pence amount.",
+        "on_correct_math": "10% of £37.50 = £37.50 ÷ 10. → £37.50 ÷ 10 = £3.75.",
+        "on_incorrect_attempt_1": "A tenth divides the original pound amount into ten equal shares.",
+        "on_incorrect_attempt_2": "Check the decimal placement in the displayed division by ten, then record that money value.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "10% of £37.50 = £37.50 ÷ 10. → £37.50 ÷ 10 = £3.75."
+      },
+      "mathematical_support": {
+        "hint_1": "A tenth divides the original pound amount into ten equal shares.",
+        "hint_2": "Check the decimal placement in the displayed division by ten, then record that money value.",
+        "worked_solution": "10% of £37.50 = £37.50 ÷ 10. → £37.50 ÷ 10 = £3.75."
+      },
+      "working": [
+        "10% of £37.50 = £37.50 ÷ 10.",
+        "£37.50 ÷ 10 = £3.75."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "money_percentage_amount",
+          "title": "Calculate the stated percentage of the original money",
+          "given": "10% of £37.50",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 10,
+          "whole": "37.50",
+          "steps": [
+            "10% of £37.50 = £37.50 ÷ 10.",
+            "£37.50 ÷ 10 = £3.75."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_method": "Your final amount is correct, but the recorded calculation does not establish this percentage of the original money in its selected unit.",
+        "check_arithmetic": "The percentage route is valid. Check the exact calculation and any written equality; do not round an intermediate value.",
+        "check_amount": "A tenth divides the original pound amount into ten equal shares.",
+        "check_multiple": "A tenth divides the original pound amount into ten equal shares.",
+        "check_unit": "This answer box is in pounds. Convert any pence result before recording it here.",
+        "unrounded_final": "You have recorded the exact value, but this question requests a final answer to the nearest penny. Keep the exact working and round the final amount only.",
+        "equivalent_money_notation": "The tenth has the correct value. Use exactly two digits for its pence notation."
+      },
+      "evidence_profile": "place_value_conversion",
+      "correct_feedback_by_evidence": true,
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-12-P02",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Find 25% of £64.00.",
+      "target": "Calculate a percentage of money with consistent units and final-only rounding",
+      "response": {
+        "type": "money_percentage_amount",
+        "whole": "64.00",
+        "percent": 25,
+        "round_nearest_penny": false,
+        "require_working": false
+      },
+      "answer": {
+        "value": {
+          "amount": "16.00"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The quarter is written with both zero pence places.",
+        "correct_after_support": "Correct. The quarter is written with both zero pence places.",
+        "on_correct_math": "25% = 1/4. → £64.00 ÷ 4 = £16.00.",
+        "on_incorrect_attempt_1": "A quarter selects one of four equal shares, even when the answer is a whole number of pounds.",
+        "on_incorrect_attempt_2": "The quarter calculation ends at whole pounds. Record the two zero pence digits without changing that value.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "25% = 1/4. → £64.00 ÷ 4 = £16.00."
+      },
+      "mathematical_support": {
+        "hint_1": "A quarter selects one of four equal shares, even when the answer is a whole number of pounds.",
+        "hint_2": "The quarter calculation ends at whole pounds. Record the two zero pence digits without changing that value.",
+        "worked_solution": "25% = 1/4. → £64.00 ÷ 4 = £16.00."
+      },
+      "working": [
+        "25% = 1/4.",
+        "£64.00 ÷ 4 = £16.00."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "money_percentage_amount",
+          "title": "Calculate the stated percentage of the original money",
+          "given": "25% of £64.00",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 25,
+          "whole": "64.00",
+          "steps": [
+            "25% = 1/4.",
+            "£64.00 ÷ 4 = £16.00."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_method": "Your final amount is correct, but the recorded calculation does not establish this percentage of the original money in its selected unit.",
+        "check_arithmetic": "The percentage route is valid. Check the exact calculation and any written equality; do not round an intermediate value.",
+        "check_amount": "A quarter selects one of four equal shares, even when the answer is a whole number of pounds.",
+        "check_multiple": "A quarter selects one of four equal shares, even when the answer is a whole number of pounds.",
+        "check_unit": "This answer box is in pounds. Convert any pence result before recording it here.",
+        "unrounded_final": "You have recorded the exact value, but this question requests a final answer to the nearest penny. Keep the exact working and round the final amount only.",
+        "equivalent_money_notation": "Your quarter is numerically correct. Add the two zero pence digits for standard money notation."
+      },
+      "evidence_profile": "place_value_conversion",
+      "correct_feedback_by_evidence": true,
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-12-P03",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Find 15% of £22.40.",
+      "target": "Calculate a percentage of money with consistent units and final-only rounding",
+      "response": {
+        "type": "money_percentage_amount",
+        "whole": "22.40",
+        "percent": 15,
+        "round_nearest_penny": false,
+        "require_working": false
+      },
+      "answer": {
+        "value": {
+          "amount": "3.36"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The two money shares combine without changing units.",
+        "correct_after_support": "Correct. The two money shares combine without changing units.",
+        "on_correct_math": "10% of £22.40 = £2.24. → 5% = £1.12. → £2.24 + £1.12 = £3.36.",
+        "on_incorrect_attempt_1": "Find a tenth and half of that same tenth, keeping both amounts in pounds.",
+        "on_incorrect_attempt_2": "Follow the full tenth and half-tenth into their sum in the working. Correct your selected money amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "10% of £22.40 = £2.24. → 5% = £1.12. → £2.24 + £1.12 = £3.36."
+      },
+      "mathematical_support": {
+        "hint_1": "Find a tenth and half of that same tenth, keeping both amounts in pounds.",
+        "hint_2": "Follow the full tenth and half-tenth into their sum in the working. Correct your selected money amount.",
+        "worked_solution": "10% of £22.40 = £2.24. → 5% = £1.12. → £2.24 + £1.12 = £3.36."
+      },
+      "working": [
+        "10% of £22.40 = £2.24.",
+        "5% = £1.12.",
+        "£2.24 + £1.12 = £3.36."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "money_percentage_amount",
+          "title": "Calculate the stated percentage of the original money",
+          "given": "15% of £22.40",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 15,
+          "whole": "22.40",
+          "steps": [
+            "10% of £22.40 = £2.24.",
+            "5% = £1.12.",
+            "£2.24 + £1.12 = £3.36."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_method": "Your final amount is correct, but the recorded calculation does not establish this percentage of the original money in its selected unit.",
+        "check_arithmetic": "The percentage route is valid. Check the exact calculation and any written equality; do not round an intermediate value.",
+        "check_amount": "Find a tenth and half of that same tenth, keeping both amounts in pounds.",
+        "check_multiple": "Find a tenth and half of that same tenth, keeping both amounts in pounds.",
+        "check_unit": "This answer box is in pounds. Convert any pence result before recording it here.",
+        "unrounded_final": "You have recorded the exact value, but this question requests a final answer to the nearest penny. Keep the exact working and round the final amount only.",
+        "equivalent_money_notation": "Your selected amount is correct. Record it with two pence digits."
+      },
+      "evidence_profile": "place_value_conversion",
+      "correct_feedback_by_evidence": true,
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-12-P04",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Find 35% of £18.00.",
+      "target": "Calculate a percentage of money with consistent units and final-only rounding",
+      "response": {
+        "type": "money_percentage_amount",
+        "whole": "18.00",
+        "percent": 35,
+        "round_nearest_penny": false,
+        "require_working": false
+      },
+      "answer": {
+        "value": {
+          "amount": "6.30"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The benchmark total keeps the tens and ones of pence in place.",
+        "correct_after_support": "Correct. The benchmark total keeps the tens and ones of pence in place.",
+        "on_correct_math": "10% of £18.00 = £1.80. → 30% = £5.40 and 5% = £0.90. → £5.40 + £0.90 = £6.30.",
+        "on_incorrect_attempt_1": "Build thirty percent and five percent from the same tenth of the original money.",
+        "on_incorrect_attempt_2": "Compare the three tenths and half-tenth in the working, including the final zero in standard money notation.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "10% of £18.00 = £1.80. → 30% = £5.40 and 5% = £0.90. → £5.40 + £0.90 = £6.30."
+      },
+      "mathematical_support": {
+        "hint_1": "Build thirty percent and five percent from the same tenth of the original money.",
+        "hint_2": "Compare the three tenths and half-tenth in the working, including the final zero in standard money notation.",
+        "worked_solution": "10% of £18.00 = £1.80. → 30% = £5.40 and 5% = £0.90. → £5.40 + £0.90 = £6.30."
+      },
+      "working": [
+        "10% of £18.00 = £1.80.",
+        "30% = £5.40 and 5% = £0.90.",
+        "£5.40 + £0.90 = £6.30."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "money_percentage_amount",
+          "title": "Calculate the stated percentage of the original money",
+          "given": "35% of £18.00",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 35,
+          "whole": "18.00",
+          "steps": [
+            "10% of £18.00 = £1.80.",
+            "30% = £5.40 and 5% = £0.90.",
+            "£5.40 + £0.90 = £6.30."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_method": "Your final amount is correct, but the recorded calculation does not establish this percentage of the original money in its selected unit.",
+        "check_arithmetic": "The percentage route is valid. Check the exact calculation and any written equality; do not round an intermediate value.",
+        "check_amount": "Build thirty percent and five percent from the same tenth of the original money.",
+        "check_multiple": "Build thirty percent and five percent from the same tenth of the original money.",
+        "check_unit": "This answer box is in pounds. Convert any pence result before recording it here.",
+        "unrounded_final": "You have recorded the exact value, but this question requests a final answer to the nearest penny. Keep the exact working and round the final amount only.",
+        "equivalent_money_notation": "Your benchmark total is numerically correct. Keep the trailing zero in its ones-pence place."
+      },
+      "evidence_profile": "place_value_conversion",
+      "correct_feedback_by_evidence": true,
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-12-P05",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Find 12.5% of £48.80.",
+      "target": "Calculate a percentage of money with consistent units and final-only rounding",
+      "response": {
+        "type": "money_percentage_amount",
+        "whole": "48.80",
+        "percent": 12.5,
+        "round_nearest_penny": false,
+        "require_working": false
+      },
+      "answer": {
+        "value": {
+          "amount": "6.10"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The eighth is recorded with a complete two-digit pence part.",
+        "correct_after_support": "Correct. The eighth is recorded with a complete two-digit pence part.",
+        "on_correct_math": "12.5% = 1/8. → £48.80 ÷ 8 = £6.10.",
+        "on_incorrect_attempt_1": "An eighth divides the original money by eight; preserve its pence through the division.",
+        "on_incorrect_attempt_2": "The working records one equal eighth with both pence places. Compare that value with your answer.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "12.5% = 1/8. → £48.80 ÷ 8 = £6.10."
+      },
+      "mathematical_support": {
+        "hint_1": "An eighth divides the original money by eight; preserve its pence through the division.",
+        "hint_2": "The working records one equal eighth with both pence places. Compare that value with your answer.",
+        "worked_solution": "12.5% = 1/8. → £48.80 ÷ 8 = £6.10."
+      },
+      "working": [
+        "12.5% = 1/8.",
+        "£48.80 ÷ 8 = £6.10."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "money_percentage_amount",
+          "title": "Calculate the stated percentage of the original money",
+          "given": "12.5% of £48.80",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 12.5,
+          "whole": "48.80",
+          "steps": [
+            "12.5% = 1/8.",
+            "£48.80 ÷ 8 = £6.10."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_method": "Your final amount is correct, but the recorded calculation does not establish this percentage of the original money in its selected unit.",
+        "check_arithmetic": "The percentage route is valid. Check the exact calculation and any written equality; do not round an intermediate value.",
+        "check_amount": "An eighth divides the original money by eight; preserve its pence through the division.",
+        "check_multiple": "An eighth divides the original money by eight; preserve its pence through the division.",
+        "check_unit": "This answer box is in pounds. Convert any pence result before recording it here.",
+        "unrounded_final": "You have recorded the exact value, but this question requests a final answer to the nearest penny. Keep the exact working and round the final amount only.",
+        "equivalent_money_notation": "Your eighth has the correct value. Include the final zero to show the ones-pence place."
+      },
+      "evidence_profile": "place_value_conversion",
+      "correct_feedback_by_evidence": true,
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-12-P06",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Find 8% of £27.50.",
+      "target": "Calculate a percentage of money with consistent units and final-only rounding",
+      "response": {
+        "type": "money_percentage_amount",
+        "whole": "27.50",
+        "percent": 8,
+        "round_nearest_penny": false,
+        "require_working": false
+      },
+      "answer": {
+        "value": {
+          "amount": "2.20"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The selected hundredths give an exact whole-penny amount.",
+        "correct_after_support": "Correct. The selected hundredths give an exact whole-penny amount.",
+        "on_correct_math": "8% = 0.08. → £27.50 × 0.08 = £2.20.",
+        "on_incorrect_attempt_1": "Use eight hundredths of the original money, not eight times it.",
+        "on_incorrect_attempt_2": "The multiplier calculation in the working keeps the small percentage and the pounds unit together.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "8% = 0.08. → £27.50 × 0.08 = £2.20."
+      },
+      "mathematical_support": {
+        "hint_1": "Use eight hundredths of the original money, not eight times it.",
+        "hint_2": "The multiplier calculation in the working keeps the small percentage and the pounds unit together.",
+        "worked_solution": "8% = 0.08. → £27.50 × 0.08 = £2.20."
+      },
+      "working": [
+        "8% = 0.08.",
+        "£27.50 × 0.08 = £2.20."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "money_percentage_amount",
+          "title": "Calculate the stated percentage of the original money",
+          "given": "8% of £27.50",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 8,
+          "whole": "27.50",
+          "steps": [
+            "8% = 0.08.",
+            "£27.50 × 0.08 = £2.20."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_method": "Your final amount is correct, but the recorded calculation does not establish this percentage of the original money in its selected unit.",
+        "check_arithmetic": "The percentage route is valid. Check the exact calculation and any written equality; do not round an intermediate value.",
+        "check_amount": "Use eight hundredths of the original money, not eight times it.",
+        "check_multiple": "Use eight hundredths of the original money, not eight times it.",
+        "check_unit": "This answer box is in pounds. Convert any pence result before recording it here.",
+        "unrounded_final": "You have recorded the exact value, but this question requests a final answer to the nearest penny. Keep the exact working and round the final amount only.",
+        "equivalent_money_notation": "Your amount is numerically correct. Keep the zero after the tens-of-pence digit."
+      },
+      "evidence_profile": "place_value_conversion",
+      "correct_feedback_by_evidence": true,
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-12-P07",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Find 37% of £42.00.",
+      "target": "Calculate a percentage of money with consistent units and final-only rounding",
+      "response": {
+        "type": "money_percentage_amount",
+        "whole": "42.00",
+        "percent": 37,
+        "round_nearest_penny": false,
+        "require_working": false
+      },
+      "answer": {
+        "value": {
+          "amount": "15.54"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The exact one-percent share gives the requested money amount.",
+        "correct_after_support": "Correct. The exact one-percent share gives the requested money amount.",
+        "on_correct_math": "1% of £42.00 = £0.42. → 37% = £0.42 × 37 = £15.54.",
+        "on_incorrect_attempt_1": "Keep the one-percent money share exact before scaling it.",
+        "on_incorrect_attempt_2": "Follow the exact one-percent value through the multiplication; it needs no early rounding.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "1% of £42.00 = £0.42. → 37% = £0.42 × 37 = £15.54."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the one-percent money share exact before scaling it.",
+        "hint_2": "Follow the exact one-percent value through the multiplication; it needs no early rounding.",
+        "worked_solution": "1% of £42.00 = £0.42. → 37% = £0.42 × 37 = £15.54."
+      },
+      "working": [
+        "1% of £42.00 = £0.42.",
+        "37% = £0.42 × 37 = £15.54."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "money_percentage_amount",
+          "title": "Calculate the stated percentage of the original money",
+          "given": "37% of £42.00",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 37,
+          "whole": "42.00",
+          "steps": [
+            "1% of £42.00 = £0.42.",
+            "37% = £0.42 × 37 = £15.54."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_method": "Your final amount is correct, but the recorded calculation does not establish this percentage of the original money in its selected unit.",
+        "check_arithmetic": "The percentage route is valid. Check the exact calculation and any written equality; do not round an intermediate value.",
+        "check_amount": "Keep the one-percent money share exact before scaling it.",
+        "check_multiple": "Keep the one-percent money share exact before scaling it.",
+        "check_unit": "This answer box is in pounds. Convert any pence result before recording it here.",
+        "unrounded_final": "You have recorded the exact value, but this question requests a final answer to the nearest penny. Keep the exact working and round the final amount only.",
+        "equivalent_money_notation": "Your one-percent route gives the correct value. Use two decimal places for the pounds notation."
+      },
+      "evidence_profile": "place_value_conversion",
+      "correct_feedback_by_evidence": true,
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-12-P08",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Find 2.5% of £96.00.",
+      "target": "Calculate a percentage of money with consistent units and final-only rounding",
+      "response": {
+        "type": "money_percentage_amount",
+        "whole": "96.00",
+        "percent": 2.5,
+        "round_nearest_penny": false,
+        "require_working": false
+      },
+      "answer": {
+        "value": {
+          "amount": "2.40"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The small selected share is written in standard pounds notation.",
+        "correct_after_support": "Correct. The small selected share is written in standard pounds notation.",
+        "on_correct_math": "2.5% = 1/40. → £96.00 ÷ 40 = £2.40.",
+        "on_incorrect_attempt_1": "This small percentage is a fortieth of the original whole, not a quarter of it.",
+        "on_incorrect_attempt_2": "Compare the small fractional share in the working with your recorded money value and its pence columns.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "2.5% = 1/40. → £96.00 ÷ 40 = £2.40."
+      },
+      "mathematical_support": {
+        "hint_1": "This small percentage is a fortieth of the original whole, not a quarter of it.",
+        "hint_2": "Compare the small fractional share in the working with your recorded money value and its pence columns.",
+        "worked_solution": "2.5% = 1/40. → £96.00 ÷ 40 = £2.40."
+      },
+      "working": [
+        "2.5% = 1/40.",
+        "£96.00 ÷ 40 = £2.40."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "money_percentage_amount",
+          "title": "Calculate the stated percentage of the original money",
+          "given": "2.5% of £96.00",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 2.5,
+          "whole": "96.00",
+          "steps": [
+            "2.5% = 1/40.",
+            "£96.00 ÷ 40 = £2.40."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_method": "Your final amount is correct, but the recorded calculation does not establish this percentage of the original money in its selected unit.",
+        "check_arithmetic": "The percentage route is valid. Check the exact calculation and any written equality; do not round an intermediate value.",
+        "check_amount": "This small percentage is a fortieth of the original whole, not a quarter of it.",
+        "check_multiple": "This small percentage is a fortieth of the original whole, not a quarter of it.",
+        "check_unit": "This answer box is in pounds. Convert any pence result before recording it here.",
+        "unrounded_final": "You have recorded the exact value, but this question requests a final answer to the nearest penny. Keep the exact working and round the final amount only.",
+        "equivalent_money_notation": "Your small percentage amount is correct. Add the trailing zero to complete its money notation."
+      },
+      "evidence_profile": "place_value_conversion",
+      "correct_feedback_by_evidence": true,
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-12-P09",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Find 17% of £12.35. Give your final answer to the nearest penny.",
+      "target": "Calculate a percentage of money with consistent units and final-only rounding",
+      "response": {
+        "type": "money_percentage_amount",
+        "whole": "12.35",
+        "percent": 17,
+        "round_nearest_penny": true,
+        "require_working": false
+      },
+      "answer": {
+        "value": {
+          "amount": "2.10"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The exact result is rounded once, at the final penny.",
+        "correct_after_support": "Correct. The exact result is rounded once, at the final penny.",
+        "on_correct_math": "17% = 0.17. → £12.35 × 0.17 = £2.0995 exactly. → 209.95p is nearer 210p than 209p. → Final answer to the nearest penny: £2.10.",
+        "on_incorrect_attempt_1": "Keep the full exact percentage result before choosing the nearer whole penny.",
+        "on_incorrect_attempt_2": "Locate the exact fractional-penny result between its neighbouring pennies, then record only the final rounded amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "17% = 0.17. → £12.35 × 0.17 = £2.0995 exactly. → 209.95p is nearer 210p than 209p. → Final answer to the nearest penny: £2.10."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the full exact percentage result before choosing the nearer whole penny.",
+        "hint_2": "Locate the exact fractional-penny result between its neighbouring pennies, then record only the final rounded amount.",
+        "worked_solution": "17% = 0.17. → £12.35 × 0.17 = £2.0995 exactly. → 209.95p is nearer 210p than 209p. → Final answer to the nearest penny: £2.10."
+      },
+      "working": [
+        "17% = 0.17.",
+        "£12.35 × 0.17 = £2.0995 exactly.",
+        "209.95p is nearer 210p than 209p.",
+        "Final answer to the nearest penny: £2.10."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "money_percentage_amount",
+          "title": "Calculate the stated percentage of the original money",
+          "given": "17% of £12.35",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 17,
+          "whole": "12.35",
+          "steps": [
+            "17% = 0.17.",
+            "£12.35 × 0.17 = £2.0995 exactly.",
+            "209.95p is nearer 210p than 209p.",
+            "Final answer to the nearest penny: £2.10."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_method": "Your final amount is correct, but the recorded calculation does not establish this percentage of the original money in its selected unit.",
+        "check_arithmetic": "The percentage route is valid. Check the exact calculation and any written equality; do not round an intermediate value.",
+        "check_amount": "Keep the full exact percentage result before choosing the nearer whole penny.",
+        "check_multiple": "Keep the full exact percentage result before choosing the nearer whole penny.",
+        "check_unit": "This answer box is in pounds. Convert any pence result before recording it here.",
+        "unrounded_final": "You have recorded the exact value, but this question requests a final answer to the nearest penny. Keep the exact working and round the final amount only.",
+        "equivalent_money_notation": "Your rounded amount is correct. Keep its trailing zero to record both pence places."
+      },
+      "evidence_profile": "place_value_conversion",
+      "correct_feedback_by_evidence": true,
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-12-P10",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Find 6% of £14.99. Give your final answer to the nearest penny.",
+      "target": "Calculate a percentage of money with consistent units and final-only rounding",
+      "response": {
+        "type": "money_percentage_amount",
+        "whole": "14.99",
+        "percent": 6,
+        "round_nearest_penny": true,
+        "require_working": false
+      },
+      "answer": {
+        "value": {
+          "amount": "0.90"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The final rounding preserves the exact calculation until the last step.",
+        "correct_after_support": "Correct. The final rounding preserves the exact calculation until the last step.",
+        "on_correct_math": "6% = 0.06. → £14.99 × 0.06 = £0.8994 exactly. → 89.94p is nearer 90p than 89p. → Final answer to the nearest penny: £0.90.",
+        "on_incorrect_attempt_1": "Preserve the original price and exact product; round only the final fractional penny.",
+        "on_incorrect_attempt_2": "The working separates the exact product from the nearest-penny decision. Compare both with your response.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "6% = 0.06. → £14.99 × 0.06 = £0.8994 exactly. → 89.94p is nearer 90p than 89p. → Final answer to the nearest penny: £0.90."
+      },
+      "mathematical_support": {
+        "hint_1": "Preserve the original price and exact product; round only the final fractional penny.",
+        "hint_2": "The working separates the exact product from the nearest-penny decision. Compare both with your response.",
+        "worked_solution": "6% = 0.06. → £14.99 × 0.06 = £0.8994 exactly. → 89.94p is nearer 90p than 89p. → Final answer to the nearest penny: £0.90."
+      },
+      "working": [
+        "6% = 0.06.",
+        "£14.99 × 0.06 = £0.8994 exactly.",
+        "89.94p is nearer 90p than 89p.",
+        "Final answer to the nearest penny: £0.90."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "money_percentage_amount",
+          "title": "Calculate the stated percentage of the original money",
+          "given": "6% of £14.99",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 6,
+          "whole": "14.99",
+          "steps": [
+            "6% = 0.06.",
+            "£14.99 × 0.06 = £0.8994 exactly.",
+            "89.94p is nearer 90p than 89p.",
+            "Final answer to the nearest penny: £0.90."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_method": "Your final amount is correct, but the recorded calculation does not establish this percentage of the original money in its selected unit.",
+        "check_arithmetic": "The percentage route is valid. Check the exact calculation and any written equality; do not round an intermediate value.",
+        "check_amount": "Preserve the original price and exact product; round only the final fractional penny.",
+        "check_multiple": "Preserve the original price and exact product; round only the final fractional penny.",
+        "check_unit": "This answer box is in pounds. Convert any pence result before recording it here.",
+        "unrounded_final": "You have recorded the exact value, but this question requests a final answer to the nearest penny. Keep the exact working and round the final amount only.",
+        "equivalent_money_notation": "Your rounded value is correct. Write the zero pounds and both pence digits in standard form."
+      },
+      "evidence_profile": "place_value_conversion",
+      "correct_feedback_by_evidence": true,
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-12-P11",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Which route is efficient for finding 15% of £18.40 without a calculator?",
+      "target": "Calculate a percentage of money with consistent units and final-only rounding",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Find 10%, halve it to find 5%, then add those two amounts.",
+          "Divide the original money amount by 15.",
+          "Multiply the original money amount by 15 without converting the percentage.",
+          "Subtract £15 from the original money amount."
+        ]
+      },
+      "answer": {
+        "value": "Find 10%, halve it to find 5%, then add those two amounts."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. A full tenth and half-tenth give convenient money chunks.",
+        "correct_after_support": "Correct. A full tenth and half-tenth give convenient money chunks.",
+        "on_correct_math": "15% = 10% + 5%. → 10% = £1.84 and 5% = £0.92. → £1.84 + £0.92 = £2.76.",
+        "on_incorrect_attempt_1": "Choose operations that build the selected percentage from convenient parts of the same whole.",
+        "on_incorrect_attempt_2": "The working builds a full tenth and half-tenth. Match that sequence to one complete route.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "15% = 10% + 5%. → 10% = £1.84 and 5% = £0.92. → £1.84 + £0.92 = £2.76."
+      },
+      "mathematical_support": {
+        "hint_1": "Choose operations that build the selected percentage from convenient parts of the same whole.",
+        "hint_2": "The working builds a full tenth and half-tenth. Match that sequence to one complete route.",
+        "worked_solution": "15% = 10% + 5%. → 10% = £1.84 and 5% = £0.92. → £1.84 + £0.92 = £2.76."
+      },
+      "working": [
+        "15% = 10% + 5%.",
+        "10% = £1.84 and 5% = £0.92.",
+        "£1.84 + £0.92 = £2.76."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "money_percentage_amount",
+          "title": "Choose a non-calculator route",
+          "given": "15% of £18.40",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "steps": [
+            "15% = 10% + 5%.",
+            "10% = £1.84 and 5% = £0.92.",
+            "£1.84 + £0.92 = £2.76."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "Divide the original money amount by 15.": "Dividing by the percentage number does not create fifteen hundredths of the whole.",
+        "Multiply the original money amount by 15 without converting the percentage.": "The percentage must be represented as a proportion before it multiplies the whole.",
+        "Subtract £15 from the original money amount.": "Fifteen percent describes a share, not a fixed fifteen-pound subtraction."
+      },
+      "evidence_profile": "place_value_conversion",
+      "correct_feedback_by_evidence": false,
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-12-P12",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "A student finds 15% of £18.40 using the five steps shown. Which is the first incorrect step?",
+      "target": "Calculate a percentage of money with consistent units and final-only rounding",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Step 1",
+          "Step 2",
+          "Step 4",
+          "Step 5"
+        ]
+      },
+      "answer": {
+        "value": "Step 5"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The percentage arithmetic is sound; the final unit conversion changes the value.",
+        "correct_after_support": "Correct. The percentage arithmetic is sound; the final unit conversion changes the value.",
+        "on_correct_math": "The first four steps preserve the original pence value and select the correct shares. → Step 5 is the first error: converting pence to pounds requires division by 100. → 276p = £2.76, not £27.60.",
+        "on_incorrect_attempt_1": "Check each equality in order, including whether a unit change preserves the money value.",
+        "on_incorrect_attempt_2": "Compare the last unit conversion with one hundred pence per pound in the working. Identify the earliest incorrect equality.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The first four steps preserve the original pence value and select the correct shares. → Step 5 is the first error: converting pence to pounds requires division by 100. → 276p = £2.76, not £27.60."
+      },
+      "mathematical_support": {
+        "hint_1": "Check each equality in order, including whether a unit change preserves the money value.",
+        "hint_2": "Compare the last unit conversion with one hundred pence per pound in the working. Identify the earliest incorrect equality.",
+        "worked_solution": "The first four steps preserve the original pence value and select the correct shares. → Step 5 is the first error: converting pence to pounds requires division by 100. → 276p = £2.76, not £27.60."
+      },
+      "working": [
+        "The first four steps preserve the original pence value and select the correct shares.",
+        "Step 5 is the first error: converting pence to pounds requires division by 100.",
+        "276p = £2.76, not £27.60."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "money_percentage_amount",
+          "title": "Find the first incorrect step",
+          "given": "15% of £18.40",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "student_work": [
+            "£18.40 = 1840p.",
+            "10% of 1840p = 184p.",
+            "5% of 1840p = 92p.",
+            "15% of 1840p = 184p + 92p = 276p.",
+            "276p = £27.60."
+          ],
+          "steps": [
+            "The first four steps preserve the original pence value and select the correct shares.",
+            "Step 5 is the first error: converting pence to pounds requires division by 100.",
+            "276p = £2.76, not £27.60."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "Step 1": "The initial conversion correctly gives one hundred pence for each pound.",
+        "Step 2": "The tenth is correctly calculated from the pence total. Continue checking later steps.",
+        "Step 4": "The selected pence amounts are added correctly here. Check the remaining equality."
+      },
+      "evidence_profile": "place_value_conversion",
+      "correct_feedback_by_evidence": false,
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-12-X01",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A course costs £72. A deposit of 25% is required. How much is the deposit?",
+      "target": "Calculate a percentage of money with consistent units and final-only rounding",
+      "response": {
+        "type": "money_percentage_amount",
+        "whole": "72.00",
+        "percent": 25,
+        "round_nearest_penny": false,
+        "require_working": false
+      },
+      "answer": {
+        "value": {
+          "amount": "18.00"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Your answer is the deposit itself, not the remaining fee.",
+        "correct_after_support": "Correct. Your answer is the deposit itself, not the remaining fee.",
+        "on_correct_math": "25% = 1/4. → £72.00 ÷ 4 = £18.00. → The deposit is £18.00.",
+        "on_incorrect_attempt_1": "Find the selected share of the course fee, not the fee remaining after the deposit.",
+        "on_incorrect_attempt_2": "The working calculates only the requested quarter deposit. Keep both zero pence digits in its final notation.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "25% = 1/4. → £72.00 ÷ 4 = £18.00. → The deposit is £18.00."
+      },
+      "mathematical_support": {
+        "hint_1": "Find the selected share of the course fee, not the fee remaining after the deposit.",
+        "hint_2": "The working calculates only the requested quarter deposit. Keep both zero pence digits in its final notation.",
+        "worked_solution": "25% = 1/4. → £72.00 ÷ 4 = £18.00. → The deposit is £18.00."
+      },
+      "working": [
+        "25% = 1/4.",
+        "£72.00 ÷ 4 = £18.00.",
+        "The deposit is £18.00."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "money_percentage_amount",
+          "title": "Calculate the stated percentage of the original money",
+          "given": "25% of £72.00",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 25,
+          "whole": "72.00",
+          "steps": [
+            "25% = 1/4.",
+            "£72.00 ÷ 4 = £18.00.",
+            "The deposit is £18.00."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_method": "Your final amount is correct, but the recorded calculation does not establish this percentage of the original money in its selected unit.",
+        "check_arithmetic": "The percentage route is valid. Check the exact calculation and any written equality; do not round an intermediate value.",
+        "check_amount": "Find the selected share of the course fee, not the fee remaining after the deposit.",
+        "check_multiple": "Find the selected share of the course fee, not the fee remaining after the deposit.",
+        "check_unit": "This answer box is in pounds. Convert any pence result before recording it here.",
+        "unrounded_final": "You have recorded the exact value, but this question requests a final answer to the nearest penny. Keep the exact working and round the final amount only.",
+        "equivalent_money_notation": "Your deposit value is correct. Include both zero pence digits in standard money notation."
+      },
+      "evidence_profile": "place_value_conversion",
+      "correct_feedback_by_evidence": true,
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-12-X02",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A charity raises £1840. It allocates 15% to venue costs. How much is allocated to the venue?",
+      "target": "Calculate a percentage of money with consistent units and final-only rounding",
+      "response": {
+        "type": "money_percentage_amount",
+        "whole": "1840.00",
+        "percent": 15,
+        "round_nearest_penny": false,
+        "require_working": false
+      },
+      "answer": {
+        "value": {
+          "amount": "276.00"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The allocation is a percentage of the full fundraising amount.",
+        "correct_after_support": "Correct. The allocation is a percentage of the full fundraising amount.",
+        "on_correct_math": "10% of £1840.00 = £184.00. → 5% = £92.00. → £184.00 + £92.00 = £276.00.",
+        "on_incorrect_attempt_1": "Select the venue share from the complete fundraising amount; keep the original pounds unit.",
+        "on_incorrect_attempt_2": "The two benchmark amounts in the working are pounds, not pence. Combine those venue shares and record the unit correctly.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "10% of £1840.00 = £184.00. → 5% = £92.00. → £184.00 + £92.00 = £276.00."
+      },
+      "mathematical_support": {
+        "hint_1": "Select the venue share from the complete fundraising amount; keep the original pounds unit.",
+        "hint_2": "The two benchmark amounts in the working are pounds, not pence. Combine those venue shares and record the unit correctly.",
+        "worked_solution": "10% of £1840.00 = £184.00. → 5% = £92.00. → £184.00 + £92.00 = £276.00."
+      },
+      "working": [
+        "10% of £1840.00 = £184.00.",
+        "5% = £92.00.",
+        "£184.00 + £92.00 = £276.00."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "money_percentage_amount",
+          "title": "Calculate the stated percentage of the original money",
+          "given": "15% of £1840.00",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 15,
+          "whole": "1840.00",
+          "steps": [
+            "10% of £1840.00 = £184.00.",
+            "5% = £92.00.",
+            "£184.00 + £92.00 = £276.00."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_method": "Your final amount is correct, but the recorded calculation does not establish this percentage of the original money in its selected unit.",
+        "check_arithmetic": "The percentage route is valid. Check the exact calculation and any written equality; do not round an intermediate value.",
+        "check_amount": "Select the venue share from the complete fundraising amount; keep the original pounds unit.",
+        "check_multiple": "Select the venue share from the complete fundraising amount; keep the original pounds unit.",
+        "check_unit": "This answer box is in pounds. Convert any pence result before recording it here.",
+        "unrounded_final": "You have recorded the exact value, but this question requests a final answer to the nearest penny. Keep the exact working and round the final amount only.",
+        "equivalent_money_notation": "Your venue allocation is numerically correct. Show its two zero pence places."
+      },
+      "evidence_profile": "place_value_conversion",
+      "correct_feedback_by_evidence": true,
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-12-X03",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A club has £675.50 and allocates 8% to equipment. How much money is allocated to equipment?",
+      "target": "Calculate a percentage of money with consistent units and final-only rounding",
+      "response": {
+        "type": "money_percentage_amount",
+        "whole": "675.50",
+        "percent": 8,
+        "round_nearest_penny": false,
+        "require_working": false
+      },
+      "answer": {
+        "value": {
+          "amount": "54.04"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The equipment share preserves the full original budget value.",
+        "correct_after_support": "Correct. The equipment share preserves the full original budget value.",
+        "on_correct_math": "8% = 0.08. → £675.50 × 0.08 = £54.04. → The equipment allocation is £54.04.",
+        "on_incorrect_attempt_1": "Keep all the original pence when selecting the equipment share.",
+        "on_incorrect_attempt_2": "The exact product in the working already lands on a whole penny. No rounding of the starting budget is needed.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "8% = 0.08. → £675.50 × 0.08 = £54.04. → The equipment allocation is £54.04."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep all the original pence when selecting the equipment share.",
+        "hint_2": "The exact product in the working already lands on a whole penny. No rounding of the starting budget is needed.",
+        "worked_solution": "8% = 0.08. → £675.50 × 0.08 = £54.04. → The equipment allocation is £54.04."
+      },
+      "working": [
+        "8% = 0.08.",
+        "£675.50 × 0.08 = £54.04.",
+        "The equipment allocation is £54.04."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "money_percentage_amount",
+          "title": "Calculate the stated percentage of the original money",
+          "given": "8% of £675.50",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 8,
+          "whole": "675.50",
+          "steps": [
+            "8% = 0.08.",
+            "£675.50 × 0.08 = £54.04.",
+            "The equipment allocation is £54.04."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_method": "Your final amount is correct, but the recorded calculation does not establish this percentage of the original money in its selected unit.",
+        "check_arithmetic": "The percentage route is valid. Check the exact calculation and any written equality; do not round an intermediate value.",
+        "check_amount": "Keep all the original pence when selecting the equipment share.",
+        "check_multiple": "Keep all the original pence when selecting the equipment share.",
+        "check_unit": "This answer box is in pounds. Convert any pence result before recording it here.",
+        "unrounded_final": "You have recorded the exact value, but this question requests a final answer to the nearest penny. Keep the exact working and round the final amount only.",
+        "equivalent_money_notation": "Your equipment amount is correct. Record the pounds and both pence digits in standard form."
+      },
+      "evidence_profile": "place_value_conversion",
+      "correct_feedback_by_evidence": true,
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-12-X04",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A stall earns £128.75. It gives 17% to a community project. Find the contribution to the nearest penny.",
+      "target": "Calculate a percentage of money with consistent units and final-only rounding",
+      "response": {
+        "type": "money_percentage_amount",
+        "whole": "128.75",
+        "percent": 17,
+        "round_nearest_penny": true,
+        "require_working": false
+      },
+      "answer": {
+        "value": {
+          "amount": "21.89"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The community contribution is rounded only after the exact percentage calculation.",
+        "correct_after_support": "Correct. The community contribution is rounded only after the exact percentage calculation.",
+        "on_correct_math": "17% = 0.17. → £128.75 × 0.17 = £21.8875 exactly. → 2188.75p is nearer 2189p than 2188p. → The community-project share is £21.89 to the nearest penny.",
+        "on_incorrect_attempt_1": "Calculate the exact contribution from the original earnings before rounding its final penny.",
+        "on_incorrect_attempt_2": "The displayed exact contribution lies between neighbouring whole pennies. Use the nearer one for the final project amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "17% = 0.17. → £128.75 × 0.17 = £21.8875 exactly. → 2188.75p is nearer 2189p than 2188p. → The community-project share is £21.89 to the nearest penny."
+      },
+      "mathematical_support": {
+        "hint_1": "Calculate the exact contribution from the original earnings before rounding its final penny.",
+        "hint_2": "The displayed exact contribution lies between neighbouring whole pennies. Use the nearer one for the final project amount.",
+        "worked_solution": "17% = 0.17. → £128.75 × 0.17 = £21.8875 exactly. → 2188.75p is nearer 2189p than 2188p. → The community-project share is £21.89 to the nearest penny."
+      },
+      "working": [
+        "17% = 0.17.",
+        "£128.75 × 0.17 = £21.8875 exactly.",
+        "2188.75p is nearer 2189p than 2188p.",
+        "The community-project share is £21.89 to the nearest penny."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "money_percentage_amount",
+          "title": "Calculate the stated percentage of the original money",
+          "given": "17% of £128.75",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 17,
+          "whole": "128.75",
+          "steps": [
+            "17% = 0.17.",
+            "£128.75 × 0.17 = £21.8875 exactly.",
+            "2188.75p is nearer 2189p than 2188p.",
+            "The community-project share is £21.89 to the nearest penny."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_method": "Your final amount is correct, but the recorded calculation does not establish this percentage of the original money in its selected unit.",
+        "check_arithmetic": "The percentage route is valid. Check the exact calculation and any written equality; do not round an intermediate value.",
+        "check_amount": "Calculate the exact contribution from the original earnings before rounding its final penny.",
+        "check_multiple": "Calculate the exact contribution from the original earnings before rounding its final penny.",
+        "check_unit": "This answer box is in pounds. Convert any pence result before recording it here.",
+        "unrounded_final": "You have recorded the exact value, but this question requests a final answer to the nearest penny. Keep the exact working and round the final amount only.",
+        "equivalent_money_notation": "Your contribution value is correct. Use two pence digits for its final money notation."
+      },
+      "evidence_profile": "place_value_conversion",
+      "correct_feedback_by_evidence": true,
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-12-E01",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "exit",
+      "prompt": "Final check: find 25% of £74.80. Show your exact calculation and name its unit.",
+      "target": "Calculate a percentage of money with consistent units and final-only rounding",
+      "response": {
+        "type": "money_percentage_amount",
+        "whole": "74.80",
+        "percent": 25,
+        "round_nearest_penny": false,
+        "require_working": true
+      },
+      "answer": {
+        "value": {
+          "amount": "18.70",
+          "calculation": "74.80 * 25 / 100",
+          "calculationUnit": "pounds"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Your exact percentage route and standard money notation are complete.",
+        "correct_after_support": "Correct. Your exact percentage route and standard money notation are complete.",
+        "on_correct_math": "25% = 1/4. → £74.80 ÷ 4 = £18.70. → The amount is already exact to a whole penny.",
+        "on_incorrect_attempt_1": "Check the quarter of the original money and preserve both pence places in the final answer.",
+        "on_incorrect_attempt_2": "The saved review shows an exact quarter route and its standard money form. Compare both with your locked response.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "25% = 1/4. → £74.80 ÷ 4 = £18.70. → The amount is already exact to a whole penny."
+      },
+      "mathematical_support": {
+        "hint_1": "Check the quarter of the original money and preserve both pence places in the final answer.",
+        "hint_2": "The saved review shows an exact quarter route and its standard money form. Compare both with your locked response.",
+        "worked_solution": "25% = 1/4. → £74.80 ÷ 4 = £18.70. → The amount is already exact to a whole penny."
+      },
+      "working": [
+        "25% = 1/4.",
+        "£74.80 ÷ 4 = £18.70.",
+        "The amount is already exact to a whole penny."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "money_percentage_amount",
+          "title": "Calculate the stated percentage of the original money",
+          "given": "25% of £74.80",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 25,
+          "whole": "74.80",
+          "steps": [
+            "25% = 1/4.",
+            "£74.80 ÷ 4 = £18.70.",
+            "The amount is already exact to a whole penny."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_method": "Your final amount is correct, but the recorded calculation does not establish this percentage of the original money in its selected unit.",
+        "check_arithmetic": "The percentage route is valid. Check the exact calculation and any written equality; do not round an intermediate value.",
+        "check_amount": "The exact working is valid. Check the final pounds amount and any requested nearest-penny rounding.",
+        "check_multiple": "Check the quarter of the original money and preserve both pence places in the final answer.",
+        "check_unit": "This answer box is in pounds. Convert any pence result before recording it here.",
+        "unrounded_final": "You have recorded the exact value, but this question requests a final answer to the nearest penny. Keep the exact working and round the final amount only.",
+        "equivalent_money_notation": "Your final amount and exact method are correct. The shorter form does not yet show both pence digits required for secure money notation."
+      },
+      "evidence_profile": "place_value_conversion",
+      "correct_feedback_by_evidence": true,
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-12-E02",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "exit",
+      "prompt": "Final check: find 35% of £26.40. Show your exact calculation and name its unit.",
+      "target": "Calculate a percentage of money with consistent units and final-only rounding",
+      "response": {
+        "type": "money_percentage_amount",
+        "whole": "26.40",
+        "percent": 35,
+        "round_nearest_penny": false,
+        "require_working": true
+      },
+      "answer": {
+        "value": {
+          "amount": "9.24",
+          "calculation": "26.40 * 35 / 100",
+          "calculationUnit": "pounds"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The chosen exact route keeps all money units and pence places consistent.",
+        "correct_after_support": "Correct. The chosen exact route keeps all money units and pence places consistent.",
+        "on_correct_math": "10% of £26.40 = £2.64. → 30% = £7.92 and 5% = £1.32. → £7.92 + £1.32 = £9.24.",
+        "on_incorrect_attempt_1": "Build the requested share from the unchanged original amount, keeping each intermediate money value exact.",
+        "on_incorrect_attempt_2": "The saved review combines exact benchmark amounts. Check your own valid route, its unit and the final pounds value.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "10% of £26.40 = £2.64. → 30% = £7.92 and 5% = £1.32. → £7.92 + £1.32 = £9.24."
+      },
+      "mathematical_support": {
+        "hint_1": "Build the requested share from the unchanged original amount, keeping each intermediate money value exact.",
+        "hint_2": "The saved review combines exact benchmark amounts. Check your own valid route, its unit and the final pounds value.",
+        "worked_solution": "10% of £26.40 = £2.64. → 30% = £7.92 and 5% = £1.32. → £7.92 + £1.32 = £9.24."
+      },
+      "working": [
+        "10% of £26.40 = £2.64.",
+        "30% = £7.92 and 5% = £1.32.",
+        "£7.92 + £1.32 = £9.24."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "money_percentage_amount",
+          "title": "Calculate the stated percentage of the original money",
+          "given": "35% of £26.40",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 35,
+          "whole": "26.40",
+          "steps": [
+            "10% of £26.40 = £2.64.",
+            "30% = £7.92 and 5% = £1.32.",
+            "£7.92 + £1.32 = £9.24."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_method": "Your final amount is correct, but the recorded calculation does not establish this percentage of the original money in its selected unit.",
+        "check_arithmetic": "The percentage route is valid. Check the exact calculation and any written equality; do not round an intermediate value.",
+        "check_amount": "The exact working is valid. Check the final pounds amount and any requested nearest-penny rounding.",
+        "check_multiple": "Build the requested share from the unchanged original amount, keeping each intermediate money value exact.",
+        "check_unit": "This answer box is in pounds. Convert any pence result before recording it here.",
+        "unrounded_final": "You have recorded the exact value, but this question requests a final answer to the nearest penny. Keep the exact working and round the final amount only.",
+        "equivalent_money_notation": "Your amount and method are correct. Record exactly two pence digits to complete the required money notation."
+      },
+      "evidence_profile": "place_value_conversion",
+      "correct_feedback_by_evidence": true,
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-12-E03",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "exit",
+      "prompt": "Final check: find 9% of £18.75. Give your final answer to the nearest penny. Show your exact calculation and name its unit.",
+      "target": "Calculate a percentage of money with consistent units and final-only rounding",
+      "response": {
+        "type": "money_percentage_amount",
+        "whole": "18.75",
+        "percent": 9,
+        "round_nearest_penny": true,
+        "require_working": true
+      },
+      "answer": {
+        "value": {
+          "amount": "1.69",
+          "calculation": "18.75 * 9 / 100",
+          "calculationUnit": "pounds"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The exact working precedes a single final nearest-penny rounding.",
+        "correct_after_support": "Correct. The exact working precedes a single final nearest-penny rounding.",
+        "on_correct_math": "9% = 0.09. → £18.75 × 0.09 = £1.6875 exactly. → 168.75p is nearer 169p than 168p. → Round only the final amount: £1.69.",
+        "on_incorrect_attempt_1": "Keep the exact product in the calculation, then round the final pounds amount to the nearer penny.",
+        "on_incorrect_attempt_2": "The saved working separates the exact fractional penny from the final rounded answer. Compare each stage with your locked calculation.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "9% = 0.09. → £18.75 × 0.09 = £1.6875 exactly. → 168.75p is nearer 169p than 168p. → Round only the final amount: £1.69."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the exact product in the calculation, then round the final pounds amount to the nearer penny.",
+        "hint_2": "The saved working separates the exact fractional penny from the final rounded answer. Compare each stage with your locked calculation.",
+        "worked_solution": "9% = 0.09. → £18.75 × 0.09 = £1.6875 exactly. → 168.75p is nearer 169p than 168p. → Round only the final amount: £1.69."
+      },
+      "working": [
+        "9% = 0.09.",
+        "£18.75 × 0.09 = £1.6875 exactly.",
+        "168.75p is nearer 169p than 168p.",
+        "Round only the final amount: £1.69."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "money_percentage_amount",
+          "title": "Calculate the stated percentage of the original money",
+          "given": "9% of £18.75",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 9,
+          "whole": "18.75",
+          "steps": [
+            "9% = 0.09.",
+            "£18.75 × 0.09 = £1.6875 exactly.",
+            "168.75p is nearer 169p than 168p.",
+            "Round only the final amount: £1.69."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_method": "Your final amount is correct, but the recorded calculation does not establish this percentage of the original money in its selected unit.",
+        "check_arithmetic": "The percentage route is valid. Check the exact calculation and any written equality; do not round an intermediate value.",
+        "check_amount": "The exact working is valid. Check the final pounds amount and any requested nearest-penny rounding.",
+        "check_multiple": "Keep the exact product in the calculation, then round the final pounds amount to the nearer penny.",
+        "check_unit": "This answer box is in pounds. Convert any pence result before recording it here.",
+        "unrounded_final": "You have recorded the exact value, but this question requests a final answer to the nearest penny. Keep the exact working and round the final amount only.",
+        "equivalent_money_notation": "Your exact route and rounded value are correct. Two pence digits are required for the final standard money form."
+      },
+      "evidence_profile": "place_value_conversion",
+      "correct_feedback_by_evidence": true,
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    }
+  ],
+  "canonical_lesson": {
+    "version": "PA12-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

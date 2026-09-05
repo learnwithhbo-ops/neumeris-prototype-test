@@ -1,0 +1,2414 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "MD-07 - Cancel common factors before multiplying fractions",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-18",
+      "sha256": "5ea98821e020c75e6719aa3b9f1cb9cd89c9fa7babb2c67c00901b8b34233f43"
+    },
+    "authored_scope": "Positive proper-fraction multiplication with valid common-factor cancellation and a simplest-form result; working is captured where required.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "MD07-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "preview_checked_2026-09-03",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        4,
+        5,
+        6,
+        7,
+        13,
+        15,
+        16,
+        17,
+        18
+      ],
+      "source_repairs_consulted": [
+        10,
+        11,
+        12
+      ],
+      "note": "All 18 pages read; p4–6 diagrams inspected. Captured working accepts any valid order, within-factor pairs and repeated smaller factors. Practice explicitly requests cancellation; mastery also accepts multiply-then-simplify. Contexts use answer-only fraction fields so their setup does not reveal the operation; valid final simplest forms from any method are accepted. Source p15 X04 is held out because its factors duplicate mastery E01. No Diagnostic or delayed Retrieval layers added.",
+      "held_out_source_items": [
+        {
+          "page": 15,
+          "item": "X04",
+          "reason": "Its multiplication repeats the E01 mastery factor pair; protect the independent final calculation."
+        }
+      ]
+    }
+  },
+  "identity": {
+    "id": "MD-07",
+    "slug": "cancel-common-factors-before-multiplying-fractions",
+    "title": "Cancel common factors before multiplying fractions",
+    "strand": "Number",
+    "cluster": "Multiplying and Dividing Fractions",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Simplify fraction multiplication by cancelling common factors before multiplying.",
+    "success_criteria": [
+      "Identify a common factor in one numerator and one denominator.",
+      "Use the same divisor and record both replacements.",
+      "Accept valid orders, within-factor cancellation and repeated smaller factors.",
+      "Multiply the remaining values and finish simplifying.",
+      "Use valid working and correct units in context."
+    ],
+    "boundaries": {
+      "includes": [
+        "Two positive proper fractions with cancellable common factors",
+        "Within-factor or cross-factor cancellation",
+        "Repeated smaller common factors",
+        "Other mathematically valid methods unless cancellation is explicitly requested"
+      ],
+      "excludes": [
+        "Negative or mixed-number factors",
+        "Division of fractions",
+        "Cancellation across addition or subtraction",
+        "Algebraic cancellation",
+        "Decimal approximations",
+        "Multi-step word problems",
+        "Diagnostic and delayed Retrieval layers"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "MD-05",
+      "AF-03",
+      "MD-06"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for MD-05, AF-03, MD-06 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "single_choice",
+      "fraction",
+      "cancellation_working"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    }
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "Cancel common factors before forming the product.",
+    "invariant": "Dividing a numerator and a denominator by the same common factor preserves the product.",
+    "mathematical_rule": "Record exact replacement values, multiply what remains, and finish simplifying.",
+    "must_notice": [
+      "Cancellation is division, not deletion.",
+      "Pairs use opposite sides of fraction bars.",
+      "The same divisor is used on both members.",
+      "Valid cancellation order need not match the example."
+    ],
+    "common_confusions": [
+      "Using two numerators or two denominators",
+      "Changing only one value",
+      "Using different divisors",
+      "Deleting numbers without replacement",
+      "Leaving the final fraction reducible"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "Choose a common-factor pair",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Choose a common-factor pair",
+          "initial_state": "Choose a common-factor pair",
+          "model": {
+            "kind": "cancel_product",
+            "object": "symbolic",
+            "a": 3,
+            "b": 8,
+            "c": 4,
+            "d": 9,
+            "cancel_steps": [
+              {
+                "first": "b",
+                "second": "c",
+                "divisor": "4",
+                "firstAfter": "2",
+                "secondAfter": "1"
+              },
+              {
+                "first": "a",
+                "second": "d",
+                "divisor": "3",
+                "firstAfter": "1",
+                "secondAfter": "3"
+              }
+            ],
+            "target": "Cancellation keeps the product unchanged",
+            "math_text": true,
+            "compact_captions": true,
+            "cancel_step": 1
+          }
+        },
+        "narration": {
+          "script": "In this multiplication, the left denominator and right numerator share a common factor. Watch how both values change together."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Write both replacements",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Write both replacements",
+          "initial_state": "Write both replacements",
+          "model": {
+            "kind": "cancel_product",
+            "object": "symbolic",
+            "a": 3,
+            "b": 8,
+            "c": 4,
+            "d": 9,
+            "cancel_steps": [
+              {
+                "first": "b",
+                "second": "c",
+                "divisor": "4",
+                "firstAfter": "2",
+                "secondAfter": "1"
+              },
+              {
+                "first": "a",
+                "second": "d",
+                "divisor": "3",
+                "firstAfter": "1",
+                "secondAfter": "3"
+              }
+            ],
+            "target": "Cancellation keeps the product unchanged",
+            "math_text": true,
+            "compact_captions": true,
+            "cancel_step": 1,
+            "show_replacements": true
+          }
+        },
+        "narration": {
+          "script": "The division changes both selected values. Keep their replacements in the original positions; the product is unchanged."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Cancel another valid pair",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Cancel another valid pair",
+          "initial_state": "Cancel another valid pair",
+          "model": {
+            "kind": "cancel_product",
+            "object": "symbolic",
+            "a": 3,
+            "b": 8,
+            "c": 4,
+            "d": 9,
+            "cancel_steps": [
+              {
+                "first": "b",
+                "second": "c",
+                "divisor": "4",
+                "firstAfter": "2",
+                "secondAfter": "1"
+              },
+              {
+                "first": "a",
+                "second": "d",
+                "divisor": "3",
+                "firstAfter": "1",
+                "secondAfter": "3"
+              }
+            ],
+            "target": "Cancellation keeps the product unchanged",
+            "math_text": true,
+            "compact_captions": true,
+            "cancel_step": 2,
+            "show_replacements": true
+          }
+        },
+        "narration": {
+          "script": "The remaining numerator and opposite denominator also share a factor. Divide them equally and keep both new values."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Multiply the remaining factors",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Multiply the remaining factors",
+          "initial_state": "Multiply the remaining factors",
+          "model": {
+            "kind": "cancel_product",
+            "object": "symbolic",
+            "a": 3,
+            "b": 8,
+            "c": 4,
+            "d": 9,
+            "cancel_steps": [
+              {
+                "first": "b",
+                "second": "c",
+                "divisor": "4",
+                "firstAfter": "2",
+                "secondAfter": "1"
+              },
+              {
+                "first": "a",
+                "second": "d",
+                "divisor": "3",
+                "firstAfter": "1",
+                "secondAfter": "3"
+              }
+            ],
+            "target": "Cancellation keeps the product unchanged",
+            "math_text": true,
+            "compact_captions": true,
+            "cancel_step": 2,
+            "show_replacements": true,
+            "show_product": true
+          }
+        },
+        "narration": {
+          "script": "Now use the replacement values. The exact product is already in simplest form."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Explain why cancellation is valid",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Explain why cancellation is valid",
+          "initial_state": "Explain why cancellation is valid",
+          "model": null
+        },
+        "narration": {
+          "script": "What makes this cancellation preserve the original multiplication?"
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "MD-07-C01"
+        },
+        "next_step": "T06"
+      },
+      {
+        "id": "T06",
+        "stage": "teaching",
+        "purpose": "A new pair of fractions",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "A new pair of fractions",
+          "initial_state": "A new pair of fractions",
+          "model": {
+            "kind": "cancel_product",
+            "object": "symbolic",
+            "a": 6,
+            "b": 7,
+            "c": 14,
+            "d": 15,
+            "cancel_steps": [
+              {
+                "first": "b",
+                "second": "c",
+                "divisor": "7",
+                "firstAfter": "1",
+                "secondAfter": "2"
+              },
+              {
+                "first": "a",
+                "second": "d",
+                "divisor": "3",
+                "firstAfter": "2",
+                "secondAfter": "5"
+              }
+            ],
+            "target": "Cancellation keeps the product unchanged",
+            "math_text": true,
+            "compact_captions": true,
+            "cancel_step": 1,
+            "show_replacements": true
+          }
+        },
+        "narration": {
+          "script": "Start by cancelling the left denominator with the right numerator. Write the two exact replacements."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T07"
+      },
+      {
+        "id": "T07",
+        "stage": "teaching",
+        "purpose": "Reduce the other common factor",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Reduce the other common factor",
+          "initial_state": "Reduce the other common factor",
+          "model": {
+            "kind": "cancel_product",
+            "object": "symbolic",
+            "a": 6,
+            "b": 7,
+            "c": 14,
+            "d": 15,
+            "cancel_steps": [
+              {
+                "first": "b",
+                "second": "c",
+                "divisor": "7",
+                "firstAfter": "1",
+                "secondAfter": "2"
+              },
+              {
+                "first": "a",
+                "second": "d",
+                "divisor": "3",
+                "firstAfter": "2",
+                "secondAfter": "5"
+              }
+            ],
+            "target": "Cancellation keeps the product unchanged",
+            "math_text": true,
+            "compact_captions": true,
+            "cancel_step": 2,
+            "show_replacements": true
+          }
+        },
+        "narration": {
+          "script": "The other pair can be divided by three. Neither of these replacement values has to be one."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T08"
+      },
+      {
+        "id": "T08",
+        "stage": "teaching",
+        "purpose": "Finish the product",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Finish the product",
+          "initial_state": "Finish the product",
+          "model": {
+            "kind": "cancel_product",
+            "object": "symbolic",
+            "a": 6,
+            "b": 7,
+            "c": 14,
+            "d": 15,
+            "cancel_steps": [
+              {
+                "first": "b",
+                "second": "c",
+                "divisor": "7",
+                "firstAfter": "1",
+                "secondAfter": "2"
+              },
+              {
+                "first": "a",
+                "second": "d",
+                "divisor": "3",
+                "firstAfter": "2",
+                "secondAfter": "5"
+              }
+            ],
+            "target": "Cancellation keeps the product unchanged",
+            "math_text": true,
+            "compact_captions": true,
+            "cancel_step": 2,
+            "show_replacements": true,
+            "show_product": true
+          }
+        },
+        "narration": {
+          "script": "Multiply the remaining numerators and denominators. Cancellation made those products smaller without changing the answer."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T09"
+      },
+      {
+        "id": "T09",
+        "stage": "teaching",
+        "purpose": "Recognise a valid route",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Recognise a valid route",
+          "initial_state": "Recognise a valid route",
+          "model": null
+        },
+        "narration": {
+          "script": "Compare the proposed methods. This check is unscored, and each choice explains what its steps do."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "MD-07-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "MD-07-G01",
+        "support_level": "high",
+        "pre_question_script": "Choose the common factor and type both replacements. You can record more than one step when using smaller factors.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "MD-07-G02",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "guided",
+        "question_ref": "MD-07-G03",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "guided",
+        "question_ref": "MD-07-G04",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "F01"
+      },
+      "F01": {
+        "stage": "faded",
+        "question_ref": "MD-07-P01",
+        "support_level": "reduced",
+        "pre_question_script": "Now record your own cancellation route and final fraction. You may ask for support.",
+        "correct_next": "I01"
+      },
+      "I01": {
+        "stage": "independent_transfer",
+        "question_ref": "MD-07-P02",
+        "support_level": "none",
+        "pre_question_script": "Choose your own valid cancellation pairs and order. Record the replacements before giving the product.",
+        "correct_next": "P03"
+      }
+    },
+    "practice": {
+      "intro_script": "Keep the recorded working valid as you simplify each product. In context questions, decide which calculation and unit fit the situation.",
+      "question_order": [
+        "MD-07-P03",
+        "MD-07-P04",
+        "MD-07-P05",
+        "MD-07-P06",
+        "MD-07-X01",
+        "MD-07-X02",
+        "MD-07-X03"
+      ]
+    },
+    "exit": {
+      "intro_script": "Complete two calculations and a rule check independently. Record valid cancellation or multiply-then-simplify working. The final set has no hints.",
+      "primary_question_refs": [
+        "MD-07-E01",
+        "MD-07-E02",
+        "MD-07-E03"
+      ],
+      "confirmation_question_refs": [],
+      "mastery_policy": {
+        "profile": "all_primary_unsupported",
+        "require_all": true,
+        "require_valid_working": true,
+        "source_page": 13,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "You independently recorded valid fraction calculations, simplified the products and explained why cancellation preserves their values.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Keep building valid cancellation",
+      "ryan_script": "One or more final checks need practice. Check each cancellation pair and its replacements, then finish the product in simplest form.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "MD-07-C01",
+      "source_ref": {
+        "page": 4
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "In 3/8 × 4/9, why can 4 and 8 both be divided by 4?",
+      "target": "Reason for valid cancellation",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "One is a numerator and one is a denominator; dividing both by the same factor preserves the product.",
+          "Any two numbers can be deleted before multiplying.",
+          "A numerator must always become 1.",
+          "The denominators must be multiplied first."
+        ]
+      },
+      "answer": {
+        "value": "One is a numerator and one is a denominator; dividing both by the same factor preserves the product."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Both sides of the fraction product are divided by the same factor, so its value is preserved.",
+        "correct_after_support": "Both sides of the fraction product are divided by the same factor, so its value is preserved.",
+        "on_correct_math": "The 4 is a numerator and the 8 is a denominator. → Dividing these two factors by the same number preserves the product. → Write the replacement values instead of deleting the numbers.",
+        "on_incorrect_attempt_1": "Check where the two numbers occur and what happens to both of them.",
+        "on_incorrect_attempt_2": "Compare the positions and the equal divisions, then choose the value-preserving explanation.",
+        "worked_explanation": "The 4 is a numerator and the 8 is a denominator. → Dividing these two factors by the same number preserves the product. → Write the replacement values instead of deleting the numbers."
+      },
+      "mathematical_support": {
+        "hint_1": "Check where the two numbers occur and what happens to both of them.",
+        "hint_2": "The rewritten multiplication must keep the same value.",
+        "worked_solution": "The 4 is a numerator and the 8 is a denominator. → Dividing these two factors by the same number preserves the product. → Write the replacement values instead of deleting the numbers."
+      },
+      "working": [
+        "The 4 is a numerator and the 8 is a denominator.",
+        "Dividing these two factors by the same number preserves the product.",
+        "Write the replacement values instead of deleting the numbers."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "cancel_product_rule",
+          "object": "relationship",
+          "target": "Reason for valid cancellation",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "Any two numbers can be deleted before multiplying.": "Deleting arbitrary numbers changes the product. Cancellation needs a common factor and replacement values.",
+        "A numerator must always become 1.": "A cancelled numerator does not have to become one; its replacement is the result of division.",
+        "The denominators must be multiplied first.": "Cancellation can happen before those products are formed."
+      }
+    },
+    {
+      "id": "MD-07-C02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "Which method validly simplifies 6/7 × 14/15 before multiplying?",
+      "target": "Cancellation keeps the product unchanged",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Divide 7 and 14 by 7, then 6 and 15 by 3: 2/1 × 2/5 = 4/5.",
+          "Divide both numerators by 2: 3/7 × 7/15 = 21/105.",
+          "Cross out every number and replace each with 1.",
+          "Add the fraction parts: 20/22."
+        ]
+      },
+      "answer": {
+        "value": "Divide 7 and 14 by 7, then 6 and 15 by 3: 2/1 × 2/5 = 4/5."
+      },
+      "policy": {
+        "scored": false,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true,
+        "engagementOnly": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Both cancellation pairs are valid, and their replacements preserve the product.",
+        "correct_after_support": "Both cancellation pairs are valid, and their replacements preserve the product.",
+        "on_correct_math": "Divide the left denominator and right numerator by 7: 7 ÷ 7 = 1; 14 ÷ 7 = 2. → Divide the left numerator and right denominator by 3: 6 ÷ 3 = 2; 15 ÷ 3 = 5. → The remaining multiplication is 2/1 × 2/5. → 2 × 2 = 4; 1 × 5 = 5. → Simplify if needed: 4/5. Each cancellation preserved the original product.",
+        "on_incorrect_attempt_1": "Check the positions in each cancellation pair.",
+        "on_incorrect_attempt_2": "Follow one valid pair at a time and compare its two replacements.",
+        "worked_explanation": "Divide the left denominator and right numerator by 7: 7 ÷ 7 = 1; 14 ÷ 7 = 2. → Divide the left numerator and right denominator by 3: 6 ÷ 3 = 2; 15 ÷ 3 = 5. → The remaining multiplication is 2/1 × 2/5. → 2 × 2 = 4; 1 × 5 = 5. → Simplify if needed: 4/5. Each cancellation preserved the original product."
+      },
+      "mathematical_support": {
+        "hint_1": "Check the positions in each cancellation pair.",
+        "hint_2": "Both members of each pair must use the same divisor.",
+        "worked_solution": "Divide the left denominator and right numerator by 7: 7 ÷ 7 = 1; 14 ÷ 7 = 2. → Divide the left numerator and right denominator by 3: 6 ÷ 3 = 2; 15 ÷ 3 = 5. → The remaining multiplication is 2/1 × 2/5. → 2 × 2 = 4; 1 × 5 = 5. → Simplify if needed: 4/5. Each cancellation preserved the original product."
+      },
+      "working": [
+        "Divide the left denominator and right numerator by 7: 7 ÷ 7 = 1; 14 ÷ 7 = 2.",
+        "Divide the left numerator and right denominator by 3: 6 ÷ 3 = 2; 15 ÷ 3 = 5.",
+        "The remaining multiplication is 2/1 × 2/5.",
+        "2 × 2 = 4; 1 × 5 = 5.",
+        "Simplify if needed: 4/5. Each cancellation preserved the original product."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "cancel_product",
+          "object": "symbolic",
+          "a": 6,
+          "b": 7,
+          "c": 14,
+          "d": 15,
+          "cancel_steps": [
+            {
+              "first": "b",
+              "second": "c",
+              "divisor": "7",
+              "firstAfter": "1",
+              "secondAfter": "2"
+            },
+            {
+              "first": "a",
+              "second": "d",
+              "divisor": "3",
+              "firstAfter": "2",
+              "secondAfter": "5"
+            }
+          ],
+          "target": "Cancellation keeps the product unchanged",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "Divide both numerators by 2: 3/7 × 7/15 = 21/105.": "That divides two numerators without a matching denominator change, so it changes the product.",
+        "Cross out every number and replace each with 1.": "Crossing out is not deletion. Each replacement must come from an exact common-factor division.",
+        "Add the fraction parts: 20/22.": "That adds the fraction parts; it does not preserve the multiplication."
+      }
+    },
+    {
+      "id": "MD-07-G01",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "For 8/9 × 3/20, cancel the right numerator with the left denominator. Record their divisor and replacements.",
+      "target": "Cancellation keeps the product unchanged",
+      "response": {
+        "type": "cancellation_working",
+        "factors": [
+          8,
+          9,
+          3,
+          20
+        ],
+        "fixed_pair": [
+          "c",
+          "b"
+        ]
+      },
+      "answer": {
+        "value": {
+          "method": "cancel",
+          "steps": [
+            {
+              "first": "c",
+              "second": "b",
+              "divisor": "3",
+              "firstAfter": "1",
+              "secondAfter": "3"
+            }
+          ]
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The right numerator and left denominator now have no common factor left.",
+        "correct_after_support": "The right numerator and left denominator now have no common factor left.",
+        "on_correct_math": "Divide the right numerator and left denominator by 3: 3 ÷ 3 = 1; 9 ÷ 3 = 3.",
+        "on_incorrect_attempt_1": "Use a common factor of the two named values and record both replacements.",
+        "on_incorrect_attempt_2": "Compare the same-factor division on both named values, then correct your recorded step.",
+        "worked_explanation": "Divide the right numerator and left denominator by 3: 3 ÷ 3 = 1; 9 ÷ 3 = 3."
+      },
+      "mathematical_support": {
+        "hint_1": "Use a common factor of the two named values and record both replacements.",
+        "hint_2": "A smaller factor is valid; repeat if the named pair still shares a factor.",
+        "worked_solution": "Divide the right numerator and left denominator by 3: 3 ÷ 3 = 1; 9 ÷ 3 = 3."
+      },
+      "working": [
+        "Divide the right numerator and left denominator by 3: 3 ÷ 3 = 1; 9 ÷ 3 = 3."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "cancel_product",
+          "object": "symbolic",
+          "a": 8,
+          "b": 9,
+          "c": 3,
+          "d": 20,
+          "cancel_steps": [
+            {
+              "first": "c",
+              "second": "b",
+              "divisor": "3",
+              "firstAfter": "1",
+              "secondAfter": "3"
+            }
+          ],
+          "target": "Cancellation keeps the product unchanged",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "missing_working": "Record a complete calculation route so the working can be checked as well as the answer.",
+        "invalid_positions": "This step uses two positions on the same side of the fraction bars. A cancellation pair needs one numerator and one denominator.",
+        "wrong_pair": "For this guided step, use the two positions named in the question.",
+        "not_common_factor": "Check that your divisor is greater than one and divides both selected values exactly.",
+        "unequal_change": "Check both replacement values. Each selected value must be divided by the same factor.",
+        "unfinished_cancellation": "That is a valid first cancellation. The named pair still shares a factor; record another step.",
+        "incorrect_product": "Check the multiplication and the value of the final fraction against your working.",
+        "not_simplest": "Your final fraction has the correct value, but its two parts still share a factor. Finish simplifying."
+      }
+    },
+    {
+      "id": "MD-07-G02",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "Now work with 8/3 × 1/20. Cancel the left numerator with the right denominator until that pair has no common factor left.",
+      "target": "Cancellation keeps the product unchanged",
+      "response": {
+        "type": "cancellation_working",
+        "factors": [
+          8,
+          3,
+          1,
+          20
+        ],
+        "fixed_pair": [
+          "a",
+          "d"
+        ]
+      },
+      "answer": {
+        "value": {
+          "method": "cancel",
+          "steps": [
+            {
+              "first": "a",
+              "second": "d",
+              "divisor": "4",
+              "firstAfter": "2",
+              "secondAfter": "5"
+            }
+          ]
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That pair is fully reduced. Your cancellation can use one common factor or several smaller ones.",
+        "correct_after_support": "That pair is fully reduced. Your cancellation can use one common factor or several smaller ones.",
+        "on_correct_math": "Divide the left numerator and right denominator by 4: 8 ÷ 4 = 2; 20 ÷ 4 = 5.",
+        "on_incorrect_attempt_1": "Use a common factor of the two named values and record both replacements.",
+        "on_incorrect_attempt_2": "Use the working to check both replacements; a smaller factor may need another cancellation.",
+        "worked_explanation": "Divide the left numerator and right denominator by 4: 8 ÷ 4 = 2; 20 ÷ 4 = 5."
+      },
+      "mathematical_support": {
+        "hint_1": "Use a common factor of the two named values and record both replacements.",
+        "hint_2": "A smaller factor is valid; repeat if the named pair still shares a factor.",
+        "worked_solution": "Divide the left numerator and right denominator by 4: 8 ÷ 4 = 2; 20 ÷ 4 = 5."
+      },
+      "working": [
+        "Divide the left numerator and right denominator by 4: 8 ÷ 4 = 2; 20 ÷ 4 = 5."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "cancel_product",
+          "object": "symbolic",
+          "a": 8,
+          "b": 3,
+          "c": 1,
+          "d": 20,
+          "cancel_steps": [
+            {
+              "first": "a",
+              "second": "d",
+              "divisor": "4",
+              "firstAfter": "2",
+              "secondAfter": "5"
+            }
+          ],
+          "target": "Cancellation keeps the product unchanged",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "missing_working": "Record a complete calculation route so the working can be checked as well as the answer.",
+        "invalid_positions": "This step uses two positions on the same side of the fraction bars. A cancellation pair needs one numerator and one denominator.",
+        "wrong_pair": "For this guided step, use the two positions named in the question.",
+        "not_common_factor": "Check that your divisor is greater than one and divides both selected values exactly.",
+        "unequal_change": "Check both replacement values. Each selected value must be divided by the same factor.",
+        "unfinished_cancellation": "That is a valid first cancellation. The named pair still shares a factor; record another step.",
+        "incorrect_product": "Check the multiplication and the value of the final fraction against your working.",
+        "not_simplest": "Your final fraction has the correct value, but its two parts still share a factor. Finish simplifying."
+      }
+    },
+    {
+      "id": "MD-07-G03",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "After valid cancellation, the multiplication is 2/3 × 1/5. Give its product in simplest form.",
+      "target": "Cancellation keeps the product unchanged",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": false,
+        "require_simplest_form": true,
+        "show_authored_label": true,
+        "input_label": "Product in simplest form"
+      },
+      "answer": {
+        "value": "2/15"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The remaining factors give the exact product of the original fractions.",
+        "correct_after_support": "The remaining factors give the exact product of the original fractions.",
+        "on_correct_math": "2 × 1 = 2; 3 × 5 = 15. → The exact product is 2/15; no common factor remains.",
+        "on_incorrect_attempt_1": "Multiply the remaining numerators and the remaining denominators.",
+        "on_incorrect_attempt_2": "Compare the two remaining multiplication facts and correct the final fraction.",
+        "worked_explanation": "2 × 1 = 2; 3 × 5 = 15. → The exact product is 2/15; no common factor remains.",
+        "on_equivalent_unfinished": "Your final fraction has the correct value, but its two parts still share a factor. Finish simplifying."
+      },
+      "mathematical_support": {
+        "hint_1": "Multiply the remaining numerators and the remaining denominators.",
+        "hint_2": "Keep each value in its correct position relative to the fraction bar.",
+        "worked_solution": "2 × 1 = 2; 3 × 5 = 15. → The exact product is 2/15; no common factor remains."
+      },
+      "working": [
+        "2 × 1 = 2; 3 × 5 = 15.",
+        "The exact product is 2/15; no common factor remains."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "cancel_product",
+          "object": "symbolic",
+          "a": 2,
+          "b": 3,
+          "c": 1,
+          "d": 5,
+          "cancel_steps": [],
+          "target": "Cancellation keeps the product unchanged",
+          "math_text": true,
+          "compact_captions": true,
+          "working_product_at": 2
+        }
+      }
+    },
+    {
+      "id": "MD-07-G04",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "Which multiplication remains when all common factors in 8/9 × 3/20 have been cancelled?",
+      "target": "Reason for valid cancellation",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "2/3 × 1/5",
+          "8/3 × 1/20",
+          "4/9 × 3/10",
+          "1/1 × 1/1"
+        ]
+      },
+      "answer": {
+        "value": "2/3 × 1/5"
+      },
+      "policy": {
+        "scored": false,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true,
+        "engagementOnly": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That records both fully reduced pairs while keeping the same product.",
+        "correct_after_support": "That records both fully reduced pairs while keeping the same product.",
+        "on_correct_math": "The 3 and 9 become 1 and 3. → The 8 and 20 become 2 and 5. → The remaining multiplication is 2/3 × 1/5.",
+        "on_incorrect_attempt_1": "Check both opposite-position pairs.",
+        "on_incorrect_attempt_2": "Compare each replacement pair with the original factors.",
+        "worked_explanation": "The 3 and 9 become 1 and 3. → The 8 and 20 become 2 and 5. → The remaining multiplication is 2/3 × 1/5."
+      },
+      "mathematical_support": {
+        "hint_1": "Check both opposite-position pairs.",
+        "hint_2": "A correct first cancellation may leave another common factor.",
+        "worked_solution": "The 3 and 9 become 1 and 3. → The 8 and 20 become 2 and 5. → The remaining multiplication is 2/3 × 1/5."
+      },
+      "working": [
+        "The 3 and 9 become 1 and 3.",
+        "The 8 and 20 become 2 and 5.",
+        "The remaining multiplication is 2/3 × 1/5."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "cancel_product_rule",
+          "object": "relationship",
+          "target": "Reason for valid cancellation",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "8/3 × 1/20": "That is a valid intermediate step, but eight and twenty still share a factor.",
+        "4/9 × 3/10": "That is also a valid intermediate step, but there are still common factors to cancel.",
+        "1/1 × 1/1": "Those replacements do not come from matching common-factor divisions."
+      }
+    },
+    {
+      "id": "MD-07-P01",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "faded",
+      "prompt": "Use cancellation before multiplying 2/9 × 3/8. Record your working and give the product in simplest form.",
+      "target": "Cancellation keeps the product unchanged",
+      "response": {
+        "type": "cancellation_working",
+        "factors": [
+          2,
+          9,
+          3,
+          8
+        ],
+        "require_cancellation": true,
+        "suffix": ""
+      },
+      "answer": {
+        "value": {
+          "method": "cancel",
+          "steps": [
+            {
+              "first": "a",
+              "second": "d",
+              "divisor": "2",
+              "firstAfter": "1",
+              "secondAfter": "4"
+            },
+            {
+              "first": "c",
+              "second": "b",
+              "divisor": "3",
+              "firstAfter": "1",
+              "secondAfter": "3"
+            }
+          ],
+          "n": "1",
+          "d": "12"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Your recorded cancellations preserve the product, and the final fraction is fully simplified.",
+        "correct_after_support": "Your recorded cancellations preserve the product, and the final fraction is fully simplified.",
+        "on_correct_math": "Divide the left numerator and right denominator by 2: 2 ÷ 2 = 1; 8 ÷ 2 = 4. → Divide the right numerator and left denominator by 3: 3 ÷ 3 = 1; 9 ÷ 3 = 3. → The remaining multiplication is 1/3 × 1/4. → 1 × 1 = 1; 3 × 4 = 12. → Simplify if needed: 1/12. Each cancellation preserved the original product.",
+        "on_incorrect_attempt_1": "Look for a common factor shared by one numerator and one denominator.",
+        "on_incorrect_attempt_2": "Compare one cancellation pair and its replacements at a time, then finish your own calculation.",
+        "worked_explanation": "Divide the left numerator and right denominator by 2: 2 ÷ 2 = 1; 8 ÷ 2 = 4. → Divide the right numerator and left denominator by 3: 3 ÷ 3 = 1; 9 ÷ 3 = 3. → The remaining multiplication is 1/3 × 1/4. → 1 × 1 = 1; 3 × 4 = 12. → Simplify if needed: 1/12. Each cancellation preserved the original product."
+      },
+      "mathematical_support": {
+        "hint_1": "Look for a common factor shared by one numerator and one denominator.",
+        "hint_2": "Divide both selected values by exactly the same factor, write both replacements, and check the final fraction is fully simplified.",
+        "worked_solution": "Divide the left numerator and right denominator by 2: 2 ÷ 2 = 1; 8 ÷ 2 = 4. → Divide the right numerator and left denominator by 3: 3 ÷ 3 = 1; 9 ÷ 3 = 3. → The remaining multiplication is 1/3 × 1/4. → 1 × 1 = 1; 3 × 4 = 12. → Simplify if needed: 1/12. Each cancellation preserved the original product."
+      },
+      "working": [
+        "Divide the left numerator and right denominator by 2: 2 ÷ 2 = 1; 8 ÷ 2 = 4.",
+        "Divide the right numerator and left denominator by 3: 3 ÷ 3 = 1; 9 ÷ 3 = 3.",
+        "The remaining multiplication is 1/3 × 1/4.",
+        "1 × 1 = 1; 3 × 4 = 12.",
+        "Simplify if needed: 1/12. Each cancellation preserved the original product."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "cancel_product",
+          "object": "symbolic",
+          "a": 2,
+          "b": 9,
+          "c": 3,
+          "d": 8,
+          "cancel_steps": [
+            {
+              "first": "a",
+              "second": "d",
+              "divisor": "2",
+              "firstAfter": "1",
+              "secondAfter": "4"
+            },
+            {
+              "first": "c",
+              "second": "b",
+              "divisor": "3",
+              "firstAfter": "1",
+              "secondAfter": "3"
+            }
+          ],
+          "target": "Cancellation keeps the product unchanged",
+          "math_text": true,
+          "compact_captions": true,
+          "stage": "faded",
+          "reaction": "Your recorded cancellations preserve the product, and the final fraction is fully simplified.",
+          "correction": "Compare one cancellation pair and its replacements at a time, then finish your own calculation."
+        }
+      },
+      "response_feedback": {
+        "missing_working": "Record a complete calculation route so the working can be checked as well as the answer.",
+        "invalid_positions": "This step uses two positions on the same side of the fraction bars. A cancellation pair needs one numerator and one denominator.",
+        "wrong_pair": "For this guided step, use the two positions named in the question.",
+        "not_common_factor": "Check that your divisor is greater than one and divides both selected values exactly.",
+        "unequal_change": "Check both replacement values. Each selected value must be divided by the same factor.",
+        "unfinished_cancellation": "That is a valid first cancellation. The named pair still shares a factor; record another step.",
+        "incorrect_product": "Check the multiplication and the value of the final fraction against your working.",
+        "not_simplest": "Your final fraction has the correct value, but its two parts still share a factor. Finish simplifying."
+      }
+    },
+    {
+      "id": "MD-07-P02",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "independent_transfer",
+      "prompt": "Use cancellation before multiplying 5/14 × 7/15. Record your working and give the product in simplest form.",
+      "target": "Cancellation keeps the product unchanged",
+      "response": {
+        "type": "cancellation_working",
+        "factors": [
+          5,
+          14,
+          7,
+          15
+        ],
+        "require_cancellation": true,
+        "suffix": ""
+      },
+      "answer": {
+        "value": {
+          "method": "cancel",
+          "steps": [
+            {
+              "first": "a",
+              "second": "d",
+              "divisor": "5",
+              "firstAfter": "1",
+              "secondAfter": "3"
+            },
+            {
+              "first": "c",
+              "second": "b",
+              "divisor": "7",
+              "firstAfter": "1",
+              "secondAfter": "2"
+            }
+          ],
+          "n": "1",
+          "d": "6"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Both your working and simplest-form product are valid.",
+        "correct_after_support": "Both your working and simplest-form product are valid.",
+        "on_correct_math": "Divide the left numerator and right denominator by 5: 5 ÷ 5 = 1; 15 ÷ 5 = 3. → Divide the right numerator and left denominator by 7: 7 ÷ 7 = 1; 14 ÷ 7 = 2. → The remaining multiplication is 1/2 × 1/3. → 1 × 1 = 1; 2 × 3 = 6. → Simplify if needed: 1/6. Each cancellation preserved the original product.",
+        "on_incorrect_attempt_1": "Look for a common factor shared by one numerator and one denominator.",
+        "on_incorrect_attempt_2": "Check the selected positions, equal divisions and final multiplication against the working.",
+        "worked_explanation": "Divide the left numerator and right denominator by 5: 5 ÷ 5 = 1; 15 ÷ 5 = 3. → Divide the right numerator and left denominator by 7: 7 ÷ 7 = 1; 14 ÷ 7 = 2. → The remaining multiplication is 1/2 × 1/3. → 1 × 1 = 1; 2 × 3 = 6. → Simplify if needed: 1/6. Each cancellation preserved the original product."
+      },
+      "mathematical_support": {
+        "hint_1": "Look for a common factor shared by one numerator and one denominator.",
+        "hint_2": "Divide both selected values by exactly the same factor, write both replacements, and check the final fraction is fully simplified.",
+        "worked_solution": "Divide the left numerator and right denominator by 5: 5 ÷ 5 = 1; 15 ÷ 5 = 3. → Divide the right numerator and left denominator by 7: 7 ÷ 7 = 1; 14 ÷ 7 = 2. → The remaining multiplication is 1/2 × 1/3. → 1 × 1 = 1; 2 × 3 = 6. → Simplify if needed: 1/6. Each cancellation preserved the original product."
+      },
+      "working": [
+        "Divide the left numerator and right denominator by 5: 5 ÷ 5 = 1; 15 ÷ 5 = 3.",
+        "Divide the right numerator and left denominator by 7: 7 ÷ 7 = 1; 14 ÷ 7 = 2.",
+        "The remaining multiplication is 1/2 × 1/3.",
+        "1 × 1 = 1; 2 × 3 = 6.",
+        "Simplify if needed: 1/6. Each cancellation preserved the original product."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "cancel_product",
+          "object": "symbolic",
+          "a": 5,
+          "b": 14,
+          "c": 7,
+          "d": 15,
+          "cancel_steps": [
+            {
+              "first": "a",
+              "second": "d",
+              "divisor": "5",
+              "firstAfter": "1",
+              "secondAfter": "3"
+            },
+            {
+              "first": "c",
+              "second": "b",
+              "divisor": "7",
+              "firstAfter": "1",
+              "secondAfter": "2"
+            }
+          ],
+          "target": "Cancellation keeps the product unchanged",
+          "math_text": true,
+          "compact_captions": true,
+          "stage": "independent_transfer",
+          "reaction": "Both your working and simplest-form product are valid.",
+          "correction": "Check the selected positions, equal divisions and final multiplication against the working."
+        }
+      },
+      "response_feedback": {
+        "missing_working": "Record a complete calculation route so the working can be checked as well as the answer.",
+        "invalid_positions": "This step uses two positions on the same side of the fraction bars. A cancellation pair needs one numerator and one denominator.",
+        "wrong_pair": "For this guided step, use the two positions named in the question.",
+        "not_common_factor": "Check that your divisor is greater than one and divides both selected values exactly.",
+        "unequal_change": "Check both replacement values. Each selected value must be divided by the same factor.",
+        "unfinished_cancellation": "That is a valid first cancellation. The named pair still shares a factor; record another step.",
+        "incorrect_product": "Check the multiplication and the value of the final fraction against your working.",
+        "not_simplest": "Your final fraction has the correct value, but its two parts still share a factor. Finish simplifying."
+      }
+    },
+    {
+      "id": "MD-07-P03",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Use cancellation before multiplying 9/16 × 8/21. Record your working and give the product in simplest form.",
+      "target": "Cancellation keeps the product unchanged",
+      "response": {
+        "type": "cancellation_working",
+        "factors": [
+          9,
+          16,
+          8,
+          21
+        ],
+        "require_cancellation": true,
+        "suffix": ""
+      },
+      "answer": {
+        "value": {
+          "method": "cancel",
+          "steps": [
+            {
+              "first": "a",
+              "second": "d",
+              "divisor": "3",
+              "firstAfter": "3",
+              "secondAfter": "7"
+            },
+            {
+              "first": "c",
+              "second": "b",
+              "divisor": "8",
+              "firstAfter": "1",
+              "secondAfter": "2"
+            }
+          ],
+          "n": "3",
+          "d": "14"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The cancellation route keeps the original value and reaches a fully simplified product.",
+        "correct_after_support": "The cancellation route keeps the original value and reaches a fully simplified product.",
+        "on_correct_math": "Divide the left numerator and right denominator by 3: 9 ÷ 3 = 3; 21 ÷ 3 = 7. → Divide the right numerator and left denominator by 8: 8 ÷ 8 = 1; 16 ÷ 8 = 2. → The remaining multiplication is 3/2 × 1/7. → 3 × 1 = 3; 2 × 7 = 14. → Simplify if needed: 3/14. Each cancellation preserved the original product.",
+        "on_incorrect_attempt_1": "Look for a common factor shared by one numerator and one denominator.",
+        "on_incorrect_attempt_2": "Use the replacement values, not the original values, in the remaining multiplication.",
+        "worked_explanation": "Divide the left numerator and right denominator by 3: 9 ÷ 3 = 3; 21 ÷ 3 = 7. → Divide the right numerator and left denominator by 8: 8 ÷ 8 = 1; 16 ÷ 8 = 2. → The remaining multiplication is 3/2 × 1/7. → 3 × 1 = 3; 2 × 7 = 14. → Simplify if needed: 3/14. Each cancellation preserved the original product."
+      },
+      "mathematical_support": {
+        "hint_1": "Look for a common factor shared by one numerator and one denominator.",
+        "hint_2": "Divide both selected values by exactly the same factor, write both replacements, and check the final fraction is fully simplified.",
+        "worked_solution": "Divide the left numerator and right denominator by 3: 9 ÷ 3 = 3; 21 ÷ 3 = 7. → Divide the right numerator and left denominator by 8: 8 ÷ 8 = 1; 16 ÷ 8 = 2. → The remaining multiplication is 3/2 × 1/7. → 3 × 1 = 3; 2 × 7 = 14. → Simplify if needed: 3/14. Each cancellation preserved the original product."
+      },
+      "working": [
+        "Divide the left numerator and right denominator by 3: 9 ÷ 3 = 3; 21 ÷ 3 = 7.",
+        "Divide the right numerator and left denominator by 8: 8 ÷ 8 = 1; 16 ÷ 8 = 2.",
+        "The remaining multiplication is 3/2 × 1/7.",
+        "3 × 1 = 3; 2 × 7 = 14.",
+        "Simplify if needed: 3/14. Each cancellation preserved the original product."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "cancel_product",
+          "object": "symbolic",
+          "a": 9,
+          "b": 16,
+          "c": 8,
+          "d": 21,
+          "cancel_steps": [
+            {
+              "first": "a",
+              "second": "d",
+              "divisor": "3",
+              "firstAfter": "3",
+              "secondAfter": "7"
+            },
+            {
+              "first": "c",
+              "second": "b",
+              "divisor": "8",
+              "firstAfter": "1",
+              "secondAfter": "2"
+            }
+          ],
+          "target": "Cancellation keeps the product unchanged",
+          "math_text": true,
+          "compact_captions": true,
+          "reaction": "The cancellation route keeps the original value and reaches a fully simplified product.",
+          "correction": "Use the replacement values, not the original values, in the remaining multiplication."
+        }
+      },
+      "response_feedback": {
+        "missing_working": "Record a complete calculation route so the working can be checked as well as the answer.",
+        "invalid_positions": "This step uses two positions on the same side of the fraction bars. A cancellation pair needs one numerator and one denominator.",
+        "wrong_pair": "For this guided step, use the two positions named in the question.",
+        "not_common_factor": "Check that your divisor is greater than one and divides both selected values exactly.",
+        "unequal_change": "Check both replacement values. Each selected value must be divided by the same factor.",
+        "unfinished_cancellation": "That is a valid first cancellation. The named pair still shares a factor; record another step.",
+        "incorrect_product": "Check the multiplication and the value of the final fraction against your working.",
+        "not_simplest": "Your final fraction has the correct value, but its two parts still share a factor. Finish simplifying."
+      }
+    },
+    {
+      "id": "MD-07-P04",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Use cancellation before multiplying 12/25 × 15/18. Record your working and give the product in simplest form.",
+      "target": "Cancellation keeps the product unchanged",
+      "response": {
+        "type": "cancellation_working",
+        "factors": [
+          12,
+          25,
+          15,
+          18
+        ],
+        "require_cancellation": true,
+        "suffix": ""
+      },
+      "answer": {
+        "value": {
+          "method": "cancel",
+          "steps": [
+            {
+              "first": "a",
+              "second": "d",
+              "divisor": "6",
+              "firstAfter": "2",
+              "secondAfter": "3"
+            },
+            {
+              "first": "c",
+              "second": "b",
+              "divisor": "5",
+              "firstAfter": "3",
+              "secondAfter": "5"
+            }
+          ],
+          "n": "2",
+          "d": "5"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Your cancellations are valid, and any remaining common factor has been removed from the product.",
+        "correct_after_support": "Your cancellations are valid, and any remaining common factor has been removed from the product.",
+        "on_correct_math": "Divide the left numerator and right denominator by 6: 12 ÷ 6 = 2; 18 ÷ 6 = 3. → Divide the right numerator and left denominator by 5: 15 ÷ 5 = 3; 25 ÷ 5 = 5. → The remaining multiplication is 2/5 × 3/3. → 2 × 3 = 6; 5 × 3 = 15. → Simplify if needed: 2/5. Each cancellation preserved the original product.",
+        "on_incorrect_attempt_1": "Look for a common factor shared by one numerator and one denominator.",
+        "on_incorrect_attempt_2": "The remaining product may still need simplification. Preserve its value all the way to simplest form.",
+        "worked_explanation": "Divide the left numerator and right denominator by 6: 12 ÷ 6 = 2; 18 ÷ 6 = 3. → Divide the right numerator and left denominator by 5: 15 ÷ 5 = 3; 25 ÷ 5 = 5. → The remaining multiplication is 2/5 × 3/3. → 2 × 3 = 6; 5 × 3 = 15. → Simplify if needed: 2/5. Each cancellation preserved the original product."
+      },
+      "mathematical_support": {
+        "hint_1": "Look for a common factor shared by one numerator and one denominator.",
+        "hint_2": "Divide both selected values by exactly the same factor, write both replacements, and check the final fraction is fully simplified.",
+        "worked_solution": "Divide the left numerator and right denominator by 6: 12 ÷ 6 = 2; 18 ÷ 6 = 3. → Divide the right numerator and left denominator by 5: 15 ÷ 5 = 3; 25 ÷ 5 = 5. → The remaining multiplication is 2/5 × 3/3. → 2 × 3 = 6; 5 × 3 = 15. → Simplify if needed: 2/5. Each cancellation preserved the original product."
+      },
+      "working": [
+        "Divide the left numerator and right denominator by 6: 12 ÷ 6 = 2; 18 ÷ 6 = 3.",
+        "Divide the right numerator and left denominator by 5: 15 ÷ 5 = 3; 25 ÷ 5 = 5.",
+        "The remaining multiplication is 2/5 × 3/3.",
+        "2 × 3 = 6; 5 × 3 = 15.",
+        "Simplify if needed: 2/5. Each cancellation preserved the original product."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "cancel_product",
+          "object": "symbolic",
+          "a": 12,
+          "b": 25,
+          "c": 15,
+          "d": 18,
+          "cancel_steps": [
+            {
+              "first": "a",
+              "second": "d",
+              "divisor": "6",
+              "firstAfter": "2",
+              "secondAfter": "3"
+            },
+            {
+              "first": "c",
+              "second": "b",
+              "divisor": "5",
+              "firstAfter": "3",
+              "secondAfter": "5"
+            }
+          ],
+          "target": "Cancellation keeps the product unchanged",
+          "math_text": true,
+          "compact_captions": true,
+          "reaction": "Your cancellations are valid, and any remaining common factor has been removed from the product.",
+          "correction": "The remaining product may still need simplification. Preserve its value all the way to simplest form."
+        }
+      },
+      "response_feedback": {
+        "missing_working": "Record a complete calculation route so the working can be checked as well as the answer.",
+        "invalid_positions": "This step uses two positions on the same side of the fraction bars. A cancellation pair needs one numerator and one denominator.",
+        "wrong_pair": "For this guided step, use the two positions named in the question.",
+        "not_common_factor": "Check that your divisor is greater than one and divides both selected values exactly.",
+        "unequal_change": "Check both replacement values. Each selected value must be divided by the same factor.",
+        "unfinished_cancellation": "That is a valid first cancellation. The named pair still shares a factor; record another step.",
+        "incorrect_product": "Check the multiplication and the value of the final fraction against your working.",
+        "not_simplest": "Your final fraction has the correct value, but its two parts still share a factor. Finish simplifying."
+      }
+    },
+    {
+      "id": "MD-07-P05",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Use cancellation before multiplying 14/27 × 9/28. Record your working and give the product in simplest form.",
+      "target": "Cancellation keeps the product unchanged",
+      "response": {
+        "type": "cancellation_working",
+        "factors": [
+          14,
+          27,
+          9,
+          28
+        ],
+        "require_cancellation": true,
+        "suffix": ""
+      },
+      "answer": {
+        "value": {
+          "method": "cancel",
+          "steps": [
+            {
+              "first": "a",
+              "second": "d",
+              "divisor": "14",
+              "firstAfter": "1",
+              "secondAfter": "2"
+            },
+            {
+              "first": "c",
+              "second": "b",
+              "divisor": "9",
+              "firstAfter": "1",
+              "secondAfter": "3"
+            }
+          ],
+          "n": "1",
+          "d": "6"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The written replacements and final fraction agree with the original multiplication.",
+        "correct_after_support": "The written replacements and final fraction agree with the original multiplication.",
+        "on_correct_math": "Divide the left numerator and right denominator by 14: 14 ÷ 14 = 1; 28 ÷ 14 = 2. → Divide the right numerator and left denominator by 9: 9 ÷ 9 = 1; 27 ÷ 9 = 3. → The remaining multiplication is 1/3 × 1/2. → 1 × 1 = 1; 3 × 2 = 6. → Simplify if needed: 1/6. Each cancellation preserved the original product.",
+        "on_incorrect_attempt_1": "Look for a common factor shared by one numerator and one denominator.",
+        "on_incorrect_attempt_2": "Check the replacement for each of the four positions before finishing the calculation.",
+        "worked_explanation": "Divide the left numerator and right denominator by 14: 14 ÷ 14 = 1; 28 ÷ 14 = 2. → Divide the right numerator and left denominator by 9: 9 ÷ 9 = 1; 27 ÷ 9 = 3. → The remaining multiplication is 1/3 × 1/2. → 1 × 1 = 1; 3 × 2 = 6. → Simplify if needed: 1/6. Each cancellation preserved the original product."
+      },
+      "mathematical_support": {
+        "hint_1": "Look for a common factor shared by one numerator and one denominator.",
+        "hint_2": "Divide both selected values by exactly the same factor, write both replacements, and check the final fraction is fully simplified.",
+        "worked_solution": "Divide the left numerator and right denominator by 14: 14 ÷ 14 = 1; 28 ÷ 14 = 2. → Divide the right numerator and left denominator by 9: 9 ÷ 9 = 1; 27 ÷ 9 = 3. → The remaining multiplication is 1/3 × 1/2. → 1 × 1 = 1; 3 × 2 = 6. → Simplify if needed: 1/6. Each cancellation preserved the original product."
+      },
+      "working": [
+        "Divide the left numerator and right denominator by 14: 14 ÷ 14 = 1; 28 ÷ 14 = 2.",
+        "Divide the right numerator and left denominator by 9: 9 ÷ 9 = 1; 27 ÷ 9 = 3.",
+        "The remaining multiplication is 1/3 × 1/2.",
+        "1 × 1 = 1; 3 × 2 = 6.",
+        "Simplify if needed: 1/6. Each cancellation preserved the original product."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "cancel_product",
+          "object": "symbolic",
+          "a": 14,
+          "b": 27,
+          "c": 9,
+          "d": 28,
+          "cancel_steps": [
+            {
+              "first": "a",
+              "second": "d",
+              "divisor": "14",
+              "firstAfter": "1",
+              "secondAfter": "2"
+            },
+            {
+              "first": "c",
+              "second": "b",
+              "divisor": "9",
+              "firstAfter": "1",
+              "secondAfter": "3"
+            }
+          ],
+          "target": "Cancellation keeps the product unchanged",
+          "math_text": true,
+          "compact_captions": true,
+          "reaction": "The written replacements and final fraction agree with the original multiplication.",
+          "correction": "Check the replacement for each of the four positions before finishing the calculation."
+        }
+      },
+      "response_feedback": {
+        "missing_working": "Record a complete calculation route so the working can be checked as well as the answer.",
+        "invalid_positions": "This step uses two positions on the same side of the fraction bars. A cancellation pair needs one numerator and one denominator.",
+        "wrong_pair": "For this guided step, use the two positions named in the question.",
+        "not_common_factor": "Check that your divisor is greater than one and divides both selected values exactly.",
+        "unequal_change": "Check both replacement values. Each selected value must be divided by the same factor.",
+        "unfinished_cancellation": "That is a valid first cancellation. The named pair still shares a factor; record another step.",
+        "incorrect_product": "Check the multiplication and the value of the final fraction against your working.",
+        "not_simplest": "Your final fraction has the correct value, but its two parts still share a factor. Finish simplifying."
+      }
+    },
+    {
+      "id": "MD-07-P06",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Which cancellation plan for 10/21 × 14/25 is valid?",
+      "target": "Reason for valid cancellation",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Divide 10 and 25 by 5; divide 14 and 21 by 7.",
+          "Divide the two numerators by 2.",
+          "Divide 10 by 5 and 25 by 10.",
+          "Cross out matching-looking numbers without writing replacements."
+        ]
+      },
+      "answer": {
+        "value": "Divide 10 and 25 by 5; divide 14 and 21 by 7."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Both pairs use valid positions and matching common-factor divisions.",
+        "correct_after_support": "Both pairs use valid positions and matching common-factor divisions.",
+        "on_correct_math": "10 and 25 are on opposite sides of fraction bars and share factor 5. → 14 and 21 are on opposite sides of fraction bars and share factor 7. → Both pairs use matching divisions and explicit replacements.",
+        "on_incorrect_attempt_1": "A valid pair contains one numerator and one denominator.",
+        "on_incorrect_attempt_2": "Compare the positions and the two divisors in each proposed pair.",
+        "worked_explanation": "10 and 25 are on opposite sides of fraction bars and share factor 5. → 14 and 21 are on opposite sides of fraction bars and share factor 7. → Both pairs use matching divisions and explicit replacements."
+      },
+      "mathematical_support": {
+        "hint_1": "A valid pair contains one numerator and one denominator.",
+        "hint_2": "The divisor must be a common factor used on both members of a pair.",
+        "worked_solution": "10 and 25 are on opposite sides of fraction bars and share factor 5. → 14 and 21 are on opposite sides of fraction bars and share factor 7. → Both pairs use matching divisions and explicit replacements."
+      },
+      "working": [
+        "10 and 25 are on opposite sides of fraction bars and share factor 5.",
+        "14 and 21 are on opposite sides of fraction bars and share factor 7.",
+        "Both pairs use matching divisions and explicit replacements."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "cancel_product_rule",
+          "object": "relationship",
+          "target": "Reason for valid cancellation",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "Divide the two numerators by 2.": "Those are both numerator positions; dividing them alone changes the product.",
+        "Divide 10 by 5 and 25 by 10.": "That uses different divisors, and ten does not divide twenty-five exactly.",
+        "Cross out matching-looking numbers without writing replacements.": "A cancellation records exact divisions, not the deletion of numbers."
+      }
+    },
+    {
+      "id": "MD-07-X01",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A ribbon is 5/6 metre long. A craft activity uses 9/20 of it. What length is used? Give the length in simplest form.",
+      "target": "Length of ribbon used",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": false,
+        "require_simplest_form": true,
+        "show_authored_label": true,
+        "input_label": "Length used, in simplest form",
+        "suffix": "m"
+      },
+      "answer": {
+        "value": "3/8"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The exact answer gives the used length in metres, fully simplified.",
+        "correct_after_support": "The exact answer gives the used length in metres, fully simplified.",
+        "on_correct_math": "Divide the left numerator and right denominator by 3: 9 ÷ 3 = 3; 6 ÷ 3 = 2. → Divide the right numerator and left denominator by 5: 5 ÷ 5 = 1; 20 ÷ 5 = 4. → The remaining multiplication is 3/4 × 1/2. → 3 × 1 = 3; 4 × 2 = 8. → Simplify if needed: 3/8 m. Each cancellation preserved the original product.",
+        "on_incorrect_attempt_1": "The requested length is part of an already fractional metre. Keep the metre as the reference.",
+        "on_incorrect_attempt_2": "Compare the used portion with the original length, then finish simplifying the exact result.",
+        "worked_explanation": "Divide the left numerator and right denominator by 3: 9 ÷ 3 = 3; 6 ÷ 3 = 2. → Divide the right numerator and left denominator by 5: 5 ÷ 5 = 1; 20 ÷ 5 = 4. → The remaining multiplication is 3/4 × 1/2. → 3 × 1 = 3; 4 × 2 = 8. → Simplify if needed: 3/8 m. Each cancellation preserved the original product.",
+        "on_equivalent_unfinished": "Your final fraction has the correct value, but its two parts still share a factor. Finish simplifying."
+      },
+      "mathematical_support": {
+        "hint_1": "The requested length is part of an already fractional metre. Keep the metre as the reference.",
+        "hint_2": "Divide both selected values by exactly the same factor, write both replacements, and check the final fraction is fully simplified.",
+        "worked_solution": "Divide the left numerator and right denominator by 3: 9 ÷ 3 = 3; 6 ÷ 3 = 2. → Divide the right numerator and left denominator by 5: 5 ÷ 5 = 1; 20 ÷ 5 = 4. → The remaining multiplication is 3/4 × 1/2. → 3 × 1 = 3; 4 × 2 = 8. → Simplify if needed: 3/8 m. Each cancellation preserved the original product."
+      },
+      "working": [
+        "Divide the left numerator and right denominator by 3: 9 ÷ 3 = 3; 6 ÷ 3 = 2.",
+        "Divide the right numerator and left denominator by 5: 5 ÷ 5 = 1; 20 ÷ 5 = 4.",
+        "The remaining multiplication is 3/4 × 1/2.",
+        "3 × 1 = 3; 4 × 2 = 8.",
+        "Simplify if needed: 3/8 m. Each cancellation preserved the original product."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "cancel_product",
+          "object": "ribbon",
+          "a": 9,
+          "b": 20,
+          "c": 5,
+          "d": 6,
+          "cancel_steps": [
+            {
+              "first": "a",
+              "second": "d",
+              "divisor": "3",
+              "firstAfter": "3",
+              "secondAfter": "2"
+            },
+            {
+              "first": "c",
+              "second": "b",
+              "divisor": "5",
+              "firstAfter": "1",
+              "secondAfter": "4"
+            }
+          ],
+          "target": "Length of ribbon used",
+          "math_text": true,
+          "compact_captions": true,
+          "unit": "m",
+          "prompt": "A ribbon is 5/6 metre long. A craft activity uses 9/20 of it. What length is used? Record a valid method and give the length in simplest form.",
+          "clue": "The requested length is part of an already fractional metre. Keep the metre as the reference.",
+          "reaction": "Your working gives the used length in metres and keeps the same exact value.",
+          "correction": "Relate the used portion to the original length, then check the recorded calculation."
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "MD-07-X02",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A container is 7/8 full. Four twenty-firsts of its contents are removed. What fraction of its full capacity is removed? Give the fraction in simplest form.",
+      "target": "Fraction of full capacity removed",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": false,
+        "require_simplest_form": true,
+        "show_authored_label": true,
+        "input_label": "Fraction of full capacity removed, in simplest form",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "1/6"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The simplest fraction describes the removed amount relative to full capacity.",
+        "correct_after_support": "The simplest fraction describes the removed amount relative to full capacity.",
+        "on_correct_math": "Divide the left numerator and right denominator by 4: 4 ÷ 4 = 1; 8 ÷ 4 = 2. → Divide the right numerator and left denominator by 7: 7 ÷ 7 = 1; 21 ÷ 7 = 3. → The remaining multiplication is 1/3 × 1/2. → 1 × 1 = 1; 3 × 2 = 6. → Simplify if needed: 1/6. Each cancellation preserved the original product.",
+        "on_incorrect_attempt_1": "The fraction removed is relative to the contents; the answer is relative to full capacity.",
+        "on_incorrect_attempt_2": "Keep full capacity as the reference while calculating the removed portion.",
+        "worked_explanation": "Divide the left numerator and right denominator by 4: 4 ÷ 4 = 1; 8 ÷ 4 = 2. → Divide the right numerator and left denominator by 7: 7 ÷ 7 = 1; 21 ÷ 7 = 3. → The remaining multiplication is 1/3 × 1/2. → 1 × 1 = 1; 3 × 2 = 6. → Simplify if needed: 1/6. Each cancellation preserved the original product.",
+        "on_equivalent_unfinished": "Your final fraction has the correct value, but its two parts still share a factor. Finish simplifying."
+      },
+      "mathematical_support": {
+        "hint_1": "The fraction removed is relative to the contents; the answer is relative to full capacity.",
+        "hint_2": "Divide both selected values by exactly the same factor, write both replacements, and check the final fraction is fully simplified.",
+        "worked_solution": "Divide the left numerator and right denominator by 4: 4 ÷ 4 = 1; 8 ÷ 4 = 2. → Divide the right numerator and left denominator by 7: 7 ÷ 7 = 1; 21 ÷ 7 = 3. → The remaining multiplication is 1/3 × 1/2. → 1 × 1 = 1; 3 × 2 = 6. → Simplify if needed: 1/6. Each cancellation preserved the original product."
+      },
+      "working": [
+        "Divide the left numerator and right denominator by 4: 4 ÷ 4 = 1; 8 ÷ 4 = 2.",
+        "Divide the right numerator and left denominator by 7: 7 ÷ 7 = 1; 21 ÷ 7 = 3.",
+        "The remaining multiplication is 1/3 × 1/2.",
+        "1 × 1 = 1; 3 × 2 = 6.",
+        "Simplify if needed: 1/6. Each cancellation preserved the original product."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "cancel_product",
+          "object": "container",
+          "a": 4,
+          "b": 21,
+          "c": 7,
+          "d": 8,
+          "cancel_steps": [
+            {
+              "first": "a",
+              "second": "d",
+              "divisor": "4",
+              "firstAfter": "1",
+              "secondAfter": "2"
+            },
+            {
+              "first": "c",
+              "second": "b",
+              "divisor": "7",
+              "firstAfter": "1",
+              "secondAfter": "3"
+            }
+          ],
+          "target": "Fraction of full capacity removed",
+          "math_text": true,
+          "compact_captions": true,
+          "prompt": "A container is 7/8 full. Four twenty-firsts of its contents are removed. What fraction of its full capacity is removed? Record a valid method and give the fraction in simplest form.",
+          "clue": "The fraction removed is relative to the contents; the answer is relative to full capacity.",
+          "reaction": "The simplest fraction describes the removed amount relative to full capacity.",
+          "correction": "Keep the reference whole fixed while calculating the removed part and checking the working.",
+          "action_label": "Remove",
+          "contents_label": "of these contents"
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "MD-07-X03",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A rectangular notice has width 14/15 metre and height 5/7 metre. Find its area. Give the area in simplest form.",
+      "target": "Area of a rectangular notice",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": false,
+        "require_simplest_form": true,
+        "show_authored_label": true,
+        "input_label": "Area of the notice, in simplest form",
+        "suffix": "m²",
+        "suffix_label": "square metres"
+      },
+      "answer": {
+        "value": "2/3"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The exact answer gives the notice area in square metres, fully simplified.",
+        "correct_after_support": "The exact answer gives the notice area in square metres, fully simplified.",
+        "on_correct_math": "Divide the left numerator and right denominator by 7: 14 ÷ 7 = 2; 7 ÷ 7 = 1. → Divide the right numerator and left denominator by 5: 5 ÷ 5 = 1; 15 ÷ 5 = 3. → The remaining multiplication is 2/3 × 1/1. → 2 × 1 = 2; 3 × 1 = 3. → Simplify if needed: 2/3 m². Each cancellation preserved the original product.",
+        "on_incorrect_attempt_1": "Both givens are lengths. The requested quantity is an area, with a different unit.",
+        "on_incorrect_attempt_2": "Use both side lengths to find the area, then preserve its value while simplifying.",
+        "worked_explanation": "Divide the left numerator and right denominator by 7: 14 ÷ 7 = 2; 7 ÷ 7 = 1. → Divide the right numerator and left denominator by 5: 5 ÷ 5 = 1; 15 ÷ 5 = 3. → The remaining multiplication is 2/3 × 1/1. → 2 × 1 = 2; 3 × 1 = 3. → Simplify if needed: 2/3 m². Each cancellation preserved the original product.",
+        "on_equivalent_unfinished": "Your final fraction has the correct value, but its two parts still share a factor. Finish simplifying."
+      },
+      "mathematical_support": {
+        "hint_1": "Both givens are lengths. The requested quantity is an area, with a different unit.",
+        "hint_2": "Divide both selected values by exactly the same factor, write both replacements, and check the final fraction is fully simplified.",
+        "worked_solution": "Divide the left numerator and right denominator by 7: 14 ÷ 7 = 2; 7 ÷ 7 = 1. → Divide the right numerator and left denominator by 5: 5 ÷ 5 = 1; 15 ÷ 5 = 3. → The remaining multiplication is 2/3 × 1/1. → 2 × 1 = 2; 3 × 1 = 3. → Simplify if needed: 2/3 m². Each cancellation preserved the original product."
+      },
+      "working": [
+        "Divide the left numerator and right denominator by 7: 14 ÷ 7 = 2; 7 ÷ 7 = 1.",
+        "Divide the right numerator and left denominator by 5: 5 ÷ 5 = 1; 15 ÷ 5 = 3.",
+        "The remaining multiplication is 2/3 × 1/1.",
+        "2 × 1 = 2; 3 × 1 = 3.",
+        "Simplify if needed: 2/3 m². Each cancellation preserved the original product."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "cancel_product",
+          "object": "card",
+          "a": 14,
+          "b": 15,
+          "c": 5,
+          "d": 7,
+          "cancel_steps": [
+            {
+              "first": "a",
+              "second": "d",
+              "divisor": "7",
+              "firstAfter": "2",
+              "secondAfter": "1"
+            },
+            {
+              "first": "c",
+              "second": "b",
+              "divisor": "5",
+              "firstAfter": "1",
+              "secondAfter": "3"
+            }
+          ],
+          "target": "Area of a rectangular notice",
+          "math_text": true,
+          "compact_captions": true,
+          "context_name": "Notice",
+          "horizontal_label": "Width",
+          "vertical_label": "Height",
+          "unit": "m²",
+          "prompt": "A rectangular notice has width 14/15 metre and height 5/7 metre. Find its area. Record a valid method and give the area in simplest form.",
+          "clue": "Both givens are lengths. The requested quantity is an area, with a different unit.",
+          "reaction": "Your valid calculation gives an exact area in square metres.",
+          "correction": "Use both side lengths, check the recorded method, and preserve the area while simplifying."
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "MD-07-E01",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "exit",
+      "prompt": "Work out 7/12 × 8/21 in simplest form. Record valid cancellation working or a multiply-then-simplify route.",
+      "target": "Cancellation keeps the product unchanged",
+      "response": {
+        "type": "cancellation_working",
+        "factors": [
+          7,
+          12,
+          8,
+          21
+        ],
+        "require_cancellation": false,
+        "suffix": ""
+      },
+      "answer": {
+        "value": {
+          "method": "cancel",
+          "steps": [
+            {
+              "first": "a",
+              "second": "d",
+              "divisor": "7",
+              "firstAfter": "1",
+              "secondAfter": "3"
+            },
+            {
+              "first": "c",
+              "second": "b",
+              "divisor": "4",
+              "firstAfter": "2",
+              "secondAfter": "3"
+            }
+          ],
+          "n": "2",
+          "d": "9"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Your independent working is valid and your final product is fully simplified.",
+        "correct_after_support": "Your independent working is valid and your final product is fully simplified.",
+        "on_correct_math": "Divide the left numerator and right denominator by 7: 7 ÷ 7 = 1; 21 ÷ 7 = 3. → Divide the right numerator and left denominator by 4: 8 ÷ 4 = 2; 12 ÷ 4 = 3. → The remaining multiplication is 1/3 × 2/3. → 1 × 2 = 2; 3 × 3 = 9. → Simplify if needed: 2/9. Each cancellation preserved the original product.",
+        "on_incorrect_attempt_1": "Look for a common factor shared by one numerator and one denominator.",
+        "on_incorrect_attempt_2": "Compare the valid route with your recorded working and final product.",
+        "worked_explanation": "Divide the left numerator and right denominator by 7: 7 ÷ 7 = 1; 21 ÷ 7 = 3. → Divide the right numerator and left denominator by 4: 8 ÷ 4 = 2; 12 ÷ 4 = 3. → The remaining multiplication is 1/3 × 2/3. → 1 × 2 = 2; 3 × 3 = 9. → Simplify if needed: 2/9. Each cancellation preserved the original product.",
+        "on_locked_incorrect": "Compare the valid method with your recorded response. Both the working and final answer matter."
+      },
+      "mathematical_support": {
+        "hint_1": "Look for a common factor shared by one numerator and one denominator.",
+        "hint_2": "Divide both selected values by exactly the same factor, write both replacements, and check the final fraction is fully simplified.",
+        "worked_solution": "Divide the left numerator and right denominator by 7: 7 ÷ 7 = 1; 21 ÷ 7 = 3. → Divide the right numerator and left denominator by 4: 8 ÷ 4 = 2; 12 ÷ 4 = 3. → The remaining multiplication is 1/3 × 2/3. → 1 × 2 = 2; 3 × 3 = 9. → Simplify if needed: 2/9. Each cancellation preserved the original product."
+      },
+      "working": [
+        "Divide the left numerator and right denominator by 7: 7 ÷ 7 = 1; 21 ÷ 7 = 3.",
+        "Divide the right numerator and left denominator by 4: 8 ÷ 4 = 2; 12 ÷ 4 = 3.",
+        "The remaining multiplication is 1/3 × 2/3.",
+        "1 × 2 = 2; 3 × 3 = 9.",
+        "Simplify if needed: 2/9. Each cancellation preserved the original product."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "cancel_product",
+          "object": "symbolic",
+          "a": 7,
+          "b": 12,
+          "c": 8,
+          "d": 21,
+          "cancel_steps": [
+            {
+              "first": "a",
+              "second": "d",
+              "divisor": "7",
+              "firstAfter": "1",
+              "secondAfter": "3"
+            },
+            {
+              "first": "c",
+              "second": "b",
+              "divisor": "4",
+              "firstAfter": "2",
+              "secondAfter": "3"
+            }
+          ],
+          "target": "Cancellation keeps the product unchanged",
+          "math_text": true,
+          "compact_captions": true,
+          "stage": "exit",
+          "prompt": "Work out 7/12 × 8/21 in simplest form. Record valid cancellation working or a multiply-then-simplify route.",
+          "reaction": "Your independent working is valid and your final product is fully simplified.",
+          "correction": "Compare the valid route with your recorded working and final product."
+        }
+      },
+      "response_feedback": {
+        "missing_working": "Record a complete calculation route so the working can be checked as well as the answer.",
+        "invalid_positions": "This step uses two positions on the same side of the fraction bars. A cancellation pair needs one numerator and one denominator.",
+        "wrong_pair": "For this guided step, use the two positions named in the question.",
+        "not_common_factor": "Check that your divisor is greater than one and divides both selected values exactly.",
+        "unequal_change": "Check both replacement values. Each selected value must be divided by the same factor.",
+        "unfinished_cancellation": "That is a valid first cancellation. The named pair still shares a factor; record another step.",
+        "incorrect_product": "Check the multiplication and the value of the final fraction against your working.",
+        "not_simplest": "Your final fraction has the correct value, but its two parts still share a factor. Finish simplifying."
+      }
+    },
+    {
+      "id": "MD-07-E02",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "exit",
+      "prompt": "Work out 15/28 × 14/25 in simplest form. Record valid cancellation working or a multiply-then-simplify route.",
+      "target": "Cancellation keeps the product unchanged",
+      "response": {
+        "type": "cancellation_working",
+        "factors": [
+          15,
+          28,
+          14,
+          25
+        ],
+        "require_cancellation": false,
+        "suffix": ""
+      },
+      "answer": {
+        "value": {
+          "method": "cancel",
+          "steps": [
+            {
+              "first": "a",
+              "second": "d",
+              "divisor": "5",
+              "firstAfter": "3",
+              "secondAfter": "5"
+            },
+            {
+              "first": "c",
+              "second": "b",
+              "divisor": "14",
+              "firstAfter": "1",
+              "secondAfter": "2"
+            }
+          ],
+          "n": "3",
+          "d": "10"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Both the independent method and simplest-form product are correct.",
+        "correct_after_support": "Both the independent method and simplest-form product are correct.",
+        "on_correct_math": "Divide the left numerator and right denominator by 5: 15 ÷ 5 = 3; 25 ÷ 5 = 5. → Divide the right numerator and left denominator by 14: 14 ÷ 14 = 1; 28 ÷ 14 = 2. → The remaining multiplication is 3/2 × 1/5. → 3 × 1 = 3; 2 × 5 = 10. → Simplify if needed: 3/10. Each cancellation preserved the original product.",
+        "on_incorrect_attempt_1": "Look for a common factor shared by one numerator and one denominator.",
+        "on_incorrect_attempt_2": "Check the mathematical validity of the working as well as the final fraction.",
+        "worked_explanation": "Divide the left numerator and right denominator by 5: 15 ÷ 5 = 3; 25 ÷ 5 = 5. → Divide the right numerator and left denominator by 14: 14 ÷ 14 = 1; 28 ÷ 14 = 2. → The remaining multiplication is 3/2 × 1/5. → 3 × 1 = 3; 2 × 5 = 10. → Simplify if needed: 3/10. Each cancellation preserved the original product.",
+        "on_locked_incorrect": "Compare the valid method with your recorded response. Both the working and final answer matter."
+      },
+      "mathematical_support": {
+        "hint_1": "Look for a common factor shared by one numerator and one denominator.",
+        "hint_2": "Divide both selected values by exactly the same factor, write both replacements, and check the final fraction is fully simplified.",
+        "worked_solution": "Divide the left numerator and right denominator by 5: 15 ÷ 5 = 3; 25 ÷ 5 = 5. → Divide the right numerator and left denominator by 14: 14 ÷ 14 = 1; 28 ÷ 14 = 2. → The remaining multiplication is 3/2 × 1/5. → 3 × 1 = 3; 2 × 5 = 10. → Simplify if needed: 3/10. Each cancellation preserved the original product."
+      },
+      "working": [
+        "Divide the left numerator and right denominator by 5: 15 ÷ 5 = 3; 25 ÷ 5 = 5.",
+        "Divide the right numerator and left denominator by 14: 14 ÷ 14 = 1; 28 ÷ 14 = 2.",
+        "The remaining multiplication is 3/2 × 1/5.",
+        "3 × 1 = 3; 2 × 5 = 10.",
+        "Simplify if needed: 3/10. Each cancellation preserved the original product."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "cancel_product",
+          "object": "symbolic",
+          "a": 15,
+          "b": 28,
+          "c": 14,
+          "d": 25,
+          "cancel_steps": [
+            {
+              "first": "a",
+              "second": "d",
+              "divisor": "5",
+              "firstAfter": "3",
+              "secondAfter": "5"
+            },
+            {
+              "first": "c",
+              "second": "b",
+              "divisor": "14",
+              "firstAfter": "1",
+              "secondAfter": "2"
+            }
+          ],
+          "target": "Cancellation keeps the product unchanged",
+          "math_text": true,
+          "compact_captions": true,
+          "stage": "exit",
+          "prompt": "Work out 15/28 × 14/25 in simplest form. Record valid cancellation working or a multiply-then-simplify route.",
+          "reaction": "Both the independent method and simplest-form product are correct.",
+          "correction": "Check the mathematical validity of the working as well as the final fraction."
+        }
+      },
+      "response_feedback": {
+        "missing_working": "Record a complete calculation route so the working can be checked as well as the answer.",
+        "invalid_positions": "This step uses two positions on the same side of the fraction bars. A cancellation pair needs one numerator and one denominator.",
+        "wrong_pair": "For this guided step, use the two positions named in the question.",
+        "not_common_factor": "Check that your divisor is greater than one and divides both selected values exactly.",
+        "unequal_change": "Check both replacement values. Each selected value must be divided by the same factor.",
+        "unfinished_cancellation": "That is a valid first cancellation. The named pair still shares a factor; record another step.",
+        "incorrect_product": "Check the multiplication and the value of the final fraction against your working.",
+        "not_simplest": "Your final fraction has the correct value, but its two parts still share a factor. Finish simplifying."
+      }
+    },
+    {
+      "id": "MD-07-E03",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "exit",
+      "prompt": "Which statement describes valid cancellation in a fraction multiplication?",
+      "target": "Reason for valid cancellation",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Divide one numerator and one denominator by the same common factor, then write both replacement values.",
+          "Divide two numerators by the same factor.",
+          "Divide a numerator and denominator by different numbers.",
+          "Cross out any two numbers and leave blank spaces."
+        ]
+      },
+      "answer": {
+        "value": "Divide one numerator and one denominator by the same common factor, then write both replacement values."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That rule preserves the product and records the replacements explicitly.",
+        "correct_after_support": "That rule preserves the product and records the replacements explicitly.",
+        "on_correct_math": "Choose one numerator and one denominator sharing a common factor. → Divide both by the same factor and keep the replacement values. → The rewritten multiplication has the same product.",
+        "on_incorrect_attempt_1": "The product must keep its value.",
+        "on_incorrect_attempt_2": "Compare the positions, common factor and replacement values in a valid cancellation.",
+        "worked_explanation": "Choose one numerator and one denominator sharing a common factor. → Divide both by the same factor and keep the replacement values. → The rewritten multiplication has the same product.",
+        "on_locked_incorrect": "Compare the valid method with your recorded response. Both the working and final answer matter."
+      },
+      "mathematical_support": {
+        "hint_1": "The product must keep its value.",
+        "hint_2": "Both the positions and the matching divisions matter.",
+        "worked_solution": "Choose one numerator and one denominator sharing a common factor. → Divide both by the same factor and keep the replacement values. → The rewritten multiplication has the same product."
+      },
+      "working": [
+        "Choose one numerator and one denominator sharing a common factor.",
+        "Divide both by the same factor and keep the replacement values.",
+        "The rewritten multiplication has the same product."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "cancel_product_rule",
+          "object": "relationship",
+          "target": "Reason for valid cancellation",
+          "math_text": true,
+          "compact_captions": true
+        }
+      }
+    }
+  ],
+  "canonical_lesson": {
+    "version": "MD07-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

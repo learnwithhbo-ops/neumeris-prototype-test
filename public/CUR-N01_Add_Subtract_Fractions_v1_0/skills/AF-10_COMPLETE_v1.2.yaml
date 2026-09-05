@@ -1,0 +1,2019 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "AF-10 - Simplify after adding or subtracting fractions",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-16",
+      "sha256": "ad725dbc7484e0d39ac2e508f5cdc590b9a673fc5eb8c9be439a0c021488a4fa"
+    },
+    "authored_scope": "Add or subtract fractions and give every final answer in its simplest form.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "AF10-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "verified_desktop_secure_mobile_unsimplified_final_regrouping_simplest_results_fraction_resume_narration_and_320_390_layouts",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        3,
+        4,
+        5,
+        6,
+        12,
+        14
+      ],
+      "source_repairs_consulted": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        15,
+        16
+      ],
+      "note": "All 16 pages read and active pages visually checked. All six guided numeric blanks are preserved: the last numerator and denominator are entered together as one fraction. Six calculations, both recognition checks, four application items and all three mastery items follow the source. Operation-correct but unsimplified evidence never grants mastery. Entry, Diagnostic and delayed Retrieval remain excluded."
+    }
+  },
+  "identity": {
+    "id": "AF-10",
+    "slug": "simplify-after-adding-or-subtracting-fractions",
+    "title": "Simplify after adding or subtracting fractions",
+    "strand": "Number",
+    "cluster": "Adding and Subtracting Fractions",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Add or subtract positive proper fractions, then give the final result in its simplest form.",
+    "success_criteria": [
+      "Use matching denominators for the operation.",
+      "Complete addition or ordered subtraction before simplifying.",
+      "Divide both parts by the same common factor until fully simplified.",
+      "Leave already-simplest answers unchanged."
+    ],
+    "boundaries": {
+      "includes": [
+        "Positive proper results with equal or unequal denominators",
+        "Correct operation distinguished from incomplete simplification",
+        "Already-simplest results and approved flour, tank and walking contexts"
+      ],
+      "excludes": [
+        "Mixed or improper final answers",
+        "Negative expected results",
+        "Decimals and percentages",
+        "Cross-cancellation across addition or subtraction",
+        "Entry, Diagnostic and delayed Retrieval routes"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "AF-03",
+      "AF-08",
+      "AF-09"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for AF-03, AF-08, AF-09 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "integer",
+      "fraction",
+      "single_choice"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    }
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "Finish the operation, then rename the result in simplest form.",
+    "invariant": "Dividing both parts by the same common factor preserves the amount.",
+    "mathematical_rule": "Use equal-sized parts, complete the operation, then simplify both parts together.",
+    "must_notice": [
+      "A correct operation may still need simplification.",
+      "The same divisor is applied to both parts.",
+      "Already-simplest fractions need no change."
+    ],
+    "common_confusions": [
+      "Unsimplified equivalent result",
+      "Only one part divided",
+      "Different divisors",
+      "Original denominators combined",
+      "Incorrect conversion before simplifying",
+      "Cancelling across an addition or subtraction"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "First complete the operation",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "First complete the operation",
+          "initial_state": "First complete the operation",
+          "model": {
+            "kind": "simplify_after_operation",
+            "a": 1,
+            "b": 8,
+            "c": 5,
+            "d": 8,
+            "operation": "add",
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "These addends already count eighths. Combine their numerators without changing the size of the parts."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Same amount, larger parts",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Same amount, larger parts",
+          "initial_state": "Same amount, larger parts",
+          "model": {
+            "kind": "simplify_after_operation",
+            "a": 1,
+            "b": 8,
+            "c": 5,
+            "d": 8,
+            "operation": "add",
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true
+          }
+        },
+        "narration": {
+          "script": "After the addition, group every two eighths into a quarter. The shaded amount stays fixed. Dividing both counts by the same common factor gives the simplest name."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "What preserves the value?",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "What preserves the value?",
+          "initial_state": "What preserves the value?",
+          "model": {
+            "kind": "simplify_after_operation",
+            "a": 1,
+            "b": 8,
+            "c": 5,
+            "d": 8,
+            "operation": "add",
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Choose the statement that correctly describes simplification."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "AF-10-C01"
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Subtract, then simplify",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Subtract, then simplify",
+          "initial_state": "Subtract, then simplify",
+          "model": {
+            "kind": "simplify_after_operation",
+            "a": 5,
+            "b": 6,
+            "c": 1,
+            "d": 3,
+            "operation": "subtract",
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true
+          }
+        },
+        "narration": {
+          "script": "Rename the third in sixths, then take it away. The remainder is correct but not fully simplified. Group its sixths into halves, using the same divisor for both counts."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Check both jobs",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Check both jobs",
+          "initial_state": "Check both jobs",
+          "model": {
+            "kind": "simplify_after_operation",
+            "a": 1,
+            "b": 6,
+            "c": 1,
+            "d": 3,
+            "operation": "add",
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Select the method that completes the addition and also gives the simplest final fraction."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "AF-10-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "AF-10-G01",
+        "support_level": "high",
+        "pre_question_script": "Work through one sixth plus one third. Rename, add, then simplify.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "AF-10-G02",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "guided",
+        "question_ref": "AF-10-G03",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "faded",
+        "question_ref": "AF-10-G04",
+        "support_level": "reduced",
+        "pre_question_script": "",
+        "correct_next": "G05"
+      },
+      "G05": {
+        "stage": "faded",
+        "question_ref": "AF-10-G05",
+        "support_level": "reduced",
+        "pre_question_script": "",
+        "correct_next": "G06"
+      },
+      "G06": {
+        "stage": "independent_transfer",
+        "question_ref": "AF-10-G06",
+        "support_level": "none",
+        "pre_question_script": "",
+        "correct_next": "P01"
+      }
+    },
+    "practice": {
+      "intro_script": "Complete the six calculations and answer check, then apply the method to flour, tank water and Leila’s walk. Some results are already simplest.",
+      "question_order": [
+        "AF-10-P01",
+        "AF-10-P02",
+        "AF-10-P03",
+        "AF-10-P04",
+        "AF-10-P05",
+        "AF-10-P06",
+        "AF-10-P07",
+        "AF-10-X01",
+        "AF-10-X02",
+        "AF-10-X03",
+        "AF-10-X04"
+      ],
+      "question_count": 11
+    },
+    "exit": {
+      "intro_script": "Complete both calculations in simplest form, then choose the correct statement. No hints are available; each answer locks after submission.",
+      "primary_question_refs": [
+        "AF-10-E01",
+        "AF-10-E02",
+        "AF-10-E03"
+      ],
+      "confirmation_question_refs": [],
+      "mastery_policy": {
+        "profile": "all_primary_unsupported",
+        "require_all": true,
+        "source_page": 12,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "Both operations are correct and both answers are fully simplified. You kept the value unchanged while finding its simplest name.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Check the operation and the final form",
+      "ryan_script": "One or more final checks need another pass. Check the operation first, then whether the result still has a common factor.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "AF-10-C01",
+      "source_ref": {
+        "page": 3
+      },
+      "stage": "practice",
+      "prompt": "Which statement about simplifying a fraction is correct?",
+      "target": "Complete the operation and simplify its result fully",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Subtract the same number from both parts.",
+          "Divide the numerator and denominator by the same common factor.",
+          "Divide only the denominator.",
+          "Divide the numerator and denominator by different numbers."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "Divide the numerator and denominator by the same common factor."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Exactly. The same divisor changes the part size and count together, preserving the amount.",
+        "correct_after_support": "Exactly. The same divisor changes the part size and count together, preserving the amount.",
+        "on_correct_math": "Simplification must preserve the fraction’s value. → Use one common divisor for both numerator and denominator. → Continue until no common factor greater than 1 remains.",
+        "on_incorrect_attempt_1": "The fraction must still represent the same amount.",
+        "on_incorrect_attempt_2": "Dividing both parts by one common factor keeps the value fixed. Select that statement.",
+        "on_locked_incorrect": "Answer recorded. Check the operation and the final fraction after the final set.",
+        "worked_explanation": "Simplification must preserve the fraction’s value. → Use one common divisor for both numerator and denominator. → Continue until no common factor greater than 1 remains."
+      },
+      "mathematical_support": {
+        "hint_1": "The fraction must still represent the same amount.",
+        "hint_2": "Complete the operation with matching denominators. Then divide the result’s numerator and denominator by the same common factor, until only one is shared.",
+        "worked_solution": "Simplification must preserve the fraction’s value. → Use one common divisor for both numerator and denominator. → Continue until no common factor greater than 1 remains."
+      },
+      "working": [
+        "Simplification must preserve the fraction’s value.",
+        "Use one common divisor for both numerator and denominator.",
+        "Continue until no common factor greater than 1 remains."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "simplify_after_operation",
+          "a": 1,
+          "b": 8,
+          "c": 5,
+          "d": 8,
+          "operation": "add",
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "Subtract the same number from both parts.": "Subtracting equal numbers from the two parts usually changes the fraction’s value.",
+        "Divide only the denominator.": "Changing only the denominator changes the size of the fraction.",
+        "Divide the numerator and denominator by different numbers.": "Different divisors do not preserve the ratio between the two parts."
+      }
+    },
+    {
+      "id": "AF-10-C02",
+      "source_ref": {
+        "page": 4
+      },
+      "stage": "practice",
+      "prompt": "For 1/6 + 1/3, which method gives a correct answer in simplest form?",
+      "target": "Complete the operation and simplify its result fully",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "1/6 + 1/3 = 1/6 + 2/6 = 3/6 = 1/2",
+          "1/6 + 1/3 = 2/9",
+          "1/6 + 1/3 = 1/6 + 2/6 = 3/12",
+          "1/6 + 1/3 = 1/6 + 2/6 = 3/6"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "1/6 + 1/3 = 1/6 + 2/6 = 3/6 = 1/2"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. That line both adds the matching parts and fully simplifies the result.",
+        "correct_after_support": "Correct. That line both adds the matching parts and fully simplifies the result.",
+        "on_correct_math": "1/3 = 2/6. → 1/6 + 2/6 = 3/6. → 3 is a common factor of 3 and 6. → 3/6 = 1/2.",
+        "on_incorrect_attempt_1": "Check the addition and whether the final numerator and denominator still share a factor.",
+        "on_incorrect_attempt_2": "The complete method preserves the denominator during addition, then simplifies the result. Choose the line that finishes both jobs.",
+        "on_locked_incorrect": "Answer recorded. Check the operation and the final fraction after the final set.",
+        "worked_explanation": "1/3 = 2/6. → 1/6 + 2/6 = 3/6. → 3 is a common factor of 3 and 6. → 3/6 = 1/2."
+      },
+      "mathematical_support": {
+        "hint_1": "Check the addition and whether the final numerator and denominator still share a factor.",
+        "hint_2": "Complete the operation with matching denominators. Then divide the result’s numerator and denominator by the same common factor, until only one is shared.",
+        "worked_solution": "1/3 = 2/6. → 1/6 + 2/6 = 3/6. → 3 is a common factor of 3 and 6. → 3/6 = 1/2."
+      },
+      "working": [
+        "1/3 = 2/6.",
+        "1/6 + 2/6 = 3/6.",
+        "3 is a common factor of 3 and 6.",
+        "3/6 = 1/2."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "simplify_after_operation",
+          "a": 1,
+          "b": 6,
+          "c": 1,
+          "d": 3,
+          "operation": "add",
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "1/6 + 1/3 = 2/9": "Adding original denominators does not create matching parts. Rename one third first.",
+        "1/6 + 1/3 = 1/6 + 2/6 = 3/12": "The parts are sixths. Adding the denominators changes their size.",
+        "1/6 + 1/3 = 1/6 + 2/6 = 3/6": "The addition is correct, but three sixths is not fully simplified. The method needs a final common-factor step."
+      },
+      "evidence_profile": "operation_then_simplify",
+      "operation_correct_options": [
+        "1/6 + 1/3 = 1/6 + 2/6 = 3/6 = 1/2",
+        "1/6 + 1/3 = 1/6 + 2/6 = 3/6"
+      ]
+    },
+    {
+      "id": "AF-10-G01",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "For 1/6 + 1/3, complete the conversion: 1/3 = ?/6.",
+      "target": "Complete the operation and simplify its result fully",
+      "response": {
+        "type": "integer",
+        "input_label": "Equivalent numerator"
+      },
+      "answer": {
+        "value": 2
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. One third is two sixths.",
+        "correct_after_support": "Correct. One third is two sixths.",
+        "on_correct_math": "3 × 2 = 6. → 1 × 2 = 2. → 1/3 = 2/6.",
+        "on_incorrect_attempt_1": "Three uses a factor of two; apply it to the numerator too.",
+        "on_incorrect_attempt_2": "One multiplied by two is two. Enter two.",
+        "on_locked_incorrect": "Answer recorded. Check the operation and the final fraction after the final set.",
+        "worked_explanation": "3 × 2 = 6. → 1 × 2 = 2. → 1/3 = 2/6."
+      },
+      "mathematical_support": {
+        "hint_1": "Three uses a factor of two; apply it to the numerator too.",
+        "hint_2": "Complete the operation with matching denominators. Then divide the result’s numerator and denominator by the same common factor, until only one is shared.",
+        "worked_solution": "3 × 2 = 6. → 1 × 2 = 2. → 1/3 = 2/6."
+      },
+      "working": [
+        "3 × 2 = 6.",
+        "1 × 2 = 2.",
+        "1/3 = 2/6."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "operation_then_simplify_steps",
+          "label": "Rename one third",
+          "expression": "1/3 = ?/6",
+          "completed": "1/3 = 2/6",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-10-G02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "Carry the renamed numerator into 1/6 + ?/6.",
+      "target": "Complete the operation and simplify its result fully",
+      "response": {
+        "type": "integer",
+        "input_label": "Renamed addend numerator"
+      },
+      "answer": {
+        "value": 2
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both addends now count sixths.",
+        "correct_after_support": "Correct. Both addends now count sixths.",
+        "on_correct_math": "1/3 = 2/6. → Use two sixths as the second addend.",
+        "on_incorrect_attempt_1": "Use the equivalent fraction from the previous step.",
+        "on_incorrect_attempt_2": "The second addend is two sixths. Enter two.",
+        "on_locked_incorrect": "Answer recorded. Check the operation and the final fraction after the final set.",
+        "worked_explanation": "1/3 = 2/6. → Use two sixths as the second addend."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the equivalent fraction from the previous step.",
+        "hint_2": "Complete the operation with matching denominators. Then divide the result’s numerator and denominator by the same common factor, until only one is shared.",
+        "worked_solution": "1/3 = 2/6. → Use two sixths as the second addend."
+      },
+      "working": [
+        "1/3 = 2/6.",
+        "Use two sixths as the second addend."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "operation_then_simplify_steps",
+          "label": "Use matching parts",
+          "expression": "1/6 + ?/6",
+          "completed": "1/6 + 2/6",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-10-G03",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "Complete the sum numerator: 1/6 + 2/6 = ?/6.",
+      "target": "Complete the operation and simplify its result fully",
+      "response": {
+        "type": "integer",
+        "input_label": "Sum numerator"
+      },
+      "answer": {
+        "value": 3
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The sum is three sixths; simplification comes next.",
+        "correct_after_support": "Correct. The sum is three sixths; simplification comes next.",
+        "on_correct_math": "1 + 2 = 3. → Keep denominator 6. → The sum is 3/6.",
+        "on_incorrect_attempt_1": "Add the counts of sixths; leave their part size unchanged.",
+        "on_incorrect_attempt_2": "One and two make three. Enter three.",
+        "on_locked_incorrect": "Answer recorded. Check the operation and the final fraction after the final set.",
+        "worked_explanation": "1 + 2 = 3. → Keep denominator 6. → The sum is 3/6."
+      },
+      "mathematical_support": {
+        "hint_1": "Add the counts of sixths; leave their part size unchanged.",
+        "hint_2": "Complete the operation with matching denominators. Then divide the result’s numerator and denominator by the same common factor, until only one is shared.",
+        "worked_solution": "1 + 2 = 3. → Keep denominator 6. → The sum is 3/6."
+      },
+      "working": [
+        "1 + 2 = 3.",
+        "Keep denominator 6.",
+        "The sum is 3/6."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "operation_then_simplify_steps",
+          "label": "Complete the addition",
+          "expression": "1/6 + 2/6 = ?/6",
+          "completed": "1/6 + 2/6 = 3/6",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-10-G04",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "faded",
+      "prompt": "What is the highest common factor of 3 and 6?",
+      "target": "Complete the operation and simplify its result fully",
+      "response": {
+        "type": "integer",
+        "input_label": "Highest common factor"
+      },
+      "answer": {
+        "value": 3
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both parts can be divided by three.",
+        "correct_after_support": "Correct. Both parts can be divided by three.",
+        "on_correct_math": "Factors of 3: 1, 3. → Factors of 6: 1, 2, 3, 6. → The highest shared factor is 3.",
+        "on_incorrect_attempt_1": "Find the largest whole number that divides both parts exactly.",
+        "on_incorrect_attempt_2": "Three is the largest shared divisor. Enter three.",
+        "on_locked_incorrect": "Answer recorded. Check the operation and the final fraction after the final set.",
+        "worked_explanation": "Factors of 3: 1, 3. → Factors of 6: 1, 2, 3, 6. → The highest shared factor is 3."
+      },
+      "mathematical_support": {
+        "hint_1": "Find the largest whole number that divides both parts exactly.",
+        "hint_2": "Complete the operation with matching denominators. Then divide the result’s numerator and denominator by the same common factor, until only one is shared.",
+        "worked_solution": "Factors of 3: 1, 3. → Factors of 6: 1, 2, 3, 6. → The highest shared factor is 3."
+      },
+      "working": [
+        "Factors of 3: 1, 3.",
+        "Factors of 6: 1, 2, 3, 6.",
+        "The highest shared factor is 3."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "operation_then_simplify_steps",
+          "label": "Find the common divisor",
+          "expression": "Highest common factor of 3 and 6: ?",
+          "completed": "Highest common factor of 3 and 6: 3",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-10-G05",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "faded",
+      "prompt": "Simplify 3/6. Enter both parts of the final fraction.",
+      "target": "Complete the operation and simplify its result fully",
+      "response": {
+        "type": "fraction",
+        "require_simplest_form": true,
+        "accept_equivalent_notation": false,
+        "show_authored_label": true,
+        "input_label": "Simplest fraction"
+      },
+      "answer": {
+        "value": "1/2"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. One half is the same amount as three sixths, in simplest form.",
+        "correct_after_support": "Correct. One half is the same amount as three sixths, in simplest form.",
+        "on_correct_math": "Divide numerator and denominator by 3. → 3 ÷ 3 = 1. → 6 ÷ 3 = 2. → 3/6 = 1/2.",
+        "on_incorrect_attempt_1": "Use the same divisor for both parts of three sixths.",
+        "on_incorrect_attempt_2": "Follow both division lines and enter the numerator and denominator of the simplified fraction.",
+        "on_locked_incorrect": "Answer recorded. Check the operation and the final fraction after the final set.",
+        "worked_explanation": "Divide numerator and denominator by 3. → 3 ÷ 3 = 1. → 6 ÷ 3 = 2. → 3/6 = 1/2.",
+        "on_equivalent_unfinished": "That fraction is equivalent to the sum, but its numerator and denominator still have a common factor. Simplify both parts."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the same divisor for both parts of three sixths.",
+        "hint_2": "Complete the operation with matching denominators. Then divide the result’s numerator and denominator by the same common factor, until only one is shared.",
+        "worked_solution": "Divide numerator and denominator by 3. → 3 ÷ 3 = 1. → 6 ÷ 3 = 2. → 3/6 = 1/2."
+      },
+      "working": [
+        "Divide numerator and denominator by 3.",
+        "3 ÷ 3 = 1.",
+        "6 ÷ 3 = 2.",
+        "3/6 = 1/2."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "operation_then_simplify_steps",
+          "label": "Simplify the sum",
+          "expression": "3/6 = ?/?",
+          "completed": "3/6 = 1/2",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "1/6": "The numerator changed, but the denominator also needs dividing by three.",
+        "3/2": "The denominator changed, but the numerator also needs dividing by three."
+      }
+    },
+    {
+      "id": "AF-10-G06",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "independent_transfer",
+      "prompt": "Which fraction is in its simplest form?",
+      "target": "Complete the operation and simplify its result fully",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "3/6",
+          "2/4",
+          "1/2",
+          "4/8"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "1/2"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. All four have equal value, but only one half is fully simplified.",
+        "correct_after_support": "Correct. All four have equal value, but only one half is fully simplified.",
+        "on_correct_math": "3/6, 2/4 and 4/8 each share a factor greater than 1. → 1 and 2 have no common factor greater than 1. → Only 1/2 is in simplest form.",
+        "on_incorrect_attempt_1": "Each option has the same value. Compare their common factors.",
+        "on_incorrect_attempt_2": "Only one half has no common factor greater than one. Select it.",
+        "on_locked_incorrect": "Answer recorded. Check the operation and the final fraction after the final set.",
+        "worked_explanation": "3/6, 2/4 and 4/8 each share a factor greater than 1. → 1 and 2 have no common factor greater than 1. → Only 1/2 is in simplest form."
+      },
+      "mathematical_support": {
+        "hint_1": "Each option has the same value. Compare their common factors.",
+        "hint_2": "Complete the operation with matching denominators. Then divide the result’s numerator and denominator by the same common factor, until only one is shared.",
+        "worked_solution": "3/6, 2/4 and 4/8 each share a factor greater than 1. → 1 and 2 have no common factor greater than 1. → Only 1/2 is in simplest form."
+      },
+      "working": [
+        "3/6, 2/4 and 4/8 each share a factor greater than 1.",
+        "1 and 2 have no common factor greater than 1.",
+        "Only 1/2 is in simplest form."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "operation_then_simplify_steps",
+          "label": "Check the finishing condition",
+          "expression": "Simplest form: choose below",
+          "completed": "1 and 2 share only the factor 1.",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "3/6": "Three divides both parts, so this fraction can still be simplified.",
+        "2/4": "Two divides both parts, so this fraction is not finished.",
+        "4/8": "Four divides both parts, so this fraction can still be simplified."
+      }
+    },
+    {
+      "id": "AF-10-P01",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "Work out 1/8 + 3/8. Write your answer in its simplest form.",
+      "target": "Complete the operation and simplify its result fully",
+      "response": {
+        "type": "fraction",
+        "require_simplest_form": true,
+        "accept_equivalent_notation": false,
+        "show_authored_label": true,
+        "input_label": "Simplest fraction"
+      },
+      "answer": {
+        "value": "1/2"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The operation is complete, and both parts of the result were divided by the same factor.",
+        "correct_after_support": "Correct. The operation is complete, and both parts of the result were divided by the same factor.",
+        "on_correct_math": "1/8 = 1/8 and 3/8 = 3/8. → 1/8 + 3/8 = 4/8. → The highest common factor of 4 and 8 is 4. → 4/8 = (4 ÷ 4)/(8 ÷ 4) = 1/2.",
+        "on_incorrect_attempt_1": "The parts already match. Complete the numerator operation, keep the denominator, then check for common factors.",
+        "on_incorrect_attempt_2": "Follow the operation line first, then the common-factor check. Use the final line to correct your fraction.",
+        "on_locked_incorrect": "Answer recorded. Check the operation and the final fraction after the final set.",
+        "worked_explanation": "1/8 = 1/8 and 3/8 = 3/8. → 1/8 + 3/8 = 4/8. → The highest common factor of 4 and 8 is 4. → 4/8 = (4 ÷ 4)/(8 ÷ 4) = 1/2.",
+        "on_equivalent_unfinished": "Your fraction has the correct value, so the operation is correct. Simplification is not finished: divide both parts by a common factor and check again."
+      },
+      "mathematical_support": {
+        "hint_1": "The parts already match. Complete the numerator operation, keep the denominator, then check for common factors.",
+        "hint_2": "Complete the operation with matching denominators. Then divide the result’s numerator and denominator by the same common factor, until only one is shared.",
+        "worked_solution": "1/8 = 1/8 and 3/8 = 3/8. → 1/8 + 3/8 = 4/8. → The highest common factor of 4 and 8 is 4. → 4/8 = (4 ÷ 4)/(8 ÷ 4) = 1/2."
+      },
+      "working": [
+        "1/8 = 1/8 and 3/8 = 3/8.",
+        "1/8 + 3/8 = 4/8.",
+        "The highest common factor of 4 and 8 is 4.",
+        "4/8 = (4 ÷ 4)/(8 ÷ 4) = 1/2."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "simplify_after_operation",
+          "a": 1,
+          "b": 8,
+          "c": 3,
+          "d": 8,
+          "operation": "add",
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "4/16": "The original numerator and denominator pairs were combined directly. Use matching part sizes before the operation.",
+        "4/8": "Check for a common factor in the result before finishing.",
+        "1/8": "Only the numerator was divided. The denominator must use the same divisor to preserve the value.",
+        "4/2": "Only the denominator was divided. Apply the same divisor to the numerator."
+      },
+      "evidence_profile": "operation_then_simplify",
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-10-P02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "Work out 7/10 − 2/10. Write your answer in its simplest form.",
+      "target": "Complete the operation and simplify its result fully",
+      "response": {
+        "type": "fraction",
+        "require_simplest_form": true,
+        "accept_equivalent_notation": false,
+        "show_authored_label": true,
+        "input_label": "Simplest fraction"
+      },
+      "answer": {
+        "value": "1/2"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The operation is complete, and both parts of the result were divided by the same factor.",
+        "correct_after_support": "Correct. The operation is complete, and both parts of the result were divided by the same factor.",
+        "on_correct_math": "7/10 = 7/10 and 2/10 = 2/10. → 7/10 − 2/10 = 5/10. → The highest common factor of 5 and 10 is 5. → 5/10 = (5 ÷ 5)/(10 ÷ 5) = 1/2.",
+        "on_incorrect_attempt_1": "The parts already match. Complete the numerator operation, keep the denominator, then check for common factors.",
+        "on_incorrect_attempt_2": "Follow the operation line first, then the common-factor check. Use the final line to correct your fraction.",
+        "on_locked_incorrect": "Answer recorded. Check the operation and the final fraction after the final set.",
+        "worked_explanation": "7/10 = 7/10 and 2/10 = 2/10. → 7/10 − 2/10 = 5/10. → The highest common factor of 5 and 10 is 5. → 5/10 = (5 ÷ 5)/(10 ÷ 5) = 1/2.",
+        "on_equivalent_unfinished": "Your fraction has the correct value, so the operation is correct. Simplification is not finished: divide both parts by a common factor and check again."
+      },
+      "mathematical_support": {
+        "hint_1": "The parts already match. Complete the numerator operation, keep the denominator, then check for common factors.",
+        "hint_2": "Complete the operation with matching denominators. Then divide the result’s numerator and denominator by the same common factor, until only one is shared.",
+        "worked_solution": "7/10 = 7/10 and 2/10 = 2/10. → 7/10 − 2/10 = 5/10. → The highest common factor of 5 and 10 is 5. → 5/10 = (5 ÷ 5)/(10 ÷ 5) = 1/2."
+      },
+      "working": [
+        "7/10 = 7/10 and 2/10 = 2/10.",
+        "7/10 − 2/10 = 5/10.",
+        "The highest common factor of 5 and 10 is 5.",
+        "5/10 = (5 ÷ 5)/(10 ÷ 5) = 1/2."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "simplify_after_operation",
+          "a": 7,
+          "b": 10,
+          "c": 2,
+          "d": 10,
+          "operation": "subtract",
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "5/0": "The original numerator and denominator pairs were combined directly. Use matching part sizes before the operation.",
+        "-5/10": "The subtraction is reversed. Take the second fraction from the first before simplifying.",
+        "1/10": "Only the numerator was divided. The denominator must use the same divisor to preserve the value.",
+        "5/2": "Only the denominator was divided. Apply the same divisor to the numerator."
+      },
+      "evidence_profile": "operation_then_simplify",
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-10-P03",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "Work out 1/4 + 3/8. Write your answer in its simplest form.",
+      "target": "Complete the operation and simplify its result fully",
+      "response": {
+        "type": "fraction",
+        "require_simplest_form": true,
+        "accept_equivalent_notation": false,
+        "show_authored_label": true,
+        "input_label": "Simplest fraction"
+      },
+      "answer": {
+        "value": "5/8"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The result is already in simplest form, so it stays unchanged.",
+        "correct_after_support": "Correct. The result is already in simplest form, so it stays unchanged.",
+        "on_correct_math": "1/4 = 2/8 and 3/8 = 3/8. → 2/8 + 3/8 = 5/8. → 5 and 8 have no common factor greater than 1. → 5/8 is already in simplest form; no change is needed.",
+        "on_incorrect_attempt_1": "Use denominator 8 for both fractions without changing their values. Complete the operation before simplifying.",
+        "on_incorrect_attempt_2": "Follow the operation line first, then the common-factor check. Use the final line to correct your fraction.",
+        "on_locked_incorrect": "Answer recorded. Check the operation and the final fraction after the final set.",
+        "worked_explanation": "1/4 = 2/8 and 3/8 = 3/8. → 2/8 + 3/8 = 5/8. → 5 and 8 have no common factor greater than 1. → 5/8 is already in simplest form; no change is needed.",
+        "on_equivalent_unfinished": "Your fraction has the correct value, so the operation is correct. Simplification is not finished: divide both parts by a common factor and check again."
+      },
+      "mathematical_support": {
+        "hint_1": "Use denominator 8 for both fractions without changing their values. Complete the operation before simplifying.",
+        "hint_2": "Complete the operation with matching denominators. Then divide the result’s numerator and denominator by the same common factor, until only one is shared.",
+        "worked_solution": "1/4 = 2/8 and 3/8 = 3/8. → 2/8 + 3/8 = 5/8. → 5 and 8 have no common factor greater than 1. → 5/8 is already in simplest form; no change is needed."
+      },
+      "working": [
+        "1/4 = 2/8 and 3/8 = 3/8.",
+        "2/8 + 3/8 = 5/8.",
+        "5 and 8 have no common factor greater than 1.",
+        "5/8 is already in simplest form; no change is needed."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "simplify_after_operation",
+          "a": 1,
+          "b": 4,
+          "c": 3,
+          "d": 8,
+          "operation": "add",
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "4/12": "The original numerator and denominator pairs were combined directly. Use matching part sizes before the operation.",
+        "5/8": "Check for a common factor in the result before finishing."
+      },
+      "evidence_profile": "operation_then_simplify",
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-10-P04",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "Work out 5/6 − 1/2. Write your answer in its simplest form.",
+      "target": "Complete the operation and simplify its result fully",
+      "response": {
+        "type": "fraction",
+        "require_simplest_form": true,
+        "accept_equivalent_notation": false,
+        "show_authored_label": true,
+        "input_label": "Simplest fraction"
+      },
+      "answer": {
+        "value": "1/3"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The operation is complete, and both parts of the result were divided by the same factor.",
+        "correct_after_support": "Correct. The operation is complete, and both parts of the result were divided by the same factor.",
+        "on_correct_math": "5/6 = 5/6 and 1/2 = 3/6. → 5/6 − 3/6 = 2/6. → The highest common factor of 2 and 6 is 2. → 2/6 = (2 ÷ 2)/(6 ÷ 2) = 1/3.",
+        "on_incorrect_attempt_1": "Use denominator 6 for both fractions without changing their values. Complete the operation before simplifying.",
+        "on_incorrect_attempt_2": "Follow the operation line first, then the common-factor check. Use the final line to correct your fraction.",
+        "on_locked_incorrect": "Answer recorded. Check the operation and the final fraction after the final set.",
+        "worked_explanation": "5/6 = 5/6 and 1/2 = 3/6. → 5/6 − 3/6 = 2/6. → The highest common factor of 2 and 6 is 2. → 2/6 = (2 ÷ 2)/(6 ÷ 2) = 1/3.",
+        "on_equivalent_unfinished": "Your fraction has the correct value, so the operation is correct. Simplification is not finished: divide both parts by a common factor and check again."
+      },
+      "mathematical_support": {
+        "hint_1": "Use denominator 6 for both fractions without changing their values. Complete the operation before simplifying.",
+        "hint_2": "Complete the operation with matching denominators. Then divide the result’s numerator and denominator by the same common factor, until only one is shared.",
+        "worked_solution": "5/6 = 5/6 and 1/2 = 3/6. → 5/6 − 3/6 = 2/6. → The highest common factor of 2 and 6 is 2. → 2/6 = (2 ÷ 2)/(6 ÷ 2) = 1/3."
+      },
+      "working": [
+        "5/6 = 5/6 and 1/2 = 3/6.",
+        "5/6 − 3/6 = 2/6.",
+        "The highest common factor of 2 and 6 is 2.",
+        "2/6 = (2 ÷ 2)/(6 ÷ 2) = 1/3."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "simplify_after_operation",
+          "a": 5,
+          "b": 6,
+          "c": 1,
+          "d": 2,
+          "operation": "subtract",
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "4/4": "The original numerator and denominator pairs were combined directly. Use matching part sizes before the operation.",
+        "-2/6": "The subtraction is reversed. Take the second fraction from the first before simplifying.",
+        "1/6": "Only the numerator was divided. The denominator must use the same divisor to preserve the value.",
+        "2/3": "Only the denominator was divided. Apply the same divisor to the numerator."
+      },
+      "evidence_profile": "operation_then_simplify",
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-10-P05",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Work out 2/3 + 1/6. Write your answer in its simplest form.",
+      "target": "Complete the operation and simplify its result fully",
+      "response": {
+        "type": "fraction",
+        "require_simplest_form": true,
+        "accept_equivalent_notation": false,
+        "show_authored_label": true,
+        "input_label": "Simplest fraction"
+      },
+      "answer": {
+        "value": "5/6"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The result is already in simplest form, so it stays unchanged.",
+        "correct_after_support": "Correct. The result is already in simplest form, so it stays unchanged.",
+        "on_correct_math": "2/3 = 4/6 and 1/6 = 1/6. → 4/6 + 1/6 = 5/6. → 5 and 6 have no common factor greater than 1. → 5/6 is already in simplest form; no change is needed.",
+        "on_incorrect_attempt_1": "Use denominator 6 for both fractions without changing their values. Complete the operation before simplifying.",
+        "on_incorrect_attempt_2": "Follow the operation line first, then the common-factor check. Use the final line to correct your fraction.",
+        "on_locked_incorrect": "Answer recorded. Check the operation and the final fraction after the final set.",
+        "worked_explanation": "2/3 = 4/6 and 1/6 = 1/6. → 4/6 + 1/6 = 5/6. → 5 and 6 have no common factor greater than 1. → 5/6 is already in simplest form; no change is needed.",
+        "on_equivalent_unfinished": "Your fraction has the correct value, so the operation is correct. Simplification is not finished: divide both parts by a common factor and check again."
+      },
+      "mathematical_support": {
+        "hint_1": "Use denominator 6 for both fractions without changing their values. Complete the operation before simplifying.",
+        "hint_2": "Complete the operation with matching denominators. Then divide the result’s numerator and denominator by the same common factor, until only one is shared.",
+        "worked_solution": "2/3 = 4/6 and 1/6 = 1/6. → 4/6 + 1/6 = 5/6. → 5 and 6 have no common factor greater than 1. → 5/6 is already in simplest form; no change is needed."
+      },
+      "working": [
+        "2/3 = 4/6 and 1/6 = 1/6.",
+        "4/6 + 1/6 = 5/6.",
+        "5 and 6 have no common factor greater than 1.",
+        "5/6 is already in simplest form; no change is needed."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "simplify_after_operation",
+          "a": 2,
+          "b": 3,
+          "c": 1,
+          "d": 6,
+          "operation": "add",
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "3/9": "The original numerator and denominator pairs were combined directly. Use matching part sizes before the operation.",
+        "5/6": "Check for a common factor in the result before finishing."
+      },
+      "evidence_profile": "operation_then_simplify",
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-10-P06",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Work out 7/8 − 1/4. Write your answer in its simplest form.",
+      "target": "Complete the operation and simplify its result fully",
+      "response": {
+        "type": "fraction",
+        "require_simplest_form": true,
+        "accept_equivalent_notation": false,
+        "show_authored_label": true,
+        "input_label": "Simplest fraction"
+      },
+      "answer": {
+        "value": "5/8"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The result is already in simplest form, so it stays unchanged.",
+        "correct_after_support": "Correct. The result is already in simplest form, so it stays unchanged.",
+        "on_correct_math": "7/8 = 7/8 and 1/4 = 2/8. → 7/8 − 2/8 = 5/8. → 5 and 8 have no common factor greater than 1. → 5/8 is already in simplest form; no change is needed.",
+        "on_incorrect_attempt_1": "Use denominator 8 for both fractions without changing their values. Complete the operation before simplifying.",
+        "on_incorrect_attempt_2": "Follow the operation line first, then the common-factor check. Use the final line to correct your fraction.",
+        "on_locked_incorrect": "Answer recorded. Check the operation and the final fraction after the final set.",
+        "worked_explanation": "7/8 = 7/8 and 1/4 = 2/8. → 7/8 − 2/8 = 5/8. → 5 and 8 have no common factor greater than 1. → 5/8 is already in simplest form; no change is needed.",
+        "on_equivalent_unfinished": "Your fraction has the correct value, so the operation is correct. Simplification is not finished: divide both parts by a common factor and check again."
+      },
+      "mathematical_support": {
+        "hint_1": "Use denominator 8 for both fractions without changing their values. Complete the operation before simplifying.",
+        "hint_2": "Complete the operation with matching denominators. Then divide the result’s numerator and denominator by the same common factor, until only one is shared.",
+        "worked_solution": "7/8 = 7/8 and 1/4 = 2/8. → 7/8 − 2/8 = 5/8. → 5 and 8 have no common factor greater than 1. → 5/8 is already in simplest form; no change is needed."
+      },
+      "working": [
+        "7/8 = 7/8 and 1/4 = 2/8.",
+        "7/8 − 2/8 = 5/8.",
+        "5 and 8 have no common factor greater than 1.",
+        "5/8 is already in simplest form; no change is needed."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "simplify_after_operation",
+          "a": 7,
+          "b": 8,
+          "c": 1,
+          "d": 4,
+          "operation": "subtract",
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "6/4": "The original numerator and denominator pairs were combined directly. Use matching part sizes before the operation.",
+        "-5/8": "The subtraction is reversed. Take the second fraction from the first before simplifying."
+      },
+      "evidence_profile": "operation_then_simplify",
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-10-P07",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "For 3/10 + 1/5, which answer is correct and fully simplified?",
+      "target": "Complete the operation and simplify its result fully",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "4/15",
+          "5/10",
+          "1/2",
+          "5/20"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "1/2"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. One half is the correct sum in simplest form.",
+        "correct_after_support": "Correct. One half is the correct sum in simplest form.",
+        "on_correct_math": "1/5 = 2/10. → 3/10 + 2/10 = 5/10. → The highest common factor of 5 and 10 is 5. → 5/10 = 1/2.",
+        "on_incorrect_attempt_1": "Check the fraction addition first, then whether the result still has a common factor.",
+        "on_incorrect_attempt_2": "The matching parts give five tenths. Divide both parts by five and select one half.",
+        "on_locked_incorrect": "Answer recorded. Check the operation and the final fraction after the final set.",
+        "worked_explanation": "1/5 = 2/10. → 3/10 + 2/10 = 5/10. → The highest common factor of 5 and 10 is 5. → 5/10 = 1/2."
+      },
+      "mathematical_support": {
+        "hint_1": "Check the fraction addition first, then whether the result still has a common factor.",
+        "hint_2": "Complete the operation with matching denominators. Then divide the result’s numerator and denominator by the same common factor, until only one is shared.",
+        "worked_solution": "1/5 = 2/10. → 3/10 + 2/10 = 5/10. → The highest common factor of 5 and 10 is 5. → 5/10 = 1/2."
+      },
+      "working": [
+        "1/5 = 2/10.",
+        "3/10 + 2/10 = 5/10.",
+        "The highest common factor of 5 and 10 is 5.",
+        "5/10 = 1/2."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "simplify_after_operation",
+          "a": 3,
+          "b": 10,
+          "c": 1,
+          "d": 5,
+          "operation": "add",
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "4/15": "The original numerators and denominators were added directly. Use equal-sized parts first.",
+        "5/10": "The addition is correct, but five tenths still needs simplifying.",
+        "5/20": "The converted numerators were added, but their denominator should stay ten."
+      },
+      "evidence_profile": "operation_then_simplify",
+      "operation_correct_options": [
+        "5/10",
+        "1/2"
+      ]
+    },
+    {
+      "id": "AF-10-X01",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "practice",
+      "prompt": "A recipe uses 3/10 kg of flour for a cake and 1/5 kg for bread. What total mass of flour is used? Write your answer in its simplest form.",
+      "target": "Complete the operation and simplify its result fully",
+      "response": {
+        "type": "fraction",
+        "require_simplest_form": true,
+        "accept_equivalent_notation": false,
+        "show_authored_label": true,
+        "input_label": "Simplest fraction",
+        "suffix": "kg"
+      },
+      "answer": {
+        "value": "1/2"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The cake and bread use one half kilogram of flour in total.",
+        "correct_after_support": "Correct. The cake and bread use one half kilogram of flour in total.",
+        "on_correct_math": "3/10 = 3/10 and 1/5 = 2/10. → 3/10 + 2/10 = 5/10. → The highest common factor of 5 and 10 is 5. → 5/10 = (5 ÷ 5)/(10 ÷ 5) = 1/2.",
+        "on_incorrect_attempt_1": "Use denominator 10 for both fractions without changing their values. Complete the operation before simplifying.",
+        "on_incorrect_attempt_2": "Follow the operation line first, then the common-factor check. Use the final line to correct your fraction.",
+        "on_locked_incorrect": "Answer recorded. Check the operation and the final fraction after the final set.",
+        "worked_explanation": "3/10 = 3/10 and 1/5 = 2/10. → 3/10 + 2/10 = 5/10. → The highest common factor of 5 and 10 is 5. → 5/10 = (5 ÷ 5)/(10 ÷ 5) = 1/2.",
+        "on_equivalent_unfinished": "Your fraction has the correct value, so the operation is correct. Simplification is not finished: divide both parts by a common factor and check again."
+      },
+      "mathematical_support": {
+        "hint_1": "Use denominator 10 for both fractions without changing their values. Complete the operation before simplifying.",
+        "hint_2": "Complete the operation with matching denominators. Then divide the result’s numerator and denominator by the same common factor, until only one is shared.",
+        "worked_solution": "3/10 = 3/10 and 1/5 = 2/10. → 3/10 + 2/10 = 5/10. → The highest common factor of 5 and 10 is 5. → 5/10 = (5 ÷ 5)/(10 ÷ 5) = 1/2."
+      },
+      "working": [
+        "3/10 = 3/10 and 1/5 = 2/10.",
+        "3/10 + 2/10 = 5/10.",
+        "The highest common factor of 5 and 10 is 5.",
+        "5/10 = (5 ÷ 5)/(10 ÷ 5) = 1/2."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "simplify_after_operation",
+          "a": 3,
+          "b": 10,
+          "c": 1,
+          "d": 5,
+          "operation": "add",
+          "object": "flour",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "4/15": "The original numerator and denominator pairs were combined directly. Use matching part sizes before the operation.",
+        "5/10": "Check for a common factor in the result before finishing.",
+        "1/10": "Only the numerator was divided. The denominator must use the same divisor to preserve the value.",
+        "5/2": "Only the denominator was divided. Apply the same divisor to the numerator."
+      },
+      "evidence_profile": "operation_then_simplify",
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-10-X02",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "practice",
+      "prompt": "A water tank is 5/6 full. Water equal to 1/3 of its capacity is removed. What fraction of the tank remains full? Write your answer in its simplest form.",
+      "target": "Complete the operation and simplify its result fully",
+      "response": {
+        "type": "fraction",
+        "require_simplest_form": true,
+        "accept_equivalent_notation": false,
+        "show_authored_label": true,
+        "input_label": "Simplest fraction"
+      },
+      "answer": {
+        "value": "1/2"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The remaining water fills one half of the tank’s capacity.",
+        "correct_after_support": "Correct. The remaining water fills one half of the tank’s capacity.",
+        "on_correct_math": "5/6 = 5/6 and 1/3 = 2/6. → 5/6 − 2/6 = 3/6. → The highest common factor of 3 and 6 is 3. → 3/6 = (3 ÷ 3)/(6 ÷ 3) = 1/2.",
+        "on_incorrect_attempt_1": "Use denominator 6 for both fractions without changing their values. Complete the operation before simplifying.",
+        "on_incorrect_attempt_2": "Follow the operation line first, then the common-factor check. Use the final line to correct your fraction.",
+        "on_locked_incorrect": "Answer recorded. Check the operation and the final fraction after the final set.",
+        "worked_explanation": "5/6 = 5/6 and 1/3 = 2/6. → 5/6 − 2/6 = 3/6. → The highest common factor of 3 and 6 is 3. → 3/6 = (3 ÷ 3)/(6 ÷ 3) = 1/2.",
+        "on_equivalent_unfinished": "Your fraction has the correct value, so the operation is correct. Simplification is not finished: divide both parts by a common factor and check again."
+      },
+      "mathematical_support": {
+        "hint_1": "Use denominator 6 for both fractions without changing their values. Complete the operation before simplifying.",
+        "hint_2": "Complete the operation with matching denominators. Then divide the result’s numerator and denominator by the same common factor, until only one is shared.",
+        "worked_solution": "5/6 = 5/6 and 1/3 = 2/6. → 5/6 − 2/6 = 3/6. → The highest common factor of 3 and 6 is 3. → 3/6 = (3 ÷ 3)/(6 ÷ 3) = 1/2."
+      },
+      "working": [
+        "5/6 = 5/6 and 1/3 = 2/6.",
+        "5/6 − 2/6 = 3/6.",
+        "The highest common factor of 3 and 6 is 3.",
+        "3/6 = (3 ÷ 3)/(6 ÷ 3) = 1/2."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "simplify_after_operation",
+          "a": 5,
+          "b": 6,
+          "c": 1,
+          "d": 3,
+          "operation": "subtract",
+          "object": "tank",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "4/3": "The original numerator and denominator pairs were combined directly. Use matching part sizes before the operation.",
+        "-3/6": "The subtraction is reversed. Take the second fraction from the first before simplifying.",
+        "1/6": "Only the numerator was divided. The denominator must use the same divisor to preserve the value.",
+        "3/2": "Only the denominator was divided. Apply the same divisor to the numerator."
+      },
+      "evidence_profile": "operation_then_simplify",
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-10-X03",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "practice",
+      "prompt": "Leila walks 3/10 km in the morning and 1/5 km in the afternoon. What total distance does Leila walk? Write your answer in its simplest form.",
+      "target": "Complete the operation and simplify its result fully",
+      "response": {
+        "type": "fraction",
+        "require_simplest_form": true,
+        "accept_equivalent_notation": false,
+        "show_authored_label": true,
+        "input_label": "Simplest fraction",
+        "suffix": "km"
+      },
+      "answer": {
+        "value": "1/2"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Leila walks one half kilometre in total.",
+        "correct_after_support": "Correct. Leila walks one half kilometre in total.",
+        "on_correct_math": "3/10 = 3/10 and 1/5 = 2/10. → 3/10 + 2/10 = 5/10. → The highest common factor of 5 and 10 is 5. → 5/10 = (5 ÷ 5)/(10 ÷ 5) = 1/2.",
+        "on_incorrect_attempt_1": "Use denominator 10 for both fractions without changing their values. Complete the operation before simplifying.",
+        "on_incorrect_attempt_2": "Follow the operation line first, then the common-factor check. Use the final line to correct your fraction.",
+        "on_locked_incorrect": "Answer recorded. Check the operation and the final fraction after the final set.",
+        "worked_explanation": "3/10 = 3/10 and 1/5 = 2/10. → 3/10 + 2/10 = 5/10. → The highest common factor of 5 and 10 is 5. → 5/10 = (5 ÷ 5)/(10 ÷ 5) = 1/2.",
+        "on_equivalent_unfinished": "Your fraction has the correct value, so the operation is correct. Simplification is not finished: divide both parts by a common factor and check again."
+      },
+      "mathematical_support": {
+        "hint_1": "Use denominator 10 for both fractions without changing their values. Complete the operation before simplifying.",
+        "hint_2": "Complete the operation with matching denominators. Then divide the result’s numerator and denominator by the same common factor, until only one is shared.",
+        "worked_solution": "3/10 = 3/10 and 1/5 = 2/10. → 3/10 + 2/10 = 5/10. → The highest common factor of 5 and 10 is 5. → 5/10 = (5 ÷ 5)/(10 ÷ 5) = 1/2."
+      },
+      "working": [
+        "3/10 = 3/10 and 1/5 = 2/10.",
+        "3/10 + 2/10 = 5/10.",
+        "The highest common factor of 5 and 10 is 5.",
+        "5/10 = (5 ÷ 5)/(10 ÷ 5) = 1/2."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "simplify_after_operation",
+          "a": 3,
+          "b": 10,
+          "c": 1,
+          "d": 5,
+          "operation": "add",
+          "object": "walk",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "4/15": "The original numerator and denominator pairs were combined directly. Use matching part sizes before the operation.",
+        "5/10": "Check for a common factor in the result before finishing.",
+        "1/10": "Only the numerator was divided. The denominator must use the same divisor to preserve the value.",
+        "5/2": "Only the denominator was divided. Apply the same divisor to the numerator."
+      },
+      "evidence_profile": "operation_then_simplify",
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-10-X04",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "practice",
+      "prompt": "For 7/12 − 1/4, which method is correct?",
+      "target": "Complete the operation and simplify its result fully",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "7/12 − 1/4 = 7/12 − 3/12 = 4/12 = 1/3",
+          "7/12 − 1/4 = 6/8 = 3/4",
+          "7/12 − 1/4 = 7/12 − 1/12 = 6/12 = 1/2",
+          "7/12 − 1/4 = 4/8 = 1/2"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "7/12 − 1/4 = 7/12 − 3/12 = 4/12 = 1/3"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The conversion, ordered subtraction and final simplification are all valid.",
+        "correct_after_support": "Correct. The conversion, ordered subtraction and final simplification are all valid.",
+        "on_correct_math": "1/4 = 3/12. → 7/12 − 3/12 = 4/12. → The highest common factor of 4 and 12 is 4. → 4/12 = 1/3.",
+        "on_incorrect_attempt_1": "Simplifying a wrong difference cannot repair an earlier conversion or denominator error.",
+        "on_incorrect_attempt_2": "Follow the valid conversion to twelfths, then subtraction, then simplification. Choose that complete line.",
+        "on_locked_incorrect": "Answer recorded. Check the operation and the final fraction after the final set.",
+        "worked_explanation": "1/4 = 3/12. → 7/12 − 3/12 = 4/12. → The highest common factor of 4 and 12 is 4. → 4/12 = 1/3."
+      },
+      "mathematical_support": {
+        "hint_1": "Simplifying a wrong difference cannot repair an earlier conversion or denominator error.",
+        "hint_2": "Complete the operation with matching denominators. Then divide the result’s numerator and denominator by the same common factor, until only one is shared.",
+        "worked_solution": "1/4 = 3/12. → 7/12 − 3/12 = 4/12. → The highest common factor of 4 and 12 is 4. → 4/12 = 1/3."
+      },
+      "working": [
+        "1/4 = 3/12.",
+        "7/12 − 3/12 = 4/12.",
+        "The highest common factor of 4 and 12 is 4.",
+        "4/12 = 1/3."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "simplify_after_operation",
+          "a": 7,
+          "b": 12,
+          "c": 1,
+          "d": 4,
+          "operation": "subtract",
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "7/12 − 1/4 = 6/8 = 3/4": "The original denominators were subtracted. Simplifying that wrong result cannot fix the operation.",
+        "7/12 − 1/4 = 7/12 − 1/12 = 6/12 = 1/2": "One quarter was not renamed correctly: its numerator must scale with its denominator.",
+        "7/12 − 1/4 = 4/8 = 1/2": "The difference must retain the common denominator twelve, before simplifying."
+      }
+    },
+    {
+      "id": "AF-10-E01",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "Work out 3/8 + 3/8. Write your answer in its simplest form.",
+      "target": "Complete the operation and simplify its result fully",
+      "response": {
+        "type": "fraction",
+        "require_simplest_form": true,
+        "accept_equivalent_notation": false,
+        "show_authored_label": true,
+        "input_label": "Simplest fraction"
+      },
+      "answer": {
+        "value": "3/4"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The operation is complete, and both parts of the result were divided by the same factor.",
+        "correct_after_support": "Correct. The operation is complete, and both parts of the result were divided by the same factor.",
+        "on_correct_math": "3/8 = 3/8 and 3/8 = 3/8. → 3/8 + 3/8 = 6/8. → The highest common factor of 6 and 8 is 2. → 6/8 = (6 ÷ 2)/(8 ÷ 2) = 3/4.",
+        "on_incorrect_attempt_1": "The parts already match. Complete the numerator operation, keep the denominator, then check for common factors.",
+        "on_incorrect_attempt_2": "Follow the operation line first, then the common-factor check. Use the final line to correct your fraction.",
+        "on_locked_incorrect": "Answer recorded. Check the operation and the final fraction after the final set.",
+        "worked_explanation": "3/8 = 3/8 and 3/8 = 3/8. → 3/8 + 3/8 = 6/8. → The highest common factor of 6 and 8 is 2. → 6/8 = (6 ÷ 2)/(8 ÷ 2) = 3/4.",
+        "on_equivalent_unfinished": "The operation is correct, but the final fraction is not fully simplified. This response is recorded as incomplete, because both parts still share a common factor."
+      },
+      "mathematical_support": {
+        "hint_1": "The parts already match. Complete the numerator operation, keep the denominator, then check for common factors.",
+        "hint_2": "Complete the operation with matching denominators. Then divide the result’s numerator and denominator by the same common factor, until only one is shared.",
+        "worked_solution": "3/8 = 3/8 and 3/8 = 3/8. → 3/8 + 3/8 = 6/8. → The highest common factor of 6 and 8 is 2. → 6/8 = (6 ÷ 2)/(8 ÷ 2) = 3/4."
+      },
+      "working": [
+        "3/8 = 3/8 and 3/8 = 3/8.",
+        "3/8 + 3/8 = 6/8.",
+        "The highest common factor of 6 and 8 is 2.",
+        "6/8 = (6 ÷ 2)/(8 ÷ 2) = 3/4."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "simplify_after_operation",
+          "a": 3,
+          "b": 8,
+          "c": 3,
+          "d": 8,
+          "operation": "add",
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "6/16": "The original numerator and denominator pairs were combined directly. Use matching part sizes before the operation.",
+        "6/8": "Check for a common factor in the result before finishing.",
+        "3/8": "Only the numerator was divided. The denominator must use the same divisor to preserve the value.",
+        "6/4": "Only the denominator was divided. Apply the same divisor to the numerator."
+      },
+      "evidence_profile": "operation_then_simplify",
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-10-E02",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "Work out 7/12 − 1/4. Write your answer in its simplest form.",
+      "target": "Complete the operation and simplify its result fully",
+      "response": {
+        "type": "fraction",
+        "require_simplest_form": true,
+        "accept_equivalent_notation": false,
+        "show_authored_label": true,
+        "input_label": "Simplest fraction"
+      },
+      "answer": {
+        "value": "1/3"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The operation is complete, and both parts of the result were divided by the same factor.",
+        "correct_after_support": "Correct. The operation is complete, and both parts of the result were divided by the same factor.",
+        "on_correct_math": "7/12 = 7/12 and 1/4 = 3/12. → 7/12 − 3/12 = 4/12. → The highest common factor of 4 and 12 is 4. → 4/12 = (4 ÷ 4)/(12 ÷ 4) = 1/3.",
+        "on_incorrect_attempt_1": "Use denominator 12 for both fractions without changing their values. Complete the operation before simplifying.",
+        "on_incorrect_attempt_2": "Follow the operation line first, then the common-factor check. Use the final line to correct your fraction.",
+        "on_locked_incorrect": "Answer recorded. Check the operation and the final fraction after the final set.",
+        "worked_explanation": "7/12 = 7/12 and 1/4 = 3/12. → 7/12 − 3/12 = 4/12. → The highest common factor of 4 and 12 is 4. → 4/12 = (4 ÷ 4)/(12 ÷ 4) = 1/3.",
+        "on_equivalent_unfinished": "The operation is correct, but the final fraction is not fully simplified. This response is recorded as incomplete, because both parts still share a common factor."
+      },
+      "mathematical_support": {
+        "hint_1": "Use denominator 12 for both fractions without changing their values. Complete the operation before simplifying.",
+        "hint_2": "Complete the operation with matching denominators. Then divide the result’s numerator and denominator by the same common factor, until only one is shared.",
+        "worked_solution": "7/12 = 7/12 and 1/4 = 3/12. → 7/12 − 3/12 = 4/12. → The highest common factor of 4 and 12 is 4. → 4/12 = (4 ÷ 4)/(12 ÷ 4) = 1/3."
+      },
+      "working": [
+        "7/12 = 7/12 and 1/4 = 3/12.",
+        "7/12 − 3/12 = 4/12.",
+        "The highest common factor of 4 and 12 is 4.",
+        "4/12 = (4 ÷ 4)/(12 ÷ 4) = 1/3."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "simplify_after_operation",
+          "a": 7,
+          "b": 12,
+          "c": 1,
+          "d": 4,
+          "operation": "subtract",
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "6/8": "The original numerator and denominator pairs were combined directly. Use matching part sizes before the operation.",
+        "-4/12": "The subtraction is reversed. Take the second fraction from the first before simplifying.",
+        "1/12": "Only the numerator was divided. The denominator must use the same divisor to preserve the value.",
+        "4/3": "Only the denominator was divided. Apply the same divisor to the numerator."
+      },
+      "evidence_profile": "operation_then_simplify",
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-10-E03",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "Which statement is correct?",
+      "target": "Complete the operation and simplify its result fully",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Divide the final numerator and denominator by the same common factor.",
+          "Subtract the same number from both parts.",
+          "Only the denominator needs to be divided.",
+          "A correct fraction operation never needs a final simplification step."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "Divide the final numerator and denominator by the same common factor."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Recorded. A common divisor preserves the value of the final fraction.",
+        "correct_after_support": "Recorded. A common divisor preserves the value of the final fraction.",
+        "on_correct_math": "The operation produces an exact fraction. → Simplification preserves that value by dividing both parts by the same common factor. → Continue until no common factor greater than 1 remains.",
+        "on_incorrect_attempt_1": "No hints are available in the final check.",
+        "on_incorrect_attempt_2": "The final response is locked.",
+        "on_locked_incorrect": "Answer recorded. Check the operation and the final fraction after the final set.",
+        "worked_explanation": "The operation produces an exact fraction. → Simplification preserves that value by dividing both parts by the same common factor. → Continue until no common factor greater than 1 remains."
+      },
+      "mathematical_support": {
+        "hint_1": "No hints are available in the final check.",
+        "hint_2": "Complete the operation with matching denominators. Then divide the result’s numerator and denominator by the same common factor, until only one is shared.",
+        "worked_solution": "The operation produces an exact fraction. → Simplification preserves that value by dividing both parts by the same common factor. → Continue until no common factor greater than 1 remains."
+      },
+      "working": [
+        "The operation produces an exact fraction.",
+        "Simplification preserves that value by dividing both parts by the same common factor.",
+        "Continue until no common factor greater than 1 remains."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "operation_then_simplify_steps",
+          "label": "Finishing a fraction operation",
+          "expression": "Choose the correct statement below",
+          "completed": "Divide numerator and denominator by the same common factor.",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    }
+  ],
+  "canonical_lesson": {
+    "version": "AF10-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

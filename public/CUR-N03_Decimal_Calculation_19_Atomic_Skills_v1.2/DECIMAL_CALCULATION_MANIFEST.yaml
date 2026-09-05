@@ -1,0 +1,142 @@
+pack: Revily V2 Decimal Calculation Atomic Skills
+pack_version: '1.2'
+schema_version: '1.2'
+curriculum_registry: Revily Decimal Calculation Curriculum Registry v1.0 Count-Blind Draft
+package_id: CUR-N03
+scope: Atomic DEC-01 through DEC-19 (count-blind boundary audit)
+shared_files:
+- shared/REVILY_MASTER_SKILL_TEMPLATE_v1.2.yaml
+- shared/revily-skill-spec-v1.2.schema.json
+- shared/RYAN_DIALOGUE_PROFILE_v1.yaml
+skills:
+- id: DEC-01
+  title: Read, Write and Partition Decimals
+  file: skills/DEC-01_COMPLETE_v1.2.yaml
+  prerequisites:
+  - P-N09
+- id: DEC-02
+  title: Compare and Order Positive Decimals
+  file: skills/DEC-02_COMPLETE_v1.2.yaml
+  prerequisites:
+  - DEC-01
+- id: DEC-03
+  title: Locate and Interpolate Decimals on a Number Line
+  file: skills/DEC-03_COMPLETE_v1.2.yaml
+  prerequisites:
+  - DEC-01
+- id: DEC-04
+  title: Compare and Order Signed Decimals
+  file: skills/DEC-04_COMPLETE_v1.2.yaml
+  prerequisites:
+  - DEC-02
+  - DEC-03
+  - P-N13
+- id: DEC-05
+  title: Add Positive Decimals
+  file: skills/DEC-05_COMPLETE_v1.2.yaml
+  prerequisites:
+  - DEC-01
+  - P-N10
+- id: DEC-06
+  title: Subtract Positive Decimals
+  file: skills/DEC-06_COMPLETE_v1.2.yaml
+  prerequisites:
+  - DEC-01
+  - P-N10
+- id: DEC-07
+  title: Add Signed Decimals
+  file: skills/DEC-07_COMPLETE_v1.2.yaml
+  prerequisites:
+  - DEC-04
+  - DEC-05
+  - P-N13
+- id: DEC-08
+  title: Subtract Signed Decimals
+  file: skills/DEC-08_COMPLETE_v1.2.yaml
+  prerequisites:
+  - DEC-04
+  - DEC-06
+  - DEC-07
+  - P-N13
+- id: DEC-09
+  title: Use Decimal Addition and Subtraction in Context
+  file: skills/DEC-09_COMPLETE_v1.2.yaml
+  prerequisites:
+  - DEC-05
+  - DEC-06
+  - DEC-07
+  - DEC-08
+- id: DEC-10
+  title: Multiply and Divide Decimals by Powers of Ten
+  file: skills/DEC-10_COMPLETE_v1.2.yaml
+  prerequisites:
+  - DEC-01
+- id: DEC-11
+  title: Multiply a Decimal by an Integer
+  file: skills/DEC-11_COMPLETE_v1.2.yaml
+  prerequisites:
+  - DEC-01
+  - P-N11
+- id: DEC-12
+  title: Multiply Two Decimals
+  file: skills/DEC-12_COMPLETE_v1.2.yaml
+  prerequisites:
+  - DEC-10
+  - DEC-11
+  - P-N11
+- id: DEC-13
+  title: Use Decimal Multiplication in Context
+  file: skills/DEC-13_COMPLETE_v1.2.yaml
+  prerequisites:
+  - DEC-11
+  - DEC-12
+- id: DEC-14
+  title: Divide a Decimal by an Integer
+  file: skills/DEC-14_COMPLETE_v1.2.yaml
+  prerequisites:
+  - DEC-01
+  - P-N11
+- id: DEC-15
+  title: Continue Division to a Terminating Decimal Quotient
+  file: skills/DEC-15_COMPLETE_v1.2.yaml
+  prerequisites:
+  - DEC-01
+  - DEC-14
+  - P-N11
+- id: DEC-16
+  title: Divide by a Decimal
+  file: skills/DEC-16_COMPLETE_v1.2.yaml
+  prerequisites:
+  - DEC-10
+  - DEC-14
+  - DEC-15
+- id: DEC-17
+  title: Use Decimal Division in Context
+  file: skills/DEC-17_COMPLETE_v1.2.yaml
+  prerequisites:
+  - DEC-14
+  - DEC-15
+  - DEC-16
+- id: DEC-18
+  title: Multiply and Divide Signed Decimals
+  file: skills/DEC-18_COMPLETE_v1.2.yaml
+  prerequisites:
+  - DEC-04
+  - DEC-07
+  - DEC-08
+  - DEC-12
+  - DEC-16
+  - P-N13
+- id: DEC-19
+  title: Solve Mixed and Multi-Step Decimal Calculations
+  file: skills/DEC-19_COMPLETE_v1.2.yaml
+  prerequisites:
+  - DEC-09
+  - DEC-13
+  - DEC-17
+  - DEC-18
+  - P-N12
+implementation_rule: Codex implements these authored specifications through one shared engine. Codex must not invent
+  learner-facing mathematics, dialogue, questions, hints, animations, branching, mastery rules or atomic skill boundaries.
+governance_note: DEC-01 through DEC-19 are proposed count-blind CUR-N03 atomic boundaries. Stage 2 must resolve ownership/alias
+  relationships with existing Number Fundamentals P-N contracts before production promotion.

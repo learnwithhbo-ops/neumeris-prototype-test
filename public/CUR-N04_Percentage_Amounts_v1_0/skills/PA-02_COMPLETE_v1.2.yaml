@@ -1,0 +1,562 @@
+schema_version: '1.2'
+spec_intent:
+  source_of_truth: true
+  implementation_status: production_batch_1
+  source_material:
+    title: PA 02 — Find 10% of an Amount
+    path: authoring-source-redacted.pdf
+    authoritative_pages: 1-17
+  authored_scope: Teach 10% as one of ten equal shares and calculate it by dividing the whole by 10 with correct place value and units.
+  excluded_from_active_route:
+    - Diagnostic questions
+    - Delayed retrieval questions
+    - Percentages other than exactly 10%
+
+identity:
+  id: PA-02
+  slug: find-ten-percent-of-an-amount
+  title: Find 10% of an Amount
+  strand: Number
+  cluster: Percentage Amounts
+  tier: GCSE Foundation
+  status: production_batch_1
+  estimated_minutes: { min: 16, max: 22 }
+
+curriculum:
+  learning_objective: Find 10% of a stated amount by recognising that 10% = 1/10 and dividing the whole by 10 with correct place value and units.
+  success_criteria:
+    - Identify the complete amount representing 100%.
+    - Explain that ten equal 10% shares make the whole.
+    - Divide the whole by 10 using place value.
+    - Preserve decimal place value and contextual units.
+  boundaries:
+    includes:
+      - Exactly 10% of positive whole-number amounts.
+      - Whole-number and one-decimal-place results.
+      - Counts and simple measured quantities.
+    excludes:
+      - Finding 1%, 5% or multiples of 10%.
+      - Money-specific conventions and contextual rounding.
+      - Percentage change, reverse percentages and expressing one amount as a percentage of another.
+
+dependencies:
+  required_skill_refs: [PA-01]
+  entry_assumptions:
+    - The learner can identify the whole amount.
+    - The learner understands that 100% represents the whole.
+  downstream_rule: PA-03 and PA-05 may depend on this skill; this lesson teaches exactly 10% only.
+
+engine_capability_requirements:
+  input_types: [single_choice, decimal]
+  visual_primitives: [percentage_strip, caption_layer, progress_indicator]
+  animation_actions: [fade_in, highlight, reveal_equation, crossfade_phase]
+  audio_capabilities: [browser_speech, caption_sync, pause_for_input, cancel_on_navigation]
+  state_capabilities: [attempt_count, step_resume, exit_score, confirmation_branch]
+
+experience_contract:
+  authored_feedback_only: true
+  ordered_phases: [teaching, guided, faded, independent_transfer, practice, exit, completion]
+  navigation:
+    default: linear_forward
+    refresh_resume: Resume at the latest committed step.
+    start_again: Reset only this lesson attempt and preserve historical completion records.
+  interaction_rules:
+    - Never auto-submit or auto-fill an answer.
+    - Keep input available while Ryan speaks.
+    - Reveal the result and method only after the appropriate feedback stage.
+
+voice_and_script:
+  performer_name: Ryan
+  dialogue_profile_ref: RYAN_DIALOGUE_PROFILE_v1.yaml
+  script_ownership: All mathematical narration and feedback is authored in this specification.
+  caption_policy: Every spoken line is captioned verbatim; empty narration leaves no visible caption container.
+  narration_playback:
+    mode: browser_speech_ryan
+    require_ryan_voice: true
+    browser_voice_name: Microsoft Ryan Online (Natural) - English (United Kingdom)
+    opening_delay_ms: 0
+  production_audio_note: Provider audio and word boundaries require separate owner permission.
+
+visual_language:
+  primary_visual_contract:
+    primitive: percentage_strip
+    rule: Keep the amount aligned to ten equal percentage groups and show one unchanged 10% share.
+  scene_rules:
+    - Use ten equal segments whenever the method is being taught.
+    - Show decimal place-value movement as a change in value, never as deleting a digit.
+    - Do not reveal a scored result before submission.
+  reduced_motion: Show the same complete partition and method state without width transitions.
+
+diagnostic:
+  enabled: false
+  question_refs: []
+  reason: Diagnostic is outside the current implementation scope.
+
+concept_model:
+  core_idea: Ten equal 10% shares make the complete whole, so one 10% share is one tenth of the whole.
+  invariant: The original whole remains fixed while every digit becomes one tenth as valuable.
+  mathematical_rule: 10% of A = A ÷ 10.
+  must_notice:
+    - 10% = 10/100 = 1/10.
+    - Division by 10 changes every digit's place value.
+    - A positive 10% result is smaller than the whole.
+    - The contextual unit is unchanged.
+  common_confusions:
+    - Dividing by 100 instead of 10.
+    - Multiplying by 10.
+    - Removing a final digit as a general rule.
+    - Dropping or changing the unit.
+
+lesson:
+  teaching_steps:
+    - id: T01
+      stage: teaching
+      purpose: Establish ten equal shares of one whole.
+      estimated_seconds: 35
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: Ten equal shares make the whole
+        objects: [A whole of 200 units split into ten equal groups.]
+        initial_state: Show all ten equal groups and select one group.
+        model: { heading: '100% split into ten equal shares', percent: 10, wholeAmount: 200, unit: units, partAmount: 20, partitionCount: 10, selectedGroups: 1, showRoles: true, showResult: true }
+      narration:
+        script: Ten equal ten-percent shares make the complete whole. One selected share is ten percent, which is one tenth of the whole.
+        sync_cues: [{ cue: one selected share, action: highlight }]
+      animation_timeline: [{ id: A01, trigger: narration_sync, action: highlight, target: percentage_strip, duration_ms: 750 }]
+      learner_interaction: { question_ref: null }
+      next_step: T02
+
+    - id: T02
+      stage: teaching
+      purpose: Connect one tenth to division by 10.
+      estimated_seconds: 35
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: Select one of the ten groups
+        objects: [One of ten equal groups from 200.]
+        initial_state: Keep one group selected and reveal its value.
+        model:
+          heading: One 10% group from 200
+          percent: 10
+          wholeAmount: 200
+          unit: units
+          partAmount: 20
+          partitionCount: 10
+          selectedGroups: 1
+          showRoles: true
+          showResult: true
+          showMethod: true
+          methodSteps: ['10% = 1/10', '200 ÷ 10 = 20']
+      narration:
+        script: To find one of ten equal shares, divide the whole by ten. Two hundred divided by ten is twenty, so ten percent of two hundred is twenty.
+        sync_cues: [{ cue: divide the whole by ten, action: reveal_equation }]
+      animation_timeline: [{ id: A02, trigger: narration_sync, action: reveal_equation, target: percentage_strip, duration_ms: 800 }]
+      learner_interaction: { question_ref: null }
+      next_step: T03
+
+    - id: T03
+      stage: teaching
+      purpose: Explain a decimal result through place value.
+      estimated_seconds: 45
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: Every digit becomes one tenth as valuable
+        objects: [The place-value change from 84 to 8.4.]
+        initial_state: Reveal the tens-to-units and units-to-tenths changes in sequence.
+        model:
+          heading: 10% of 84
+          percent: 10
+          wholeAmount: 84
+          partAmount: 8.4
+          partitionCount: 10
+          selectedGroups: 1
+          showRoles: true
+          showResult: true
+          showMethod: true
+          methodSteps: ['8 tens become 8 units', '4 units become 4 tenths', '84 ÷ 10 = 8.4']
+      narration:
+        script: Dividing by ten does not erase a digit. The eight tens become eight units, and the four units become four tenths. That gives eight point four.
+        sync_cues: [{ cue: eight tens, action: highlight }]
+      animation_timeline: [{ id: A03, trigger: narration_sync, action: highlight, target: percentage_strip, duration_ms: 850 }]
+      learner_interaction: { question_ref: null }
+      next_step: T04
+
+    - id: T04
+      stage: teaching
+      purpose: Model the complete method on a new amount.
+      estimated_seconds: 40
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: Identify, divide, answer
+        objects: [A worked example finding 10% of 350.]
+        initial_state: Reveal one immediately useful step at a time.
+        model:
+          heading: Find 10% of 350
+          percent: 10
+          wholeAmount: 350
+          partAmount: 35
+          partitionCount: 10
+          selectedGroups: 1
+          showRoles: true
+          showResult: true
+          showMethod: true
+          methodSteps: ['Whole = 350', '10% = 1/10', '350 ÷ 10 = 35']
+      narration:
+        script: The whole is three hundred and fifty. Ten percent is one tenth, so divide the whole by ten. The required part is thirty-five.
+        sync_cues: [{ cue: divide the whole, action: reveal_equation }]
+      animation_timeline: [{ id: A04, trigger: narration_sync, action: reveal_equation, target: percentage_strip, duration_ms: 800 }]
+      learner_interaction: { question_ref: null }
+      next_step: T05
+
+    - id: T05
+      stage: teaching
+      purpose: Check the equal-share meaning.
+      estimated_seconds: 70
+      scene: { layout: single_central_teaching_canvas, display_title: Why divide by ten?, objects: [Ten equal groups with no answer label.], initial_state: Keep the explanation hidden until submission. }
+      narration: { script: Choose the statement that explains the division, not a surface shortcut. }
+      animation_timeline: [{ id: A05, trigger: narration_sync, action: highlight, target: percentage_strip, duration_ms: 650 }]
+      learner_interaction: { question_ref: PA-02-C01, auto_focus: true }
+      next_step: T06
+
+    - id: T06
+      stage: teaching
+      purpose: Guide a non-multiple of ten using place value.
+      estimated_seconds: 45
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: Keep the decimal place value accurate
+        objects: [A guided example finding 10% of 86.]
+        initial_state: Show the whole and one selected tenth before the result.
+        model: { heading: 'Find 10% of 86', percent: 10, wholeAmount: 86, partAmount: 8.6, partitionCount: 10, selectedGroups: 1, showRoles: true, showResult: true, showMethod: true, methodSteps: ['86 ÷ 10', '8 tens → 8 units', '6 units → 6 tenths', 'Answer = 8.6'] }
+      narration:
+        script: Eighty-six does not end in zero, but the method is unchanged. Divide by ten and follow each digit's value to get eight point six.
+        sync_cues: [{ cue: follow each digit, action: highlight }]
+      animation_timeline: [{ id: A06, trigger: narration_sync, action: highlight, target: percentage_strip, duration_ms: 850 }]
+      learner_interaction: { question_ref: null }
+      next_step: T07
+
+    - id: T07
+      stage: teaching
+      purpose: Check the place-value explanation.
+      estimated_seconds: 70
+      scene: { layout: single_central_teaching_canvas, display_title: Explain 8.6, objects: [A neutral 10% strip for 86.], initial_state: Hide the decimal result before submission. }
+      narration: { script: Decide which explanation follows the place value of both digits. }
+      animation_timeline: [{ id: A07, trigger: narration_sync, action: highlight, target: percentage_strip, duration_ms: 650 }]
+      learner_interaction: { question_ref: PA-02-C02, auto_focus: true }
+      next_step: T08
+
+    - id: T08
+      stage: teaching
+      purpose: Transfer the method to a contextual whole.
+      estimated_seconds: 40
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: The unit stays with the quantity
+        objects: [A theatre with 680 seats represented as the whole.]
+        initial_state: Reveal one tenth while keeping the unit seats.
+        model: { heading: '10% of 680 seats', percent: 10, wholeAmount: 680, unit: seats, partAmount: 68, partitionCount: 10, selectedGroups: 1, showRoles: true, showResult: true, showMethod: true, methodSteps: ['680 ÷ 10 = 68', 'Answer = 68 seats'] }
+      narration:
+        script: The theatre has six hundred and eighty seats as its whole. Divide by ten, then keep the unit. The selected group contains sixty-eight seats.
+        sync_cues: [{ cue: keep the unit, action: highlight }]
+      animation_timeline: [{ id: A08, trigger: narration_sync, action: highlight, target: percentage_strip, duration_ms: 800 }]
+      learner_interaction: { question_ref: null }
+      next_step: T09
+
+    - id: T09
+      stage: teaching
+      purpose: Check an unsupported decimal calculation.
+      estimated_seconds: 75
+      scene: { layout: single_central_teaching_canvas, display_title: Find one tenth independently, objects: [A ten-part strip for 93.], initial_state: Show no result or method before submission. }
+      narration: { script: Find ten percent of ninety-three. Use place value, and enter the number yourself. }
+      animation_timeline: [{ id: A09, trigger: narration_sync, action: highlight, target: percentage_strip, duration_ms: 650 }]
+      learner_interaction: { question_ref: PA-02-C03, auto_focus: true }
+      next_step: T10
+
+    - id: T10
+      stage: teaching
+      purpose: Hand control to the learner.
+      estimated_seconds: 25
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: One whole, one tenth, same unit
+        objects: [A compact unsolved ten-part strip.]
+        initial_state: Keep only the ten equal partitions as a cue.
+        model: { heading: 'Your turn', percent: 10, wholeAmount: 470, partitionCount: 10, selectedGroups: 1, showRoles: false, showResult: false }
+      narration: { script: Now use the same structure yourself. Identify the whole, divide by ten, and check that your answer is one tenth as large. }
+      animation_timeline: [{ id: A10, trigger: narration_sync, action: crossfade_phase, target: percentage_strip, duration_ms: 700 }]
+      learner_interaction: { question_ref: null }
+      next_step: G01
+
+  transfer_steps:
+    G01: { stage: guided, question_ref: PA-02-G01, support_level: high, estimated_seconds: 80, pre_question_script: 'Use the ten equal groups: one group is the whole divided by ten.', visual_before_answer: Show the ten partitions without the result., correct_next: F01, recovery_ref: PA-02-R01 }
+    F01: { stage: faded, question_ref: PA-02-F01, support_level: reduced, estimated_seconds: 85, pre_question_script: Follow every digit across one place-value position., visual_before_answer: Show only the whole and selected tenth., correct_next: I01, recovery_ref: PA-02-R03 }
+    I01: { stage: independent_transfer, question_ref: PA-02-I01, support_level: none, estimated_seconds: 90, pre_question_script: Work independently and retain the contextual unit., visual_before_answer: No result or method is visible., correct_next: P01, recovery_ref: PA-02-R02 }
+
+  practice:
+    intro_script: Five questions now. Find one tenth of the correct whole and keep the place value accurate.
+    question_order: [PA-02-P01, PA-02-P02, PA-02-P03, PA-02-P04, PA-02-P05]
+    question_count: 5
+    feedback_policy: First errors receive an authored clue; second errors reveal the method and route to a focused repair where configured.
+
+  exit:
+    intro_script: Final check. Two questions, one submission each, with no hints while you answer.
+    primary_question_refs: [PA-02-E01, PA-02-E02]
+    confirmation_question_refs: [PA-02-CFM01, PA-02-CFM02]
+    submission_policy: One submission per primary exit item; reveal the outcome only after both are complete.
+    mastery_logic:
+      2_correct_of_2: SECURE
+      1_correct_of_2: Ask one unused confirmation item; correct is SECURE and incorrect is NEEDS_WORK.
+      0_correct_of_2: NEEDS_WORK
+    confirmation_selection: Use the first unseen confirmation item.
+
+completion:
+  secure: { title: Skill complete, ryan_script: 'You used one tenth of the correct whole and kept the place value accurate. Ten percent is ready to use in the next percentage skill.', state_write: SECURE, buttons: [Finish for today, Continue learning] }
+  needs_work: { title: One more pass will help, ryan_script: 'The ten equal shares are in place. We will revisit the division and decimal position before moving on.', state_write: NEEDS_WORK, buttons: [Try this skill again, Finish for today] }
+
+question_bank:
+  - id: PA-02-C01
+    stage: teaching_checkpoint
+    target: Explain why finding 10% uses division by 10.
+    prompt: Why does finding 10% of an amount involve division by 10?
+    response: { type: single_choice, options: [Because 10% means ten times the whole., Because the whole is split into ten equal shares and one share is selected., Because every percentage calculation uses division by 10., Because the final digit must always be removed.] }
+    answer: { value: Because the whole is split into ten equal shares and one share is selected. }
+    attempt_policy: &supported { policy: two_attempt_then_targeted_repair, max_attempts_before_resolution: 2, feedback_timing: immediate, submit_label: Check answer, allow_change_before_submit: true, lock_after_final_submit: true }
+    scripts: &c01scripts
+      on_correct_reaction: You connected the operation to the equal-share structure.
+      on_correct_math: Ten equal 10% groups make the whole, so one group is found by dividing by 10.
+      on_incorrect_attempt_1: Think about how many equal 10% groups make 100%.
+      on_incorrect_attempt_2: Ten equal groups make the whole, and 10% selects one of them.
+      worked_explanation: The whole is divided into ten equal shares. One share is 1/10, which is 10%.
+    mathematical_support: { hint_1: How many copies of 10% make 100%?, hint_2: One selected group out of ten equal groups is one tenth., worked_solution: '10% = 1/10, so divide the whole by 10.' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 10, wholeAmount: 200, unit: units, partAmount: 20, partitionCount: 10, selectedGroups: 1, showRoles: false, showResult: false, showMethod: false, methodSteps: ['10% = 1/10', '200 ÷ 10 = 20'], solutionLabel: '10% = one of ten equal shares' } }
+    recovery_item_ref: PA-02-R01
+
+  - id: PA-02-C02
+    stage: teaching_checkpoint
+    target: Explain division by 10 through place value.
+    prompt: A student says, “I removed the final digit from 86, so the answer is 8.” Which response is correct?
+    response: { type: single_choice, options: [The answer is 8 because dividing by 10 always removes the last digit., The answer is 8.6 because 8 tens become 8 units and 6 units become 6 tenths., The answer is 0.86 because percentages always divide by 100., The answer is 860 because 10% means multiply by 10.] }
+    answer: { value: The answer is 8.6 because 8 tens become 8 units and 6 units become 6 tenths. }
+    attempt_policy: *supported
+    scripts:
+      on_correct_reaction: You followed the value of both digits.
+      on_correct_math: Eight tens become eight units and six units become six tenths, giving 8.6.
+      on_incorrect_attempt_1: Track the value of the 8 and the 6 instead of deleting either digit.
+      on_incorrect_attempt_2: Dividing 86 by 10 makes every digit one tenth as valuable, so the result is 8.6.
+      worked_explanation: 86 ÷ 10 = 8.6 because tens become units and units become tenths.
+    mathematical_support: { hint_1: Where does the 6 move when its value becomes one tenth as large?, hint_2: The 6 units become 6 tenths., worked_solution: '86 ÷ 10 = 8.6.' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 10, wholeAmount: 86, partAmount: 8.6, partitionCount: 10, selectedGroups: 1, showRoles: false, showResult: false, showMethod: false, methodSteps: ['8 tens → 8 units', '6 units → 6 tenths', '86 ÷ 10 = 8.6'], solutionLabel: '10% of 86 = 8.6' } }
+    recovery_item_ref: PA-02-R03
+
+  - id: PA-02-C03
+    stage: teaching_checkpoint
+    target: Calculate a decimal 10% result independently.
+    prompt: Find 10% of 93.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '9.3' }
+    attempt_policy: *supported
+    scripts: &numeric_scripts
+      on_correct_reaction: Your result is one tenth of the whole.
+      on_correct_math: Dividing 93 by 10 gives 9.3.
+      on_incorrect_attempt_1: Divide the whole by 10 and keep both digits in the number.
+      on_incorrect_attempt_2: Each digit moves one place in value, so 93 ÷ 10 = 9.3.
+      worked_explanation: The 9 tens become 9 units and the 3 units become 3 tenths.
+    mathematical_support: { hint_1: Make every digit one tenth as valuable., hint_2: The answer needs a tenths digit., worked_solution: '93 ÷ 10 = 9.3.' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 10, wholeAmount: 93, partAmount: 9.3, partitionCount: 10, selectedGroups: 1, showRoles: false, showResult: false, showMethod: false, methodSteps: ['93 ÷ 10 = 9.3'], solutionLabel: '10% of 93 = 9.3' } }
+    recovery_item_ref: PA-02-R03
+
+  - id: PA-02-G01
+    stage: guided
+    target: Find 10% of a multiple of ten.
+    prompt: Find 10% of 470.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '47' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You selected one equal tenth., on_correct_math: '470 ÷ 10 = 47.', on_incorrect_attempt_1: Find one of the ten equal groups., on_incorrect_attempt_2: Divide 470 by 10 to get 47., worked_explanation: '10% = 1/10, so 470 ÷ 10 = 47.' }
+    mathematical_support: { hint_1: Use whole ÷ 10., hint_2: Make each digit one tenth as valuable., worked_solution: '470 ÷ 10 = 47.' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 10, wholeAmount: 470, partAmount: 47, partitionCount: 10, selectedGroups: 1, showRoles: false, showResult: false, showMethod: false, methodSteps: ['470 ÷ 10 = 47'], solutionLabel: '10% of 470 = 47' } }
+    recovery_item_ref: PA-02-R01
+
+  - id: PA-02-F01
+    stage: faded
+    target: Find 10% when the result is below one.
+    prompt: Find 10% of 6.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '0.6' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You preserved the tenths place., on_correct_math: '6 ÷ 10 = 0.6.', on_incorrect_attempt_1: Six units become six tenths., on_incorrect_attempt_2: The leading zero shows there are no whole units; the answer is 0.6., worked_explanation: '10% of 6 is 6 ÷ 10 = 0.6.' }
+    mathematical_support: { hint_1: The answer is smaller than 1., hint_2: Write zero units and six tenths., worked_solution: '6 ÷ 10 = 0.6.' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 10, wholeAmount: 6, partAmount: 0.6, partitionCount: 10, selectedGroups: 1, showRoles: false, showResult: false, showMethod: false, methodSteps: ['6 units → 6 tenths', '6 ÷ 10 = 0.6'], solutionLabel: '10% of 6 = 0.6' } }
+    recovery_item_ref: PA-02-R03
+
+  - id: PA-02-I01
+    stage: independent_transfer
+    target: Retain the unit in a contextual calculation.
+    prompt: A sports centre has 1,450 members. 10% are under 16. How many members are under 16?
+    response: { type: decimal, input_label: Number of members }
+    answer: { value: '145' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You kept the people count attached to the result., on_correct_math: '1,450 ÷ 10 = 145 members.', on_incorrect_attempt_1: Use the complete membership as the whole and divide it by 10., on_incorrect_attempt_2: One tenth of 1,450 is 145., worked_explanation: 'Whole = 1,450 members; 1,450 ÷ 10 = 145 members.' }
+    mathematical_support: { hint_1: The whole is all 1,450 members., hint_2: Find one of ten equal groups., worked_solution: '10% of 1,450 = 145 members.' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 10, wholeAmount: 1450, unit: members, partAmount: 145, partitionCount: 10, selectedGroups: 1, showRoles: false, showResult: false, showMethod: false, methodSteps: ['1,450 ÷ 10 = 145'], solutionLabel: '10% of 1,450 = 145 members' } }
+    recovery_item_ref: PA-02-R02
+
+  - id: PA-02-P01
+    stage: practice
+    target: Find a whole-number tenth.
+    prompt: Find 10% of 1,200.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '120' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You found one of the ten equal shares., on_correct_math: '1,200 ÷ 10 = 120.', on_incorrect_attempt_1: Divide the whole by ten., on_incorrect_attempt_2: One tenth of 1,200 is 120., worked_explanation: '10% of 1,200 = 1,200 ÷ 10 = 120.' }
+    mathematical_support: { hint_1: Use A ÷ 10., hint_2: Check the result is one tenth as large., worked_solution: '1,200 ÷ 10 = 120.' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 10, wholeAmount: 1200, partAmount: 120, partitionCount: 10, selectedGroups: 1, solutionLabel: '10% of 1,200 = 120' } }
+
+  - id: PA-02-P02
+    stage: practice
+    target: Select the correct operation.
+    prompt: Which calculation finds 10% of 540?
+    response: { type: single_choice, options: ['540 ÷ 100', '540 ÷ 10', '540 × 10', '540 − 10'] }
+    answer: { value: '540 ÷ 10' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You chose the operation that makes one tenth., on_correct_math: Finding 10% means dividing the whole by 10., on_incorrect_attempt_1: Ten equal shares make the whole., on_incorrect_attempt_2: Select 540 ÷ 10., worked_explanation: '10% = 1/10, so use 540 ÷ 10.' }
+    mathematical_support: { hint_1: Which operation creates ten equal shares?, hint_2: Divide the whole by the denominator of 1/10., worked_solution: '540 ÷ 10 = 54.' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 10, wholeAmount: 540, partAmount: 54, partitionCount: 10, selectedGroups: 1, methodSteps: ['540 ÷ 10 = 54'], solutionLabel: 'Use 540 ÷ 10' } }
+
+  - id: PA-02-P03
+    stage: practice
+    target: Calculate a measured decimal result.
+    prompt: A roll of material is 87 metres long. A designer uses 10%. How many metres are used?
+    response: { type: decimal, input_label: Answer in metres }
+    answer: { value: '8.7' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You retained both the decimal and the metre unit., on_correct_math: '87 ÷ 10 = 8.7 metres.', on_incorrect_attempt_1: Divide 87 by 10 and keep the 7 as tenths., on_incorrect_attempt_2: The result is 8.7 metres., worked_explanation: '10% of 87 m = 87 ÷ 10 = 8.7 m.' }
+    mathematical_support: { hint_1: The 7 units become 7 tenths., hint_2: The answer is between 8 and 9 metres., worked_solution: '8.7 metres.' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 10, wholeAmount: 87, unit: metres, partAmount: 8.7, partitionCount: 10, selectedGroups: 1, solutionLabel: '10% of 87 metres = 8.7 metres' } }
+
+  - id: PA-02-P04
+    stage: practice
+    target: Recognise the invariant meaning of 10%.
+    prompt: Which statement is always true for a positive amount A?
+    response: { type: single_choice, options: ['10% of A is greater than A.', '10% of A is one tenth of A.', '10% of A is A − 10.', '10% of A is one hundredth of A.'] }
+    answer: { value: '10% of A is one tenth of A.' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You kept the percentage connected to one tenth., on_correct_math: '10% = 1/10 for every positive whole.', on_incorrect_attempt_1: Rewrite 10% as a fraction in simplest form., on_incorrect_attempt_2: Ten out of one hundred simplifies to one tenth., worked_explanation: '10/100 = 1/10, so 10% of A is one tenth of A.' }
+    mathematical_support: { hint_1: Simplify 10/100., hint_2: Divide numerator and denominator by 10., worked_solution: '10% of A = A ÷ 10.' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 10, wholeAmount: A, partitionCount: 10, selectedGroups: 1, solutionLabel: '10% of A is one tenth of A' } }
+
+  - id: PA-02-P05
+    stage: practice
+    target: Retain a count unit.
+    prompt: A charity receives 760 donated books. It sends 10% to one school. How many books are sent?
+    response: { type: decimal, input_label: Number of books }
+    answer: { value: '76' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You used the full donation as the whole., on_correct_math: '760 ÷ 10 = 76 books.', on_incorrect_attempt_1: Divide all 760 books into ten equal groups., on_incorrect_attempt_2: One group contains 76 books., worked_explanation: '10% of 760 = 760 ÷ 10 = 76 books.' }
+    mathematical_support: { hint_1: The whole is 760 books., hint_2: Find one equal tenth., worked_solution: '76 books.' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 10, wholeAmount: 760, unit: books, partAmount: 76, partitionCount: 10, selectedGroups: 1, solutionLabel: '10% of 760 books = 76 books' } }
+
+  - id: PA-02-E01
+    stage: exit
+    target: Calculate 10% with a whole-number result.
+    prompt: Find 10% of 680.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '68' }
+    attempt_policy: &exit { policy: single_submit_locked, max_attempts_before_resolution: 1, feedback_timing: after_exit_set, submit_label: Check answer, allow_change_before_submit: true, lock_after_final_submit: true }
+    scripts: { on_correct_math: '680 ÷ 10 = 68.', on_incorrect_attempt_1: Record the answer for the final result., on_incorrect_attempt_2: Not applicable., worked_explanation: '10% of 680 = 68.' }
+    mathematical_support: { hint_1: null, hint_2: null, worked_solution: '68' }
+    success_reaction: { mode: silent }
+    visual: { primitive: percentage_strip, model: { percent: 10, wholeAmount: 680, partAmount: 68, partitionCount: 10, selectedGroups: 1, solutionLabel: '10% of 680 = 68' } }
+
+  - id: PA-02-E02
+    stage: exit
+    target: Calculate 10% with a decimal result.
+    prompt: Find 10% of 57.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '5.7' }
+    attempt_policy: *exit
+    scripts: { on_correct_math: '57 ÷ 10 = 5.7.', on_incorrect_attempt_1: Record the answer for the final result., on_incorrect_attempt_2: Not applicable., worked_explanation: '10% of 57 = 5.7.' }
+    mathematical_support: { hint_1: null, hint_2: null, worked_solution: '5.7' }
+    success_reaction: { mode: silent }
+    visual: { primitive: percentage_strip, model: { percent: 10, wholeAmount: 57, partAmount: 5.7, partitionCount: 10, selectedGroups: 1, solutionLabel: '10% of 57 = 5.7' } }
+
+  - id: PA-02-CFM01
+    stage: confirmation
+    target: Confirm 10% in a count context.
+    prompt: A warehouse stores 930 boxes. Find 10% of the boxes.
+    response: { type: decimal, input_label: Number of boxes }
+    answer: { value: '93' }
+    attempt_policy: *exit
+    scripts: { on_correct_math: '930 ÷ 10 = 93 boxes.', on_incorrect_attempt_1: Record the answer for the final result., on_incorrect_attempt_2: Not applicable., worked_explanation: '10% of 930 boxes = 93 boxes.' }
+    mathematical_support: { hint_1: null, hint_2: null, worked_solution: '93 boxes' }
+    success_reaction: { mode: silent }
+    visual: { primitive: percentage_strip, model: { percent: 10, wholeAmount: 930, unit: boxes, partAmount: 93, partitionCount: 10, selectedGroups: 1, solutionLabel: '10% of 930 boxes = 93 boxes' } }
+
+  - id: PA-02-CFM02
+    stage: confirmation
+    target: Confirm a measured decimal result.
+    prompt: A ribbon is 125 cm long. Find 10% of its length.
+    response: { type: decimal, input_label: Answer in centimetres }
+    answer: { value: '12.5' }
+    attempt_policy: *exit
+    scripts: { on_correct_math: '125 ÷ 10 = 12.5 cm.', on_incorrect_attempt_1: Record the answer for the final result., on_incorrect_attempt_2: Not applicable., worked_explanation: '10% of 125 cm = 12.5 cm.' }
+    mathematical_support: { hint_1: null, hint_2: null, worked_solution: '12.5 cm' }
+    success_reaction: { mode: silent }
+    visual: { primitive: percentage_strip, model: { percent: 10, wholeAmount: 125, unit: cm, partAmount: 12.5, partitionCount: 10, selectedGroups: 1, solutionLabel: '10% of 125 cm = 12.5 cm' } }
+
+  - id: PA-02-R01
+    stage: repair
+    target: Repair equal-share meaning.
+    prompt: Which calculation finds 10% of 900?
+    response: { type: single_choice, options: ['900 ÷ 10', '900 ÷ 100', '900 × 10', '900 − 10'] }
+    answer: { value: '900 ÷ 10' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You selected one of ten equal shares., on_correct_math: 'Use 900 ÷ 10.', on_incorrect_attempt_1: Ten equal 10% groups make the whole., on_incorrect_attempt_2: Divide by 10, not 100., worked_explanation: '10% = 1/10, so 900 ÷ 10 = 90.' }
+    mathematical_support: { hint_1: Use the denominator of 1/10., hint_2: One tenth means divide by ten., worked_solution: '900 ÷ 10 = 90.' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 10, wholeAmount: 900, partAmount: 90, partitionCount: 10, selectedGroups: 1, methodSteps: ['900 ÷ 10 = 90'], solutionLabel: '10% of 900 = 90' } }
+
+  - id: PA-02-R02
+    stage: repair
+    target: Repair whole identification.
+    prompt: A club has 560 members and 10% are juniors. Which number must be divided by 10?
+    response: { type: single_choice, options: ['10', '100', '560', 'The unknown junior total'] }
+    answer: { value: '560' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You returned to the complete membership., on_correct_math: All 560 members form the whole., on_incorrect_attempt_1: Find the number representing every member., on_incorrect_attempt_2: The complete club of 560 members is divided by 10., worked_explanation: 'Whole = 560 members; 560 ÷ 10 = 56.' }
+    mathematical_support: { hint_1: Which number is 100% of the club?, hint_2: The 10% selects juniors from all 560 members., worked_solution: 'Divide 560 by 10.' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 10, wholeAmount: 560, unit: members, partAmount: 56, partitionCount: 10, selectedGroups: 1, solutionLabel: 'Whole = 560 members' } }
+
+  - id: PA-02-R03
+    stage: repair
+    target: Repair decimal place value.
+    prompt: Complete the calculation 58 ÷ 10.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '5.8' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You kept the 8 as tenths., on_correct_math: '58 ÷ 10 = 5.8.', on_incorrect_attempt_1: Make both digits one tenth as valuable., on_incorrect_attempt_2: Five tens become five units and eight units become eight tenths., worked_explanation: '58 becomes 5.8 when divided by 10.' }
+    mathematical_support: { hint_1: The 8 does not disappear., hint_2: Write 5 units and 8 tenths., worked_solution: '5.8' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 10, wholeAmount: 58, partAmount: 5.8, partitionCount: 10, selectedGroups: 1, showMethod: false, methodSteps: ['5 tens → 5 units', '8 units → 8 tenths', '58 ÷ 10 = 5.8'], solutionLabel: '58 ÷ 10 = 5.8' } }
+
+qa_acceptance:
+  source_alignment:
+    - The lesson teaches exactly 10% through one of ten equal shares and division by 10.
+    - Decimal place value is explained without a digit-deletion shortcut.
+    - Diagnostic and delayed retrieval banks remain outside the active route.
+  learner_facing:
+    - Every supported item has distinct authored correct, first-incorrect and second-incorrect responses.
+    - Exit and confirmation items are one-shot and hint-free.
+    - Results and worked methods remain hidden until the appropriate feedback state.

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FRA14 390 px responsive QA</title>
+    <style>
+      body { margin: 0; padding: 18px; color: #173132; background: #eef5f2; font: 16px/1.4 system-ui, sans-serif; }
+      main { display: grid; gap: 12px; justify-content: center; }
+      h1, p { width: 390px; margin: 0; }
+      iframe { width: 390px; height: 844px; border: 2px solid #173132; border-radius: 12px; background: white; }
+      #result.pass { color: #17643a; }
+      #result.fail { color: #a52d2d; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>FRA14 responsive QA</h1>
+      <p id="result" role="status">Loading the 390 px lesson frame…</p>
+      <iframe id="lesson-frame" title="FRA14 lesson at 390 pixels"></iframe>
+    </main>
+    <script>
+      const frame = document.querySelector("#lesson-frame");
+      const result = document.querySelector("#result");
+      frame.addEventListener("load", () => window.setTimeout(() => {
+        const doc = frame.contentDocument;
+        const width = frame.contentWindow.innerWidth;
+        const overflow = [...doc.querySelectorAll("body *")].filter((element) => {
+          const rect = element.getBoundingClientRect();
+          return rect.right > width + 2 || rect.left < -2;
+        }).slice(0, 5);
+        const controlsFit = [...doc.querySelectorAll("button, input, select")].every((control) => control.getBoundingClientRect().right <= width + 2);
+        const passed = doc.documentElement.scrollWidth <= width + 2 && overflow.length === 0 && controlsFit && Boolean(doc.querySelector(".fra14-context-visual"));
+        result.className = passed ? "pass" : "fail";
+        result.textContent = passed
+          ? `PASS: FRA14 fits the ${width} px frame with all controls in bounds.`
+          : `FAIL: scroll ${doc.documentElement.scrollWidth}/${width}; overflow ${overflow.map((element) => element.tagName.toLowerCase()).join(", ") || "none"}; controls ${controlsFit ? "fit" : "overflow"}.`;
+      }, 800), { once: true });
+      frame.src = "../index.html?dev=1&phase=teaching&responsive-qa=390#/fractions/FRA-14";
+    </script>
+  </body>
+</html>

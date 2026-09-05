@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MD-14 responsive visual QA</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../operation-structure.css">
+  <style>
+    body { margin: 0; padding: 18px; background: #eef2ef; }
+    main { width: min(920px,100%); margin: auto; }
+    section.fixture { margin: 0 0 22px; padding: 16px; border-radius: 18px; background: white; box-sizing: border-box; }
+    h1 { font-size: 24px; } h2 { font-size: 18px; }
+  </style>
+</head>
+<body>
+  <main><h1>MD-14 visual states</h1><div id="fixtures"></div></main>
+  <script src="../js/validators.js"></script>
+  <script src="../js/visual-primitives.js"></script>
+  <script src="../js/fraction-group-visuals.js"></script>
+  <script src="../js/mixed-division-visuals.js"></script>
+  <script>
+    const mix=(whole,n,d)=>({whole,n,d}),frac=(n,d)=>({n,d});
+    const models=[
+      ['Opening mixed bars',{kind:'mixed_division',left:mix(1,1,2),right:frac(3,4),phase:'reference_mixed'}],
+      ['Regrouped quarters',{kind:'mixed_division',left:mix(1,1,2),right:frac(3,4),phase:'grouped'}],
+      ['Two conversions',{kind:'mixed_division',left:mix(2,1,4),right:mix(1,1,2),phase:'right_converted'}],
+      ['Ribbon context',{kind:'mixed_division',left:mix(2,1,4),right:frac(3,4),object:'ribbon',unit:'m'}],
+      ['Juice context',{kind:'mixed_division',left:mix(1,2,3),right:frac(5,12),object:'juice',unit:'litres'}],
+      ['Plank context',{kind:'mixed_division',left:mix(3,1,2),right:frac(7,8),object:'plank',unit:'m'}],
+      ['Paint context',{kind:'mixed_division',left:mix(2,1,2),right:frac(5,8),object:'paint',unit:'litres'}]
+    ];
+    document.querySelector('#fixtures').innerHTML=models.map(([title,model])=>'<section class="fixture"><h2>'+title+'</h2><div class="os-visual">'+window.RevilyMixedDivisionVisuals.render(model,false)+'</div></section>').join('');
+  </script>
+</body>
+</html>

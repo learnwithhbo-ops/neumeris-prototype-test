@@ -1,0 +1,1915 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "MD-03 - Find the whole amount when a fraction is known",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-18",
+      "sha256": "e016a623acc0b9bcbc5a2207d0d42719d137a2f9d892c1dd3640f47559f51011"
+    },
+    "authored_scope": "Rebuild a positive whole-number amount from a known proper non-unit fraction; accept any mathematically valid exact method.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "MD03-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "preview_checked_2026-09-03",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        4,
+        5,
+        6,
+        7,
+        13,
+        15,
+        16,
+        17,
+        18
+      ],
+      "source_repairs_consulted": [
+        10,
+        11,
+        12
+      ],
+      "note": "All 18 approved pages read; p4–6 diagrams inspected. Includes the source forward check and four GCSE contexts. The source repeats its worked calculation in independent practice, but mastery uses unseen calculations. No entry, Diagnostic or delayed-Retrieval layers added."
+    }
+  },
+  "identity": {
+    "id": "MD-03",
+    "slug": "find-the-whole-amount-when-a-fraction-is-known",
+    "title": "Find the whole amount when a fraction is known",
+    "strand": "Number",
+    "cluster": "Multiplying and Dividing Fractions",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Reconstruct a whole amount when a known fraction of it is given.",
+    "success_criteria": [
+      "Divide the known part by the numerator to find one fractional part, then multiply by the denominator to rebuild the whole.",
+      "The known part contains the number of equal groups named by the numerator.",
+      "Use the sequence: Divide the known amount by the numerator; Label the value of one part; Multiply by the denominator; Check the whole is larger than the known proper-fraction part.",
+      "Complete a context question with the requested form and unit."
+    ],
+    "boundaries": {
+      "includes": [
+        "Proper non-unit fractions with denominators 3–12; positive integer known parts, one-part values and wholes.",
+        "Divide-then-multiply, multiply-then-divide, ratio, bar-model and equation methods when exact and valid."
+      ],
+      "excludes": [
+        "Diagnostic route",
+        "Delayed retrieval route",
+        "Algebraic generalisation beyond the approved packet"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "MD-01",
+      "MD-02"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for MD-01, MD-02 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "single_choice",
+      "integer"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    }
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "Divide the known part by the numerator to find one fractional part, then multiply by the denominator to rebuild the whole.",
+    "invariant": "The known part contains the number of equal groups named by the numerator.",
+    "mathematical_rule": "Divide the known amount by the numerator; Label the value of one part; Multiply by the denominator; Check the whole is larger than the known proper-fraction part",
+    "must_notice": [
+      "Divide the known amount by the numerator",
+      "Label the value of one part",
+      "Multiply by the denominator",
+      "Check the whole is larger than the known proper-fraction part"
+    ],
+    "common_confusions": [
+      "Treating the known fractional part as the complete whole",
+      "Ignoring how many parts the known amount contains",
+      "Stopping after one equal part",
+      "Dividing the one-part value again instead of rebuilding the whole"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "The known amount is only part",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "The known amount is only part",
+          "initial_state": "The known amount is only part",
+          "model": {
+            "kind": "rebuild_amount",
+            "known": 24,
+            "n": 3,
+            "d": 5,
+            "object": "quantity",
+            "target": "Whole amount"
+          }
+        },
+        "narration": {
+          "script": "Three fifths of an unknown whole is twenty-four. The three known parts are highlighted; the other two parts are still unknown."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Separate the known parts",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Separate the known parts",
+          "initial_state": "Separate the known parts",
+          "model": {
+            "kind": "rebuild_amount",
+            "known": 24,
+            "n": 3,
+            "d": 5,
+            "object": "quantity",
+            "target": "Whole amount",
+            "phase": "unit",
+            "annotation": "24 ÷ 3 = 8 in one fifth."
+          }
+        },
+        "narration": {
+          "script": "The numerator counts the known parts. Share their combined amount equally to find the value of one part."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Rebuild all the parts",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Rebuild all the parts",
+          "initial_state": "Rebuild all the parts",
+          "model": {
+            "kind": "rebuild_amount",
+            "known": 24,
+            "n": 3,
+            "d": 5,
+            "object": "quantity",
+            "target": "Whole amount",
+            "solved": true,
+            "annotation": "8 × 5 = 40 in the whole."
+          }
+        },
+        "narration": {
+          "script": "Every fifth has the same value. Use the denominator to rebuild the complete five-part whole."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "What does the division find?",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "What does the division find?",
+          "initial_state": "What does the division find?",
+          "model": null
+        },
+        "narration": {
+          "script": "Identify the intermediate value, before rebuilding the whole."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "MD-03-C01"
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Five known eighths",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Five known eighths",
+          "initial_state": "Five known eighths",
+          "model": {
+            "kind": "rebuild_amount",
+            "known": 45,
+            "n": 5,
+            "d": 8,
+            "object": "quantity",
+            "target": "Whole amount"
+          }
+        },
+        "narration": {
+          "script": "Now five eighths of a number is forty-five. That is the combined value of five parts, not the whole number."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T06"
+      },
+      {
+        "id": "T06",
+        "stage": "teaching",
+        "purpose": "Find one eighth",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Find one eighth",
+          "initial_state": "Find one eighth",
+          "model": {
+            "kind": "rebuild_amount",
+            "known": 45,
+            "n": 5,
+            "d": 8,
+            "object": "quantity",
+            "target": "Whole amount",
+            "phase": "unit",
+            "annotation": "45 ÷ 5 = 9 in one eighth."
+          }
+        },
+        "narration": {
+          "script": "Separate the five known parts equally. The one-part value can then be extended to the unknown parts."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T07"
+      },
+      {
+        "id": "T07",
+        "stage": "teaching",
+        "purpose": "Reconstruct eight eighths",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Reconstruct eight eighths",
+          "initial_state": "Reconstruct eight eighths",
+          "model": {
+            "kind": "rebuild_amount",
+            "known": 45,
+            "n": 5,
+            "d": 8,
+            "object": "quantity",
+            "target": "Whole amount",
+            "solved": true,
+            "annotation": "9 × 8 = 72 in the whole."
+          }
+        },
+        "narration": {
+          "script": "The whole contains eight equal parts. Combine them to reconstruct the number."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T08"
+      },
+      {
+        "id": "T08",
+        "stage": "teaching",
+        "purpose": "Check against the original statement",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Check against the original statement",
+          "initial_state": "Check against the original statement",
+          "model": {
+            "kind": "fraction_amount",
+            "total": 72,
+            "n": 5,
+            "d": 8,
+            "object": "quantity",
+            "target": "Check the known part",
+            "solved": true,
+            "annotation": "72 ÷ 8 × 5 = 45 ✓"
+          }
+        },
+        "narration": {
+          "script": "Take five eighths of the reconstructed number. It returns the given amount, so the whole fits the original statement."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T09"
+      },
+      {
+        "id": "T09",
+        "stage": "teaching",
+        "purpose": "Match the completed method",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Match the completed method",
+          "initial_state": "Match the completed method",
+          "model": null
+        },
+        "narration": {
+          "script": "Which method correctly reconstructs the whole?"
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "MD-03-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "MD-03-G01",
+        "support_level": "high",
+        "pre_question_script": "Keep the given part separate from the unknown whole.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "MD-03-G02",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "guided",
+        "question_ref": "MD-03-G03",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "guided",
+        "question_ref": "MD-03-G04",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G05"
+      },
+      "G05": {
+        "stage": "guided",
+        "question_ref": "MD-03-G05",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G06"
+      },
+      "G06": {
+        "stage": "guided",
+        "question_ref": "MD-03-G06",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "F01"
+      },
+      "F01": {
+        "stage": "faded",
+        "question_ref": "MD-03-P01",
+        "support_level": "reduced",
+        "pre_question_script": "Rebuild the whole yourself. You can ask for a clue if needed.",
+        "correct_next": "I01"
+      },
+      "I01": {
+        "stage": "independent_transfer",
+        "question_ref": "MD-03-P02",
+        "support_level": "none",
+        "pre_question_script": "Use any valid exact method. Work on paper if useful, then enter the whole-number result.",
+        "correct_next": "P03"
+      }
+    },
+    "practice": {
+      "intro_script": "Each question gives only part of an unknown whole. Keep those two amounts distinct as the context changes.",
+      "question_order": [
+        "MD-03-P03",
+        "MD-03-P04",
+        "MD-03-P05",
+        "MD-03-P06",
+        "MD-03-X01",
+        "MD-03-X02",
+        "MD-03-X03",
+        "MD-03-X04"
+      ]
+    },
+    "exit": {
+      "intro_script": "Complete two new calculations and a method check independently. Hints are not available during these final checks.",
+      "primary_question_refs": [
+        "MD-03-E01",
+        "MD-03-E02",
+        "MD-03-E03"
+      ],
+      "confirmation_question_refs": [],
+      "mastery_policy": {
+        "profile": "all_primary_unsupported",
+        "require_all": true,
+        "source_page": 13,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "You independently rebuilt both wholes and distinguished the known parts from the complete amount.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Keep building whole amounts",
+      "ryan_script": "One or more final checks need more practice. Compare the known part, one equal part and the complete whole.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "MD-03-C01",
+      "source_ref": {
+        "page": 4
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "Four sevenths of a number is 32. What does 32 ÷ 4 find?",
+      "target": "Meaning of one part",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "The value of one seventh of the whole.",
+          "The value of four sevenths of the whole.",
+          "The value of the complete whole.",
+          "The number of equal parts in the whole."
+        ]
+      },
+      "answer": {
+        "value": "The value of one seventh of the whole."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That division finds one seventh. Rebuilding the whole is a separate step.",
+        "correct_after_support": "That division finds one seventh. Rebuilding the whole is a separate step.",
+        "on_correct_math": "32 represents four equal parts. → 32 ÷ 4 = 8: the value of one seventh. → Seven such parts would make the whole.",
+        "on_incorrect_attempt_1": "The known amount covers four equal parts. What happens when it is shared between those parts?",
+        "on_incorrect_attempt_2": "The division separates the four known parts. Use the working to identify the value it finds.",
+        "worked_explanation": "32 represents four equal parts. → 32 ÷ 4 = 8: the value of one seventh. → Seven such parts would make the whole."
+      },
+      "mathematical_support": {
+        "hint_1": "The known amount covers four equal parts. What happens when it is shared between those parts?",
+        "hint_2": "Distinguish the value of one part from the number of parts in the whole.",
+        "worked_solution": "32 represents four equal parts. → 32 ÷ 4 = 8: the value of one seventh. → Seven such parts would make the whole."
+      },
+      "working": [
+        "32 represents four equal parts.",
+        "32 ÷ 4 = 8: the value of one seventh.",
+        "Seven such parts would make the whole."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "rebuild_amount",
+          "known": 32,
+          "n": 4,
+          "d": 7,
+          "object": "quantity",
+          "target": "Meaning of one part",
+          "resultScope": "unit"
+        }
+      },
+      "response_feedback": {
+        "The value of four sevenths of the whole.": "The given amount already represents four sevenths. Dividing it by four finds a smaller share.",
+        "The value of the complete whole.": "One share is not the whole. The denominator tells you how many shares the whole contains.",
+        "The number of equal parts in the whole.": "The denominator counts the parts. This calculation finds the value of one part."
+      }
+    },
+    {
+      "id": "MD-03-C02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "Five eighths of a number is 45. Which method finds the number correctly?",
+      "target": "Whole amount",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "45 ÷ 5 = 9; 9 × 8 = 72",
+          "45 ÷ 8 = 5.625; 5.625 × 5 = 28.125",
+          "45 ÷ 5 = 9, so the number is 9",
+          "45 × 8 = 360"
+        ]
+      },
+      "answer": {
+        "value": "45 ÷ 5 = 9; 9 × 8 = 72"
+      },
+      "policy": {
+        "scored": false,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true,
+        "engagementOnly": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That method reconstructs all eight parts from the five known parts.",
+        "correct_after_support": "That method reconstructs all eight parts from the five known parts.",
+        "on_correct_math": "Five known parts have value 45. → 45 ÷ 5 = 9 in one part. → 9 × 8 = 72 in the whole.",
+        "on_incorrect_attempt_1": "The known amount is only five of the eight equal parts.",
+        "on_incorrect_attempt_2": "Compare the known-part, one-part and whole-amount lines.",
+        "worked_explanation": "Five known parts have value 45. → 45 ÷ 5 = 9 in one part. → 9 × 8 = 72 in the whole."
+      },
+      "mathematical_support": {
+        "hint_1": "The known amount is only five of the eight equal parts.",
+        "hint_2": "Look for a method that first separates the known parts and then rebuilds all eight.",
+        "worked_solution": "Five known parts have value 45. → 45 ÷ 5 = 9 in one part. → 9 × 8 = 72 in the whole."
+      },
+      "working": [
+        "Five known parts have value 45.",
+        "45 ÷ 5 = 9 in one part.",
+        "9 × 8 = 72 in the whole."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "rebuild_amount",
+          "known": 45,
+          "n": 5,
+          "d": 8,
+          "object": "quantity",
+          "target": "Whole amount"
+        }
+      },
+      "response_feedback": {
+        "45 ÷ 8 = 5.625; 5.625 × 5 = 28.125": "That treats the known part as if it were the whole. We need to rebuild a larger amount.",
+        "45 ÷ 5 = 9, so the number is 9": "Nine is one eighth. The complete number contains eight of those parts.",
+        "45 × 8 = 360": "The given amount already contains five parts. Multiplying it by eight repeats all five each time."
+      }
+    },
+    {
+      "id": "MD-03-G01",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "Three sevenths of a number is 27. What is the numerator?",
+      "target": "Numerator",
+      "response": {
+        "type": "integer",
+        "input_label": "Numerator",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 3
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Three counts the known equal parts.",
+        "correct_after_support": "Three counts the known equal parts.",
+        "on_correct_math": "The numerator is 3: three known parts.",
+        "on_incorrect_attempt_1": "Which fraction number counts the parts whose combined value is known?",
+        "on_incorrect_attempt_2": "The numerator counts three known sevenths. Use that to correct your answer.",
+        "worked_explanation": "The numerator is 3: three known parts."
+      },
+      "mathematical_support": {
+        "hint_1": "Which fraction number counts the parts whose combined value is known?",
+        "hint_2": "Look above the fraction bar.",
+        "worked_solution": "The numerator is 3: three known parts."
+      },
+      "working": [
+        "The numerator is 3: three known parts."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "rebuild_amount",
+          "known": 27,
+          "n": 3,
+          "d": 7,
+          "object": "quantity",
+          "target": "Numerator"
+        }
+      },
+      "reveal_model_on_submit": false
+    },
+    {
+      "id": "MD-03-G02",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "Three sevenths is 27. Find one equal part: 27 ÷ 3 = ?",
+      "target": "Value of one seventh",
+      "response": {
+        "type": "integer",
+        "input_label": "Value of one seventh",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 9
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That is one seventh. The complete number is still to be rebuilt.",
+        "correct_after_support": "That is one seventh. The complete number is still to be rebuilt.",
+        "on_correct_math": "27 ÷ 3 = 9. → One seventh has value 9.",
+        "on_incorrect_attempt_1": "Share the known amount between the known parts, not every part of the whole.",
+        "on_incorrect_attempt_2": "Use the division line to identify one seventh, then correct this intermediate answer.",
+        "worked_explanation": "27 ÷ 3 = 9. → One seventh has value 9."
+      },
+      "mathematical_support": {
+        "hint_1": "Share the known amount between the known parts, not every part of the whole.",
+        "hint_2": "Which number multiplied by three makes the known amount?",
+        "worked_solution": "27 ÷ 3 = 9. → One seventh has value 9."
+      },
+      "working": [
+        "27 ÷ 3 = 9.",
+        "One seventh has value 9."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "rebuild_amount",
+          "known": 27,
+          "n": 3,
+          "d": 7,
+          "object": "quantity",
+          "target": "Value of one seventh",
+          "resultScope": "unit",
+          "previous": "27 represents three equal parts"
+        }
+      }
+    },
+    {
+      "id": "MD-03-G03",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "In three sevenths, what denominator counts all the parts in the whole?",
+      "target": "Denominator",
+      "response": {
+        "type": "integer",
+        "input_label": "Denominator",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 7
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Seven tells us how many equal parts rebuild the whole.",
+        "correct_after_support": "Seven tells us how many equal parts rebuild the whole.",
+        "on_correct_math": "The denominator is 7: the whole contains seven equal parts.",
+        "on_incorrect_attempt_1": "Which number names the fractional parts?",
+        "on_incorrect_attempt_2": "The denominator counts seven parts in the complete whole.",
+        "worked_explanation": "The denominator is 7: the whole contains seven equal parts."
+      },
+      "mathematical_support": {
+        "hint_1": "Which number names the fractional parts?",
+        "hint_2": "Look below the fraction bar.",
+        "worked_solution": "The denominator is 7: the whole contains seven equal parts."
+      },
+      "working": [
+        "The denominator is 7: the whole contains seven equal parts."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "rebuild_amount",
+          "known": 27,
+          "n": 3,
+          "d": 7,
+          "object": "quantity",
+          "target": "Denominator",
+          "phase": "unit",
+          "previous": "One seventh has value 9"
+        }
+      },
+      "reveal_model_on_submit": false
+    },
+    {
+      "id": "MD-03-G04",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "One seventh is 9. Rebuild the whole: 9 × 7 = ?",
+      "target": "Complete whole",
+      "response": {
+        "type": "integer",
+        "input_label": "Complete whole",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 63
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "You have rebuilt all seven parts of the complete number.",
+        "correct_after_support": "You have rebuilt all seven parts of the complete number.",
+        "on_correct_math": "One seventh has value 9. → Seven sevenths: 9 × 7 = 63.",
+        "on_incorrect_attempt_1": "The whole contains seven copies of the one-part value.",
+        "on_incorrect_attempt_2": "Compare one seventh with seven sevenths in the working, then correct the whole amount.",
+        "worked_explanation": "One seventh has value 9. → Seven sevenths: 9 × 7 = 63."
+      },
+      "mathematical_support": {
+        "hint_1": "The whole contains seven copies of the one-part value.",
+        "hint_2": "Combine all the equal parts; do not divide the one-part value again.",
+        "worked_solution": "One seventh has value 9. → Seven sevenths: 9 × 7 = 63."
+      },
+      "working": [
+        "One seventh has value 9.",
+        "Seven sevenths: 9 × 7 = 63."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "rebuild_amount",
+          "known": 27,
+          "n": 3,
+          "d": 7,
+          "object": "quantity",
+          "target": "Complete whole",
+          "phase": "unit",
+          "previous": "One seventh: 27 ÷ 3 = 9"
+        }
+      }
+    },
+    {
+      "id": "MD-03-G05",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "Three sevenths of a number is 27. Complete the conclusion: the whole number is…",
+      "target": "Whole number",
+      "response": {
+        "type": "integer",
+        "input_label": "Whole number",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 63
+      },
+      "policy": {
+        "scored": false,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true,
+        "engagementOnly": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That conclusion names the whole, not the given part.",
+        "correct_after_support": "That conclusion names the whole, not the given part.",
+        "on_correct_math": "The whole contains seven parts of 9. → The whole number is 63.",
+        "on_incorrect_attempt_1": "The completed multiplication gives the whole amount.",
+        "on_incorrect_attempt_2": "The whole is the value of all seven equal parts.",
+        "worked_explanation": "The whole contains seven parts of 9. → The whole number is 63."
+      },
+      "mathematical_support": {
+        "hint_1": "The completed multiplication gives the whole amount.",
+        "hint_2": "Use the value of all seven parts, not one part alone.",
+        "worked_solution": "The whole contains seven parts of 9. → The whole number is 63."
+      },
+      "working": [
+        "The whole contains seven parts of 9.",
+        "The whole number is 63."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "rebuild_amount",
+          "known": 27,
+          "n": 3,
+          "d": 7,
+          "object": "quantity",
+          "target": "Whole number",
+          "previous": "9 × 7 = 63"
+        }
+      },
+      "response_feedback": {
+        "9": "Nine is only one seventh. The rebuilt whole is sixty-three.",
+        "27": "Twenty-seven is the given part, not the complete number."
+      }
+    },
+    {
+      "id": "MD-03-G06",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "Which statement explains how to find the whole when three sevenths is 27?",
+      "target": "Whole amount",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Divide 27 by 3 to find one part, then multiply by 7.",
+          "Divide 27 by 7 to find one part, then multiply by 3.",
+          "Multiply 27 by 7 and ignore the numerator.",
+          "Divide 27 by both 3 and 7."
+        ]
+      },
+      "answer": {
+        "value": "Divide 27 by 3 to find one part, then multiply by 7."
+      },
+      "policy": {
+        "scored": false,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true,
+        "engagementOnly": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The explanation separates the known parts before rebuilding the whole.",
+        "correct_after_support": "The explanation separates the known parts before rebuilding the whole.",
+        "on_correct_math": "27 ÷ 3 = 9 in one part. → 9 × 7 = 63 in the whole.",
+        "on_incorrect_attempt_1": "Decide how many parts the known amount contains.",
+        "on_incorrect_attempt_2": "Match each fraction number to its role in the two worked lines.",
+        "worked_explanation": "27 ÷ 3 = 9 in one part. → 9 × 7 = 63 in the whole."
+      },
+      "mathematical_support": {
+        "hint_1": "Decide how many parts the known amount contains.",
+        "hint_2": "After finding one part, use all the parts that make the whole.",
+        "worked_solution": "27 ÷ 3 = 9 in one part. → 9 × 7 = 63 in the whole."
+      },
+      "working": [
+        "27 ÷ 3 = 9 in one part.",
+        "9 × 7 = 63 in the whole."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "rebuild_amount",
+          "known": 27,
+          "n": 3,
+          "d": 7,
+          "object": "quantity",
+          "target": "Whole amount"
+        }
+      },
+      "response_feedback": {
+        "Divide 27 by 7 to find one part, then multiply by 3.": "That would find a fraction of the given amount. Here the given amount is already only part of the whole.",
+        "Multiply 27 by 7 and ignore the numerator.": "That uses the three-part amount as if it were one part.",
+        "Divide 27 by both 3 and 7.": "The second step needs to rebuild seven parts, not make one part smaller."
+      }
+    },
+    {
+      "id": "MD-03-P01",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "faded",
+      "prompt": "2/3 of a number is 18. Find the whole number.",
+      "target": "Whole amount",
+      "response": {
+        "type": "integer",
+        "input_label": "Whole amount",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 27
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The whole contains all three thirds, including the two given thirds.",
+        "correct_after_support": "The whole contains all three thirds, including the two given thirds.",
+        "on_correct_math": "18 ÷ 2 = 9 in one equal part. → 9 × 3 = 27 in the whole. → Whole amount: 27.",
+        "on_incorrect_attempt_1": "Does your result name the known part, one equal part, or the complete whole?",
+        "on_incorrect_attempt_2": "Separate the two known thirds, then compare them with all three thirds.",
+        "worked_explanation": "18 ÷ 2 = 9 in one equal part. → 9 × 3 = 27 in the whole. → Whole amount: 27."
+      },
+      "mathematical_support": {
+        "hint_1": "Does your result name the known part, one equal part, or the complete whole?",
+        "hint_2": "The known amount contains 2 parts. Rebuild all 3 equal parts. Any valid exact method is allowed.",
+        "worked_solution": "18 ÷ 2 = 9 in one equal part. → 9 × 3 = 27 in the whole. → Whole amount: 27."
+      },
+      "working": [
+        "18 ÷ 2 = 9 in one equal part.",
+        "9 × 3 = 27 in the whole.",
+        "Whole amount: 27."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "rebuild_amount",
+          "known": 18,
+          "n": 2,
+          "d": 3,
+          "object": "quantity",
+          "target": "Whole amount",
+          "stage": "faded",
+          "reaction": "The whole contains all three thirds, including the two given thirds.",
+          "correction": "Separate the two known thirds, then compare them with all three thirds."
+        }
+      },
+      "response_feedback": {
+        "9": "That is one equal part. How many equal parts make the whole?",
+        "54": "That repeats the known multi-part amount. Account for how many parts it already contains."
+      }
+    },
+    {
+      "id": "MD-03-P02",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "independent_transfer",
+      "prompt": "3/5 of a number is 42. Find the whole number.",
+      "target": "Whole amount",
+      "response": {
+        "type": "integer",
+        "input_label": "Whole amount",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 70
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "You rebuilt five equal fifths from the three known fifths.",
+        "correct_after_support": "You rebuilt five equal fifths from the three known fifths.",
+        "on_correct_math": "42 ÷ 3 = 14 in one equal part. → 14 × 5 = 70 in the whole. → Whole amount: 70.",
+        "on_incorrect_attempt_1": "Does your result name the known part, one equal part, or the complete whole?",
+        "on_incorrect_attempt_2": "Compare the value of one fifth with the value of the complete five-part whole.",
+        "worked_explanation": "42 ÷ 3 = 14 in one equal part. → 14 × 5 = 70 in the whole. → Whole amount: 70."
+      },
+      "mathematical_support": {
+        "hint_1": "Does your result name the known part, one equal part, or the complete whole?",
+        "hint_2": "The known amount contains 3 parts. Rebuild all 5 equal parts. Any valid exact method is allowed.",
+        "worked_solution": "42 ÷ 3 = 14 in one equal part. → 14 × 5 = 70 in the whole. → Whole amount: 70."
+      },
+      "working": [
+        "42 ÷ 3 = 14 in one equal part.",
+        "14 × 5 = 70 in the whole.",
+        "Whole amount: 70."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "rebuild_amount",
+          "known": 42,
+          "n": 3,
+          "d": 5,
+          "object": "quantity",
+          "target": "Whole amount",
+          "stage": "independent_transfer",
+          "reaction": "You rebuilt five equal fifths from the three known fifths.",
+          "correction": "Compare the value of one fifth with the value of the complete five-part whole."
+        }
+      },
+      "response_feedback": {
+        "14": "That is one equal part. How many equal parts make the whole?",
+        "210": "That repeats the known multi-part amount. Account for how many parts it already contains."
+      }
+    },
+    {
+      "id": "MD-03-P03",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "4/7 of a number is 32. Find the whole number.",
+      "target": "Whole amount",
+      "response": {
+        "type": "integer",
+        "input_label": "Whole amount",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 56
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The result accounts for all seven parts, not just the four known parts.",
+        "correct_after_support": "The result accounts for all seven parts, not just the four known parts.",
+        "on_correct_math": "32 ÷ 4 = 8 in one equal part. → 8 × 7 = 56 in the whole. → Whole amount: 56.",
+        "on_incorrect_attempt_1": "Does your result name the known part, one equal part, or the complete whole?",
+        "on_incorrect_attempt_2": "Use the four known sevenths to check the value of one part, then rebuild seven.",
+        "worked_explanation": "32 ÷ 4 = 8 in one equal part. → 8 × 7 = 56 in the whole. → Whole amount: 56."
+      },
+      "mathematical_support": {
+        "hint_1": "Does your result name the known part, one equal part, or the complete whole?",
+        "hint_2": "The known amount contains 4 parts. Rebuild all 7 equal parts. Any valid exact method is allowed.",
+        "worked_solution": "32 ÷ 4 = 8 in one equal part. → 8 × 7 = 56 in the whole. → Whole amount: 56."
+      },
+      "working": [
+        "32 ÷ 4 = 8 in one equal part.",
+        "8 × 7 = 56 in the whole.",
+        "Whole amount: 56."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "rebuild_amount",
+          "known": 32,
+          "n": 4,
+          "d": 7,
+          "object": "quantity",
+          "target": "Whole amount",
+          "reaction": "The result accounts for all seven parts, not just the four known parts.",
+          "correction": "Use the four known sevenths to check the value of one part, then rebuild seven."
+        }
+      },
+      "response_feedback": {
+        "8": "That is one equal part. How many equal parts make the whole?",
+        "224": "That repeats the known multi-part amount. Account for how many parts it already contains."
+      }
+    },
+    {
+      "id": "MD-03-P04",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "5/8 of a number is 45. Find the whole number.",
+      "target": "Whole amount",
+      "response": {
+        "type": "integer",
+        "input_label": "Whole amount",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 72
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "You reconstructed the complete eight-part amount.",
+        "correct_after_support": "You reconstructed the complete eight-part amount.",
+        "on_correct_math": "45 ÷ 5 = 9 in one equal part. → 9 × 8 = 72 in the whole. → Whole amount: 72.",
+        "on_incorrect_attempt_1": "Does your result name the known part, one equal part, or the complete whole?",
+        "on_incorrect_attempt_2": "The working distinguishes the five given eighths from all eight eighths.",
+        "worked_explanation": "45 ÷ 5 = 9 in one equal part. → 9 × 8 = 72 in the whole. → Whole amount: 72."
+      },
+      "mathematical_support": {
+        "hint_1": "Does your result name the known part, one equal part, or the complete whole?",
+        "hint_2": "The known amount contains 5 parts. Rebuild all 8 equal parts. Any valid exact method is allowed.",
+        "worked_solution": "45 ÷ 5 = 9 in one equal part. → 9 × 8 = 72 in the whole. → Whole amount: 72."
+      },
+      "working": [
+        "45 ÷ 5 = 9 in one equal part.",
+        "9 × 8 = 72 in the whole.",
+        "Whole amount: 72."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "rebuild_amount",
+          "known": 45,
+          "n": 5,
+          "d": 8,
+          "object": "quantity",
+          "target": "Whole amount",
+          "reaction": "You reconstructed the complete eight-part amount.",
+          "correction": "The working distinguishes the five given eighths from all eight eighths."
+        }
+      },
+      "response_feedback": {
+        "9": "That is one equal part. How many equal parts make the whole?",
+        "360": "That repeats the known multi-part amount. Account for how many parts it already contains."
+      }
+    },
+    {
+      "id": "MD-03-P05",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "7/10 of a number is 63. Find the whole number.",
+      "target": "Whole amount",
+      "response": {
+        "type": "integer",
+        "input_label": "Whole amount",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 90
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The reconstructed whole includes all ten equal tenths.",
+        "correct_after_support": "The reconstructed whole includes all ten equal tenths.",
+        "on_correct_math": "63 ÷ 7 = 9 in one equal part. → 9 × 10 = 90 in the whole. → Whole amount: 90.",
+        "on_incorrect_attempt_1": "Does your result name the known part, one equal part, or the complete whole?",
+        "on_incorrect_attempt_2": "Compare seven known tenths with all ten tenths before correcting your answer.",
+        "worked_explanation": "63 ÷ 7 = 9 in one equal part. → 9 × 10 = 90 in the whole. → Whole amount: 90."
+      },
+      "mathematical_support": {
+        "hint_1": "Does your result name the known part, one equal part, or the complete whole?",
+        "hint_2": "The known amount contains 7 parts. Rebuild all 10 equal parts. Any valid exact method is allowed.",
+        "worked_solution": "63 ÷ 7 = 9 in one equal part. → 9 × 10 = 90 in the whole. → Whole amount: 90."
+      },
+      "working": [
+        "63 ÷ 7 = 9 in one equal part.",
+        "9 × 10 = 90 in the whole.",
+        "Whole amount: 90."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "rebuild_amount",
+          "known": 63,
+          "n": 7,
+          "d": 10,
+          "object": "quantity",
+          "target": "Whole amount",
+          "reaction": "The reconstructed whole includes all ten equal tenths.",
+          "correction": "Compare seven known tenths with all ten tenths before correcting your answer."
+        }
+      },
+      "response_feedback": {
+        "9": "That is one equal part. How many equal parts make the whole?",
+        "630": "That repeats the known multi-part amount. Account for how many parts it already contains."
+      }
+    },
+    {
+      "id": "MD-03-P06",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Three quarters of a number is 39. What is the whole number?",
+      "target": "Whole amount",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "52",
+          "29.25",
+          "13",
+          "156"
+        ]
+      },
+      "answer": {
+        "value": "52"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That value contains all four quarters.",
+        "correct_after_support": "That value contains all four quarters.",
+        "on_correct_math": "39 ÷ 3 = 13 in one quarter. → 13 × 4 = 52 in the whole.",
+        "on_incorrect_attempt_1": "The given amount is three quarters, not the whole.",
+        "on_incorrect_attempt_2": "Compare the known three quarters with the four-quarter whole.",
+        "worked_explanation": "39 ÷ 3 = 13 in one quarter. → 13 × 4 = 52 in the whole."
+      },
+      "mathematical_support": {
+        "hint_1": "The given amount is three quarters, not the whole.",
+        "hint_2": "The whole must contain four equal quarter-parts.",
+        "worked_solution": "39 ÷ 3 = 13 in one quarter. → 13 × 4 = 52 in the whole."
+      },
+      "working": [
+        "39 ÷ 3 = 13 in one quarter.",
+        "13 × 4 = 52 in the whole."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "rebuild_amount",
+          "known": 39,
+          "n": 3,
+          "d": 4,
+          "object": "quantity",
+          "target": "Whole amount"
+        }
+      },
+      "response_feedback": {
+        "13": "Thirteen is only one quarter. The question asks for all four quarters.",
+        "156": "That repeats all three given quarters four times. First account for the number of known parts.",
+        "29.25": "That takes three quarters of the known part. We need the larger whole that the part came from."
+      }
+    },
+    {
+      "id": "MD-03-X01",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "Three eighths of the students in a sports club are in Year 10. There are 24 Year 10 students. How many students are in the club altogether?",
+      "target": "Total students in the club",
+      "response": {
+        "type": "integer",
+        "input_label": "Total students in the club",
+        "suffix": "students"
+      },
+      "answer": {
+        "value": 64
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The total includes the full club, not just Year Ten.",
+        "correct_after_support": "The total includes the full club, not just Year Ten.",
+        "on_correct_math": "24 ÷ 3 = 8 in one equal part. → 8 × 8 = 64 in the whole. → Whole amount: 64 students.",
+        "on_incorrect_attempt_1": "The Year 10 group is only part of the club. Does your answer include all year groups?",
+        "on_incorrect_attempt_2": "Use the Year Ten group to find one eighth, then rebuild the complete club.",
+        "worked_explanation": "24 ÷ 3 = 8 in one equal part. → 8 × 8 = 64 in the whole. → Whole amount: 64 students."
+      },
+      "mathematical_support": {
+        "hint_1": "The Year 10 group is only part of the club. Does your answer include all year groups?",
+        "hint_2": "The known amount contains 3 parts. Rebuild all 8 equal parts. Any valid exact method is allowed.",
+        "worked_solution": "24 ÷ 3 = 8 in one equal part. → 8 × 8 = 64 in the whole. → Whole amount: 64 students."
+      },
+      "working": [
+        "24 ÷ 3 = 8 in one equal part.",
+        "8 × 8 = 64 in the whole.",
+        "Whole amount: 64 students."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "rebuild_amount",
+          "known": 24,
+          "n": 3,
+          "d": 8,
+          "object": "students",
+          "target": "Total students in the club",
+          "unit": "students",
+          "prompt": "Three eighths of the students in a sports club are in Year 10. There are 24 Year 10 students. How many students are in the club altogether?",
+          "clue": "The Year 10 group is only part of the club. Does your answer include all year groups?",
+          "reaction": "The total includes the full club, not just Year Ten.",
+          "correction": "Use the Year Ten group to find one eighth, then rebuild the complete club."
+        }
+      },
+      "response_feedback": {
+        "8": "That is one equal part. How many equal parts make the whole?",
+        "192": "That repeats the known multi-part amount. Account for how many parts it already contains."
+      }
+    },
+    {
+      "id": "MD-03-X02",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "Mia spends five sevenths of her money on a jacket costing £45. How much money did she have originally?",
+      "target": "Original money in pounds",
+      "response": {
+        "type": "integer",
+        "input_label": "Original money in pounds",
+        "prefix": "£"
+      },
+      "answer": {
+        "value": 63
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The original money includes both the jacket cost and the unspent part.",
+        "correct_after_support": "The original money includes both the jacket cost and the unspent part.",
+        "on_correct_math": "45 ÷ 5 = 9 in one equal part. → 9 × 7 = 63 in the whole. → Original amount: £63.",
+        "on_incorrect_attempt_1": "The jacket cost covers five sevenths of the original money. What remains unknown?",
+        "on_incorrect_attempt_2": "Separate the five known money shares, then rebuild the seven-share original amount.",
+        "worked_explanation": "45 ÷ 5 = 9 in one equal part. → 9 × 7 = 63 in the whole. → Original amount: £63."
+      },
+      "mathematical_support": {
+        "hint_1": "The jacket cost covers five sevenths of the original money. What remains unknown?",
+        "hint_2": "The known amount contains 5 parts. Rebuild all 7 equal parts. Any valid exact method is allowed.",
+        "worked_solution": "45 ÷ 5 = 9 in one equal part. → 9 × 7 = 63 in the whole. → Original amount: £63."
+      },
+      "working": [
+        "45 ÷ 5 = 9 in one equal part.",
+        "9 × 7 = 63 in the whole.",
+        "Original amount: £63."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "rebuild_amount",
+          "known": 45,
+          "n": 5,
+          "d": 7,
+          "object": "money",
+          "target": "Original money in pounds",
+          "unit": "£",
+          "prompt": "Mia spends five sevenths of her money on a jacket costing £45. How much money did she have originally?",
+          "clue": "The jacket cost covers five sevenths of the original money. What remains unknown?",
+          "reaction": "The original money includes both the jacket cost and the unspent part.",
+          "correction": "Separate the five known money shares, then rebuild the seven-share original amount."
+        }
+      },
+      "response_feedback": {
+        "9": "That is one equal part. How many equal parts make the whole?",
+        "315": "That repeats the known multi-part amount. Account for how many parts it already contains."
+      }
+    },
+    {
+      "id": "MD-03-X03",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A train journey of 84 km is seven tenths of a complete journey. What is the length of the complete journey?",
+      "target": "Complete journey distance",
+      "response": {
+        "type": "integer",
+        "input_label": "Complete journey distance",
+        "suffix": "km"
+      },
+      "answer": {
+        "value": 120
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The total distance includes all ten tenths of the journey.",
+        "correct_after_support": "The total distance includes all ten tenths of the journey.",
+        "on_correct_math": "84 ÷ 7 = 12 in one equal part. → 12 × 10 = 120 in the whole. → Whole amount: 120 km.",
+        "on_incorrect_attempt_1": "The train distance is not the complete journey. Reconstruct all its equal parts.",
+        "on_incorrect_attempt_2": "Compare the known train distance with the complete ten-part journey.",
+        "worked_explanation": "84 ÷ 7 = 12 in one equal part. → 12 × 10 = 120 in the whole. → Whole amount: 120 km."
+      },
+      "mathematical_support": {
+        "hint_1": "The train distance is not the complete journey. Reconstruct all its equal parts.",
+        "hint_2": "The known amount contains 7 parts. Rebuild all 10 equal parts. Any valid exact method is allowed.",
+        "worked_solution": "84 ÷ 7 = 12 in one equal part. → 12 × 10 = 120 in the whole. → Whole amount: 120 km."
+      },
+      "working": [
+        "84 ÷ 7 = 12 in one equal part.",
+        "12 × 10 = 120 in the whole.",
+        "Whole amount: 120 km."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "rebuild_amount",
+          "known": 84,
+          "n": 7,
+          "d": 10,
+          "object": "journey",
+          "target": "Complete journey distance",
+          "unit": "km",
+          "prompt": "A train journey of 84 km is seven tenths of a complete journey. What is the length of the complete journey?",
+          "clue": "The train distance is not the complete journey. Reconstruct all its equal parts.",
+          "reaction": "The total distance includes all ten tenths of the journey.",
+          "correction": "Compare the known train distance with the complete ten-part journey."
+        }
+      },
+      "response_feedback": {
+        "12": "That is one equal part. How many equal parts make the whole?",
+        "840": "That repeats the known multi-part amount. Account for how many parts it already contains."
+      }
+    },
+    {
+      "id": "MD-03-X04",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "Four ninths of the tiles in a box are blue. There are 28 blue tiles. Which calculation finds the total number of tiles?",
+      "target": "Calculation for all tiles",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "28 ÷ 4 × 9",
+          "28 ÷ 9 × 4",
+          "28 × 9",
+          "28 ÷ 4"
+        ]
+      },
+      "answer": {
+        "value": "28 ÷ 4 × 9"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That calculation rebuilds all nine shares from the four blue shares.",
+        "correct_after_support": "That calculation rebuilds all nine shares from the four blue shares.",
+        "on_correct_math": "The 28 blue tiles represent four equal parts. → 28 ÷ 4 = 7 in one part. → 7 × 9 = 63 tiles altogether.",
+        "on_incorrect_attempt_1": "The blue tiles make up four known parts, not the complete box.",
+        "on_incorrect_attempt_2": "Use the blue group to identify one share, then compare it with the full box.",
+        "worked_explanation": "The 28 blue tiles represent four equal parts. → 28 ÷ 4 = 7 in one part. → 7 × 9 = 63 tiles altogether."
+      },
+      "mathematical_support": {
+        "hint_1": "The blue tiles make up four known parts, not the complete box.",
+        "hint_2": "First account for the four known shares, then rebuild all nine shares.",
+        "worked_solution": "The 28 blue tiles represent four equal parts. → 28 ÷ 4 = 7 in one part. → 7 × 9 = 63 tiles altogether."
+      },
+      "working": [
+        "The 28 blue tiles represent four equal parts.",
+        "28 ÷ 4 = 7 in one part.",
+        "7 × 9 = 63 tiles altogether."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "rebuild_amount",
+          "known": 28,
+          "n": 4,
+          "d": 9,
+          "object": "tiles",
+          "target": "Calculation for all tiles"
+        }
+      },
+      "response_feedback": {
+        "28 ÷ 9 × 4": "That takes a fraction of the blue tiles instead of rebuilding the whole box.",
+        "28 × 9": "That treats the blue group as one share, although it already contains four shares.",
+        "28 ÷ 4": "That finds one ninth. The full box contains nine such shares."
+      }
+    },
+    {
+      "id": "MD-03-E01",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "exit",
+      "prompt": "3/5 of a number is 33. Find the whole number.",
+      "target": "Whole amount",
+      "response": {
+        "type": "integer",
+        "input_label": "Whole amount",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 55
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Your answer reconstructs the whole from the known three fifths.",
+        "correct_after_support": "Your answer reconstructs the whole from the known three fifths.",
+        "on_correct_math": "33 ÷ 3 = 11 in one equal part. → 11 × 5 = 55 in the whole. → Whole amount: 55.",
+        "on_incorrect_attempt_1": "Does your result name the known part, one equal part, or the complete whole?",
+        "on_incorrect_attempt_2": "Compare the three known fifths with the five-part whole.",
+        "worked_explanation": "33 ÷ 3 = 11 in one equal part. → 11 × 5 = 55 in the whole. → Whole amount: 55.",
+        "on_locked_incorrect": "Compare the known part, one-part value and reconstructed whole in the working."
+      },
+      "mathematical_support": {
+        "hint_1": "Does your result name the known part, one equal part, or the complete whole?",
+        "hint_2": "The known amount contains 3 parts. Rebuild all 5 equal parts. Any valid exact method is allowed.",
+        "worked_solution": "33 ÷ 3 = 11 in one equal part. → 11 × 5 = 55 in the whole. → Whole amount: 55."
+      },
+      "working": [
+        "33 ÷ 3 = 11 in one equal part.",
+        "11 × 5 = 55 in the whole.",
+        "Whole amount: 55."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "rebuild_amount",
+          "known": 33,
+          "n": 3,
+          "d": 5,
+          "object": "quantity",
+          "target": "Whole amount",
+          "stage": "exit",
+          "reaction": "Your answer reconstructs the whole from the known three fifths.",
+          "correction": "Compare the three known fifths with the five-part whole."
+        }
+      },
+      "response_feedback": {
+        "11": "That is one equal part. How many equal parts make the whole?",
+        "165": "That repeats the known multi-part amount. Account for how many parts it already contains."
+      }
+    },
+    {
+      "id": "MD-03-E02",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "exit",
+      "prompt": "7/12 of a number is 56. Find the whole number.",
+      "target": "Whole amount",
+      "response": {
+        "type": "integer",
+        "input_label": "Whole amount",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 96
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The result includes all twelve equal parts.",
+        "correct_after_support": "The result includes all twelve equal parts.",
+        "on_correct_math": "56 ÷ 7 = 8 in one equal part. → 8 × 12 = 96 in the whole. → Whole amount: 96.",
+        "on_incorrect_attempt_1": "Does your result name the known part, one equal part, or the complete whole?",
+        "on_incorrect_attempt_2": "Use the seven known parts to check the value of one part, then rebuild twelve.",
+        "worked_explanation": "56 ÷ 7 = 8 in one equal part. → 8 × 12 = 96 in the whole. → Whole amount: 96.",
+        "on_locked_incorrect": "Compare the known part, one-part value and reconstructed whole in the working."
+      },
+      "mathematical_support": {
+        "hint_1": "Does your result name the known part, one equal part, or the complete whole?",
+        "hint_2": "The known amount contains 7 parts. Rebuild all 12 equal parts. Any valid exact method is allowed.",
+        "worked_solution": "56 ÷ 7 = 8 in one equal part. → 8 × 12 = 96 in the whole. → Whole amount: 96."
+      },
+      "working": [
+        "56 ÷ 7 = 8 in one equal part.",
+        "8 × 12 = 96 in the whole.",
+        "Whole amount: 96."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "rebuild_amount",
+          "known": 56,
+          "n": 7,
+          "d": 12,
+          "object": "quantity",
+          "target": "Whole amount",
+          "stage": "exit",
+          "reaction": "The result includes all twelve equal parts.",
+          "correction": "Use the seven known parts to check the value of one part, then rebuild twelve."
+        }
+      },
+      "response_feedback": {
+        "8": "That is one equal part. How many equal parts make the whole?",
+        "672": "That repeats the known multi-part amount. Account for how many parts it already contains."
+      }
+    },
+    {
+      "id": "MD-03-E03",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "exit",
+      "prompt": "Which statement correctly describes how to find a whole from a known fraction?",
+      "target": "Method for rebuilding a whole",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Divide the known amount by the numerator, then multiply by the denominator.",
+          "Divide the known amount by the denominator, then multiply by the numerator.",
+          "Multiply the known amount by both fraction numbers.",
+          "Divide the known amount by both fraction numbers."
+        ]
+      },
+      "answer": {
+        "value": "Divide the known amount by the numerator, then multiply by the denominator."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That method uses the known parts to rebuild the whole.",
+        "correct_after_support": "That method uses the known parts to rebuild the whole.",
+        "on_correct_math": "The numerator counts the known equal parts. → Divide the known amount between those parts to find one part. → The denominator counts all the parts needed to rebuild the whole.",
+        "on_incorrect_attempt_1": "The known amount represents only some of the equal parts.",
+        "on_incorrect_attempt_2": "Compare the numerator’s known parts with the denominator’s complete whole.",
+        "worked_explanation": "The numerator counts the known equal parts. → Divide the known amount between those parts to find one part. → The denominator counts all the parts needed to rebuild the whole.",
+        "on_locked_incorrect": "Compare the roles of the known parts and the complete whole."
+      },
+      "mathematical_support": {
+        "hint_1": "The known amount represents only some of the equal parts.",
+        "hint_2": "One step finds a part value; the other rebuilds the complete whole.",
+        "worked_solution": "The numerator counts the known equal parts. → Divide the known amount between those parts to find one part. → The denominator counts all the parts needed to rebuild the whole."
+      },
+      "working": [
+        "The numerator counts the known equal parts.",
+        "Divide the known amount between those parts to find one part.",
+        "The denominator counts all the parts needed to rebuild the whole."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "rebuild_amount_rule",
+          "object": "relationship",
+          "target": "Method for rebuilding a whole"
+        }
+      }
+    }
+  ],
+  "canonical_lesson": {
+    "version": "MD03-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

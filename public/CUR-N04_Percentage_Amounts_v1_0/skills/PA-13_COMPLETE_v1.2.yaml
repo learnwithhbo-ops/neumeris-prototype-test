@@ -1,0 +1,2905 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "PA-13 - Find a Percentage of a Decimal or Measured Amount",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-19",
+      "sha256": "b19f5260ad7a2790093377b9d32ff6e18ecd6794b960a8246db287ce95738590"
+    },
+    "authored_scope": "Find a percentage of a decimal or measured amount and preserve the correct unit and accuracy.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "PA13-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "verified_desktop_converted_units_ready_phone_wrong_dimension_learning_320_390_aligned_ribbon_exact_small_shares_drafts_keyboard_audio_captions",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        14,
+        16,
+        17,
+        18,
+        19
+      ],
+      "source_repairs_consulted": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        17,
+        18
+      ],
+      "note": "All nineteen approved pages, both rendered diagrams, complete prior configuration and relevant tests reviewed. Restores aligned ribbon/percentage boundaries, 100 small-volume shares and exact-zero interpretation, source worked/guided route and all 25 active questions. Explicit unit choice accepts equivalent conversions; exact route, arithmetic, unit, decimal notation and requested precision are separate evidence. Three finals require visible exact working. No Entry, Diagnostic, prerequisite mutation, delayed Retrieval or Strong state."
+    }
+  },
+  "identity": {
+    "id": "PA-13",
+    "slug": "find-a-percentage-of-a-decimal-or-measured-amount",
+    "title": "Find a Percentage of a Decimal or Measured Amount",
+    "strand": "Number",
+    "cluster": "Finding Percentages of Amounts",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Find a percentage of a decimal or measured amount and preserve the correct unit and accuracy.",
+    "success_criteria": [
+      "The decimal quantity is still the whole; apply a valid percentage method, then attach the unchanged measurement unit.",
+      "Percentage scaling changes the amount, not the type of unit being measured.",
+      "Use the sequence: Identify the measured whole; Choose a valid percentage route; Maintain decimal place value; Round only if instructed; State the unit.",
+      "Complete a context question with the requested form and unit."
+    ],
+    "boundaries": {
+      "includes": [
+        "Find a percentage of a decimal or measured amount and preserve the correct unit and accuracy.",
+        "Direct calculation",
+        "Concept and method checks",
+        "Short GCSE-style transfer"
+      ],
+      "excludes": [
+        "Diagnostic route",
+        "Delayed retrieval route",
+        "Algebraic generalisation beyond the approved packet"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "PA-01",
+      "PA-02",
+      "PA-10",
+      "PA-11",
+      "FDP-01"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for PA-01, PA-02, PA-10, PA-11, FDP-01 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "single_choice",
+      "measured_percentage_amount"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    },
+    "place_value_profile": true
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "The decimal quantity is still the whole; apply a valid percentage method, then attach the unchanged measurement unit.",
+    "invariant": "Percentage scaling changes the amount, not the type of unit being measured.",
+    "mathematical_rule": "Identify the measured whole; Choose a valid percentage route; Maintain decimal place value; Round only if instructed; State the unit",
+    "must_notice": [
+      "Identify the measured whole",
+      "Choose a valid percentage route",
+      "Maintain decimal place value",
+      "Round only if instructed",
+      "State the unit"
+    ],
+    "common_confusions": [
+      "treating decimal digits as whole-number digits",
+      "changing the measurement unit without conversion",
+      "rounding too early"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "Keep the measured whole and its unit",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Keep the measured whole and its unit",
+          "initial_state": "Keep the measured whole and its unit",
+          "model": {
+            "kind": "measured_percentage_amount",
+            "title": "Percentages of decimal measurements",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "principle",
+            "solved": true,
+            "steps": []
+          }
+        },
+        "narration": {
+          "script": "The percentage method still acts on the complete quantity when that quantity is decimal. Preserve its measurement unit, or convert the complete value consistently. Keep exact digits until any requested final rounding."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Match equal divisions",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Match equal divisions",
+          "initial_state": "Match equal divisions",
+          "model": {
+            "kind": "measured_percentage_amount",
+            "title": "Match the percentage and ribbon divisions",
+            "given": "35% of a 2.4 m ribbon",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "ribbon",
+            "solved": true,
+            "steps": [],
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "The percentage strip and ribbon use the same ten equal divisions. Every percentage part has a matching measured part of this original ribbon."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Transfer the selected boundary",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Transfer the selected boundary",
+          "initial_state": "Transfer the selected boundary",
+          "model": {
+            "kind": "measured_percentage_amount",
+            "title": "Match the percentage and ribbon divisions",
+            "given": "35% of a 2.4 m ribbon",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "ribbon",
+            "solved": true,
+            "steps": [],
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "Select three full tenths and half of the next tenth. The boundary lines align on both strips, so the same proportion of the ribbon is selected."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Combine the corresponding lengths",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Combine the corresponding lengths",
+          "initial_state": "Combine the corresponding lengths",
+          "model": {
+            "kind": "measured_percentage_amount",
+            "title": "Match the percentage and ribbon divisions",
+            "given": "35% of a 2.4 m ribbon",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "ribbon",
+            "solved": true,
+            "steps": [],
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "The selected full parts and half-part give the two measured lengths. Add them in the same unit to obtain the selected ribbon length."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Select equal shares of a small whole",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Select equal shares of a small whole",
+          "initial_state": "Select equal shares of a small whole",
+          "model": {
+            "kind": "measured_percentage_amount",
+            "title": "Preserve small decimal shares",
+            "given": "12% of 0.75 L",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "volume",
+            "solved": true,
+            "steps": [],
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "The complete volume is below one litre. The grid divides that same volume into one hundred equal cells, with twelve cells selected."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T06"
+      },
+      {
+        "id": "T06",
+        "stage": "teaching",
+        "purpose": "Inspect one exact small share",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Inspect one exact small share",
+          "initial_state": "Inspect one exact small share",
+          "model": {
+            "kind": "measured_percentage_amount",
+            "title": "Preserve small decimal shares",
+            "given": "12% of 0.75 L",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "volume",
+            "solved": true,
+            "steps": [],
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "The magnified cell represents one percent of the complete volume. Keep every zero and decimal digit in that small exact share."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T07"
+      },
+      {
+        "id": "T07",
+        "stage": "teaching",
+        "purpose": "Collect the selected shares",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Collect the selected shares",
+          "initial_state": "Collect the selected shares",
+          "model": {
+            "kind": "measured_percentage_amount",
+            "title": "Preserve small decimal shares",
+            "given": "12% of 0.75 L",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "volume",
+            "solved": true,
+            "steps": [],
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "Twelve identical shares combine into the selected volume. Its zero tenths placeholder matters: the result is hundredths of a litre, not tenths."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T08"
+      },
+      {
+        "id": "T08",
+        "stage": "teaching",
+        "purpose": "Choose a consistent measured plan",
+        "source_ref": {
+          "page": 6
+        },
+        "scene": {
+          "display_title": "Choose a consistent measured plan",
+          "initial_state": "Choose a consistent measured plan",
+          "model": {
+            "kind": "measured_percentage_amount",
+            "title": "Choose a complete measured-percentage plan",
+            "given": "35% of 2.4 m",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "steps": [
+              "10% of 2.4 m = 0.24 m.",
+              "30% = 0.72 m and 5% = 0.12 m.",
+              "0.72 m + 0.12 m = 0.84 m."
+            ],
+            "mode": "rule"
+          }
+        },
+        "narration": {
+          "script": "Choose the complete route that selects the required share and preserves its measurement."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "PA-13-C01"
+        },
+        "next_step": "T09"
+      },
+      {
+        "id": "T09",
+        "stage": "teaching",
+        "purpose": "Start with an exact mass benchmark",
+        "source_ref": {
+          "page": 6
+        },
+        "scene": {
+          "display_title": "Start with an exact mass benchmark",
+          "initial_state": "Start with an exact mass benchmark",
+          "model": {
+            "kind": "measured_percentage_amount",
+            "title": "Build a measured amount from exact benchmarks",
+            "given": "45% of 3.2 kg",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "worked",
+            "solved": true,
+            "stages": [
+              {
+                "title": "Find a tenth",
+                "lines": [
+                  "10% of 3.2 kg = 0.32 kg."
+                ]
+              },
+              {
+                "title": "Build forty percent and five percent",
+                "lines": [
+                  "40% = 4 × 0.32 kg = 1.28 kg.",
+                  "5% = 0.32 kg ÷ 2 = 0.16 kg."
+                ]
+              },
+              {
+                "title": "Combine the mass shares",
+                "lines": [
+                  "1.28 kg + 0.16 kg = 1.44 kg."
+                ]
+              }
+            ],
+            "steps": [],
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "A tenth of this complete mass provides a convenient benchmark. Keep that exact value while building the selected shares."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T10"
+      },
+      {
+        "id": "T10",
+        "stage": "teaching",
+        "purpose": "Build the larger and smaller mass parts",
+        "source_ref": {
+          "page": 6
+        },
+        "scene": {
+          "display_title": "Build the larger and smaller mass parts",
+          "initial_state": "Build the larger and smaller mass parts",
+          "model": {
+            "kind": "measured_percentage_amount",
+            "title": "Build a measured amount from exact benchmarks",
+            "given": "45% of 3.2 kg",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "worked",
+            "solved": true,
+            "stages": [
+              {
+                "title": "Find a tenth",
+                "lines": [
+                  "10% of 3.2 kg = 0.32 kg."
+                ]
+              },
+              {
+                "title": "Build forty percent and five percent",
+                "lines": [
+                  "40% = 4 × 0.32 kg = 1.28 kg.",
+                  "5% = 0.32 kg ÷ 2 = 0.16 kg."
+                ]
+              },
+              {
+                "title": "Combine the mass shares",
+                "lines": [
+                  "1.28 kg + 0.16 kg = 1.44 kg."
+                ]
+              }
+            ],
+            "steps": [],
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "Use four copies of the tenth for the larger part and half of a tenth for the smaller part. Both calculations remain in kilograms."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T11"
+      },
+      {
+        "id": "T11",
+        "stage": "teaching",
+        "purpose": "Combine and check the measurement",
+        "source_ref": {
+          "page": 6
+        },
+        "scene": {
+          "display_title": "Combine and check the measurement",
+          "initial_state": "Combine and check the measurement",
+          "model": {
+            "kind": "measured_percentage_amount",
+            "title": "Build a measured amount from exact benchmarks",
+            "given": "45% of 3.2 kg",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "worked",
+            "solved": true,
+            "stages": [
+              {
+                "title": "Find a tenth",
+                "lines": [
+                  "10% of 3.2 kg = 0.32 kg."
+                ]
+              },
+              {
+                "title": "Build forty percent and five percent",
+                "lines": [
+                  "40% = 4 × 0.32 kg = 1.28 kg.",
+                  "5% = 0.32 kg ÷ 2 = 0.16 kg."
+                ]
+              },
+              {
+                "title": "Combine the mass shares",
+                "lines": [
+                  "1.28 kg + 0.16 kg = 1.44 kg."
+                ]
+              }
+            ],
+            "steps": [],
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "Add the two exact mass parts. The calculation selects the requested proportion of the whole and keeps the measurement unit."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T12"
+      },
+      {
+        "id": "T12",
+        "stage": "teaching",
+        "purpose": "Check reasonableness",
+        "source_ref": {
+          "page": 6
+        },
+        "scene": {
+          "display_title": "Check reasonableness",
+          "initial_state": "Check reasonableness",
+          "model": {
+            "kind": "measured_percentage_amount",
+            "title": "Check the size against a familiar benchmark",
+            "given": "45% of 3.2 kg = 1.44 kg",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "steps": [
+              "50% of 3.2 kg = 1.6 kg.",
+              "45% is slightly less than 50%.",
+              "1.44 kg is slightly less than 1.6 kg and retains the mass unit."
+            ],
+            "mode": "rule"
+          }
+        },
+        "narration": {
+          "script": "Choose the comparison that checks the size of the worked answer against a familiar benchmark."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "PA-13-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "PA-13-G01",
+        "support_level": "high",
+        "pre_question_script": "Choose the useful fractional equivalent.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "faded",
+        "question_ref": "PA-13-G02",
+        "support_level": "reduced",
+        "pre_question_script": "Complete the divisor and measured quotient.",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "faded",
+        "question_ref": "PA-13-G03",
+        "support_level": "reduced",
+        "pre_question_script": "Record the selected value and its measurement unit.",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "independent_transfer",
+        "question_ref": "PA-13-G04",
+        "support_level": "none",
+        "pre_question_script": "Choose the final answer that preserves the calculated quantity.",
+        "correct_next": "P01"
+      }
+    },
+    "practice": {
+      "intro_script": "Choose any valid method. Include the answer unit; equivalent converted units are accepted. Keep exact values unless a final accuracy is requested. If you record optional working, select its unit and keep the calculation exact.",
+      "question_order": [
+        "PA-13-P01",
+        "PA-13-P02",
+        "PA-13-P03",
+        "PA-13-P04",
+        "PA-13-P05",
+        "PA-13-P06",
+        "PA-13-P07",
+        "PA-13-P08",
+        "PA-13-P09",
+        "PA-13-P10",
+        "PA-13-P11",
+        "PA-13-P12",
+        "PA-13-X01",
+        "PA-13-X02",
+        "PA-13-X03",
+        "PA-13-X04"
+      ],
+      "question_count": 16,
+      "feedback_policy": "Specific numerical, unit, method and accuracy feedback with learner-entered correction and progressive working. No optional hints, Diagnostic or prerequisite-state mutation."
+    },
+    "exit": {
+      "intro_script": "Complete all three questions without hints. Show each exact method and select its calculation unit. Include the final answer unit and retain zero placeholders. Round only where requested, preserving that precision if you convert units. All three responses lock before feedback.",
+      "primary_question_refs": [
+        "PA-13-E01",
+        "PA-13-E02",
+        "PA-13-E03"
+      ],
+      "confirmation_question_refs": [],
+      "submission_policy": "Withhold correctness and working until all three responses are saved.",
+      "mastery_policy": {
+        "profile": "all_primary_unsupported_deferred",
+        "require_all": true,
+        "source_page": 14,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "All three unsupported final responses use valid exact methods, preserve their measured quantities and record the required final accuracy.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Keep building measured percentages",
+      "ryan_script": "Review the saved methods, values and units. Correct numbers must still describe the right measured quantities. Keep exact working and apply only the requested final rounding.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "PA-13-C01",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "Which plan correctly finds 35% of 2.4 m?",
+      "target": "Calculate a measured percentage with consistent units and requested accuracy",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Find 10% as 0.24 m, use three of those parts and half of one further part, then keep the answer in metres.",
+          "Divide 2.4 m by 35.",
+          "Multiply 2.4 m by 35 without converting the percentage.",
+          "Find 35 and attach the unit metres."
+        ]
+      },
+      "answer": {
+        "value": "Find 10% as 0.24 m, use three of those parts and half of one further part, then keep the answer in metres."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The selected parts stay attached to the same whole and measurement unit.",
+        "correct_after_support": "Correct. The selected parts stay attached to the same whole and measurement unit.",
+        "on_correct_math": "10% of 2.4 m = 0.24 m. → 30% = 0.72 m and 5% = 0.12 m. → 0.72 m + 0.12 m = 0.84 m.",
+        "on_incorrect_attempt_1": "Build the selected share from the complete length, keeping every part in the same unit.",
+        "on_incorrect_attempt_2": "The working uses three tenths and a half-tenth of the same ribbon. Match the complete sequence to a plan.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "10% of 2.4 m = 0.24 m. → 30% = 0.72 m and 5% = 0.12 m. → 0.72 m + 0.12 m = 0.84 m."
+      },
+      "mathematical_support": {
+        "hint_1": "Build the selected share from the complete length, keeping every part in the same unit.",
+        "hint_2": "The working uses three tenths and a half-tenth of the same ribbon. Match the complete sequence to a plan.",
+        "worked_solution": "10% of 2.4 m = 0.24 m. → 30% = 0.72 m and 5% = 0.12 m. → 0.72 m + 0.12 m = 0.84 m."
+      },
+      "working": [
+        "10% of 2.4 m = 0.24 m.",
+        "30% = 0.72 m and 5% = 0.12 m.",
+        "0.72 m + 0.12 m = 0.84 m."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "measured_percentage_amount",
+          "title": "Choose a complete measured-percentage plan",
+          "given": "35% of 2.4 m",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "steps": [
+            "10% of 2.4 m = 0.24 m.",
+            "30% = 0.72 m and 5% = 0.12 m.",
+            "0.72 m + 0.12 m = 0.84 m."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "Divide 2.4 m by 35.": "Dividing by the percentage number does not select that percentage of the measured whole.",
+        "Multiply 2.4 m by 35 without converting the percentage.": "An unconverted percentage number is not a decimal multiplier.",
+        "Find 35 and attach the unit metres.": "The percentage describes a proportion, not a measured length by itself."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-13-C02",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "The worked calculation gives 45% of 3.2 kg as 1.44 kg. Which statement confirms that this answer is reasonable?",
+      "target": "Calculate a measured percentage with consistent units and requested accuracy",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "It is slightly less than half of 3.2 kg, as 45% is slightly less than 50%.",
+          "It is greater than 3.2 kg, as every percentage makes a quantity larger.",
+          "It is exactly 45 kg, because the percentage becomes the answer.",
+          "It has no unit, because decimal answers do not use units."
+        ]
+      },
+      "answer": {
+        "value": "It is slightly less than half of 3.2 kg, as 45% is slightly less than 50%."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The percentage and its amount lie on the same side of the half-way benchmark.",
+        "correct_after_support": "Correct. The percentage and its amount lie on the same side of the half-way benchmark.",
+        "on_correct_math": "50% of 3.2 kg = 1.6 kg. → 45% is slightly less than 50%. → 1.44 kg is slightly less than 1.6 kg and retains the mass unit.",
+        "on_incorrect_attempt_1": "Compare the percentage with one half, then compare the corresponding measured amounts.",
+        "on_incorrect_attempt_2": "The half-mass benchmark in the working provides the comparison. Check the direction and keep kilograms.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "50% of 3.2 kg = 1.6 kg. → 45% is slightly less than 50%. → 1.44 kg is slightly less than 1.6 kg and retains the mass unit."
+      },
+      "mathematical_support": {
+        "hint_1": "Compare the percentage with one half, then compare the corresponding measured amounts.",
+        "hint_2": "The half-mass benchmark in the working provides the comparison. Check the direction and keep kilograms.",
+        "worked_solution": "50% of 3.2 kg = 1.6 kg. → 45% is slightly less than 50%. → 1.44 kg is slightly less than 1.6 kg and retains the mass unit."
+      },
+      "working": [
+        "50% of 3.2 kg = 1.6 kg.",
+        "45% is slightly less than 50%.",
+        "1.44 kg is slightly less than 1.6 kg and retains the mass unit."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "measured_percentage_amount",
+          "title": "Check the size against a familiar benchmark",
+          "given": "45% of 3.2 kg = 1.44 kg",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "steps": [
+            "50% of 3.2 kg = 1.6 kg.",
+            "45% is slightly less than 50%.",
+            "1.44 kg is slightly less than 1.6 kg and retains the mass unit."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "It is greater than 3.2 kg, as every percentage makes a quantity larger.": "A percentage below one hundred selects less than the complete original mass.",
+        "It is exactly 45 kg, because the percentage becomes the answer.": "The percentage number does not become a number of kilograms.",
+        "It has no unit, because decimal answers do not use units.": "Decimal quantities still have units when they represent measurements."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-13-G01",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "guided",
+      "prompt": "For 12.5% of 4.8 m, which fractional equivalent gives a useful route?",
+      "target": "Calculate a measured percentage with consistent units and requested accuracy",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "one eighth of the whole",
+          "one half of the whole",
+          "the whole divided by 12.5",
+          "12.5 tenths of the whole"
+        ]
+      },
+      "answer": {
+        "value": "one eighth of the whole"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. An eighth gives a convenient equal-group route.",
+        "correct_after_support": "Correct. An eighth gives a convenient equal-group route.",
+        "on_correct_math": "Eight equal 12.5% shares make the complete 100%. → 12.5% = 1/8.",
+        "on_incorrect_attempt_1": "Count the equal copies of this percentage that complete the whole.",
+        "on_incorrect_attempt_2": "The working links the selected percentage to equal fractional groups. Choose that fraction before dividing the length.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Eight equal 12.5% shares make the complete 100%. → 12.5% = 1/8."
+      },
+      "mathematical_support": {
+        "hint_1": "Count the equal copies of this percentage that complete the whole.",
+        "hint_2": "The working links the selected percentage to equal fractional groups. Choose that fraction before dividing the length.",
+        "worked_solution": "Eight equal 12.5% shares make the complete 100%. → 12.5% = 1/8."
+      },
+      "working": [
+        "Eight equal 12.5% shares make the complete 100%.",
+        "12.5% = 1/8."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "measured_percentage_amount",
+          "title": "Choose an equal-share description",
+          "given": "12.5% of 4.8 m",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "steps": [
+            "Eight equal 12.5% shares make the complete 100%.",
+            "12.5% = 1/8."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "one half of the whole": "A half describes fifty percent, a different proportion of the ribbon.",
+        "the whole divided by 12.5": "The percentage number is not the equal-group divisor.",
+        "12.5 tenths of the whole": "Twelve and a half tenths would exceed the complete whole."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-13-G02",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "faded",
+      "prompt": "Complete the selected division: 4.8 m ÷ ___ = ___ m.",
+      "target": "Calculate a measured percentage with consistent units and requested accuracy",
+      "response": {
+        "type": "measured_percentage_amount",
+        "mode": "fields",
+        "unit": "m",
+        "fields": [
+          {
+            "key": "divisor",
+            "label": "Divisor"
+          },
+          {
+            "key": "quotient",
+            "label": "Quotient in metres",
+            "unit": "m"
+          }
+        ]
+      },
+      "answer": {
+        "value": {
+          "divisor": "8",
+          "quotient": "0.6"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The equal-group division preserves the measured whole.",
+        "correct_after_support": "Correct. The equal-group division preserves the measured whole.",
+        "on_correct_math": "4.8 m ÷ 8 = 0.6 m. → The quotient is the length in one equal eighth.",
+        "on_incorrect_attempt_1": "The first blank counts equal groups; the second gives the length in one group.",
+        "on_incorrect_attempt_2": "Compare the group count and quotient separately with the displayed division. The quotient is still a measured length.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "4.8 m ÷ 8 = 0.6 m. → The quotient is the length in one equal eighth."
+      },
+      "mathematical_support": {
+        "hint_1": "The first blank counts equal groups; the second gives the length in one group.",
+        "hint_2": "Compare the group count and quotient separately with the displayed division. The quotient is still a measured length.",
+        "worked_solution": "4.8 m ÷ 8 = 0.6 m. → The quotient is the length in one equal eighth."
+      },
+      "working": [
+        "4.8 m ÷ 8 = 0.6 m.",
+        "The quotient is the length in one equal eighth."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "measured_percentage_amount",
+          "title": "Calculate one equal ribbon share",
+          "given": "12.5% of 4.8 m",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "steps": [
+            "4.8 m ÷ 8 = 0.6 m.",
+            "The quotient is the length in one equal eighth."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_divisor": "The quotient is correct. Check the group count for the selected fraction.",
+        "check_quotient": "The divisor matches the fraction. Recheck the decimal division.",
+        "check_multiple": "Check the equal-group divisor, then calculate the length in one group."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-13-G03",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "faded",
+      "prompt": "Record 12.5% of 4.8 m, preserving the measurement unit.",
+      "target": "Calculate a measured percentage with consistent units and requested accuracy",
+      "response": {
+        "type": "measured_percentage_amount",
+        "whole": "4.8",
+        "percent": 12.5,
+        "unit": "m",
+        "require_working": false
+      },
+      "answer": {
+        "value": {
+          "amount": "0.6",
+          "unit": "m"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The final quantity preserves both the value and the length unit.",
+        "correct_after_support": "Correct. The final quantity preserves both the value and the length unit.",
+        "on_correct_math": "12.5% of 4.8 m = 4.8 m ÷ 8 = 0.6 m. → The selected amount is a length, so retain metres or give an equivalent length conversion.",
+        "on_incorrect_attempt_1": "Use the calculated quotient and identify the kind of quantity it measures.",
+        "on_incorrect_attempt_2": "The final statement in the working keeps the quotient attached to its length unit. Record both parts of the answer.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "12.5% of 4.8 m = 4.8 m ÷ 8 = 0.6 m. → The selected amount is a length, so retain metres or give an equivalent length conversion."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the calculated quotient and identify the kind of quantity it measures.",
+        "hint_2": "The final statement in the working keeps the quotient attached to its length unit. Record both parts of the answer.",
+        "worked_solution": "12.5% of 4.8 m = 4.8 m ÷ 8 = 0.6 m. → The selected amount is a length, so retain metres or give an equivalent length conversion."
+      },
+      "working": [
+        "12.5% of 4.8 m = 4.8 m ÷ 8 = 0.6 m.",
+        "The selected amount is a length, so retain metres or give an equivalent length conversion."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "measured_percentage_amount",
+          "title": "Calculate the requested measured share",
+          "given": "12.5% of 4.8 m",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 12.5,
+          "whole": "4.8",
+          "unit": "m",
+          "steps": [
+            "12.5% of 4.8 m = 4.8 m ÷ 8 = 0.6 m.",
+            "The selected amount is a length, so retain metres or give an equivalent length conversion."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_unit": "The answer needs a unit of length. Preserve the original unit or convert the complete value into a compatible unit.",
+        "check_working_unit": "The recorded calculation needs a compatible measurement unit. Select the unit of its result without changing the kind of quantity.",
+        "check_method": "The recorded operation does not establish the requested percentage of the complete original measurement in the selected calculation unit.",
+        "check_arithmetic": "The proportional route is valid. Recheck its exact arithmetic or any written equality; do not replace an exact intermediate result with a rounded value.",
+        "check_amount": "Use the calculated quotient and identify the kind of quantity it measures.",
+        "check_notation": "The numerical value is correct. Write a zero before the decimal point for an amount below one, retaining the other zero placeholders.",
+        "check_accuracy": "The rounded value is correct. Record enough decimal places to show the requested accuracy, or its equivalent precision in the converted unit.",
+        "unrounded_final": "This is the exact measured value. Keep that exact calculation, then round only the final answer to the requested accuracy.",
+        "check_multiple": "Use the calculated quotient and identify the kind of quantity it measures."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-13-G04",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "independent_transfer",
+      "prompt": "A correct calculation of a percentage of 4.8 m gives 0.6. Which final answer should be written?",
+      "target": "Calculate a measured percentage with consistent units and requested accuracy",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "0.6 m, because the selected quantity is still a length.",
+          "0.6 kg, because decimal answers are masses.",
+          "0.6, because units must be removed after multiplication.",
+          "6 m, because the decimal point should be removed."
+        ]
+      },
+      "answer": {
+        "value": "0.6 m, because the selected quantity is still a length."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The calculation changes the amount, not the kind of measurement.",
+        "correct_after_support": "Correct. The calculation changes the amount, not the kind of measurement.",
+        "on_correct_math": "The original quantity is a length. → A percentage of that quantity is still a length. → Record 0.6 m; changing the decimal value or attaching a mass unit changes the quantity.",
+        "on_incorrect_attempt_1": "Preserve the numerical value and the kind of measurement together.",
+        "on_incorrect_attempt_2": "The working identifies the original quantity as length. Match that kind of measurement without altering the decimal result.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The original quantity is a length. → A percentage of that quantity is still a length. → Record 0.6 m; changing the decimal value or attaching a mass unit changes the quantity."
+      },
+      "mathematical_support": {
+        "hint_1": "Preserve the numerical value and the kind of measurement together.",
+        "hint_2": "The working identifies the original quantity as length. Match that kind of measurement without altering the decimal result.",
+        "worked_solution": "The original quantity is a length. → A percentage of that quantity is still a length. → Record 0.6 m; changing the decimal value or attaching a mass unit changes the quantity."
+      },
+      "working": [
+        "The original quantity is a length.",
+        "A percentage of that quantity is still a length.",
+        "Record 0.6 m; changing the decimal value or attaching a mass unit changes the quantity."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "measured_percentage_amount",
+          "title": "Interpret a measured calculation result",
+          "given": "Original quantity: 4.8 m; calculated numerical result: 0.6",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "steps": [
+            "The original quantity is a length.",
+            "A percentage of that quantity is still a length.",
+            "Record 0.6 m; changing the decimal value or attaching a mass unit changes the quantity."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "0.6 kg, because decimal answers are masses.": "Kilograms describe mass. A decimal point does not turn a length into a mass.",
+        "0.6, because units must be removed after multiplication.": "A numerical result alone omits part of the measured quantity.",
+        "6 m, because the decimal point should be removed.": "Removing the decimal point makes the value ten times as large."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-13-P01",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Find 10% of 6.4 kg. Include the correct unit.",
+      "target": "Calculate a measured percentage with consistent units and requested accuracy",
+      "response": {
+        "type": "measured_percentage_amount",
+        "whole": "6.4",
+        "percent": 10,
+        "unit": "kg",
+        "require_working": false
+      },
+      "answer": {
+        "value": {
+          "amount": "0.64",
+          "unit": "kg"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The tenth retains the original mass measurement.",
+        "correct_after_support": "Correct. The tenth retains the original mass measurement.",
+        "on_correct_math": "10% of 6.4 kg = 6.4 kg ÷ 10. → 6.4 kg ÷ 10 = 0.64 kg.",
+        "on_incorrect_attempt_1": "A tenth divides the complete mass by ten; retain each digit’s place value.",
+        "on_incorrect_attempt_2": "The displayed tenth has a zero whole-number part. Compare its decimal positions and mass unit with your response.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "10% of 6.4 kg = 6.4 kg ÷ 10. → 6.4 kg ÷ 10 = 0.64 kg."
+      },
+      "mathematical_support": {
+        "hint_1": "A tenth divides the complete mass by ten; retain each digit’s place value.",
+        "hint_2": "The displayed tenth has a zero whole-number part. Compare its decimal positions and mass unit with your response.",
+        "worked_solution": "10% of 6.4 kg = 6.4 kg ÷ 10. → 6.4 kg ÷ 10 = 0.64 kg."
+      },
+      "working": [
+        "10% of 6.4 kg = 6.4 kg ÷ 10.",
+        "6.4 kg ÷ 10 = 0.64 kg."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "measured_percentage_amount",
+          "title": "Calculate the requested measured share",
+          "given": "10% of 6.4 kg",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 10,
+          "whole": "6.4",
+          "unit": "kg",
+          "steps": [
+            "10% of 6.4 kg = 6.4 kg ÷ 10.",
+            "6.4 kg ÷ 10 = 0.64 kg."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_unit": "The answer needs a unit of mass. Preserve the original unit or convert the complete value into a compatible unit.",
+        "check_working_unit": "The recorded calculation needs a compatible measurement unit. Select the unit of its result without changing the kind of quantity.",
+        "check_method": "The recorded operation does not establish the requested percentage of the complete original measurement in the selected calculation unit.",
+        "check_arithmetic": "The proportional route is valid. Recheck its exact arithmetic or any written equality; do not replace an exact intermediate result with a rounded value.",
+        "check_amount": "A tenth divides the complete mass by ten; retain each digit’s place value.",
+        "check_notation": "The numerical value is correct. Write a zero before the decimal point for an amount below one, retaining the other zero placeholders.",
+        "check_accuracy": "The rounded value is correct. Record enough decimal places to show the requested accuracy, or its equivalent precision in the converted unit.",
+        "unrounded_final": "This is the exact measured value. Keep that exact calculation, then round only the final answer to the requested accuracy.",
+        "check_multiple": "A tenth divides the complete mass by ten; retain each digit’s place value."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-13-P02",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Find 25% of 3.6 m. Include the correct unit.",
+      "target": "Calculate a measured percentage with consistent units and requested accuracy",
+      "response": {
+        "type": "measured_percentage_amount",
+        "whole": "3.6",
+        "percent": 25,
+        "unit": "m",
+        "require_working": false
+      },
+      "answer": {
+        "value": {
+          "amount": "0.9",
+          "unit": "m"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The quarter is a length, and equivalent exact decimal forms are accepted.",
+        "correct_after_support": "Correct. The quarter is a length, and equivalent exact decimal forms are accepted.",
+        "on_correct_math": "25% = 1/4. → 3.6 m ÷ 4 = 0.9 m.",
+        "on_incorrect_attempt_1": "Take a quarter of the complete length and keep its unit.",
+        "on_incorrect_attempt_2": "The working selects one equal quarter. Its trailing zero is optional because this is an exact answer.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "25% = 1/4. → 3.6 m ÷ 4 = 0.9 m."
+      },
+      "mathematical_support": {
+        "hint_1": "Take a quarter of the complete length and keep its unit.",
+        "hint_2": "The working selects one equal quarter. Its trailing zero is optional because this is an exact answer.",
+        "worked_solution": "25% = 1/4. → 3.6 m ÷ 4 = 0.9 m."
+      },
+      "working": [
+        "25% = 1/4.",
+        "3.6 m ÷ 4 = 0.9 m."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "measured_percentage_amount",
+          "title": "Calculate the requested measured share",
+          "given": "25% of 3.6 m",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 25,
+          "whole": "3.6",
+          "unit": "m",
+          "steps": [
+            "25% = 1/4.",
+            "3.6 m ÷ 4 = 0.9 m."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_unit": "The answer needs a unit of length. Preserve the original unit or convert the complete value into a compatible unit.",
+        "check_working_unit": "The recorded calculation needs a compatible measurement unit. Select the unit of its result without changing the kind of quantity.",
+        "check_method": "The recorded operation does not establish the requested percentage of the complete original measurement in the selected calculation unit.",
+        "check_arithmetic": "The proportional route is valid. Recheck its exact arithmetic or any written equality; do not replace an exact intermediate result with a rounded value.",
+        "check_amount": "Take a quarter of the complete length and keep its unit.",
+        "check_notation": "The numerical value is correct. Write a zero before the decimal point for an amount below one, retaining the other zero placeholders.",
+        "check_accuracy": "The rounded value is correct. Record enough decimal places to show the requested accuracy, or its equivalent precision in the converted unit.",
+        "unrounded_final": "This is the exact measured value. Keep that exact calculation, then round only the final answer to the requested accuracy.",
+        "check_multiple": "Take a quarter of the complete length and keep its unit."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-13-P03",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Find 15% of 2.8 L. Include the correct unit.",
+      "target": "Calculate a measured percentage with consistent units and requested accuracy",
+      "response": {
+        "type": "measured_percentage_amount",
+        "whole": "2.8",
+        "percent": 15,
+        "unit": "L",
+        "require_working": false
+      },
+      "answer": {
+        "value": {
+          "amount": "0.42",
+          "unit": "L"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The two selected volume parts combine consistently.",
+        "correct_after_support": "Correct. The two selected volume parts combine consistently.",
+        "on_correct_math": "10% of 2.8 L = 0.28 L. → 5% = 0.14 L. → 0.28 L + 0.14 L = 0.42 L.",
+        "on_incorrect_attempt_1": "Build a full tenth and half-tenth of the same volume before combining them.",
+        "on_incorrect_attempt_2": "Follow the two volume shares into their sum in the working. Both parts must use a consistent unit.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "10% of 2.8 L = 0.28 L. → 5% = 0.14 L. → 0.28 L + 0.14 L = 0.42 L."
+      },
+      "mathematical_support": {
+        "hint_1": "Build a full tenth and half-tenth of the same volume before combining them.",
+        "hint_2": "Follow the two volume shares into their sum in the working. Both parts must use a consistent unit.",
+        "worked_solution": "10% of 2.8 L = 0.28 L. → 5% = 0.14 L. → 0.28 L + 0.14 L = 0.42 L."
+      },
+      "working": [
+        "10% of 2.8 L = 0.28 L.",
+        "5% = 0.14 L.",
+        "0.28 L + 0.14 L = 0.42 L."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "measured_percentage_amount",
+          "title": "Calculate the requested measured share",
+          "given": "15% of 2.8 L",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 15,
+          "whole": "2.8",
+          "unit": "L",
+          "steps": [
+            "10% of 2.8 L = 0.28 L.",
+            "5% = 0.14 L.",
+            "0.28 L + 0.14 L = 0.42 L."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_unit": "The answer needs a unit of volume. Preserve the original unit or convert the complete value into a compatible unit.",
+        "check_working_unit": "The recorded calculation needs a compatible measurement unit. Select the unit of its result without changing the kind of quantity.",
+        "check_method": "The recorded operation does not establish the requested percentage of the complete original measurement in the selected calculation unit.",
+        "check_arithmetic": "The proportional route is valid. Recheck its exact arithmetic or any written equality; do not replace an exact intermediate result with a rounded value.",
+        "check_amount": "Build a full tenth and half-tenth of the same volume before combining them.",
+        "check_notation": "The numerical value is correct. Write a zero before the decimal point for an amount below one, retaining the other zero placeholders.",
+        "check_accuracy": "The rounded value is correct. Record enough decimal places to show the requested accuracy, or its equivalent precision in the converted unit.",
+        "unrounded_final": "This is the exact measured value. Keep that exact calculation, then round only the final answer to the requested accuracy.",
+        "check_multiple": "Build a full tenth and half-tenth of the same volume before combining them."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-13-P04",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Find 35% of 1.6 kg. Include the correct unit.",
+      "target": "Calculate a measured percentage with consistent units and requested accuracy",
+      "response": {
+        "type": "measured_percentage_amount",
+        "whole": "1.6",
+        "percent": 35,
+        "unit": "kg",
+        "require_working": false
+      },
+      "answer": {
+        "value": {
+          "amount": "0.56",
+          "unit": "kg"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The small mass share retains its place value in the total.",
+        "correct_after_support": "Correct. The small mass share retains its place value in the total.",
+        "on_correct_math": "10% of 1.6 kg = 0.16 kg. → 30% = 0.48 kg and 5% = 0.08 kg. → 0.48 kg + 0.08 kg = 0.56 kg.",
+        "on_incorrect_attempt_1": "Keep the small half-tenth value in the correct decimal places.",
+        "on_incorrect_attempt_2": "The working distinguishes the full tenths from the half-tenth. Preserve the zero in the smaller share before adding.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "10% of 1.6 kg = 0.16 kg. → 30% = 0.48 kg and 5% = 0.08 kg. → 0.48 kg + 0.08 kg = 0.56 kg."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the small half-tenth value in the correct decimal places.",
+        "hint_2": "The working distinguishes the full tenths from the half-tenth. Preserve the zero in the smaller share before adding.",
+        "worked_solution": "10% of 1.6 kg = 0.16 kg. → 30% = 0.48 kg and 5% = 0.08 kg. → 0.48 kg + 0.08 kg = 0.56 kg."
+      },
+      "working": [
+        "10% of 1.6 kg = 0.16 kg.",
+        "30% = 0.48 kg and 5% = 0.08 kg.",
+        "0.48 kg + 0.08 kg = 0.56 kg."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "measured_percentage_amount",
+          "title": "Calculate the requested measured share",
+          "given": "35% of 1.6 kg",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 35,
+          "whole": "1.6",
+          "unit": "kg",
+          "steps": [
+            "10% of 1.6 kg = 0.16 kg.",
+            "30% = 0.48 kg and 5% = 0.08 kg.",
+            "0.48 kg + 0.08 kg = 0.56 kg."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_unit": "The answer needs a unit of mass. Preserve the original unit or convert the complete value into a compatible unit.",
+        "check_working_unit": "The recorded calculation needs a compatible measurement unit. Select the unit of its result without changing the kind of quantity.",
+        "check_method": "The recorded operation does not establish the requested percentage of the complete original measurement in the selected calculation unit.",
+        "check_arithmetic": "The proportional route is valid. Recheck its exact arithmetic or any written equality; do not replace an exact intermediate result with a rounded value.",
+        "check_amount": "Keep the small half-tenth value in the correct decimal places.",
+        "check_notation": "The numerical value is correct. Write a zero before the decimal point for an amount below one, retaining the other zero placeholders.",
+        "check_accuracy": "The rounded value is correct. Record enough decimal places to show the requested accuracy, or its equivalent precision in the converted unit.",
+        "unrounded_final": "This is the exact measured value. Keep that exact calculation, then round only the final answer to the requested accuracy.",
+        "check_multiple": "Keep the small half-tenth value in the correct decimal places."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-13-P05",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Find 12.5% of 7.2 m. Include the correct unit.",
+      "target": "Calculate a measured percentage with consistent units and requested accuracy",
+      "response": {
+        "type": "measured_percentage_amount",
+        "whole": "7.2",
+        "percent": 12.5,
+        "unit": "m",
+        "require_working": false
+      },
+      "answer": {
+        "value": {
+          "amount": "0.9",
+          "unit": "m"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. One eighth gives the selected measured length.",
+        "correct_after_support": "Correct. One eighth gives the selected measured length.",
+        "on_correct_math": "12.5% = 1/8. → 7.2 m ÷ 8 = 0.9 m.",
+        "on_incorrect_attempt_1": "Select one of eight equal lengths, not eight copies of the whole.",
+        "on_incorrect_attempt_2": "The equal-eighth division in the working gives a length below one metre. Record that value with a compatible unit.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "12.5% = 1/8. → 7.2 m ÷ 8 = 0.9 m."
+      },
+      "mathematical_support": {
+        "hint_1": "Select one of eight equal lengths, not eight copies of the whole.",
+        "hint_2": "The equal-eighth division in the working gives a length below one metre. Record that value with a compatible unit.",
+        "worked_solution": "12.5% = 1/8. → 7.2 m ÷ 8 = 0.9 m."
+      },
+      "working": [
+        "12.5% = 1/8.",
+        "7.2 m ÷ 8 = 0.9 m."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "measured_percentage_amount",
+          "title": "Calculate the requested measured share",
+          "given": "12.5% of 7.2 m",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 12.5,
+          "whole": "7.2",
+          "unit": "m",
+          "steps": [
+            "12.5% = 1/8.",
+            "7.2 m ÷ 8 = 0.9 m."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_unit": "The answer needs a unit of length. Preserve the original unit or convert the complete value into a compatible unit.",
+        "check_working_unit": "The recorded calculation needs a compatible measurement unit. Select the unit of its result without changing the kind of quantity.",
+        "check_method": "The recorded operation does not establish the requested percentage of the complete original measurement in the selected calculation unit.",
+        "check_arithmetic": "The proportional route is valid. Recheck its exact arithmetic or any written equality; do not replace an exact intermediate result with a rounded value.",
+        "check_amount": "Select one of eight equal lengths, not eight copies of the whole.",
+        "check_notation": "The numerical value is correct. Write a zero before the decimal point for an amount below one, retaining the other zero placeholders.",
+        "check_accuracy": "The rounded value is correct. Record enough decimal places to show the requested accuracy, or its equivalent precision in the converted unit.",
+        "unrounded_final": "This is the exact measured value. Keep that exact calculation, then round only the final answer to the requested accuracy.",
+        "check_multiple": "Select one of eight equal lengths, not eight copies of the whole."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-13-P06",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Find 8% of 4.5 L. Include the correct unit.",
+      "target": "Calculate a measured percentage with consistent units and requested accuracy",
+      "response": {
+        "type": "measured_percentage_amount",
+        "whole": "4.5",
+        "percent": 8,
+        "unit": "L",
+        "require_working": false
+      },
+      "answer": {
+        "value": {
+          "amount": "0.36",
+          "unit": "L"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The exact small-volume shares give the requested proportion.",
+        "correct_after_support": "Correct. The exact small-volume shares give the requested proportion.",
+        "on_correct_math": "1% of 4.5 L = 0.045 L. → 8% = 0.045 L × 8 = 0.36 L.",
+        "on_incorrect_attempt_1": "Keep the exact one-percent volume, including its zero tenths place.",
+        "on_incorrect_attempt_2": "Scale the exact small share shown in the working; do not shorten or shift its digits before multiplying.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "1% of 4.5 L = 0.045 L. → 8% = 0.045 L × 8 = 0.36 L."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the exact one-percent volume, including its zero tenths place.",
+        "hint_2": "Scale the exact small share shown in the working; do not shorten or shift its digits before multiplying.",
+        "worked_solution": "1% of 4.5 L = 0.045 L. → 8% = 0.045 L × 8 = 0.36 L."
+      },
+      "working": [
+        "1% of 4.5 L = 0.045 L.",
+        "8% = 0.045 L × 8 = 0.36 L."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "measured_percentage_amount",
+          "title": "Calculate the requested measured share",
+          "given": "8% of 4.5 L",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 8,
+          "whole": "4.5",
+          "unit": "L",
+          "steps": [
+            "1% of 4.5 L = 0.045 L.",
+            "8% = 0.045 L × 8 = 0.36 L."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_unit": "The answer needs a unit of volume. Preserve the original unit or convert the complete value into a compatible unit.",
+        "check_working_unit": "The recorded calculation needs a compatible measurement unit. Select the unit of its result without changing the kind of quantity.",
+        "check_method": "The recorded operation does not establish the requested percentage of the complete original measurement in the selected calculation unit.",
+        "check_arithmetic": "The proportional route is valid. Recheck its exact arithmetic or any written equality; do not replace an exact intermediate result with a rounded value.",
+        "check_amount": "Keep the exact one-percent volume, including its zero tenths place.",
+        "check_notation": "The numerical value is correct. Write a zero before the decimal point for an amount below one, retaining the other zero placeholders.",
+        "check_accuracy": "The rounded value is correct. Record enough decimal places to show the requested accuracy, or its equivalent precision in the converted unit.",
+        "unrounded_final": "This is the exact measured value. Keep that exact calculation, then round only the final answer to the requested accuracy.",
+        "check_multiple": "Keep the exact one-percent volume, including its zero tenths place."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-13-P07",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Find 37% of 2.4 kg. Include the correct unit.",
+      "target": "Calculate a measured percentage with consistent units and requested accuracy",
+      "response": {
+        "type": "measured_percentage_amount",
+        "whole": "2.4",
+        "percent": 37,
+        "unit": "kg",
+        "require_working": false
+      },
+      "answer": {
+        "value": {
+          "amount": "0.888",
+          "unit": "kg"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The exact measured result is kept without unnecessary rounding.",
+        "correct_after_support": "Correct. The exact measured result is kept without unnecessary rounding.",
+        "on_correct_math": "37% = 0.37. → 2.4 kg × 0.37 = 0.888 kg. → No rounding accuracy is requested, so keep the exact mass.",
+        "on_incorrect_attempt_1": "The multiplier selects thirty-seven hundredths of the unchanged original mass.",
+        "on_incorrect_attempt_2": "The working ends at an exact three-place decimal. Preserve that value because this question does not request rounding.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "37% = 0.37. → 2.4 kg × 0.37 = 0.888 kg. → No rounding accuracy is requested, so keep the exact mass."
+      },
+      "mathematical_support": {
+        "hint_1": "The multiplier selects thirty-seven hundredths of the unchanged original mass.",
+        "hint_2": "The working ends at an exact three-place decimal. Preserve that value because this question does not request rounding.",
+        "worked_solution": "37% = 0.37. → 2.4 kg × 0.37 = 0.888 kg. → No rounding accuracy is requested, so keep the exact mass."
+      },
+      "working": [
+        "37% = 0.37.",
+        "2.4 kg × 0.37 = 0.888 kg.",
+        "No rounding accuracy is requested, so keep the exact mass."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "measured_percentage_amount",
+          "title": "Calculate the requested measured share",
+          "given": "37% of 2.4 kg",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 37,
+          "whole": "2.4",
+          "unit": "kg",
+          "steps": [
+            "37% = 0.37.",
+            "2.4 kg × 0.37 = 0.888 kg.",
+            "No rounding accuracy is requested, so keep the exact mass."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_unit": "The answer needs a unit of mass. Preserve the original unit or convert the complete value into a compatible unit.",
+        "check_working_unit": "The recorded calculation needs a compatible measurement unit. Select the unit of its result without changing the kind of quantity.",
+        "check_method": "The recorded operation does not establish the requested percentage of the complete original measurement in the selected calculation unit.",
+        "check_arithmetic": "The proportional route is valid. Recheck its exact arithmetic or any written equality; do not replace an exact intermediate result with a rounded value.",
+        "check_amount": "The multiplier selects thirty-seven hundredths of the unchanged original mass.",
+        "check_notation": "The numerical value is correct. Write a zero before the decimal point for an amount below one, retaining the other zero placeholders.",
+        "check_accuracy": "The rounded value is correct. Record enough decimal places to show the requested accuracy, or its equivalent precision in the converted unit.",
+        "unrounded_final": "This is the exact measured value. Keep that exact calculation, then round only the final answer to the requested accuracy.",
+        "check_multiple": "The multiplier selects thirty-seven hundredths of the unchanged original mass."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-13-P08",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Find 2.5% of 6.4 m. Include the correct unit.",
+      "target": "Calculate a measured percentage with consistent units and requested accuracy",
+      "response": {
+        "type": "measured_percentage_amount",
+        "whole": "6.4",
+        "percent": 2.5,
+        "unit": "m",
+        "require_working": false
+      },
+      "answer": {
+        "value": {
+          "amount": "0.16",
+          "unit": "m"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The small fractional share remains a measured length.",
+        "correct_after_support": "Correct. The small fractional share remains a measured length.",
+        "on_correct_math": "2.5% = 1/40. → 6.4 m ÷ 40 = 0.16 m.",
+        "on_incorrect_attempt_1": "This small percentage selects a fortieth of the original length.",
+        "on_incorrect_attempt_2": "Compare the fortieth in the working with your selected amount. A quarter of the whole would be a different share.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "2.5% = 1/40. → 6.4 m ÷ 40 = 0.16 m."
+      },
+      "mathematical_support": {
+        "hint_1": "This small percentage selects a fortieth of the original length.",
+        "hint_2": "Compare the fortieth in the working with your selected amount. A quarter of the whole would be a different share.",
+        "worked_solution": "2.5% = 1/40. → 6.4 m ÷ 40 = 0.16 m."
+      },
+      "working": [
+        "2.5% = 1/40.",
+        "6.4 m ÷ 40 = 0.16 m."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "measured_percentage_amount",
+          "title": "Calculate the requested measured share",
+          "given": "2.5% of 6.4 m",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 2.5,
+          "whole": "6.4",
+          "unit": "m",
+          "steps": [
+            "2.5% = 1/40.",
+            "6.4 m ÷ 40 = 0.16 m."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_unit": "The answer needs a unit of length. Preserve the original unit or convert the complete value into a compatible unit.",
+        "check_working_unit": "The recorded calculation needs a compatible measurement unit. Select the unit of its result without changing the kind of quantity.",
+        "check_method": "The recorded operation does not establish the requested percentage of the complete original measurement in the selected calculation unit.",
+        "check_arithmetic": "The proportional route is valid. Recheck its exact arithmetic or any written equality; do not replace an exact intermediate result with a rounded value.",
+        "check_amount": "This small percentage selects a fortieth of the original length.",
+        "check_notation": "The numerical value is correct. Write a zero before the decimal point for an amount below one, retaining the other zero placeholders.",
+        "check_accuracy": "The rounded value is correct. Record enough decimal places to show the requested accuracy, or its equivalent precision in the converted unit.",
+        "unrounded_final": "This is the exact measured value. Keep that exact calculation, then round only the final answer to the requested accuracy.",
+        "check_multiple": "This small percentage selects a fortieth of the original length."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-13-P09",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Find 17% of 0.85 L. Give your answer to 3 decimal places. Include the correct unit.",
+      "target": "Calculate a measured percentage with consistent units and requested accuracy",
+      "response": {
+        "type": "measured_percentage_amount",
+        "whole": "0.85",
+        "percent": 17,
+        "unit": "L",
+        "require_working": false,
+        "decimal_places": 3
+      },
+      "answer": {
+        "value": {
+          "amount": "0.145",
+          "unit": "L"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The completed volume is rounded to the stated accuracy.",
+        "correct_after_support": "Correct. The completed volume is rounded to the stated accuracy.",
+        "on_correct_math": "17% = 0.17. → 0.85 L × 0.17 = 0.1445 L exactly. → To 3 decimal places, the next digit is 5, so round the thousandths up. → Final volume: 0.145 L.",
+        "on_incorrect_attempt_1": "Keep the exact product from the whole below one before rounding to the requested decimal place.",
+        "on_incorrect_attempt_2": "The working separates the exact volume from the final three-decimal-place answer. Use the next digit only at the end.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "17% = 0.17. → 0.85 L × 0.17 = 0.1445 L exactly. → To 3 decimal places, the next digit is 5, so round the thousandths up. → Final volume: 0.145 L."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the exact product from the whole below one before rounding to the requested decimal place.",
+        "hint_2": "The working separates the exact volume from the final three-decimal-place answer. Use the next digit only at the end.",
+        "worked_solution": "17% = 0.17. → 0.85 L × 0.17 = 0.1445 L exactly. → To 3 decimal places, the next digit is 5, so round the thousandths up. → Final volume: 0.145 L."
+      },
+      "working": [
+        "17% = 0.17.",
+        "0.85 L × 0.17 = 0.1445 L exactly.",
+        "To 3 decimal places, the next digit is 5, so round the thousandths up.",
+        "Final volume: 0.145 L."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "measured_percentage_amount",
+          "title": "Calculate the requested measured share",
+          "given": "17% of 0.85 L",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 17,
+          "whole": "0.85",
+          "unit": "L",
+          "steps": [
+            "17% = 0.17.",
+            "0.85 L × 0.17 = 0.1445 L exactly.",
+            "To 3 decimal places, the next digit is 5, so round the thousandths up.",
+            "Final volume: 0.145 L."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_unit": "The answer needs a unit of volume. Preserve the original unit or convert the complete value into a compatible unit.",
+        "check_working_unit": "The recorded calculation needs a compatible measurement unit. Select the unit of its result without changing the kind of quantity.",
+        "check_method": "The recorded operation does not establish the requested percentage of the complete original measurement in the selected calculation unit.",
+        "check_arithmetic": "The proportional route is valid. Recheck its exact arithmetic or any written equality; do not replace an exact intermediate result with a rounded value.",
+        "check_amount": "Keep the exact product from the whole below one before rounding to the requested decimal place.",
+        "check_notation": "The numerical value is correct. Write a zero before the decimal point for an amount below one, retaining the other zero placeholders.",
+        "check_accuracy": "The rounded value is correct. Record enough decimal places to show the requested accuracy, or its equivalent precision in the converted unit.",
+        "unrounded_final": "This is the exact measured value. Keep that exact calculation, then round only the final answer to the requested accuracy.",
+        "check_multiple": "Keep the exact product from the whole below one before rounding to the requested decimal place."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-13-P10",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Find 7% of 2.35 m. Give your answer to 3 decimal places. Include the correct unit.",
+      "target": "Calculate a measured percentage with consistent units and requested accuracy",
+      "response": {
+        "type": "measured_percentage_amount",
+        "whole": "2.35",
+        "percent": 7,
+        "unit": "m",
+        "require_working": false,
+        "decimal_places": 3
+      },
+      "answer": {
+        "value": {
+          "amount": "0.165",
+          "unit": "m"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The final rounding uses the next digit while preserving the length unit.",
+        "correct_after_support": "Correct. The final rounding uses the next digit while preserving the length unit.",
+        "on_correct_math": "7% = 0.07. → 2.35 m × 0.07 = 0.1645 m exactly. → The next digit after the thousandths is 5. → Final length to 3 decimal places: 0.165 m.",
+        "on_incorrect_attempt_1": "Keep the exact length through the multiplication, then use the digit after the requested place.",
+        "on_incorrect_attempt_2": "The displayed exact result lies halfway between the neighbouring thousandths. Apply the standard final rounding to that digit.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "7% = 0.07. → 2.35 m × 0.07 = 0.1645 m exactly. → The next digit after the thousandths is 5. → Final length to 3 decimal places: 0.165 m."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the exact length through the multiplication, then use the digit after the requested place.",
+        "hint_2": "The displayed exact result lies halfway between the neighbouring thousandths. Apply the standard final rounding to that digit.",
+        "worked_solution": "7% = 0.07. → 2.35 m × 0.07 = 0.1645 m exactly. → The next digit after the thousandths is 5. → Final length to 3 decimal places: 0.165 m."
+      },
+      "working": [
+        "7% = 0.07.",
+        "2.35 m × 0.07 = 0.1645 m exactly.",
+        "The next digit after the thousandths is 5.",
+        "Final length to 3 decimal places: 0.165 m."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "measured_percentage_amount",
+          "title": "Calculate the requested measured share",
+          "given": "7% of 2.35 m",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 7,
+          "whole": "2.35",
+          "unit": "m",
+          "steps": [
+            "7% = 0.07.",
+            "2.35 m × 0.07 = 0.1645 m exactly.",
+            "The next digit after the thousandths is 5.",
+            "Final length to 3 decimal places: 0.165 m."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_unit": "The answer needs a unit of length. Preserve the original unit or convert the complete value into a compatible unit.",
+        "check_working_unit": "The recorded calculation needs a compatible measurement unit. Select the unit of its result without changing the kind of quantity.",
+        "check_method": "The recorded operation does not establish the requested percentage of the complete original measurement in the selected calculation unit.",
+        "check_arithmetic": "The proportional route is valid. Recheck its exact arithmetic or any written equality; do not replace an exact intermediate result with a rounded value.",
+        "check_amount": "Keep the exact length through the multiplication, then use the digit after the requested place.",
+        "check_notation": "The numerical value is correct. Write a zero before the decimal point for an amount below one, retaining the other zero placeholders.",
+        "check_accuracy": "The rounded value is correct. Record enough decimal places to show the requested accuracy, or its equivalent precision in the converted unit.",
+        "unrounded_final": "This is the exact measured value. Keep that exact calculation, then round only the final answer to the requested accuracy.",
+        "check_multiple": "Keep the exact length through the multiplication, then use the digit after the requested place."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-13-P11",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Which route correctly finds 35% of 2.4 m without a calculator?",
+      "target": "Calculate a measured percentage with consistent units and requested accuracy",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Find 10%, use three copies for 30%, halve one copy for 5%, then combine the lengths.",
+          "Divide 2.4 m by 35.",
+          "Multiply 2.4 m by 35.",
+          "Subtract 0.35 m from 2.4 m."
+        ]
+      },
+      "answer": {
+        "value": "Find 10%, use three copies for 30%, halve one copy for 5%, then combine the lengths."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. All benchmark parts refer to the same complete measured whole.",
+        "correct_after_support": "Correct. All benchmark parts refer to the same complete measured whole.",
+        "on_correct_math": "35% = 30% + 5%. → 10% = 0.24 m; three tenths = 0.72 m and half a tenth = 0.12 m. → Combine the lengths: 0.72 m + 0.12 m = 0.84 m.",
+        "on_incorrect_attempt_1": "Choose a route that builds the percentage from shares of the original length.",
+        "on_incorrect_attempt_2": "Match the full sequence of benchmark parts in the working, including their final combination.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "35% = 30% + 5%. → 10% = 0.24 m; three tenths = 0.72 m and half a tenth = 0.12 m. → Combine the lengths: 0.72 m + 0.12 m = 0.84 m."
+      },
+      "mathematical_support": {
+        "hint_1": "Choose a route that builds the percentage from shares of the original length.",
+        "hint_2": "Match the full sequence of benchmark parts in the working, including their final combination.",
+        "worked_solution": "35% = 30% + 5%. → 10% = 0.24 m; three tenths = 0.72 m and half a tenth = 0.12 m. → Combine the lengths: 0.72 m + 0.12 m = 0.84 m."
+      },
+      "working": [
+        "35% = 30% + 5%.",
+        "10% = 0.24 m; three tenths = 0.72 m and half a tenth = 0.12 m.",
+        "Combine the lengths: 0.72 m + 0.12 m = 0.84 m."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "measured_percentage_amount",
+          "title": "Choose a non-calculator measured route",
+          "given": "35% of 2.4 m",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "steps": [
+            "35% = 30% + 5%.",
+            "10% = 0.24 m; three tenths = 0.72 m and half a tenth = 0.12 m.",
+            "Combine the lengths: 0.72 m + 0.12 m = 0.84 m."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "Divide 2.4 m by 35.": "The percentage number is not the equal-share divisor.",
+        "Multiply 2.4 m by 35.": "The percentage must become a proportion before it multiplies the original length.",
+        "Subtract 0.35 m from 2.4 m.": "Subtracting a fixed length does not select thirty-five hundredths of the original."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-13-P12",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "A student finds 35% of 2.4 m using the four steps shown. Which is the first incorrect step?",
+      "target": "Calculate a measured percentage with consistent units and requested accuracy",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Step 1",
+          "Step 2",
+          "Step 3",
+          "Step 4"
+        ]
+      },
+      "answer": {
+        "value": "Step 4"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The arithmetic is sound, but the final unit does not describe a length.",
+        "correct_after_support": "Correct. The arithmetic is sound, but the final unit does not describe a length.",
+        "on_correct_math": "The first three steps correctly find lengths in metres. → Step 4 is the first error: the unit changes from length to mass. → The addition is numerically correct, but the selected length is 0.84 m, not 0.84 kg.",
+        "on_incorrect_attempt_1": "Check each stage in order, considering the complete measured quantity as well as the numerical arithmetic.",
+        "on_incorrect_attempt_2": "The working distinguishes the valid numerical sum from its incompatible final unit. Identify the first stage that changes the quantity.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The first three steps correctly find lengths in metres. → Step 4 is the first error: the unit changes from length to mass. → The addition is numerically correct, but the selected length is 0.84 m, not 0.84 kg."
+      },
+      "mathematical_support": {
+        "hint_1": "Check each stage in order, considering the complete measured quantity as well as the numerical arithmetic.",
+        "hint_2": "The working distinguishes the valid numerical sum from its incompatible final unit. Identify the first stage that changes the quantity.",
+        "worked_solution": "The first three steps correctly find lengths in metres. → Step 4 is the first error: the unit changes from length to mass. → The addition is numerically correct, but the selected length is 0.84 m, not 0.84 kg."
+      },
+      "working": [
+        "The first three steps correctly find lengths in metres.",
+        "Step 4 is the first error: the unit changes from length to mass.",
+        "The addition is numerically correct, but the selected length is 0.84 m, not 0.84 kg."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "measured_percentage_amount",
+          "title": "Find the first incorrect step",
+          "given": "35% of 2.4 m",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "student_work": [
+            "10% = 0.24 m.",
+            "30% = 0.72 m.",
+            "5% = 0.12 m.",
+            "35% = 0.72 + 0.12 = 0.84 kg."
+          ],
+          "steps": [
+            "The first three steps correctly find lengths in metres.",
+            "Step 4 is the first error: the unit changes from length to mass.",
+            "The addition is numerically correct, but the selected length is 0.84 m, not 0.84 kg."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "Step 1": "The tenth is calculated correctly and remains in metres. Check the later steps.",
+        "Step 2": "Three copies of the correct tenth give this length. Continue checking.",
+        "Step 3": "Half the tenth gives this correct five-percent length. Check the final statement."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-13-X01",
+      "source_ref": {
+        "page": 16
+      },
+      "stage": "practice",
+      "prompt": "A roll of cable is 6.4 m long. A technician uses 25% of it. Work out the length of cable used.",
+      "target": "Calculate a measured percentage with consistent units and requested accuracy",
+      "response": {
+        "type": "measured_percentage_amount",
+        "whole": "6.4",
+        "percent": 25,
+        "unit": "m",
+        "require_working": false
+      },
+      "answer": {
+        "value": {
+          "amount": "1.6",
+          "unit": "m"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The answer describes the cable used, with a compatible length unit.",
+        "correct_after_support": "Correct. The answer describes the cable used, with a compatible length unit.",
+        "on_correct_math": "25% = 1/4. → 6.4 m ÷ 4 = 1.6 m. → The length of cable used is 1.6 m.",
+        "on_incorrect_attempt_1": "Find the selected cable length, not the length remaining on the roll.",
+        "on_incorrect_attempt_2": "The working selects a quarter of the original roll and labels only that used length.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "25% = 1/4. → 6.4 m ÷ 4 = 1.6 m. → The length of cable used is 1.6 m."
+      },
+      "mathematical_support": {
+        "hint_1": "Find the selected cable length, not the length remaining on the roll.",
+        "hint_2": "The working selects a quarter of the original roll and labels only that used length.",
+        "worked_solution": "25% = 1/4. → 6.4 m ÷ 4 = 1.6 m. → The length of cable used is 1.6 m."
+      },
+      "working": [
+        "25% = 1/4.",
+        "6.4 m ÷ 4 = 1.6 m.",
+        "The length of cable used is 1.6 m."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "measured_percentage_amount",
+          "title": "Calculate the requested measured share",
+          "given": "25% of 6.4 m",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 25,
+          "whole": "6.4",
+          "unit": "m",
+          "steps": [
+            "25% = 1/4.",
+            "6.4 m ÷ 4 = 1.6 m.",
+            "The length of cable used is 1.6 m."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_unit": "The answer needs a unit of length. Preserve the original unit or convert the complete value into a compatible unit.",
+        "check_working_unit": "The recorded calculation needs a compatible measurement unit. Select the unit of its result without changing the kind of quantity.",
+        "check_method": "The recorded operation does not establish the requested percentage of the complete original measurement in the selected calculation unit.",
+        "check_arithmetic": "The proportional route is valid. Recheck its exact arithmetic or any written equality; do not replace an exact intermediate result with a rounded value.",
+        "check_amount": "Find the selected cable length, not the length remaining on the roll.",
+        "check_notation": "The numerical value is correct. Write a zero before the decimal point for an amount below one, retaining the other zero placeholders.",
+        "check_accuracy": "The rounded value is correct. Record enough decimal places to show the requested accuracy, or its equivalent precision in the converted unit.",
+        "unrounded_final": "This is the exact measured value. Keep that exact calculation, then round only the final answer to the requested accuracy.",
+        "check_multiple": "Find the selected cable length, not the length remaining on the roll."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-13-X02",
+      "source_ref": {
+        "page": 16
+      },
+      "stage": "practice",
+      "prompt": "A container holds 2.75 L of liquid. A sample uses 12% of the liquid. Work out the sample volume.",
+      "target": "Calculate a measured percentage with consistent units and requested accuracy",
+      "response": {
+        "type": "measured_percentage_amount",
+        "whole": "2.75",
+        "percent": 12,
+        "unit": "L",
+        "require_working": false
+      },
+      "answer": {
+        "value": {
+          "amount": "0.33",
+          "unit": "L"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The selected sample has the right volume and unit.",
+        "correct_after_support": "Correct. The selected sample has the right volume and unit.",
+        "on_correct_math": "12% = 0.12. → 2.75 L × 0.12 = 0.33 L. → The sample volume is 0.33 L.",
+        "on_incorrect_attempt_1": "Select the sample from the complete volume without changing the kind of measurement.",
+        "on_incorrect_attempt_2": "The exact sample calculation in the working retains the decimal volume. Record the sample rather than the container remainder.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "12% = 0.12. → 2.75 L × 0.12 = 0.33 L. → The sample volume is 0.33 L."
+      },
+      "mathematical_support": {
+        "hint_1": "Select the sample from the complete volume without changing the kind of measurement.",
+        "hint_2": "The exact sample calculation in the working retains the decimal volume. Record the sample rather than the container remainder.",
+        "worked_solution": "12% = 0.12. → 2.75 L × 0.12 = 0.33 L. → The sample volume is 0.33 L."
+      },
+      "working": [
+        "12% = 0.12.",
+        "2.75 L × 0.12 = 0.33 L.",
+        "The sample volume is 0.33 L."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "measured_percentage_amount",
+          "title": "Calculate the requested measured share",
+          "given": "12% of 2.75 L",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 12,
+          "whole": "2.75",
+          "unit": "L",
+          "steps": [
+            "12% = 0.12.",
+            "2.75 L × 0.12 = 0.33 L.",
+            "The sample volume is 0.33 L."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_unit": "The answer needs a unit of volume. Preserve the original unit or convert the complete value into a compatible unit.",
+        "check_working_unit": "The recorded calculation needs a compatible measurement unit. Select the unit of its result without changing the kind of quantity.",
+        "check_method": "The recorded operation does not establish the requested percentage of the complete original measurement in the selected calculation unit.",
+        "check_arithmetic": "The proportional route is valid. Recheck its exact arithmetic or any written equality; do not replace an exact intermediate result with a rounded value.",
+        "check_amount": "Select the sample from the complete volume without changing the kind of measurement.",
+        "check_notation": "The numerical value is correct. Write a zero before the decimal point for an amount below one, retaining the other zero placeholders.",
+        "check_accuracy": "The rounded value is correct. Record enough decimal places to show the requested accuracy, or its equivalent precision in the converted unit.",
+        "unrounded_final": "This is the exact measured value. Keep that exact calculation, then round only the final answer to the requested accuracy.",
+        "check_multiple": "Select the sample from the complete volume without changing the kind of measurement."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-13-X03",
+      "source_ref": {
+        "page": 16
+      },
+      "stage": "practice",
+      "prompt": "A metal component has a mass of 3.6 kg. One section is 35% of the complete component by mass. Work out the section’s mass.",
+      "target": "Calculate a measured percentage with consistent units and requested accuracy",
+      "response": {
+        "type": "measured_percentage_amount",
+        "whole": "3.6",
+        "percent": 35,
+        "unit": "kg",
+        "require_working": false
+      },
+      "answer": {
+        "value": {
+          "amount": "1.26",
+          "unit": "kg"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The section mass preserves the complete component as its reference whole.",
+        "correct_after_support": "Correct. The section mass preserves the complete component as its reference whole.",
+        "on_correct_math": "10% of 3.6 kg = 0.36 kg. → 30% = 1.08 kg and 5% = 0.18 kg. → 1.08 kg + 0.18 kg = 1.26 kg.",
+        "on_incorrect_attempt_1": "Every selected mass part must refer to the complete component and use consistent units.",
+        "on_incorrect_attempt_2": "Follow the larger and smaller benchmark masses into the section total. A valid gram conversion must preserve that same value.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "10% of 3.6 kg = 0.36 kg. → 30% = 1.08 kg and 5% = 0.18 kg. → 1.08 kg + 0.18 kg = 1.26 kg."
+      },
+      "mathematical_support": {
+        "hint_1": "Every selected mass part must refer to the complete component and use consistent units.",
+        "hint_2": "Follow the larger and smaller benchmark masses into the section total. A valid gram conversion must preserve that same value.",
+        "worked_solution": "10% of 3.6 kg = 0.36 kg. → 30% = 1.08 kg and 5% = 0.18 kg. → 1.08 kg + 0.18 kg = 1.26 kg."
+      },
+      "working": [
+        "10% of 3.6 kg = 0.36 kg.",
+        "30% = 1.08 kg and 5% = 0.18 kg.",
+        "1.08 kg + 0.18 kg = 1.26 kg."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "measured_percentage_amount",
+          "title": "Calculate the requested measured share",
+          "given": "35% of 3.6 kg",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 35,
+          "whole": "3.6",
+          "unit": "kg",
+          "steps": [
+            "10% of 3.6 kg = 0.36 kg.",
+            "30% = 1.08 kg and 5% = 0.18 kg.",
+            "1.08 kg + 0.18 kg = 1.26 kg."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_unit": "The answer needs a unit of mass. Preserve the original unit or convert the complete value into a compatible unit.",
+        "check_working_unit": "The recorded calculation needs a compatible measurement unit. Select the unit of its result without changing the kind of quantity.",
+        "check_method": "The recorded operation does not establish the requested percentage of the complete original measurement in the selected calculation unit.",
+        "check_arithmetic": "The proportional route is valid. Recheck its exact arithmetic or any written equality; do not replace an exact intermediate result with a rounded value.",
+        "check_amount": "Every selected mass part must refer to the complete component and use consistent units.",
+        "check_notation": "The numerical value is correct. Write a zero before the decimal point for an amount below one, retaining the other zero placeholders.",
+        "check_accuracy": "The rounded value is correct. Record enough decimal places to show the requested accuracy, or its equivalent precision in the converted unit.",
+        "unrounded_final": "This is the exact measured value. Keep that exact calculation, then round only the final answer to the requested accuracy.",
+        "check_multiple": "Every selected mass part must refer to the complete component and use consistent units."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-13-X04",
+      "source_ref": {
+        "page": 16
+      },
+      "stage": "practice",
+      "prompt": "A survey route is 1.85 km long. One stage is 17% of the total route. Find the stage length to 3 decimal places.",
+      "target": "Calculate a measured percentage with consistent units and requested accuracy",
+      "response": {
+        "type": "measured_percentage_amount",
+        "whole": "1.85",
+        "percent": 17,
+        "unit": "km",
+        "require_working": false,
+        "decimal_places": 3
+      },
+      "answer": {
+        "value": {
+          "amount": "0.315",
+          "unit": "km"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The stage length keeps the requested final precision in a compatible unit.",
+        "correct_after_support": "Correct. The stage length keeps the requested final precision in a compatible unit.",
+        "on_correct_math": "17% = 0.17. → 1.85 km × 0.17 = 0.3145 km exactly. → Round the completed length to 3 decimal places. → The stage is 0.315 km long.",
+        "on_incorrect_attempt_1": "Calculate the exact stage length before rounding it at the requested place.",
+        "on_incorrect_attempt_2": "The working rounds the completed kilometre value, not the original route. An equivalent converted answer must preserve the same final precision.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "17% = 0.17. → 1.85 km × 0.17 = 0.3145 km exactly. → Round the completed length to 3 decimal places. → The stage is 0.315 km long."
+      },
+      "mathematical_support": {
+        "hint_1": "Calculate the exact stage length before rounding it at the requested place.",
+        "hint_2": "The working rounds the completed kilometre value, not the original route. An equivalent converted answer must preserve the same final precision.",
+        "worked_solution": "17% = 0.17. → 1.85 km × 0.17 = 0.3145 km exactly. → Round the completed length to 3 decimal places. → The stage is 0.315 km long."
+      },
+      "working": [
+        "17% = 0.17.",
+        "1.85 km × 0.17 = 0.3145 km exactly.",
+        "Round the completed length to 3 decimal places.",
+        "The stage is 0.315 km long."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "measured_percentage_amount",
+          "title": "Calculate the requested measured share",
+          "given": "17% of 1.85 km",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 17,
+          "whole": "1.85",
+          "unit": "km",
+          "steps": [
+            "17% = 0.17.",
+            "1.85 km × 0.17 = 0.3145 km exactly.",
+            "Round the completed length to 3 decimal places.",
+            "The stage is 0.315 km long."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_unit": "The answer needs a unit of length. Preserve the original unit or convert the complete value into a compatible unit.",
+        "check_working_unit": "The recorded calculation needs a compatible measurement unit. Select the unit of its result without changing the kind of quantity.",
+        "check_method": "The recorded operation does not establish the requested percentage of the complete original measurement in the selected calculation unit.",
+        "check_arithmetic": "The proportional route is valid. Recheck its exact arithmetic or any written equality; do not replace an exact intermediate result with a rounded value.",
+        "check_amount": "Calculate the exact stage length before rounding it at the requested place.",
+        "check_notation": "The numerical value is correct. Write a zero before the decimal point for an amount below one, retaining the other zero placeholders.",
+        "check_accuracy": "The rounded value is correct. Record enough decimal places to show the requested accuracy, or its equivalent precision in the converted unit.",
+        "unrounded_final": "This is the exact measured value. Keep that exact calculation, then round only the final answer to the requested accuracy.",
+        "check_multiple": "Calculate the exact stage length before rounding it at the requested place."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-13-E01",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "exit",
+      "prompt": "Final check: find 25% of 5.6 L. Show your exact method and include the answer unit.",
+      "target": "Calculate a measured percentage with consistent units and requested accuracy",
+      "response": {
+        "type": "measured_percentage_amount",
+        "whole": "5.6",
+        "percent": 25,
+        "unit": "L",
+        "require_working": true
+      },
+      "answer": {
+        "value": {
+          "amount": "1.4",
+          "unit": "L",
+          "calculation": "5.6 * 25 / 100",
+          "calculationUnit": "L"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Your valid percentage method preserves the selected volume.",
+        "correct_after_support": "Correct. Your valid percentage method preserves the selected volume.",
+        "on_correct_math": "25% = 1/4. → 5.6 L ÷ 4 = 1.4 L. → The result is an exact volume; 1400 mL is equivalent.",
+        "on_incorrect_attempt_1": "Check the quarter of the complete volume, its unit and its decimal place value.",
+        "on_incorrect_attempt_2": "The saved working shows an exact quarter-volume route. Compare the numerical amount and any unit conversion with your locked response.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "25% = 1/4. → 5.6 L ÷ 4 = 1.4 L. → The result is an exact volume; 1400 mL is equivalent."
+      },
+      "mathematical_support": {
+        "hint_1": "Check the quarter of the complete volume, its unit and its decimal place value.",
+        "hint_2": "The saved working shows an exact quarter-volume route. Compare the numerical amount and any unit conversion with your locked response.",
+        "worked_solution": "25% = 1/4. → 5.6 L ÷ 4 = 1.4 L. → The result is an exact volume; 1400 mL is equivalent."
+      },
+      "working": [
+        "25% = 1/4.",
+        "5.6 L ÷ 4 = 1.4 L.",
+        "The result is an exact volume; 1400 mL is equivalent."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "measured_percentage_amount",
+          "title": "Calculate the requested measured share",
+          "given": "25% of 5.6 L",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 25,
+          "whole": "5.6",
+          "unit": "L",
+          "steps": [
+            "25% = 1/4.",
+            "5.6 L ÷ 4 = 1.4 L.",
+            "The result is an exact volume; 1400 mL is equivalent."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_unit": "The answer needs a unit of volume. Preserve the original unit or convert the complete value into a compatible unit.",
+        "check_working_unit": "The recorded calculation needs a compatible measurement unit. Select the unit of its result without changing the kind of quantity.",
+        "check_method": "The recorded operation does not establish the requested percentage of the complete original measurement in the selected calculation unit.",
+        "check_arithmetic": "The proportional route is valid. Recheck its exact arithmetic or any written equality; do not replace an exact intermediate result with a rounded value.",
+        "check_amount": "Check the quarter of the complete volume, its unit and its decimal place value.",
+        "check_notation": "The numerical value is correct. Write a zero before the decimal point for an amount below one, retaining the other zero placeholders.",
+        "check_accuracy": "The rounded value is correct. Record enough decimal places to show the requested accuracy, or its equivalent precision in the converted unit.",
+        "unrounded_final": "This is the exact measured value. Keep that exact calculation, then round only the final answer to the requested accuracy.",
+        "check_multiple": "Check the quarter of the complete volume, its unit and its decimal place value."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-13-E02",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "exit",
+      "prompt": "Final check: find 35% of 2.8 kg. Show your exact method and include the answer unit.",
+      "target": "Calculate a measured percentage with consistent units and requested accuracy",
+      "response": {
+        "type": "measured_percentage_amount",
+        "whole": "2.8",
+        "percent": 35,
+        "unit": "kg",
+        "require_working": true
+      },
+      "answer": {
+        "value": {
+          "amount": "0.98",
+          "unit": "kg",
+          "calculation": "2.8 * 35 / 100",
+          "calculationUnit": "kg"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The exact calculation and the recorded mass are consistent.",
+        "correct_after_support": "Correct. The exact calculation and the recorded mass are consistent.",
+        "on_correct_math": "10% of 2.8 kg = 0.28 kg. → 30% = 0.84 kg and 5% = 0.14 kg. → 0.84 kg + 0.14 kg = 0.98 kg.",
+        "on_incorrect_attempt_1": "Keep the benchmark or other valid route tied to the original mass, then check its recorded unit.",
+        "on_incorrect_attempt_2": "The saved review combines exact mass shares. Compare your valid route, decimal placement and measurement unit with that total.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "10% of 2.8 kg = 0.28 kg. → 30% = 0.84 kg and 5% = 0.14 kg. → 0.84 kg + 0.14 kg = 0.98 kg."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the benchmark or other valid route tied to the original mass, then check its recorded unit.",
+        "hint_2": "The saved review combines exact mass shares. Compare your valid route, decimal placement and measurement unit with that total.",
+        "worked_solution": "10% of 2.8 kg = 0.28 kg. → 30% = 0.84 kg and 5% = 0.14 kg. → 0.84 kg + 0.14 kg = 0.98 kg."
+      },
+      "working": [
+        "10% of 2.8 kg = 0.28 kg.",
+        "30% = 0.84 kg and 5% = 0.14 kg.",
+        "0.84 kg + 0.14 kg = 0.98 kg."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "measured_percentage_amount",
+          "title": "Calculate the requested measured share",
+          "given": "35% of 2.8 kg",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 35,
+          "whole": "2.8",
+          "unit": "kg",
+          "steps": [
+            "10% of 2.8 kg = 0.28 kg.",
+            "30% = 0.84 kg and 5% = 0.14 kg.",
+            "0.84 kg + 0.14 kg = 0.98 kg."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_unit": "The answer needs a unit of mass. Preserve the original unit or convert the complete value into a compatible unit.",
+        "check_working_unit": "The recorded calculation needs a compatible measurement unit. Select the unit of its result without changing the kind of quantity.",
+        "check_method": "The recorded operation does not establish the requested percentage of the complete original measurement in the selected calculation unit.",
+        "check_arithmetic": "The proportional route is valid. Recheck its exact arithmetic or any written equality; do not replace an exact intermediate result with a rounded value.",
+        "check_amount": "Keep the benchmark or other valid route tied to the original mass, then check its recorded unit.",
+        "check_notation": "The numerical value is correct. Write a zero before the decimal point for an amount below one, retaining the other zero placeholders.",
+        "check_accuracy": "The rounded value is correct. Record enough decimal places to show the requested accuracy, or its equivalent precision in the converted unit.",
+        "unrounded_final": "This is the exact measured value. Keep that exact calculation, then round only the final answer to the requested accuracy.",
+        "check_multiple": "Keep the benchmark or other valid route tied to the original mass, then check its recorded unit."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-13-E03",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "exit",
+      "prompt": "Final check: find 9% of 1.75 m. Give your answer to 3 decimal places. Show your exact method and include the answer unit.",
+      "target": "Calculate a measured percentage with consistent units and requested accuracy",
+      "response": {
+        "type": "measured_percentage_amount",
+        "whole": "1.75",
+        "percent": 9,
+        "unit": "m",
+        "require_working": true,
+        "decimal_places": 3
+      },
+      "answer": {
+        "value": {
+          "amount": "0.158",
+          "unit": "m",
+          "calculation": "1.75 * 9 / 100",
+          "calculationUnit": "m"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Exact working comes before the final requested rounding of the length.",
+        "correct_after_support": "Correct. Exact working comes before the final requested rounding of the length.",
+        "on_correct_math": "9% = 0.09. → 1.75 m × 0.09 = 0.1575 m exactly. → Use the next digit after the thousandths for final rounding. → The final length to 3 decimal places is 0.158 m.",
+        "on_incorrect_attempt_1": "Preserve the exact percentage calculation, then round the final length at the requested decimal place.",
+        "on_incorrect_attempt_2": "The locked review separates the exact product from the final thousandths. Check both along with the length unit.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "9% = 0.09. → 1.75 m × 0.09 = 0.1575 m exactly. → Use the next digit after the thousandths for final rounding. → The final length to 3 decimal places is 0.158 m."
+      },
+      "mathematical_support": {
+        "hint_1": "Preserve the exact percentage calculation, then round the final length at the requested decimal place.",
+        "hint_2": "The locked review separates the exact product from the final thousandths. Check both along with the length unit.",
+        "worked_solution": "9% = 0.09. → 1.75 m × 0.09 = 0.1575 m exactly. → Use the next digit after the thousandths for final rounding. → The final length to 3 decimal places is 0.158 m."
+      },
+      "working": [
+        "9% = 0.09.",
+        "1.75 m × 0.09 = 0.1575 m exactly.",
+        "Use the next digit after the thousandths for final rounding.",
+        "The final length to 3 decimal places is 0.158 m."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "measured_percentage_amount",
+          "title": "Calculate the requested measured share",
+          "given": "9% of 1.75 m",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 9,
+          "whole": "1.75",
+          "unit": "m",
+          "steps": [
+            "9% = 0.09.",
+            "1.75 m × 0.09 = 0.1575 m exactly.",
+            "Use the next digit after the thousandths for final rounding.",
+            "The final length to 3 decimal places is 0.158 m."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_unit": "The answer needs a unit of length. Preserve the original unit or convert the complete value into a compatible unit.",
+        "check_working_unit": "The recorded calculation needs a compatible measurement unit. Select the unit of its result without changing the kind of quantity.",
+        "check_method": "The recorded operation does not establish the requested percentage of the complete original measurement in the selected calculation unit.",
+        "check_arithmetic": "The proportional route is valid. Recheck its exact arithmetic or any written equality; do not replace an exact intermediate result with a rounded value.",
+        "check_amount": "Preserve the exact percentage calculation, then round the final length at the requested decimal place.",
+        "check_notation": "The numerical value is correct. Write a zero before the decimal point for an amount below one, retaining the other zero placeholders.",
+        "check_accuracy": "The rounded value is correct. Record enough decimal places to show the requested accuracy, or its equivalent precision in the converted unit.",
+        "unrounded_final": "This is the exact measured value. Keep that exact calculation, then round only the final answer to the requested accuracy.",
+        "check_multiple": "Preserve the exact percentage calculation, then round the final length at the requested decimal place."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    }
+  ],
+  "canonical_lesson": {
+    "version": "PA13-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

@@ -1,0 +1,3066 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "FDP-09 - Convert a fraction to a decimal by division",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-21",
+      "sha256": "6637a6b83b16288742b1e9de371c60f00f8228f3cb107aa4211e5604989ba42d"
+    },
+    "authored_scope": "Convert a fraction to a terminating decimal by dividing numerator by denominator.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "FDP09-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "verified_desktop_ready_phone_locked_notation_learning_sharing_quarters_paired_drafts_hints_audio_320_390",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        15,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "source_repairs_consulted": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        19,
+        20
+      ],
+      "note": "All 21 source pages and complete previous configuration reviewed. Restored actual eight-group place-value sharing, seven quarter-pieces, prescribed 7/16 worked example, every guided division/bound blank, all 25 active questions and five-item final set. Leading zero required by this source; valid alternative methods remain accepted without unseen-method claims. No Entry, Diagnostic, prerequisite-state mutation, delayed Retrieval or Strong route."
+    }
+  },
+  "identity": {
+    "id": "FDP-09",
+    "slug": "convert-a-fraction-to-a-decimal-by-division",
+    "title": "Convert a fraction to a decimal by division",
+    "strand": "Number",
+    "cluster": "Fractions, Decimals and Percentages",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Convert positive fractions to exact terminating decimals by numerator divided by denominator, preserving place value, leading zeros and whole-number parts.",
+    "success_criteria": [
+      "Translate the fraction bar into correctly ordered division.",
+      "Continue exact division until remainder zero.",
+      "Preserve all decimal digits, including internal and leading zeros.",
+      "Keep whole-number parts of improper fractions.",
+      "Check using multiplication or estimation and apply in the prescribed contexts."
+    ],
+    "boundaries": {
+      "includes": [
+        "Positive proper and selected improper fractions",
+        "Exact terminating decimals",
+        "Calculator or accurate written division",
+        "Valid alternative conversion methods unless visible division is explicitly requested"
+      ],
+      "excludes": [
+        "Recurring decimals, rounding and negatives",
+        "Mixed-number conversion before division",
+        "Fraction-to-percentage conversion or mixed-form ordering",
+        "Entry, Diagnostic, prerequisite-state mutation and delayed Retrieval"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "FDP-01",
+      "FDP-07"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for FDP-01, FDP-07 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "single_choice",
+      "power_ten_fields",
+      "decimal"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    },
+    "place_value_profile": true
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "A fraction bar represents numerator divided by denominator.",
+    "invariant": "Equal sharing, division and the exact decimal describe the same amount.",
+    "must_notice": [
+      "Exchanging a remainder changes its place-value unit, not its value.",
+      "Every group receives the same amount at each place.",
+      "The remainder must be zero before an exact terminating division is complete.",
+      "A proper fraction requires a leading zero; an improper fraction keeps its complete wholes."
+    ],
+    "common_confusions": [
+      "Division order reversed",
+      "Digits joined instead of divided",
+      "Leading or internal zeros omitted",
+      "Decimal truncated or rounded",
+      "Whole-number part discarded",
+      "Quotient copied inaccurately"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "Read the fraction bar as division",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Read the fraction bar as division",
+          "initial_state": "Read the fraction bar as division",
+          "model": {
+            "kind": "division_decimal_conversion",
+            "title": "The fraction bar fixes the division order",
+            "n": 3,
+            "d": 8,
+            "given": "",
+            "steps": [
+              "Keep numerator first and denominator second."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "principle",
+            "solved": true,
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "The fraction bar means numerator divided by denominator. Preserve that order and continue into smaller decimal units until the remainder is zero."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Exchange three wholes into tenths",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Exchange three wholes into tenths",
+          "initial_state": "Exchange three wholes into tenths",
+          "model": {
+            "kind": "division_decimal_conversion",
+            "title": "Share three wholes between eight groups",
+            "n": 3,
+            "d": 8,
+            "given": "3/8",
+            "steps": [
+              "30 tenths give 3 tenths to each of 8 groups, with 6 tenths left.",
+              "60 hundredths give 7 hundredths to each group, with 4 hundredths left.",
+              "40 thousandths give 5 thousandths to each group, with nothing left: 3/8 = 0.375."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "sharing",
+            "solved": true,
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "Share the three whole units equally between eight groups. Exchange them for tenths; each group receives the same amount, with a remainder still to share."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Exchange the remaining tenths",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Exchange the remaining tenths",
+          "initial_state": "Exchange the remaining tenths",
+          "model": {
+            "kind": "division_decimal_conversion",
+            "title": "Share three wholes between eight groups",
+            "n": 3,
+            "d": 8,
+            "given": "3/8",
+            "steps": [
+              "30 tenths give 3 tenths to each of 8 groups, with 6 tenths left.",
+              "60 hundredths give 7 hundredths to each group, with 4 hundredths left.",
+              "40 thousandths give 5 thousandths to each group, with nothing left: 3/8 = 0.375."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "sharing",
+            "solved": true,
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "The leftover tenths become hundredths of the original whole. Share these equally too, then keep track of the smaller remainder."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Finish sharing in thousandths",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Finish sharing in thousandths",
+          "initial_state": "Finish sharing in thousandths",
+          "model": {
+            "kind": "division_decimal_conversion",
+            "title": "Share three wholes between eight groups",
+            "n": 3,
+            "d": 8,
+            "given": "3/8",
+            "steps": [
+              "30 tenths give 3 tenths to each of 8 groups, with 6 tenths left.",
+              "60 hundredths give 7 hundredths to each group, with 4 hundredths left.",
+              "40 thousandths give 5 thousandths to each group, with nothing left: 3/8 = 0.375."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "sharing",
+            "solved": true,
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "Exchange the last remainder into thousandths. Every group now receives its final share and nothing remains, so the decimal is exact."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Start with seven quarter-pieces",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Start with seven quarter-pieces",
+          "initial_state": "Start with seven quarter-pieces",
+          "model": {
+            "kind": "division_decimal_conversion",
+            "title": "Regroup seven quarter-pieces",
+            "n": 7,
+            "d": 4,
+            "given": "7/4",
+            "steps": [
+              "Seven tiles each represent one quarter of a whole.",
+              "Four quarters make one whole; three more quarters reach 1.75."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "quarters",
+            "solved": true,
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "Each tile is one quarter of the same-sized whole. There are more than four tiles, so the amount includes a complete whole."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T06"
+      },
+      {
+        "id": "T06",
+        "stage": "teaching",
+        "purpose": "Keep the complete whole",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Keep the complete whole",
+          "initial_state": "Keep the complete whole",
+          "model": {
+            "kind": "division_decimal_conversion",
+            "title": "Regroup seven quarter-pieces",
+            "n": 7,
+            "d": 4,
+            "given": "7/4",
+            "steps": [
+              "Seven tiles each represent one quarter of a whole.",
+              "Four quarters make one whole; three more quarters reach 1.75."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "quarters",
+            "solved": true,
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "Group four quarters into one whole and keep the other three quarters. The number-line endpoint shows the full amount, not just the leftover part."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T07"
+      },
+      {
+        "id": "T07",
+        "stage": "teaching",
+        "purpose": "Explain the division order",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Explain the division order",
+          "initial_state": "Explain the division order",
+          "model": {
+            "kind": "division_decimal_conversion",
+            "title": "Explain what the fraction bar means",
+            "n": 5,
+            "d": 16,
+            "given": "5/16",
+            "steps": [
+              "The top number is the numerator and the bottom number is the denominator.",
+              "The fraction bar means numerator divided by denominator: 5 ÷ 16."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "explanation_question": true,
+            "mode": "rule"
+          }
+        },
+        "narration": {
+          "script": "Choose the reason the numerator must be divided by the denominator."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "FDP-09-C01"
+        },
+        "next_step": "T08"
+      },
+      {
+        "id": "T08",
+        "stage": "teaching",
+        "purpose": "Set up the worked division",
+        "source_ref": {
+          "page": 6
+        },
+        "scene": {
+          "display_title": "Set up the worked division",
+          "initial_state": "Set up the worked division",
+          "model": {
+            "kind": "division_decimal_conversion",
+            "title": "Convert seven sixteenths by division",
+            "n": 7,
+            "d": 16,
+            "given": "7/16",
+            "steps": [
+              "7/16 = 7 ÷ 16.",
+              "7 < 16, so the answer is between 0 and 1 and needs a leading zero.",
+              "7 ÷ 16 = 0.4375; the exact division ends with remainder 0.",
+              "0.4375 × 16 = 7; multiplication returns the original numerator."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "Read the worked fraction from top to bottom. The numerator is the dividend and the denominator is the divisor."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T09"
+      },
+      {
+        "id": "T09",
+        "stage": "teaching",
+        "purpose": "Estimate before calculating",
+        "source_ref": {
+          "page": 6
+        },
+        "scene": {
+          "display_title": "Estimate before calculating",
+          "initial_state": "Estimate before calculating",
+          "model": {
+            "kind": "division_decimal_conversion",
+            "title": "Convert seven sixteenths by division",
+            "n": 7,
+            "d": 16,
+            "given": "7/16",
+            "steps": [
+              "7/16 = 7 ÷ 16.",
+              "7 < 16, so the answer is between 0 and 1 and needs a leading zero.",
+              "7 ÷ 16 = 0.4375; the exact division ends with remainder 0.",
+              "0.4375 × 16 = 7; multiplication returns the original numerator."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "The numerator is smaller than the denominator. Keep the quotient below one and include its leading zero."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T10"
+      },
+      {
+        "id": "T10",
+        "stage": "teaching",
+        "purpose": "Complete the exact quotient",
+        "source_ref": {
+          "page": 6
+        },
+        "scene": {
+          "display_title": "Complete the exact quotient",
+          "initial_state": "Complete the exact quotient",
+          "model": {
+            "kind": "division_decimal_conversion",
+            "title": "Convert seven sixteenths by division",
+            "n": 7,
+            "d": 16,
+            "given": "7/16",
+            "steps": [
+              "7/16 = 7 ÷ 16.",
+              "7 < 16, so the answer is between 0 and 1 and needs a leading zero.",
+              "7 ÷ 16 = 0.4375; the exact division ends with remainder 0.",
+              "0.4375 × 16 = 7; multiplication returns the original numerator."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "Follow the place-value rows as each remainder becomes smaller units. Stop only when the remainder is zero; keep every quotient digit."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T11"
+      },
+      {
+        "id": "T11",
+        "stage": "teaching",
+        "purpose": "Multiply back to check",
+        "source_ref": {
+          "page": 6
+        },
+        "scene": {
+          "display_title": "Multiply back to check",
+          "initial_state": "Multiply back to check",
+          "model": {
+            "kind": "division_decimal_conversion",
+            "title": "Convert seven sixteenths by division",
+            "n": 7,
+            "d": 16,
+            "given": "7/16",
+            "steps": [
+              "7/16 = 7 ÷ 16.",
+              "7 < 16, so the answer is between 0 and 1 and needs a leading zero.",
+              "7 ÷ 16 = 0.4375; the exact division ends with remainder 0.",
+              "0.4375 × 16 = 7; multiplication returns the original numerator."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 4
+          }
+        },
+        "narration": {
+          "script": "Multiply the quotient by the original denominator. Returning to the numerator checks that the exact value has been preserved."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T12"
+      },
+      {
+        "id": "T12",
+        "stage": "teaching",
+        "purpose": "Choose a correct method",
+        "source_ref": {
+          "page": 6
+        },
+        "scene": {
+          "display_title": "Choose a correct method",
+          "initial_state": "Choose a correct method",
+          "model": {
+            "kind": "division_decimal_conversion",
+            "title": "Check division order and exact place value",
+            "n": 13,
+            "d": 32,
+            "given": "13/32",
+            "steps": [
+              "13/32 = 13 ÷ 32.",
+              "13 < 32, so the answer is between 0 and 1 and needs a leading zero.",
+              "13 ÷ 32 = 0.40625; the exact division ends with remainder 0.",
+              "0.40625 × 32 = 13; multiplication returns the original numerator."
+            ],
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Check the division order and exact quotient in each proposed method."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "FDP-09-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "FDP-09-G01",
+        "support_level": "high",
+        "pre_question_script": "Enter the dividend and divisor yourself.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "FDP-09-G02",
+        "support_level": "high",
+        "pre_question_script": "Complete both bounds before calculating.",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "faded",
+        "question_ref": "FDP-09-G03",
+        "support_level": "reduced",
+        "pre_question_script": "Write the exact quotient with every required decimal digit.",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "independent_transfer",
+        "question_ref": "FDP-09-G04",
+        "support_level": "none",
+        "pre_question_script": "Choose the statement that gets both order and size right.",
+        "correct_next": "P01"
+      }
+    },
+    "practice": {
+      "intro_script": "Write the exact decimal for each fraction. Keep a leading zero below one, preserve complete wholes and do not round or stop early. Use the same exact values in the application questions.",
+      "question_order": [
+        "FDP-09-P01",
+        "FDP-09-P02",
+        "FDP-09-P03",
+        "FDP-09-P04",
+        "FDP-09-P05",
+        "FDP-09-P06",
+        "FDP-09-P07",
+        "FDP-09-P08",
+        "FDP-09-P09",
+        "FDP-09-X01",
+        "FDP-09-X02",
+        "FDP-09-X03",
+        "FDP-09-X04",
+        "FDP-09-X05"
+      ],
+      "question_count": 14,
+      "feedback_policy": "Response-specific order, decimal-place, notation, truncation and whole-number feedback. Correct components remain recognised. Alternative valid methods accepted; unseen method evidence is not inferred."
+    },
+    "exit": {
+      "intro_script": "Complete four exact decimal conversions and one method check without hints or entry prompts. Include the required leading zero for values below one. Each response locks; feedback follows only after all five are saved.",
+      "primary_question_refs": [
+        "FDP-09-E01",
+        "FDP-09-E02",
+        "FDP-09-E03",
+        "FDP-09-E04",
+        "FDP-09-E05"
+      ],
+      "confirmation_question_refs": [],
+      "submission_policy": "No correctness, division model or repair until the full final set is locked.",
+      "mastery_policy": {
+        "profile": "all_primary_unsupported_deferred",
+        "require_all": true,
+        "source_page": 15,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "All final decimals and the division rule are correct. You preserved the exact digits, required leading zeros and whole-number parts.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Keep the exact quotient and its place value",
+      "ryan_script": "One or more final responses need another pass. Review division order, the complete exact decimal, required zeros and any whole-number part.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "FDP-09-C01",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "Why is 5/16 calculated as 5 ÷ 16 rather than 16 ÷ 5?",
+      "target": "Interpret numerator divided by denominator and record an exact terminating decimal with correct place value",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "The fraction bar means that the numerator is divided by the denominator.",
+          "The larger number must always be divided by the smaller number.",
+          "The denominator is ignored when a decimal is required.",
+          "Fractions are converted by joining the numerator and denominator."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "The fraction bar means that the numerator is divided by the denominator."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Yes. The fraction bar fixes the order of division.",
+        "correct_after_support": "Yes. The fraction bar fixes the order of division.",
+        "on_correct_math": "The top number is the numerator and the bottom number is the denominator. → The fraction bar means numerator divided by denominator: 5 ÷ 16.",
+        "on_incorrect_attempt_1": "Use the meaning of the fraction bar, not the relative size of the two numbers.",
+        "on_incorrect_attempt_2": "Use the meaning of the fraction bar, not the relative size of the two numbers.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The top number is the numerator and the bottom number is the denominator. → The fraction bar means numerator divided by denominator: 5 ÷ 16."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the meaning of the fraction bar, not the relative size of the two numbers.",
+        "hint_2": "Keep the numerator first, continue to remainder zero and check by multiplying back.",
+        "worked_solution": "The top number is the numerator and the bottom number is the denominator. → The fraction bar means numerator divided by denominator: 5 ÷ 16."
+      },
+      "working": [
+        "The top number is the numerator and the bottom number is the denominator.",
+        "The fraction bar means numerator divided by denominator: 5 ÷ 16."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "division_decimal_conversion",
+          "title": "Explain what the fraction bar means",
+          "n": 5,
+          "d": 16,
+          "given": "5/16",
+          "steps": [
+            "The top number is the numerator and the bottom number is the denominator.",
+            "The fraction bar means numerator divided by denominator: 5 ÷ 16."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "explanation_question": true,
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "The larger number must always be divided by the smaller number.": "The larger number does not automatically come first. The fraction notation fixes the dividend and divisor.",
+        "The denominator is ignored when a decimal is required.": "The denominator determines the number of equal groups; it cannot be ignored.",
+        "Fractions are converted by joining the numerator and denominator.": "Joining digits does not calculate the equal share represented by the fraction."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-09-C02",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Which method correctly converts 13/32 to a decimal?",
+      "target": "Interpret numerator divided by denominator and record an exact terminating decimal with correct place value",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "13 ÷ 32 = 0.40625",
+          "32 ÷ 13 = 2.461538…",
+          "13/32 = 13.32",
+          "13 ÷ 32 = 4.0625"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "13 ÷ 32 = 0.40625"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The calculation keeps the numerator first and gives the exact value below one.",
+        "correct_after_support": "Correct. The calculation keeps the numerator first and gives the exact value below one.",
+        "on_correct_math": "13/32 = 13 ÷ 32. → 13 < 32, so the answer is between 0 and 1 and needs a leading zero. → 13 ÷ 32 = 0.40625; the exact division ends with remainder 0. → 0.40625 × 32 = 13; multiplication returns the original numerator.",
+        "on_incorrect_attempt_1": "Check the division order, then whether the quotient has the right size and all its digits.",
+        "on_incorrect_attempt_2": "Check the division order, then whether the quotient has the right size and all its digits.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "13/32 = 13 ÷ 32. → 13 < 32, so the answer is between 0 and 1 and needs a leading zero. → 13 ÷ 32 = 0.40625; the exact division ends with remainder 0. → 0.40625 × 32 = 13; multiplication returns the original numerator."
+      },
+      "mathematical_support": {
+        "hint_1": "Check the division order, then whether the quotient has the right size and all its digits.",
+        "hint_2": "Keep the numerator first, continue to remainder zero and check by multiplying back.",
+        "worked_solution": "13/32 = 13 ÷ 32. → 13 < 32, so the answer is between 0 and 1 and needs a leading zero. → 13 ÷ 32 = 0.40625; the exact division ends with remainder 0. → 0.40625 × 32 = 13; multiplication returns the original numerator."
+      },
+      "working": [
+        "13/32 = 13 ÷ 32.",
+        "13 < 32, so the answer is between 0 and 1 and needs a leading zero.",
+        "13 ÷ 32 = 0.40625; the exact division ends with remainder 0.",
+        "0.40625 × 32 = 13; multiplication returns the original numerator."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "division_decimal_conversion",
+          "title": "Check division order and exact place value",
+          "n": 13,
+          "d": 32,
+          "given": "13/32",
+          "steps": [
+            "13/32 = 13 ÷ 32.",
+            "13 < 32, so the answer is between 0 and 1 and needs a leading zero.",
+            "13 ÷ 32 = 0.40625; the exact division ends with remainder 0.",
+            "0.40625 × 32 = 13; multiplication returns the original numerator."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "32 ÷ 13 = 2.461538…": "That reverses the fraction division and gives a value greater than one.",
+        "13/32 = 13.32": "Putting a point between the numerator and denominator does not divide them.",
+        "13 ÷ 32 = 4.0625": "The division order is correct, but the decimal point makes the value ten times too large."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-09-G01",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "guided",
+      "prompt": "Complete the division in order: 9/32 = ___ ÷ ___.",
+      "target": "Interpret numerator divided by denominator and record an exact terminating decimal with correct place value",
+      "response": {
+        "type": "power_ten_fields",
+        "input_label": "Complete both division entries",
+        "fields": [
+          {
+            "key": "dividend",
+            "label": "Dividend",
+            "type": "integer"
+          },
+          {
+            "key": "divisor",
+            "label": "Divisor",
+            "type": "integer"
+          }
+        ]
+      },
+      "answer": {
+        "value": {
+          "dividend": 9,
+          "divisor": 32
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both entries preserve the division order shown by the fraction.",
+        "correct_after_support": "Correct. Both entries preserve the division order shown by the fraction.",
+        "on_correct_math": "The numerator 9 is the dividend. → The denominator 32 is the divisor: 9 ÷ 32.",
+        "on_incorrect_attempt_1": "Read the numerator and denominator, then place them in their division roles.",
+        "on_incorrect_attempt_2": "Read the numerator and denominator, then place them in their division roles.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The numerator 9 is the dividend. → The denominator 32 is the divisor: 9 ÷ 32."
+      },
+      "mathematical_support": {
+        "hint_1": "Read the numerator and denominator, then place them in their division roles.",
+        "hint_2": "Keep the numerator first, continue to remainder zero and check by multiplying back.",
+        "worked_solution": "The numerator 9 is the dividend. → The denominator 32 is the divisor: 9 ÷ 32."
+      },
+      "working": [
+        "The numerator 9 is the dividend.",
+        "The denominator 32 is the divisor: 9 ÷ 32."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "division_decimal_conversion",
+          "title": "Choose the dividend and divisor",
+          "n": 9,
+          "d": 32,
+          "given": "9/32",
+          "steps": [
+            "The numerator 9 is the dividend.",
+            "The denominator 32 is the divisor: 9 ÷ 32."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "order"
+        }
+      },
+      "response_feedback": {
+        "check_dividend": "Your divisor is correct. The numerator belongs in the dividend position.",
+        "check_divisor": "Your dividend is correct. The denominator belongs in the divisor position.",
+        "check_multiple": "The numerator comes first as dividend; the denominator follows as divisor."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-09-G02",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "guided",
+      "prompt": "Since 9 < 32, the answer is between ___ and ___. Enter the lower bound first.",
+      "target": "Interpret numerator divided by denominator and record an exact terminating decimal with correct place value",
+      "response": {
+        "type": "power_ten_fields",
+        "input_label": "Complete both bounds",
+        "fields": [
+          {
+            "key": "lower",
+            "label": "Lower bound",
+            "type": "integer"
+          },
+          {
+            "key": "upper",
+            "label": "Upper bound",
+            "type": "integer"
+          }
+        ]
+      },
+      "answer": {
+        "value": {
+          "lower": 0,
+          "upper": 1
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The two bounds place this positive proper fraction below one.",
+        "correct_after_support": "Correct. The two bounds place this positive proper fraction below one.",
+        "on_correct_math": "This positive fraction is greater than 0. → Since 9 < 32, the fraction is less than 1.",
+        "on_incorrect_attempt_1": "Use the positive numerator and compare it with the denominator to locate the value.",
+        "on_incorrect_attempt_2": "Use the positive numerator and compare it with the denominator to locate the value.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "This positive fraction is greater than 0. → Since 9 < 32, the fraction is less than 1."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the positive numerator and compare it with the denominator to locate the value.",
+        "hint_2": "Keep the numerator first, continue to remainder zero and check by multiplying back.",
+        "worked_solution": "This positive fraction is greater than 0. → Since 9 < 32, the fraction is less than 1."
+      },
+      "working": [
+        "This positive fraction is greater than 0.",
+        "Since 9 < 32, the fraction is less than 1."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "division_decimal_conversion",
+          "title": "Estimate the size before calculating",
+          "n": 9,
+          "d": 32,
+          "given": "9/32",
+          "steps": [
+            "This positive fraction is greater than 0.",
+            "Since 9 < 32, the fraction is less than 1."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "bounds"
+        }
+      },
+      "response_feedback": {
+        "check_lower": "Your upper bound is correct. Use zero as the lower bound for this positive fraction.",
+        "check_upper": "Your lower bound is correct. Compare the numerator with the denominator to find the upper bound.",
+        "check_multiple": "The positive fraction lies above zero and below one; enter the lower bound first."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-09-G03",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "faded",
+      "prompt": "Complete the exact division: 9 ÷ 32 = ___.",
+      "target": "Interpret numerator divided by denominator and record an exact terminating decimal with correct place value",
+      "response": {
+        "type": "decimal",
+        "division_fraction": {
+          "n": 9,
+          "d": 32
+        },
+        "require_leading_zero": true,
+        "input_label": "Exact decimal — include a leading zero below 1",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "0.28125"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The quotient keeps every exact decimal digit and its leading zero.",
+        "correct_after_support": "Correct. The quotient keeps every exact decimal digit and its leading zero.",
+        "on_correct_math": "9/32 = 9 ÷ 32. → 9 < 32, so the answer is between 0 and 1 and needs a leading zero. → 9 ÷ 32 = 0.28125; the exact division ends with remainder 0. → 0.28125 × 32 = 9; multiplication returns the original numerator.",
+        "on_incorrect_attempt_1": "Continue beyond the first decimal places until the remainder is zero.",
+        "on_incorrect_attempt_2": "Continue beyond the first decimal places until the remainder is zero.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "9/32 = 9 ÷ 32. → 9 < 32, so the answer is between 0 and 1 and needs a leading zero. → 9 ÷ 32 = 0.28125; the exact division ends with remainder 0. → 0.28125 × 32 = 9; multiplication returns the original numerator."
+      },
+      "mathematical_support": {
+        "hint_1": "Continue beyond the first decimal places until the remainder is zero.",
+        "hint_2": "Keep the numerator first, continue to remainder zero and check by multiplying back.",
+        "worked_solution": "9/32 = 9 ÷ 32. → 9 < 32, so the answer is between 0 and 1 and needs a leading zero. → 9 ÷ 32 = 0.28125; the exact division ends with remainder 0. → 0.28125 × 32 = 9; multiplication returns the original numerator."
+      },
+      "working": [
+        "9/32 = 9 ÷ 32.",
+        "9 < 32, so the answer is between 0 and 1 and needs a leading zero.",
+        "9 ÷ 32 = 0.28125; the exact division ends with remainder 0.",
+        "0.28125 × 32 = 9; multiplication returns the original numerator."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "division_decimal_conversion",
+          "title": "Continue the quotient to remainder zero",
+          "n": 9,
+          "d": 32,
+          "given": "9/32",
+          "steps": [
+            "9/32 = 9 ÷ 32.",
+            "9 < 32, so the answer is between 0 and 1 and needs a leading zero.",
+            "9 ÷ 32 = 0.28125; the exact division ends with remainder 0.",
+            "0.28125 × 32 = 9; multiplication returns the original numerator."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_division": "Check numerator divided by denominator, preserve every decimal digit and multiply the result back.",
+        "missing_leading_zero": "Your decimal has the correct value. This lesson requires a zero before the decimal point for a positive value below one.",
+        "reversed": "That matches the division in reverse. Keep the numerator as dividend and the denominator as divisor.",
+        "joined": "Joining the fraction digits does not perform the division.",
+        "point_shift": "Those digits are in the wrong decimal positions. Check the size of the original fraction.",
+        "stopped_early": "That stops before the exact terminating decimal is complete. Continue until there is no remainder.",
+        "dropped_whole": "That loses the complete whole-number part. Keep it as well as the remaining fraction."
+      },
+      "response_patterns": [
+        {
+          "value": ".281",
+          "classification": "stopped_early"
+        },
+        {
+          "value": "0.28",
+          "classification": "stopped_early"
+        },
+        {
+          "value": "0.932",
+          "classification": "joined"
+        },
+        {
+          "value": "2.8125",
+          "classification": "point_shift"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-09-G04",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "independent_transfer",
+      "prompt": "Which statement correctly describes converting 9/32 to a decimal?",
+      "target": "Interpret numerator divided by denominator and record an exact terminating decimal with correct place value",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "The numerator 9 is divided by the denominator 32, and the answer must be below 1.",
+          "The denominator 32 is divided by the numerator 9 because 32 is larger.",
+          "The digits 9 and 32 should be joined to make 0.932.",
+          "The answer must be greater than 1 because the denominator has two digits."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "The numerator 9 is divided by the denominator 32, and the answer must be below 1."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The statement keeps the numerator first and the positive quotient below one.",
+        "correct_after_support": "Correct. The statement keeps the numerator first and the positive quotient below one.",
+        "on_correct_math": "9/32 = 9 ÷ 32. → 9 < 32, so the answer is between 0 and 1 and needs a leading zero. → 9 ÷ 32 = 0.28125; the exact division ends with remainder 0. → 0.28125 × 32 = 9; multiplication returns the original numerator.",
+        "on_incorrect_attempt_1": "Check both the order of division and the size of this proper fraction.",
+        "on_incorrect_attempt_2": "Check both the order of division and the size of this proper fraction.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "9/32 = 9 ÷ 32. → 9 < 32, so the answer is between 0 and 1 and needs a leading zero. → 9 ÷ 32 = 0.28125; the exact division ends with remainder 0. → 0.28125 × 32 = 9; multiplication returns the original numerator."
+      },
+      "mathematical_support": {
+        "hint_1": "Check both the order of division and the size of this proper fraction.",
+        "hint_2": "Keep the numerator first, continue to remainder zero and check by multiplying back.",
+        "worked_solution": "9/32 = 9 ÷ 32. → 9 < 32, so the answer is between 0 and 1 and needs a leading zero. → 9 ÷ 32 = 0.28125; the exact division ends with remainder 0. → 0.28125 × 32 = 9; multiplication returns the original numerator."
+      },
+      "working": [
+        "9/32 = 9 ÷ 32.",
+        "9 < 32, so the answer is between 0 and 1 and needs a leading zero.",
+        "9 ÷ 32 = 0.28125; the exact division ends with remainder 0.",
+        "0.28125 × 32 = 9; multiplication returns the original numerator."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "division_decimal_conversion",
+          "title": "Explain the order and size",
+          "n": 9,
+          "d": 32,
+          "given": "9/32",
+          "steps": [
+            "9/32 = 9 ÷ 32.",
+            "9 < 32, so the answer is between 0 and 1 and needs a leading zero.",
+            "9 ÷ 32 = 0.28125; the exact division ends with remainder 0.",
+            "0.28125 × 32 = 9; multiplication returns the original numerator."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "The denominator 32 is divided by the numerator 9 because 32 is larger.": "The fraction bar determines the order, not which number is larger.",
+        "The digits 9 and 32 should be joined to make 0.932.": "Joining the digits does not calculate their quotient.",
+        "The answer must be greater than 1 because the denominator has two digits.": "The number of denominator digits does not make this proper fraction greater than one."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-09-P01",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Write 1/8 as an exact decimal. Use division.",
+      "target": "Interpret numerator divided by denominator and record an exact terminating decimal with correct place value",
+      "response": {
+        "type": "decimal",
+        "division_fraction": {
+          "n": 1,
+          "d": 8
+        },
+        "require_leading_zero": true,
+        "input_label": "Exact decimal — include a leading zero below 1",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "0.125"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The quotient represents one of eight equal shares of a whole.",
+        "correct_after_support": "Correct. The quotient represents one of eight equal shares of a whole.",
+        "on_correct_math": "1/8 = 1 ÷ 8. → 1 < 8, so the answer is between 0 and 1 and needs a leading zero. → 1 ÷ 8 = 0.125; the exact division ends with remainder 0. → 0.125 × 8 = 1; multiplication returns the original numerator.",
+        "on_incorrect_attempt_1": "Divide the numerator by the denominator and retain all the exact decimal places.",
+        "on_incorrect_attempt_2": "Divide the numerator by the denominator and retain all the exact decimal places.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "1/8 = 1 ÷ 8. → 1 < 8, so the answer is between 0 and 1 and needs a leading zero. → 1 ÷ 8 = 0.125; the exact division ends with remainder 0. → 0.125 × 8 = 1; multiplication returns the original numerator."
+      },
+      "mathematical_support": {
+        "hint_1": "Divide the numerator by the denominator and retain all the exact decimal places.",
+        "hint_2": "Keep the numerator first, continue to remainder zero and check by multiplying back.",
+        "worked_solution": "1/8 = 1 ÷ 8. → 1 < 8, so the answer is between 0 and 1 and needs a leading zero. → 1 ÷ 8 = 0.125; the exact division ends with remainder 0. → 0.125 × 8 = 1; multiplication returns the original numerator."
+      },
+      "working": [
+        "1/8 = 1 ÷ 8.",
+        "1 < 8, so the answer is between 0 and 1 and needs a leading zero.",
+        "1 ÷ 8 = 0.125; the exact division ends with remainder 0.",
+        "0.125 × 8 = 1; multiplication returns the original numerator."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "division_decimal_conversion",
+          "title": "Find the exact decimal quotient",
+          "n": 1,
+          "d": 8,
+          "given": "1/8",
+          "steps": [
+            "1/8 = 1 ÷ 8.",
+            "1 < 8, so the answer is between 0 and 1 and needs a leading zero.",
+            "1 ÷ 8 = 0.125; the exact division ends with remainder 0.",
+            "0.125 × 8 = 1; multiplication returns the original numerator."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_division": "Check numerator divided by denominator, preserve every decimal digit and multiply the result back.",
+        "missing_leading_zero": "Your decimal has the correct value. This lesson requires a zero before the decimal point for a positive value below one.",
+        "reversed": "That matches the division in reverse. Keep the numerator as dividend and the denominator as divisor.",
+        "joined": "Joining the fraction digits does not perform the division.",
+        "point_shift": "Those digits are in the wrong decimal positions. Check the size of the original fraction.",
+        "stopped_early": "That stops before the exact terminating decimal is complete. Continue until there is no remainder.",
+        "dropped_whole": "That loses the complete whole-number part. Keep it as well as the remaining fraction."
+      },
+      "response_patterns": [
+        {
+          "value": "8",
+          "classification": "reversed"
+        },
+        {
+          "value": "1.8",
+          "classification": "joined"
+        },
+        {
+          "value": ".12",
+          "classification": "stopped_early"
+        },
+        {
+          "value": "1.25",
+          "classification": "point_shift"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-09-P02",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Write 5/16 as an exact decimal. Use division.",
+      "target": "Interpret numerator divided by denominator and record an exact terminating decimal with correct place value",
+      "response": {
+        "type": "decimal",
+        "division_fraction": {
+          "n": 5,
+          "d": 16
+        },
+        "require_leading_zero": true,
+        "input_label": "Exact decimal — include a leading zero below 1",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "0.3125"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The exact decimal preserves five sixteenths of a whole.",
+        "correct_after_support": "Correct. The exact decimal preserves five sixteenths of a whole.",
+        "on_correct_math": "5/16 = 5 ÷ 16. → 5 < 16, so the answer is between 0 and 1 and needs a leading zero. → 5 ÷ 16 = 0.3125; the exact division ends with remainder 0. → 0.3125 × 16 = 5; multiplication returns the original numerator.",
+        "on_incorrect_attempt_1": "Check the quotient against the size of the proper fraction and continue to remainder zero.",
+        "on_incorrect_attempt_2": "Check the quotient against the size of the proper fraction and continue to remainder zero.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "5/16 = 5 ÷ 16. → 5 < 16, so the answer is between 0 and 1 and needs a leading zero. → 5 ÷ 16 = 0.3125; the exact division ends with remainder 0. → 0.3125 × 16 = 5; multiplication returns the original numerator."
+      },
+      "mathematical_support": {
+        "hint_1": "Check the quotient against the size of the proper fraction and continue to remainder zero.",
+        "hint_2": "Keep the numerator first, continue to remainder zero and check by multiplying back.",
+        "worked_solution": "5/16 = 5 ÷ 16. → 5 < 16, so the answer is between 0 and 1 and needs a leading zero. → 5 ÷ 16 = 0.3125; the exact division ends with remainder 0. → 0.3125 × 16 = 5; multiplication returns the original numerator."
+      },
+      "working": [
+        "5/16 = 5 ÷ 16.",
+        "5 < 16, so the answer is between 0 and 1 and needs a leading zero.",
+        "5 ÷ 16 = 0.3125; the exact division ends with remainder 0.",
+        "0.3125 × 16 = 5; multiplication returns the original numerator."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "division_decimal_conversion",
+          "title": "Find the exact decimal quotient",
+          "n": 5,
+          "d": 16,
+          "given": "5/16",
+          "steps": [
+            "5/16 = 5 ÷ 16.",
+            "5 < 16, so the answer is between 0 and 1 and needs a leading zero.",
+            "5 ÷ 16 = 0.3125; the exact division ends with remainder 0.",
+            "0.3125 × 16 = 5; multiplication returns the original numerator."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_division": "Check numerator divided by denominator, preserve every decimal digit and multiply the result back.",
+        "missing_leading_zero": "Your decimal has the correct value. This lesson requires a zero before the decimal point for a positive value below one.",
+        "reversed": "That matches the division in reverse. Keep the numerator as dividend and the denominator as divisor.",
+        "joined": "Joining the fraction digits does not perform the division.",
+        "point_shift": "Those digits are in the wrong decimal positions. Check the size of the original fraction.",
+        "stopped_early": "That stops before the exact terminating decimal is complete. Continue until there is no remainder.",
+        "dropped_whole": "That loses the complete whole-number part. Keep it as well as the remaining fraction."
+      },
+      "response_patterns": [
+        {
+          "value": "3.2",
+          "classification": "reversed"
+        },
+        {
+          "value": "5.16",
+          "classification": "joined"
+        },
+        {
+          "value": "3.125",
+          "classification": "point_shift"
+        },
+        {
+          "value": ".31",
+          "classification": "stopped_early"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-09-P03",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Write 11/32 as an exact decimal. Use division.",
+      "target": "Interpret numerator divided by denominator and record an exact terminating decimal with correct place value",
+      "response": {
+        "type": "decimal",
+        "division_fraction": {
+          "n": 11,
+          "d": 32
+        },
+        "require_leading_zero": true,
+        "input_label": "Exact decimal — include a leading zero below 1",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "0.34375"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Every digit of this terminating quotient is retained.",
+        "correct_after_support": "Correct. Every digit of this terminating quotient is retained.",
+        "on_correct_math": "11/32 = 11 ÷ 32. → 11 < 32, so the answer is between 0 and 1 and needs a leading zero. → 11 ÷ 32 = 0.34375; the exact division ends with remainder 0. → 0.34375 × 32 = 11; multiplication returns the original numerator.",
+        "on_incorrect_attempt_1": "An exact answer may need more than two or three decimal places.",
+        "on_incorrect_attempt_2": "An exact answer may need more than two or three decimal places.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "11/32 = 11 ÷ 32. → 11 < 32, so the answer is between 0 and 1 and needs a leading zero. → 11 ÷ 32 = 0.34375; the exact division ends with remainder 0. → 0.34375 × 32 = 11; multiplication returns the original numerator."
+      },
+      "mathematical_support": {
+        "hint_1": "An exact answer may need more than two or three decimal places.",
+        "hint_2": "Keep the numerator first, continue to remainder zero and check by multiplying back.",
+        "worked_solution": "11/32 = 11 ÷ 32. → 11 < 32, so the answer is between 0 and 1 and needs a leading zero. → 11 ÷ 32 = 0.34375; the exact division ends with remainder 0. → 0.34375 × 32 = 11; multiplication returns the original numerator."
+      },
+      "working": [
+        "11/32 = 11 ÷ 32.",
+        "11 < 32, so the answer is between 0 and 1 and needs a leading zero.",
+        "11 ÷ 32 = 0.34375; the exact division ends with remainder 0.",
+        "0.34375 × 32 = 11; multiplication returns the original numerator."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "division_decimal_conversion",
+          "title": "Find the exact decimal quotient",
+          "n": 11,
+          "d": 32,
+          "given": "11/32",
+          "steps": [
+            "11/32 = 11 ÷ 32.",
+            "11 < 32, so the answer is between 0 and 1 and needs a leading zero.",
+            "11 ÷ 32 = 0.34375; the exact division ends with remainder 0.",
+            "0.34375 × 32 = 11; multiplication returns the original numerator."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_division": "Check numerator divided by denominator, preserve every decimal digit and multiply the result back.",
+        "missing_leading_zero": "Your decimal has the correct value. This lesson requires a zero before the decimal point for a positive value below one.",
+        "reversed": "That matches the division in reverse. Keep the numerator as dividend and the denominator as divisor.",
+        "joined": "Joining the fraction digits does not perform the division.",
+        "point_shift": "Those digits are in the wrong decimal positions. Check the size of the original fraction.",
+        "stopped_early": "That stops before the exact terminating decimal is complete. Continue until there is no remainder.",
+        "dropped_whole": "That loses the complete whole-number part. Keep it as well as the remaining fraction."
+      },
+      "response_patterns": [
+        {
+          "value": ".34",
+          "classification": "stopped_early"
+        },
+        {
+          "value": ".343",
+          "classification": "stopped_early"
+        },
+        {
+          "value": ".344",
+          "classification": "stopped_early"
+        },
+        {
+          "value": "11.32",
+          "classification": "joined"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-09-P04",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Write 7/20 as an exact decimal. Use division.",
+      "target": "Interpret numerator divided by denominator and record an exact terminating decimal with correct place value",
+      "response": {
+        "type": "decimal",
+        "division_fraction": {
+          "n": 7,
+          "d": 20
+        },
+        "require_leading_zero": true,
+        "input_label": "Exact decimal — include a leading zero below 1",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "0.35"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Multiplying this decimal by the denominator returns the numerator.",
+        "correct_after_support": "Correct. Multiplying this decimal by the denominator returns the numerator.",
+        "on_correct_math": "7/20 = 7 ÷ 20. → 7 < 20, so the answer is between 0 and 1 and needs a leading zero. → 7 ÷ 20 = 0.35; the exact division ends with remainder 0. → 0.35 × 20 = 7; multiplication returns the original numerator.",
+        "on_incorrect_attempt_1": "Keep the numerator first and check the quotient by multiplying back.",
+        "on_incorrect_attempt_2": "Keep the numerator first and check the quotient by multiplying back.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "7/20 = 7 ÷ 20. → 7 < 20, so the answer is between 0 and 1 and needs a leading zero. → 7 ÷ 20 = 0.35; the exact division ends with remainder 0. → 0.35 × 20 = 7; multiplication returns the original numerator."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the numerator first and check the quotient by multiplying back.",
+        "hint_2": "Keep the numerator first, continue to remainder zero and check by multiplying back.",
+        "worked_solution": "7/20 = 7 ÷ 20. → 7 < 20, so the answer is between 0 and 1 and needs a leading zero. → 7 ÷ 20 = 0.35; the exact division ends with remainder 0. → 0.35 × 20 = 7; multiplication returns the original numerator."
+      },
+      "working": [
+        "7/20 = 7 ÷ 20.",
+        "7 < 20, so the answer is between 0 and 1 and needs a leading zero.",
+        "7 ÷ 20 = 0.35; the exact division ends with remainder 0.",
+        "0.35 × 20 = 7; multiplication returns the original numerator."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "division_decimal_conversion",
+          "title": "Find the exact decimal quotient",
+          "n": 7,
+          "d": 20,
+          "given": "7/20",
+          "steps": [
+            "7/20 = 7 ÷ 20.",
+            "7 < 20, so the answer is between 0 and 1 and needs a leading zero.",
+            "7 ÷ 20 = 0.35; the exact division ends with remainder 0.",
+            "0.35 × 20 = 7; multiplication returns the original numerator."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_division": "Check numerator divided by denominator, preserve every decimal digit and multiply the result back.",
+        "missing_leading_zero": "Your decimal has the correct value. This lesson requires a zero before the decimal point for a positive value below one.",
+        "reversed": "That matches the division in reverse. Keep the numerator as dividend and the denominator as divisor.",
+        "joined": "Joining the fraction digits does not perform the division.",
+        "point_shift": "Those digits are in the wrong decimal positions. Check the size of the original fraction.",
+        "stopped_early": "That stops before the exact terminating decimal is complete. Continue until there is no remainder.",
+        "dropped_whole": "That loses the complete whole-number part. Keep it as well as the remaining fraction."
+      },
+      "response_patterns": [
+        {
+          "value": "7.20",
+          "classification": "joined"
+        },
+        {
+          "value": ".720",
+          "classification": "joined"
+        },
+        {
+          "value": "3.5",
+          "classification": "point_shift"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-09-P05",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Write 13/25 as an exact decimal. Use division.",
+      "target": "Interpret numerator divided by denominator and record an exact terminating decimal with correct place value",
+      "response": {
+        "type": "decimal",
+        "division_fraction": {
+          "n": 13,
+          "d": 25
+        },
+        "require_leading_zero": true,
+        "input_label": "Exact decimal — include a leading zero below 1",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "0.52"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decimal gives the same value as thirteen twenty-fifths.",
+        "correct_after_support": "Correct. The decimal gives the same value as thirteen twenty-fifths.",
+        "on_correct_math": "13/25 = 13 ÷ 25. → 13 < 25, so the answer is between 0 and 1 and needs a leading zero. → 13 ÷ 25 = 0.52; the exact division ends with remainder 0. → 0.52 × 25 = 13; multiplication returns the original numerator.",
+        "on_incorrect_attempt_1": "Check the division order and preserve the exact value below one.",
+        "on_incorrect_attempt_2": "Check the division order and preserve the exact value below one.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "13/25 = 13 ÷ 25. → 13 < 25, so the answer is between 0 and 1 and needs a leading zero. → 13 ÷ 25 = 0.52; the exact division ends with remainder 0. → 0.52 × 25 = 13; multiplication returns the original numerator."
+      },
+      "mathematical_support": {
+        "hint_1": "Check the division order and preserve the exact value below one.",
+        "hint_2": "Keep the numerator first, continue to remainder zero and check by multiplying back.",
+        "worked_solution": "13/25 = 13 ÷ 25. → 13 < 25, so the answer is between 0 and 1 and needs a leading zero. → 13 ÷ 25 = 0.52; the exact division ends with remainder 0. → 0.52 × 25 = 13; multiplication returns the original numerator."
+      },
+      "working": [
+        "13/25 = 13 ÷ 25.",
+        "13 < 25, so the answer is between 0 and 1 and needs a leading zero.",
+        "13 ÷ 25 = 0.52; the exact division ends with remainder 0.",
+        "0.52 × 25 = 13; multiplication returns the original numerator."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "division_decimal_conversion",
+          "title": "Find the exact decimal quotient",
+          "n": 13,
+          "d": 25,
+          "given": "13/25",
+          "steps": [
+            "13/25 = 13 ÷ 25.",
+            "13 < 25, so the answer is between 0 and 1 and needs a leading zero.",
+            "13 ÷ 25 = 0.52; the exact division ends with remainder 0.",
+            "0.52 × 25 = 13; multiplication returns the original numerator."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_division": "Check numerator divided by denominator, preserve every decimal digit and multiply the result back.",
+        "missing_leading_zero": "Your decimal has the correct value. This lesson requires a zero before the decimal point for a positive value below one.",
+        "reversed": "That matches the division in reverse. Keep the numerator as dividend and the denominator as divisor.",
+        "joined": "Joining the fraction digits does not perform the division.",
+        "point_shift": "Those digits are in the wrong decimal positions. Check the size of the original fraction.",
+        "stopped_early": "That stops before the exact terminating decimal is complete. Continue until there is no remainder.",
+        "dropped_whole": "That loses the complete whole-number part. Keep it as well as the remaining fraction."
+      },
+      "response_patterns": [
+        {
+          "value": "13.25",
+          "classification": "joined"
+        },
+        {
+          "value": "5.2",
+          "classification": "point_shift"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-09-P06",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Write 21/40 as an exact decimal. Use division.",
+      "target": "Interpret numerator divided by denominator and record an exact terminating decimal with correct place value",
+      "response": {
+        "type": "decimal",
+        "division_fraction": {
+          "n": 21,
+          "d": 40
+        },
+        "require_leading_zero": true,
+        "input_label": "Exact decimal — include a leading zero below 1",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "0.525"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The quotient continues through the final exact decimal place.",
+        "correct_after_support": "Correct. The quotient continues through the final exact decimal place.",
+        "on_correct_math": "21/40 = 21 ÷ 40. → 21 < 40, so the answer is between 0 and 1 and needs a leading zero. → 21 ÷ 40 = 0.525; the exact division ends with remainder 0. → 0.525 × 40 = 21; multiplication returns the original numerator.",
+        "on_incorrect_attempt_1": "Do not stop at hundredths if a remainder still needs exchanging.",
+        "on_incorrect_attempt_2": "Do not stop at hundredths if a remainder still needs exchanging.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "21/40 = 21 ÷ 40. → 21 < 40, so the answer is between 0 and 1 and needs a leading zero. → 21 ÷ 40 = 0.525; the exact division ends with remainder 0. → 0.525 × 40 = 21; multiplication returns the original numerator."
+      },
+      "mathematical_support": {
+        "hint_1": "Do not stop at hundredths if a remainder still needs exchanging.",
+        "hint_2": "Keep the numerator first, continue to remainder zero and check by multiplying back.",
+        "worked_solution": "21/40 = 21 ÷ 40. → 21 < 40, so the answer is between 0 and 1 and needs a leading zero. → 21 ÷ 40 = 0.525; the exact division ends with remainder 0. → 0.525 × 40 = 21; multiplication returns the original numerator."
+      },
+      "working": [
+        "21/40 = 21 ÷ 40.",
+        "21 < 40, so the answer is between 0 and 1 and needs a leading zero.",
+        "21 ÷ 40 = 0.525; the exact division ends with remainder 0.",
+        "0.525 × 40 = 21; multiplication returns the original numerator."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "division_decimal_conversion",
+          "title": "Find the exact decimal quotient",
+          "n": 21,
+          "d": 40,
+          "given": "21/40",
+          "steps": [
+            "21/40 = 21 ÷ 40.",
+            "21 < 40, so the answer is between 0 and 1 and needs a leading zero.",
+            "21 ÷ 40 = 0.525; the exact division ends with remainder 0.",
+            "0.525 × 40 = 21; multiplication returns the original numerator."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_division": "Check numerator divided by denominator, preserve every decimal digit and multiply the result back.",
+        "missing_leading_zero": "Your decimal has the correct value. This lesson requires a zero before the decimal point for a positive value below one.",
+        "reversed": "That matches the division in reverse. Keep the numerator as dividend and the denominator as divisor.",
+        "joined": "Joining the fraction digits does not perform the division.",
+        "point_shift": "Those digits are in the wrong decimal positions. Check the size of the original fraction.",
+        "stopped_early": "That stops before the exact terminating decimal is complete. Continue until there is no remainder.",
+        "dropped_whole": "That loses the complete whole-number part. Keep it as well as the remaining fraction."
+      },
+      "response_patterns": [
+        {
+          "value": ".52",
+          "classification": "stopped_early"
+        },
+        {
+          "value": ".53",
+          "classification": "stopped_early"
+        },
+        {
+          "value": "5.25",
+          "classification": "point_shift"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-09-P07",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Write 7/4 as an exact decimal. Use division.",
+      "target": "Interpret numerator divided by denominator and record an exact terminating decimal with correct place value",
+      "response": {
+        "type": "decimal",
+        "division_fraction": {
+          "n": 7,
+          "d": 4
+        },
+        "require_leading_zero": true,
+        "input_label": "Exact decimal — include a leading zero below 1",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "1.75"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decimal keeps one complete whole and the remaining three quarters.",
+        "correct_after_support": "Correct. The decimal keeps one complete whole and the remaining three quarters.",
+        "on_correct_math": "7/4 = 7 ÷ 4. → 7 > 4, so the answer is greater than 1; keep the whole-number part. → 7 ÷ 4 = 1.75; the exact division ends with remainder 0. → 1.75 × 4 = 7; multiplication returns the original numerator.",
+        "on_incorrect_attempt_1": "The numerator exceeds the denominator. Keep the complete whole and continue with the remainder.",
+        "on_incorrect_attempt_2": "The numerator exceeds the denominator. Keep the complete whole and continue with the remainder.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "7/4 = 7 ÷ 4. → 7 > 4, so the answer is greater than 1; keep the whole-number part. → 7 ÷ 4 = 1.75; the exact division ends with remainder 0. → 1.75 × 4 = 7; multiplication returns the original numerator."
+      },
+      "mathematical_support": {
+        "hint_1": "The numerator exceeds the denominator. Keep the complete whole and continue with the remainder.",
+        "hint_2": "Keep the numerator first, continue to remainder zero and check by multiplying back.",
+        "worked_solution": "7/4 = 7 ÷ 4. → 7 > 4, so the answer is greater than 1; keep the whole-number part. → 7 ÷ 4 = 1.75; the exact division ends with remainder 0. → 1.75 × 4 = 7; multiplication returns the original numerator."
+      },
+      "working": [
+        "7/4 = 7 ÷ 4.",
+        "7 > 4, so the answer is greater than 1; keep the whole-number part.",
+        "7 ÷ 4 = 1.75; the exact division ends with remainder 0.",
+        "1.75 × 4 = 7; multiplication returns the original numerator."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "division_decimal_conversion",
+          "title": "Find the exact decimal quotient",
+          "n": 7,
+          "d": 4,
+          "given": "7/4",
+          "steps": [
+            "7/4 = 7 ÷ 4.",
+            "7 > 4, so the answer is greater than 1; keep the whole-number part.",
+            "7 ÷ 4 = 1.75; the exact division ends with remainder 0.",
+            "1.75 × 4 = 7; multiplication returns the original numerator."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_division": "Check numerator divided by denominator, preserve every decimal digit and multiply the result back.",
+        "missing_leading_zero": "Your decimal has the correct value. This lesson requires a zero before the decimal point for a positive value below one.",
+        "reversed": "That matches the division in reverse. Keep the numerator as dividend and the denominator as divisor.",
+        "joined": "Joining the fraction digits does not perform the division.",
+        "point_shift": "Those digits are in the wrong decimal positions. Check the size of the original fraction.",
+        "stopped_early": "That stops before the exact terminating decimal is complete. Continue until there is no remainder.",
+        "dropped_whole": "That loses the complete whole-number part. Keep it as well as the remaining fraction."
+      },
+      "response_patterns": [
+        {
+          "value": ".75",
+          "classification": "dropped_whole"
+        },
+        {
+          "value": ".175",
+          "classification": "point_shift"
+        },
+        {
+          "value": "1.7",
+          "classification": "stopped_early"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-09-P08",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Write 17/8 as an exact decimal. Use division.",
+      "target": "Interpret numerator divided by denominator and record an exact terminating decimal with correct place value",
+      "response": {
+        "type": "decimal",
+        "division_fraction": {
+          "n": 17,
+          "d": 8
+        },
+        "require_leading_zero": true,
+        "input_label": "Exact decimal — include a leading zero below 1",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "2.125"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The quotient includes both complete wholes and the additional eighth.",
+        "correct_after_support": "Correct. The quotient includes both complete wholes and the additional eighth.",
+        "on_correct_math": "17/8 = 17 ÷ 8. → 17 > 8, so the answer is greater than 1; keep the whole-number part. → 17 ÷ 8 = 2.125; the exact division ends with remainder 0. → 2.125 × 8 = 17; multiplication returns the original numerator.",
+        "on_incorrect_attempt_1": "Keep all complete wholes before converting the remaining part into decimal places.",
+        "on_incorrect_attempt_2": "Keep all complete wholes before converting the remaining part into decimal places.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "17/8 = 17 ÷ 8. → 17 > 8, so the answer is greater than 1; keep the whole-number part. → 17 ÷ 8 = 2.125; the exact division ends with remainder 0. → 2.125 × 8 = 17; multiplication returns the original numerator."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep all complete wholes before converting the remaining part into decimal places.",
+        "hint_2": "Keep the numerator first, continue to remainder zero and check by multiplying back.",
+        "worked_solution": "17/8 = 17 ÷ 8. → 17 > 8, so the answer is greater than 1; keep the whole-number part. → 17 ÷ 8 = 2.125; the exact division ends with remainder 0. → 2.125 × 8 = 17; multiplication returns the original numerator."
+      },
+      "working": [
+        "17/8 = 17 ÷ 8.",
+        "17 > 8, so the answer is greater than 1; keep the whole-number part.",
+        "17 ÷ 8 = 2.125; the exact division ends with remainder 0.",
+        "2.125 × 8 = 17; multiplication returns the original numerator."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "division_decimal_conversion",
+          "title": "Find the exact decimal quotient",
+          "n": 17,
+          "d": 8,
+          "given": "17/8",
+          "steps": [
+            "17/8 = 17 ÷ 8.",
+            "17 > 8, so the answer is greater than 1; keep the whole-number part.",
+            "17 ÷ 8 = 2.125; the exact division ends with remainder 0.",
+            "2.125 × 8 = 17; multiplication returns the original numerator."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_division": "Check numerator divided by denominator, preserve every decimal digit and multiply the result back.",
+        "missing_leading_zero": "Your decimal has the correct value. This lesson requires a zero before the decimal point for a positive value below one.",
+        "reversed": "That matches the division in reverse. Keep the numerator as dividend and the denominator as divisor.",
+        "joined": "Joining the fraction digits does not perform the division.",
+        "point_shift": "Those digits are in the wrong decimal positions. Check the size of the original fraction.",
+        "stopped_early": "That stops before the exact terminating decimal is complete. Continue until there is no remainder.",
+        "dropped_whole": "That loses the complete whole-number part. Keep it as well as the remaining fraction."
+      },
+      "response_patterns": [
+        {
+          "value": ".125",
+          "classification": "dropped_whole"
+        },
+        {
+          "value": ".2125",
+          "classification": "point_shift"
+        },
+        {
+          "value": "2.12",
+          "classification": "stopped_early"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-09-P09",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "A student calculates 13/16. Which exact decimal is correct?",
+      "target": "Interpret numerator divided by denominator and record an exact terminating decimal with correct place value",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "0.08125",
+          "0.8125",
+          "1.230769…",
+          "13.16"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "0.8125"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The selected decimal retains the exact value of thirteen sixteenths.",
+        "correct_after_support": "Correct. The selected decimal retains the exact value of thirteen sixteenths.",
+        "on_correct_math": "13/16 = 13 ÷ 16. → 13 < 16, so the answer is between 0 and 1 and needs a leading zero. → 13 ÷ 16 = 0.8125; the exact division ends with remainder 0. → 0.8125 × 16 = 13; multiplication returns the original numerator.",
+        "on_incorrect_attempt_1": "Check the division order, expected size and complete exact decimal.",
+        "on_incorrect_attempt_2": "Check the division order, expected size and complete exact decimal.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "13/16 = 13 ÷ 16. → 13 < 16, so the answer is between 0 and 1 and needs a leading zero. → 13 ÷ 16 = 0.8125; the exact division ends with remainder 0. → 0.8125 × 16 = 13; multiplication returns the original numerator."
+      },
+      "mathematical_support": {
+        "hint_1": "Check the division order, expected size and complete exact decimal.",
+        "hint_2": "Keep the numerator first, continue to remainder zero and check by multiplying back.",
+        "worked_solution": "13/16 = 13 ÷ 16. → 13 < 16, so the answer is between 0 and 1 and needs a leading zero. → 13 ÷ 16 = 0.8125; the exact division ends with remainder 0. → 0.8125 × 16 = 13; multiplication returns the original numerator."
+      },
+      "working": [
+        "13/16 = 13 ÷ 16.",
+        "13 < 16, so the answer is between 0 and 1 and needs a leading zero.",
+        "13 ÷ 16 = 0.8125; the exact division ends with remainder 0.",
+        "0.8125 × 16 = 13; multiplication returns the original numerator."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "division_decimal_conversion",
+          "title": "Recognise the exact quotient",
+          "n": 13,
+          "d": 16,
+          "given": "13/16",
+          "steps": [
+            "13/16 = 13 ÷ 16.",
+            "13 < 16, so the answer is between 0 and 1 and needs a leading zero.",
+            "13 ÷ 16 = 0.8125; the exact division ends with remainder 0.",
+            "0.8125 × 16 = 13; multiplication returns the original numerator."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "0.08125": "That places an extra zero before the quotient digits, making the value ten times too small.",
+        "1.230769…": "That comes from reversing the division and is larger than this proper fraction.",
+        "13.16": "That joins the numerator and denominator rather than dividing them."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-09-X01",
+      "source_ref": {
+        "page": 17
+      },
+      "stage": "practice",
+      "prompt": "A runner completes 11/16 of a route before stopping. Write this share as a decimal.",
+      "target": "Interpret numerator divided by denominator and record an exact terminating decimal with correct place value",
+      "response": {
+        "type": "decimal",
+        "division_fraction": {
+          "n": 11,
+          "d": 16
+        },
+        "require_leading_zero": true,
+        "input_label": "Exact decimal — include a leading zero below 1",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "0.6875"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decimal represents the same completed share of the route.",
+        "correct_after_support": "Correct. The decimal represents the same completed share of the route.",
+        "on_correct_math": "11/16 = 11 ÷ 16. → 11 < 16, so the answer is between 0 and 1 and needs a leading zero. → 11 ÷ 16 = 0.6875; the exact division ends with remainder 0. → 0.6875 × 16 = 11; multiplication returns the original numerator.",
+        "on_incorrect_attempt_1": "Preserve the completed share of the route and give its exact decimal value.",
+        "on_incorrect_attempt_2": "Preserve the completed share of the route and give its exact decimal value.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "11/16 = 11 ÷ 16. → 11 < 16, so the answer is between 0 and 1 and needs a leading zero. → 11 ÷ 16 = 0.6875; the exact division ends with remainder 0. → 0.6875 × 16 = 11; multiplication returns the original numerator."
+      },
+      "mathematical_support": {
+        "hint_1": "Preserve the completed share of the route and give its exact decimal value.",
+        "hint_2": "Keep the numerator first, continue to remainder zero and check by multiplying back.",
+        "worked_solution": "11/16 = 11 ÷ 16. → 11 < 16, so the answer is between 0 and 1 and needs a leading zero. → 11 ÷ 16 = 0.6875; the exact division ends with remainder 0. → 0.6875 × 16 = 11; multiplication returns the original numerator."
+      },
+      "working": [
+        "11/16 = 11 ÷ 16.",
+        "11 < 16, so the answer is between 0 and 1 and needs a leading zero.",
+        "11 ÷ 16 = 0.6875; the exact division ends with remainder 0.",
+        "0.6875 × 16 = 11; multiplication returns the original numerator."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "division_decimal_conversion",
+          "title": "A runner completing part of a route",
+          "n": 11,
+          "d": 16,
+          "given": "11/16",
+          "steps": [
+            "11/16 = 11 ÷ 16.",
+            "11 < 16, so the answer is between 0 and 1 and needs a leading zero.",
+            "11 ÷ 16 = 0.6875; the exact division ends with remainder 0.",
+            "0.6875 × 16 = 11; multiplication returns the original numerator."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_division": "Check numerator divided by denominator, preserve every decimal digit and multiply the result back.",
+        "missing_leading_zero": "Your decimal has the correct value. This lesson requires a zero before the decimal point for a positive value below one.",
+        "reversed": "That matches the division in reverse. Keep the numerator as dividend and the denominator as divisor.",
+        "joined": "Joining the fraction digits does not perform the division.",
+        "point_shift": "Those digits are in the wrong decimal positions. Check the size of the original fraction.",
+        "stopped_early": "That stops before the exact terminating decimal is complete. Continue until there is no remainder.",
+        "dropped_whole": "That loses the complete whole-number part. Keep it as well as the remaining fraction."
+      },
+      "response_patterns": [
+        {
+          "value": ".69",
+          "classification": "stopped_early"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-09-X02",
+      "source_ref": {
+        "page": 17
+      },
+      "stage": "practice",
+      "prompt": "A bag contains 13/32 kg of seeds. Write this mass as a decimal number of kilograms.",
+      "target": "Interpret numerator divided by denominator and record an exact terminating decimal with correct place value",
+      "response": {
+        "type": "decimal",
+        "division_fraction": {
+          "n": 13,
+          "d": 32
+        },
+        "require_leading_zero": true,
+        "input_label": "Exact decimal — include a leading zero below 1",
+        "suffix": "kg"
+      },
+      "answer": {
+        "value": "0.40625"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decimal retains the exact seed mass in kilograms.",
+        "correct_after_support": "Correct. The decimal retains the exact seed mass in kilograms.",
+        "on_correct_math": "13/32 = 13 ÷ 32. → 13 < 32, so the answer is between 0 and 1 and needs a leading zero. → 13 ÷ 32 = 0.40625; the exact division ends with remainder 0. → 0.40625 × 32 = 13; multiplication returns the original numerator.",
+        "on_incorrect_attempt_1": "Keep the same seed mass and all its required decimal places.",
+        "on_incorrect_attempt_2": "Keep the same seed mass and all its required decimal places.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "13/32 = 13 ÷ 32. → 13 < 32, so the answer is between 0 and 1 and needs a leading zero. → 13 ÷ 32 = 0.40625; the exact division ends with remainder 0. → 0.40625 × 32 = 13; multiplication returns the original numerator."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the same seed mass and all its required decimal places.",
+        "hint_2": "Keep the numerator first, continue to remainder zero and check by multiplying back.",
+        "worked_solution": "13/32 = 13 ÷ 32. → 13 < 32, so the answer is between 0 and 1 and needs a leading zero. → 13 ÷ 32 = 0.40625; the exact division ends with remainder 0. → 0.40625 × 32 = 13; multiplication returns the original numerator."
+      },
+      "working": [
+        "13/32 = 13 ÷ 32.",
+        "13 < 32, so the answer is between 0 and 1 and needs a leading zero.",
+        "13 ÷ 32 = 0.40625; the exact division ends with remainder 0.",
+        "0.40625 × 32 = 13; multiplication returns the original numerator."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "division_decimal_conversion",
+          "title": "The exact mass of seeds",
+          "n": 13,
+          "d": 32,
+          "given": "13/32 kg",
+          "steps": [
+            "13/32 = 13 ÷ 32.",
+            "13 < 32, so the answer is between 0 and 1 and needs a leading zero.",
+            "13 ÷ 32 = 0.40625; the exact division ends with remainder 0.",
+            "0.40625 × 32 = 13; multiplication returns the original numerator."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_division": "Check numerator divided by denominator, preserve every decimal digit and multiply the result back.",
+        "missing_leading_zero": "Your decimal has the correct value. This lesson requires a zero before the decimal point for a positive value below one.",
+        "reversed": "That matches the division in reverse. Keep the numerator as dividend and the denominator as divisor.",
+        "joined": "Joining the fraction digits does not perform the division.",
+        "point_shift": "Those digits are in the wrong decimal positions. Check the size of the original fraction.",
+        "stopped_early": "That stops before the exact terminating decimal is complete. Continue until there is no remainder.",
+        "dropped_whole": "That loses the complete whole-number part. Keep it as well as the remaining fraction.",
+        "lost_placeholder": "That omits the zero hundredths place and changes the seed mass. Preserve the zero inside the quotient."
+      },
+      "response_patterns": [
+        {
+          "value": ".4625",
+          "classification": "lost_placeholder"
+        },
+        {
+          "value": ".41",
+          "classification": "stopped_early"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-09-X03",
+      "source_ref": {
+        "page": 17
+      },
+      "stage": "practice",
+      "prompt": "A water container is 27/40 full. Write this share as a decimal.",
+      "target": "Interpret numerator divided by denominator and record an exact terminating decimal with correct place value",
+      "response": {
+        "type": "decimal",
+        "division_fraction": {
+          "n": 27,
+          "d": 40
+        },
+        "require_leading_zero": true,
+        "input_label": "Exact decimal — include a leading zero below 1",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "0.675"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decimal describes exactly the same filled share.",
+        "correct_after_support": "Correct. The decimal describes exactly the same filled share.",
+        "on_correct_math": "27/40 = 27 ÷ 40. → 27 < 40, so the answer is between 0 and 1 and needs a leading zero. → 27 ÷ 40 = 0.675; the exact division ends with remainder 0. → 0.675 × 40 = 27; multiplication returns the original numerator.",
+        "on_incorrect_attempt_1": "Keep the same complete container as the reference whole and preserve the filled share.",
+        "on_incorrect_attempt_2": "Keep the same complete container as the reference whole and preserve the filled share.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "27/40 = 27 ÷ 40. → 27 < 40, so the answer is between 0 and 1 and needs a leading zero. → 27 ÷ 40 = 0.675; the exact division ends with remainder 0. → 0.675 × 40 = 27; multiplication returns the original numerator."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the same complete container as the reference whole and preserve the filled share.",
+        "hint_2": "Keep the numerator first, continue to remainder zero and check by multiplying back.",
+        "worked_solution": "27/40 = 27 ÷ 40. → 27 < 40, so the answer is between 0 and 1 and needs a leading zero. → 27 ÷ 40 = 0.675; the exact division ends with remainder 0. → 0.675 × 40 = 27; multiplication returns the original numerator."
+      },
+      "working": [
+        "27/40 = 27 ÷ 40.",
+        "27 < 40, so the answer is between 0 and 1 and needs a leading zero.",
+        "27 ÷ 40 = 0.675; the exact division ends with remainder 0.",
+        "0.675 × 40 = 27; multiplication returns the original numerator."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "division_decimal_conversion",
+          "title": "The filled share of a water container",
+          "n": 27,
+          "d": 40,
+          "given": "27/40",
+          "steps": [
+            "27/40 = 27 ÷ 40.",
+            "27 < 40, so the answer is between 0 and 1 and needs a leading zero.",
+            "27 ÷ 40 = 0.675; the exact division ends with remainder 0.",
+            "0.675 × 40 = 27; multiplication returns the original numerator."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_division": "Check numerator divided by denominator, preserve every decimal digit and multiply the result back.",
+        "missing_leading_zero": "Your decimal has the correct value. This lesson requires a zero before the decimal point for a positive value below one.",
+        "reversed": "That matches the division in reverse. Keep the numerator as dividend and the denominator as divisor.",
+        "joined": "Joining the fraction digits does not perform the division.",
+        "point_shift": "Those digits are in the wrong decimal positions. Check the size of the original fraction.",
+        "stopped_early": "That stops before the exact terminating decimal is complete. Continue until there is no remainder.",
+        "dropped_whole": "That loses the complete whole-number part. Keep it as well as the remaining fraction."
+      },
+      "response_patterns": [
+        {
+          "value": ".68",
+          "classification": "stopped_early"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-09-X04",
+      "source_ref": {
+        "page": 17
+      },
+      "stage": "practice",
+      "prompt": "A tank contains 15/8 litres of liquid. Write this amount as a decimal number of litres.",
+      "target": "Interpret numerator divided by denominator and record an exact terminating decimal with correct place value",
+      "response": {
+        "type": "decimal",
+        "division_fraction": {
+          "n": 15,
+          "d": 8
+        },
+        "require_leading_zero": true,
+        "input_label": "Exact decimal — include a leading zero below 1",
+        "suffix": "litres"
+      },
+      "answer": {
+        "value": "1.875"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decimal retains the complete litre and the remaining seven eighths.",
+        "correct_after_support": "Correct. The decimal retains the complete litre and the remaining seven eighths.",
+        "on_correct_math": "15/8 = 15 ÷ 8. → 15 > 8, so the answer is greater than 1; keep the whole-number part. → 15 ÷ 8 = 1.875; the exact division ends with remainder 0. → 1.875 × 8 = 15; multiplication returns the original numerator.",
+        "on_incorrect_attempt_1": "Retain the complete litre and every exact decimal place of the remaining volume.",
+        "on_incorrect_attempt_2": "Retain the complete litre and every exact decimal place of the remaining volume.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "15/8 = 15 ÷ 8. → 15 > 8, so the answer is greater than 1; keep the whole-number part. → 15 ÷ 8 = 1.875; the exact division ends with remainder 0. → 1.875 × 8 = 15; multiplication returns the original numerator."
+      },
+      "mathematical_support": {
+        "hint_1": "Retain the complete litre and every exact decimal place of the remaining volume.",
+        "hint_2": "Keep the numerator first, continue to remainder zero and check by multiplying back.",
+        "worked_solution": "15/8 = 15 ÷ 8. → 15 > 8, so the answer is greater than 1; keep the whole-number part. → 15 ÷ 8 = 1.875; the exact division ends with remainder 0. → 1.875 × 8 = 15; multiplication returns the original numerator."
+      },
+      "working": [
+        "15/8 = 15 ÷ 8.",
+        "15 > 8, so the answer is greater than 1; keep the whole-number part.",
+        "15 ÷ 8 = 1.875; the exact division ends with remainder 0.",
+        "1.875 × 8 = 15; multiplication returns the original numerator."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "division_decimal_conversion",
+          "title": "An exact liquid volume",
+          "n": 15,
+          "d": 8,
+          "given": "15/8 litres",
+          "steps": [
+            "15/8 = 15 ÷ 8.",
+            "15 > 8, so the answer is greater than 1; keep the whole-number part.",
+            "15 ÷ 8 = 1.875; the exact division ends with remainder 0.",
+            "1.875 × 8 = 15; multiplication returns the original numerator."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_division": "Check numerator divided by denominator, preserve every decimal digit and multiply the result back.",
+        "missing_leading_zero": "Your decimal has the correct value. This lesson requires a zero before the decimal point for a positive value below one.",
+        "reversed": "That matches the division in reverse. Keep the numerator as dividend and the denominator as divisor.",
+        "joined": "Joining the fraction digits does not perform the division.",
+        "point_shift": "Those digits are in the wrong decimal positions. Check the size of the original fraction.",
+        "stopped_early": "That stops before the exact terminating decimal is complete. Continue until there is no remainder.",
+        "dropped_whole": "That loses the complete whole-number part. Keep it as well as the remaining fraction."
+      },
+      "response_patterns": [
+        {
+          "value": ".875",
+          "classification": "dropped_whole"
+        },
+        {
+          "value": "1.88",
+          "classification": "stopped_early"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-09-X05",
+      "source_ref": {
+        "page": 17
+      },
+      "stage": "practice",
+      "prompt": "Which calculator entry converts 23/32 to a decimal?",
+      "target": "Interpret numerator divided by denominator and record an exact terminating decimal with correct place value",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "23 ÷ 32",
+          "32 ÷ 23",
+          "23 × 32",
+          "23.32"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "23 ÷ 32"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The entry divides the numerator by the denominator.",
+        "correct_after_support": "Correct. The entry divides the numerator by the denominator.",
+        "on_correct_math": "Enter the numerator 23 as the dividend. → Divide by the denominator 32: 23 ÷ 32.",
+        "on_incorrect_attempt_1": "Translate the fraction bar into an operation without reversing the two roles.",
+        "on_incorrect_attempt_2": "Translate the fraction bar into an operation without reversing the two roles.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Enter the numerator 23 as the dividend. → Divide by the denominator 32: 23 ÷ 32."
+      },
+      "mathematical_support": {
+        "hint_1": "Translate the fraction bar into an operation without reversing the two roles.",
+        "hint_2": "Keep the numerator first, continue to remainder zero and check by multiplying back.",
+        "worked_solution": "Enter the numerator 23 as the dividend. → Divide by the denominator 32: 23 ÷ 32."
+      },
+      "working": [
+        "Enter the numerator 23 as the dividend.",
+        "Divide by the denominator 32: 23 ÷ 32."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "division_decimal_conversion",
+          "title": "Choose a valid calculator entry",
+          "n": 23,
+          "d": 32,
+          "given": "23/32",
+          "steps": [
+            "Enter the numerator 23 as the dividend.",
+            "Divide by the denominator 32: 23 ÷ 32."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "order"
+        }
+      },
+      "response_feedback": {
+        "32 ÷ 23": "That swaps the dividend and divisor, reversing the fraction.",
+        "23 × 32": "Multiplication does not calculate the division represented by this fraction bar.",
+        "23.32": "That joins the digits rather than entering a division."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-09-E01",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "exit",
+      "prompt": "Final check: write 3/16 as an exact decimal.",
+      "target": "Interpret numerator divided by denominator and record an exact terminating decimal with correct place value",
+      "response": {
+        "type": "decimal",
+        "division_fraction": {
+          "n": 3,
+          "d": 16
+        },
+        "require_leading_zero": true,
+        "input_label": "Exact decimal — include a leading zero below 1",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "0.1875"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The final answer preserves the exact value of three sixteenths.",
+        "correct_after_support": "Correct. The final answer preserves the exact value of three sixteenths.",
+        "on_correct_math": "3/16 = 3 ÷ 16. → 3 < 16, so the answer is between 0 and 1 and needs a leading zero. → 3 ÷ 16 = 0.1875; the exact division ends with remainder 0. → 0.1875 × 16 = 3; multiplication returns the original numerator.",
+        "on_incorrect_attempt_1": "Review the complete quotient and the required decimal notation.",
+        "on_incorrect_attempt_2": "Review the complete quotient and the required decimal notation.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "3/16 = 3 ÷ 16. → 3 < 16, so the answer is between 0 and 1 and needs a leading zero. → 3 ÷ 16 = 0.1875; the exact division ends with remainder 0. → 0.1875 × 16 = 3; multiplication returns the original numerator."
+      },
+      "mathematical_support": {
+        "hint_1": "Review the complete quotient and the required decimal notation.",
+        "hint_2": "Keep the numerator first, continue to remainder zero and check by multiplying back.",
+        "worked_solution": "3/16 = 3 ÷ 16. → 3 < 16, so the answer is between 0 and 1 and needs a leading zero. → 3 ÷ 16 = 0.1875; the exact division ends with remainder 0. → 0.1875 × 16 = 3; multiplication returns the original numerator."
+      },
+      "working": [
+        "3/16 = 3 ÷ 16.",
+        "3 < 16, so the answer is between 0 and 1 and needs a leading zero.",
+        "3 ÷ 16 = 0.1875; the exact division ends with remainder 0.",
+        "0.1875 × 16 = 3; multiplication returns the original numerator."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "division_decimal_conversion",
+          "title": "Find the exact decimal quotient",
+          "n": 3,
+          "d": 16,
+          "given": "3/16",
+          "steps": [
+            "3/16 = 3 ÷ 16.",
+            "3 < 16, so the answer is between 0 and 1 and needs a leading zero.",
+            "3 ÷ 16 = 0.1875; the exact division ends with remainder 0.",
+            "0.1875 × 16 = 3; multiplication returns the original numerator."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_division": "Check numerator divided by denominator, preserve every decimal digit and multiply the result back.",
+        "missing_leading_zero": "Your decimal has the correct value. This lesson requires a zero before the decimal point for a positive value below one.",
+        "reversed": "That matches the division in reverse. Keep the numerator as dividend and the denominator as divisor.",
+        "joined": "Joining the fraction digits does not perform the division.",
+        "point_shift": "Those digits are in the wrong decimal positions. Check the size of the original fraction.",
+        "stopped_early": "That stops before the exact terminating decimal is complete. Continue until there is no remainder.",
+        "dropped_whole": "That loses the complete whole-number part. Keep it as well as the remaining fraction."
+      },
+      "response_patterns": [
+        {
+          "value": ".18",
+          "classification": "stopped_early"
+        },
+        {
+          "value": ".19",
+          "classification": "stopped_early"
+        },
+        {
+          "value": "1.875",
+          "classification": "point_shift"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-09-E02",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "exit",
+      "prompt": "Final check: write 19/40 as an exact decimal.",
+      "target": "Interpret numerator divided by denominator and record an exact terminating decimal with correct place value",
+      "response": {
+        "type": "decimal",
+        "division_fraction": {
+          "n": 19,
+          "d": 40
+        },
+        "require_leading_zero": true,
+        "input_label": "Exact decimal — include a leading zero below 1",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "0.475"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The final decimal keeps the exact quotient through thousandths.",
+        "correct_after_support": "Correct. The final decimal keeps the exact quotient through thousandths.",
+        "on_correct_math": "19/40 = 19 ÷ 40. → 19 < 40, so the answer is between 0 and 1 and needs a leading zero. → 19 ÷ 40 = 0.475; the exact division ends with remainder 0. → 0.475 × 40 = 19; multiplication returns the original numerator.",
+        "on_incorrect_attempt_1": "Review whether the division reaches remainder zero without losing a decimal place.",
+        "on_incorrect_attempt_2": "Review whether the division reaches remainder zero without losing a decimal place.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "19/40 = 19 ÷ 40. → 19 < 40, so the answer is between 0 and 1 and needs a leading zero. → 19 ÷ 40 = 0.475; the exact division ends with remainder 0. → 0.475 × 40 = 19; multiplication returns the original numerator."
+      },
+      "mathematical_support": {
+        "hint_1": "Review whether the division reaches remainder zero without losing a decimal place.",
+        "hint_2": "Keep the numerator first, continue to remainder zero and check by multiplying back.",
+        "worked_solution": "19/40 = 19 ÷ 40. → 19 < 40, so the answer is between 0 and 1 and needs a leading zero. → 19 ÷ 40 = 0.475; the exact division ends with remainder 0. → 0.475 × 40 = 19; multiplication returns the original numerator."
+      },
+      "working": [
+        "19/40 = 19 ÷ 40.",
+        "19 < 40, so the answer is between 0 and 1 and needs a leading zero.",
+        "19 ÷ 40 = 0.475; the exact division ends with remainder 0.",
+        "0.475 × 40 = 19; multiplication returns the original numerator."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "division_decimal_conversion",
+          "title": "Find the exact decimal quotient",
+          "n": 19,
+          "d": 40,
+          "given": "19/40",
+          "steps": [
+            "19/40 = 19 ÷ 40.",
+            "19 < 40, so the answer is between 0 and 1 and needs a leading zero.",
+            "19 ÷ 40 = 0.475; the exact division ends with remainder 0.",
+            "0.475 × 40 = 19; multiplication returns the original numerator."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_division": "Check numerator divided by denominator, preserve every decimal digit and multiply the result back.",
+        "missing_leading_zero": "Your decimal has the correct value. This lesson requires a zero before the decimal point for a positive value below one.",
+        "reversed": "That matches the division in reverse. Keep the numerator as dividend and the denominator as divisor.",
+        "joined": "Joining the fraction digits does not perform the division.",
+        "point_shift": "Those digits are in the wrong decimal positions. Check the size of the original fraction.",
+        "stopped_early": "That stops before the exact terminating decimal is complete. Continue until there is no remainder.",
+        "dropped_whole": "That loses the complete whole-number part. Keep it as well as the remaining fraction."
+      },
+      "response_patterns": [
+        {
+          "value": ".47",
+          "classification": "stopped_early"
+        },
+        {
+          "value": ".48",
+          "classification": "stopped_early"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-09-E03",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "exit",
+      "prompt": "Final check: write 23/32 as an exact decimal.",
+      "target": "Interpret numerator divided by denominator and record an exact terminating decimal with correct place value",
+      "response": {
+        "type": "decimal",
+        "division_fraction": {
+          "n": 23,
+          "d": 32
+        },
+        "require_leading_zero": true,
+        "input_label": "Exact decimal — include a leading zero below 1",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "0.71875"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The final answer retains every digit of the exact terminating decimal.",
+        "correct_after_support": "Correct. The final answer retains every digit of the exact terminating decimal.",
+        "on_correct_math": "23/32 = 23 ÷ 32. → 23 < 32, so the answer is between 0 and 1 and needs a leading zero. → 23 ÷ 32 = 0.71875; the exact division ends with remainder 0. → 0.71875 × 32 = 23; multiplication returns the original numerator.",
+        "on_incorrect_attempt_1": "Review all exact quotient digits and the size of the proper fraction.",
+        "on_incorrect_attempt_2": "Review all exact quotient digits and the size of the proper fraction.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "23/32 = 23 ÷ 32. → 23 < 32, so the answer is between 0 and 1 and needs a leading zero. → 23 ÷ 32 = 0.71875; the exact division ends with remainder 0. → 0.71875 × 32 = 23; multiplication returns the original numerator."
+      },
+      "mathematical_support": {
+        "hint_1": "Review all exact quotient digits and the size of the proper fraction.",
+        "hint_2": "Keep the numerator first, continue to remainder zero and check by multiplying back.",
+        "worked_solution": "23/32 = 23 ÷ 32. → 23 < 32, so the answer is between 0 and 1 and needs a leading zero. → 23 ÷ 32 = 0.71875; the exact division ends with remainder 0. → 0.71875 × 32 = 23; multiplication returns the original numerator."
+      },
+      "working": [
+        "23/32 = 23 ÷ 32.",
+        "23 < 32, so the answer is between 0 and 1 and needs a leading zero.",
+        "23 ÷ 32 = 0.71875; the exact division ends with remainder 0.",
+        "0.71875 × 32 = 23; multiplication returns the original numerator."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "division_decimal_conversion",
+          "title": "Find the exact decimal quotient",
+          "n": 23,
+          "d": 32,
+          "given": "23/32",
+          "steps": [
+            "23/32 = 23 ÷ 32.",
+            "23 < 32, so the answer is between 0 and 1 and needs a leading zero.",
+            "23 ÷ 32 = 0.71875; the exact division ends with remainder 0.",
+            "0.71875 × 32 = 23; multiplication returns the original numerator."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_division": "Check numerator divided by denominator, preserve every decimal digit and multiply the result back.",
+        "missing_leading_zero": "Your decimal has the correct value. This lesson requires a zero before the decimal point for a positive value below one.",
+        "reversed": "That matches the division in reverse. Keep the numerator as dividend and the denominator as divisor.",
+        "joined": "Joining the fraction digits does not perform the division.",
+        "point_shift": "Those digits are in the wrong decimal positions. Check the size of the original fraction.",
+        "stopped_early": "That stops before the exact terminating decimal is complete. Continue until there is no remainder.",
+        "dropped_whole": "That loses the complete whole-number part. Keep it as well as the remaining fraction."
+      },
+      "response_patterns": [
+        {
+          "value": ".72",
+          "classification": "stopped_early"
+        },
+        {
+          "value": ".718",
+          "classification": "stopped_early"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-09-E04",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "exit",
+      "prompt": "Final check: write 11/4 as an exact decimal.",
+      "target": "Interpret numerator divided by denominator and record an exact terminating decimal with correct place value",
+      "response": {
+        "type": "decimal",
+        "division_fraction": {
+          "n": 11,
+          "d": 4
+        },
+        "require_leading_zero": true,
+        "input_label": "Exact decimal — include a leading zero below 1",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "2.75"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The final decimal includes two complete wholes and the remaining three quarters.",
+        "correct_after_support": "Correct. The final decimal includes two complete wholes and the remaining three quarters.",
+        "on_correct_math": "11/4 = 11 ÷ 4. → 11 > 4, so the answer is greater than 1; keep the whole-number part. → 11 ÷ 4 = 2.75; the exact division ends with remainder 0. → 2.75 × 4 = 11; multiplication returns the original numerator.",
+        "on_incorrect_attempt_1": "Review the complete wholes as well as the exact fractional amount.",
+        "on_incorrect_attempt_2": "Review the complete wholes as well as the exact fractional amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "11/4 = 11 ÷ 4. → 11 > 4, so the answer is greater than 1; keep the whole-number part. → 11 ÷ 4 = 2.75; the exact division ends with remainder 0. → 2.75 × 4 = 11; multiplication returns the original numerator."
+      },
+      "mathematical_support": {
+        "hint_1": "Review the complete wholes as well as the exact fractional amount.",
+        "hint_2": "Keep the numerator first, continue to remainder zero and check by multiplying back.",
+        "worked_solution": "11/4 = 11 ÷ 4. → 11 > 4, so the answer is greater than 1; keep the whole-number part. → 11 ÷ 4 = 2.75; the exact division ends with remainder 0. → 2.75 × 4 = 11; multiplication returns the original numerator."
+      },
+      "working": [
+        "11/4 = 11 ÷ 4.",
+        "11 > 4, so the answer is greater than 1; keep the whole-number part.",
+        "11 ÷ 4 = 2.75; the exact division ends with remainder 0.",
+        "2.75 × 4 = 11; multiplication returns the original numerator."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "division_decimal_conversion",
+          "title": "Find the exact decimal quotient",
+          "n": 11,
+          "d": 4,
+          "given": "11/4",
+          "steps": [
+            "11/4 = 11 ÷ 4.",
+            "11 > 4, so the answer is greater than 1; keep the whole-number part.",
+            "11 ÷ 4 = 2.75; the exact division ends with remainder 0.",
+            "2.75 × 4 = 11; multiplication returns the original numerator."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_division": "Check numerator divided by denominator, preserve every decimal digit and multiply the result back.",
+        "missing_leading_zero": "Your decimal has the correct value. This lesson requires a zero before the decimal point for a positive value below one.",
+        "reversed": "That matches the division in reverse. Keep the numerator as dividend and the denominator as divisor.",
+        "joined": "Joining the fraction digits does not perform the division.",
+        "point_shift": "Those digits are in the wrong decimal positions. Check the size of the original fraction.",
+        "stopped_early": "That stops before the exact terminating decimal is complete. Continue until there is no remainder.",
+        "dropped_whole": "That loses the complete whole-number part. Keep it as well as the remaining fraction."
+      },
+      "response_patterns": [
+        {
+          "value": ".75",
+          "classification": "dropped_whole"
+        },
+        {
+          "value": ".275",
+          "classification": "point_shift"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-09-E05",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "exit",
+      "prompt": "Final method check: which statement is correct?",
+      "target": "Interpret numerator divided by denominator and record an exact terminating decimal with correct place value",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Divide the numerator by the denominator, keep decimal places accurate and continue until the remainder is zero.",
+          "Divide the denominator by the numerator because the denominator is usually larger.",
+          "Join the numerator and denominator and place a decimal point between them.",
+          "Stop after two decimal places even when an exact terminating decimal is required."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "Divide the numerator by the denominator, keep decimal places accurate and continue until the remainder is zero."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The rule preserves the division order and the complete exact quotient.",
+        "correct_after_support": "Correct. The rule preserves the division order and the complete exact quotient.",
+        "on_correct_math": "Divide numerator by denominator, in that order. → Preserve the correct decimal positions and continue to remainder 0. → Check that the exact quotient has the same value as the fraction.",
+        "on_incorrect_attempt_1": "Review the division order, exact decimal places and stopping condition.",
+        "on_incorrect_attempt_2": "Review the division order, exact decimal places and stopping condition.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Divide numerator by denominator, in that order. → Preserve the correct decimal positions and continue to remainder 0. → Check that the exact quotient has the same value as the fraction."
+      },
+      "mathematical_support": {
+        "hint_1": "Review the division order, exact decimal places and stopping condition.",
+        "hint_2": "Keep the numerator first, continue to remainder zero and check by multiplying back.",
+        "worked_solution": "Divide numerator by denominator, in that order. → Preserve the correct decimal positions and continue to remainder 0. → Check that the exact quotient has the same value as the fraction."
+      },
+      "working": [
+        "Divide numerator by denominator, in that order.",
+        "Preserve the correct decimal positions and continue to remainder 0.",
+        "Check that the exact quotient has the same value as the fraction."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "division_decimal_conversion",
+          "title": "Choose the exact division rule",
+          "n": 3,
+          "d": 16,
+          "given": "Choose the correct statement.",
+          "steps": [
+            "Divide numerator by denominator, in that order.",
+            "Preserve the correct decimal positions and continue to remainder 0.",
+            "Check that the exact quotient has the same value as the fraction."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "Divide the denominator by the numerator because the denominator is usually larger.": "The fraction bar fixes numerator divided by denominator, regardless of which number is larger.",
+        "Join the numerator and denominator and place a decimal point between them.": "Joining digits does not calculate a fraction value.",
+        "Stop after two decimal places even when an exact terminating decimal is required.": "An exact terminating quotient may require more than two decimal places; stopping early changes its value."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    }
+  ],
+  "canonical_lesson": {
+    "version": "FDP09-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

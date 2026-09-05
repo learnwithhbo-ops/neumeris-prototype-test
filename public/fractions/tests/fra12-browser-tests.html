@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FRA12 browser checks | Revily</title>
+    <style>
+      body { margin: 24px; font: 16px/1.5 system-ui, sans-serif; color: #17333a; }
+      main { max-width: 760px; margin: auto; }
+      iframe { position: fixed; left: -10000px; top: 0; width: 390px; height: 844px; border: 0; }
+      li { margin: 8px 0; }
+      .pass { color: #146448; }
+      .fail { color: #a12a2a; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>FRA12 browser checks</h1>
+      <p id="status" role="status">Running the 390 px responsive and accessibility fixture…</p>
+      <ol id="results"></ol>
+    </main>
+    <script>
+      (async function () {
+        "use strict";
+        const results = document.getElementById("results");
+        const status = document.getElementById("status");
+        const checks = [];
+        const assert = (condition, label) => {
+          checks.push({ condition: Boolean(condition), label });
+          const item = document.createElement("li");
+          item.className = condition ? "pass" : "fail";
+          item.textContent = `${condition ? "PASS" : "FAIL"}: ${label}`;
+          results.appendChild(item);
+        };
+        try {
+          const storageKey = "revily.fractions.FRA-12.current.v1";
+          const previousState = localStorage.getItem(storageKey);
+          localStorage.setItem(storageKey, JSON.stringify({
+            version: 1,
+            contentVersion: "legacy-fra12-yaml",
+            topicId: "fractions",
+            skillId: "FRA-12",
+            cursor: "T4",
+            started: true,
+            soundOn: false,
+            developerOpen: true,
+            attemptId: "legacy-fra12-browser-test"
+          }));
+          const frame = document.createElement("iframe");
+          frame.title = "FRA12 at 390 pixels";
+          document.body.appendChild(frame);
+          await new Promise((resolve, reject) => {
+            const timeout = setTimeout(() => reject(new Error("FRA12 mobile fixture did not load")), 6000);
+            frame.addEventListener("load", () => {
+              clearTimeout(timeout);
+              setTimeout(resolve, 350);
+            }, { once: true });
+            frame.src = `../index.html?fra12-browser-qa=${Date.now()}#/fractions/FRA-12`;
+          });
+
+          const doc = frame.contentDocument;
+          const viewport = frame.contentWindow.innerWidth;
+          const migratedState = JSON.parse(localStorage.getItem(storageKey));
+          assert(migratedState.cursor === "HOOK" && migratedState.contentVersion === "fra12-owner-approved-handoff-v1", "incompatible FRA12 state resets to the coherent hook boundary");
+          assert(migratedState.soundOn === false && migratedState.developerOpen === true && migratedState.contentMigration?.from === "legacy-fra12-yaml", "migration preserves safe preferences and records the replaced content version");
+          const visibleOverflow = [...doc.body.querySelectorAll("*")].filter((element) => {
+            const style = frame.contentWindow.getComputedStyle(element);
+            if (style.position === "fixed" || style.display === "none" || style.visibility === "hidden") return false;
+            const box = element.getBoundingClientRect();
+            return box.width > 0 && (box.left < -2 || box.right > viewport + 2);
+          });
+          assert(doc.documentElement.scrollWidth <= viewport + 2 && visibleOverflow.length === 0, "no horizontal overflow at 390 px");
+          assert(Boolean(doc.querySelector(".fra12-timber-hook, .fra12-question-model")), "FRA12 visual renders in the mobile frame");
+          assert(Boolean(doc.querySelector("main#main-content")), "the lesson retains its main landmark");
+          assert(Boolean(doc.querySelector("h1")), "the current prompt has a semantic level-one heading");
+          assert(Boolean(doc.querySelector("[aria-live]")), "status, feedback, or Ryan caption has an accessible live region");
+          assert([...doc.querySelectorAll("input")].every((input) => input.getAttribute("aria-label")), "every visible FRA12 input has an accessible name");
+          assert([...doc.querySelectorAll("button")].filter((button) => button.offsetParent !== null).every((button) => (button.getAttribute("aria-label") || button.textContent.trim())), "every visible FRA12 button has an accessible name");
+
+          const styleText = [...doc.styleSheets].flatMap((sheet) => {
+            try { return [...sheet.cssRules].map((rule) => rule.cssText); } catch (_error) { return []; }
+          }).join("\n");
+          assert(/prefers-reduced-motion:\s*reduce/i.test(styleText), "the shared stylesheet includes reduced-motion handling");
+          assert(/fra12/i.test(styleText), "the loaded stylesheet includes FRA12 responsive styling");
+
+          const soundButton = [...doc.querySelectorAll("button")].find((button) => /Sound on/i.test(button.textContent));
+          if (soundButton) soundButton.click();
+          await new Promise((resolve) => setTimeout(resolve, 50));
+          assert(!soundButton || /Sound off/i.test(`${soundButton.textContent} ${soundButton.getAttribute("aria-label") || ""}`), "sound can be disabled without removing the lesson UI");
+          frame.remove();
+
+          migratedState.started = true;
+          migratedState.openingPlayed = true;
+          migratedState.cursor = "M1";
+          migratedState.drafts = Object.assign({}, migratedState.drafts, { "FRA-12-M1": { n: "25", d: "" } });
+          localStorage.setItem(storageKey, JSON.stringify(migratedState));
+          const resumeFrame = document.createElement("iframe");
+          resumeFrame.title = "FRA12 persisted response resume";
+          document.body.appendChild(resumeFrame);
+          await new Promise((resolve, reject) => {
+            const timeout = setTimeout(() => reject(new Error("FRA12 resume fixture did not load")), 6000);
+            resumeFrame.addEventListener("load", () => {
+              clearTimeout(timeout);
+              setTimeout(resolve, 350);
+            }, { once: true });
+            resumeFrame.src = `../index.html?fra12-resume-qa=${Date.now()}#/fractions/FRA-12`;
+          });
+          const resumedDoc = resumeFrame.contentDocument;
+          assert(resumedDoc.querySelector("#fraction-n")?.value === "25" && resumedDoc.querySelector("#fraction-d")?.value === "", "compatible FRA12 stage and partial draft resume together");
+          assert(/Convert to an improper fraction/i.test(resumedDoc.querySelector("h1")?.textContent || ""), "resume returns to the saved M1 prompt");
+          resumeFrame.remove();
+          if (previousState === null) localStorage.removeItem(storageKey);
+          else localStorage.setItem(storageKey, previousState);
+
+          const failures = checks.filter((check) => !check.condition);
+          status.textContent = failures.length ? `${failures.length} FRA12 browser check(s) failed.` : `All ${checks.length} FRA12 browser checks passed.`;
+          window.__FRA12_BROWSER_TEST_RESULT__ = { passed: failures.length === 0, checks: checks.length, failures: failures.map((item) => item.label) };
+        } catch (error) {
+          status.textContent = `FRA12 browser checks could not complete: ${error.message}`;
+          window.__FRA12_BROWSER_TEST_RESULT__ = { passed: false, checks: checks.length, error: error.stack || error.message };
+        }
+      })();
+    </script>
+  </body>
+</html>

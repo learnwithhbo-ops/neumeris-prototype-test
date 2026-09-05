@@ -1,0 +1,1757 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "AF-04 - Find an equivalent fraction",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-15",
+      "sha256": "16b66f26e135b135daac7f92f573f22f50624ca477996cefa0983ffcf6d5440b"
+    },
+    "authored_scope": "Complete equivalent fractions by applying one scale factor to both parts.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "AF04-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "verified_full_secure_path_additive_and_unchanged_part_repairs_narration_sound_captions_and_320_390_layouts",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        3,
+        4,
+        5,
+        6,
+        11,
+        13
+      ],
+      "source_repairs_consulted": [
+        7,
+        8,
+        9,
+        10,
+        14,
+        15
+      ],
+      "note": "All 15 source pages were read. Active pages 3 to 6, 11 and 13 were mapped; pages 7 to 10, 14 and 15 informed misconception feedback, exact input rules and generation constraints. Entry, Diagnostic and delayed Retrieval remain excluded. Every active source calculation, recognition item and context is retained."
+    }
+  },
+  "identity": {
+    "id": "AF-04",
+    "slug": "find-an-equivalent-fraction",
+    "title": "Find an equivalent fraction",
+    "strand": "Number",
+    "cluster": "Adding and Subtracting Fractions",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Complete equivalent fractions by multiplying the numerator and denominator by the same positive whole number.",
+    "success_criteria": [
+      "Identify the scale factor between a known numerator or denominator pair.",
+      "Apply the same scale factor to both parts.",
+      "Complete missing numerators and missing denominators accurately.",
+      "Recognise equivalent fractions and use equivalence in short contexts."
+    ],
+    "boundaries": {
+      "includes": [
+        "Positive proper fractions",
+        "Whole-number scale factors from 2 to 10",
+        "Missing-numerator and missing-denominator items",
+        "Equivalent-fraction recognition",
+        "Class, tank, survey and shaded-diagram applications"
+      ],
+      "excludes": [
+        "Simplifying to simplest form as the target skill",
+        "Common denominators for operations",
+        "Decimal or percentage conversion",
+        "Algebraic fractions",
+        "Diagnostic and delayed Retrieval routes"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [],
+    "entry_assumptions": [
+      "The learner can read the quantities and use the required whole-number arithmetic."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "integer",
+      "single_choice"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    }
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "Equivalent fractions name the same proportion using a different number of equal parts.",
+    "invariant": "The represented proportion stays fixed when both fraction parts use the same scale factor.",
+    "mathematical_rule": "Find the scale factor from the known pair; apply it to the other part; check that both fractions have equal value.",
+    "must_notice": [
+      "A change to one part requires the same multiplicative change to the other.",
+      "The missing value may be a numerator or denominator.",
+      "Adding the same amount to both parts does not preserve the fraction."
+    ],
+    "common_confusions": [
+      "Changing only one part",
+      "Adding instead of multiplying",
+      "Using different factors",
+      "Selecting a visually similar but non-equivalent fraction"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "Keep the proportion fixed",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Keep the proportion fixed",
+          "initial_state": "Keep the proportion fixed",
+          "model": {
+            "kind": "equivalent_fraction",
+            "n": 3,
+            "d": 5,
+            "target_n": 6,
+            "target_d": 10,
+            "missing": "teaching",
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Equivalent fractions have the same value. Start with three fifths as one fixed shaded amount."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Split every fifth in two",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Split every fifth in two",
+          "initial_state": "Split every fifth in two",
+          "model": {
+            "kind": "equivalent_fraction",
+            "n": 3,
+            "d": 5,
+            "target_n": 6,
+            "target_d": 10,
+            "missing": "teaching",
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true
+          }
+        },
+        "narration": {
+          "script": "Each fifth splits into two tenths. The part count changes from three fifths to six tenths, but the shaded amount does not move."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Explain the common factor",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Explain the common factor",
+          "initial_state": "Explain the common factor",
+          "model": {
+            "kind": "equivalent_fraction",
+            "n": 3,
+            "d": 5,
+            "target_n": 12,
+            "target_d": 20,
+            "missing": "choice",
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Choose why three fifths and twelve twentieths have the same value."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "AF-04-C01"
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Build the worked example",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Build the worked example",
+          "initial_state": "Build the worked example",
+          "model": {
+            "kind": "equivalent_fraction",
+            "n": 3,
+            "d": 7,
+            "target_n": 12,
+            "target_d": 28,
+            "missing": "teaching",
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true
+          }
+        },
+        "narration": {
+          "script": "For three sevenths with denominator twenty-eight, seven is multiplied by four. Apply four to the numerator too, giving twelve twenty-eighths."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Check the method",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Check the method",
+          "initial_state": "Check the method",
+          "model": {
+            "kind": "equivalent_fraction",
+            "n": 5,
+            "d": 8,
+            "target_n": 15,
+            "target_d": 24,
+            "missing": "numerator",
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Decide which calculation completes five eighths with denominator twenty-four while preserving its value."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "AF-04-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "AF-04-G01",
+        "support_level": "high",
+        "pre_question_script": "First, find the scale factor from the denominators.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "AF-04-G02",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "faded",
+        "question_ref": "AF-04-G03",
+        "support_level": "reduced",
+        "pre_question_script": "",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "faded",
+        "question_ref": "AF-04-G04",
+        "support_level": "reduced",
+        "pre_question_script": "",
+        "correct_next": "G05"
+      },
+      "G05": {
+        "stage": "independent_transfer",
+        "question_ref": "AF-04-G05",
+        "support_level": "none",
+        "pre_question_script": "",
+        "correct_next": "P01"
+      }
+    },
+    "practice": {
+      "intro_script": "Complete five equivalent fractions, including two missing denominators. Then recognise an equivalent fraction and apply the same invariant to four different contexts.",
+      "question_order": [
+        "AF-04-P01",
+        "AF-04-P02",
+        "AF-04-P03",
+        "AF-04-P04",
+        "AF-04-P05",
+        "AF-04-P06",
+        "AF-04-X01",
+        "AF-04-X02",
+        "AF-04-X03",
+        "AF-04-X04"
+      ],
+      "question_count": 10
+    },
+    "exit": {
+      "intro_script": "Complete one missing numerator, one missing denominator, and one recognition item. There are no hints, and each response locks after submission.",
+      "primary_question_refs": [
+        "AF-04-E01",
+        "AF-04-E02",
+        "AF-04-E03"
+      ],
+      "confirmation_question_refs": [],
+      "mastery_policy": {
+        "profile": "all_primary_unsupported",
+        "require_all": true,
+        "source_page": 11,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "You found one scale factor, applied it to both parts, and preserved the fraction’s value across numbers and contexts.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Keep one scale factor for both parts",
+      "ryan_script": "One or more final checks need another pass. Find the factor from the known pair and apply that exact factor to the missing part.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "AF-04-C01",
+      "source_ref": {
+        "page": 3
+      },
+      "stage": "practice",
+      "prompt": "Which statement explains why 3/5 = 12/20?",
+      "target": "Complete or recognise an equivalent fraction",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "The numerator and denominator have both been multiplied by 4.",
+          "The numerator and denominator have both been increased by 9.",
+          "Only the denominator has been multiplied by 4.",
+          "The numerator has been multiplied by 4 and the denominator by 3."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "The numerator and denominator have both been multiplied by 4."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Exactly. Multiplying both parts by four preserves the fraction’s value.",
+        "correct_after_support": "Exactly. Multiplying both parts by four preserves the fraction’s value.",
+        "on_correct_math": "5 × 4 = 20. → 3 × 4 = 12. → Both parts use the same multiplier, so the value is unchanged.",
+        "on_incorrect_attempt_1": "Compare the multiplier from 3 to 12 with the multiplier from 5 to 20.",
+        "on_incorrect_attempt_2": "Both numbers have been multiplied by four. Choose the statement that says exactly that.",
+        "on_locked_incorrect": "Answer recorded. The complete equivalence will be available after the final set.",
+        "worked_explanation": "5 × 4 = 20. → 3 × 4 = 12. → Both parts use the same multiplier, so the value is unchanged."
+      },
+      "mathematical_support": {
+        "hint_1": "Compare the multiplier from 3 to 12 with the multiplier from 5 to 20.",
+        "hint_2": "Find one scale factor from the known pair, then apply that same factor to the other part.",
+        "worked_solution": "5 × 4 = 20. → 3 × 4 = 12. → Both parts use the same multiplier, so the value is unchanged."
+      },
+      "working": [
+        "5 × 4 = 20.",
+        "3 × 4 = 12.",
+        "Both parts use the same multiplier, so the value is unchanged."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_fraction",
+          "n": 3,
+          "d": 5,
+          "target_n": 12,
+          "target_d": 20,
+          "missing": "choice",
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-04-C02",
+      "source_ref": {
+        "page": 4
+      },
+      "stage": "practice",
+      "prompt": "Which method correctly completes 5/8 = ?/24?",
+      "target": "Complete or recognise an equivalent fraction",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "8 × 3 = 24, 5 × 3 = 15",
+          "8 + 16 = 24, 5 + 16 = 21",
+          "8 × 3 = 24, 5 + 3 = 8",
+          "8 × 3 = 24, 5 × 2 = 10"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "8 × 3 = 24, 5 × 3 = 15"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The factor of three is applied to both parts.",
+        "correct_after_support": "Correct. The factor of three is applied to both parts.",
+        "on_correct_math": "8 × 3 = 24. → Use the same factor on the numerator. → 5 × 3 = 15.",
+        "on_incorrect_attempt_1": "First identify how eight becomes twenty-four, then require that same operation on five.",
+        "on_incorrect_attempt_2": "Eight is multiplied by three, so five must also be multiplied by three. Select the method ending in fifteen.",
+        "on_locked_incorrect": "Answer recorded. The complete equivalence will be available after the final set.",
+        "worked_explanation": "8 × 3 = 24. → Use the same factor on the numerator. → 5 × 3 = 15."
+      },
+      "mathematical_support": {
+        "hint_1": "First identify how eight becomes twenty-four, then require that same operation on five.",
+        "hint_2": "Find one scale factor from the known pair, then apply that same factor to the other part.",
+        "worked_solution": "8 × 3 = 24. → Use the same factor on the numerator. → 5 × 3 = 15."
+      },
+      "working": [
+        "8 × 3 = 24.",
+        "Use the same factor on the numerator.",
+        "5 × 3 = 15."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_fraction",
+          "n": 5,
+          "d": 8,
+          "target_n": 15,
+          "target_d": 24,
+          "missing": "numerator",
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-04-G01",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "Complete the missing value: 9 × ? = 27.",
+      "target": "Complete or recognise an equivalent fraction",
+      "response": {
+        "type": "integer",
+        "input_label": "Scale factor"
+      },
+      "answer": {
+        "value": 3
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The denominator is scaled by three.",
+        "correct_after_support": "Correct. The denominator is scaled by three.",
+        "on_correct_math": "9 × 3 = 27. → The scale factor is 3.",
+        "on_incorrect_attempt_1": "Count how many groups of nine make twenty-seven.",
+        "on_incorrect_attempt_2": "Three groups of nine make twenty-seven. Enter three as the scale factor.",
+        "on_locked_incorrect": "Answer recorded. The complete equivalence will be available after the final set.",
+        "worked_explanation": "9 × 3 = 27. → The scale factor is 3."
+      },
+      "mathematical_support": {
+        "hint_1": "Count how many groups of nine make twenty-seven.",
+        "hint_2": "Find one scale factor from the known pair, then apply that same factor to the other part.",
+        "worked_solution": "9 × 3 = 27. → The scale factor is 3."
+      },
+      "working": [
+        "9 × 3 = 27.",
+        "The scale factor is 3."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "equivalent_fraction_steps",
+          "label": "Find the scale factor",
+          "expression": "9 × ? = 27",
+          "completed": "9 × 3 = 27",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-04-G02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "Use the same factor for the numerator: 4 × ?.",
+      "target": "Complete or recognise an equivalent fraction",
+      "response": {
+        "type": "integer",
+        "input_label": "Numerator scale factor"
+      },
+      "answer": {
+        "value": 3
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both parts now use the same factor.",
+        "correct_after_support": "Correct. Both parts now use the same factor.",
+        "on_correct_math": "The denominator used factor 3. → The numerator must also use factor 3.",
+        "on_incorrect_attempt_1": "Reuse the factor from nine times three equals twenty-seven.",
+        "on_incorrect_attempt_2": "The same factor must be used for both parts. Enter three.",
+        "on_locked_incorrect": "Answer recorded. The complete equivalence will be available after the final set.",
+        "worked_explanation": "The denominator used factor 3. → The numerator must also use factor 3."
+      },
+      "mathematical_support": {
+        "hint_1": "Reuse the factor from nine times three equals twenty-seven.",
+        "hint_2": "Find one scale factor from the known pair, then apply that same factor to the other part.",
+        "worked_solution": "The denominator used factor 3. → The numerator must also use factor 3."
+      },
+      "working": [
+        "The denominator used factor 3.",
+        "The numerator must also use factor 3."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "equivalent_fraction_steps",
+          "label": "Use the same scale factor",
+          "expression": "4 × ?",
+          "completed": "4 × 3",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-04-G03",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "faded",
+      "prompt": "Complete the product: 4 × 3 = ?.",
+      "target": "Complete or recognise an equivalent fraction",
+      "response": {
+        "type": "integer",
+        "input_label": "Product"
+      },
+      "answer": {
+        "value": 12
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The new numerator is twelve.",
+        "correct_after_support": "Correct. The new numerator is twelve.",
+        "on_correct_math": "4 × 3 = 12.",
+        "on_incorrect_attempt_1": "Use the four-times table.",
+        "on_incorrect_attempt_2": "Four groups of three make twelve. Enter twelve.",
+        "on_locked_incorrect": "Answer recorded. The complete equivalence will be available after the final set.",
+        "worked_explanation": "4 × 3 = 12."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the four-times table.",
+        "hint_2": "Find one scale factor from the known pair, then apply that same factor to the other part.",
+        "worked_solution": "4 × 3 = 12."
+      },
+      "working": [
+        "4 × 3 = 12."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "equivalent_fraction_steps",
+          "label": "Calculate the new numerator",
+          "expression": "4 × 3 = ?",
+          "completed": "4 × 3 = 12",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-04-G04",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "faded",
+      "prompt": "Complete the equivalent fraction: 4/9 = ?/27.",
+      "target": "Complete or recognise an equivalent fraction",
+      "response": {
+        "type": "integer",
+        "input_label": "Missing numerator"
+      },
+      "answer": {
+        "value": 12
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Four ninths and twelve twenty-sevenths are equivalent.",
+        "correct_after_support": "Correct. Four ninths and twelve twenty-sevenths are equivalent.",
+        "on_correct_math": "9 × 3 = 27. → 4 × 3 = 12. → 4/9 = 12/27.",
+        "on_incorrect_attempt_1": "Use the product you just found for the numerator.",
+        "on_incorrect_attempt_2": "The new numerator is four times three. Enter twelve.",
+        "on_locked_incorrect": "Answer recorded. The complete equivalence will be available after the final set.",
+        "worked_explanation": "9 × 3 = 27. → 4 × 3 = 12. → 4/9 = 12/27."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the product you just found for the numerator.",
+        "hint_2": "Find one scale factor from the known pair, then apply that same factor to the other part.",
+        "worked_solution": "9 × 3 = 27. → 4 × 3 = 12. → 4/9 = 12/27."
+      },
+      "working": [
+        "9 × 3 = 27.",
+        "4 × 3 = 12.",
+        "4/9 = 12/27."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_fraction",
+          "n": 4,
+          "d": 9,
+          "target_n": 12,
+          "target_d": 27,
+          "missing": "numerator",
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-04-G05",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "independent_transfer",
+      "prompt": "Which statement is correct?",
+      "target": "Complete or recognise an equivalent fraction",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "The numerator and denominator must be multiplied by the same scale factor.",
+          "Only the denominator needs to be multiplied.",
+          "The same number must be added to the numerator and denominator.",
+          "The numerator and denominator must use different scale factors."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "The numerator and denominator must be multiplied by the same scale factor."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Exactly. One common scale factor protects the value.",
+        "correct_after_support": "Exactly. One common scale factor protects the value.",
+        "on_correct_math": "9 × 3 = 27. → 4 × 3 = 12. → One multiplier preserves the proportion.",
+        "on_incorrect_attempt_1": "Think about what made four ninths equal twelve twenty-sevenths.",
+        "on_incorrect_attempt_2": "Both parts changed by multiplication by three. Choose the statement requiring the same scale factor.",
+        "on_locked_incorrect": "Answer recorded. The complete equivalence will be available after the final set.",
+        "worked_explanation": "9 × 3 = 27. → 4 × 3 = 12. → One multiplier preserves the proportion."
+      },
+      "mathematical_support": {
+        "hint_1": "Think about what made four ninths equal twelve twenty-sevenths.",
+        "hint_2": "Find one scale factor from the known pair, then apply that same factor to the other part.",
+        "worked_solution": "9 × 3 = 27. → 4 × 3 = 12. → One multiplier preserves the proportion."
+      },
+      "working": [
+        "9 × 3 = 27.",
+        "4 × 3 = 12.",
+        "One multiplier preserves the proportion."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_fraction",
+          "n": 4,
+          "d": 9,
+          "target_n": 12,
+          "target_d": 27,
+          "missing": "choice",
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-04-P01",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "Complete 2/5 = ?/15. Enter only the missing whole number.",
+      "target": "Complete or recognise an equivalent fraction",
+      "response": {
+        "type": "integer",
+        "input_label": "Missing numerator"
+      },
+      "answer": {
+        "value": 6
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. You used factor 3 for both parts and found the missing numerator.",
+        "correct_after_support": "Correct. You used factor 3 for both parts and found the missing numerator.",
+        "on_correct_math": "The known pair gives scale factor 3. → 5 × 3 = 15 → 2 × 3 = 6 → 2/5 = 6/15.",
+        "on_incorrect_attempt_1": "Ask what multiplies 5 to make 15.",
+        "on_incorrect_attempt_2": "The scale factor is 3. Multiply both the numerator and denominator by 3, then enter the corrected missing value.",
+        "on_locked_incorrect": "Answer recorded. The complete equivalence will be available after the final set.",
+        "worked_explanation": "The known pair gives scale factor 3. → 5 × 3 = 15 → 2 × 3 = 6 → 2/5 = 6/15."
+      },
+      "mathematical_support": {
+        "hint_1": "Ask what multiplies 5 to make 15.",
+        "hint_2": "Find one scale factor from the known pair, then apply that same factor to the other part.",
+        "worked_solution": "The known pair gives scale factor 3. → 5 × 3 = 15 → 2 × 3 = 6 → 2/5 = 6/15."
+      },
+      "working": [
+        "The known pair gives scale factor 3.",
+        "5 × 3 = 15",
+        "2 × 3 = 6",
+        "2/5 = 6/15."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_fraction",
+          "n": 2,
+          "d": 5,
+          "target_n": 6,
+          "target_d": 15,
+          "missing": "numerator",
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "2": "That leaves one part unchanged. Both parts must be scaled together.",
+        "12": "That adds the change from one known part to the missing part. Equivalent fractions use multiplication by the same scale factor."
+      }
+    },
+    {
+      "id": "AF-04-P02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "Complete 3/8 = 12/?. Enter only the missing whole number.",
+      "target": "Complete or recognise an equivalent fraction",
+      "response": {
+        "type": "integer",
+        "input_label": "Missing denominator"
+      },
+      "answer": {
+        "value": 32
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. You used factor 4 for both parts and found the missing denominator.",
+        "correct_after_support": "Correct. You used factor 4 for both parts and found the missing denominator.",
+        "on_correct_math": "The known pair gives scale factor 4. → 3 × 4 = 12 → 8 × 4 = 32 → 3/8 = 12/32.",
+        "on_incorrect_attempt_1": "Ask what multiplies 3 to make 12.",
+        "on_incorrect_attempt_2": "The scale factor is 4. Multiply both the numerator and denominator by 4, then enter the corrected missing value.",
+        "on_locked_incorrect": "Answer recorded. The complete equivalence will be available after the final set.",
+        "worked_explanation": "The known pair gives scale factor 4. → 3 × 4 = 12 → 8 × 4 = 32 → 3/8 = 12/32."
+      },
+      "mathematical_support": {
+        "hint_1": "Ask what multiplies 3 to make 12.",
+        "hint_2": "Find one scale factor from the known pair, then apply that same factor to the other part.",
+        "worked_solution": "The known pair gives scale factor 4. → 3 × 4 = 12 → 8 × 4 = 32 → 3/8 = 12/32."
+      },
+      "working": [
+        "The known pair gives scale factor 4.",
+        "3 × 4 = 12",
+        "8 × 4 = 32",
+        "3/8 = 12/32."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_fraction",
+          "n": 3,
+          "d": 8,
+          "target_n": 12,
+          "target_d": 32,
+          "missing": "denominator",
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "8": "That leaves one part unchanged. Both parts must be scaled together.",
+        "17": "That adds the change from one known part to the missing part. Equivalent fractions use multiplication by the same scale factor."
+      }
+    },
+    {
+      "id": "AF-04-P03",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "Complete 5/6 = ?/30. Enter only the missing whole number.",
+      "target": "Complete or recognise an equivalent fraction",
+      "response": {
+        "type": "integer",
+        "input_label": "Missing numerator"
+      },
+      "answer": {
+        "value": 25
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. You used factor 5 for both parts and found the missing numerator.",
+        "correct_after_support": "Correct. You used factor 5 for both parts and found the missing numerator.",
+        "on_correct_math": "The known pair gives scale factor 5. → 6 × 5 = 30 → 5 × 5 = 25 → 5/6 = 25/30.",
+        "on_incorrect_attempt_1": "Ask what multiplies 6 to make 30.",
+        "on_incorrect_attempt_2": "The scale factor is 5. Multiply both the numerator and denominator by 5, then enter the corrected missing value.",
+        "on_locked_incorrect": "Answer recorded. The complete equivalence will be available after the final set.",
+        "worked_explanation": "The known pair gives scale factor 5. → 6 × 5 = 30 → 5 × 5 = 25 → 5/6 = 25/30."
+      },
+      "mathematical_support": {
+        "hint_1": "Ask what multiplies 6 to make 30.",
+        "hint_2": "Find one scale factor from the known pair, then apply that same factor to the other part.",
+        "worked_solution": "The known pair gives scale factor 5. → 6 × 5 = 30 → 5 × 5 = 25 → 5/6 = 25/30."
+      },
+      "working": [
+        "The known pair gives scale factor 5.",
+        "6 × 5 = 30",
+        "5 × 5 = 25",
+        "5/6 = 25/30."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_fraction",
+          "n": 5,
+          "d": 6,
+          "target_n": 25,
+          "target_d": 30,
+          "missing": "numerator",
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "5": "That leaves one part unchanged. Both parts must be scaled together.",
+        "29": "That adds the change from one known part to the missing part. Equivalent fractions use multiplication by the same scale factor."
+      }
+    },
+    {
+      "id": "AF-04-P04",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "Complete 7/10 = 35/?. Enter only the missing whole number.",
+      "target": "Complete or recognise an equivalent fraction",
+      "response": {
+        "type": "integer",
+        "input_label": "Missing denominator"
+      },
+      "answer": {
+        "value": 50
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. You used factor 5 for both parts and found the missing denominator.",
+        "correct_after_support": "Correct. You used factor 5 for both parts and found the missing denominator.",
+        "on_correct_math": "The known pair gives scale factor 5. → 7 × 5 = 35 → 10 × 5 = 50 → 7/10 = 35/50.",
+        "on_incorrect_attempt_1": "Ask what multiplies 7 to make 35.",
+        "on_incorrect_attempt_2": "The scale factor is 5. Multiply both the numerator and denominator by 5, then enter the corrected missing value.",
+        "on_locked_incorrect": "Answer recorded. The complete equivalence will be available after the final set.",
+        "worked_explanation": "The known pair gives scale factor 5. → 7 × 5 = 35 → 10 × 5 = 50 → 7/10 = 35/50."
+      },
+      "mathematical_support": {
+        "hint_1": "Ask what multiplies 7 to make 35.",
+        "hint_2": "Find one scale factor from the known pair, then apply that same factor to the other part.",
+        "worked_solution": "The known pair gives scale factor 5. → 7 × 5 = 35 → 10 × 5 = 50 → 7/10 = 35/50."
+      },
+      "working": [
+        "The known pair gives scale factor 5.",
+        "7 × 5 = 35",
+        "10 × 5 = 50",
+        "7/10 = 35/50."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_fraction",
+          "n": 7,
+          "d": 10,
+          "target_n": 35,
+          "target_d": 50,
+          "missing": "denominator",
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "10": "That leaves one part unchanged. Both parts must be scaled together.",
+        "38": "That adds the change from one known part to the missing part. Equivalent fractions use multiplication by the same scale factor."
+      }
+    },
+    {
+      "id": "AF-04-P05",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Complete 4/11 = ?/44. Enter only the missing whole number.",
+      "target": "Complete or recognise an equivalent fraction",
+      "response": {
+        "type": "integer",
+        "input_label": "Missing numerator"
+      },
+      "answer": {
+        "value": 16
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. You used factor 4 for both parts and found the missing numerator.",
+        "correct_after_support": "Correct. You used factor 4 for both parts and found the missing numerator.",
+        "on_correct_math": "The known pair gives scale factor 4. → 11 × 4 = 44 → 4 × 4 = 16 → 4/11 = 16/44.",
+        "on_incorrect_attempt_1": "Ask what multiplies 11 to make 44.",
+        "on_incorrect_attempt_2": "The scale factor is 4. Multiply both the numerator and denominator by 4, then enter the corrected missing value.",
+        "on_locked_incorrect": "Answer recorded. The complete equivalence will be available after the final set.",
+        "worked_explanation": "The known pair gives scale factor 4. → 11 × 4 = 44 → 4 × 4 = 16 → 4/11 = 16/44."
+      },
+      "mathematical_support": {
+        "hint_1": "Ask what multiplies 11 to make 44.",
+        "hint_2": "Find one scale factor from the known pair, then apply that same factor to the other part.",
+        "worked_solution": "The known pair gives scale factor 4. → 11 × 4 = 44 → 4 × 4 = 16 → 4/11 = 16/44."
+      },
+      "working": [
+        "The known pair gives scale factor 4.",
+        "11 × 4 = 44",
+        "4 × 4 = 16",
+        "4/11 = 16/44."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_fraction",
+          "n": 4,
+          "d": 11,
+          "target_n": 16,
+          "target_d": 44,
+          "missing": "numerator",
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "4": "That leaves one part unchanged. Both parts must be scaled together.",
+        "37": "That adds the change from one known part to the missing part. Equivalent fractions use multiplication by the same scale factor."
+      }
+    },
+    {
+      "id": "AF-04-P06",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Which fraction is equivalent to 3/4?",
+      "target": "Complete or recognise an equivalent fraction",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "6/7",
+          "9/12",
+          "12/20",
+          "15/24"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "9/12"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Nine twelfths uses the same factor of three.",
+        "correct_after_support": "Correct. Nine twelfths uses the same factor of three.",
+        "on_correct_math": "3 × 3 = 9. → 4 × 3 = 12. → The same multiplier gives 9/12.",
+        "on_incorrect_attempt_1": "Test whether one whole-number multiplier changes both three and four into an option.",
+        "on_incorrect_attempt_2": "Multiplying both parts by three gives nine twelfths. Select nine twelfths.",
+        "on_locked_incorrect": "Answer recorded. The complete equivalence will be available after the final set.",
+        "worked_explanation": "3 × 3 = 9. → 4 × 3 = 12. → The same multiplier gives 9/12."
+      },
+      "mathematical_support": {
+        "hint_1": "Test whether one whole-number multiplier changes both three and four into an option.",
+        "hint_2": "Find one scale factor from the known pair, then apply that same factor to the other part.",
+        "worked_solution": "3 × 3 = 9. → 4 × 3 = 12. → The same multiplier gives 9/12."
+      },
+      "working": [
+        "3 × 3 = 9.",
+        "4 × 3 = 12.",
+        "The same multiplier gives 9/12."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_fraction",
+          "n": 3,
+          "d": 4,
+          "target_n": 9,
+          "target_d": 12,
+          "missing": "choice",
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-04-X01",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "practice",
+      "prompt": "In a class, 3/5 of the 30 students travel to school by bus. Complete 3/5 = ?/30. Enter only the missing whole number.",
+      "target": "Complete or recognise an equivalent fraction",
+      "response": {
+        "type": "integer",
+        "input_label": "Missing numerator"
+      },
+      "answer": {
+        "value": 18
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Eighteen of the thirty students travel by bus.",
+        "correct_after_support": "Correct. Eighteen of the thirty students travel by bus.",
+        "on_correct_math": "The known pair gives scale factor 6. → 5 × 6 = 30 → 3 × 6 = 18 → 3/5 = 18/30.",
+        "on_incorrect_attempt_1": "Ask what multiplies 5 to make 30.",
+        "on_incorrect_attempt_2": "The scale factor is 6. Multiply both the numerator and denominator by 6, then enter the corrected missing value.",
+        "on_locked_incorrect": "Answer recorded. The complete equivalence will be available after the final set.",
+        "worked_explanation": "The known pair gives scale factor 6. → 5 × 6 = 30 → 3 × 6 = 18 → 3/5 = 18/30."
+      },
+      "mathematical_support": {
+        "hint_1": "Ask what multiplies 5 to make 30.",
+        "hint_2": "Find one scale factor from the known pair, then apply that same factor to the other part.",
+        "worked_solution": "The known pair gives scale factor 6. → 5 × 6 = 30 → 3 × 6 = 18 → 3/5 = 18/30."
+      },
+      "working": [
+        "The known pair gives scale factor 6.",
+        "5 × 6 = 30",
+        "3 × 6 = 18",
+        "3/5 = 18/30."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_fraction",
+          "n": 3,
+          "d": 5,
+          "target_n": 18,
+          "target_d": 30,
+          "missing": "numerator",
+          "object": "class",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "3": "That leaves one part unchanged. Both parts must be scaled together.",
+        "28": "That adds the change from one known part to the missing part. Equivalent fractions use multiplication by the same scale factor."
+      }
+    },
+    {
+      "id": "AF-04-X02",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "practice",
+      "prompt": "A water tank is 2/7 full. Its scale has 35 equal intervals. How many intervals represent the water?",
+      "target": "Complete or recognise an equivalent fraction",
+      "response": {
+        "type": "integer",
+        "input_label": "Missing numerator"
+      },
+      "answer": {
+        "value": 10
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Ten of the thirty-five intervals represent the water.",
+        "correct_after_support": "Correct. Ten of the thirty-five intervals represent the water.",
+        "on_correct_math": "The known pair gives scale factor 5. → 7 × 5 = 35 → 2 × 5 = 10 → 2/7 = 10/35.",
+        "on_incorrect_attempt_1": "Ask what multiplies 7 to make 35.",
+        "on_incorrect_attempt_2": "The scale factor is 5. Multiply both the numerator and denominator by 5, then enter the corrected missing value.",
+        "on_locked_incorrect": "Answer recorded. The complete equivalence will be available after the final set.",
+        "worked_explanation": "The known pair gives scale factor 5. → 7 × 5 = 35 → 2 × 5 = 10 → 2/7 = 10/35."
+      },
+      "mathematical_support": {
+        "hint_1": "Ask what multiplies 7 to make 35.",
+        "hint_2": "Find one scale factor from the known pair, then apply that same factor to the other part.",
+        "worked_solution": "The known pair gives scale factor 5. → 7 × 5 = 35 → 2 × 5 = 10 → 2/7 = 10/35."
+      },
+      "working": [
+        "The known pair gives scale factor 5.",
+        "7 × 5 = 35",
+        "2 × 5 = 10",
+        "2/7 = 10/35."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_fraction",
+          "n": 2,
+          "d": 7,
+          "target_n": 10,
+          "target_d": 35,
+          "missing": "numerator",
+          "object": "tank",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "2": "That leaves one part unchanged. Both parts must be scaled together.",
+        "30": "That adds the change from one known part to the missing part. Equivalent fractions use multiplication by the same scale factor."
+      }
+    },
+    {
+      "id": "AF-04-X03",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "practice",
+      "prompt": "In a survey, 4/9 of 45 people chose option A. Complete 4/9 = ?/45. Enter only the missing whole number.",
+      "target": "Complete or recognise an equivalent fraction",
+      "response": {
+        "type": "integer",
+        "input_label": "Missing numerator"
+      },
+      "answer": {
+        "value": 20
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Twenty of the forty-five people chose option A.",
+        "correct_after_support": "Correct. Twenty of the forty-five people chose option A.",
+        "on_correct_math": "The known pair gives scale factor 5. → 9 × 5 = 45 → 4 × 5 = 20 → 4/9 = 20/45.",
+        "on_incorrect_attempt_1": "Ask what multiplies 9 to make 45.",
+        "on_incorrect_attempt_2": "The scale factor is 5. Multiply both the numerator and denominator by 5, then enter the corrected missing value.",
+        "on_locked_incorrect": "Answer recorded. The complete equivalence will be available after the final set.",
+        "worked_explanation": "The known pair gives scale factor 5. → 9 × 5 = 45 → 4 × 5 = 20 → 4/9 = 20/45."
+      },
+      "mathematical_support": {
+        "hint_1": "Ask what multiplies 9 to make 45.",
+        "hint_2": "Find one scale factor from the known pair, then apply that same factor to the other part.",
+        "worked_solution": "The known pair gives scale factor 5. → 9 × 5 = 45 → 4 × 5 = 20 → 4/9 = 20/45."
+      },
+      "working": [
+        "The known pair gives scale factor 5.",
+        "9 × 5 = 45",
+        "4 × 5 = 20",
+        "4/9 = 20/45."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_fraction",
+          "n": 4,
+          "d": 9,
+          "target_n": 20,
+          "target_d": 45,
+          "missing": "numerator",
+          "object": "survey",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "4": "That leaves one part unchanged. Both parts must be scaled together.",
+        "40": "That adds the change from one known part to the missing part. Equivalent fractions use multiplication by the same scale factor."
+      }
+    },
+    {
+      "id": "AF-04-X04",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "practice",
+      "prompt": "A diagram has 24 equal parts and 18 are shaded. Which fraction is equivalent to 18/24?",
+      "target": "Complete or recognise an equivalent fraction",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "3/4",
+          "6/10",
+          "9/16",
+          "12/18"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "3/4"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Three quarters describes the same shaded proportion.",
+        "correct_after_support": "Correct. Three quarters describes the same shaded proportion.",
+        "on_correct_math": "18 and 24 are both divisible by 6. → 18 ÷ 6 = 3 and 24 ÷ 6 = 4. → 18/24 = 3/4.",
+        "on_incorrect_attempt_1": "Look for one divisor that can be applied to both eighteen and twenty-four.",
+        "on_incorrect_attempt_2": "Divide both counts by six: eighteen becomes three and twenty-four becomes four. Select three quarters.",
+        "on_locked_incorrect": "Answer recorded. The complete equivalence will be available after the final set.",
+        "worked_explanation": "18 and 24 are both divisible by 6. → 18 ÷ 6 = 3 and 24 ÷ 6 = 4. → 18/24 = 3/4."
+      },
+      "mathematical_support": {
+        "hint_1": "Look for one divisor that can be applied to both eighteen and twenty-four.",
+        "hint_2": "Find one scale factor from the known pair, then apply that same factor to the other part.",
+        "worked_solution": "18 and 24 are both divisible by 6. → 18 ÷ 6 = 3 and 24 ÷ 6 = 4. → 18/24 = 3/4."
+      },
+      "working": [
+        "18 and 24 are both divisible by 6.",
+        "18 ÷ 6 = 3 and 24 ÷ 6 = 4.",
+        "18/24 = 3/4."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_fraction",
+          "n": 18,
+          "d": 24,
+          "target_n": 3,
+          "target_d": 4,
+          "missing": "choice",
+          "object": "diagram",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-04-E01",
+      "source_ref": {
+        "page": 11
+      },
+      "stage": "exit",
+      "prompt": "Complete 5/7 = ?/35. Enter only the missing whole number.",
+      "target": "Complete or recognise an equivalent fraction",
+      "response": {
+        "type": "integer",
+        "input_label": "Missing numerator"
+      },
+      "answer": {
+        "value": 25
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. You used factor 5 for both parts and found the missing numerator.",
+        "correct_after_support": "Correct. You used factor 5 for both parts and found the missing numerator.",
+        "on_correct_math": "The known pair gives scale factor 5. → 7 × 5 = 35 → 5 × 5 = 25 → 5/7 = 25/35.",
+        "on_incorrect_attempt_1": "Ask what multiplies 7 to make 35.",
+        "on_incorrect_attempt_2": "The scale factor is 5. Multiply both the numerator and denominator by 5, then enter the corrected missing value.",
+        "on_locked_incorrect": "Answer recorded. The complete equivalence will be available after the final set.",
+        "worked_explanation": "The known pair gives scale factor 5. → 7 × 5 = 35 → 5 × 5 = 25 → 5/7 = 25/35."
+      },
+      "mathematical_support": {
+        "hint_1": "Ask what multiplies 7 to make 35.",
+        "hint_2": "Find one scale factor from the known pair, then apply that same factor to the other part.",
+        "worked_solution": "The known pair gives scale factor 5. → 7 × 5 = 35 → 5 × 5 = 25 → 5/7 = 25/35."
+      },
+      "working": [
+        "The known pair gives scale factor 5.",
+        "7 × 5 = 35",
+        "5 × 5 = 25",
+        "5/7 = 25/35."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_fraction",
+          "n": 5,
+          "d": 7,
+          "target_n": 25,
+          "target_d": 35,
+          "missing": "numerator",
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "5": "That leaves one part unchanged. Both parts must be scaled together.",
+        "33": "That adds the change from one known part to the missing part. Equivalent fractions use multiplication by the same scale factor."
+      }
+    },
+    {
+      "id": "AF-04-E02",
+      "source_ref": {
+        "page": 11
+      },
+      "stage": "exit",
+      "prompt": "Complete 6/11 = 30/?. Enter only the missing whole number.",
+      "target": "Complete or recognise an equivalent fraction",
+      "response": {
+        "type": "integer",
+        "input_label": "Missing denominator"
+      },
+      "answer": {
+        "value": 55
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. You used factor 5 for both parts and found the missing denominator.",
+        "correct_after_support": "Correct. You used factor 5 for both parts and found the missing denominator.",
+        "on_correct_math": "The known pair gives scale factor 5. → 6 × 5 = 30 → 11 × 5 = 55 → 6/11 = 30/55.",
+        "on_incorrect_attempt_1": "Ask what multiplies 6 to make 30.",
+        "on_incorrect_attempt_2": "The scale factor is 5. Multiply both the numerator and denominator by 5, then enter the corrected missing value.",
+        "on_locked_incorrect": "Answer recorded. The complete equivalence will be available after the final set.",
+        "worked_explanation": "The known pair gives scale factor 5. → 6 × 5 = 30 → 11 × 5 = 55 → 6/11 = 30/55."
+      },
+      "mathematical_support": {
+        "hint_1": "Ask what multiplies 6 to make 30.",
+        "hint_2": "Find one scale factor from the known pair, then apply that same factor to the other part.",
+        "worked_solution": "The known pair gives scale factor 5. → 6 × 5 = 30 → 11 × 5 = 55 → 6/11 = 30/55."
+      },
+      "working": [
+        "The known pair gives scale factor 5.",
+        "6 × 5 = 30",
+        "11 × 5 = 55",
+        "6/11 = 30/55."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_fraction",
+          "n": 6,
+          "d": 11,
+          "target_n": 30,
+          "target_d": 55,
+          "missing": "denominator",
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "11": "That leaves one part unchanged. Both parts must be scaled together.",
+        "35": "That adds the change from one known part to the missing part. Equivalent fractions use multiplication by the same scale factor."
+      }
+    },
+    {
+      "id": "AF-04-E03",
+      "source_ref": {
+        "page": 11
+      },
+      "stage": "exit",
+      "prompt": "Which fraction is equivalent to 4/9?",
+      "target": "Complete or recognise an equivalent fraction",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "8/18",
+          "8/13",
+          "12/18",
+          "16/45"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "8/18"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Recorded. Eight eighteenths uses the same scale factor of two.",
+        "correct_after_support": "Recorded. Eight eighteenths uses the same scale factor of two.",
+        "on_correct_math": "4 × 2 = 8. → 9 × 2 = 18. → 4/9 = 8/18.",
+        "on_incorrect_attempt_1": "No hints are available in the final check.",
+        "on_incorrect_attempt_2": "The response is locked for this final check.",
+        "on_locked_incorrect": "Answer recorded. The complete equivalence will be available after the final set.",
+        "worked_explanation": "4 × 2 = 8. → 9 × 2 = 18. → 4/9 = 8/18."
+      },
+      "mathematical_support": {
+        "hint_1": "No hints are available in the final check.",
+        "hint_2": "Find one scale factor from the known pair, then apply that same factor to the other part.",
+        "worked_solution": "4 × 2 = 8. → 9 × 2 = 18. → 4/9 = 8/18."
+      },
+      "working": [
+        "4 × 2 = 8.",
+        "9 × 2 = 18.",
+        "4/9 = 8/18."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_fraction",
+          "n": 4,
+          "d": 9,
+          "target_n": 8,
+          "target_d": 18,
+          "missing": "choice",
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    }
+  ],
+  "canonical_lesson": {
+    "version": "AF04-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

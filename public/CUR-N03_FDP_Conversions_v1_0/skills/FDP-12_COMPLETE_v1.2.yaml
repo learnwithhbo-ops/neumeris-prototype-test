@@ -1,0 +1,3032 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "FDP-12 - Convert a percentage to a fraction in simplest form",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-23",
+      "sha256": "7a4d4af16f819b446c283d125940d992f35b96185a76a0e6d0c0489bd9a4124e"
+    },
+    "authored_scope": "Convert a percentage to a fraction in its simplest form.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "FDP12-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "verified_desktop_ready_phone_locked_unsimplified_learning_equal_area_quarters_decimal_typography_pairs_drafts_hints_audio_320_390",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        17,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "source_repairs_consulted": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        21,
+        22
+      ],
+      "note": "All 23 approved pages and the previous configuration reviewed. Restored equal-area 35/100 to 7/20 regrouping, equal quarter-bars for 125%, the four-stage 42% worked example, both 36% guided fraction pairs, all 24 prescribed questions and all four unsupported final items. Decimal clearing changes both parts; exact simplest improper and mixed fractions are accepted. Correct-value unsimplified final responses cannot establish readiness. No Entry, Diagnostic, prerequisite-state mutation, delayed Retrieval or Strong route."
+    }
+  },
+  "identity": {
+    "id": "FDP-12",
+    "slug": "convert-a-percentage-to-a-fraction-in-simplest-form",
+    "title": "Convert a percentage to a fraction in simplest form",
+    "strand": "Number",
+    "cluster": "Fractions, Decimals and Percentages",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Convert positive whole-number and selected one-decimal-place percentages into equivalent fractions in simplest form.",
+    "success_criteria": [
+      "Write the percentage number over one hundred.",
+      "Clear a decimal numerator by multiplying both parts equally.",
+      "Simplify completely using any valid common-factor route.",
+      "Accept simplified improper fractions or mixed numbers above one whole.",
+      "Preserve the named reference whole in applications."
+    ],
+    "boundaries": {
+      "includes": [
+        "Percentages below one, equal to one hundred and above one hundred",
+        "Selected one-decimal-place percentages",
+        "Any mathematically valid route giving an exact fully simplified result unless an intermediate stage is explicitly requested",
+        "Whole-number answers when the exact fraction is an integer"
+      ],
+      "excludes": [
+        "Recurring or negative values, percentage amounts and change",
+        "Comparing or ordering forms",
+        "Entry, Diagnostic, prerequisite-state mutation and delayed Retrieval"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "FDP-02",
+      "AF-03"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for FDP-02, AF-03 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "single_choice",
+      "percent_fraction"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    },
+    "place_value_profile": true
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "Percent counts parts per hundred; equal regrouping preserves the fraction of the same whole.",
+    "invariant": "Multiplying or dividing both parts by the same nonzero factor preserves the value.",
+    "must_notice": [
+      "The percentage number belongs over one hundred.",
+      "Decimal clearing changes both parts equally.",
+      "Final fraction parts are integers with no remaining common factor.",
+      "An amount above one hundred percent includes a complete reference whole."
+    ],
+    "common_confusions": [
+      "Initial fraction inverted",
+      "Wrong denominator ten",
+      "Decimal cleared in only one part",
+      "Correct value left unsimplified",
+      "Whole-number part dropped",
+      "Unequal operations or subtraction applied to fraction parts"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "Start with parts per hundred",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Start with parts per hundred",
+          "initial_state": "Start with parts per hundred",
+          "model": {
+            "kind": "percent_fraction_conversion",
+            "title": "Convert and simplify the same amount",
+            "percent": "35",
+            "given": "",
+            "steps": [
+              "35% = 35/100.",
+              "A common factor of 35 and 100 is 5.",
+              "Divide both parts: (35 ÷ 5)/(100 ÷ 5) = 7/20.",
+              "7/20 is in simplest form: no common factor greater than 1 remains."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "principle",
+            "phase": 1,
+            "solved": true
+          }
+        },
+        "narration": {
+          "script": "Write the percentage number over one hundred. Simplify both parts by common factors until the fraction cannot be reduced further."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Keep decimals equivalent too",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Keep decimals equivalent too",
+          "initial_state": "Keep decimals equivalent too",
+          "model": {
+            "kind": "percent_fraction_conversion",
+            "title": "Clear a decimal in both fraction parts",
+            "percent": "12.5",
+            "given": "",
+            "steps": [
+              "12.5% = 12.5/100.",
+              "Multiply both parts by 10: (12.5 × 10)/(100 × 10) = 125/1000.",
+              "A common factor of 125 and 1000 is 125.",
+              "Divide both parts: (125 ÷ 125)/(1000 ÷ 125) = 1/8.",
+              "1/8 is in simplest form: no common factor greater than 1 remains."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "decimal_principle",
+            "phase": 1,
+            "solved": true
+          }
+        },
+        "narration": {
+          "script": "If the percentage has one decimal place, first multiply both fraction parts by ten. This clears the decimal without changing the value. Then simplify fully."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "See thirty-five equal hundredths",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "See thirty-five equal hundredths",
+          "initial_state": "See thirty-five equal hundredths",
+          "model": {
+            "kind": "percent_fraction_conversion",
+            "title": "Regroup thirty-five hundredths",
+            "percent": "35",
+            "given": "35%",
+            "steps": [
+              "Shade 35 of 100 equal cells, filling seven columns of five.",
+              "Each column becomes one group: seven shaded groups out of twenty.",
+              "The whole and shaded area are unchanged: 35% = 35/100 = 7/20."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "regroup",
+            "solved": true,
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "This rectangle is one whole. Its hundred equal cells are arranged in columns, with the first seven columns shaded."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Regroup each complete column",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Regroup each complete column",
+          "initial_state": "Regroup each complete column",
+          "model": {
+            "kind": "percent_fraction_conversion",
+            "title": "Regroup thirty-five hundredths",
+            "percent": "35",
+            "given": "35%",
+            "steps": [
+              "Shade 35 of 100 equal cells, filling seven columns of five.",
+              "Each column becomes one group: seven shaded groups out of twenty.",
+              "The whole and shaded area are unchanged: 35% = 35/100 = 7/20."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "regroup",
+            "solved": true,
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "Treat each column as one larger group. The rectangle and shaded area stay exactly the same while both counts change together."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Connect the equivalent fractions",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Connect the equivalent fractions",
+          "initial_state": "Connect the equivalent fractions",
+          "model": {
+            "kind": "percent_fraction_conversion",
+            "title": "Regroup thirty-five hundredths",
+            "percent": "35",
+            "given": "35%",
+            "steps": [
+              "Shade 35 of 100 equal cells, filling seven columns of five.",
+              "Each column becomes one group: seven shaded groups out of twenty.",
+              "The whole and shaded area are unchanged: 35% = 35/100 = 7/20."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "regroup",
+            "solved": true,
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "The regrouped picture shows the simplified fraction. Dividing both counts by the same factor preserves the shaded proportion."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T06"
+      },
+      {
+        "id": "T06",
+        "stage": "teaching",
+        "purpose": "Represent more than a whole",
+        "source_ref": {
+          "page": 6
+        },
+        "scene": {
+          "display_title": "Represent more than a whole",
+          "initial_state": "Represent more than a whole",
+          "model": {
+            "kind": "percent_fraction_conversion",
+            "title": "Keep one whole and an additional quarter",
+            "percent": "125",
+            "given": "125%",
+            "steps": [
+              "Shade one complete four-quarter bar and one quarter of an equal bar.",
+              "There are five shaded quarter-pieces: 125/100 = 5/4 = 1 1/4."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "above",
+            "solved": true,
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "Use two equal reference bars. Shade the complete first bar and one quarter of the second, keeping every quarter the same size."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T07"
+      },
+      {
+        "id": "T07",
+        "stage": "teaching",
+        "purpose": "Keep the complete whole in the fraction",
+        "source_ref": {
+          "page": 6
+        },
+        "scene": {
+          "display_title": "Keep the complete whole in the fraction",
+          "initial_state": "Keep the complete whole in the fraction",
+          "model": {
+            "kind": "percent_fraction_conversion",
+            "title": "Keep one whole and an additional quarter",
+            "percent": "125",
+            "given": "125%",
+            "steps": [
+              "Shade one complete four-quarter bar and one quarter of an equal bar.",
+              "There are five shaded quarter-pieces: 125/100 = 5/4 = 1 1/4."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "above",
+            "solved": true,
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "Count all the shaded quarter-pieces. The improper fraction and the mixed number describe the same amount, including the complete whole."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T08"
+      },
+      {
+        "id": "T08",
+        "stage": "teaching",
+        "purpose": "Explain the regrouping",
+        "source_ref": {
+          "page": 6
+        },
+        "scene": {
+          "display_title": "Explain the regrouping",
+          "initial_state": "Explain the regrouping",
+          "model": {
+            "kind": "percent_fraction_conversion",
+            "title": "Explain the regrouped hundredths",
+            "percent": "35",
+            "given": "35% = 7/20",
+            "steps": [
+              "35% means 35 of 100 equal hundredths.",
+              "Group every 5 hundredths: 35 ÷ 5 = 7 and 100 ÷ 5 = 20.",
+              "The whole and shaded amount are unchanged, so 35/100 = 7/20."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "rule",
+            "explanation_question": true
+          }
+        },
+        "narration": {
+          "script": "Choose why the hundredths and the larger groups describe the same shaded proportion."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "FDP-12-C01"
+        },
+        "next_step": "T09"
+      },
+      {
+        "id": "T09",
+        "stage": "teaching",
+        "purpose": "Build the worked fraction",
+        "source_ref": {
+          "page": 7
+        },
+        "scene": {
+          "display_title": "Build the worked fraction",
+          "initial_state": "Build the worked fraction",
+          "model": {
+            "kind": "percent_fraction_conversion",
+            "title": "Convert forty-two percent and simplify",
+            "percent": "42",
+            "given": "42%",
+            "steps": [
+              "42% = 42/100.",
+              "A common factor of 42 and 100 is 2.",
+              "Divide both parts: (42 ÷ 2)/(100 ÷ 2) = 21/50.",
+              "21/50 is in simplest form: no common factor greater than 1 remains."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "Begin the worked example with the meaning of percent: the percentage number over one hundred."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T10"
+      },
+      {
+        "id": "T10",
+        "stage": "teaching",
+        "purpose": "Find a common factor",
+        "source_ref": {
+          "page": 7
+        },
+        "scene": {
+          "display_title": "Find a common factor",
+          "initial_state": "Find a common factor",
+          "model": {
+            "kind": "percent_fraction_conversion",
+            "title": "Convert forty-two percent and simplify",
+            "percent": "42",
+            "given": "42%",
+            "steps": [
+              "42% = 42/100.",
+              "A common factor of 42 and 100 is 2.",
+              "Divide both parts: (42 ÷ 2)/(100 ÷ 2) = 21/50.",
+              "21/50 is in simplest form: no common factor greater than 1 remains."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "Look for a factor shared by both fraction parts. It must divide the numerator and denominator exactly."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T11"
+      },
+      {
+        "id": "T11",
+        "stage": "teaching",
+        "purpose": "Divide the two parts equally",
+        "source_ref": {
+          "page": 7
+        },
+        "scene": {
+          "display_title": "Divide the two parts equally",
+          "initial_state": "Divide the two parts equally",
+          "model": {
+            "kind": "percent_fraction_conversion",
+            "title": "Convert forty-two percent and simplify",
+            "percent": "42",
+            "given": "42%",
+            "steps": [
+              "42% = 42/100.",
+              "A common factor of 42 and 100 is 2.",
+              "Divide both parts: (42 ÷ 2)/(100 ÷ 2) = 21/50.",
+              "21/50 is in simplest form: no common factor greater than 1 remains."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "Follow the two divisions in the fraction. Using the same factor keeps its value unchanged."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T12"
+      },
+      {
+        "id": "T12",
+        "stage": "teaching",
+        "purpose": "Check that simplification is complete",
+        "source_ref": {
+          "page": 7
+        },
+        "scene": {
+          "display_title": "Check that simplification is complete",
+          "initial_state": "Check that simplification is complete",
+          "model": {
+            "kind": "percent_fraction_conversion",
+            "title": "Convert forty-two percent and simplify",
+            "percent": "42",
+            "given": "42%",
+            "steps": [
+              "42% = 42/100.",
+              "A common factor of 42 and 100 is 2.",
+              "Divide both parts: (42 ÷ 2)/(100 ÷ 2) = 21/50.",
+              "21/50 is in simplest form: no common factor greater than 1 remains."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 4
+          }
+        },
+        "narration": {
+          "script": "Check the resulting numerator and denominator. With no common factor greater than one remaining, the fraction is in simplest form."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T13"
+      },
+      {
+        "id": "T13",
+        "stage": "teaching",
+        "purpose": "Check the full conversion",
+        "source_ref": {
+          "page": 7
+        },
+        "scene": {
+          "display_title": "Check the full conversion",
+          "initial_state": "Check the full conversion",
+          "model": {
+            "kind": "percent_fraction_conversion",
+            "title": "Check the starting fraction and simplification",
+            "percent": "65",
+            "given": "65%",
+            "steps": [
+              "65% = 65/100.",
+              "A common factor of 65 and 100 is 5.",
+              "Divide both parts: (65 ÷ 5)/(100 ÷ 5) = 13/20.",
+              "13/20 is in simplest form: no common factor greater than 1 remains."
+            ],
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Check the starting fraction and the operation used to simplify it."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "FDP-12-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "FDP-12-G01",
+        "support_level": "high",
+        "pre_question_script": "Enter both parts of the initial fraction.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "faded",
+        "question_ref": "FDP-12-G02",
+        "support_level": "reduced",
+        "pre_question_script": "Enter both results after dividing by the stated common factor.",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "independent_transfer",
+        "question_ref": "FDP-12-G03",
+        "support_level": "none",
+        "pre_question_script": "Explain why equal simplification preserves the fraction value.",
+        "correct_next": "P01"
+      }
+    },
+    "practice": {
+      "intro_script": "Convert each percentage into a fully simplified fraction. Keep both parts equivalent when clearing a decimal. For an amount above one whole, either a simplified improper fraction or mixed number is accepted.",
+      "question_order": [
+        "FDP-12-P01",
+        "FDP-12-P02",
+        "FDP-12-P03",
+        "FDP-12-P04",
+        "FDP-12-P05",
+        "FDP-12-P06",
+        "FDP-12-P07",
+        "FDP-12-P08",
+        "FDP-12-P09",
+        "FDP-12-P10",
+        "FDP-12-X01",
+        "FDP-12-X02",
+        "FDP-12-X03",
+        "FDP-12-X04",
+        "FDP-12-X05"
+      ],
+      "question_count": 15,
+      "feedback_policy": "Distinguish initial fraction, decimal clearing, equivalence, simplest form and retained wholes. Recognise correct components and value-correct unsimplified responses. Do not infer unseen methods."
+    },
+    "exit": {
+      "intro_script": "Complete three fractions and the method check without hints. Use any valid method, but simplify each fraction fully. Each response locks; feedback follows after all four are saved.",
+      "primary_question_refs": [
+        "FDP-12-E01",
+        "FDP-12-E02",
+        "FDP-12-E03",
+        "FDP-12-E04"
+      ],
+      "confirmation_question_refs": [],
+      "submission_policy": "No correctness, solved diagrams, working or repair until the complete final set is locked.",
+      "mastery_policy": {
+        "profile": "all_primary_unsupported_deferred",
+        "require_all": true,
+        "source_page": 17,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "All final fractions and the method check are correct. Each fraction preserves the original percentage and is fully simplified.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Keep the value and simplify fully",
+      "ryan_script": "One or more final responses need another pass. Review the parts-per-hundred fraction, equal changes to both parts and the simplest final form.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "FDP-12-C01",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Why does regrouping show that 35% and 7/20 are equivalent?",
+      "target": "Convert the percentage into a fully simplified equivalent fraction",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "35 hundredths can be regrouped into 7 equal groups out of 20 without changing the shaded amount.",
+          "The denominator 100 can be replaced by any smaller denominator.",
+          "Only the denominator needs to be divided by 5.",
+          "Every percentage must be written with denominator 20."
+        ],
+        "math_layout": "decimal_compound_fraction"
+      },
+      "answer": {
+        "value": "35 hundredths can be regrouped into 7 equal groups out of 20 without changing the shaded amount."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Yes. Regrouping changes the number of pieces, not the shaded proportion of the whole.",
+        "correct_after_support": "Yes. Regrouping changes the number of pieces, not the shaded proportion of the whole.",
+        "on_correct_math": "35% means 35 of 100 equal hundredths. → Group every 5 hundredths: 35 ÷ 5 = 7 and 100 ÷ 5 = 20. → The whole and shaded amount are unchanged, so 35/100 = 7/20.",
+        "on_incorrect_attempt_1": "Compare what happened to both the shaded cells and all the cells when the groups were formed.",
+        "on_incorrect_attempt_2": "Compare what happened to both the shaded cells and all the cells when the groups were formed.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "35% means 35 of 100 equal hundredths. → Group every 5 hundredths: 35 ÷ 5 = 7 and 100 ÷ 5 = 20. → The whole and shaded amount are unchanged, so 35/100 = 7/20."
+      },
+      "mathematical_support": {
+        "hint_1": "Compare what happened to both the shaded cells and all the cells when the groups were formed.",
+        "hint_2": "Keep the same fraction value while changing both parts by the same factor. Check that the final fraction is fully simplified.",
+        "worked_solution": "35% means 35 of 100 equal hundredths. → Group every 5 hundredths: 35 ÷ 5 = 7 and 100 ÷ 5 = 20. → The whole and shaded amount are unchanged, so 35/100 = 7/20."
+      },
+      "working": [
+        "35% means 35 of 100 equal hundredths.",
+        "Group every 5 hundredths: 35 ÷ 5 = 7 and 100 ÷ 5 = 20.",
+        "The whole and shaded amount are unchanged, so 35/100 = 7/20."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percent_fraction_conversion",
+          "title": "Explain the regrouped hundredths",
+          "percent": "35",
+          "given": "35% = 7/20",
+          "steps": [
+            "35% means 35 of 100 equal hundredths.",
+            "Group every 5 hundredths: 35 ÷ 5 = 7 and 100 ÷ 5 = 20.",
+            "The whole and shaded amount are unchanged, so 35/100 = 7/20."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "explanation_question": true
+        }
+      },
+      "response_feedback": {
+        "The denominator 100 can be replaced by any smaller denominator.": "Changing the denominator alone changes the fraction value; a smaller denominator is not automatically equivalent.",
+        "Only the denominator needs to be divided by 5.": "The shaded cells must be regrouped too. Both numerator and denominator are divided by the same factor.",
+        "Every percentage must be written with denominator 20.": "The simplified denominator depends on the percentage and its common factors; it is not always twenty."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-12-C02",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Which line correctly converts 65% to a fraction in simplest form?",
+      "target": "Convert the percentage into a fully simplified equivalent fraction",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "65/100 = 13/20",
+          "100/65 = 20/13",
+          "65/10 = 13/2",
+          "65/100 = 64/99"
+        ],
+        "math_layout": "decimal_compound_fraction"
+      },
+      "answer": {
+        "value": "65/100 = 13/20"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both the starting fraction and its simplified equivalent preserve the percentage.",
+        "correct_after_support": "Correct. Both the starting fraction and its simplified equivalent preserve the percentage.",
+        "on_correct_math": "65% = 65/100. → A common factor of 65 and 100 is 5. → Divide both parts: (65 ÷ 5)/(100 ÷ 5) = 13/20. → 13/20 is in simplest form: no common factor greater than 1 remains.",
+        "on_incorrect_attempt_1": "Start with parts per hundred, then check that both parts change by the same factor.",
+        "on_incorrect_attempt_2": "Start with parts per hundred, then check that both parts change by the same factor.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "65% = 65/100. → A common factor of 65 and 100 is 5. → Divide both parts: (65 ÷ 5)/(100 ÷ 5) = 13/20. → 13/20 is in simplest form: no common factor greater than 1 remains."
+      },
+      "mathematical_support": {
+        "hint_1": "Start with parts per hundred, then check that both parts change by the same factor.",
+        "hint_2": "Keep the same fraction value while changing both parts by the same factor. Check that the final fraction is fully simplified.",
+        "worked_solution": "65% = 65/100. → A common factor of 65 and 100 is 5. → Divide both parts: (65 ÷ 5)/(100 ÷ 5) = 13/20. → 13/20 is in simplest form: no common factor greater than 1 remains."
+      },
+      "working": [
+        "65% = 65/100.",
+        "A common factor of 65 and 100 is 5.",
+        "Divide both parts: (65 ÷ 5)/(100 ÷ 5) = 13/20.",
+        "13/20 is in simplest form: no common factor greater than 1 remains."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percent_fraction_conversion",
+          "title": "Check the starting fraction and simplification",
+          "percent": "65",
+          "given": "65%",
+          "steps": [
+            "65% = 65/100.",
+            "A common factor of 65 and 100 is 5.",
+            "Divide both parts: (65 ÷ 5)/(100 ÷ 5) = 13/20.",
+            "13/20 is in simplest form: no common factor greater than 1 remains."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "100/65 = 20/13": "That reverses the numerator and denominator. The percentage number belongs over one hundred.",
+        "65/10 = 13/2": "Percent means out of one hundred, not out of ten.",
+        "65/100 = 64/99": "Subtracting the same number from both parts does not generally preserve a fraction value."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-12-G01",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "guided",
+      "prompt": "Write 36% as a fraction over 100. Enter both the numerator and denominator.",
+      "target": "Convert the percentage into a fully simplified equivalent fraction",
+      "response": {
+        "type": "percent_fraction",
+        "percentage_source": "36",
+        "input_label": "Complete both fraction blanks",
+        "exact_parts": true,
+        "require_simplest_form": false,
+        "allow_mixed": false,
+        "allow_whole_number": false
+      },
+      "answer": {
+        "value": {
+          "n": 36,
+          "d": 100
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both entries record the percentage as parts per hundred.",
+        "correct_after_support": "Correct. Both entries record the percentage as parts per hundred.",
+        "on_correct_math": "The percentage number gives numerator 36. → Percent means out of 100, so 36% = 36/100.",
+        "on_incorrect_attempt_1": "This is the initial parts-per-hundred fraction, before any simplification.",
+        "on_incorrect_attempt_2": "This is the initial parts-per-hundred fraction, before any simplification.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The percentage number gives numerator 36. → Percent means out of 100, so 36% = 36/100."
+      },
+      "mathematical_support": {
+        "hint_1": "This is the initial parts-per-hundred fraction, before any simplification.",
+        "hint_2": "Keep the same fraction value while changing both parts by the same factor. Check that the final fraction is fully simplified.",
+        "worked_solution": "The percentage number gives numerator 36. → Percent means out of 100, so 36% = 36/100."
+      },
+      "working": [
+        "The percentage number gives numerator 36.",
+        "Percent means out of 100, so 36% = 36/100."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percent_fraction_conversion",
+          "title": "Build the initial fraction",
+          "percent": "36",
+          "given": "36%",
+          "steps": [
+            "The percentage number gives numerator 36.",
+            "Percent means out of 100, so 36% = 36/100."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "initial"
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "Check the percentage number over one hundred, preserve its value and simplify the integer numerator and denominator fully.",
+        "simplify_fraction": "Your fraction has the correct value, but it is not yet in simplest form. Divide both parts by a remaining common factor.",
+        "use_stated_factor": "Your fraction is equivalent, but this blank asks for a particular stage. Enter the numerator and denominator requested at that stage.",
+        "check_numerator": "The denominator is correct. Recheck the numerator at this stage.",
+        "check_denominator": "The numerator is correct. Recheck the denominator at this stage.",
+        "check_both": "Check both entries at the requested stage; use the same factor for numerator and denominator.",
+        "reversed": "The fraction has been inverted. The percentage number belongs over one hundred before simplification.",
+        "wrong_denominator": "That uses the wrong starting denominator. Percent means parts per hundred.",
+        "cleared_numerator_only": "That clears the decimal in the numerator without scaling the denominator. Multiply both parts equally to preserve the value.",
+        "dropped_whole": "That loses a complete reference whole. A percentage above one hundred gives a fraction greater than one.",
+        "subtracted": "Subtracting the same amount from the two parts does not preserve the required fraction value."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-12-G02",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "faded",
+      "prompt": "Divide both parts of 36/100 by 4. Enter the resulting numerator and denominator.",
+      "target": "Convert the percentage into a fully simplified equivalent fraction",
+      "response": {
+        "type": "percent_fraction",
+        "percentage_source": "36",
+        "input_label": "Complete both fraction blanks",
+        "exact_parts": true,
+        "require_simplest_form": false,
+        "allow_mixed": false,
+        "allow_whole_number": false
+      },
+      "answer": {
+        "value": {
+          "n": 9,
+          "d": 25
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both parts were divided equally, and no further common factor remains.",
+        "correct_after_support": "Correct. Both parts were divided equally, and no further common factor remains.",
+        "on_correct_math": "Numerator: 36 ÷ 4 = 9. → Denominator: 100 ÷ 4 = 25, giving 9/25. → 9 and 25 have no common factor greater than 1, so 9/25 is in simplest form.",
+        "on_incorrect_attempt_1": "Apply the stated common factor to the numerator and denominator separately.",
+        "on_incorrect_attempt_2": "Apply the stated common factor to the numerator and denominator separately.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Numerator: 36 ÷ 4 = 9. → Denominator: 100 ÷ 4 = 25, giving 9/25. → 9 and 25 have no common factor greater than 1, so 9/25 is in simplest form."
+      },
+      "mathematical_support": {
+        "hint_1": "Apply the stated common factor to the numerator and denominator separately.",
+        "hint_2": "Keep the same fraction value while changing both parts by the same factor. Check that the final fraction is fully simplified.",
+        "worked_solution": "Numerator: 36 ÷ 4 = 9. → Denominator: 100 ÷ 4 = 25, giving 9/25. → 9 and 25 have no common factor greater than 1, so 9/25 is in simplest form."
+      },
+      "working": [
+        "Numerator: 36 ÷ 4 = 9.",
+        "Denominator: 100 ÷ 4 = 25, giving 9/25.",
+        "9 and 25 have no common factor greater than 1, so 9/25 is in simplest form."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percent_fraction_conversion",
+          "title": "Simplify both parts by the stated factor",
+          "percent": "36",
+          "given": "36%",
+          "steps": [
+            "Numerator: 36 ÷ 4 = 9.",
+            "Denominator: 100 ÷ 4 = 25, giving 9/25.",
+            "9 and 25 have no common factor greater than 1, so 9/25 is in simplest form."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "quotients"
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "Check the percentage number over one hundred, preserve its value and simplify the integer numerator and denominator fully.",
+        "simplify_fraction": "Your fraction has the correct value, but it is not yet in simplest form. Divide both parts by a remaining common factor.",
+        "use_stated_factor": "Your fraction is equivalent, but this blank asks for a particular stage. Enter the numerator and denominator requested at that stage.",
+        "check_numerator": "The denominator is correct. Recheck the numerator at this stage.",
+        "check_denominator": "The numerator is correct. Recheck the denominator at this stage.",
+        "check_both": "Check both entries at the requested stage; use the same factor for numerator and denominator.",
+        "reversed": "The fraction has been inverted. The percentage number belongs over one hundred before simplification.",
+        "wrong_denominator": "That uses the wrong starting denominator. Percent means parts per hundred.",
+        "cleared_numerator_only": "That clears the decimal in the numerator without scaling the denominator. Multiply both parts equally to preserve the value.",
+        "dropped_whole": "That loses a complete reference whole. A percentage above one hundred gives a fraction greater than one.",
+        "subtracted": "Subtracting the same amount from the two parts does not preserve the required fraction value."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-12-G03",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "independent_transfer",
+      "prompt": "Why does dividing both 36 and 100 by 4 preserve the fraction’s value?",
+      "target": "Convert the percentage into a fully simplified equivalent fraction",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Dividing both parts by the same common factor preserves the fraction value.",
+          "Only the numerator should be divided because the denominator must stay 100.",
+          "The numerator and denominator may be divided by different numbers.",
+          "36% is already a fraction, so no denominator is needed."
+        ],
+        "math_layout": "decimal_compound_fraction"
+      },
+      "answer": {
+        "value": "Dividing both parts by the same common factor preserves the fraction value."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Equal regrouping preserves the fraction of the same reference whole.",
+        "correct_after_support": "Correct. Equal regrouping preserves the fraction of the same reference whole.",
+        "on_correct_math": "The numerator and denominator count the same-sized original parts. → Dividing both counts by 4 regroups them into equal larger parts. → The fraction value is unchanged: 36/100 = 9/25.",
+        "on_incorrect_attempt_1": "Think about regrouping both the selected parts and all the parts of the whole.",
+        "on_incorrect_attempt_2": "Think about regrouping both the selected parts and all the parts of the whole.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The numerator and denominator count the same-sized original parts. → Dividing both counts by 4 regroups them into equal larger parts. → The fraction value is unchanged: 36/100 = 9/25."
+      },
+      "mathematical_support": {
+        "hint_1": "Think about regrouping both the selected parts and all the parts of the whole.",
+        "hint_2": "Keep the same fraction value while changing both parts by the same factor. Check that the final fraction is fully simplified.",
+        "worked_solution": "The numerator and denominator count the same-sized original parts. → Dividing both counts by 4 regroups them into equal larger parts. → The fraction value is unchanged: 36/100 = 9/25."
+      },
+      "working": [
+        "The numerator and denominator count the same-sized original parts.",
+        "Dividing both counts by 4 regroups them into equal larger parts.",
+        "The fraction value is unchanged: 36/100 = 9/25."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percent_fraction_conversion",
+          "title": "Explain why simplification is equivalent",
+          "percent": "36",
+          "given": "36/100",
+          "steps": [
+            "The numerator and denominator count the same-sized original parts.",
+            "Dividing both counts by 4 regroups them into equal larger parts.",
+            "The fraction value is unchanged: 36/100 = 9/25."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "explanation_question": true
+        }
+      },
+      "response_feedback": {
+        "Only the numerator should be divided because the denominator must stay 100.": "Dividing only the numerator changes the fraction value. The denominator must change by the same factor.",
+        "The numerator and denominator may be divided by different numbers.": "Using different factors changes the relationship between the numerator and denominator.",
+        "36% is already a fraction, so no denominator is needed.": "The percent sign means out of one hundred; an explicit fraction still needs its denominator."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-12-P01",
+      "source_ref": {
+        "page": 9
+      },
+      "stage": "practice",
+      "prompt": "Write 20% as a fraction in simplest form.",
+      "target": "Convert the percentage into a fully simplified equivalent fraction",
+      "response": {
+        "type": "percent_fraction",
+        "percentage_source": "20",
+        "input_label": "Your fraction in simplest form",
+        "exact_parts": false,
+        "require_simplest_form": true,
+        "allow_mixed": false,
+        "allow_whole_number": false
+      },
+      "answer": {
+        "value": {
+          "n": 1,
+          "d": 5
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The simplified fraction preserves twenty parts per hundred.",
+        "correct_after_support": "Correct. The simplified fraction preserves twenty parts per hundred.",
+        "on_correct_math": "20% = 20/100. → A common factor of 20 and 100 is 20. → Divide both parts: (20 ÷ 20)/(100 ÷ 20) = 1/5. → 1/5 is in simplest form: no common factor greater than 1 remains.",
+        "on_incorrect_attempt_1": "Start with the number of parts per hundred, then look for a factor shared by both parts.",
+        "on_incorrect_attempt_2": "Start with the number of parts per hundred, then look for a factor shared by both parts.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "20% = 20/100. → A common factor of 20 and 100 is 20. → Divide both parts: (20 ÷ 20)/(100 ÷ 20) = 1/5. → 1/5 is in simplest form: no common factor greater than 1 remains."
+      },
+      "mathematical_support": {
+        "hint_1": "Start with the number of parts per hundred, then look for a factor shared by both parts.",
+        "hint_2": "Keep the same fraction value while changing both parts by the same factor. Check that the final fraction is fully simplified.",
+        "worked_solution": "20% = 20/100. → A common factor of 20 and 100 is 20. → Divide both parts: (20 ÷ 20)/(100 ÷ 20) = 1/5. → 1/5 is in simplest form: no common factor greater than 1 remains."
+      },
+      "working": [
+        "20% = 20/100.",
+        "A common factor of 20 and 100 is 20.",
+        "Divide both parts: (20 ÷ 20)/(100 ÷ 20) = 1/5.",
+        "1/5 is in simplest form: no common factor greater than 1 remains."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percent_fraction_conversion",
+          "title": "Convert and simplify without changing the value",
+          "percent": "20",
+          "given": "20%",
+          "steps": [
+            "20% = 20/100.",
+            "A common factor of 20 and 100 is 20.",
+            "Divide both parts: (20 ÷ 20)/(100 ÷ 20) = 1/5.",
+            "1/5 is in simplest form: no common factor greater than 1 remains."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "Check the percentage number over one hundred, preserve its value and simplify the integer numerator and denominator fully.",
+        "simplify_fraction": "Your fraction has the correct value, but it is not yet in simplest form. Divide both parts by a remaining common factor.",
+        "use_stated_factor": "Your fraction is equivalent, but this blank asks for a particular stage. Enter the numerator and denominator requested at that stage.",
+        "check_numerator": "The denominator is correct. Recheck the numerator at this stage.",
+        "check_denominator": "The numerator is correct. Recheck the denominator at this stage.",
+        "check_both": "Check both entries at the requested stage; use the same factor for numerator and denominator.",
+        "reversed": "The fraction has been inverted. The percentage number belongs over one hundred before simplification.",
+        "wrong_denominator": "That uses the wrong starting denominator. Percent means parts per hundred.",
+        "cleared_numerator_only": "That clears the decimal in the numerator without scaling the denominator. Multiply both parts equally to preserve the value.",
+        "dropped_whole": "That loses a complete reference whole. A percentage above one hundred gives a fraction greater than one.",
+        "subtracted": "Subtracting the same amount from the two parts does not preserve the required fraction value."
+      },
+      "response_patterns": [
+        {
+          "value": "5/1",
+          "classification": "reversed"
+        },
+        {
+          "value": "2/1",
+          "classification": "wrong_denominator"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-12-P02",
+      "source_ref": {
+        "page": 9
+      },
+      "stage": "practice",
+      "prompt": "Write 45% as a fraction in simplest form.",
+      "target": "Convert the percentage into a fully simplified equivalent fraction",
+      "response": {
+        "type": "percent_fraction",
+        "percentage_source": "45",
+        "input_label": "Your fraction in simplest form",
+        "exact_parts": false,
+        "require_simplest_form": true,
+        "allow_mixed": false,
+        "allow_whole_number": false
+      },
+      "answer": {
+        "value": {
+          "n": 9,
+          "d": 20
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The numerator and denominator have been simplified without changing the share.",
+        "correct_after_support": "Correct. The numerator and denominator have been simplified without changing the share.",
+        "on_correct_math": "45% = 45/100. → A common factor of 45 and 100 is 5. → Divide both parts: (45 ÷ 5)/(100 ÷ 5) = 9/20. → 9/20 is in simplest form: no common factor greater than 1 remains.",
+        "on_incorrect_attempt_1": "Choose a common factor of the percentage number and one hundred, then check both quotients.",
+        "on_incorrect_attempt_2": "Choose a common factor of the percentage number and one hundred, then check both quotients.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "45% = 45/100. → A common factor of 45 and 100 is 5. → Divide both parts: (45 ÷ 5)/(100 ÷ 5) = 9/20. → 9/20 is in simplest form: no common factor greater than 1 remains."
+      },
+      "mathematical_support": {
+        "hint_1": "Choose a common factor of the percentage number and one hundred, then check both quotients.",
+        "hint_2": "Keep the same fraction value while changing both parts by the same factor. Check that the final fraction is fully simplified.",
+        "worked_solution": "45% = 45/100. → A common factor of 45 and 100 is 5. → Divide both parts: (45 ÷ 5)/(100 ÷ 5) = 9/20. → 9/20 is in simplest form: no common factor greater than 1 remains."
+      },
+      "working": [
+        "45% = 45/100.",
+        "A common factor of 45 and 100 is 5.",
+        "Divide both parts: (45 ÷ 5)/(100 ÷ 5) = 9/20.",
+        "9/20 is in simplest form: no common factor greater than 1 remains."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percent_fraction_conversion",
+          "title": "Convert and simplify without changing the value",
+          "percent": "45",
+          "given": "45%",
+          "steps": [
+            "45% = 45/100.",
+            "A common factor of 45 and 100 is 5.",
+            "Divide both parts: (45 ÷ 5)/(100 ÷ 5) = 9/20.",
+            "9/20 is in simplest form: no common factor greater than 1 remains."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "Check the percentage number over one hundred, preserve its value and simplify the integer numerator and denominator fully.",
+        "simplify_fraction": "Your fraction has the correct value, but it is not yet in simplest form. Divide both parts by a remaining common factor.",
+        "use_stated_factor": "Your fraction is equivalent, but this blank asks for a particular stage. Enter the numerator and denominator requested at that stage.",
+        "check_numerator": "The denominator is correct. Recheck the numerator at this stage.",
+        "check_denominator": "The numerator is correct. Recheck the denominator at this stage.",
+        "check_both": "Check both entries at the requested stage; use the same factor for numerator and denominator.",
+        "reversed": "The fraction has been inverted. The percentage number belongs over one hundred before simplification.",
+        "wrong_denominator": "That uses the wrong starting denominator. Percent means parts per hundred.",
+        "cleared_numerator_only": "That clears the decimal in the numerator without scaling the denominator. Multiply both parts equally to preserve the value.",
+        "dropped_whole": "That loses a complete reference whole. A percentage above one hundred gives a fraction greater than one.",
+        "subtracted": "Subtracting the same amount from the two parts does not preserve the required fraction value."
+      },
+      "response_patterns": [
+        {
+          "value": "20/9",
+          "classification": "reversed"
+        },
+        {
+          "value": "9/2",
+          "classification": "wrong_denominator"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-12-P03",
+      "source_ref": {
+        "page": 9
+      },
+      "stage": "practice",
+      "prompt": "Write 72% as a fraction in simplest form.",
+      "target": "Convert the percentage into a fully simplified equivalent fraction",
+      "response": {
+        "type": "percent_fraction",
+        "percentage_source": "72",
+        "input_label": "Your fraction in simplest form",
+        "exact_parts": false,
+        "require_simplest_form": true,
+        "allow_mixed": false,
+        "allow_whole_number": false
+      },
+      "answer": {
+        "value": {
+          "n": 18,
+          "d": 25
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Your final fraction is equivalent and fully simplified.",
+        "correct_after_support": "Correct. Your final fraction is equivalent and fully simplified.",
+        "on_correct_math": "72% = 72/100. → A common factor of 72 and 100 is 4. → Divide both parts: (72 ÷ 4)/(100 ÷ 4) = 18/25. → 18/25 is in simplest form: no common factor greater than 1 remains.",
+        "on_incorrect_attempt_1": "There may be more than one simplification step. Continue until no common factor remains.",
+        "on_incorrect_attempt_2": "There may be more than one simplification step. Continue until no common factor remains.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "72% = 72/100. → A common factor of 72 and 100 is 4. → Divide both parts: (72 ÷ 4)/(100 ÷ 4) = 18/25. → 18/25 is in simplest form: no common factor greater than 1 remains."
+      },
+      "mathematical_support": {
+        "hint_1": "There may be more than one simplification step. Continue until no common factor remains.",
+        "hint_2": "Keep the same fraction value while changing both parts by the same factor. Check that the final fraction is fully simplified.",
+        "worked_solution": "72% = 72/100. → A common factor of 72 and 100 is 4. → Divide both parts: (72 ÷ 4)/(100 ÷ 4) = 18/25. → 18/25 is in simplest form: no common factor greater than 1 remains."
+      },
+      "working": [
+        "72% = 72/100.",
+        "A common factor of 72 and 100 is 4.",
+        "Divide both parts: (72 ÷ 4)/(100 ÷ 4) = 18/25.",
+        "18/25 is in simplest form: no common factor greater than 1 remains."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percent_fraction_conversion",
+          "title": "Convert and simplify without changing the value",
+          "percent": "72",
+          "given": "72%",
+          "steps": [
+            "72% = 72/100.",
+            "A common factor of 72 and 100 is 4.",
+            "Divide both parts: (72 ÷ 4)/(100 ÷ 4) = 18/25.",
+            "18/25 is in simplest form: no common factor greater than 1 remains."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "Check the percentage number over one hundred, preserve its value and simplify the integer numerator and denominator fully.",
+        "simplify_fraction": "Your fraction has the correct value, but it is not yet in simplest form. Divide both parts by a remaining common factor.",
+        "use_stated_factor": "Your fraction is equivalent, but this blank asks for a particular stage. Enter the numerator and denominator requested at that stage.",
+        "check_numerator": "The denominator is correct. Recheck the numerator at this stage.",
+        "check_denominator": "The numerator is correct. Recheck the denominator at this stage.",
+        "check_both": "Check both entries at the requested stage; use the same factor for numerator and denominator.",
+        "reversed": "The fraction has been inverted. The percentage number belongs over one hundred before simplification.",
+        "wrong_denominator": "That uses the wrong starting denominator. Percent means parts per hundred.",
+        "cleared_numerator_only": "That clears the decimal in the numerator without scaling the denominator. Multiply both parts equally to preserve the value.",
+        "dropped_whole": "That loses a complete reference whole. A percentage above one hundred gives a fraction greater than one.",
+        "subtracted": "Subtracting the same amount from the two parts does not preserve the required fraction value."
+      },
+      "response_patterns": [
+        {
+          "value": "25/18",
+          "classification": "reversed"
+        },
+        {
+          "value": "18/5",
+          "classification": "wrong_denominator"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-12-P04",
+      "source_ref": {
+        "page": 9
+      },
+      "stage": "practice",
+      "prompt": "Write 85% as a fraction in simplest form.",
+      "target": "Convert the percentage into a fully simplified equivalent fraction",
+      "response": {
+        "type": "percent_fraction",
+        "percentage_source": "85",
+        "input_label": "Your fraction in simplest form",
+        "exact_parts": false,
+        "require_simplest_form": true,
+        "allow_mixed": false,
+        "allow_whole_number": false
+      },
+      "answer": {
+        "value": {
+          "n": 17,
+          "d": 20
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The simplified fraction describes the same eighty-five hundredths.",
+        "correct_after_support": "Correct. The simplified fraction describes the same eighty-five hundredths.",
+        "on_correct_math": "85% = 85/100. → A common factor of 85 and 100 is 5. → Divide both parts: (85 ÷ 5)/(100 ÷ 5) = 17/20. → 17/20 is in simplest form: no common factor greater than 1 remains.",
+        "on_incorrect_attempt_1": "Divide numerator and denominator by the same common factor.",
+        "on_incorrect_attempt_2": "Divide numerator and denominator by the same common factor.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "85% = 85/100. → A common factor of 85 and 100 is 5. → Divide both parts: (85 ÷ 5)/(100 ÷ 5) = 17/20. → 17/20 is in simplest form: no common factor greater than 1 remains."
+      },
+      "mathematical_support": {
+        "hint_1": "Divide numerator and denominator by the same common factor.",
+        "hint_2": "Keep the same fraction value while changing both parts by the same factor. Check that the final fraction is fully simplified.",
+        "worked_solution": "85% = 85/100. → A common factor of 85 and 100 is 5. → Divide both parts: (85 ÷ 5)/(100 ÷ 5) = 17/20. → 17/20 is in simplest form: no common factor greater than 1 remains."
+      },
+      "working": [
+        "85% = 85/100.",
+        "A common factor of 85 and 100 is 5.",
+        "Divide both parts: (85 ÷ 5)/(100 ÷ 5) = 17/20.",
+        "17/20 is in simplest form: no common factor greater than 1 remains."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percent_fraction_conversion",
+          "title": "Convert and simplify without changing the value",
+          "percent": "85",
+          "given": "85%",
+          "steps": [
+            "85% = 85/100.",
+            "A common factor of 85 and 100 is 5.",
+            "Divide both parts: (85 ÷ 5)/(100 ÷ 5) = 17/20.",
+            "17/20 is in simplest form: no common factor greater than 1 remains."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "Check the percentage number over one hundred, preserve its value and simplify the integer numerator and denominator fully.",
+        "simplify_fraction": "Your fraction has the correct value, but it is not yet in simplest form. Divide both parts by a remaining common factor.",
+        "use_stated_factor": "Your fraction is equivalent, but this blank asks for a particular stage. Enter the numerator and denominator requested at that stage.",
+        "check_numerator": "The denominator is correct. Recheck the numerator at this stage.",
+        "check_denominator": "The numerator is correct. Recheck the denominator at this stage.",
+        "check_both": "Check both entries at the requested stage; use the same factor for numerator and denominator.",
+        "reversed": "The fraction has been inverted. The percentage number belongs over one hundred before simplification.",
+        "wrong_denominator": "That uses the wrong starting denominator. Percent means parts per hundred.",
+        "cleared_numerator_only": "That clears the decimal in the numerator without scaling the denominator. Multiply both parts equally to preserve the value.",
+        "dropped_whole": "That loses a complete reference whole. A percentage above one hundred gives a fraction greater than one.",
+        "subtracted": "Subtracting the same amount from the two parts does not preserve the required fraction value."
+      },
+      "response_patterns": [
+        {
+          "value": "20/17",
+          "classification": "reversed"
+        },
+        {
+          "value": "17/2",
+          "classification": "wrong_denominator"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-12-P05",
+      "source_ref": {
+        "page": 9
+      },
+      "stage": "practice",
+      "prompt": "Write 6% as a fraction in simplest form.",
+      "target": "Convert the percentage into a fully simplified equivalent fraction",
+      "response": {
+        "type": "percent_fraction",
+        "percentage_source": "6",
+        "input_label": "Your fraction in simplest form",
+        "exact_parts": false,
+        "require_simplest_form": true,
+        "allow_mixed": false,
+        "allow_whole_number": false
+      },
+      "answer": {
+        "value": {
+          "n": 3,
+          "d": 50
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The small percentage has been preserved as a simplified fraction.",
+        "correct_after_support": "Correct. The small percentage has been preserved as a simplified fraction.",
+        "on_correct_math": "6% = 6/100. → A common factor of 6 and 100 is 2. → Divide both parts: (6 ÷ 2)/(100 ÷ 2) = 3/50. → 3/50 is in simplest form: no common factor greater than 1 remains.",
+        "on_incorrect_attempt_1": "A small whole-number percentage still starts with denominator one hundred.",
+        "on_incorrect_attempt_2": "A small whole-number percentage still starts with denominator one hundred.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "6% = 6/100. → A common factor of 6 and 100 is 2. → Divide both parts: (6 ÷ 2)/(100 ÷ 2) = 3/50. → 3/50 is in simplest form: no common factor greater than 1 remains."
+      },
+      "mathematical_support": {
+        "hint_1": "A small whole-number percentage still starts with denominator one hundred.",
+        "hint_2": "Keep the same fraction value while changing both parts by the same factor. Check that the final fraction is fully simplified.",
+        "worked_solution": "6% = 6/100. → A common factor of 6 and 100 is 2. → Divide both parts: (6 ÷ 2)/(100 ÷ 2) = 3/50. → 3/50 is in simplest form: no common factor greater than 1 remains."
+      },
+      "working": [
+        "6% = 6/100.",
+        "A common factor of 6 and 100 is 2.",
+        "Divide both parts: (6 ÷ 2)/(100 ÷ 2) = 3/50.",
+        "3/50 is in simplest form: no common factor greater than 1 remains."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percent_fraction_conversion",
+          "title": "Convert and simplify without changing the value",
+          "percent": "6",
+          "given": "6%",
+          "steps": [
+            "6% = 6/100.",
+            "A common factor of 6 and 100 is 2.",
+            "Divide both parts: (6 ÷ 2)/(100 ÷ 2) = 3/50.",
+            "3/50 is in simplest form: no common factor greater than 1 remains."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "Check the percentage number over one hundred, preserve its value and simplify the integer numerator and denominator fully.",
+        "simplify_fraction": "Your fraction has the correct value, but it is not yet in simplest form. Divide both parts by a remaining common factor.",
+        "use_stated_factor": "Your fraction is equivalent, but this blank asks for a particular stage. Enter the numerator and denominator requested at that stage.",
+        "check_numerator": "The denominator is correct. Recheck the numerator at this stage.",
+        "check_denominator": "The numerator is correct. Recheck the denominator at this stage.",
+        "check_both": "Check both entries at the requested stage; use the same factor for numerator and denominator.",
+        "reversed": "The fraction has been inverted. The percentage number belongs over one hundred before simplification.",
+        "wrong_denominator": "That uses the wrong starting denominator. Percent means parts per hundred.",
+        "cleared_numerator_only": "That clears the decimal in the numerator without scaling the denominator. Multiply both parts equally to preserve the value.",
+        "dropped_whole": "That loses a complete reference whole. A percentage above one hundred gives a fraction greater than one.",
+        "subtracted": "Subtracting the same amount from the two parts does not preserve the required fraction value."
+      },
+      "response_patterns": [
+        {
+          "value": "3/5",
+          "classification": "wrong_denominator"
+        },
+        {
+          "value": "50/3",
+          "classification": "reversed"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-12-P06",
+      "source_ref": {
+        "page": 9
+      },
+      "stage": "practice",
+      "prompt": "Write 125% as a fraction in simplest form.",
+      "target": "Convert the percentage into a fully simplified equivalent fraction",
+      "response": {
+        "type": "percent_fraction",
+        "percentage_source": "125",
+        "input_label": "Your fraction in simplest form",
+        "exact_parts": false,
+        "require_simplest_form": true,
+        "allow_mixed": true,
+        "allow_whole_number": true
+      },
+      "answer": {
+        "value": {
+          "n": 5,
+          "d": 4
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Your answer preserves one complete whole and the additional quarter.",
+        "correct_after_support": "Correct. Your answer preserves one complete whole and the additional quarter.",
+        "on_correct_math": "125% = 125/100. → A common factor of 125 and 100 is 25. → Divide both parts: (125 ÷ 25)/(100 ÷ 25) = 5/4. → 5/4 is in simplest form: no common factor greater than 1 remains. It also equals 1 1/4.",
+        "on_incorrect_attempt_1": "Keep the complete whole as well as the amount beyond it. A simplified improper fraction or mixed number is valid.",
+        "on_incorrect_attempt_2": "Keep the complete whole as well as the amount beyond it. A simplified improper fraction or mixed number is valid.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "125% = 125/100. → A common factor of 125 and 100 is 25. → Divide both parts: (125 ÷ 25)/(100 ÷ 25) = 5/4. → 5/4 is in simplest form: no common factor greater than 1 remains. It also equals 1 1/4."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the complete whole as well as the amount beyond it. A simplified improper fraction or mixed number is valid.",
+        "hint_2": "Keep the same fraction value while changing both parts by the same factor. Check that the final fraction is fully simplified.",
+        "worked_solution": "125% = 125/100. → A common factor of 125 and 100 is 25. → Divide both parts: (125 ÷ 25)/(100 ÷ 25) = 5/4. → 5/4 is in simplest form: no common factor greater than 1 remains. It also equals 1 1/4."
+      },
+      "working": [
+        "125% = 125/100.",
+        "A common factor of 125 and 100 is 25.",
+        "Divide both parts: (125 ÷ 25)/(100 ÷ 25) = 5/4.",
+        "5/4 is in simplest form: no common factor greater than 1 remains. It also equals 1 1/4."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percent_fraction_conversion",
+          "title": "Convert and simplify without changing the value",
+          "percent": "125",
+          "given": "125%",
+          "steps": [
+            "125% = 125/100.",
+            "A common factor of 125 and 100 is 25.",
+            "Divide both parts: (125 ÷ 25)/(100 ÷ 25) = 5/4.",
+            "5/4 is in simplest form: no common factor greater than 1 remains. It also equals 1 1/4."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "Check the percentage number over one hundred, preserve its value and simplify the integer numerator and denominator fully.",
+        "simplify_fraction": "Your fraction has the correct value, but it is not yet in simplest form. Divide both parts by a remaining common factor.",
+        "use_stated_factor": "Your fraction is equivalent, but this blank asks for a particular stage. Enter the numerator and denominator requested at that stage.",
+        "check_numerator": "The denominator is correct. Recheck the numerator at this stage.",
+        "check_denominator": "The numerator is correct. Recheck the denominator at this stage.",
+        "check_both": "Check both entries at the requested stage; use the same factor for numerator and denominator.",
+        "reversed": "The fraction has been inverted. The percentage number belongs over one hundred before simplification.",
+        "wrong_denominator": "That uses the wrong starting denominator. Percent means parts per hundred.",
+        "cleared_numerator_only": "That clears the decimal in the numerator without scaling the denominator. Multiply both parts equally to preserve the value.",
+        "dropped_whole": "That loses a complete reference whole. A percentage above one hundred gives a fraction greater than one.",
+        "subtracted": "Subtracting the same amount from the two parts does not preserve the required fraction value."
+      },
+      "response_patterns": [
+        {
+          "value": "1/4",
+          "classification": "dropped_whole"
+        },
+        {
+          "value": "4/5",
+          "classification": "reversed"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-12-P07",
+      "source_ref": {
+        "page": 9
+      },
+      "stage": "practice",
+      "prompt": "Write 150% as a fraction in simplest form.",
+      "target": "Convert the percentage into a fully simplified equivalent fraction",
+      "response": {
+        "type": "percent_fraction",
+        "percentage_source": "150",
+        "input_label": "Your fraction in simplest form",
+        "exact_parts": false,
+        "require_simplest_form": true,
+        "allow_mixed": true,
+        "allow_whole_number": true
+      },
+      "answer": {
+        "value": {
+          "n": 3,
+          "d": 2
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The fraction includes the complete whole and an additional half.",
+        "correct_after_support": "Correct. The fraction includes the complete whole and an additional half.",
+        "on_correct_math": "150% = 150/100. → A common factor of 150 and 100 is 50. → Divide both parts: (150 ÷ 50)/(100 ÷ 50) = 3/2. → 3/2 is in simplest form: no common factor greater than 1 remains. It also equals 1 1/2.",
+        "on_incorrect_attempt_1": "The percentage exceeds one hundred, so the fraction must exceed one whole.",
+        "on_incorrect_attempt_2": "The percentage exceeds one hundred, so the fraction must exceed one whole.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "150% = 150/100. → A common factor of 150 and 100 is 50. → Divide both parts: (150 ÷ 50)/(100 ÷ 50) = 3/2. → 3/2 is in simplest form: no common factor greater than 1 remains. It also equals 1 1/2."
+      },
+      "mathematical_support": {
+        "hint_1": "The percentage exceeds one hundred, so the fraction must exceed one whole.",
+        "hint_2": "Keep the same fraction value while changing both parts by the same factor. Check that the final fraction is fully simplified.",
+        "worked_solution": "150% = 150/100. → A common factor of 150 and 100 is 50. → Divide both parts: (150 ÷ 50)/(100 ÷ 50) = 3/2. → 3/2 is in simplest form: no common factor greater than 1 remains. It also equals 1 1/2."
+      },
+      "working": [
+        "150% = 150/100.",
+        "A common factor of 150 and 100 is 50.",
+        "Divide both parts: (150 ÷ 50)/(100 ÷ 50) = 3/2.",
+        "3/2 is in simplest form: no common factor greater than 1 remains. It also equals 1 1/2."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percent_fraction_conversion",
+          "title": "Convert and simplify without changing the value",
+          "percent": "150",
+          "given": "150%",
+          "steps": [
+            "150% = 150/100.",
+            "A common factor of 150 and 100 is 50.",
+            "Divide both parts: (150 ÷ 50)/(100 ÷ 50) = 3/2.",
+            "3/2 is in simplest form: no common factor greater than 1 remains. It also equals 1 1/2."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "Check the percentage number over one hundred, preserve its value and simplify the integer numerator and denominator fully.",
+        "simplify_fraction": "Your fraction has the correct value, but it is not yet in simplest form. Divide both parts by a remaining common factor.",
+        "use_stated_factor": "Your fraction is equivalent, but this blank asks for a particular stage. Enter the numerator and denominator requested at that stage.",
+        "check_numerator": "The denominator is correct. Recheck the numerator at this stage.",
+        "check_denominator": "The numerator is correct. Recheck the denominator at this stage.",
+        "check_both": "Check both entries at the requested stage; use the same factor for numerator and denominator.",
+        "reversed": "The fraction has been inverted. The percentage number belongs over one hundred before simplification.",
+        "wrong_denominator": "That uses the wrong starting denominator. Percent means parts per hundred.",
+        "cleared_numerator_only": "That clears the decimal in the numerator without scaling the denominator. Multiply both parts equally to preserve the value.",
+        "dropped_whole": "That loses a complete reference whole. A percentage above one hundred gives a fraction greater than one.",
+        "subtracted": "Subtracting the same amount from the two parts does not preserve the required fraction value."
+      },
+      "response_patterns": [
+        {
+          "value": "1/2",
+          "classification": "dropped_whole"
+        },
+        {
+          "value": "2/3",
+          "classification": "reversed"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-12-P08",
+      "source_ref": {
+        "page": 9
+      },
+      "stage": "practice",
+      "prompt": "Write 12.5% as a fraction in simplest form.",
+      "target": "Convert the percentage into a fully simplified equivalent fraction",
+      "response": {
+        "type": "percent_fraction",
+        "percentage_source": "12.5",
+        "input_label": "Your fraction in simplest form",
+        "exact_parts": false,
+        "require_simplest_form": true,
+        "allow_mixed": false,
+        "allow_whole_number": false
+      },
+      "answer": {
+        "value": {
+          "n": 1,
+          "d": 8
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Clearing the decimal and simplifying have preserved the exact percentage.",
+        "correct_after_support": "Correct. Clearing the decimal and simplifying have preserved the exact percentage.",
+        "on_correct_math": "12.5% = 12.5/100. → Multiply both parts by 10: (12.5 × 10)/(100 × 10) = 125/1000. → A common factor of 125 and 1000 is 125. → Divide both parts: (125 ÷ 125)/(1000 ÷ 125) = 1/8. → 1/8 is in simplest form: no common factor greater than 1 remains.",
+        "on_incorrect_attempt_1": "After writing parts per hundred, clear the decimal by multiplying both fraction parts by ten.",
+        "on_incorrect_attempt_2": "Make both parts integers without changing their ratio, then divide them by common factors until fully simplified.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "12.5% = 12.5/100. → Multiply both parts by 10: (12.5 × 10)/(100 × 10) = 125/1000. → A common factor of 125 and 1000 is 125. → Divide both parts: (125 ÷ 125)/(1000 ÷ 125) = 1/8. → 1/8 is in simplest form: no common factor greater than 1 remains."
+      },
+      "mathematical_support": {
+        "hint_1": "After writing parts per hundred, clear the decimal by multiplying both fraction parts by ten.",
+        "hint_2": "Make both parts integers without changing their ratio, then divide them by common factors until fully simplified.",
+        "worked_solution": "12.5% = 12.5/100. → Multiply both parts by 10: (12.5 × 10)/(100 × 10) = 125/1000. → A common factor of 125 and 1000 is 125. → Divide both parts: (125 ÷ 125)/(1000 ÷ 125) = 1/8. → 1/8 is in simplest form: no common factor greater than 1 remains."
+      },
+      "working": [
+        "12.5% = 12.5/100.",
+        "Multiply both parts by 10: (12.5 × 10)/(100 × 10) = 125/1000.",
+        "A common factor of 125 and 1000 is 125.",
+        "Divide both parts: (125 ÷ 125)/(1000 ÷ 125) = 1/8.",
+        "1/8 is in simplest form: no common factor greater than 1 remains."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percent_fraction_conversion",
+          "title": "Convert and simplify without changing the value",
+          "percent": "12.5",
+          "given": "12.5%",
+          "steps": [
+            "12.5% = 12.5/100.",
+            "Multiply both parts by 10: (12.5 × 10)/(100 × 10) = 125/1000.",
+            "A common factor of 125 and 1000 is 125.",
+            "Divide both parts: (125 ÷ 125)/(1000 ÷ 125) = 1/8.",
+            "1/8 is in simplest form: no common factor greater than 1 remains."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "Check the percentage number over one hundred, preserve its value and simplify the integer numerator and denominator fully.",
+        "simplify_fraction": "Your fraction has the correct value, but it is not yet in simplest form. Divide both parts by a remaining common factor.",
+        "use_stated_factor": "Your fraction is equivalent, but this blank asks for a particular stage. Enter the numerator and denominator requested at that stage.",
+        "check_numerator": "The denominator is correct. Recheck the numerator at this stage.",
+        "check_denominator": "The numerator is correct. Recheck the denominator at this stage.",
+        "check_both": "Check both entries at the requested stage; use the same factor for numerator and denominator.",
+        "reversed": "The fraction has been inverted. The percentage number belongs over one hundred before simplification.",
+        "wrong_denominator": "That uses the wrong starting denominator. Percent means parts per hundred.",
+        "cleared_numerator_only": "That clears the decimal in the numerator without scaling the denominator. Multiply both parts equally to preserve the value.",
+        "dropped_whole": "That loses a complete reference whole. A percentage above one hundred gives a fraction greater than one.",
+        "subtracted": "Subtracting the same amount from the two parts does not preserve the required fraction value."
+      },
+      "response_patterns": [
+        {
+          "value": "5/4",
+          "classification": "cleared_numerator_only"
+        },
+        {
+          "value": "8/1",
+          "classification": "reversed"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-12-P09",
+      "source_ref": {
+        "page": 9
+      },
+      "stage": "practice",
+      "prompt": "Write 0.5% as a fraction in simplest form.",
+      "target": "Convert the percentage into a fully simplified equivalent fraction",
+      "response": {
+        "type": "percent_fraction",
+        "percentage_source": "0.5",
+        "input_label": "Your fraction in simplest form",
+        "exact_parts": false,
+        "require_simplest_form": true,
+        "allow_mixed": false,
+        "allow_whole_number": false
+      },
+      "answer": {
+        "value": {
+          "n": 1,
+          "d": 200
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The fraction preserves a positive amount smaller than one hundredth.",
+        "correct_after_support": "Correct. The fraction preserves a positive amount smaller than one hundredth.",
+        "on_correct_math": "0.5% = 0.5/100. → Multiply both parts by 10: (0.5 × 10)/(100 × 10) = 5/1000. → A common factor of 5 and 1000 is 5. → Divide both parts: (5 ÷ 5)/(1000 ÷ 5) = 1/200. → 1/200 is in simplest form: no common factor greater than 1 remains.",
+        "on_incorrect_attempt_1": "This is half of one percent, so keep the small value while clearing the decimal in both parts.",
+        "on_incorrect_attempt_2": "This is half of one percent, so keep the small value while clearing the decimal in both parts.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "0.5% = 0.5/100. → Multiply both parts by 10: (0.5 × 10)/(100 × 10) = 5/1000. → A common factor of 5 and 1000 is 5. → Divide both parts: (5 ÷ 5)/(1000 ÷ 5) = 1/200. → 1/200 is in simplest form: no common factor greater than 1 remains."
+      },
+      "mathematical_support": {
+        "hint_1": "This is half of one percent, so keep the small value while clearing the decimal in both parts.",
+        "hint_2": "Keep the same fraction value while changing both parts by the same factor. Check that the final fraction is fully simplified.",
+        "worked_solution": "0.5% = 0.5/100. → Multiply both parts by 10: (0.5 × 10)/(100 × 10) = 5/1000. → A common factor of 5 and 1000 is 5. → Divide both parts: (5 ÷ 5)/(1000 ÷ 5) = 1/200. → 1/200 is in simplest form: no common factor greater than 1 remains."
+      },
+      "working": [
+        "0.5% = 0.5/100.",
+        "Multiply both parts by 10: (0.5 × 10)/(100 × 10) = 5/1000.",
+        "A common factor of 5 and 1000 is 5.",
+        "Divide both parts: (5 ÷ 5)/(1000 ÷ 5) = 1/200.",
+        "1/200 is in simplest form: no common factor greater than 1 remains."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percent_fraction_conversion",
+          "title": "Convert and simplify without changing the value",
+          "percent": "0.5",
+          "given": "0.5%",
+          "steps": [
+            "0.5% = 0.5/100.",
+            "Multiply both parts by 10: (0.5 × 10)/(100 × 10) = 5/1000.",
+            "A common factor of 5 and 1000 is 5.",
+            "Divide both parts: (5 ÷ 5)/(1000 ÷ 5) = 1/200.",
+            "1/200 is in simplest form: no common factor greater than 1 remains."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "Check the percentage number over one hundred, preserve its value and simplify the integer numerator and denominator fully.",
+        "simplify_fraction": "Your fraction has the correct value, but it is not yet in simplest form. Divide both parts by a remaining common factor.",
+        "use_stated_factor": "Your fraction is equivalent, but this blank asks for a particular stage. Enter the numerator and denominator requested at that stage.",
+        "check_numerator": "The denominator is correct. Recheck the numerator at this stage.",
+        "check_denominator": "The numerator is correct. Recheck the denominator at this stage.",
+        "check_both": "Check both entries at the requested stage; use the same factor for numerator and denominator.",
+        "reversed": "The fraction has been inverted. The percentage number belongs over one hundred before simplification.",
+        "wrong_denominator": "That uses the wrong starting denominator. Percent means parts per hundred.",
+        "cleared_numerator_only": "That clears the decimal in the numerator without scaling the denominator. Multiply both parts equally to preserve the value.",
+        "dropped_whole": "That loses a complete reference whole. A percentage above one hundred gives a fraction greater than one.",
+        "subtracted": "Subtracting the same amount from the two parts does not preserve the required fraction value."
+      },
+      "response_patterns": [
+        {
+          "value": "1/20",
+          "classification": "cleared_numerator_only"
+        },
+        {
+          "value": "1/2",
+          "classification": "wrong_denominator"
+        },
+        {
+          "value": "200/1",
+          "classification": "reversed"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-12-P10",
+      "source_ref": {
+        "page": 9
+      },
+      "stage": "practice",
+      "prompt": "Which chain correctly converts 62.5% to a fraction in simplest form?",
+      "target": "Convert the percentage into a fully simplified equivalent fraction",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "62.5/100 = 625/1000 = 5/8",
+          "62.5/100 = 625/100 = 25/4",
+          "100/62.5 = 8/5",
+          "62.5/10 = 25/4"
+        ],
+        "math_layout": "decimal_compound_fraction"
+      },
+      "answer": {
+        "value": "62.5/100 = 625/1000 = 5/8"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Every fraction in that chain has the same value, and the last is fully simplified.",
+        "correct_after_support": "Correct. Every fraction in that chain has the same value, and the last is fully simplified.",
+        "on_correct_math": "62.5% = 62.5/100. → Multiply both parts by 10: (62.5 × 10)/(100 × 10) = 625/1000. → A common factor of 625 and 1000 is 125. → Divide both parts: (625 ÷ 125)/(1000 ÷ 125) = 5/8. → 5/8 is in simplest form: no common factor greater than 1 remains.",
+        "on_incorrect_attempt_1": "Check the parts-per-hundred fraction, then whether both parts scale together before simplifying.",
+        "on_incorrect_attempt_2": "Check the parts-per-hundred fraction, then whether both parts scale together before simplifying.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "62.5% = 62.5/100. → Multiply both parts by 10: (62.5 × 10)/(100 × 10) = 625/1000. → A common factor of 625 and 1000 is 125. → Divide both parts: (625 ÷ 125)/(1000 ÷ 125) = 5/8. → 5/8 is in simplest form: no common factor greater than 1 remains."
+      },
+      "mathematical_support": {
+        "hint_1": "Check the parts-per-hundred fraction, then whether both parts scale together before simplifying.",
+        "hint_2": "Keep the same fraction value while changing both parts by the same factor. Check that the final fraction is fully simplified.",
+        "worked_solution": "62.5% = 62.5/100. → Multiply both parts by 10: (62.5 × 10)/(100 × 10) = 625/1000. → A common factor of 625 and 1000 is 125. → Divide both parts: (625 ÷ 125)/(1000 ÷ 125) = 5/8. → 5/8 is in simplest form: no common factor greater than 1 remains."
+      },
+      "working": [
+        "62.5% = 62.5/100.",
+        "Multiply both parts by 10: (62.5 × 10)/(100 × 10) = 625/1000.",
+        "A common factor of 625 and 1000 is 125.",
+        "Divide both parts: (625 ÷ 125)/(1000 ÷ 125) = 5/8.",
+        "5/8 is in simplest form: no common factor greater than 1 remains."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percent_fraction_conversion",
+          "title": "Check decimal clearing and simplification",
+          "percent": "62.5",
+          "given": "62.5%",
+          "steps": [
+            "62.5% = 62.5/100.",
+            "Multiply both parts by 10: (62.5 × 10)/(100 × 10) = 625/1000.",
+            "A common factor of 625 and 1000 is 125.",
+            "Divide both parts: (625 ÷ 125)/(1000 ÷ 125) = 5/8.",
+            "5/8 is in simplest form: no common factor greater than 1 remains."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "62.5/100 = 625/100 = 25/4": "The decimal was cleared only in the numerator, making the value ten times too large.",
+        "100/62.5 = 8/5": "That reverses the starting fraction. The percentage number belongs in the numerator.",
+        "62.5/10 = 25/4": "That starts with tenths instead of hundredths; it does not represent the given percentage."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-12-X01",
+      "source_ref": {
+        "page": 19
+      },
+      "stage": "practice",
+      "prompt": "In a survey, 35% of the people selected option C. Write this as a fraction of the surveyed people in simplest form.",
+      "target": "Convert the percentage into a fully simplified equivalent fraction",
+      "response": {
+        "type": "percent_fraction",
+        "percentage_source": "35",
+        "input_label": "Your fraction in simplest form",
+        "exact_parts": false,
+        "require_simplest_form": true,
+        "allow_mixed": false,
+        "allow_whole_number": false
+      },
+      "answer": {
+        "value": {
+          "n": 7,
+          "d": 20
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The fraction describes the same share of surveyed people choosing option C.",
+        "correct_after_support": "Correct. The fraction describes the same share of surveyed people choosing option C.",
+        "on_correct_math": "35% = 35/100. → A common factor of 35 and 100 is 5. → Divide both parts: (35 ÷ 5)/(100 ÷ 5) = 7/20. → 7/20 is in simplest form: no common factor greater than 1 remains.",
+        "on_incorrect_attempt_1": "Keep all surveyed people as the reference whole while converting the selected share.",
+        "on_incorrect_attempt_2": "Keep all surveyed people as the reference whole while converting the selected share.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "35% = 35/100. → A common factor of 35 and 100 is 5. → Divide both parts: (35 ÷ 5)/(100 ÷ 5) = 7/20. → 7/20 is in simplest form: no common factor greater than 1 remains."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep all surveyed people as the reference whole while converting the selected share.",
+        "hint_2": "Keep the same fraction value while changing both parts by the same factor. Check that the final fraction is fully simplified.",
+        "worked_solution": "35% = 35/100. → A common factor of 35 and 100 is 5. → Divide both parts: (35 ÷ 5)/(100 ÷ 5) = 7/20. → 7/20 is in simplest form: no common factor greater than 1 remains."
+      },
+      "working": [
+        "35% = 35/100.",
+        "A common factor of 35 and 100 is 5.",
+        "Divide both parts: (35 ÷ 5)/(100 ÷ 5) = 7/20.",
+        "7/20 is in simplest form: no common factor greater than 1 remains."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percent_fraction_conversion",
+          "title": "People choosing option C",
+          "percent": "35",
+          "given": "35%",
+          "steps": [
+            "35% = 35/100.",
+            "A common factor of 35 and 100 is 5.",
+            "Divide both parts: (35 ÷ 5)/(100 ÷ 5) = 7/20.",
+            "7/20 is in simplest form: no common factor greater than 1 remains."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "Check the percentage number over one hundred, preserve its value and simplify the integer numerator and denominator fully.",
+        "simplify_fraction": "Your fraction has the correct value, but it is not yet in simplest form. Divide both parts by a remaining common factor.",
+        "use_stated_factor": "Your fraction is equivalent, but this blank asks for a particular stage. Enter the numerator and denominator requested at that stage.",
+        "check_numerator": "The denominator is correct. Recheck the numerator at this stage.",
+        "check_denominator": "The numerator is correct. Recheck the denominator at this stage.",
+        "check_both": "Check both entries at the requested stage; use the same factor for numerator and denominator.",
+        "reversed": "The fraction has been inverted. The percentage number belongs over one hundred before simplification.",
+        "wrong_denominator": "That uses the wrong starting denominator. Percent means parts per hundred.",
+        "cleared_numerator_only": "That clears the decimal in the numerator without scaling the denominator. Multiply both parts equally to preserve the value.",
+        "dropped_whole": "That loses a complete reference whole. A percentage above one hundred gives a fraction greater than one.",
+        "subtracted": "Subtracting the same amount from the two parts does not preserve the required fraction value."
+      },
+      "response_patterns": [
+        {
+          "value": "20/7",
+          "classification": "reversed"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-12-X02",
+      "source_ref": {
+        "page": 19
+      },
+      "stage": "practice",
+      "prompt": "A machine rejects 12.5% of a batch of items. Write the rejected proportion as a fraction in simplest form.",
+      "target": "Convert the percentage into a fully simplified equivalent fraction",
+      "response": {
+        "type": "percent_fraction",
+        "percentage_source": "12.5",
+        "input_label": "Your fraction in simplest form",
+        "exact_parts": false,
+        "require_simplest_form": true,
+        "allow_mixed": false,
+        "allow_whole_number": false
+      },
+      "answer": {
+        "value": {
+          "n": 1,
+          "d": 8
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The fraction represents the rejected part of the same batch.",
+        "correct_after_support": "Correct. The fraction represents the rejected part of the same batch.",
+        "on_correct_math": "12.5% = 12.5/100. → Multiply both parts by 10: (12.5 × 10)/(100 × 10) = 125/1000. → A common factor of 125 and 1000 is 125. → Divide both parts: (125 ÷ 125)/(1000 ÷ 125) = 1/8. → 1/8 is in simplest form: no common factor greater than 1 remains.",
+        "on_incorrect_attempt_1": "Convert the rejected share of the whole batch, preserving the value while clearing the decimal.",
+        "on_incorrect_attempt_2": "Convert the rejected share of the whole batch, preserving the value while clearing the decimal.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "12.5% = 12.5/100. → Multiply both parts by 10: (12.5 × 10)/(100 × 10) = 125/1000. → A common factor of 125 and 1000 is 125. → Divide both parts: (125 ÷ 125)/(1000 ÷ 125) = 1/8. → 1/8 is in simplest form: no common factor greater than 1 remains."
+      },
+      "mathematical_support": {
+        "hint_1": "Convert the rejected share of the whole batch, preserving the value while clearing the decimal.",
+        "hint_2": "Keep the same fraction value while changing both parts by the same factor. Check that the final fraction is fully simplified.",
+        "worked_solution": "12.5% = 12.5/100. → Multiply both parts by 10: (12.5 × 10)/(100 × 10) = 125/1000. → A common factor of 125 and 1000 is 125. → Divide both parts: (125 ÷ 125)/(1000 ÷ 125) = 1/8. → 1/8 is in simplest form: no common factor greater than 1 remains."
+      },
+      "working": [
+        "12.5% = 12.5/100.",
+        "Multiply both parts by 10: (12.5 × 10)/(100 × 10) = 125/1000.",
+        "A common factor of 125 and 1000 is 125.",
+        "Divide both parts: (125 ÷ 125)/(1000 ÷ 125) = 1/8.",
+        "1/8 is in simplest form: no common factor greater than 1 remains."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percent_fraction_conversion",
+          "title": "Items rejected from a batch",
+          "percent": "12.5",
+          "given": "12.5%",
+          "steps": [
+            "12.5% = 12.5/100.",
+            "Multiply both parts by 10: (12.5 × 10)/(100 × 10) = 125/1000.",
+            "A common factor of 125 and 1000 is 125.",
+            "Divide both parts: (125 ÷ 125)/(1000 ÷ 125) = 1/8.",
+            "1/8 is in simplest form: no common factor greater than 1 remains."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "Check the percentage number over one hundred, preserve its value and simplify the integer numerator and denominator fully.",
+        "simplify_fraction": "Your fraction has the correct value, but it is not yet in simplest form. Divide both parts by a remaining common factor.",
+        "use_stated_factor": "Your fraction is equivalent, but this blank asks for a particular stage. Enter the numerator and denominator requested at that stage.",
+        "check_numerator": "The denominator is correct. Recheck the numerator at this stage.",
+        "check_denominator": "The numerator is correct. Recheck the denominator at this stage.",
+        "check_both": "Check both entries at the requested stage; use the same factor for numerator and denominator.",
+        "reversed": "The fraction has been inverted. The percentage number belongs over one hundred before simplification.",
+        "wrong_denominator": "That uses the wrong starting denominator. Percent means parts per hundred.",
+        "cleared_numerator_only": "That clears the decimal in the numerator without scaling the denominator. Multiply both parts equally to preserve the value.",
+        "dropped_whole": "That loses a complete reference whole. A percentage above one hundred gives a fraction greater than one.",
+        "subtracted": "Subtracting the same amount from the two parts does not preserve the required fraction value."
+      },
+      "response_patterns": [
+        {
+          "value": "5/4",
+          "classification": "cleared_numerator_only"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-12-X03",
+      "source_ref": {
+        "page": 19
+      },
+      "stage": "practice",
+      "prompt": "A club’s current membership is 150% of last year’s membership. Write the current membership as a fraction of last year’s membership in simplest form.",
+      "target": "Convert the percentage into a fully simplified equivalent fraction",
+      "response": {
+        "type": "percent_fraction",
+        "percentage_source": "150",
+        "input_label": "Your fraction in simplest form",
+        "exact_parts": false,
+        "require_simplest_form": true,
+        "allow_mixed": true,
+        "allow_whole_number": true
+      },
+      "answer": {
+        "value": {
+          "n": 3,
+          "d": 2
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Last year remains the reference whole, and the fraction includes the additional membership.",
+        "correct_after_support": "Correct. Last year remains the reference whole, and the fraction includes the additional membership.",
+        "on_correct_math": "150% = 150/100. → A common factor of 150 and 100 is 50. → Divide both parts: (150 ÷ 50)/(100 ÷ 50) = 3/2. → 3/2 is in simplest form: no common factor greater than 1 remains. It also equals 1 1/2.",
+        "on_incorrect_attempt_1": "Last year’s membership is the reference whole. Include the full reference amount and the extra portion.",
+        "on_incorrect_attempt_2": "Last year’s membership is the reference whole. Include the full reference amount and the extra portion.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "150% = 150/100. → A common factor of 150 and 100 is 50. → Divide both parts: (150 ÷ 50)/(100 ÷ 50) = 3/2. → 3/2 is in simplest form: no common factor greater than 1 remains. It also equals 1 1/2."
+      },
+      "mathematical_support": {
+        "hint_1": "Last year’s membership is the reference whole. Include the full reference amount and the extra portion.",
+        "hint_2": "Keep the same fraction value while changing both parts by the same factor. Check that the final fraction is fully simplified.",
+        "worked_solution": "150% = 150/100. → A common factor of 150 and 100 is 50. → Divide both parts: (150 ÷ 50)/(100 ÷ 50) = 3/2. → 3/2 is in simplest form: no common factor greater than 1 remains. It also equals 1 1/2."
+      },
+      "working": [
+        "150% = 150/100.",
+        "A common factor of 150 and 100 is 50.",
+        "Divide both parts: (150 ÷ 50)/(100 ÷ 50) = 3/2.",
+        "3/2 is in simplest form: no common factor greater than 1 remains. It also equals 1 1/2."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percent_fraction_conversion",
+          "title": "Current membership compared with last year",
+          "percent": "150",
+          "given": "150%",
+          "steps": [
+            "150% = 150/100.",
+            "A common factor of 150 and 100 is 50.",
+            "Divide both parts: (150 ÷ 50)/(100 ÷ 50) = 3/2.",
+            "3/2 is in simplest form: no common factor greater than 1 remains. It also equals 1 1/2."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "Check the percentage number over one hundred, preserve its value and simplify the integer numerator and denominator fully.",
+        "simplify_fraction": "Your fraction has the correct value, but it is not yet in simplest form. Divide both parts by a remaining common factor.",
+        "use_stated_factor": "Your fraction is equivalent, but this blank asks for a particular stage. Enter the numerator and denominator requested at that stage.",
+        "check_numerator": "The denominator is correct. Recheck the numerator at this stage.",
+        "check_denominator": "The numerator is correct. Recheck the denominator at this stage.",
+        "check_both": "Check both entries at the requested stage; use the same factor for numerator and denominator.",
+        "reversed": "The fraction has been inverted. The percentage number belongs over one hundred before simplification.",
+        "wrong_denominator": "That uses the wrong starting denominator. Percent means parts per hundred.",
+        "cleared_numerator_only": "That clears the decimal in the numerator without scaling the denominator. Multiply both parts equally to preserve the value.",
+        "dropped_whole": "That loses a complete reference whole. A percentage above one hundred gives a fraction greater than one.",
+        "subtracted": "Subtracting the same amount from the two parts does not preserve the required fraction value."
+      },
+      "response_patterns": [
+        {
+          "value": "1/2",
+          "classification": "dropped_whole"
+        },
+        {
+          "value": "2/3",
+          "classification": "reversed"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-12-X04",
+      "source_ref": {
+        "page": 19
+      },
+      "stage": "practice",
+      "prompt": "In a quality check, 0.5% of the items are faulty. Write the faulty proportion as a fraction in simplest form.",
+      "target": "Convert the percentage into a fully simplified equivalent fraction",
+      "response": {
+        "type": "percent_fraction",
+        "percentage_source": "0.5",
+        "input_label": "Your fraction in simplest form",
+        "exact_parts": false,
+        "require_simplest_form": true,
+        "allow_mixed": false,
+        "allow_whole_number": false
+      },
+      "answer": {
+        "value": {
+          "n": 1,
+          "d": 200
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The fraction keeps the exact small faulty proportion of the checked items.",
+        "correct_after_support": "Correct. The fraction keeps the exact small faulty proportion of the checked items.",
+        "on_correct_math": "0.5% = 0.5/100. → Multiply both parts by 10: (0.5 × 10)/(100 × 10) = 5/1000. → A common factor of 5 and 1000 is 5. → Divide both parts: (5 ÷ 5)/(1000 ÷ 5) = 1/200. → 1/200 is in simplest form: no common factor greater than 1 remains.",
+        "on_incorrect_attempt_1": "Preserve the faulty share, which is less than one percent, when forming and simplifying the fraction.",
+        "on_incorrect_attempt_2": "Preserve the faulty share, which is less than one percent, when forming and simplifying the fraction.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "0.5% = 0.5/100. → Multiply both parts by 10: (0.5 × 10)/(100 × 10) = 5/1000. → A common factor of 5 and 1000 is 5. → Divide both parts: (5 ÷ 5)/(1000 ÷ 5) = 1/200. → 1/200 is in simplest form: no common factor greater than 1 remains."
+      },
+      "mathematical_support": {
+        "hint_1": "Preserve the faulty share, which is less than one percent, when forming and simplifying the fraction.",
+        "hint_2": "Keep the same fraction value while changing both parts by the same factor. Check that the final fraction is fully simplified.",
+        "worked_solution": "0.5% = 0.5/100. → Multiply both parts by 10: (0.5 × 10)/(100 × 10) = 5/1000. → A common factor of 5 and 1000 is 5. → Divide both parts: (5 ÷ 5)/(1000 ÷ 5) = 1/200. → 1/200 is in simplest form: no common factor greater than 1 remains."
+      },
+      "working": [
+        "0.5% = 0.5/100.",
+        "Multiply both parts by 10: (0.5 × 10)/(100 × 10) = 5/1000.",
+        "A common factor of 5 and 1000 is 5.",
+        "Divide both parts: (5 ÷ 5)/(1000 ÷ 5) = 1/200.",
+        "1/200 is in simplest form: no common factor greater than 1 remains."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percent_fraction_conversion",
+          "title": "Faulty items in a quality check",
+          "percent": "0.5",
+          "given": "0.5%",
+          "steps": [
+            "0.5% = 0.5/100.",
+            "Multiply both parts by 10: (0.5 × 10)/(100 × 10) = 5/1000.",
+            "A common factor of 5 and 1000 is 5.",
+            "Divide both parts: (5 ÷ 5)/(1000 ÷ 5) = 1/200.",
+            "1/200 is in simplest form: no common factor greater than 1 remains."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "Check the percentage number over one hundred, preserve its value and simplify the integer numerator and denominator fully.",
+        "simplify_fraction": "Your fraction has the correct value, but it is not yet in simplest form. Divide both parts by a remaining common factor.",
+        "use_stated_factor": "Your fraction is equivalent, but this blank asks for a particular stage. Enter the numerator and denominator requested at that stage.",
+        "check_numerator": "The denominator is correct. Recheck the numerator at this stage.",
+        "check_denominator": "The numerator is correct. Recheck the denominator at this stage.",
+        "check_both": "Check both entries at the requested stage; use the same factor for numerator and denominator.",
+        "reversed": "The fraction has been inverted. The percentage number belongs over one hundred before simplification.",
+        "wrong_denominator": "That uses the wrong starting denominator. Percent means parts per hundred.",
+        "cleared_numerator_only": "That clears the decimal in the numerator without scaling the denominator. Multiply both parts equally to preserve the value.",
+        "dropped_whole": "That loses a complete reference whole. A percentage above one hundred gives a fraction greater than one.",
+        "subtracted": "Subtracting the same amount from the two parts does not preserve the required fraction value."
+      },
+      "response_patterns": [
+        {
+          "value": "1/20",
+          "classification": "cleared_numerator_only"
+        },
+        {
+          "value": "1/2",
+          "classification": "wrong_denominator"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-12-X05",
+      "source_ref": {
+        "page": 19
+      },
+      "stage": "practice",
+      "prompt": "A student wants to convert 85% to a fraction in simplest form. Which first step is correct?",
+      "target": "Convert the percentage into a fully simplified equivalent fraction",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Write 85/100.",
+          "Write 100/85.",
+          "Write 85/10.",
+          "Change 85% to 0.85%."
+        ],
+        "math_layout": "decimal_compound_fraction"
+      },
+      "answer": {
+        "value": "Write 85/100."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. That first fraction records eighty-five parts per hundred.",
+        "correct_after_support": "Correct. That first fraction records eighty-five parts per hundred.",
+        "on_correct_math": "Use the percentage number as numerator: 85. → Percent means out of 100, so begin with 85/100.",
+        "on_incorrect_attempt_1": "Use the meaning of percent before you simplify.",
+        "on_incorrect_attempt_2": "Use the meaning of percent before you simplify.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Use the percentage number as numerator: 85. → Percent means out of 100, so begin with 85/100."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the meaning of percent before you simplify.",
+        "hint_2": "Keep the same fraction value while changing both parts by the same factor. Check that the final fraction is fully simplified.",
+        "worked_solution": "Use the percentage number as numerator: 85. → Percent means out of 100, so begin with 85/100."
+      },
+      "working": [
+        "Use the percentage number as numerator: 85.",
+        "Percent means out of 100, so begin with 85/100."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percent_fraction_conversion",
+          "title": "Choose the initial percentage fraction",
+          "percent": "85",
+          "given": "85%",
+          "steps": [
+            "Use the percentage number as numerator: 85.",
+            "Percent means out of 100, so begin with 85/100."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "initial"
+        }
+      },
+      "response_feedback": {
+        "Write 100/85.": "That swaps the required numerator and denominator.",
+        "Write 85/10.": "Percent means out of one hundred, not out of ten.",
+        "Change 85% to 0.85%.": "Changing the number but retaining the percent sign changes the original amount."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-12-E01",
+      "source_ref": {
+        "page": 17
+      },
+      "stage": "exit",
+      "prompt": "Final check: write 28% as a fraction in simplest form. Use any mathematically valid method.",
+      "target": "Convert the percentage into a fully simplified equivalent fraction",
+      "response": {
+        "type": "percent_fraction",
+        "percentage_source": "28",
+        "input_label": "Your fraction in simplest form",
+        "exact_parts": false,
+        "require_simplest_form": true,
+        "allow_mixed": false,
+        "allow_whole_number": false
+      },
+      "answer": {
+        "value": {
+          "n": 7,
+          "d": 25
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The final fraction is equivalent to the percentage and fully simplified.",
+        "correct_after_support": "Correct. The final fraction is equivalent to the percentage and fully simplified.",
+        "on_correct_math": "28% = 28/100. → A common factor of 28 and 100 is 4. → Divide both parts: (28 ÷ 4)/(100 ÷ 4) = 7/25. → 7/25 is in simplest form: no common factor greater than 1 remains.",
+        "on_incorrect_attempt_1": "Review the fraction value and whether a common factor remains.",
+        "on_incorrect_attempt_2": "Review the fraction value and whether a common factor remains.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "28% = 28/100. → A common factor of 28 and 100 is 4. → Divide both parts: (28 ÷ 4)/(100 ÷ 4) = 7/25. → 7/25 is in simplest form: no common factor greater than 1 remains."
+      },
+      "mathematical_support": {
+        "hint_1": "Review the fraction value and whether a common factor remains.",
+        "hint_2": "Keep the same fraction value while changing both parts by the same factor. Check that the final fraction is fully simplified.",
+        "worked_solution": "28% = 28/100. → A common factor of 28 and 100 is 4. → Divide both parts: (28 ÷ 4)/(100 ÷ 4) = 7/25. → 7/25 is in simplest form: no common factor greater than 1 remains."
+      },
+      "working": [
+        "28% = 28/100.",
+        "A common factor of 28 and 100 is 4.",
+        "Divide both parts: (28 ÷ 4)/(100 ÷ 4) = 7/25.",
+        "7/25 is in simplest form: no common factor greater than 1 remains."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percent_fraction_conversion",
+          "title": "Convert and simplify without changing the value",
+          "percent": "28",
+          "given": "28%",
+          "steps": [
+            "28% = 28/100.",
+            "A common factor of 28 and 100 is 4.",
+            "Divide both parts: (28 ÷ 4)/(100 ÷ 4) = 7/25.",
+            "7/25 is in simplest form: no common factor greater than 1 remains."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "Check the percentage number over one hundred, preserve its value and simplify the integer numerator and denominator fully.",
+        "simplify_fraction": "Your fraction has the correct value, but it is not yet in simplest form. Divide both parts by a remaining common factor.",
+        "use_stated_factor": "Your fraction is equivalent, but this blank asks for a particular stage. Enter the numerator and denominator requested at that stage.",
+        "check_numerator": "The denominator is correct. Recheck the numerator at this stage.",
+        "check_denominator": "The numerator is correct. Recheck the denominator at this stage.",
+        "check_both": "Check both entries at the requested stage; use the same factor for numerator and denominator.",
+        "reversed": "The fraction has been inverted. The percentage number belongs over one hundred before simplification.",
+        "wrong_denominator": "That uses the wrong starting denominator. Percent means parts per hundred.",
+        "cleared_numerator_only": "That clears the decimal in the numerator without scaling the denominator. Multiply both parts equally to preserve the value.",
+        "dropped_whole": "That loses a complete reference whole. A percentage above one hundred gives a fraction greater than one.",
+        "subtracted": "Subtracting the same amount from the two parts does not preserve the required fraction value."
+      },
+      "response_patterns": [
+        {
+          "value": "25/7",
+          "classification": "reversed"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-12-E02",
+      "source_ref": {
+        "page": 17
+      },
+      "stage": "exit",
+      "prompt": "Final check: write 87.5% as a fraction in simplest form. Use any mathematically valid method.",
+      "target": "Convert the percentage into a fully simplified equivalent fraction",
+      "response": {
+        "type": "percent_fraction",
+        "percentage_source": "87.5",
+        "input_label": "Your fraction in simplest form",
+        "exact_parts": false,
+        "require_simplest_form": true,
+        "allow_mixed": false,
+        "allow_whole_number": false
+      },
+      "answer": {
+        "value": {
+          "n": 7,
+          "d": 8
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The final fraction preserves the decimal percentage exactly.",
+        "correct_after_support": "Correct. The final fraction preserves the decimal percentage exactly.",
+        "on_correct_math": "87.5% = 87.5/100. → Multiply both parts by 10: (87.5 × 10)/(100 × 10) = 875/1000. → A common factor of 875 and 1000 is 125. → Divide both parts: (875 ÷ 125)/(1000 ÷ 125) = 7/8. → 7/8 is in simplest form: no common factor greater than 1 remains.",
+        "on_incorrect_attempt_1": "Review the decimal clearing and the fully simplified fraction.",
+        "on_incorrect_attempt_2": "Review the decimal clearing and the fully simplified fraction.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "87.5% = 87.5/100. → Multiply both parts by 10: (87.5 × 10)/(100 × 10) = 875/1000. → A common factor of 875 and 1000 is 125. → Divide both parts: (875 ÷ 125)/(1000 ÷ 125) = 7/8. → 7/8 is in simplest form: no common factor greater than 1 remains."
+      },
+      "mathematical_support": {
+        "hint_1": "Review the decimal clearing and the fully simplified fraction.",
+        "hint_2": "Keep the same fraction value while changing both parts by the same factor. Check that the final fraction is fully simplified.",
+        "worked_solution": "87.5% = 87.5/100. → Multiply both parts by 10: (87.5 × 10)/(100 × 10) = 875/1000. → A common factor of 875 and 1000 is 125. → Divide both parts: (875 ÷ 125)/(1000 ÷ 125) = 7/8. → 7/8 is in simplest form: no common factor greater than 1 remains."
+      },
+      "working": [
+        "87.5% = 87.5/100.",
+        "Multiply both parts by 10: (87.5 × 10)/(100 × 10) = 875/1000.",
+        "A common factor of 875 and 1000 is 125.",
+        "Divide both parts: (875 ÷ 125)/(1000 ÷ 125) = 7/8.",
+        "7/8 is in simplest form: no common factor greater than 1 remains."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percent_fraction_conversion",
+          "title": "Convert and simplify without changing the value",
+          "percent": "87.5",
+          "given": "87.5%",
+          "steps": [
+            "87.5% = 87.5/100.",
+            "Multiply both parts by 10: (87.5 × 10)/(100 × 10) = 875/1000.",
+            "A common factor of 875 and 1000 is 125.",
+            "Divide both parts: (875 ÷ 125)/(1000 ÷ 125) = 7/8.",
+            "7/8 is in simplest form: no common factor greater than 1 remains."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "Check the percentage number over one hundred, preserve its value and simplify the integer numerator and denominator fully.",
+        "simplify_fraction": "Your fraction has the correct value, but it is not yet in simplest form. Divide both parts by a remaining common factor.",
+        "use_stated_factor": "Your fraction is equivalent, but this blank asks for a particular stage. Enter the numerator and denominator requested at that stage.",
+        "check_numerator": "The denominator is correct. Recheck the numerator at this stage.",
+        "check_denominator": "The numerator is correct. Recheck the denominator at this stage.",
+        "check_both": "Check both entries at the requested stage; use the same factor for numerator and denominator.",
+        "reversed": "The fraction has been inverted. The percentage number belongs over one hundred before simplification.",
+        "wrong_denominator": "That uses the wrong starting denominator. Percent means parts per hundred.",
+        "cleared_numerator_only": "That clears the decimal in the numerator without scaling the denominator. Multiply both parts equally to preserve the value.",
+        "dropped_whole": "That loses a complete reference whole. A percentage above one hundred gives a fraction greater than one.",
+        "subtracted": "Subtracting the same amount from the two parts does not preserve the required fraction value."
+      },
+      "response_patterns": [
+        {
+          "value": "35/4",
+          "classification": "cleared_numerator_only"
+        },
+        {
+          "value": "8/7",
+          "classification": "reversed"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-12-E03",
+      "source_ref": {
+        "page": 17
+      },
+      "stage": "exit",
+      "prompt": "Final check: write 175% as a fraction in simplest form. A simplified improper fraction or mixed number is accepted.",
+      "target": "Convert the percentage into a fully simplified equivalent fraction",
+      "response": {
+        "type": "percent_fraction",
+        "percentage_source": "175",
+        "input_label": "Your fraction in simplest form",
+        "exact_parts": false,
+        "require_simplest_form": true,
+        "allow_mixed": true,
+        "allow_whole_number": true
+      },
+      "answer": {
+        "value": {
+          "n": 7,
+          "d": 4
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The final fraction keeps the whole and the additional three quarters.",
+        "correct_after_support": "Correct. The final fraction keeps the whole and the additional three quarters.",
+        "on_correct_math": "175% = 175/100. → A common factor of 175 and 100 is 25. → Divide both parts: (175 ÷ 25)/(100 ÷ 25) = 7/4. → 7/4 is in simplest form: no common factor greater than 1 remains. It also equals 1 3/4.",
+        "on_incorrect_attempt_1": "Review the whole-number part as well as the fraction’s simplest form.",
+        "on_incorrect_attempt_2": "Review the whole-number part as well as the fraction’s simplest form.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "175% = 175/100. → A common factor of 175 and 100 is 25. → Divide both parts: (175 ÷ 25)/(100 ÷ 25) = 7/4. → 7/4 is in simplest form: no common factor greater than 1 remains. It also equals 1 3/4."
+      },
+      "mathematical_support": {
+        "hint_1": "Review the whole-number part as well as the fraction’s simplest form.",
+        "hint_2": "Keep the same fraction value while changing both parts by the same factor. Check that the final fraction is fully simplified.",
+        "worked_solution": "175% = 175/100. → A common factor of 175 and 100 is 25. → Divide both parts: (175 ÷ 25)/(100 ÷ 25) = 7/4. → 7/4 is in simplest form: no common factor greater than 1 remains. It also equals 1 3/4."
+      },
+      "working": [
+        "175% = 175/100.",
+        "A common factor of 175 and 100 is 25.",
+        "Divide both parts: (175 ÷ 25)/(100 ÷ 25) = 7/4.",
+        "7/4 is in simplest form: no common factor greater than 1 remains. It also equals 1 3/4."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percent_fraction_conversion",
+          "title": "Convert and simplify without changing the value",
+          "percent": "175",
+          "given": "175%",
+          "steps": [
+            "175% = 175/100.",
+            "A common factor of 175 and 100 is 25.",
+            "Divide both parts: (175 ÷ 25)/(100 ÷ 25) = 7/4.",
+            "7/4 is in simplest form: no common factor greater than 1 remains. It also equals 1 3/4."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "Check the percentage number over one hundred, preserve its value and simplify the integer numerator and denominator fully.",
+        "simplify_fraction": "Your fraction has the correct value, but it is not yet in simplest form. Divide both parts by a remaining common factor.",
+        "use_stated_factor": "Your fraction is equivalent, but this blank asks for a particular stage. Enter the numerator and denominator requested at that stage.",
+        "check_numerator": "The denominator is correct. Recheck the numerator at this stage.",
+        "check_denominator": "The numerator is correct. Recheck the denominator at this stage.",
+        "check_both": "Check both entries at the requested stage; use the same factor for numerator and denominator.",
+        "reversed": "The fraction has been inverted. The percentage number belongs over one hundred before simplification.",
+        "wrong_denominator": "That uses the wrong starting denominator. Percent means parts per hundred.",
+        "cleared_numerator_only": "That clears the decimal in the numerator without scaling the denominator. Multiply both parts equally to preserve the value.",
+        "dropped_whole": "That loses a complete reference whole. A percentage above one hundred gives a fraction greater than one.",
+        "subtracted": "Subtracting the same amount from the two parts does not preserve the required fraction value."
+      },
+      "response_patterns": [
+        {
+          "value": "3/4",
+          "classification": "dropped_whole"
+        },
+        {
+          "value": "4/7",
+          "classification": "reversed"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-12-E04",
+      "source_ref": {
+        "page": 17
+      },
+      "stage": "exit",
+      "prompt": "Final method check: which statement correctly describes percentage-to-fraction conversion?",
+      "target": "Convert the percentage into a fully simplified equivalent fraction",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Write the percentage number over 100, clear any decimal numerator without changing the value, then simplify fully.",
+          "Put 100 over the percentage number and simplify.",
+          "Divide only the numerator until it is small.",
+          "Write the percentage number over 10 and stop."
+        ],
+        "math_layout": "decimal_compound_fraction"
+      },
+      "answer": {
+        "value": "Write the percentage number over 100, clear any decimal numerator without changing the value, then simplify fully."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The rule keeps the original value and finishes in simplest form.",
+        "correct_after_support": "Correct. The rule keeps the original value and finishes in simplest form.",
+        "on_correct_math": "Write the percentage number over 100. → If necessary, clear decimals by multiplying both fraction parts equally. → Simplify both parts by common factors until none greater than 1 remains.",
+        "on_incorrect_attempt_1": "Review the meaning of percent and the equal changes that preserve a fraction value.",
+        "on_incorrect_attempt_2": "Review the meaning of percent and the equal changes that preserve a fraction value.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Write the percentage number over 100. → If necessary, clear decimals by multiplying both fraction parts equally. → Simplify both parts by common factors until none greater than 1 remains."
+      },
+      "mathematical_support": {
+        "hint_1": "Review the meaning of percent and the equal changes that preserve a fraction value.",
+        "hint_2": "Keep the same fraction value while changing both parts by the same factor. Check that the final fraction is fully simplified.",
+        "worked_solution": "Write the percentage number over 100. → If necessary, clear decimals by multiplying both fraction parts equally. → Simplify both parts by common factors until none greater than 1 remains."
+      },
+      "working": [
+        "Write the percentage number over 100.",
+        "If necessary, clear decimals by multiplying both fraction parts equally.",
+        "Simplify both parts by common factors until none greater than 1 remains."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percent_fraction_conversion",
+          "title": "Choose the complete conversion rule",
+          "percent": "28",
+          "given": "Choose the correct statement.",
+          "steps": [
+            "Write the percentage number over 100.",
+            "If necessary, clear decimals by multiplying both fraction parts equally.",
+            "Simplify both parts by common factors until none greater than 1 remains."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "explanation_question": true
+        }
+      },
+      "response_feedback": {
+        "Put 100 over the percentage number and simplify.": "That reverses the required parts-per-hundred fraction.",
+        "Divide only the numerator until it is small.": "Changing only the numerator changes the fraction value; the denominator must change equally.",
+        "Write the percentage number over 10 and stop.": "Percent uses hundredths, and the final fraction must be fully simplified."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    }
+  ],
+  "canonical_lesson": {
+    "version": "FDP12-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

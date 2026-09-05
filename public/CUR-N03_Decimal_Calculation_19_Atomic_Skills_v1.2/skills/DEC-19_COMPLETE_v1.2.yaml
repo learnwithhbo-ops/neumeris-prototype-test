@@ -1,0 +1,1670 @@
+schema_version: '1.2'
+spec_intent:
+  source_of_truth: true
+  codex_role: implementation_only
+  codex_must_not_invent:
+  - mathematics
+  - question wording
+  - answers
+  - Ryan dialogue
+  - hints
+  - worked solutions
+  - animation storyboards
+  - branching behaviour
+  - mastery rules
+  - lesson sequence
+  - success reactions
+  - reaction sequencing
+  - atomic skill boundaries
+  allowed_engine_interpretation: Codex may implement responsive layout, reusable components, state handling and animation
+    mechanics only where they preserve the authored behaviour in this file.
+identity:
+  id: DEC-19
+  slug: solve-mixed-and-multi-step-decimal-calculations
+  title: Solve Mixed and Multi-Step Decimal Calculations
+  strand: Number
+  cluster: Decimal Calculation
+  tier: GCSE Foundation
+  status: spec_complete_pending_owner_stage2_review_v1_2
+  estimated_minutes:
+    min: 24
+    max: 30
+curriculum:
+  basis: England GCSE Mathematics / national curriculum spine
+  role: direct_gcse_content
+  official_mapping:
+    direct_gcse_refs:
+    - source: AQA GCSE Mathematics 8300 Number subject content
+      ref: N2
+      relationship: This atomic capability implements or supports Foundation Number ordering/place-value/calculation
+        requirements within CUR-N03.
+    - source: AQA GCSE Mathematics 8300 Number subject content
+      ref: N3
+      relationship: This atomic capability implements or supports Foundation Number ordering/place-value/calculation
+        requirements within CUR-N03.
+    - source: AQA GCSE Mathematics 8300 Number subject content
+      ref: N13
+      relationship: This atomic capability implements or supports Foundation Number ordering/place-value/calculation
+        requirements within CUR-N03.
+    supports_gcse_refs: []
+    prior_curriculum_refs:
+    - source: Revily GCSE Foundation Stage 1 Atomic Skill Inventory v0.1
+      ref: CUR-N03
+      relationship: This count-blind atomic capability refines the provisional Launch 03 Decimal Calculation macro rows.
+  learning_objective: Choose and sequence decimal addition, subtraction, multiplication and division independently in
+    two- and three-step GCSE Foundation calculations and contexts.
+  success_criteria:
+  - Choose and sequence decimal addition, subtraction, multiplication and division independently in two- and three-step
+    GCSE Foundation calculations and contexts.
+  - Use the defining representation or method without changing decimal place value, sign or quantity meaning.
+  - Reject the central misconception using the defining invariant.
+  - Complete the independent exit evidence without hints.
+  boundaries:
+    includes:
+    - Two- and three-step decimal problems.
+    - Unlabelled operation choice.
+    - Money and measure contexts.
+    - Reasonableness, sign and unit checks.
+    - Mixed positive and signed calculations where appropriate.
+    excludes:
+    - FDP conversion.
+    - Percentage change.
+    - Ratio sharing.
+    - Compound measures as the main target.
+    - Formal rounding/error intervals.
+  ownership_review:
+    overlap_or_alias_candidates:
+    - S1-NUM-005
+    - P-N20
+    derived_from_prior_decimal_draft:
+    - DEC-28
+    rule: Pending Stage 2, production must choose one canonical mastery owner. If a P-N skill remains canonical, the
+      corresponding DEC skill becomes a package view/alias rather than a duplicate mastery state.
+dependencies:
+  required_skill_refs:
+  - DEC-09
+  - DEC-13
+  - DEC-17
+  - DEC-18
+  - P-N12
+  entry_assumptions:
+  - Whole-number arithmetic remains deliberately light enough that it does not obscure the decimal target.
+  downstream_rule: Do not store leads_to. Derive downstream relationships from other skills prerequisite references.
+engine_capability_requirements:
+  input_types:
+  - decimal
+  - integer
+  - single_choice
+  visual_primitives:
+  - calculation_chain
+  - context_model
+  - reasonableness_check
+  - decimal_input
+  animation_actions:
+  - fade_in
+  - highlight
+  - contrast
+  - reveal_equation
+  - crossfade_phase
+  - align_columns
+  - move_marker
+  - scale_both
+  - rescale
+  - split_equal_groups
+  - combine_groups
+  audio_capabilities:
+  - queued_tts_or_audio
+  - caption_sync
+  - narration_animation_sync
+  - pause_for_input
+  - cancel_on_navigation
+  state_capabilities:
+  - attempt_count
+  - step_resume
+  - skill_state
+  - diagnostic_evidence
+  - exit_score
+  - confirmation_branch
+  - used_reaction_history
+experience_contract:
+  target_session_minutes:
+    min: 24
+    max: 30
+  ordered_phases:
+  - teaching
+  - guided
+  - faded
+  - independent_transfer
+  - practice
+  - exit
+  - completion
+  navigation:
+    default: linear_forward
+    back_button: May revisit completed explanatory screens but must not reset recorded submitted answers.
+    refresh_resume: Resume the current skill at the latest committed step.
+    start_again: Reset current lesson attempt only; preserve historical completion records.
+  global_ui_copy:
+    submit: Check answer
+    continue: Continue
+    try_again: Try again
+    show_me: Show me
+    finish: Finish
+    continue_learning: Continue learning
+    stop_for_today: Finish for today
+  progress_indicator:
+    show: true
+    student_facing_style: phase_progress_without_raw_internal_ids
+    do_not_show: Do not expose YAML ids, attempt counters, AO labels, ownership-review flags or provisional DEC codes
+      to the learner.
+  interaction_rules:
+  - Never auto-submit a mathematical answer.
+  - Disable Continue until the current required interaction is resolved.
+  - Do not use success confetti.
+  - Do not shake the entire screen on an error.
+  - Keep keyboard focus predictable after retry.
+voice_and_script:
+  performer_name: Ryan
+  dialogue_profile_ref: RYAN_DIALOGUE_PROFILE_v1.yaml
+  script_ownership: All lesson-specific mathematical speech is authored exactly in this skill file. Generic encouragement
+    is authored exactly in the referenced Ryan dialogue profile. The engine chooses eligible generic reactions; neither
+    Codex nor TTS may invent, paraphrase or extend any spoken line.
+  delivery_style:
+  - Natural UK English
+  - Warm, conversational and encouraging
+  - Praise understanding, independence or recovery rather than merely announcing correctness
+  - No one-word success reactions
+  - No repeated praise lead-ins within one lesson attempt
+  - Use pauses to let the learner inspect mathematical visuals
+  success_reaction_policy:
+    mode: engine_select_from_authored_profile
+    generation_allowed: false
+    selection_state_scope: lesson_attempt
+    persist_selection_history_on_refresh_resume: true
+    derive_context_from:
+    - stage
+    - attempt_count
+    - recovery_status
+    - practice_streak
+    no_repeat:
+    - reaction_id
+    - exact_text
+    - lead_family
+    fallback_when_pool_exhausted: Speak only the item-specific mathematical follow-up; never repeat or invent praise.
+    diagnostic: silent
+    exit_and_confirmation: silent_until_completion_result
+  adjacent_speech_policy:
+    after_success: Do not play a second generic acknowledgement before the next scene.
+    next_scene: Begin directly with new mathematical content.
+    semantic_echo: The next scene must not restate the mathematical conclusion just delivered in success feedback.
+    item_math_feedback: May follow the selected generic reaction only when it adds mathematical value.
+  caption_policy: Every spoken line must be captioned verbatim. Captions stay visible long enough to be read and disappear
+    before the next unrelated line.
+visual_language:
+  scene_rules:
+    composition: Use one central mathematical representation with one secondary support view only when it clarifies the
+      same decimal relationship.
+    labels: Keep decimal points, place-value headings, signs and units attached to the quantities they describe.
+    motion: Use movement only to expose place value, signed direction, shared scaling, regrouping, grouping or operation
+      structure.
+    focus: De-emphasise non-essential quantities at each narration beat and highlight only the active mathematical relationship.
+  semantic_roles:
+  - decimal_point
+  - place_value
+  - sign
+  - active_quantity
+  - student_focus
+  - error
+  - success
+  - unit_label
+  style_direction:
+  - Professional educational vector style
+  - Clean geometry and typography
+  - High contrast between mathematical roles
+  - Multiple relevant semantic colours rather than one monochrome palette
+  - No decorative illustrations that compete with the maths
+  reduced_motion: Replace physical movement with an equivalent two-state crossfade while preserving all intermediate
+    mathematical labels and narration meaning.
+diagnostic:
+  purpose: Locate whether this atomic skill should be taught; diagnostic distractors are not used to infer a misconception
+    type.
+  question_refs:
+  - DEC-19-D01
+  - DEC-19-D02
+  presentation: Two isolated items. No hints, worked solutions, correctness reveal or Ryan praise while diagnostic evidence
+    is being collected.
+  scoring:
+    2_of_2: DIAGNOSTIC_SECURE
+    0_or_1_of_2: NEEDS_WORK
+  routing: After selected diagnostic skills are scored, start at the earliest non-secure skill in prerequisite order;
+    probe external P-N prerequisites only when the response pattern makes that prerequisite plausibly blocking.
+concept_model:
+  core_idea: Multi-step decimal problems require a correct calculation plan before accurate arithmetic can succeed.
+  invariant: Each intermediate result must represent the intended quantity and feed the next operation without changing
+    its meaning, sign or unit.
+  mathematical_rule: Identify the final required quantity, plan the operation sequence, calculate each step without premature
+    rounding, and check sign, unit and reasonableness at the end.
+  vocabulary:
+  - multi-step
+  - intermediate result
+  - operation sequence
+  - reasonableness
+  - unit
+  - plan
+  must_notice:
+  - A correct first step is not enough if the question requires another operation.
+  - Operation order comes from the quantity relationships, not keywords.
+  - An unreasonable final value can reveal an earlier decimal or operation error.
+  common_confusions:
+  - Stops after one step.
+  - Chooses operations from keywords.
+  - Uses correct operations in the wrong order.
+  - Drops units or signs.
+  - Does not reject an unreasonable answer.
+lesson:
+  teaching_steps:
+  - id: T01
+    stage: teaching
+    purpose: Hook the core idea
+    estimated_seconds: 35
+    scene:
+      layout: single_central_teaching_canvas
+      objects:
+      - Show one concrete example using calculation_chain that makes the central relationship visible.
+      initial_state: Show one concrete example using calculation_chain that makes the central relationship visible.
+    narration:
+      script: 'Start with the meaning, not a shortcut: Multi-step decimal problems require a correct calculation plan
+        before accurate arithmetic can succeed.'
+      delivery: Natural UK English; warm and concise; pause when the learner needs to inspect the representation.
+      sync_cues:
+      - cue: active mathematical relationship
+        action: fade_in
+    animation_timeline:
+    - id: A01
+      trigger: narration_sync
+      action: fade_in
+      target: calculation_chain
+      from: authored starting state
+      to: authored explanatory state
+      duration_ms: 800
+      easing: ease-in-out
+      semantic_purpose: Hook the core idea
+    learner_interaction:
+      question_ref: null
+      input_position: null
+      auto_focus: false
+    branching: {}
+    next_step: T02
+  - id: T02
+    stage: teaching
+    purpose: Make the invariant visible
+    estimated_seconds: 35
+    scene:
+      layout: single_central_teaching_canvas
+      objects:
+      - Hold the example value fixed while the calculation_chain changes only the representation needed to expose the
+        invariant.
+      initial_state: Hold the example value fixed while the calculation_chain changes only the representation needed
+        to expose the invariant.
+    narration:
+      script: 'The part that must stay reliable is this: Each intermediate result must represent the intended quantity
+        and feed the next operation without changing its meaning, sign or unit.'
+      delivery: Natural UK English; warm and concise; pause when the learner needs to inspect the representation.
+      sync_cues:
+      - cue: active mathematical relationship
+        action: highlight
+    animation_timeline:
+    - id: A02
+      trigger: narration_sync
+      action: highlight
+      target: calculation_chain
+      from: authored starting state
+      to: authored explanatory state
+      duration_ms: 800
+      easing: ease-in-out
+      semantic_purpose: Make the invariant visible
+    learner_interaction:
+      question_ref: null
+      input_position: null
+      auto_focus: false
+    branching: {}
+    next_step: T03
+  - id: T03
+    stage: teaching
+    purpose: First checkpoint
+    estimated_seconds: 70
+    scene:
+      layout: single_central_teaching_canvas
+      objects:
+      - Present Two pens cost £1.85 each and three folders cost £0.95 each. Total cost? beside the active representation.
+      initial_state: Present Two pens cost £1.85 each and three folders cost £0.95 each. Total cost? beside the active
+        representation.
+    narration:
+      script: Use the idea on this short check before we add another layer.
+      delivery: Natural UK English; warm and concise; pause when the learner needs to inspect the representation.
+      sync_cues:
+      - cue: active mathematical relationship
+        action: highlight
+    animation_timeline:
+    - id: A03
+      trigger: narration_sync
+      action: highlight
+      target: calculation_chain
+      from: authored starting state
+      to: authored explanatory state
+      duration_ms: 800
+      easing: ease-in-out
+      semantic_purpose: First checkpoint
+    learner_interaction:
+      question_ref: DEC-19-C01
+      input_position: adjacent_to_active_mathematical_object
+      auto_focus: true
+    branching:
+      correct: Use the authored question success behaviour and advance.
+      incorrect_attempt_1: Use the authored first hint and retry.
+      incorrect_attempt_2: Reveal the authored critical step, show the worked explanation and use recovery when referenced.
+    next_step: T04
+  - id: T04
+    stage: teaching
+    purpose: Model the exact method
+    estimated_seconds: 35
+    scene:
+      layout: single_central_teaching_canvas
+      objects:
+      - Work one explicit example from the C01/C02 family one mathematical change at a time; keep decimal points, signs
+        and units attached to their quantities.
+      initial_state: Work one explicit example from the C01/C02 family one mathematical change at a time; keep decimal
+        points, signs and units attached to their quantities.
+    narration:
+      script: 'Now turn the idea into a method: Identify the final required quantity, plan the operation sequence, calculate
+        each step without premature rounding, and check sign, unit and reasonableness at the end.'
+      delivery: Natural UK English; warm and concise; pause when the learner needs to inspect the representation.
+      sync_cues:
+      - cue: active mathematical relationship
+        action: reveal_equation
+    animation_timeline:
+    - id: A04
+      trigger: narration_sync
+      action: reveal_equation
+      target: calculation_chain
+      from: authored starting state
+      to: authored explanatory state
+      duration_ms: 800
+      easing: ease-in-out
+      semantic_purpose: Model the exact method
+    learner_interaction:
+      question_ref: null
+      input_position: null
+      auto_focus: false
+    branching: {}
+    next_step: T05
+  - id: T05
+    stage: teaching
+    purpose: Contrast the main misconception
+    estimated_seconds: 35
+    scene:
+      layout: single_central_teaching_canvas
+      objects:
+      - 'Show one correct structure beside one muted incorrect structure representing: Stops after one step.'
+      initial_state: 'Show one correct structure beside one muted incorrect structure representing: Stops after one step.'
+    narration:
+      script: 'A common trap is: Stops after one step. Compare that with the correct structure so the exact change in
+        value is visible.'
+      delivery: Natural UK English; warm and concise; pause when the learner needs to inspect the representation.
+      sync_cues:
+      - cue: active mathematical relationship
+        action: contrast
+    animation_timeline:
+    - id: A05
+      trigger: narration_sync
+      action: contrast
+      target: calculation_chain
+      from: authored starting state
+      to: authored explanatory state
+      duration_ms: 800
+      easing: ease-in-out
+      semantic_purpose: Contrast the main misconception
+    learner_interaction:
+      question_ref: null
+      input_position: null
+      auto_focus: false
+    branching: {}
+    next_step: T06
+  - id: T06
+    stage: teaching
+    purpose: Second checkpoint
+    estimated_seconds: 70
+    scene:
+      layout: single_central_teaching_canvas
+      objects:
+      - Present A route is 12.5 km then 8.75 km, but a 3.2 km section is skipped. Distance travelled? with less scaffolding.
+      initial_state: Present A route is 12.5 km then 8.75 km, but a 3.2 km section is skipped. Distance travelled? with
+        less scaffolding.
+    narration:
+      script: This one checks whether the same method still works when the surface form changes.
+      delivery: Natural UK English; warm and concise; pause when the learner needs to inspect the representation.
+      sync_cues:
+      - cue: active mathematical relationship
+        action: highlight
+    animation_timeline:
+    - id: A06
+      trigger: narration_sync
+      action: highlight
+      target: calculation_chain
+      from: authored starting state
+      to: authored explanatory state
+      duration_ms: 800
+      easing: ease-in-out
+      semantic_purpose: Second checkpoint
+    learner_interaction:
+      question_ref: DEC-19-C02
+      input_position: adjacent_to_active_mathematical_object
+      auto_focus: true
+    branching:
+      correct: Use the authored question success behaviour and advance.
+      incorrect_attempt_1: Use the authored first hint and retry.
+      incorrect_attempt_2: Reveal the authored critical step, show the worked explanation and use recovery when referenced.
+    next_step: T07
+  - id: T07
+    stage: teaching
+    purpose: Generalise beyond the first example
+    estimated_seconds: 35
+    scene:
+      layout: single_central_teaching_canvas
+      objects:
+      - Use a second example that preserves the same invariant while changing the numbers or representation.
+      initial_state: Use a second example that preserves the same invariant while changing the numbers or representation.
+    narration:
+      script: 'Notice what is still true: A correct first step is not enough if the question requires another operation.
+        That gives you a way to check an unfamiliar example.'
+      delivery: Natural UK English; warm and concise; pause when the learner needs to inspect the representation.
+      sync_cues:
+      - cue: active mathematical relationship
+        action: crossfade_phase
+    animation_timeline:
+    - id: A07
+      trigger: narration_sync
+      action: crossfade_phase
+      target: calculation_chain
+      from: authored starting state
+      to: authored explanatory state
+      duration_ms: 800
+      easing: ease-in-out
+      semantic_purpose: Generalise beyond the first example
+    learner_interaction:
+      question_ref: null
+      input_position: null
+      auto_focus: false
+    branching: {}
+    next_step: T08
+  - id: T08
+    stage: teaching
+    purpose: Third checkpoint
+    estimated_seconds: 70
+    scene:
+      layout: single_central_teaching_canvas
+      objects:
+      - Present You have £50. Buy 4 items at £6.25 each and pay £7.80 delivery. Money left? with the central cue hidden
+        until an incorrect attempt.
+      initial_state: Present You have £50. Buy 4 items at £6.25 each and pay £7.80 delivery. Money left? with the central
+        cue hidden until an incorrect attempt.
+    narration:
+      script: Now decide the relationship yourself before I reveal any step.
+      delivery: Natural UK English; warm and concise; pause when the learner needs to inspect the representation.
+      sync_cues:
+      - cue: active mathematical relationship
+        action: highlight
+    animation_timeline:
+    - id: A08
+      trigger: narration_sync
+      action: highlight
+      target: calculation_chain
+      from: authored starting state
+      to: authored explanatory state
+      duration_ms: 800
+      easing: ease-in-out
+      semantic_purpose: Third checkpoint
+    learner_interaction:
+      question_ref: DEC-19-C03
+      input_position: adjacent_to_active_mathematical_object
+      auto_focus: true
+    branching:
+      correct: Use the authored question success behaviour and advance.
+      incorrect_attempt_1: Use the authored first hint and retry.
+      incorrect_attempt_2: Reveal the authored critical step, show the worked explanation and use recovery when referenced.
+    next_step: T09
+  - id: T09
+    stage: teaching
+    purpose: Build the self-check
+    estimated_seconds: 35
+    scene:
+      layout: single_central_teaching_canvas
+      objects:
+      - Display a compact self-check panel tied directly to the active calculation_chain.
+      initial_state: Display a compact self-check panel tied directly to the active calculation_chain.
+    narration:
+      script: 'Before you submit, use this self-check: Before calculating, write the chain of quantities you need; after
+        calculating, trace each intermediate result into the next step and check the final meaning.'
+      delivery: Natural UK English; warm and concise; pause when the learner needs to inspect the representation.
+      sync_cues:
+      - cue: active mathematical relationship
+        action: reveal_equation
+    animation_timeline:
+    - id: A09
+      trigger: narration_sync
+      action: reveal_equation
+      target: calculation_chain
+      from: authored starting state
+      to: authored explanatory state
+      duration_ms: 800
+      easing: ease-in-out
+      semantic_purpose: Build the self-check
+    learner_interaction:
+      question_ref: null
+      input_position: null
+      auto_focus: false
+    branching: {}
+    next_step: T10
+  - id: T10
+    stage: teaching
+    purpose: Transition to transfer
+    estimated_seconds: 35
+    scene:
+      layout: single_central_teaching_canvas
+      objects:
+      - Clear the teaching canvas without erasing completed evidence and open the guided transfer item.
+      initial_state: Clear the teaching canvas without erasing completed evidence and open the guided transfer item.
+    narration:
+      script: You have the idea and the method. I will keep one useful cue for the guided item, then take it away.
+      delivery: Natural UK English; warm and concise; pause when the learner needs to inspect the representation.
+      sync_cues:
+      - cue: active mathematical relationship
+        action: crossfade_phase
+    animation_timeline:
+    - id: A10
+      trigger: narration_sync
+      action: crossfade_phase
+      target: calculation_chain
+      from: authored starting state
+      to: authored explanatory state
+      duration_ms: 800
+      easing: ease-in-out
+      semantic_purpose: Transition to transfer
+    learner_interaction:
+      question_ref: null
+      input_position: null
+      auto_focus: false
+    branching: {}
+    next_step: G01
+  transfer_steps:
+    G01:
+      stage: guided
+      question_ref: DEC-19-G01
+      support_level: high
+      estimated_seconds: 90
+      pre_question_script: I will keep one useful structural cue visible for this one. Use it, but make the mathematical
+        decision yourself.
+      visual_before_answer: Show the central representation from teaching with only the essential cue visible.
+      correct_next: F01
+      recovery_ref: DEC-19-R01
+    F01:
+      stage: faded
+      question_ref: DEC-19-F01
+      support_level: reduced
+      estimated_seconds: 100
+      pre_question_script: This time the main cue is hidden. Work out which part of the method matters before you calculate.
+      visual_before_answer: No worked step is visible. A targeted mathematical cue appears only after an incorrect first
+        attempt.
+      correct_next: I01
+      recovery_ref: DEC-19-R02
+    I01:
+      stage: independent_transfer
+      question_ref: DEC-19-I01
+      support_level: none
+      estimated_seconds: 110
+      pre_question_script: Now do this one without a starting cue. Check the place value, sign, scale or unit before
+        you submit.
+      visual_before_answer: No initial support.
+      correct_next: P01
+      recovery_ref: DEC-19-R03
+  practice:
+    intro_script: Five practice questions now. Use the method independently; if you need a hint, use it to correct the
+      exact step rather than guessing again.
+    question_order:
+    - DEC-19-P01
+    - DEC-19-P02
+    - DEC-19-P03
+    - DEC-19-P04
+    - DEC-19-P05
+    question_count: 5
+    feedback_policy: First wrong attempt gives the authored mathematical hint and retry. Second wrong attempt reveals
+      the critical step and worked solution. Practice performance is reported but does not grant mastery.
+    between_question_transition: Do not add a generic transition immediately after a success reaction; move directly
+      to the next question unless a genuine spoken bridge is required.
+  exit:
+    intro_script: Last check. Two questions, no hints while you are answering. This is just to see whether the idea holds
+      when I step away.
+    primary_question_refs:
+    - DEC-19-E01
+    - DEC-19-E02
+    confirmation_question_refs:
+    - DEC-19-E03
+    - DEC-19-E04
+    submission_policy: One submission per exit item. Do not reveal correctness until both primary exit items are completed.
+    mastery_logic:
+      2_correct_of_2: SECURE
+      1_correct_of_2: Ask one unused confirmation item. Correct -> SECURE. Incorrect -> NEEDS_WORK.
+      0_correct_of_2: NEEDS_WORK
+    confirmation_selection: Use E03 first unless already seen in this lesson attempt; otherwise E04.
+completion:
+  secure:
+    title: Skill complete
+    ryan_script: That was a strong finish. You have the key idea for solve mixed and multi-step decimal calculations
+      and you were able to use it independently. You can finish for today or keep going while it is fresh.
+    state_write: SECURE
+    buttons:
+    - Finish for today
+    - Continue learning
+  needs_work:
+    title: One more pass will help
+    ryan_script: You have made progress, but I want this decimal relationship to feel reliable before we add another
+      layer. We will give it one more focused pass rather than rushing on.
+    state_write: NEEDS_WORK
+    buttons:
+    - Try this skill again
+    - Finish for today
+question_bank:
+- id: DEC-19-D01
+  stage: diagnostic
+  target: Solve a mixed multi-step decimal problem
+  ao: AO3
+  difficulty: 2
+  prompt: You have £25. You buy 3 items at £4.75 each and pay £2.60 delivery. How much remains?
+  response:
+    type: decimal
+    keyboard_submit: true
+    input_label: £
+    placeholder: null
+    accept_numeric_equivalent: true
+  answer:
+    value: '8.15'
+  attempt_policy:
+    policy: single_submit_silent
+    max_attempts_before_resolution: 1
+    feedback_timing: none_during_diagnostic
+    submit_label: Next
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: null
+    on_incorrect_attempt_1: Record the response silently and move on.
+    on_incorrect_attempt_2: Not applicable in diagnostic.
+    worked_explanation: No worked solution is shown during the diagnostic.
+  mathematical_support:
+    hint_1: null
+    hint_2: null
+    worked_solution: No worked solution is shown during the diagnostic.
+  branching:
+    on_submit: Record correctness as diagnostic evidence, do not reveal correctness, advance to the next diagnostic item.
+    next: Next diagnostic item or diagnostic routing result.
+  success_reaction:
+    mode: silent
+    context_override: null
+    selection_rule: No spoken success reaction in this stage.
+- id: DEC-19-D02
+  stage: diagnostic
+  target: Solve a mixed multi-step decimal problem
+  ao: AO3
+  difficulty: 2
+  prompt: A taxi charges £3.20 plus £1.60 per km. What is the cost of a 4.5 km journey?
+  response:
+    type: decimal
+    keyboard_submit: true
+    input_label: £
+    placeholder: null
+    accept_numeric_equivalent: true
+  answer:
+    value: '10.4'
+  attempt_policy:
+    policy: single_submit_silent
+    max_attempts_before_resolution: 1
+    feedback_timing: none_during_diagnostic
+    submit_label: Next
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: null
+    on_incorrect_attempt_1: Record the response silently and move on.
+    on_incorrect_attempt_2: Not applicable in diagnostic.
+    worked_explanation: No worked solution is shown during the diagnostic.
+  mathematical_support:
+    hint_1: null
+    hint_2: null
+    worked_solution: No worked solution is shown during the diagnostic.
+  branching:
+    on_submit: Record correctness as diagnostic evidence, do not reveal correctness, advance to the next diagnostic item.
+    next: Next diagnostic item or diagnostic routing result.
+  success_reaction:
+    mode: silent
+    context_override: null
+    selection_rule: No spoken success reaction in this stage.
+- id: DEC-19-C01
+  stage: teaching_checkpoint
+  target: Solve a mixed multi-step decimal problem
+  ao: AO3
+  difficulty: 2
+  prompt: Two pens cost £1.85 each and three folders cost £0.95 each. Total cost?
+  response:
+    type: decimal
+    keyboard_submit: true
+    input_label: £
+    placeholder: null
+    accept_numeric_equivalent: true
+  answer:
+    value: '6.55'
+  attempt_policy:
+    policy: hint_retry_show_then_recovery
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: Build the operation chain from the relationships, complete every step, and check the unit; the result
+      is 6.55 £.
+    on_incorrect_attempt_1: Write the full operation chain before calculating.
+    on_incorrect_attempt_2: Complete each intermediate step, then check the final magnitude and unit.
+    worked_explanation: Build the operation chain from the relationships, complete every step, and check the unit; the
+      result is 6.55 £.
+  mathematical_support:
+    hint_1: Write the full operation chain before calculating.
+    hint_2: Complete each intermediate step, then check the final magnitude and unit.
+    worked_solution: Build the operation chain from the relationships, complete every step, and check the unit; the result
+      is 6.55 £.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null
+      and continue.
+    on_incorrect_attempt_1: Speak the first authored hint, focus the relevant mathematical object, then retry the same
+      item.
+    on_incorrect_attempt_2: Speak the second authored hint, reveal the critical step and worked explanation, then continue
+      or route to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the response area and focus the exact decimal relationship referenced by hint 1; never
+      shake the whole screen.
+    incorrect_attempt_2: Reveal the critical authored mathematical step or representation, then show the worked explanation.
+  recovery_item_ref: DEC-19-R01
+- id: DEC-19-C02
+  stage: teaching_checkpoint
+  target: Solve a mixed multi-step decimal problem
+  ao: AO3
+  difficulty: 2
+  prompt: A route is 12.5 km then 8.75 km, but a 3.2 km section is skipped. Distance travelled?
+  response:
+    type: decimal
+    keyboard_submit: true
+    input_label: km
+    placeholder: null
+    accept_numeric_equivalent: true
+  answer:
+    value: '18.05'
+  attempt_policy:
+    policy: hint_retry_show_then_recovery
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: Build the operation chain from the relationships, complete every step, and check the unit; the result
+      is 18.05 km.
+    on_incorrect_attempt_1: Write the full operation chain before calculating.
+    on_incorrect_attempt_2: Complete each intermediate step, then check the final magnitude and unit.
+    worked_explanation: Build the operation chain from the relationships, complete every step, and check the unit; the
+      result is 18.05 km.
+  mathematical_support:
+    hint_1: Write the full operation chain before calculating.
+    hint_2: Complete each intermediate step, then check the final magnitude and unit.
+    worked_solution: Build the operation chain from the relationships, complete every step, and check the unit; the result
+      is 18.05 km.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null
+      and continue.
+    on_incorrect_attempt_1: Speak the first authored hint, focus the relevant mathematical object, then retry the same
+      item.
+    on_incorrect_attempt_2: Speak the second authored hint, reveal the critical step and worked explanation, then continue
+      or route to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the response area and focus the exact decimal relationship referenced by hint 1; never
+      shake the whole screen.
+    incorrect_attempt_2: Reveal the critical authored mathematical step or representation, then show the worked explanation.
+  recovery_item_ref: DEC-19-R02
+- id: DEC-19-C03
+  stage: teaching_checkpoint
+  target: Solve a mixed multi-step decimal problem
+  ao: AO3
+  difficulty: 2
+  prompt: You have £50. Buy 4 items at £6.25 each and pay £7.80 delivery. Money left?
+  response:
+    type: decimal
+    keyboard_submit: true
+    input_label: £
+    placeholder: null
+    accept_numeric_equivalent: true
+  answer:
+    value: '17.2'
+  attempt_policy:
+    policy: hint_retry_show_then_recovery
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: Build the operation chain from the relationships, complete every step, and check the unit; the result
+      is 17.2 £.
+    on_incorrect_attempt_1: Write the full operation chain before calculating.
+    on_incorrect_attempt_2: Complete each intermediate step, then check the final magnitude and unit.
+    worked_explanation: Build the operation chain from the relationships, complete every step, and check the unit; the
+      result is 17.2 £.
+  mathematical_support:
+    hint_1: Write the full operation chain before calculating.
+    hint_2: Complete each intermediate step, then check the final magnitude and unit.
+    worked_solution: Build the operation chain from the relationships, complete every step, and check the unit; the result
+      is 17.2 £.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null
+      and continue.
+    on_incorrect_attempt_1: Speak the first authored hint, focus the relevant mathematical object, then retry the same
+      item.
+    on_incorrect_attempt_2: Speak the second authored hint, reveal the critical step and worked explanation, then continue
+      or route to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the response area and focus the exact decimal relationship referenced by hint 1; never
+      shake the whole screen.
+    incorrect_attempt_2: Reveal the critical authored mathematical step or representation, then show the worked explanation.
+  recovery_item_ref: DEC-19-R03
+- id: DEC-19-G01
+  stage: guided
+  target: Solve a mixed multi-step decimal problem
+  ao: AO3
+  difficulty: 2
+  prompt: A 9.6 m ribbon is cut into 0.8 m pieces and 3 pieces are used. How many metres remain?
+  response:
+    type: decimal
+    keyboard_submit: true
+    input_label: m
+    placeholder: null
+    accept_numeric_equivalent: true
+  answer:
+    value: '7.2'
+  attempt_policy:
+    policy: hint_retry_show_then_recovery
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: Build the operation chain from the relationships, complete every step, and check the unit; the result
+      is 7.2 m.
+    on_incorrect_attempt_1: Write the full operation chain before calculating.
+    on_incorrect_attempt_2: Complete each intermediate step, then check the final magnitude and unit.
+    worked_explanation: Build the operation chain from the relationships, complete every step, and check the unit; the
+      result is 7.2 m.
+  mathematical_support:
+    hint_1: Write the full operation chain before calculating.
+    hint_2: Complete each intermediate step, then check the final magnitude and unit.
+    worked_solution: Build the operation chain from the relationships, complete every step, and check the unit; the result
+      is 7.2 m.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null
+      and continue.
+    on_incorrect_attempt_1: Speak the first authored hint, focus the relevant mathematical object, then retry the same
+      item.
+    on_incorrect_attempt_2: Speak the second authored hint, reveal the critical step and worked explanation, then continue
+      or route to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the response area and focus the exact decimal relationship referenced by hint 1; never
+      shake the whole screen.
+    incorrect_attempt_2: Reveal the critical authored mathematical step or representation, then show the worked explanation.
+  recovery_item_ref: DEC-19-R01
+- id: DEC-19-F01
+  stage: faded
+  target: Solve a mixed multi-step decimal problem
+  ao: AO3
+  difficulty: 3
+  prompt: Six bottles hold 0.75 L each. 1.2 L is poured out. How much remains?
+  response:
+    type: decimal
+    keyboard_submit: true
+    input_label: L
+    placeholder: null
+    accept_numeric_equivalent: true
+  answer:
+    value: '3.3'
+  attempt_policy:
+    policy: hint_retry_show_then_recovery
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: Build the operation chain from the relationships, complete every step, and check the unit; the result
+      is 3.3 L.
+    on_incorrect_attempt_1: Write the full operation chain before calculating.
+    on_incorrect_attempt_2: Complete each intermediate step, then check the final magnitude and unit.
+    worked_explanation: Build the operation chain from the relationships, complete every step, and check the unit; the
+      result is 3.3 L.
+  mathematical_support:
+    hint_1: Write the full operation chain before calculating.
+    hint_2: Complete each intermediate step, then check the final magnitude and unit.
+    worked_solution: Build the operation chain from the relationships, complete every step, and check the unit; the result
+      is 3.3 L.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null
+      and continue.
+    on_incorrect_attempt_1: Speak the first authored hint, focus the relevant mathematical object, then retry the same
+      item.
+    on_incorrect_attempt_2: Speak the second authored hint, reveal the critical step and worked explanation, then continue
+      or route to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the response area and focus the exact decimal relationship referenced by hint 1; never
+      shake the whole screen.
+    incorrect_attempt_2: Reveal the critical authored mathematical step or representation, then show the worked explanation.
+  recovery_item_ref: DEC-19-R02
+- id: DEC-19-I01
+  stage: independent
+  target: Solve a mixed multi-step decimal problem
+  ao: AO3
+  difficulty: 3
+  prompt: A 2.4 m by 1.8 m mat costs £3 per square metre. Total cost?
+  response:
+    type: decimal
+    keyboard_submit: true
+    input_label: £
+    placeholder: null
+    accept_numeric_equivalent: true
+  answer:
+    value: '12.96'
+  attempt_policy:
+    policy: hint_retry_show_then_recovery
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: Build the operation chain from the relationships, complete every step, and check the unit; the result
+      is 12.96 £.
+    on_incorrect_attempt_1: Write the full operation chain before calculating.
+    on_incorrect_attempt_2: Complete each intermediate step, then check the final magnitude and unit.
+    worked_explanation: Build the operation chain from the relationships, complete every step, and check the unit; the
+      result is 12.96 £.
+  mathematical_support:
+    hint_1: Write the full operation chain before calculating.
+    hint_2: Complete each intermediate step, then check the final magnitude and unit.
+    worked_solution: Build the operation chain from the relationships, complete every step, and check the unit; the result
+      is 12.96 £.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null
+      and continue.
+    on_incorrect_attempt_1: Speak the first authored hint, focus the relevant mathematical object, then retry the same
+      item.
+    on_incorrect_attempt_2: Speak the second authored hint, reveal the critical step and worked explanation, then continue
+      or route to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the response area and focus the exact decimal relationship referenced by hint 1; never
+      shake the whole screen.
+    incorrect_attempt_2: Reveal the critical authored mathematical step or representation, then show the worked explanation.
+  recovery_item_ref: DEC-19-R03
+- id: DEC-19-P01
+  stage: practice
+  target: Solve a mixed multi-step decimal problem
+  ao: AO3
+  difficulty: 3
+  prompt: You have £20. Buy 2 items at £3.75 and 4 items at £1.20. Money left?
+  response:
+    type: decimal
+    keyboard_submit: true
+    input_label: £
+    placeholder: null
+    accept_numeric_equivalent: true
+  answer:
+    value: '7.7'
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: Build the operation chain from the relationships, complete every step, and check the unit; the result
+      is 7.7 £.
+    on_incorrect_attempt_1: Write the full operation chain before calculating.
+    on_incorrect_attempt_2: Complete each intermediate step, then check the final magnitude and unit.
+    worked_explanation: Build the operation chain from the relationships, complete every step, and check the unit; the
+      result is 7.7 £.
+  mathematical_support:
+    hint_1: Write the full operation chain before calculating.
+    hint_2: Complete each intermediate step, then check the final magnitude and unit.
+    worked_solution: Build the operation chain from the relationships, complete every step, and check the unit; the result
+      is 7.7 £.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null
+      and continue.
+    on_incorrect_attempt_1: Speak the first authored hint, focus the relevant mathematical object, then retry the same
+      item.
+    on_incorrect_attempt_2: Speak the second authored hint, reveal the critical step and worked explanation, then continue
+      or route to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the response area and focus the exact decimal relationship referenced by hint 1; never
+      shake the whole screen.
+    incorrect_attempt_2: Reveal the critical authored mathematical step or representation, then show the worked explanation.
+- id: DEC-19-P02
+  stage: practice
+  target: Solve a mixed multi-step decimal problem
+  ao: AO3
+  difficulty: 3
+  prompt: A tank has 18.6 L shared into 3 containers; then 0.4 L is removed from each. How much remains in each?
+  response:
+    type: decimal
+    keyboard_submit: true
+    input_label: L
+    placeholder: null
+    accept_numeric_equivalent: true
+  answer:
+    value: '5.8'
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: Build the operation chain from the relationships, complete every step, and check the unit; the result
+      is 5.8 L.
+    on_incorrect_attempt_1: Write the full operation chain before calculating.
+    on_incorrect_attempt_2: Complete each intermediate step, then check the final magnitude and unit.
+    worked_explanation: Build the operation chain from the relationships, complete every step, and check the unit; the
+      result is 5.8 L.
+  mathematical_support:
+    hint_1: Write the full operation chain before calculating.
+    hint_2: Complete each intermediate step, then check the final magnitude and unit.
+    worked_solution: Build the operation chain from the relationships, complete every step, and check the unit; the result
+      is 5.8 L.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null
+      and continue.
+    on_incorrect_attempt_1: Speak the first authored hint, focus the relevant mathematical object, then retry the same
+      item.
+    on_incorrect_attempt_2: Speak the second authored hint, reveal the critical step and worked explanation, then continue
+      or route to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the response area and focus the exact decimal relationship referenced by hint 1; never
+      shake the whole screen.
+    incorrect_attempt_2: Reveal the critical authored mathematical step or representation, then show the worked explanation.
+- id: DEC-19-P03
+  stage: practice
+  target: Solve a mixed multi-step decimal problem
+  ao: AO3
+  difficulty: 3
+  prompt: A builder uses 4 pieces of 1.25 m and then cuts 0.8 m from the total. Final length?
+  response:
+    type: decimal
+    keyboard_submit: true
+    input_label: m
+    placeholder: null
+    accept_numeric_equivalent: true
+  answer:
+    value: '4.2'
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: Build the operation chain from the relationships, complete every step, and check the unit; the result
+      is 4.2 m.
+    on_incorrect_attempt_1: Write the full operation chain before calculating.
+    on_incorrect_attempt_2: Complete each intermediate step, then check the final magnitude and unit.
+    worked_explanation: Build the operation chain from the relationships, complete every step, and check the unit; the
+      result is 4.2 m.
+  mathematical_support:
+    hint_1: Write the full operation chain before calculating.
+    hint_2: Complete each intermediate step, then check the final magnitude and unit.
+    worked_solution: Build the operation chain from the relationships, complete every step, and check the unit; the result
+      is 4.2 m.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null
+      and continue.
+    on_incorrect_attempt_1: Speak the first authored hint, focus the relevant mathematical object, then retry the same
+      item.
+    on_incorrect_attempt_2: Speak the second authored hint, reveal the critical step and worked explanation, then continue
+      or route to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the response area and focus the exact decimal relationship referenced by hint 1; never
+      shake the whole screen.
+    incorrect_attempt_2: Reveal the critical authored mathematical step or representation, then show the worked explanation.
+- id: DEC-19-P04
+  stage: practice
+  target: Solve a mixed multi-step decimal problem
+  ao: AO3
+  difficulty: 3
+  prompt: A £30 budget buys 5 items at £2.40 and 3 items at £1.50. Money left?
+  response:
+    type: decimal
+    keyboard_submit: true
+    input_label: £
+    placeholder: null
+    accept_numeric_equivalent: true
+  answer:
+    value: '13.5'
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: Build the operation chain from the relationships, complete every step, and check the unit; the result
+      is 13.5 £.
+    on_incorrect_attempt_1: Write the full operation chain before calculating.
+    on_incorrect_attempt_2: Complete each intermediate step, then check the final magnitude and unit.
+    worked_explanation: Build the operation chain from the relationships, complete every step, and check the unit; the
+      result is 13.5 £.
+  mathematical_support:
+    hint_1: Write the full operation chain before calculating.
+    hint_2: Complete each intermediate step, then check the final magnitude and unit.
+    worked_solution: Build the operation chain from the relationships, complete every step, and check the unit; the result
+      is 13.5 £.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null
+      and continue.
+    on_incorrect_attempt_1: Speak the first authored hint, focus the relevant mathematical object, then retry the same
+      item.
+    on_incorrect_attempt_2: Speak the second authored hint, reveal the critical step and worked explanation, then continue
+      or route to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the response area and focus the exact decimal relationship referenced by hint 1; never
+      shake the whole screen.
+    incorrect_attempt_2: Reveal the critical authored mathematical step or representation, then show the worked explanation.
+- id: DEC-19-P05
+  stage: practice
+  target: Solve a mixed multi-step decimal problem
+  ao: AO3
+  difficulty: 3
+  prompt: A rectangle is 3.25 m by 0.48 m. Its area is shared equally into 3 sections. Area per section?
+  response:
+    type: decimal
+    keyboard_submit: true
+    input_label: m²
+    placeholder: null
+    accept_numeric_equivalent: true
+  answer:
+    value: '0.52'
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: Build the operation chain from the relationships, complete every step, and check the unit; the result
+      is 0.52 m².
+    on_incorrect_attempt_1: Write the full operation chain before calculating.
+    on_incorrect_attempt_2: Complete each intermediate step, then check the final magnitude and unit.
+    worked_explanation: Build the operation chain from the relationships, complete every step, and check the unit; the
+      result is 0.52 m².
+  mathematical_support:
+    hint_1: Write the full operation chain before calculating.
+    hint_2: Complete each intermediate step, then check the final magnitude and unit.
+    worked_solution: Build the operation chain from the relationships, complete every step, and check the unit; the result
+      is 0.52 m².
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null
+      and continue.
+    on_incorrect_attempt_1: Speak the first authored hint, focus the relevant mathematical object, then retry the same
+      item.
+    on_incorrect_attempt_2: Speak the second authored hint, reveal the critical step and worked explanation, then continue
+      or route to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the response area and focus the exact decimal relationship referenced by hint 1; never
+      shake the whole screen.
+    incorrect_attempt_2: Reveal the critical authored mathematical step or representation, then show the worked explanation.
+- id: DEC-19-E01
+  stage: exit
+  target: Solve a mixed multi-step decimal problem
+  ao: AO3
+  difficulty: 3
+  prompt: A 12.6 kg load is split into 0.3 kg packets. 5 packets are removed. How many packets remain?
+  response:
+    type: decimal
+    keyboard_submit: true
+    input_label: packets
+    placeholder: null
+    accept_numeric_equivalent: true
+  answer:
+    value: '37'
+  attempt_policy:
+    policy: single_submit_deferred_feedback
+    max_attempts_before_resolution: 1
+    feedback_timing: after_mastery_decision
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: null
+    on_incorrect_attempt_1: No hint or correctness message during the independent exit or confirmation check.
+    on_incorrect_attempt_2: Not applicable; one submission only.
+    worked_explanation: 'After scoring: Build the operation chain from the relationships, complete every step, and check
+      the unit; the result is 37 packets.'
+  mathematical_support:
+    hint_1: null
+    hint_2: null
+    worked_solution: Build the operation chain from the relationships, complete every step, and check the unit; the result
+      is 37 packets.
+  branching:
+    on_submit: Lock the response and record first-attempt correctness without revealing it immediately.
+    next: Continue the exit sequence; reveal worked feedback only after the mastery decision.
+  success_reaction:
+    mode: silent
+    context_override: null
+    selection_rule: No spoken success reaction in this stage.
+- id: DEC-19-E02
+  stage: exit
+  target: Solve a mixed multi-step decimal problem
+  ao: AO3
+  difficulty: 3
+  prompt: A fare is £2.75 plus 3 units at £1.80 each. Then a £0.40 discount is applied. Final fare?
+  response:
+    type: decimal
+    keyboard_submit: true
+    input_label: £
+    placeholder: null
+    accept_numeric_equivalent: true
+  answer:
+    value: '7.75'
+  attempt_policy:
+    policy: single_submit_deferred_feedback
+    max_attempts_before_resolution: 1
+    feedback_timing: after_mastery_decision
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: null
+    on_incorrect_attempt_1: No hint or correctness message during the independent exit or confirmation check.
+    on_incorrect_attempt_2: Not applicable; one submission only.
+    worked_explanation: 'After scoring: Build the operation chain from the relationships, complete every step, and check
+      the unit; the result is 7.75 £.'
+  mathematical_support:
+    hint_1: null
+    hint_2: null
+    worked_solution: Build the operation chain from the relationships, complete every step, and check the unit; the result
+      is 7.75 £.
+  branching:
+    on_submit: Lock the response and record first-attempt correctness without revealing it immediately.
+    next: Continue the exit sequence; reveal worked feedback only after the mastery decision.
+  success_reaction:
+    mode: silent
+    context_override: null
+    selection_rule: No spoken success reaction in this stage.
+- id: DEC-19-E03
+  stage: confirmation
+  target: Solve a mixed multi-step decimal problem
+  ao: AO3
+  difficulty: 3
+  prompt: 0.35 kg is used per batch for 6 batches. If 0.4 kg remains unused from a 2.5 kg bag, how much of the bag was
+    actually used?
+  response:
+    type: decimal
+    keyboard_submit: true
+    input_label: kg
+    placeholder: null
+    accept_numeric_equivalent: true
+  answer:
+    value: '2.1'
+  attempt_policy:
+    policy: single_submit_deferred_feedback
+    max_attempts_before_resolution: 1
+    feedback_timing: after_mastery_decision
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: null
+    on_incorrect_attempt_1: No hint or correctness message during the independent exit or confirmation check.
+    on_incorrect_attempt_2: Not applicable; one submission only.
+    worked_explanation: 'After scoring: Build the operation chain from the relationships, complete every step, and check
+      the unit; the result is 2.1 kg.'
+  mathematical_support:
+    hint_1: null
+    hint_2: null
+    worked_solution: Build the operation chain from the relationships, complete every step, and check the unit; the result
+      is 2.1 kg.
+  branching:
+    on_submit: Lock the response and record first-attempt correctness without revealing it immediately.
+    next: Continue the exit sequence; reveal worked feedback only after the mastery decision.
+  success_reaction:
+    mode: silent
+    context_override: null
+    selection_rule: No spoken success reaction in this stage.
+- id: DEC-19-E04
+  stage: confirmation
+  target: Solve a mixed multi-step decimal problem
+  ao: AO3
+  difficulty: 3
+  prompt: A shop sells 8 items at £1.25 each. A customer pays £20. What change?
+  response:
+    type: decimal
+    keyboard_submit: true
+    input_label: £
+    placeholder: null
+    accept_numeric_equivalent: true
+  answer:
+    value: '10'
+  attempt_policy:
+    policy: single_submit_deferred_feedback
+    max_attempts_before_resolution: 1
+    feedback_timing: after_mastery_decision
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: null
+    on_incorrect_attempt_1: No hint or correctness message during the independent exit or confirmation check.
+    on_incorrect_attempt_2: Not applicable; one submission only.
+    worked_explanation: 'After scoring: Build the operation chain from the relationships, complete every step, and check
+      the unit; the result is 10 £.'
+  mathematical_support:
+    hint_1: null
+    hint_2: null
+    worked_solution: Build the operation chain from the relationships, complete every step, and check the unit; the result
+      is 10 £.
+  branching:
+    on_submit: Lock the response and record first-attempt correctness without revealing it immediately.
+    next: Continue the exit sequence; reveal worked feedback only after the mastery decision.
+  success_reaction:
+    mode: silent
+    context_override: null
+    selection_rule: No spoken success reaction in this stage.
+- id: DEC-19-R01
+  stage: recovery
+  target: Solve a mixed multi-step decimal problem
+  ao: AO3
+  difficulty: 3
+  prompt: A 15.75 L supply is shared among 5 tanks, then each tank receives another 0.35 L. Final amount per tank?
+  response:
+    type: decimal
+    keyboard_submit: true
+    input_label: L
+    placeholder: null
+    accept_numeric_equivalent: true
+  answer:
+    value: '3.5'
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: Build the operation chain from the relationships, complete every step, and check the unit; the result
+      is 3.5 L.
+    on_incorrect_attempt_1: Write the full operation chain before calculating.
+    on_incorrect_attempt_2: Complete each intermediate step, then check the final magnitude and unit.
+    worked_explanation: Build the operation chain from the relationships, complete every step, and check the unit; the
+      result is 3.5 L.
+  mathematical_support:
+    hint_1: Write the full operation chain before calculating.
+    hint_2: Complete each intermediate step, then check the final magnitude and unit.
+    worked_solution: Build the operation chain from the relationships, complete every step, and check the unit; the result
+      is 3.5 L.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null
+      and continue.
+    on_incorrect_attempt_1: Speak the first authored hint, focus the relevant mathematical object, then retry the same
+      item.
+    on_incorrect_attempt_2: Speak the second authored hint, reveal the critical step and worked explanation, then continue
+      or route to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the response area and focus the exact decimal relationship referenced by hint 1; never
+      shake the whole screen.
+    incorrect_attempt_2: Reveal the critical authored mathematical step or representation, then show the worked explanation.
+- id: DEC-19-R02
+  stage: recovery
+  target: Solve a mixed multi-step decimal problem
+  ao: AO3
+  difficulty: 3
+  prompt: A 4.8 km route is repeated 2.5 times, then 1.2 km is removed from the plan. Final distance?
+  response:
+    type: decimal
+    keyboard_submit: true
+    input_label: km
+    placeholder: null
+    accept_numeric_equivalent: true
+  answer:
+    value: '10.8'
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: Build the operation chain from the relationships, complete every step, and check the unit; the result
+      is 10.8 km.
+    on_incorrect_attempt_1: Write the full operation chain before calculating.
+    on_incorrect_attempt_2: Complete each intermediate step, then check the final magnitude and unit.
+    worked_explanation: Build the operation chain from the relationships, complete every step, and check the unit; the
+      result is 10.8 km.
+  mathematical_support:
+    hint_1: Write the full operation chain before calculating.
+    hint_2: Complete each intermediate step, then check the final magnitude and unit.
+    worked_solution: Build the operation chain from the relationships, complete every step, and check the unit; the result
+      is 10.8 km.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null
+      and continue.
+    on_incorrect_attempt_1: Speak the first authored hint, focus the relevant mathematical object, then retry the same
+      item.
+    on_incorrect_attempt_2: Speak the second authored hint, reveal the critical step and worked explanation, then continue
+      or route to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the response area and focus the exact decimal relationship referenced by hint 1; never
+      shake the whole screen.
+    incorrect_attempt_2: Reveal the critical authored mathematical step or representation, then show the worked explanation.
+- id: DEC-19-R03
+  stage: recovery
+  target: Solve a mixed multi-step decimal problem
+  ao: AO3
+  difficulty: 3
+  prompt: Three 0.84 kg parcels and two 1.25 kg parcels are combined. Total mass?
+  response:
+    type: decimal
+    keyboard_submit: true
+    input_label: kg
+    placeholder: null
+    accept_numeric_equivalent: true
+  answer:
+    value: '5.02'
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: Build the operation chain from the relationships, complete every step, and check the unit; the result
+      is 5.02 kg.
+    on_incorrect_attempt_1: Write the full operation chain before calculating.
+    on_incorrect_attempt_2: Complete each intermediate step, then check the final magnitude and unit.
+    worked_explanation: Build the operation chain from the relationships, complete every step, and check the unit; the
+      result is 5.02 kg.
+  mathematical_support:
+    hint_1: Write the full operation chain before calculating.
+    hint_2: Complete each intermediate step, then check the final magnitude and unit.
+    worked_solution: Build the operation chain from the relationships, complete every step, and check the unit; the result
+      is 5.02 kg.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null
+      and continue.
+    on_incorrect_attempt_1: Speak the first authored hint, focus the relevant mathematical object, then retry the same
+      item.
+    on_incorrect_attempt_2: Speak the second authored hint, reveal the critical step and worked explanation, then continue
+      or route to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the response area and focus the exact decimal relationship referenced by hint 1; never
+      shake the whole screen.
+    incorrect_attempt_2: Reveal the critical authored mathematical step or representation, then show the worked explanation.
+progress_and_persistence:
+  states:
+  - UNSEEN
+  - NEEDS_WORK
+  - LEARNING
+  - SECURE
+  on_lesson_start: Write LEARNING unless already SECURE and learner explicitly chose to review.
+  commit_points:
+  - after each submitted answer
+  - after each completed teaching checkpoint
+  - on phase transition
+  - on exit completion
+  - on completion screen
+  resume_payload:
+  - skill_id
+  - lesson_attempt_id
+  - current_step_id
+  - submitted_answers
+  - attempt_counts
+  - seen_recovery_items
+  - exit_state
+  - used_ryan_reaction_ids
+  history_policy: Starting again creates a new lesson attempt and does not delete previous attempts.
+analytics_events:
+  minimum_events:
+  - skill_started
+  - step_viewed
+  - answer_submitted
+  - hint_shown
+  - worked_solution_shown
+  - recovery_item_started
+  - phase_completed
+  - exit_completed
+  - skill_completed
+  privacy_note: Store only data required for learning/progress analytics; this file does not define personal profile
+    fields.
+qa:
+  schema_validated: true
+  maths_answers_verified: true
+  curriculum_human_reviewed: false
+  scripts_human_reviewed: false
+  animation_storyboard_human_reviewed: false
+  branching_reference_validated: true
+  engine_render_tested: false
+  reduced_motion_tested: false
+  keyboard_accessibility_tested: false
+  student_calibration_tested: false
+  acceptance_criteria:
+  - Every learner-facing mathematical line is present in the YAML; Codex adds none.
+  - Every question has a canonical answer and exact response type.
+  - Exactly 20 authored question-bank items and 10 teaching scenes are present.
+  - Every interactive non-diagnostic/non-exit item defines correct, first-wrong, second-wrong and worked-resolution behaviour.
+  - Every recovery reference resolves to an authored recovery item in the same skill.
+  - No exit hint or correctness reveal appears before the mastery decision.
+  - Decimal points, signs and units remain attached to the quantities they represent during animation.
+  - Refresh resumes without losing submitted progress or used Ryan reaction history.
+  - The package uses one shared engine rather than a skill-specific route or lesson engine.
+  - Ownership-review aliases never create duplicate mastery states in production.

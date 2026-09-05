@@ -1,0 +1,2272 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "AF-17 - Solve multi-step fraction problems",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-19",
+      "sha256": "b51a65b0248404e645089c309bfd15a5910f5a19751e2e15d849ed11390041b3"
+    },
+    "authored_scope": "Solve two linked addition or subtraction steps and use the first result in the second step.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "AF17-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "verified_desktop_secure_mobile_locked_nonmastery_exact_equivalents_drafts_resume_feedback_four_stage_working_320_390_layouts",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        14,
+        16,
+        17
+      ],
+      "source_repairs_consulted": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        18,
+        19
+      ],
+      "note": "All 19 source pages and the bulk configuration read; active pages visually checked. Source numbers, names, options, guided blanks and three final checks retained. Exact equivalent forms are accepted, including improper fractions and whole-number results. Final-value matches are not proof of an unseen operation sequence. Structure selections provide separate evidence. Walking and cycling answers represent final distance from the starting point, not total distance travelled. No Entry, Diagnostic or delayed Retrieval is activated."
+    }
+  },
+  "identity": {
+    "id": "AF-17",
+    "slug": "solve-multi-step-fraction-problems",
+    "title": "Solve multi-step fraction problems",
+    "strand": "Number",
+    "cluster": "Adding and Subtracting Fractions",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Solve exactly two linked addition/subtraction events, carry the updated amount into the second event and give the final requested quantity.",
+    "success_criteria": [
+      "Identify both event operations.",
+      "Use the updated first result in the second event.",
+      "Complete both events, rather than submitting an intermediate value.",
+      "Distinguish final position from total distance travelled.",
+      "Accept exact equivalent forms and valid arithmetic regrouping."
+    ],
+    "boundaries": {
+      "includes": [
+        "Two linked addition/subtraction events",
+        "Add then subtract and subtract then subtract",
+        "Proper, improper and mixed fractions",
+        "Direct bracketed expressions",
+        "Paint, cyclist, fabric, boards, water, material and Priya’s journey"
+      ],
+      "excludes": [
+        "Multiplication or division",
+        "Three or more operations",
+        "Negative final amounts",
+        "Algebra, percentages and ratio",
+        "Typed written explanations",
+        "Entry, Diagnostic and delayed Retrieval"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "AF-10",
+      "AF-13",
+      "AF-15",
+      "AF-16"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for AF-10, AF-13, AF-15, AF-16 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "integer",
+      "fraction",
+      "single_choice"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    }
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "Each event changes the current amount.",
+    "invariant": "The second event acts on the updated quantity; equivalent arithmetic must preserve the complete expression.",
+    "mathematical_rule": "Identify both events, calculate the updated amount, apply the second event and check the final requested quantity.",
+    "must_notice": [
+      "The first result is intermediate.",
+      "The original amount is not independently reused for the second event.",
+      "Returning along a route reduces distance from the start.",
+      "An exact valid regrouping is accepted."
+    ],
+    "common_confusions": [
+      "Intermediate value submitted as final",
+      "Wrong operation for an event",
+      "Original amount reused for the second event",
+      "Total distance confused with final position",
+      "Fraction calculation error despite a correct plan"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "Track both changes",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Track both changes",
+          "initial_state": "Track both changes",
+          "model": {
+            "kind": "additive_timeline",
+            "object": "container",
+            "title": "Two events change the amount",
+            "start": "3/4",
+            "first": "2/5",
+            "second": "1/3",
+            "first_operation": "add",
+            "start_label": "Container at the start",
+            "first_label": "Further liquid added",
+            "second_label": "Liquid then used",
+            "middle_label": "After the first event",
+            "final_label": "Liquid left",
+            "plan": "Add the further liquid, then subtract the liquid used from the updated amount.",
+            "unit": "L",
+            "unit_name": "litre",
+            "first_working": "3/4 + 2/5 = 15/20 + 8/20 = 23/20",
+            "second_working": "23/20 − 1/3 = 69/60 − 20/60 = 49/60",
+            "math_text": true,
+            "compact_captions": true,
+            "symbolic_flow": true
+          }
+        },
+        "narration": {
+          "script": "The first event changes the amount available. The second event acts on that updated amount. Follow both changes before answering the final question."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Explain the link between the steps",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Explain the link between the steps",
+          "initial_state": "Explain the link between the steps",
+          "model": {
+            "kind": "guided_equation",
+            "object": "linked_additive_steps",
+            "label": "Explain the link between the events",
+            "expression": "First event → second event",
+            "completed": "The first event changes the amount available before the second event happens.",
+            "response_kind": "explanation",
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Choose why the first result is carried into the second event."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "AF-17-C01"
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Find the water available after pouring in",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Find the water available after pouring in",
+          "initial_state": "Find the water available after pouring in",
+          "model": {
+            "kind": "additive_timeline",
+            "object": "tank",
+            "title": "Water added, then water used",
+            "start": "2 1/3",
+            "first": "3/4",
+            "second": "5/6",
+            "first_operation": "add",
+            "start_label": "Water in the tank",
+            "first_label": "Water poured in",
+            "second_label": "Water then used",
+            "middle_label": "Water after pouring in",
+            "final_label": "Water left",
+            "plan": "Add the water poured in, then subtract the water used from that updated amount.",
+            "unit": "L",
+            "unit_name": "litre",
+            "first_working": "2 1/3 + 3/4 = 28/12 + 9/12 = 37/12",
+            "second_working": "37/12 − 5/6 = 37/12 − 10/12 = 9/4",
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "through": 2
+          }
+        },
+        "narration": {
+          "script": "Include the added water first. Matching fractional parts give the updated tank amount. This is an intermediate result, so there is still another event to complete."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Use the updated tank amount",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Use the updated tank amount",
+          "initial_state": "Use the updated tank amount",
+          "model": {
+            "kind": "additive_timeline",
+            "object": "tank",
+            "title": "Water added, then water used",
+            "start": "2 1/3",
+            "first": "3/4",
+            "second": "5/6",
+            "first_operation": "add",
+            "start_label": "Water in the tank",
+            "first_label": "Water poured in",
+            "second_label": "Water then used",
+            "middle_label": "Water after pouring in",
+            "final_label": "Water left",
+            "plan": "Add the water poured in, then subtract the water used from that updated amount.",
+            "unit": "L",
+            "unit_name": "litre",
+            "first_working": "2 1/3 + 3/4 = 28/12 + 9/12 = 37/12",
+            "second_working": "37/12 − 5/6 = 37/12 − 10/12 = 9/4",
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "through": 4
+          }
+        },
+        "narration": {
+          "script": "Now subtract the water used from the updated amount. The working shows matching parts and the remaining volume. This final value answers how much water is left."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Select the complete tank method",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Select the complete tank method",
+          "initial_state": "Select the complete tank method",
+          "model": {
+            "kind": "additive_timeline",
+            "object": "tank",
+            "title": "Water added, then water used",
+            "start": "2 1/3",
+            "first": "3/4",
+            "second": "5/6",
+            "first_operation": "add",
+            "start_label": "Water in the tank",
+            "first_label": "Water poured in",
+            "second_label": "Water then used",
+            "middle_label": "Water after pouring in",
+            "final_label": "Water left",
+            "plan": "Add the water poured in, then subtract the water used from that updated amount.",
+            "unit": "L",
+            "unit_name": "litre",
+            "first_working": "2 1/3 + 3/4 = 28/12 + 9/12 = 37/12",
+            "second_working": "37/12 − 5/6 = 37/12 − 10/12 = 9/4",
+            "math_text": true,
+            "compact_captions": true,
+            "selection": true,
+            "completed": "(2 1/3 + 3/4) − 5/6"
+          }
+        },
+        "narration": {
+          "script": "Choose a method that includes both events and keeps their relationship intact."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "AF-17-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "AF-17-G01",
+        "support_level": "high",
+        "pre_question_script": "Follow the rope through two cuts. Start by identifying the first calculation.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "AF-17-G02",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "faded",
+        "question_ref": "AF-17-G03",
+        "support_level": "reduced",
+        "pre_question_script": "",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "faded",
+        "question_ref": "AF-17-G04",
+        "support_level": "reduced",
+        "pre_question_script": "",
+        "correct_next": "G05"
+      },
+      "G05": {
+        "stage": "faded",
+        "question_ref": "AF-17-G05",
+        "support_level": "reduced",
+        "pre_question_script": "",
+        "correct_next": "G06"
+      },
+      "G06": {
+        "stage": "independent_transfer",
+        "question_ref": "AF-17-G06",
+        "support_level": "none",
+        "pre_question_script": "",
+        "correct_next": "P01"
+      }
+    },
+    "practice": {
+      "intro_script": "Solve each complete problem without step prompts. Give the final requested quantity, using an exact fraction or mixed number.",
+      "question_order": [
+        "AF-17-P01",
+        "AF-17-P02",
+        "AF-17-P03",
+        "AF-17-P04",
+        "AF-17-P05",
+        "AF-17-P06",
+        "AF-17-P07",
+        "AF-17-X01",
+        "AF-17-X02",
+        "AF-17-X03",
+        "AF-17-X04"
+      ],
+      "question_count": 11
+    },
+    "exit": {
+      "intro_script": "Complete both final problems and the structure check. No hints are available, and each submitted response locks.",
+      "primary_question_refs": [
+        "AF-17-E01",
+        "AF-17-E02",
+        "AF-17-E03"
+      ],
+      "confirmation_question_refs": [],
+      "mastery_policy": {
+        "profile": "all_primary_unsupported",
+        "require_all": true,
+        "source_page": 14,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "Both final values and the structure check are correct. You completed the linked problems and recognised how the first result carries forward.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Check the event that needs attention",
+      "ryan_script": "One or more final checks need another pass. Keep any correct plan and use the feedback to check the updated amount, the calculation or the final quantity.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "AF-17-C01",
+      "source_ref": {
+        "page": 3
+      },
+      "stage": "practice",
+      "prompt": "Why must the result of the first step be used in the second step?",
+      "target": "Complete both linked addition/subtraction events using the updated amount and answer the final question",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "The first event changes the amount available before the second event happens.",
+          "Every multi-step question must use brackets in the final answer.",
+          "The original amount is always ignored.",
+          "The two fractions in the question must always be added."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "The first event changes the amount available before the second event happens."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Exactly. The first change updates the amount available for the second event.",
+        "correct_after_support": "Exactly. The first change updates the amount available for the second event.",
+        "on_correct_math": "The first event changes the starting amount. → The second event acts on the amount now available.",
+        "on_incorrect_attempt_1": "Consider which amount is available when the second event happens.",
+        "on_incorrect_attempt_2": "Consider which amount is available when the second event happens.",
+        "on_locked_incorrect": "Response recorded. Compare the two linked events with the working.",
+        "worked_explanation": "The first event changes the starting amount. → The second event acts on the amount now available."
+      },
+      "mathematical_support": {
+        "hint_1": "Consider which amount is available when the second event happens.",
+        "hint_2": "Record the amount after the first event. Apply the second event to that updated amount, and check which final quantity is requested.",
+        "worked_solution": "The first event changes the starting amount. → The second event acts on the amount now available."
+      },
+      "working": [
+        "The first event changes the starting amount.",
+        "The second event acts on the amount now available."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "linked_additive_steps",
+          "label": "Explain the link between the events",
+          "expression": "First event → second event",
+          "completed": "The first event changes the amount available before the second event happens.",
+          "response_kind": "explanation",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "Every multi-step question must use brackets in the final answer.": "Brackets can show the structure, but the answer may be a number with a unit. The reason concerns the updated amount.",
+        "The original amount is always ignored.": "The original amount is used in the first event. Its updated value is then carried forward.",
+        "The two fractions in the question must always be added.": "An event may add or remove an amount. Read what happens in each event."
+      },
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "AF-17-C02",
+      "source_ref": {
+        "page": 4
+      },
+      "stage": "practice",
+      "prompt": "A tank contains 2 1/3 litres of water. Another 3/4 litre is added. Then 5/6 litre is used. Which method correctly solves the complete problem?",
+      "target": "Complete both linked addition/subtraction events using the updated amount and answer the final question",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "(2 1/3 + 3/4) − 5/6",
+          "2 1/3 + (3/4 + 5/6)",
+          "2 1/3 − 3/4 − 5/6",
+          "2 1/3 + 3/4"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "(2 1/3 + 3/4) − 5/6"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The water added is included before the used water is subtracted.",
+        "correct_after_support": "Correct. The water added is included before the used water is subtracted.",
+        "on_correct_math": "The first event puts more water into the tank. → The second event removes water from the updated amount. → The complete expression is (2 1/3 + 3/4) − 5/6.",
+        "on_incorrect_attempt_1": "Include both events and match each operation to what happens to the water.",
+        "on_incorrect_attempt_2": "Include both events and match each operation to what happens to the water.",
+        "on_locked_incorrect": "Response recorded. Compare the two linked events with the working.",
+        "worked_explanation": "The first event puts more water into the tank. → The second event removes water from the updated amount. → The complete expression is (2 1/3 + 3/4) − 5/6."
+      },
+      "mathematical_support": {
+        "hint_1": "Include both events and match each operation to what happens to the water.",
+        "hint_2": "Record the amount after the first event. Apply the second event to that updated amount, and check which final quantity is requested.",
+        "worked_solution": "The first event puts more water into the tank. → The second event removes water from the updated amount. → The complete expression is (2 1/3 + 3/4) − 5/6."
+      },
+      "working": [
+        "The first event puts more water into the tank.",
+        "The second event removes water from the updated amount.",
+        "The complete expression is (2 1/3 + 3/4) − 5/6."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "additive_timeline",
+          "object": "tank",
+          "title": "Water added, then water used",
+          "start": "2 1/3",
+          "first": "3/4",
+          "second": "5/6",
+          "first_operation": "add",
+          "start_label": "Water in the tank",
+          "first_label": "Water poured in",
+          "second_label": "Water then used",
+          "middle_label": "Water after pouring in",
+          "final_label": "Water left",
+          "plan": "Add the water poured in, then subtract the water used from that updated amount.",
+          "unit": "L",
+          "unit_name": "litre",
+          "first_working": "2 1/3 + 3/4 = 28/12 + 9/12 = 37/12",
+          "second_working": "37/12 − 5/6 = 37/12 − 10/12 = 9/4",
+          "math_text": true,
+          "compact_captions": true,
+          "selection": true,
+          "completed": "(2 1/3 + 3/4) − 5/6"
+        }
+      },
+      "response_feedback": {
+        "2 1/3 + (3/4 + 5/6)": "This adds the water that is used. The second event removes water.",
+        "2 1/3 − 3/4 − 5/6": "This treats the first added amount as a removal. Match the first operation to the water poured in.",
+        "2 1/3 + 3/4": "This includes the first event only. The water used must also be subtracted."
+      },
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "evidence_profile": "additive_structure",
+      "structural_evidence": "complete_plan",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "AF-17-G01",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "A rope is 4 1/2 metres long. A piece of 1 1/3 metres is cut off, followed by a second piece of 3/4 metre. Choose the first calculation.",
+      "target": "Complete both linked addition/subtraction events using the updated amount and answer the final question",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "4 1/2 + 1 1/3",
+          "4 1/2 − 1 1/3"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "4 1/2 − 1 1/3"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The first piece is removed from the original rope.",
+        "correct_after_support": "Correct. The first piece is removed from the original rope.",
+        "on_correct_math": "The first event cuts a piece from the original rope. → The first calculation is 4 1/2 − 1 1/3.",
+        "on_incorrect_attempt_1": "Identify the first piece removed, before considering the second cut.",
+        "on_incorrect_attempt_2": "Identify the first piece removed, before considering the second cut.",
+        "on_locked_incorrect": "Response recorded. Compare the two linked events with the working.",
+        "worked_explanation": "The first event cuts a piece from the original rope. → The first calculation is 4 1/2 − 1 1/3."
+      },
+      "mathematical_support": {
+        "hint_1": "Identify the first piece removed, before considering the second cut.",
+        "hint_2": "Record the amount after the first event. Apply the second event to that updated amount, and check which final quantity is requested.",
+        "worked_solution": "The first event cuts a piece from the original rope. → The first calculation is 4 1/2 − 1 1/3."
+      },
+      "working": [
+        "The first event cuts a piece from the original rope.",
+        "The first calculation is 4 1/2 − 1 1/3."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "additive_timeline",
+          "object": "rope",
+          "title": "Two pieces cut from a rope",
+          "start": "4 1/2",
+          "first": "1 1/3",
+          "second": "3/4",
+          "first_operation": "subtract",
+          "start_label": "Original rope",
+          "first_label": "First piece cut off",
+          "second_label": "Second piece cut off",
+          "middle_label": "After the first cut",
+          "final_label": "Rope remaining",
+          "plan": "Subtract the first piece, then subtract the second piece from the remaining rope.",
+          "unit": "m",
+          "unit_name": "metre",
+          "first_working": "4 1/2 − 1 1/3 = 27/6 − 8/6 = 19/6",
+          "second_working": "19/6 − 3/4 = 38/12 − 9/12 = 29/12",
+          "math_text": true,
+          "compact_captions": true,
+          "selection": true,
+          "completed": "4 1/2 − 1 1/3"
+        }
+      },
+      "response_feedback": {
+        "4 1/2 + 1 1/3": "Adding would lengthen the rope, but the first piece is cut off."
+      },
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "evidence_profile": "additive_structure",
+      "structural_evidence": "first_event",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "AF-17-G02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "Complete the first result: 4 1/2 − 1 1/3 = 54/12 − 16/12 = ?/12.",
+      "target": "Complete both linked addition/subtraction events using the updated amount and answer the final question",
+      "response": {
+        "type": "integer",
+        "input_label": "Numerator after the first cut"
+      },
+      "answer": {
+        "value": 38
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. That numerator records the rope available after the first cut.",
+        "correct_after_support": "Correct. That numerator records the rope available after the first cut.",
+        "on_correct_math": "54/12 − 16/12 = 38/12",
+        "on_incorrect_attempt_1": "Subtract the counts of matching twelfths.",
+        "on_incorrect_attempt_2": "Subtract the counts of matching twelfths.",
+        "on_locked_incorrect": "Response recorded. Compare the two linked events with the working.",
+        "worked_explanation": "54/12 − 16/12 = 38/12"
+      },
+      "mathematical_support": {
+        "hint_1": "Subtract the counts of matching twelfths.",
+        "hint_2": "Record the amount after the first event. Apply the second event to that updated amount, and check which final quantity is requested.",
+        "worked_solution": "54/12 − 16/12 = 38/12"
+      },
+      "working": [
+        "54/12 − 16/12 = 38/12"
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "linked_additive_steps",
+          "label": "Numerator after the first cut",
+          "expression": "54/12 − 16/12 = ?/12",
+          "completed": "54/12 − 16/12 = 38/12",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {},
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "AF-17-G03",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "faded",
+      "prompt": "Use the updated amount. Complete 38/12 − 3/4 = 38/12 − ?/12.",
+      "target": "Complete both linked addition/subtraction events using the updated amount and answer the final question",
+      "response": {
+        "type": "integer",
+        "input_label": "Second piece in twelfths"
+      },
+      "answer": {
+        "value": 9
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The second cut is now represented using matching twelfths.",
+        "correct_after_support": "Correct. The second cut is now represented using matching twelfths.",
+        "on_correct_math": "38/12 − 3/4 = 38/12 − 9/12",
+        "on_incorrect_attempt_1": "Rename the second piece using twelfths, without changing its length.",
+        "on_incorrect_attempt_2": "Rename the second piece using twelfths, without changing its length.",
+        "on_locked_incorrect": "Response recorded. Compare the two linked events with the working.",
+        "worked_explanation": "38/12 − 3/4 = 38/12 − 9/12"
+      },
+      "mathematical_support": {
+        "hint_1": "Rename the second piece using twelfths, without changing its length.",
+        "hint_2": "Record the amount after the first event. Apply the second event to that updated amount, and check which final quantity is requested.",
+        "worked_solution": "38/12 − 3/4 = 38/12 − 9/12"
+      },
+      "working": [
+        "38/12 − 3/4 = 38/12 − 9/12"
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "linked_additive_steps",
+          "label": "Second piece in twelfths",
+          "expression": "38/12 − 3/4 = 38/12 − ?/12",
+          "completed": "38/12 − 3/4 = 38/12 − 9/12",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {},
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "AF-17-G04",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "faded",
+      "prompt": "Complete the second result: 38/12 − 9/12 = ?/12.",
+      "target": "Complete both linked addition/subtraction events using the updated amount and answer the final question",
+      "response": {
+        "type": "integer",
+        "input_label": "Final numerator"
+      },
+      "answer": {
+        "value": 29
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. This numerator accounts for both cuts.",
+        "correct_after_support": "Correct. This numerator accounts for both cuts.",
+        "on_correct_math": "38/12 − 9/12 = 29/12",
+        "on_incorrect_attempt_1": "Subtract the second cut from the updated amount, keeping the part size.",
+        "on_incorrect_attempt_2": "Subtract the second cut from the updated amount, keeping the part size.",
+        "on_locked_incorrect": "Response recorded. Compare the two linked events with the working.",
+        "worked_explanation": "38/12 − 9/12 = 29/12"
+      },
+      "mathematical_support": {
+        "hint_1": "Subtract the second cut from the updated amount, keeping the part size.",
+        "hint_2": "Record the amount after the first event. Apply the second event to that updated amount, and check which final quantity is requested.",
+        "worked_solution": "38/12 − 9/12 = 29/12"
+      },
+      "working": [
+        "38/12 − 9/12 = 29/12"
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "linked_additive_steps",
+          "label": "Final numerator",
+          "expression": "38/12 − 9/12 = ?/12",
+          "completed": "38/12 − 9/12 = 29/12",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {},
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "AF-17-G05",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "faded",
+      "prompt": "The rope left after both cuts is 29/12 metres. Write the final exact answer.",
+      "target": "Complete both linked addition/subtraction events using the updated amount and answer the final question",
+      "response": {
+        "type": "fraction",
+        "allow_mixed_number": true,
+        "input_label": "Rope remaining",
+        "suffix": "m"
+      },
+      "answer": {
+        "value": "2 5/12"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. That length is the remainder after both pieces have been removed.",
+        "correct_after_support": "Correct. That length is the remainder after both pieces have been removed.",
+        "on_correct_math": "29/12 = 24/12 + 5/12. → The remaining length is 2 5/12 metres; an exact equivalent fraction is accepted.",
+        "on_incorrect_attempt_1": "The fraction contains complete metres and an extra fractional part.",
+        "on_incorrect_attempt_2": "The fraction contains complete metres and an extra fractional part.",
+        "on_locked_incorrect": "Response recorded. Compare the two linked events with the working.",
+        "worked_explanation": "29/12 = 24/12 + 5/12. → The remaining length is 2 5/12 metres; an exact equivalent fraction is accepted."
+      },
+      "mathematical_support": {
+        "hint_1": "The fraction contains complete metres and an extra fractional part.",
+        "hint_2": "Record the amount after the first event. Apply the second event to that updated amount, and check which final quantity is requested.",
+        "worked_solution": "29/12 = 24/12 + 5/12. → The remaining length is 2 5/12 metres; an exact equivalent fraction is accepted."
+      },
+      "working": [
+        "29/12 = 24/12 + 5/12.",
+        "The remaining length is 2 5/12 metres; an exact equivalent fraction is accepted."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "linked_additive_steps",
+          "label": "Write the final remaining length",
+          "expression": "29/12 m = ?",
+          "completed": "29/12 m = 2 5/12 m",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {},
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "AF-17-G06",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "independent_transfer",
+      "prompt": "After the first piece is cut off, which amount should be used at the start of Step 2?",
+      "target": "Complete both linked addition/subtraction events using the updated amount and answer the final question",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "4 1/2 metres",
+          "1 1/3 metres",
+          "38/12 metres",
+          "3/4 metre"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "38/12 metres"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The updated rope length becomes the starting amount for the second cut.",
+        "correct_after_support": "Correct. The updated rope length becomes the starting amount for the second cut.",
+        "on_correct_math": "The original length changes after the first cut. → 38/12 metres remain after that cut; use this amount for the second event.",
+        "on_incorrect_attempt_1": "Choose what remains after the first cut, not either cut piece.",
+        "on_incorrect_attempt_2": "Choose what remains after the first cut, not either cut piece.",
+        "on_locked_incorrect": "Response recorded. Compare the two linked events with the working.",
+        "worked_explanation": "The original length changes after the first cut. → 38/12 metres remain after that cut; use this amount for the second event."
+      },
+      "mathematical_support": {
+        "hint_1": "Choose what remains after the first cut, not either cut piece.",
+        "hint_2": "Record the amount after the first event. Apply the second event to that updated amount, and check which final quantity is requested.",
+        "worked_solution": "The original length changes after the first cut. → 38/12 metres remain after that cut; use this amount for the second event."
+      },
+      "working": [
+        "The original length changes after the first cut.",
+        "38/12 metres remain after that cut; use this amount for the second event."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "linked_additive_steps",
+          "label": "Choose the next starting amount",
+          "expression": "First cut → next starting amount",
+          "completed": "Use the updated amount, 38/12 metres.",
+          "response_kind": "explanation",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "4 1/2 metres": "That is the original rope length, before the first cut. The first piece has already been removed.",
+        "1 1/3 metres": "That is the first piece cut off, not the rope remaining after the cut.",
+        "3/4 metre": "That is the second piece to remove, not the amount available before it is removed."
+      },
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "evidence_profile": "additive_structure",
+      "structural_evidence": "updated_start",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "AF-17-P01",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "A container holds 5/6 litre of paint. Another 7/10 litre is added. Then 1/4 litre is used. How much paint is left?",
+      "target": "Complete both linked addition/subtraction events using the updated amount and answer the final question",
+      "response": {
+        "type": "fraction",
+        "allow_mixed_number": true,
+        "input_label": "Paint left",
+        "suffix": "L"
+      },
+      "answer": {
+        "value": "1 17/60"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The final paint volume includes the addition and the later use.",
+        "correct_after_support": "Correct. The final paint volume includes the addition and the later use.",
+        "on_correct_math": "Add the further paint, then subtract the paint used from the updated amount. → 5/6 + 7/10 = 25/30 + 21/30 = 23/15; this is the updated amount. → 23/15 − 1/4 = 92/60 − 15/60 = 77/60. → Paint left: 1 17/60 L.",
+        "on_incorrect_attempt_1": "Track both events and check that your answer is the final requested quantity.",
+        "on_incorrect_attempt_2": "Track both events and check that your answer is the final requested quantity.",
+        "on_locked_incorrect": "Response recorded. Compare the two linked events with the working.",
+        "worked_explanation": "Add the further paint, then subtract the paint used from the updated amount. → 5/6 + 7/10 = 25/30 + 21/30 = 23/15; this is the updated amount. → 23/15 − 1/4 = 92/60 − 15/60 = 77/60. → Paint left: 1 17/60 L."
+      },
+      "mathematical_support": {
+        "hint_1": "Track both events and check that your answer is the final requested quantity.",
+        "hint_2": "Record the amount after the first event. Apply the second event to that updated amount, and check which final quantity is requested.",
+        "worked_solution": "Add the further paint, then subtract the paint used from the updated amount. → 5/6 + 7/10 = 25/30 + 21/30 = 23/15; this is the updated amount. → 23/15 − 1/4 = 92/60 − 15/60 = 77/60. → Paint left: 1 17/60 L."
+      },
+      "working": [
+        "Add the further paint, then subtract the paint used from the updated amount.",
+        "5/6 + 7/10 = 25/30 + 21/30 = 23/15; this is the updated amount.",
+        "23/15 − 1/4 = 92/60 − 15/60 = 77/60.",
+        "Paint left: 1 17/60 L."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "additive_timeline",
+          "object": "paint",
+          "title": "Paint in a container",
+          "start": "5/6",
+          "first": "7/10",
+          "second": "1/4",
+          "first_operation": "add",
+          "start_label": "Paint at the start",
+          "first_label": "Paint added",
+          "second_label": "Paint then used",
+          "middle_label": "Paint after adding",
+          "final_label": "Paint left",
+          "plan": "Add the further paint, then subtract the paint used from the updated amount.",
+          "unit": "L",
+          "unit_name": "litre",
+          "first_working": "5/6 + 7/10 = 25/30 + 21/30 = 23/15",
+          "second_working": "23/15 − 1/4 = 92/60 − 15/60 = 77/60",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "intermediate_only": "That value matches the amount after the first event. The second event still needs to be included.",
+        "original_for_second": "That value matches applying only the second event to the original amount. Check that the first event has also been included.",
+        "first_event_value": "That value matches reversing the first event’s operation. Check what the first event does to the starting amount.",
+        "second_event_value": "That value matches adding the second amount. In this problem the second amount is removed from the updated amount.",
+        "check_calculation": "Check the fraction arithmetic in each event. Keep any correct operation plan, carry the updated amount forward, and answer the final question."
+      },
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "evidence_profile": "additive_final_value",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "AF-17-P02",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "A cyclist travels 1 3/4 km along a straight path and then continues another 1 2/3 km in the same direction. The cyclist returns 2/3 km along the same path. How far is the cyclist from the starting point?",
+      "target": "Complete both linked addition/subtraction events using the updated amount and answer the final question",
+      "response": {
+        "type": "fraction",
+        "allow_mixed_number": true,
+        "input_label": "Distance from the starting point",
+        "suffix": "km"
+      },
+      "answer": {
+        "value": "2 3/4"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The return journey reduces the distance from the starting point; it is not added as extra distance from the start.",
+        "correct_after_support": "Correct. The return journey reduces the distance from the starting point; it is not added as extra distance from the start.",
+        "on_correct_math": "Combine the two outward distances, then subtract the return distance to find the final position. → 1 3/4 + 1 2/3 = 21/12 + 20/12 = 41/12; this is the updated amount. → 41/12 − 2/3 = 41/12 − 8/12 = 11/4. → Distance from the starting point: 2 3/4 km.",
+        "on_incorrect_attempt_1": "Track both events and check that your answer is the final requested quantity.",
+        "on_incorrect_attempt_2": "Track both events and check that your answer is the final requested quantity.",
+        "on_locked_incorrect": "Response recorded. Compare the two linked events with the working.",
+        "worked_explanation": "Combine the two outward distances, then subtract the return distance to find the final position. → 1 3/4 + 1 2/3 = 21/12 + 20/12 = 41/12; this is the updated amount. → 41/12 − 2/3 = 41/12 − 8/12 = 11/4. → Distance from the starting point: 2 3/4 km."
+      },
+      "mathematical_support": {
+        "hint_1": "Track both events and check that your answer is the final requested quantity.",
+        "hint_2": "Record the amount after the first event. Apply the second event to that updated amount, and check which final quantity is requested.",
+        "worked_solution": "Combine the two outward distances, then subtract the return distance to find the final position. → 1 3/4 + 1 2/3 = 21/12 + 20/12 = 41/12; this is the updated amount. → 41/12 − 2/3 = 41/12 − 8/12 = 11/4. → Distance from the starting point: 2 3/4 km."
+      },
+      "working": [
+        "Combine the two outward distances, then subtract the return distance to find the final position.",
+        "1 3/4 + 1 2/3 = 21/12 + 20/12 = 41/12; this is the updated amount.",
+        "41/12 − 2/3 = 41/12 − 8/12 = 11/4.",
+        "Distance from the starting point: 2 3/4 km."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "additive_timeline",
+          "object": "cycle",
+          "title": "A cyclist goes out and returns partway",
+          "start": "1 3/4",
+          "first": "1 2/3",
+          "second": "2/3",
+          "first_operation": "add",
+          "start_label": "First outward distance",
+          "first_label": "Further outward distance",
+          "second_label": "Distance travelled back",
+          "middle_label": "Furthest distance from the start",
+          "final_label": "Distance from the starting point",
+          "plan": "Combine the two outward distances, then subtract the return distance to find the final position.",
+          "unit": "km",
+          "unit_name": "kilometre",
+          "first_working": "1 3/4 + 1 2/3 = 21/12 + 20/12 = 41/12",
+          "second_working": "41/12 − 2/3 = 41/12 − 8/12 = 11/4",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "intermediate_only": "That value matches the amount after the first event. The second event still needs to be included.",
+        "original_for_second": "That value matches applying only the second event to the original amount. Check that the first event has also been included.",
+        "first_event_value": "That value matches reversing the first event’s operation. Check what the first event does to the starting amount.",
+        "second_event_value": "That value is the total distance travelled. The question asks how far the cyclist is from the starting point, so the return distance brings the cyclist closer.",
+        "check_calculation": "Check the fraction arithmetic in each event. Keep any correct operation plan, carry the updated amount forward, and answer the final question."
+      },
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "evidence_profile": "additive_final_value",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "AF-17-P03",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "A roll of fabric is 4 1/4 metres long. Pieces measuring 5/6 metre and 7/12 metre are cut off. What length of fabric remains?",
+      "target": "Complete both linked addition/subtraction events using the updated amount and answer the final question",
+      "response": {
+        "type": "fraction",
+        "allow_mixed_number": true,
+        "input_label": "Fabric remaining",
+        "suffix": "m"
+      },
+      "answer": {
+        "value": "2 5/6"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both cut pieces have been excluded from the remaining fabric.",
+        "correct_after_support": "Correct. Both cut pieces have been excluded from the remaining fabric.",
+        "on_correct_math": "Remove the first piece, then remove the second from the fabric still available. → 4 1/4 − 5/6 = 51/12 − 10/12 = 41/12; this is the updated amount. → 41/12 − 7/12 = 41/12 − 7/12 = 17/6. → Fabric remaining: 2 5/6 m.",
+        "on_incorrect_attempt_1": "Track both events and check that your answer is the final requested quantity.",
+        "on_incorrect_attempt_2": "Track both events and check that your answer is the final requested quantity.",
+        "on_locked_incorrect": "Response recorded. Compare the two linked events with the working.",
+        "worked_explanation": "Remove the first piece, then remove the second from the fabric still available. → 4 1/4 − 5/6 = 51/12 − 10/12 = 41/12; this is the updated amount. → 41/12 − 7/12 = 41/12 − 7/12 = 17/6. → Fabric remaining: 2 5/6 m."
+      },
+      "mathematical_support": {
+        "hint_1": "Track both events and check that your answer is the final requested quantity.",
+        "hint_2": "Record the amount after the first event. Apply the second event to that updated amount, and check which final quantity is requested.",
+        "worked_solution": "Remove the first piece, then remove the second from the fabric still available. → 4 1/4 − 5/6 = 51/12 − 10/12 = 41/12; this is the updated amount. → 41/12 − 7/12 = 41/12 − 7/12 = 17/6. → Fabric remaining: 2 5/6 m."
+      },
+      "working": [
+        "Remove the first piece, then remove the second from the fabric still available.",
+        "4 1/4 − 5/6 = 51/12 − 10/12 = 41/12; this is the updated amount.",
+        "41/12 − 7/12 = 41/12 − 7/12 = 17/6.",
+        "Fabric remaining: 2 5/6 m."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "additive_timeline",
+          "object": "fabric",
+          "title": "Two pieces cut from fabric",
+          "start": "4 1/4",
+          "first": "5/6",
+          "second": "7/12",
+          "first_operation": "subtract",
+          "start_label": "Original fabric roll",
+          "first_label": "First piece cut off",
+          "second_label": "Second piece cut off",
+          "middle_label": "Fabric after the first cut",
+          "final_label": "Fabric remaining",
+          "plan": "Remove the first piece, then remove the second from the fabric still available.",
+          "unit": "m",
+          "unit_name": "metre",
+          "first_working": "4 1/4 − 5/6 = 51/12 − 10/12 = 41/12",
+          "second_working": "41/12 − 7/12 = 41/12 − 7/12 = 17/6",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "intermediate_only": "That value matches the amount after the first event. The second event still needs to be included.",
+        "original_for_second": "That value matches applying only the second event to the original amount. Check that the first event has also been included.",
+        "first_event_value": "That value matches reversing the first event’s operation. Check what the first event does to the starting amount.",
+        "second_event_value": "That value matches adding the second amount. In this problem the second amount is removed from the updated amount.",
+        "check_calculation": "Check the fraction arithmetic in each event. Keep any correct operation plan, carry the updated amount forward, and answer the final question."
+      },
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "evidence_profile": "additive_final_value",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "AF-17-P04",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Two boards are 1 1/2 metres and 3/4 metre long. They are placed end to end. A length of 1 1/4 metres is cut from the combined length. What length is left over?",
+      "target": "Complete both linked addition/subtraction events using the updated amount and answer the final question",
+      "response": {
+        "type": "fraction",
+        "allow_mixed_number": true,
+        "input_label": "Length left over",
+        "suffix": "m"
+      },
+      "answer": {
+        "value": "1"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The cut comes from the combined length of both boards.",
+        "correct_after_support": "Correct. The cut comes from the combined length of both boards.",
+        "on_correct_math": "Combine the two board lengths, then subtract the length cut from that total. → 1 1/2 + 3/4 = 6/4 + 3/4 = 9/4; this is the updated amount. → 9/4 − 1 1/4 = 9/4 − 5/4 = 1. → Length left over: 1 m.",
+        "on_incorrect_attempt_1": "Track both events and check that your answer is the final requested quantity.",
+        "on_incorrect_attempt_2": "Track both events and check that your answer is the final requested quantity.",
+        "on_locked_incorrect": "Response recorded. Compare the two linked events with the working.",
+        "worked_explanation": "Combine the two board lengths, then subtract the length cut from that total. → 1 1/2 + 3/4 = 6/4 + 3/4 = 9/4; this is the updated amount. → 9/4 − 1 1/4 = 9/4 − 5/4 = 1. → Length left over: 1 m."
+      },
+      "mathematical_support": {
+        "hint_1": "Track both events and check that your answer is the final requested quantity.",
+        "hint_2": "Record the amount after the first event. Apply the second event to that updated amount, and check which final quantity is requested.",
+        "worked_solution": "Combine the two board lengths, then subtract the length cut from that total. → 1 1/2 + 3/4 = 6/4 + 3/4 = 9/4; this is the updated amount. → 9/4 − 1 1/4 = 9/4 − 5/4 = 1. → Length left over: 1 m."
+      },
+      "working": [
+        "Combine the two board lengths, then subtract the length cut from that total.",
+        "1 1/2 + 3/4 = 6/4 + 3/4 = 9/4; this is the updated amount.",
+        "9/4 − 1 1/4 = 9/4 − 5/4 = 1.",
+        "Length left over: 1 m."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "additive_timeline",
+          "object": "board",
+          "title": "Boards placed end to end",
+          "start": "1 1/2",
+          "first": "3/4",
+          "second": "1 1/4",
+          "first_operation": "add",
+          "start_label": "First board",
+          "first_label": "Second board joined",
+          "second_label": "Length cut from the combined boards",
+          "middle_label": "Combined board length",
+          "final_label": "Length left over",
+          "plan": "Combine the two board lengths, then subtract the length cut from that total.",
+          "unit": "m",
+          "unit_name": "metre",
+          "first_working": "1 1/2 + 3/4 = 6/4 + 3/4 = 9/4",
+          "second_working": "9/4 − 1 1/4 = 9/4 − 5/4 = 1",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "intermediate_only": "That value matches the amount after the first event. The second event still needs to be included.",
+        "original_for_second": "That value matches applying only the second event to the original amount. Check that the first event has also been included.",
+        "first_event_value": "That value matches reversing the first event’s operation. Check what the first event does to the starting amount.",
+        "second_event_value": "That value matches adding the second amount. In this problem the second amount is removed from the updated amount.",
+        "check_calculation": "Check the fraction arithmetic in each event. Keep any correct operation plan, carry the updated amount forward, and answer the final question."
+      },
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "evidence_profile": "additive_final_value",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "AF-17-P05",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Work out (2 2/3 − 1/2) − 5/6.",
+      "target": "Complete both linked addition/subtraction events using the updated amount and answer the final question",
+      "response": {
+        "type": "fraction",
+        "allow_mixed_number": true,
+        "input_label": "Final answer"
+      },
+      "answer": {
+        "value": "1 1/3"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The bracketed result was carried into the second subtraction.",
+        "correct_after_support": "Correct. The bracketed result was carried into the second subtraction.",
+        "on_correct_math": "Evaluate the subtraction in brackets, then subtract the second amount from its result. → 2 2/3 − 1/2 = 16/6 − 3/6 = 13/6; this is the updated amount. → 13/6 − 5/6 = 13/6 − 5/6 = 4/3. → Final answer: 1 1/3.",
+        "on_incorrect_attempt_1": "Track both events and check that your answer is the final requested quantity.",
+        "on_incorrect_attempt_2": "Track both events and check that your answer is the final requested quantity.",
+        "on_locked_incorrect": "Response recorded. Compare the two linked events with the working.",
+        "worked_explanation": "Evaluate the subtraction in brackets, then subtract the second amount from its result. → 2 2/3 − 1/2 = 16/6 − 3/6 = 13/6; this is the updated amount. → 13/6 − 5/6 = 13/6 − 5/6 = 4/3. → Final answer: 1 1/3."
+      },
+      "mathematical_support": {
+        "hint_1": "Track both events and check that your answer is the final requested quantity.",
+        "hint_2": "Record the amount after the first event. Apply the second event to that updated amount, and check which final quantity is requested.",
+        "worked_solution": "Evaluate the subtraction in brackets, then subtract the second amount from its result. → 2 2/3 − 1/2 = 16/6 − 3/6 = 13/6; this is the updated amount. → 13/6 − 5/6 = 13/6 − 5/6 = 4/3. → Final answer: 1 1/3."
+      },
+      "working": [
+        "Evaluate the subtraction in brackets, then subtract the second amount from its result.",
+        "2 2/3 − 1/2 = 16/6 − 3/6 = 13/6; this is the updated amount.",
+        "13/6 − 5/6 = 13/6 − 5/6 = 4/3.",
+        "Final answer: 1 1/3."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "additive_timeline",
+          "object": "symbolic",
+          "title": "Two linked calculations",
+          "start": "2 2/3",
+          "first": "1/2",
+          "second": "5/6",
+          "first_operation": "subtract",
+          "start_label": "Starting number",
+          "first_label": "First amount subtracted",
+          "second_label": "Second amount subtracted",
+          "middle_label": "Result inside the brackets",
+          "final_label": "Final answer",
+          "plan": "Evaluate the subtraction in brackets, then subtract the second amount from its result.",
+          "unit": "",
+          "unit_name": "whole",
+          "first_working": "2 2/3 − 1/2 = 16/6 − 3/6 = 13/6",
+          "second_working": "13/6 − 5/6 = 13/6 − 5/6 = 4/3",
+          "math_text": true,
+          "compact_captions": true,
+          "expression_given": true
+        }
+      },
+      "response_feedback": {
+        "intermediate_only": "That value matches the amount after the first event. The second event still needs to be included.",
+        "original_for_second": "That value matches applying only the second event to the original amount. Check that the first event has also been included.",
+        "first_event_value": "That value matches reversing the first event’s operation. Check what the first event does to the starting amount.",
+        "second_event_value": "That value matches adding the second amount. In this problem the second amount is removed from the updated amount.",
+        "check_calculation": "Check the fraction arithmetic in each event. Keep any correct operation plan, carry the updated amount forward, and answer the final question."
+      },
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "evidence_profile": "additive_final_value",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "AF-17-P06",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Work out (2 1/5 + 7/10) − 3/4.",
+      "target": "Complete both linked addition/subtraction events using the updated amount and answer the final question",
+      "response": {
+        "type": "fraction",
+        "allow_mixed_number": true,
+        "input_label": "Final answer"
+      },
+      "answer": {
+        "value": "2 3/20"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The amount subtracted is removed from the complete bracketed total.",
+        "correct_after_support": "Correct. The amount subtracted is removed from the complete bracketed total.",
+        "on_correct_math": "Evaluate the addition in brackets, then subtract the final amount from that result. → 2 1/5 + 7/10 = 22/10 + 7/10 = 29/10; this is the updated amount. → 29/10 − 3/4 = 58/20 − 15/20 = 43/20. → Final answer: 2 3/20.",
+        "on_incorrect_attempt_1": "Track both events and check that your answer is the final requested quantity.",
+        "on_incorrect_attempt_2": "Track both events and check that your answer is the final requested quantity.",
+        "on_locked_incorrect": "Response recorded. Compare the two linked events with the working.",
+        "worked_explanation": "Evaluate the addition in brackets, then subtract the final amount from that result. → 2 1/5 + 7/10 = 22/10 + 7/10 = 29/10; this is the updated amount. → 29/10 − 3/4 = 58/20 − 15/20 = 43/20. → Final answer: 2 3/20."
+      },
+      "mathematical_support": {
+        "hint_1": "Track both events and check that your answer is the final requested quantity.",
+        "hint_2": "Record the amount after the first event. Apply the second event to that updated amount, and check which final quantity is requested.",
+        "worked_solution": "Evaluate the addition in brackets, then subtract the final amount from that result. → 2 1/5 + 7/10 = 22/10 + 7/10 = 29/10; this is the updated amount. → 29/10 − 3/4 = 58/20 − 15/20 = 43/20. → Final answer: 2 3/20."
+      },
+      "working": [
+        "Evaluate the addition in brackets, then subtract the final amount from that result.",
+        "2 1/5 + 7/10 = 22/10 + 7/10 = 29/10; this is the updated amount.",
+        "29/10 − 3/4 = 58/20 − 15/20 = 43/20.",
+        "Final answer: 2 3/20."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "additive_timeline",
+          "object": "symbolic",
+          "title": "A bracketed calculation",
+          "start": "2 1/5",
+          "first": "7/10",
+          "second": "3/4",
+          "first_operation": "add",
+          "start_label": "Starting number",
+          "first_label": "Amount added inside the brackets",
+          "second_label": "Amount subtracted afterwards",
+          "middle_label": "Result inside the brackets",
+          "final_label": "Final answer",
+          "plan": "Evaluate the addition in brackets, then subtract the final amount from that result.",
+          "unit": "",
+          "unit_name": "whole",
+          "first_working": "2 1/5 + 7/10 = 22/10 + 7/10 = 29/10",
+          "second_working": "29/10 − 3/4 = 58/20 − 15/20 = 43/20",
+          "math_text": true,
+          "compact_captions": true,
+          "expression_given": true
+        }
+      },
+      "response_feedback": {
+        "intermediate_only": "That value matches the amount after the first event. The second event still needs to be included.",
+        "original_for_second": "That value matches applying only the second event to the original amount. Check that the first event has also been included.",
+        "first_event_value": "That value matches reversing the first event’s operation. Check what the first event does to the starting amount.",
+        "second_event_value": "That value matches adding the second amount. In this problem the second amount is removed from the updated amount.",
+        "check_calculation": "Check the fraction arithmetic in each event. Keep any correct operation plan, carry the updated amount forward, and answer the final question."
+      },
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "evidence_profile": "additive_final_value",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "AF-17-P07",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "A bottle contains 1 1/2 litres. Another 2/3 litre is added and then 3/4 litre is poured out. Which expression should be evaluated first?",
+      "target": "Complete both linked addition/subtraction events using the updated amount and answer the final question",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "1 1/2 + 2/3",
+          "2/3 − 3/4",
+          "1 1/2 − 3/4",
+          "1 1/2 + 3/4"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "1 1/2 + 2/3"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The first event forms the updated bottle contents before anything is poured out.",
+        "correct_after_support": "Correct. The first event forms the updated bottle contents before anything is poured out.",
+        "on_correct_math": "The first event adds liquid to the original bottle contents. → The first expression is 1 1/2 + 2/3.",
+        "on_incorrect_attempt_1": "Match the expression to the first event in the story.",
+        "on_incorrect_attempt_2": "Match the expression to the first event in the story.",
+        "on_locked_incorrect": "Response recorded. Compare the two linked events with the working.",
+        "worked_explanation": "The first event adds liquid to the original bottle contents. → The first expression is 1 1/2 + 2/3."
+      },
+      "mathematical_support": {
+        "hint_1": "Match the expression to the first event in the story.",
+        "hint_2": "Record the amount after the first event. Apply the second event to that updated amount, and check which final quantity is requested.",
+        "worked_solution": "The first event adds liquid to the original bottle contents. → The first expression is 1 1/2 + 2/3."
+      },
+      "working": [
+        "The first event adds liquid to the original bottle contents.",
+        "The first expression is 1 1/2 + 2/3."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "additive_timeline",
+          "object": "bottle",
+          "title": "A bottle before two changes",
+          "start": "1 1/2",
+          "first": "2/3",
+          "second": "3/4",
+          "first_operation": "add",
+          "start_label": "Liquid in the bottle",
+          "first_label": "Liquid added",
+          "second_label": "Liquid poured out",
+          "middle_label": "After the first event",
+          "final_label": "Liquid left",
+          "plan": "Add the further liquid first, then subtract the liquid poured out.",
+          "unit": "L",
+          "unit_name": "litre",
+          "first_working": "1 1/2 + 2/3 = 9/6 + 4/6 = 13/6",
+          "second_working": "13/6 − 3/4 = 26/12 − 9/12 = 17/12",
+          "math_text": true,
+          "compact_captions": true,
+          "selection": true,
+          "completed": "First event: 1 1/2 + 2/3"
+        }
+      },
+      "response_feedback": {
+        "2/3 − 3/4": "This combines the two changes but does not represent the first event acting on the original contents.",
+        "1 1/2 − 3/4": "That handles the later removal before the first addition. The question asks for the first event.",
+        "1 1/2 + 3/4": "The three quarters is poured out later. Use the amount added in the first event."
+      },
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "evidence_profile": "additive_structure",
+      "structural_evidence": "first_event",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "AF-17-X01",
+      "source_ref": {
+        "page": 16
+      },
+      "stage": "practice",
+      "prompt": "A water tank contains 2 1/2 litres of water. A further 3/4 litre is poured into the tank. Then 2/3 litre is used. Work out the amount of water left.",
+      "target": "Complete both linked addition/subtraction events using the updated amount and answer the final question",
+      "response": {
+        "type": "fraction",
+        "allow_mixed_number": true,
+        "input_label": "Water left",
+        "suffix": "L"
+      },
+      "answer": {
+        "value": "2 7/12"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The water left reflects both changes to the tank.",
+        "correct_after_support": "Correct. The water left reflects both changes to the tank.",
+        "on_correct_math": "Include the water poured in, then subtract the water used from that updated amount. → 2 1/2 + 3/4 = 10/4 + 3/4 = 13/4; this is the updated amount. → 13/4 − 2/3 = 39/12 − 8/12 = 31/12. → Water left: 2 7/12 L.",
+        "on_incorrect_attempt_1": "Track both events and check that your answer is the final requested quantity.",
+        "on_incorrect_attempt_2": "Track both events and check that your answer is the final requested quantity.",
+        "on_locked_incorrect": "Response recorded. Compare the two linked events with the working.",
+        "worked_explanation": "Include the water poured in, then subtract the water used from that updated amount. → 2 1/2 + 3/4 = 10/4 + 3/4 = 13/4; this is the updated amount. → 13/4 − 2/3 = 39/12 − 8/12 = 31/12. → Water left: 2 7/12 L."
+      },
+      "mathematical_support": {
+        "hint_1": "Track both events and check that your answer is the final requested quantity.",
+        "hint_2": "Record the amount after the first event. Apply the second event to that updated amount, and check which final quantity is requested.",
+        "worked_solution": "Include the water poured in, then subtract the water used from that updated amount. → 2 1/2 + 3/4 = 10/4 + 3/4 = 13/4; this is the updated amount. → 13/4 − 2/3 = 39/12 − 8/12 = 31/12. → Water left: 2 7/12 L."
+      },
+      "working": [
+        "Include the water poured in, then subtract the water used from that updated amount.",
+        "2 1/2 + 3/4 = 10/4 + 3/4 = 13/4; this is the updated amount.",
+        "13/4 − 2/3 = 39/12 − 8/12 = 31/12.",
+        "Water left: 2 7/12 L."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "additive_timeline",
+          "object": "tank",
+          "title": "Water in a tank",
+          "start": "2 1/2",
+          "first": "3/4",
+          "second": "2/3",
+          "first_operation": "add",
+          "start_label": "Water at the start",
+          "first_label": "Water poured in",
+          "second_label": "Water then used",
+          "middle_label": "Water after pouring in",
+          "final_label": "Water left",
+          "plan": "Include the water poured in, then subtract the water used from that updated amount.",
+          "unit": "L",
+          "unit_name": "litre",
+          "first_working": "2 1/2 + 3/4 = 10/4 + 3/4 = 13/4",
+          "second_working": "13/4 − 2/3 = 39/12 − 8/12 = 31/12",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "intermediate_only": "That value matches the amount after the first event. The second event still needs to be included.",
+        "original_for_second": "That value matches applying only the second event to the original amount. Check that the first event has also been included.",
+        "first_event_value": "That value matches reversing the first event’s operation. Check what the first event does to the starting amount.",
+        "second_event_value": "That value matches adding the second amount. In this problem the second amount is removed from the updated amount.",
+        "check_calculation": "Check the fraction arithmetic in each event. Keep any correct operation plan, carry the updated amount forward, and answer the final question."
+      },
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "evidence_profile": "additive_final_value",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "AF-17-X02",
+      "source_ref": {
+        "page": 16
+      },
+      "stage": "practice",
+      "prompt": "A roll of material is 3 2/5 metres long. A piece of 3/4 metre is used for one project. A second piece of 2/5 metre is used for another project. Work out the material remaining.",
+      "target": "Complete both linked addition/subtraction events using the updated amount and answer the final question",
+      "response": {
+        "type": "fraction",
+        "allow_mixed_number": true,
+        "input_label": "Material remaining",
+        "suffix": "m"
+      },
+      "answer": {
+        "value": "2 1/4"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The remaining material excludes the pieces used for both projects.",
+        "correct_after_support": "Correct. The remaining material excludes the pieces used for both projects.",
+        "on_correct_math": "Subtract both project pieces, carrying the remainder after the first project into the second. → 3 2/5 − 3/4 = 68/20 − 15/20 = 53/20; this is the updated amount. → 53/20 − 2/5 = 53/20 − 8/20 = 9/4. → Material remaining: 2 1/4 m.",
+        "on_incorrect_attempt_1": "Track both events and check that your answer is the final requested quantity.",
+        "on_incorrect_attempt_2": "Track both events and check that your answer is the final requested quantity.",
+        "on_locked_incorrect": "Response recorded. Compare the two linked events with the working.",
+        "worked_explanation": "Subtract both project pieces, carrying the remainder after the first project into the second. → 3 2/5 − 3/4 = 68/20 − 15/20 = 53/20; this is the updated amount. → 53/20 − 2/5 = 53/20 − 8/20 = 9/4. → Material remaining: 2 1/4 m."
+      },
+      "mathematical_support": {
+        "hint_1": "Track both events and check that your answer is the final requested quantity.",
+        "hint_2": "Record the amount after the first event. Apply the second event to that updated amount, and check which final quantity is requested.",
+        "worked_solution": "Subtract both project pieces, carrying the remainder after the first project into the second. → 3 2/5 − 3/4 = 68/20 − 15/20 = 53/20; this is the updated amount. → 53/20 − 2/5 = 53/20 − 8/20 = 9/4. → Material remaining: 2 1/4 m."
+      },
+      "working": [
+        "Subtract both project pieces, carrying the remainder after the first project into the second.",
+        "3 2/5 − 3/4 = 68/20 − 15/20 = 53/20; this is the updated amount.",
+        "53/20 − 2/5 = 53/20 − 8/20 = 9/4.",
+        "Material remaining: 2 1/4 m."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "additive_timeline",
+          "object": "material",
+          "title": "Material used for two projects",
+          "start": "3 2/5",
+          "first": "3/4",
+          "second": "2/5",
+          "first_operation": "subtract",
+          "start_label": "Original roll",
+          "first_label": "First project’s piece",
+          "second_label": "Second project’s piece",
+          "middle_label": "Material after the first project",
+          "final_label": "Material remaining",
+          "plan": "Subtract both project pieces, carrying the remainder after the first project into the second.",
+          "unit": "m",
+          "unit_name": "metre",
+          "first_working": "3 2/5 − 3/4 = 68/20 − 15/20 = 53/20",
+          "second_working": "53/20 − 2/5 = 53/20 − 8/20 = 9/4",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "intermediate_only": "That value matches the amount after the first event. The second event still needs to be included.",
+        "original_for_second": "That value matches applying only the second event to the original amount. Check that the first event has also been included.",
+        "first_event_value": "That value matches reversing the first event’s operation. Check what the first event does to the starting amount.",
+        "second_event_value": "That value matches adding the second amount. In this problem the second amount is removed from the updated amount.",
+        "check_calculation": "Check the fraction arithmetic in each event. Keep any correct operation plan, carry the updated amount forward, and answer the final question."
+      },
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "evidence_profile": "additive_final_value",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "AF-17-X03",
+      "source_ref": {
+        "page": 16
+      },
+      "stage": "practice",
+      "prompt": "On Monday, Priya walks 1 1/6 km in the morning and 1 1/4 km in the afternoon. She then walks back 3/8 km along the same route. How far is Priya from her starting point?",
+      "target": "Complete both linked addition/subtraction events using the updated amount and answer the final question",
+      "response": {
+        "type": "fraction",
+        "allow_mixed_number": true,
+        "input_label": "Distance from Priya’s starting point",
+        "suffix": "km"
+      },
+      "answer": {
+        "value": "2 1/24"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Walking back brings Priya closer to her starting point, so the answer is her final position rather than her total distance travelled.",
+        "correct_after_support": "Correct. Walking back brings Priya closer to her starting point, so the answer is her final position rather than her total distance travelled.",
+        "on_correct_math": "Combine the two outward distances, then subtract the distance walked back to find Priya’s position. → 1 1/6 + 1 1/4 = 14/12 + 15/12 = 29/12; this is the updated amount. → 29/12 − 3/8 = 58/24 − 9/24 = 49/24. → Distance from Priya’s starting point: 2 1/24 km.",
+        "on_incorrect_attempt_1": "Track both events and check that your answer is the final requested quantity.",
+        "on_incorrect_attempt_2": "Track both events and check that your answer is the final requested quantity.",
+        "on_locked_incorrect": "Response recorded. Compare the two linked events with the working.",
+        "worked_explanation": "Combine the two outward distances, then subtract the distance walked back to find Priya’s position. → 1 1/6 + 1 1/4 = 14/12 + 15/12 = 29/12; this is the updated amount. → 29/12 − 3/8 = 58/24 − 9/24 = 49/24. → Distance from Priya’s starting point: 2 1/24 km."
+      },
+      "mathematical_support": {
+        "hint_1": "Track both events and check that your answer is the final requested quantity.",
+        "hint_2": "Record the amount after the first event. Apply the second event to that updated amount, and check which final quantity is requested.",
+        "worked_solution": "Combine the two outward distances, then subtract the distance walked back to find Priya’s position. → 1 1/6 + 1 1/4 = 14/12 + 15/12 = 29/12; this is the updated amount. → 29/12 − 3/8 = 58/24 − 9/24 = 49/24. → Distance from Priya’s starting point: 2 1/24 km."
+      },
+      "working": [
+        "Combine the two outward distances, then subtract the distance walked back to find Priya’s position.",
+        "1 1/6 + 1 1/4 = 14/12 + 15/12 = 29/12; this is the updated amount.",
+        "29/12 − 3/8 = 58/24 − 9/24 = 49/24.",
+        "Distance from Priya’s starting point: 2 1/24 km."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "additive_timeline",
+          "object": "walk",
+          "title": "Priya’s outward and return journey",
+          "start": "1 1/6",
+          "first": "1 1/4",
+          "second": "3/8",
+          "first_operation": "add",
+          "start_label": "Morning distance",
+          "first_label": "Afternoon distance",
+          "second_label": "Distance walked back",
+          "middle_label": "Position before walking back",
+          "final_label": "Distance from Priya’s starting point",
+          "plan": "Combine the two outward distances, then subtract the distance walked back to find Priya’s position.",
+          "unit": "km",
+          "unit_name": "kilometre",
+          "first_working": "1 1/6 + 1 1/4 = 14/12 + 15/12 = 29/12",
+          "second_working": "29/12 − 3/8 = 58/24 − 9/24 = 49/24",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "intermediate_only": "That value matches the amount after the first event. The second event still needs to be included.",
+        "original_for_second": "That value matches applying only the second event to the original amount. Check that the first event has also been included.",
+        "first_event_value": "That value matches reversing the first event’s operation. Check what the first event does to the starting amount.",
+        "second_event_value": "That value is Priya’s total distance travelled. The question asks for her final distance from the starting point; walking back brings her closer.",
+        "check_calculation": "Check the fraction arithmetic in each event. Keep any correct operation plan, carry the updated amount forward, and answer the final question."
+      },
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "evidence_profile": "additive_final_value",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "AF-17-X04",
+      "source_ref": {
+        "page": 16
+      },
+      "stage": "practice",
+      "prompt": "A barrel contains 4 1/2 litres. Another 2/3 litre is added. Then 1 1/4 litres is removed. Which plan is correct?",
+      "target": "Complete both linked addition/subtraction events using the updated amount and answer the final question",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Add 2/3 to 4 1/2, then subtract 1 1/4 from the result.",
+          "Subtract 2/3 from 4 1/2, then add 1 1/4.",
+          "Add 2/3 and 1 1/4 only.",
+          "Subtract both fractions separately from the original amount and keep both answers."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "Add 2/3 to 4 1/2, then subtract 1 1/4 from the result."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The second operation uses the result of the first, and both changes match the story.",
+        "correct_after_support": "Correct. The second operation uses the result of the first, and both changes match the story.",
+        "on_correct_math": "The first event adds liquid to the barrel. → The second event removes liquid from the updated amount. → Add 2/3 to 4 1/2, then subtract 1 1/4 from the result.",
+        "on_incorrect_attempt_1": "Track what each event does and which amount the second event acts on.",
+        "on_incorrect_attempt_2": "Track what each event does and which amount the second event acts on.",
+        "on_locked_incorrect": "Response recorded. Compare the two linked events with the working.",
+        "worked_explanation": "The first event adds liquid to the barrel. → The second event removes liquid from the updated amount. → Add 2/3 to 4 1/2, then subtract 1 1/4 from the result."
+      },
+      "mathematical_support": {
+        "hint_1": "Track what each event does and which amount the second event acts on.",
+        "hint_2": "Record the amount after the first event. Apply the second event to that updated amount, and check which final quantity is requested.",
+        "worked_solution": "The first event adds liquid to the barrel. → The second event removes liquid from the updated amount. → Add 2/3 to 4 1/2, then subtract 1 1/4 from the result."
+      },
+      "working": [
+        "The first event adds liquid to the barrel.",
+        "The second event removes liquid from the updated amount.",
+        "Add 2/3 to 4 1/2, then subtract 1 1/4 from the result."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "additive_timeline",
+          "object": "barrel",
+          "title": "Changes to a barrel’s contents",
+          "start": "4 1/2",
+          "first": "2/3",
+          "second": "1 1/4",
+          "first_operation": "add",
+          "start_label": "Barrel at the start",
+          "first_label": "Amount added",
+          "second_label": "Amount removed",
+          "middle_label": "After the first event",
+          "final_label": "Amount left",
+          "plan": "Add the further liquid, then subtract the removed liquid from the result.",
+          "unit": "L",
+          "unit_name": "litre",
+          "first_working": "4 1/2 + 2/3 = 27/6 + 4/6 = 31/6",
+          "second_working": "31/6 − 1 1/4 = 62/12 − 15/12 = 47/12",
+          "math_text": true,
+          "compact_captions": true,
+          "selection": true,
+          "completed": "Add 2/3 to 4 1/2, then subtract 1 1/4 from the result."
+        }
+      },
+      "response_feedback": {
+        "Subtract 2/3 from 4 1/2, then add 1 1/4.": "Both event operations are reversed: the first amount enters the barrel and the second leaves it.",
+        "Add 2/3 and 1 1/4 only.": "This omits the starting amount and treats the removal as an addition.",
+        "Subtract both fractions separately from the original amount and keep both answers.": "The events are linked, not separate calculations from the original amount. The first event also adds rather than removes liquid."
+      },
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "evidence_profile": "additive_structure",
+      "structural_evidence": "complete_plan",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "AF-17-E01",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "exit",
+      "prompt": "A container holds 1 1/4 litres. Another 5/6 litre is added. Then 7/12 litre is used. How much is left?",
+      "target": "Complete both linked addition/subtraction events using the updated amount and answer the final question",
+      "response": {
+        "type": "fraction",
+        "allow_mixed_number": true,
+        "input_label": "Amount left",
+        "suffix": "L"
+      },
+      "answer": {
+        "value": "1 1/2"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Recorded. The final amount accounts for both events.",
+        "correct_after_support": "Recorded. The final amount accounts for both events.",
+        "on_correct_math": "Include the added liquid, then remove the used liquid from the updated amount. → 1 1/4 + 5/6 = 15/12 + 10/12 = 25/12; this is the updated amount. → 25/12 − 7/12 = 25/12 − 7/12 = 3/2. → Amount left: 1 1/2 L.",
+        "on_incorrect_attempt_1": "Track both events and check that your answer is the final requested quantity.",
+        "on_incorrect_attempt_2": "Track both events and check that your answer is the final requested quantity.",
+        "on_locked_incorrect": "Response recorded. Compare the two linked events with the working.",
+        "worked_explanation": "Include the added liquid, then remove the used liquid from the updated amount. → 1 1/4 + 5/6 = 15/12 + 10/12 = 25/12; this is the updated amount. → 25/12 − 7/12 = 25/12 − 7/12 = 3/2. → Amount left: 1 1/2 L."
+      },
+      "mathematical_support": {
+        "hint_1": "Track both events and check that your answer is the final requested quantity.",
+        "hint_2": "Record the amount after the first event. Apply the second event to that updated amount, and check which final quantity is requested.",
+        "worked_solution": "Include the added liquid, then remove the used liquid from the updated amount. → 1 1/4 + 5/6 = 15/12 + 10/12 = 25/12; this is the updated amount. → 25/12 − 7/12 = 25/12 − 7/12 = 3/2. → Amount left: 1 1/2 L."
+      },
+      "working": [
+        "Include the added liquid, then remove the used liquid from the updated amount.",
+        "1 1/4 + 5/6 = 15/12 + 10/12 = 25/12; this is the updated amount.",
+        "25/12 − 7/12 = 25/12 − 7/12 = 3/2.",
+        "Amount left: 1 1/2 L."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "additive_timeline",
+          "object": "container",
+          "title": "A container’s contents",
+          "start": "1 1/4",
+          "first": "5/6",
+          "second": "7/12",
+          "first_operation": "add",
+          "start_label": "Liquid at the start",
+          "first_label": "Liquid added",
+          "second_label": "Liquid used afterwards",
+          "middle_label": "After adding the liquid",
+          "final_label": "Amount left",
+          "plan": "Include the added liquid, then remove the used liquid from the updated amount.",
+          "unit": "L",
+          "unit_name": "litre",
+          "first_working": "1 1/4 + 5/6 = 15/12 + 10/12 = 25/12",
+          "second_working": "25/12 − 7/12 = 25/12 − 7/12 = 3/2",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "intermediate_only": "That value matches the amount after the first event. The second event still needs to be included.",
+        "original_for_second": "That value matches applying only the second event to the original amount. Check that the first event has also been included.",
+        "first_event_value": "That value matches reversing the first event’s operation. Check what the first event does to the starting amount.",
+        "second_event_value": "That value matches adding the second amount. In this problem the second amount is removed from the updated amount.",
+        "check_calculation": "Check the fraction arithmetic in each event. Keep any correct operation plan, carry the updated amount forward, and answer the final question."
+      },
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "evidence_profile": "additive_final_value",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "AF-17-E02",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "exit",
+      "prompt": "A piece of wood is 3 2/3 metres long. A piece measuring 1 1/4 metres is cut off. A further 2/3 metre is cut off. What length remains?",
+      "target": "Complete both linked addition/subtraction events using the updated amount and answer the final question",
+      "response": {
+        "type": "fraction",
+        "allow_mixed_number": true,
+        "input_label": "Length remaining",
+        "suffix": "m"
+      },
+      "answer": {
+        "value": "1 3/4"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Recorded. The remaining wood excludes both cut pieces.",
+        "correct_after_support": "Recorded. The remaining wood excludes both cut pieces.",
+        "on_correct_math": "Subtract the first cut, then subtract the further cut from the remaining wood. → 3 2/3 − 1 1/4 = 44/12 − 15/12 = 29/12; this is the updated amount. → 29/12 − 2/3 = 29/12 − 8/12 = 7/4. → Length remaining: 1 3/4 m.",
+        "on_incorrect_attempt_1": "Track both events and check that your answer is the final requested quantity.",
+        "on_incorrect_attempt_2": "Track both events and check that your answer is the final requested quantity.",
+        "on_locked_incorrect": "Response recorded. Compare the two linked events with the working.",
+        "worked_explanation": "Subtract the first cut, then subtract the further cut from the remaining wood. → 3 2/3 − 1 1/4 = 44/12 − 15/12 = 29/12; this is the updated amount. → 29/12 − 2/3 = 29/12 − 8/12 = 7/4. → Length remaining: 1 3/4 m."
+      },
+      "mathematical_support": {
+        "hint_1": "Track both events and check that your answer is the final requested quantity.",
+        "hint_2": "Record the amount after the first event. Apply the second event to that updated amount, and check which final quantity is requested.",
+        "worked_solution": "Subtract the first cut, then subtract the further cut from the remaining wood. → 3 2/3 − 1 1/4 = 44/12 − 15/12 = 29/12; this is the updated amount. → 29/12 − 2/3 = 29/12 − 8/12 = 7/4. → Length remaining: 1 3/4 m."
+      },
+      "working": [
+        "Subtract the first cut, then subtract the further cut from the remaining wood.",
+        "3 2/3 − 1 1/4 = 44/12 − 15/12 = 29/12; this is the updated amount.",
+        "29/12 − 2/3 = 29/12 − 8/12 = 7/4.",
+        "Length remaining: 1 3/4 m."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "additive_timeline",
+          "object": "wood",
+          "title": "Two cuts from a piece of wood",
+          "start": "3 2/3",
+          "first": "1 1/4",
+          "second": "2/3",
+          "first_operation": "subtract",
+          "start_label": "Original wood",
+          "first_label": "First piece cut off",
+          "second_label": "Further piece cut off",
+          "middle_label": "Wood after the first cut",
+          "final_label": "Length remaining",
+          "plan": "Subtract the first cut, then subtract the further cut from the remaining wood.",
+          "unit": "m",
+          "unit_name": "metre",
+          "first_working": "3 2/3 − 1 1/4 = 44/12 − 15/12 = 29/12",
+          "second_working": "29/12 − 2/3 = 29/12 − 8/12 = 7/4",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "intermediate_only": "That value matches the amount after the first event. The second event still needs to be included.",
+        "original_for_second": "That value matches applying only the second event to the original amount. Check that the first event has also been included.",
+        "first_event_value": "That value matches reversing the first event’s operation. Check what the first event does to the starting amount.",
+        "second_event_value": "That value matches adding the second amount. In this problem the second amount is removed from the updated amount.",
+        "check_calculation": "Check the fraction arithmetic in each event. Keep any correct operation plan, carry the updated amount forward, and answer the final question."
+      },
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "evidence_profile": "additive_final_value",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "AF-17-E03",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "exit",
+      "prompt": "Which statement about a two-step problem is correct?",
+      "target": "Complete both linked addition/subtraction events using the updated amount and answer the final question",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "The result of Step 1 becomes the starting amount for Step 2.",
+          "Each step should start from the original amount.",
+          "Only the first operation needs to be completed.",
+          "The order of events never matters."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "The result of Step 1 becomes the starting amount for Step 2."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Recorded. The first result supplies the next starting amount.",
+        "correct_after_support": "Recorded. The first result supplies the next starting amount.",
+        "on_correct_math": "The first event updates the amount. → The second event acts on the result of the first.",
+        "on_incorrect_attempt_1": "No hints are available in the final check.",
+        "on_incorrect_attempt_2": "No hints are available in the final check.",
+        "on_locked_incorrect": "Response recorded. Compare the two linked events with the working.",
+        "worked_explanation": "The first event updates the amount. → The second event acts on the result of the first."
+      },
+      "mathematical_support": {
+        "hint_1": "No hints are available in the final check.",
+        "hint_2": "Record the amount after the first event. Apply the second event to that updated amount, and check which final quantity is requested.",
+        "worked_solution": "The first event updates the amount. → The second event acts on the result of the first."
+      },
+      "working": [
+        "The first event updates the amount.",
+        "The second event acts on the result of the first."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "linked_additive_steps",
+          "label": "Choose the relationship between the steps",
+          "expression": "Step 1 → Step 2",
+          "completed": "The result of Step 1 becomes the starting amount for Step 2.",
+          "response_kind": "explanation",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "Each step should start from the original amount.": "This ignores the change made by the first event. The second event uses the updated amount.",
+        "Only the first operation needs to be completed.": "The first result is intermediate. Complete the second event to answer the final question.",
+        "The order of events never matters.": "Event order defines the changing quantity. Equivalent arithmetic regrouping can be valid, but it must preserve the complete expression and subtraction order."
+      },
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "evidence_profile": "additive_structure",
+      "structural_evidence": "dependency_rule",
+      "resume_specific_narration": true
+    }
+  ],
+  "canonical_lesson": {
+    "version": "AF17-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

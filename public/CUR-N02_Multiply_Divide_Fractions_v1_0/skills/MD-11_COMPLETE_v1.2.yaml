@@ -1,0 +1,2061 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "MD-11 - Divide a whole number by a unit fraction",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-17",
+      "sha256": "3e58f523a57a55be23859890b02ba4bc25675612496a3e57d27cdfe220626a69"
+    },
+    "authored_scope": "The approved unit-group counting sequence, reciprocal check, graduated practice and grouping contexts.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "MD11-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "pending",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        3,
+        4,
+        5,
+        6,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "source_repairs_consulted": [
+        9,
+        10,
+        11
+      ],
+      "note": "All 17 source pages and p3–5 visuals reviewed. All integer results accept exact equivalent fractions. Source application pairs intentionally revisit earlier taught or practiced pairs in new contexts and do not count as unseen mastery evidence. Both final whole-number/denominator pairs are fresh. No Diagnostic or Retrieval layers added."
+    }
+  },
+  "identity": {
+    "id": "MD-11",
+    "slug": "divide-a-whole-number-by-a-unit-fraction",
+    "title": "Divide a whole number by a unit fraction",
+    "strand": "Number",
+    "cluster": "Multiplying and Dividing Fractions",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Divide a positive whole number by a positive unit fraction and interpret the result as the number of those equal-sized groups in the whole amount.",
+    "success_criteria": [
+      "Interpret the divisor as a group size.",
+      "Count unit-fraction parts in one whole.",
+      "Multiply the per-whole count by the number of wholes.",
+      "Use the reciprocal of the divisor without reversing the starting amount.",
+      "Recognise why dividing by a positive fraction below one gives a larger group count.",
+      "Apply an exact method in a grouping or measuring context."
+    ],
+    "boundaries": {
+      "includes": [
+        "Positive whole-number dividends",
+        "Positive unit-fraction divisors below one",
+        "Exact whole-number answers and exact equivalent forms",
+        "Direct counting, repeated addition, multiplication and reciprocal methods",
+        "Grouping, cutting, filling and measuring contexts"
+      ],
+      "excludes": [
+        "Non-unit fraction divisors",
+        "Fraction dividends",
+        "Mixed numbers",
+        "Zero divisors",
+        "Negative numbers",
+        "Decimals",
+        "Algebraic fractions",
+        "Multi-step operation selection",
+        "Diagnostic and delayed Retrieval layers"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "MD-09"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for MD-09 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "integer",
+      "single_choice"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    }
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "The divisor is the size of each group; the answer counts how many groups fit.",
+    "invariant": "The group count multiplied by the unit-fraction group size restores the original whole-number amount.",
+    "mathematical_rule": "Multiply the number of wholes by the number of unit-fraction parts per whole.",
+    "must_notice": [
+      "Group size and group count are different quantities.",
+      "Every whole contributes the same number of parts.",
+      "Only the divisor becomes its reciprocal.",
+      "A group smaller than one whole produces more groups than wholes."
+    ],
+    "common_confusions": [
+      "Multiplying by the original unit fraction",
+      "Dividing by the denominator",
+      "Reversing the first number",
+      "Finding a share size rather than a group count",
+      "Counting only one whole"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "Count smaller groups",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Count smaller groups",
+          "initial_state": "Count smaller groups",
+          "model": {
+            "kind": "unit_groups",
+            "wholes": 3,
+            "denominator": 4,
+            "object": "bars",
+            "target": "Number of unit-fraction groups",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "given",
+            "show_calculation": true
+          }
+        },
+        "narration": {
+          "script": "The division asks how many quarter-sized groups fit into three wholes. The group size is known; the group count is not."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Count the parts in one whole",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Count the parts in one whole",
+          "initial_state": "Count the parts in one whole",
+          "model": {
+            "kind": "unit_groups",
+            "wholes": 3,
+            "denominator": 4,
+            "object": "bars",
+            "target": "Number of unit-fraction groups",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "one_whole"
+          }
+        },
+        "narration": {
+          "script": "Start with one whole. Four equal quarter-sized parts fit exactly inside it."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Include every whole",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Include every whole",
+          "initial_state": "Include every whole",
+          "model": {
+            "kind": "unit_groups",
+            "wholes": 3,
+            "denominator": 4,
+            "object": "bars",
+            "target": "Number of unit-fraction groups",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "count_all"
+          }
+        },
+        "narration": {
+          "script": "Each of the three wholes contributes the same number of quarters. Count across the whole amount to find the total."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Connect the count to the division",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Connect the count to the division",
+          "initial_state": "Connect the count to the division",
+          "model": {
+            "kind": "unit_groups",
+            "wholes": 3,
+            "denominator": 4,
+            "object": "bars",
+            "target": "Number of unit-fraction groups",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "result"
+          }
+        },
+        "narration": {
+          "script": "The number of smaller groups is greater than the number of whole units. Division by a fraction below one is counting those smaller groups."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Explain the group count",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Explain the group count",
+          "initial_state": "Explain the group count",
+          "model": null
+        },
+        "narration": {
+          "script": "Choose the reason that connects quarters per whole with quarters in the full amount."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "MD-11-C01"
+        },
+        "next_step": "T06"
+      },
+      {
+        "id": "T06",
+        "stage": "teaching",
+        "purpose": "Identify the new group size",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Identify the new group size",
+          "initial_state": "Identify the new group size",
+          "model": {
+            "kind": "unit_groups",
+            "wholes": 5,
+            "denominator": 3,
+            "object": "bars",
+            "target": "Number of unit-fraction groups",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "group_size",
+            "show_calculation": true
+          }
+        },
+        "narration": {
+          "script": "For this new example, the divisor gives the size of each part. These parts are thirds."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T07"
+      },
+      {
+        "id": "T07",
+        "stage": "teaching",
+        "purpose": "Count thirds in one whole",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Count thirds in one whole",
+          "initial_state": "Count thirds in one whole",
+          "model": {
+            "kind": "unit_groups",
+            "wholes": 5,
+            "denominator": 3,
+            "object": "bars",
+            "target": "Number of unit-fraction groups",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "one_whole"
+          }
+        },
+        "narration": {
+          "script": "One whole contains three thirds. That is the per-whole count, not yet the count for all five wholes."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T08"
+      },
+      {
+        "id": "T08",
+        "stage": "teaching",
+        "purpose": "Count across all five wholes",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Count across all five wholes",
+          "initial_state": "Count across all five wholes",
+          "model": {
+            "kind": "unit_groups",
+            "wholes": 5,
+            "denominator": 3,
+            "object": "bars",
+            "target": "Number of unit-fraction groups",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "count_all"
+          }
+        },
+        "narration": {
+          "script": "Apply the same count to each whole. Multiplication combines those equal per-whole counts."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T09"
+      },
+      {
+        "id": "T09",
+        "stage": "teaching",
+        "purpose": "Check with the reciprocal method",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Check with the reciprocal method",
+          "initial_state": "Check with the reciprocal method",
+          "model": {
+            "kind": "unit_groups",
+            "wholes": 5,
+            "denominator": 3,
+            "object": "bars",
+            "target": "Number of unit-fraction groups",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "reciprocal"
+          }
+        },
+        "narration": {
+          "script": "The whole-number amount stays unchanged. Multiplying by the divisor’s reciprocal confirms the same group count."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T10"
+      },
+      {
+        "id": "T10",
+        "stage": "teaching",
+        "purpose": "Recognise the valid method",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Recognise the valid method",
+          "initial_state": "Recognise the valid method",
+          "model": null
+        },
+        "narration": {
+          "script": "Check which method counts thirds in the amount. Your choice here is unscored."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "MD-11-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "MD-11-G01",
+        "support_level": "high",
+        "pre_question_script": "Start with the count for one whole before including the full amount.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "MD-11-G02",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "guided",
+        "question_ref": "MD-11-G03",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "guided",
+        "question_ref": "MD-11-G04",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G05"
+      },
+      "G05": {
+        "stage": "guided",
+        "question_ref": "MD-11-G05",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "F01"
+      },
+      "F01": {
+        "stage": "faded",
+        "question_ref": "MD-11-P01",
+        "support_level": "reduced",
+        "pre_question_script": "Choose a valid counting or calculation method. Support is optional.",
+        "correct_next": "I01"
+      },
+      "I01": {
+        "stage": "independent_transfer",
+        "question_ref": "MD-11-P02",
+        "support_level": "none",
+        "pre_question_script": "Find the exact group count independently.",
+        "correct_next": "P03"
+      }
+    },
+    "practice": {
+      "intro_script": "Keep the known size of one group separate from the unknown number of groups. In each context, decide how the quantities are related.",
+      "question_order": [
+        "MD-11-P03",
+        "MD-11-P04",
+        "MD-11-P05",
+        "MD-11-P06",
+        "MD-11-X01",
+        "MD-11-X02",
+        "MD-11-X03",
+        "MD-11-X04"
+      ]
+    },
+    "exit": {
+      "intro_script": "Complete two new divisions and a method check without hints. Each answer locks after submission; keep your answers exact.",
+      "primary_question_refs": [
+        "MD-11-E01",
+        "MD-11-E02",
+        "MD-11-E03"
+      ],
+      "confirmation_question_refs": [],
+      "mastery_policy": {
+        "profile": "all_primary_unsupported",
+        "require_all": true,
+        "source_page": 12,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "You independently counted unit-fraction groups in whole-number amounts and identified the matching multiplication method.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Keep building unit-fraction division",
+      "ryan_script": "One or more final checks need practice. Distinguish the size of each group from the number of groups, and include every whole.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "MD-11-C01",
+      "source_ref": {
+        "page": 4
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "The calculation is 3 ÷ 1/4 = 12. Why is this correct?",
+      "target": "Number of unit-fraction groups",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Each whole contains 4 quarters, so 3 wholes contain 3 × 4 = 12 quarters.",
+          "Dividing by 1/4 means multiplying by 1/4.",
+          "The whole number 3 must be divided by the denominator 4.",
+          "Three wholes contain only three quarters."
+        ]
+      },
+      "answer": {
+        "value": "Each whole contains 4 quarters, so 3 wholes contain 3 × 4 = 12 quarters."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Counting the quarters in every whole gives the total number of groups.",
+        "correct_after_support": "Counting the quarters in every whole gives the total number of groups.",
+        "on_correct_math": "One whole contains four parts of size 1/4. → Three wholes contain 3 × 4 = 12 quarters.",
+        "on_incorrect_attempt_1": "Focus on how many quarter-sized parts are in each whole.",
+        "on_incorrect_attempt_2": "Compare one whole’s parts with the complete group count.",
+        "worked_explanation": "One whole contains four parts of size 1/4. → Three wholes contain 3 × 4 = 12 quarters."
+      },
+      "mathematical_support": {
+        "hint_1": "Focus on how many quarter-sized parts are in each whole.",
+        "hint_2": "The unknown is a count of groups, not the size of an equal share.",
+        "worked_solution": "One whole contains four parts of size 1/4. → Three wholes contain 3 × 4 = 12 quarters."
+      },
+      "working": [
+        "One whole contains four parts of size 1/4.",
+        "Three wholes contain 3 × 4 = 12 quarters."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "unit_groups",
+          "wholes": 3,
+          "denominator": 4,
+          "object": "bars",
+          "target": "Number of unit-fraction groups",
+          "math_text": true,
+          "compact_captions": true,
+          "phase": "stated_result",
+          "working_phases": [
+            "one_whole",
+            "count_all"
+          ]
+        }
+      },
+      "response_feedback": {
+        "Dividing by 1/4 means multiplying by 1/4.": "Multiplying by a quarter finds a quarter of the amount. It does not count the quarter-sized groups.",
+        "The whole number 3 must be divided by the denominator 4.": "Dividing by four finds the size of four equal shares, which is a different question.",
+        "Three wholes contain only three quarters.": "Each whole contains several quarters. Count the quarter-sized parts, not just the wholes."
+      }
+    },
+    {
+      "id": "MD-11-C02",
+      "source_ref": {
+        "page": 4
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "For 5 ÷ 1/3, which method has been used correctly?",
+      "target": "Number of unit-fraction groups",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "5 ÷ 1/3 = 5 × 3 = 15",
+          "5 ÷ 1/3 = 5 × 1/3 = 5/3",
+          "5 ÷ 1/3 = 5 ÷ 3 = 5/3",
+          "5 ÷ 1/3 = 1/5 × 3 = 3/5"
+        ]
+      },
+      "answer": {
+        "value": "5 ÷ 1/3 = 5 × 3 = 15"
+      },
+      "policy": {
+        "scored": false,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true,
+        "engagementOnly": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That method counts the thirds in all five wholes.",
+        "correct_after_support": "That method counts the thirds in all five wholes.",
+        "on_correct_math": "The size of one group is 1/3. → One whole contains 3 groups of that size. → 5 wholes contain 5 × 3 = 15 groups. → Reciprocal check: 5 ÷ 1/3 = 5/1 × 3/1 = 15.",
+        "on_incorrect_attempt_1": "The divisor names the size of each group.",
+        "on_incorrect_attempt_2": "Compare the group count in one whole with the count in the full amount.",
+        "worked_explanation": "The size of one group is 1/3. → One whole contains 3 groups of that size. → 5 wholes contain 5 × 3 = 15 groups. → Reciprocal check: 5 ÷ 1/3 = 5/1 × 3/1 = 15."
+      },
+      "mathematical_support": {
+        "hint_1": "The divisor names the size of each group.",
+        "hint_2": "One whole contains several thirds; include all the given wholes.",
+        "worked_solution": "The size of one group is 1/3. → One whole contains 3 groups of that size. → 5 wholes contain 5 × 3 = 15 groups. → Reciprocal check: 5 ÷ 1/3 = 5/1 × 3/1 = 15."
+      },
+      "working": [
+        "The size of one group is 1/3.",
+        "One whole contains 3 groups of that size.",
+        "5 wholes contain 5 × 3 = 15 groups.",
+        "Reciprocal check: 5 ÷ 1/3 = 5/1 × 3/1 = 15."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "unit_groups",
+          "wholes": 5,
+          "denominator": 3,
+          "object": "bars",
+          "target": "Number of unit-fraction groups",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "group_size",
+            "one_whole",
+            "count_all",
+            "reciprocal"
+          ]
+        }
+      },
+      "response_feedback": {
+        "5 ÷ 1/3 = 5 × 1/3 = 5/3": "That finds a third of five instead of counting the thirds that fit into five.",
+        "5 ÷ 1/3 = 5 ÷ 3 = 5/3": "That shares five into three groups instead of using one third as the group size.",
+        "5 ÷ 1/3 = 1/5 × 3 = 3/5": "That reverses the first number. The starting amount must stay unchanged."
+      }
+    },
+    {
+      "id": "MD-11-G01",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "For 4 ÷ 1/6, start with one whole. How many sixths fit into one whole?",
+      "target": "Number of unit-fraction groups",
+      "response": {
+        "type": "integer",
+        "accept_exact_equivalents": true,
+        "input_label": "Sixths in one whole"
+      },
+      "answer": {
+        "value": 6
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That is the group count for one whole.",
+        "correct_after_support": "That is the group count for one whole.",
+        "on_correct_math": "One whole contains six equal parts of size 1/6.",
+        "on_incorrect_attempt_1": "Use one whole as the reference, not all four wholes yet.",
+        "on_incorrect_attempt_2": "Count the equal parts in the reference whole, then enter the count.",
+        "worked_explanation": "One whole contains six equal parts of size 1/6."
+      },
+      "mathematical_support": {
+        "hint_1": "Use one whole as the reference, not all four wholes yet.",
+        "hint_2": "Consider how many equal sixth-sized pieces rebuild that whole.",
+        "worked_solution": "One whole contains six equal parts of size 1/6."
+      },
+      "working": [
+        "One whole contains six equal parts of size 1/6."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "unit_groups",
+          "wholes": 4,
+          "denominator": 6,
+          "object": "bars",
+          "target": "Number of unit-fraction groups",
+          "math_text": true,
+          "compact_captions": true,
+          "phase": "one_unknown",
+          "resultScope": "one_whole",
+          "support_phases": [
+            "one_whole"
+          ],
+          "working_phases": [
+            "group_size",
+            "one_whole",
+            "count_all",
+            "reciprocal"
+          ]
+        }
+      },
+      "response_feedback": {
+        "4": "Four is the number of wholes in the full question. This step asks about just one whole.",
+        "24": "That is the count for all four wholes. This first step asks for the count in one whole.",
+        "1/6": "That is the size of one group, not the number of those groups in a whole."
+      }
+    },
+    {
+      "id": "MD-11-G02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "Four wholes contain 4 × ? sixths. Enter the missing multiplier.",
+      "target": "Number of unit-fraction groups",
+      "response": {
+        "type": "integer",
+        "accept_exact_equivalents": true,
+        "input_label": "Missing multiplier"
+      },
+      "answer": {
+        "value": 6
+      },
+      "policy": {
+        "scored": false,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true,
+        "engagementOnly": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That multiplier applies the per-whole count to all four wholes.",
+        "correct_after_support": "That multiplier applies the per-whole count to all four wholes.",
+        "on_correct_math": "Each whole contains six sixths. → For four wholes, use 4 × 6.",
+        "on_incorrect_attempt_1": "Use the number of sixths in one whole.",
+        "on_incorrect_attempt_2": "Compare the missing multiplier with the count in one whole.",
+        "worked_explanation": "Each whole contains six sixths. → For four wholes, use 4 × 6."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the number of sixths in one whole.",
+        "hint_2": "The multiplier is a per-whole count, not the total for all four wholes.",
+        "worked_solution": "Each whole contains six sixths. → For four wholes, use 4 × 6."
+      },
+      "working": [
+        "Each whole contains six sixths.",
+        "For four wholes, use 4 × 6."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "unit_groups",
+          "wholes": 4,
+          "denominator": 6,
+          "object": "bars",
+          "target": "Number of unit-fraction groups",
+          "math_text": true,
+          "compact_captions": true,
+          "phase": "missing_multiplier",
+          "working_phases": [
+            "one_whole",
+            "multiply"
+          ]
+        }
+      },
+      "response_feedback": {
+        "4": "The first factor already gives the number of wholes. The missing factor gives groups per whole.",
+        "24": "That is the total group count, not the multiplier for one whole."
+      }
+    },
+    {
+      "id": "MD-11-G03",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "Now work out 4 × 6 to find the total number of sixths.",
+      "target": "Number of unit-fraction groups",
+      "response": {
+        "type": "integer",
+        "accept_exact_equivalents": true,
+        "input_label": "Total number of sixths"
+      },
+      "answer": {
+        "value": 24
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That is the total number of sixth-sized groups.",
+        "correct_after_support": "That is the total number of sixth-sized groups.",
+        "on_correct_math": "Use six sixths for each of four wholes. → 4 × 6 = 24 sixths altogether.",
+        "on_incorrect_attempt_1": "Include every whole in the total.",
+        "on_incorrect_attempt_2": "Compare the per-whole count with the total across all four wholes.",
+        "worked_explanation": "Use six sixths for each of four wholes. → 4 × 6 = 24 sixths altogether."
+      },
+      "mathematical_support": {
+        "hint_1": "Include every whole in the total.",
+        "hint_2": "You can multiply, count the equal parts or add the same per-whole count repeatedly.",
+        "worked_solution": "Use six sixths for each of four wholes. → 4 × 6 = 24 sixths altogether."
+      },
+      "working": [
+        "Use six sixths for each of four wholes.",
+        "4 × 6 = 24 sixths altogether."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "unit_groups",
+          "wholes": 4,
+          "denominator": 6,
+          "object": "bars",
+          "target": "Number of unit-fraction groups",
+          "math_text": true,
+          "compact_captions": true,
+          "phase": "multiply",
+          "resultScope": "count_all",
+          "support_phases": [
+            "multiply",
+            "count_all"
+          ],
+          "working_phases": [
+            "group_size",
+            "one_whole",
+            "count_all",
+            "reciprocal"
+          ]
+        }
+      },
+      "response_feedback": {
+        "6": "That counts only one of the four wholes.",
+        "10": "That adds the number of wholes to the per-whole count instead of making four equal groups of that count."
+      }
+    },
+    {
+      "id": "MD-11-G04",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "Complete the original division: 4 ÷ 1/6 = ?",
+      "target": "Number of unit-fraction groups",
+      "response": {
+        "type": "integer",
+        "accept_exact_equivalents": true,
+        "input_label": "Value of the division"
+      },
+      "answer": {
+        "value": 24
+      },
+      "policy": {
+        "scored": false,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true,
+        "engagementOnly": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The group count is the value of the original division.",
+        "correct_after_support": "The group count is the value of the original division.",
+        "on_correct_math": "The count of twenty-four sixths means 4 ÷ 1/6 = 24.",
+        "on_incorrect_attempt_1": "Connect the group count you just found to the original division.",
+        "on_incorrect_attempt_2": "Connect the counted groups back to the divisor’s stated size.",
+        "worked_explanation": "The count of twenty-four sixths means 4 ÷ 1/6 = 24."
+      },
+      "mathematical_support": {
+        "hint_1": "Connect the group count you just found to the original division.",
+        "hint_2": "The answer is how many sixth-sized groups fit into four wholes.",
+        "worked_solution": "The count of twenty-four sixths means 4 ÷ 1/6 = 24."
+      },
+      "working": [
+        "The count of twenty-four sixths means 4 ÷ 1/6 = 24."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "unit_groups",
+          "wholes": 4,
+          "denominator": 6,
+          "object": "bars",
+          "target": "Number of unit-fraction groups",
+          "math_text": true,
+          "compact_captions": true,
+          "phase": "given",
+          "resultScope": "count_all",
+          "support_phases": [
+            "count_all"
+          ],
+          "working_phases": [
+            "group_size",
+            "one_whole",
+            "count_all",
+            "reciprocal"
+          ]
+        }
+      },
+      "response_feedback": {
+        "6": "That is the count for one whole, not for all four.",
+        "1/24": "The division asks for a group count, not a fractional share size."
+      }
+    },
+    {
+      "id": "MD-11-G05",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "Which statement explains 4 ÷ 1/6 correctly?",
+      "target": "Number of unit-fraction groups",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Four wholes contain 24 sixths.",
+          "Dividing by 1/6 makes the answer smaller than 4.",
+          "The reciprocal of 1/6 is 1/6.",
+          "Four wholes contain only 6 sixths."
+        ]
+      },
+      "answer": {
+        "value": "Four wholes contain 24 sixths."
+      },
+      "policy": {
+        "scored": false,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true,
+        "engagementOnly": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That statement counts all the sixth-sized groups in the original amount.",
+        "correct_after_support": "That statement counts all the sixth-sized groups in the original amount.",
+        "on_correct_math": "Every whole contains six sixths. → Four wholes contain 4 × 6 = 24 sixths.",
+        "on_incorrect_attempt_1": "The answer counts smaller parts inside the given wholes.",
+        "on_incorrect_attempt_2": "Use the size of each group to check the complete count.",
+        "worked_explanation": "Every whole contains six sixths. → Four wholes contain 4 × 6 = 24 sixths."
+      },
+      "mathematical_support": {
+        "hint_1": "The answer counts smaller parts inside the given wholes.",
+        "hint_2": "Compare the count in one whole with the count in all four.",
+        "worked_solution": "Every whole contains six sixths. → Four wholes contain 4 × 6 = 24 sixths."
+      },
+      "working": [
+        "Every whole contains six sixths.",
+        "Four wholes contain 4 × 6 = 24 sixths."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "unit_groups",
+          "wholes": 4,
+          "denominator": 6,
+          "object": "bars",
+          "target": "Number of unit-fraction groups",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "one_whole",
+            "count_all"
+          ]
+        }
+      },
+      "response_feedback": {
+        "Dividing by 1/6 makes the answer smaller than 4.": "There are more sixth-sized groups than whole units in the same amount.",
+        "The reciprocal of 1/6 is 1/6.": "That repeats the divisor instead of exchanging its numerator and denominator.",
+        "Four wholes contain only 6 sixths.": "Six sixths account for one whole. The remaining wholes must also be counted."
+      }
+    },
+    {
+      "id": "MD-11-P01",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "faded",
+      "prompt": "Work out 2 ÷ 1/5.",
+      "target": "Number of unit-fraction groups",
+      "response": {
+        "type": "integer",
+        "accept_exact_equivalents": true,
+        "input_label": "Your exact answer"
+      },
+      "answer": {
+        "value": 10
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That is the number of fifth-sized groups in the full amount.",
+        "correct_after_support": "That is the number of fifth-sized groups in the full amount.",
+        "on_correct_math": "The size of one group is 1/5. → One whole contains 5 groups of that size. → 2 wholes contain 2 × 5 = 10 groups. → Reciprocal check: 2 ÷ 1/5 = 2/1 × 5/1 = 10.",
+        "on_incorrect_attempt_1": "The divisor gives the size of each group. The question asks how many groups fit into the amount.",
+        "on_incorrect_attempt_2": "Compare the fifths in one whole with the count in both wholes.",
+        "worked_explanation": "The size of one group is 1/5. → One whole contains 5 groups of that size. → 2 wholes contain 2 × 5 = 10 groups. → Reciprocal check: 2 ÷ 1/5 = 2/1 × 5/1 = 10."
+      },
+      "mathematical_support": {
+        "hint_1": "The divisor gives the size of each group. The question asks how many groups fit into the amount.",
+        "hint_2": "Find the count in one whole, then include all the wholes. Any valid exact counting or calculation method is accepted.",
+        "worked_solution": "The size of one group is 1/5. → One whole contains 5 groups of that size. → 2 wholes contain 2 × 5 = 10 groups. → Reciprocal check: 2 ÷ 1/5 = 2/1 × 5/1 = 10."
+      },
+      "working": [
+        "The size of one group is 1/5.",
+        "One whole contains 5 groups of that size.",
+        "2 wholes contain 2 × 5 = 10 groups.",
+        "Reciprocal check: 2 ÷ 1/5 = 2/1 × 5/1 = 10."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "unit_groups",
+          "wholes": 2,
+          "denominator": 5,
+          "object": "bars",
+          "target": "Number of unit-fraction groups",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "group_size",
+            "one_whole",
+            "count_all",
+            "reciprocal"
+          ]
+        }
+      },
+      "response_feedback": {
+        "2": "That counts the wholes, not the smaller fraction-sized groups.",
+        "5": "That counts the groups in only one whole. Include every whole in the given amount.",
+        "2/5": "That value comes from multiplying by the fraction or dividing by its denominator. The question asks how many fraction-sized groups fit into the whole amount.",
+        "5/2": "That reverses the starting whole number. Only the divisor changes to its reciprocal.",
+        "1/10": "That is a small fraction, not the requested number of groups."
+      }
+    },
+    {
+      "id": "MD-11-P02",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "independent_transfer",
+      "prompt": "Work out 7 ÷ 1/2.",
+      "target": "Number of unit-fraction groups",
+      "response": {
+        "type": "integer",
+        "accept_exact_equivalents": true,
+        "input_label": "Your exact answer"
+      },
+      "answer": {
+        "value": 14
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That count includes the halves in all seven wholes.",
+        "correct_after_support": "That count includes the halves in all seven wholes.",
+        "on_correct_math": "The size of one group is 1/2. → One whole contains 2 groups of that size. → 7 wholes contain 7 × 2 = 14 groups. → Reciprocal check: 7 ÷ 1/2 = 7/1 × 2/1 = 14.",
+        "on_incorrect_attempt_1": "The divisor gives the size of each group. The question asks how many groups fit into the amount.",
+        "on_incorrect_attempt_2": "Check how many halves make one whole, then include every whole.",
+        "worked_explanation": "The size of one group is 1/2. → One whole contains 2 groups of that size. → 7 wholes contain 7 × 2 = 14 groups. → Reciprocal check: 7 ÷ 1/2 = 7/1 × 2/1 = 14."
+      },
+      "mathematical_support": {
+        "hint_1": "The divisor gives the size of each group. The question asks how many groups fit into the amount.",
+        "hint_2": "Find the count in one whole, then include all the wholes. Any valid exact counting or calculation method is accepted.",
+        "worked_solution": "The size of one group is 1/2. → One whole contains 2 groups of that size. → 7 wholes contain 7 × 2 = 14 groups. → Reciprocal check: 7 ÷ 1/2 = 7/1 × 2/1 = 14."
+      },
+      "working": [
+        "The size of one group is 1/2.",
+        "One whole contains 2 groups of that size.",
+        "7 wholes contain 7 × 2 = 14 groups.",
+        "Reciprocal check: 7 ÷ 1/2 = 7/1 × 2/1 = 14."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "unit_groups",
+          "wholes": 7,
+          "denominator": 2,
+          "object": "bars",
+          "target": "Number of unit-fraction groups",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "group_size",
+            "one_whole",
+            "count_all",
+            "reciprocal"
+          ]
+        }
+      },
+      "response_feedback": {
+        "2": "That counts the groups in only one whole. Include every whole in the given amount.",
+        "7": "That counts the wholes, not the smaller fraction-sized groups.",
+        "7/2": "That value comes from multiplying by the fraction or dividing by its denominator. The question asks how many fraction-sized groups fit into the whole amount.",
+        "2/7": "That reverses the starting whole number. Only the divisor changes to its reciprocal.",
+        "1/14": "That is a small fraction, not the requested number of groups."
+      }
+    },
+    {
+      "id": "MD-11-P03",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Work out 3 ÷ 1/8.",
+      "target": "Number of unit-fraction groups",
+      "response": {
+        "type": "integer",
+        "accept_exact_equivalents": true,
+        "input_label": "Your exact answer"
+      },
+      "answer": {
+        "value": 24
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The result counts eighth-sized groups, not whole units.",
+        "correct_after_support": "The result counts eighth-sized groups, not whole units.",
+        "on_correct_math": "The size of one group is 1/8. → One whole contains 8 groups of that size. → 3 wholes contain 3 × 8 = 24 groups. → Reciprocal check: 3 ÷ 1/8 = 3/1 × 8/1 = 24.",
+        "on_incorrect_attempt_1": "The divisor gives the size of each group. The question asks how many groups fit into the amount.",
+        "on_incorrect_attempt_2": "Compare the number of groups per whole with the total across the given amount.",
+        "worked_explanation": "The size of one group is 1/8. → One whole contains 8 groups of that size. → 3 wholes contain 3 × 8 = 24 groups. → Reciprocal check: 3 ÷ 1/8 = 3/1 × 8/1 = 24."
+      },
+      "mathematical_support": {
+        "hint_1": "The divisor gives the size of each group. The question asks how many groups fit into the amount.",
+        "hint_2": "Find the count in one whole, then include all the wholes. Any valid exact counting or calculation method is accepted.",
+        "worked_solution": "The size of one group is 1/8. → One whole contains 8 groups of that size. → 3 wholes contain 3 × 8 = 24 groups. → Reciprocal check: 3 ÷ 1/8 = 3/1 × 8/1 = 24."
+      },
+      "working": [
+        "The size of one group is 1/8.",
+        "One whole contains 8 groups of that size.",
+        "3 wholes contain 3 × 8 = 24 groups.",
+        "Reciprocal check: 3 ÷ 1/8 = 3/1 × 8/1 = 24."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "unit_groups",
+          "wholes": 3,
+          "denominator": 8,
+          "object": "bars",
+          "target": "Number of unit-fraction groups",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "group_size",
+            "one_whole",
+            "count_all",
+            "reciprocal"
+          ]
+        }
+      },
+      "response_feedback": {
+        "3": "That counts the wholes, not the smaller fraction-sized groups.",
+        "8": "That counts the groups in only one whole. Include every whole in the given amount.",
+        "3/8": "That value comes from multiplying by the fraction or dividing by its denominator. The question asks how many fraction-sized groups fit into the whole amount.",
+        "8/3": "That reverses the starting whole number. Only the divisor changes to its reciprocal.",
+        "1/24": "That is a small fraction, not the requested number of groups."
+      }
+    },
+    {
+      "id": "MD-11-P04",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Work out 6 ÷ 1/3.",
+      "target": "Number of unit-fraction groups",
+      "response": {
+        "type": "integer",
+        "accept_exact_equivalents": true,
+        "input_label": "Your exact answer"
+      },
+      "answer": {
+        "value": 18
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That total counts all the thirds in the original amount.",
+        "correct_after_support": "That total counts all the thirds in the original amount.",
+        "on_correct_math": "The size of one group is 1/3. → One whole contains 3 groups of that size. → 6 wholes contain 6 × 3 = 18 groups. → Reciprocal check: 6 ÷ 1/3 = 6/1 × 3/1 = 18.",
+        "on_incorrect_attempt_1": "The divisor gives the size of each group. The question asks how many groups fit into the amount.",
+        "on_incorrect_attempt_2": "Check that the groups from every whole have been included.",
+        "worked_explanation": "The size of one group is 1/3. → One whole contains 3 groups of that size. → 6 wholes contain 6 × 3 = 18 groups. → Reciprocal check: 6 ÷ 1/3 = 6/1 × 3/1 = 18."
+      },
+      "mathematical_support": {
+        "hint_1": "The divisor gives the size of each group. The question asks how many groups fit into the amount.",
+        "hint_2": "Find the count in one whole, then include all the wholes. Any valid exact counting or calculation method is accepted.",
+        "worked_solution": "The size of one group is 1/3. → One whole contains 3 groups of that size. → 6 wholes contain 6 × 3 = 18 groups. → Reciprocal check: 6 ÷ 1/3 = 6/1 × 3/1 = 18."
+      },
+      "working": [
+        "The size of one group is 1/3.",
+        "One whole contains 3 groups of that size.",
+        "6 wholes contain 6 × 3 = 18 groups.",
+        "Reciprocal check: 6 ÷ 1/3 = 6/1 × 3/1 = 18."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "unit_groups",
+          "wholes": 6,
+          "denominator": 3,
+          "object": "bars",
+          "target": "Number of unit-fraction groups",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "group_size",
+            "one_whole",
+            "count_all",
+            "reciprocal"
+          ]
+        }
+      },
+      "response_feedback": {
+        "3": "That counts the groups in only one whole. Include every whole in the given amount.",
+        "6": "That counts the wholes, not the smaller fraction-sized groups.",
+        "6/3": "That value comes from multiplying by the fraction or dividing by its denominator. The question asks how many fraction-sized groups fit into the whole amount.",
+        "3/6": "That reverses the starting whole number. Only the divisor changes to its reciprocal.",
+        "1/18": "That is a small fraction, not the requested number of groups."
+      }
+    },
+    {
+      "id": "MD-11-P05",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Work out 9 ÷ 1/10.",
+      "target": "Number of unit-fraction groups",
+      "response": {
+        "type": "integer",
+        "accept_exact_equivalents": true,
+        "input_label": "Your exact answer"
+      },
+      "answer": {
+        "value": 90
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That is the complete count of tenth-sized groups.",
+        "correct_after_support": "That is the complete count of tenth-sized groups.",
+        "on_correct_math": "The size of one group is 1/10. → One whole contains 10 groups of that size. → 9 wholes contain 9 × 10 = 90 groups. → Reciprocal check: 9 ÷ 1/10 = 9/1 × 10/1 = 90.",
+        "on_incorrect_attempt_1": "The divisor gives the size of each group. The question asks how many groups fit into the amount.",
+        "on_incorrect_attempt_2": "Keep the number of wholes distinct from the number of tenths in each whole.",
+        "worked_explanation": "The size of one group is 1/10. → One whole contains 10 groups of that size. → 9 wholes contain 9 × 10 = 90 groups. → Reciprocal check: 9 ÷ 1/10 = 9/1 × 10/1 = 90."
+      },
+      "mathematical_support": {
+        "hint_1": "The divisor gives the size of each group. The question asks how many groups fit into the amount.",
+        "hint_2": "Find the count in one whole, then include all the wholes. Any valid exact counting or calculation method is accepted.",
+        "worked_solution": "The size of one group is 1/10. → One whole contains 10 groups of that size. → 9 wholes contain 9 × 10 = 90 groups. → Reciprocal check: 9 ÷ 1/10 = 9/1 × 10/1 = 90."
+      },
+      "working": [
+        "The size of one group is 1/10.",
+        "One whole contains 10 groups of that size.",
+        "9 wholes contain 9 × 10 = 90 groups.",
+        "Reciprocal check: 9 ÷ 1/10 = 9/1 × 10/1 = 90."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "unit_groups",
+          "wholes": 9,
+          "denominator": 10,
+          "object": "bars",
+          "target": "Number of unit-fraction groups",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "group_size",
+            "one_whole",
+            "count_all",
+            "reciprocal"
+          ]
+        }
+      },
+      "response_feedback": {
+        "9": "That counts the wholes, not the smaller fraction-sized groups.",
+        "10": "That counts the groups in only one whole. Include every whole in the given amount.",
+        "9/10": "That value comes from multiplying by the fraction or dividing by its denominator. The question asks how many fraction-sized groups fit into the whole amount.",
+        "10/9": "That reverses the starting whole number. Only the divisor changes to its reciprocal.",
+        "1/90": "That is a small fraction, not the requested number of groups."
+      }
+    },
+    {
+      "id": "MD-11-P06",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "A student calculates 4 ÷ 1/7. Which answer is correct?",
+      "target": "Number of unit-fraction groups",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "28",
+          "4/7",
+          "7/4",
+          "1/7"
+        ]
+      },
+      "answer": {
+        "value": "28"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That count includes every seventh-sized group in the amount.",
+        "correct_after_support": "That count includes every seventh-sized group in the amount.",
+        "on_correct_math": "The size of one group is 1/7. → One whole contains 7 groups of that size. → 4 wholes contain 4 × 7 = 28 groups. → Reciprocal check: 4 ÷ 1/7 = 4/1 × 7/1 = 28.",
+        "on_incorrect_attempt_1": "The answer counts seventh-sized parts inside four wholes.",
+        "on_incorrect_attempt_2": "Compare the proposed result with the number of groups per whole.",
+        "worked_explanation": "The size of one group is 1/7. → One whole contains 7 groups of that size. → 4 wholes contain 4 × 7 = 28 groups. → Reciprocal check: 4 ÷ 1/7 = 4/1 × 7/1 = 28."
+      },
+      "mathematical_support": {
+        "hint_1": "The answer counts seventh-sized parts inside four wholes.",
+        "hint_2": "Only the divisor becomes its reciprocal if you use the reciprocal method.",
+        "worked_solution": "The size of one group is 1/7. → One whole contains 7 groups of that size. → 4 wholes contain 4 × 7 = 28 groups. → Reciprocal check: 4 ÷ 1/7 = 4/1 × 7/1 = 28."
+      },
+      "working": [
+        "The size of one group is 1/7.",
+        "One whole contains 7 groups of that size.",
+        "4 wholes contain 4 × 7 = 28 groups.",
+        "Reciprocal check: 4 ÷ 1/7 = 4/1 × 7/1 = 28."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "unit_groups",
+          "wholes": 4,
+          "denominator": 7,
+          "object": "bars",
+          "target": "Number of unit-fraction groups",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "group_size",
+            "one_whole",
+            "count_all",
+            "reciprocal"
+          ]
+        }
+      },
+      "response_feedback": {
+        "4/7": "That is a fraction of four, not a count of sevenths fitting into four.",
+        "7/4": "That reverses the starting whole number.",
+        "1/7": "That repeats the group size instead of finding the number of groups."
+      }
+    },
+    {
+      "id": "MD-11-X01",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "practice",
+      "prompt": "A piece of ribbon is 4 metres long. It is cut into pieces that are each 1/5 metre long. Work out the number of pieces.",
+      "target": "Number of unit-fraction groups",
+      "response": {
+        "type": "integer",
+        "accept_exact_equivalents": true,
+        "input_label": "Number of pieces"
+      },
+      "answer": {
+        "value": 20
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That is the number of pieces cut from the full ribbon.",
+        "correct_after_support": "That is the number of pieces cut from the full ribbon.",
+        "on_correct_math": "The size of one group is 1/5. → One whole contains 5 groups of that size. → 4 wholes contain 4 × 5 = 20 groups. → Reciprocal check: 4 ÷ 1/5 = 4/1 × 5/1 = 20.",
+        "on_incorrect_attempt_1": "The total length and the length of each piece are given. The number of pieces is unknown.",
+        "on_incorrect_attempt_2": "Compare the length of one piece with the total length available.",
+        "worked_explanation": "The size of one group is 1/5. → One whole contains 5 groups of that size. → 4 wholes contain 4 × 5 = 20 groups. → Reciprocal check: 4 ÷ 1/5 = 4/1 × 5/1 = 20."
+      },
+      "mathematical_support": {
+        "hint_1": "The total length and the length of each piece are given. The number of pieces is unknown.",
+        "hint_2": "Find how many pieces fit into one metre, then account for the entire ribbon.",
+        "worked_solution": "The size of one group is 1/5. → One whole contains 5 groups of that size. → 4 wholes contain 4 × 5 = 20 groups. → Reciprocal check: 4 ÷ 1/5 = 4/1 × 5/1 = 20."
+      },
+      "working": [
+        "The size of one group is 1/5.",
+        "One whole contains 5 groups of that size.",
+        "4 wholes contain 4 × 5 = 20 groups.",
+        "Reciprocal check: 4 ÷ 1/5 = 4/1 × 5/1 = 20."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "unit_groups",
+          "wholes": 4,
+          "denominator": 5,
+          "object": "ribbon",
+          "target": "Number of unit-fraction groups",
+          "math_text": true,
+          "compact_captions": true,
+          "unit": "m",
+          "working_phases": [
+            "group_size",
+            "one_whole",
+            "count_all",
+            "reciprocal"
+          ]
+        }
+      },
+      "response_feedback": {
+        "4": "That counts the wholes, not the smaller fraction-sized groups.",
+        "5": "That counts the groups in only one whole. Include every whole in the given amount.",
+        "4/5": "That value comes from multiplying by the fraction or dividing by its denominator. The question asks how many fraction-sized groups fit into the whole amount.",
+        "5/4": "That reverses the starting whole number. Only the divisor changes to its reciprocal.",
+        "1/20": "That is a small fraction, not the requested number of groups."
+      }
+    },
+    {
+      "id": "MD-11-X02",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "practice",
+      "prompt": "A container holds 3 litres of juice. The juice is poured into bottles that each hold 1/4 litre. Work out the number of full bottles that can be filled.",
+      "target": "Number of unit-fraction groups",
+      "response": {
+        "type": "integer",
+        "accept_exact_equivalents": true,
+        "input_label": "Number of full bottles"
+      },
+      "answer": {
+        "value": 12
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That is the number of full bottles the available juice can fill.",
+        "correct_after_support": "That is the number of full bottles the available juice can fill.",
+        "on_correct_math": "The size of one group is 1/4. → One whole contains 4 groups of that size. → 3 wholes contain 3 × 4 = 12 groups. → Reciprocal check: 3 ÷ 1/4 = 3/1 × 4/1 = 12.",
+        "on_incorrect_attempt_1": "The capacity of one bottle is known; the number of bottles is not.",
+        "on_incorrect_attempt_2": "Keep bottle capacity separate from the number of bottles.",
+        "worked_explanation": "The size of one group is 1/4. → One whole contains 4 groups of that size. → 3 wholes contain 3 × 4 = 12 groups. → Reciprocal check: 3 ÷ 1/4 = 3/1 × 4/1 = 12."
+      },
+      "mathematical_support": {
+        "hint_1": "The capacity of one bottle is known; the number of bottles is not.",
+        "hint_2": "Count the bottles filled by one litre, then include all the available litres.",
+        "worked_solution": "The size of one group is 1/4. → One whole contains 4 groups of that size. → 3 wholes contain 3 × 4 = 12 groups. → Reciprocal check: 3 ÷ 1/4 = 3/1 × 4/1 = 12."
+      },
+      "working": [
+        "The size of one group is 1/4.",
+        "One whole contains 4 groups of that size.",
+        "3 wholes contain 3 × 4 = 12 groups.",
+        "Reciprocal check: 3 ÷ 1/4 = 3/1 × 4/1 = 12."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "unit_groups",
+          "wholes": 3,
+          "denominator": 4,
+          "object": "bottles",
+          "target": "Number of unit-fraction groups",
+          "math_text": true,
+          "compact_captions": true,
+          "unit": "litre",
+          "working_phases": [
+            "group_size",
+            "one_whole",
+            "count_all",
+            "reciprocal"
+          ]
+        }
+      },
+      "response_feedback": {
+        "3": "That counts the wholes, not the smaller fraction-sized groups.",
+        "4": "That counts the groups in only one whole. Include every whole in the given amount.",
+        "3/4": "That value comes from multiplying by the fraction or dividing by its denominator. The question asks how many fraction-sized groups fit into the whole amount.",
+        "4/3": "That reverses the starting whole number. Only the divisor changes to its reciprocal.",
+        "1/12": "That is a small fraction, not the requested number of groups."
+      }
+    },
+    {
+      "id": "MD-11-X03",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "practice",
+      "prompt": "A shop has 6 kg of rice. The rice is packed into bags that each contain 1/3 kg. Work out the number of bags that can be filled.",
+      "target": "Number of unit-fraction groups",
+      "response": {
+        "type": "integer",
+        "accept_exact_equivalents": true,
+        "input_label": "Number of bags"
+      },
+      "answer": {
+        "value": 18
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That count uses all the rice in equal-sized bags.",
+        "correct_after_support": "That count uses all the rice in equal-sized bags.",
+        "on_correct_math": "The size of one group is 1/3. → One whole contains 3 groups of that size. → 6 wholes contain 6 × 3 = 18 groups. → Reciprocal check: 6 ÷ 1/3 = 6/1 × 3/1 = 18.",
+        "on_incorrect_attempt_1": "Each bag has a fixed mass of rice. The unknown is the number of bags.",
+        "on_incorrect_attempt_2": "Compare the mass in one bag with the full mass available.",
+        "worked_explanation": "The size of one group is 1/3. → One whole contains 3 groups of that size. → 6 wholes contain 6 × 3 = 18 groups. → Reciprocal check: 6 ÷ 1/3 = 6/1 × 3/1 = 18."
+      },
+      "mathematical_support": {
+        "hint_1": "Each bag has a fixed mass of rice. The unknown is the number of bags.",
+        "hint_2": "Count the bags made from one kilogram, then include all the rice.",
+        "worked_solution": "The size of one group is 1/3. → One whole contains 3 groups of that size. → 6 wholes contain 6 × 3 = 18 groups. → Reciprocal check: 6 ÷ 1/3 = 6/1 × 3/1 = 18."
+      },
+      "working": [
+        "The size of one group is 1/3.",
+        "One whole contains 3 groups of that size.",
+        "6 wholes contain 6 × 3 = 18 groups.",
+        "Reciprocal check: 6 ÷ 1/3 = 6/1 × 3/1 = 18."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "unit_groups",
+          "wholes": 6,
+          "denominator": 3,
+          "object": "rice",
+          "target": "Number of unit-fraction groups",
+          "math_text": true,
+          "compact_captions": true,
+          "unit": "kg",
+          "working_phases": [
+            "group_size",
+            "one_whole",
+            "count_all",
+            "reciprocal"
+          ]
+        }
+      },
+      "response_feedback": {
+        "3": "That counts the groups in only one whole. Include every whole in the given amount.",
+        "6": "That counts the wholes, not the smaller fraction-sized groups.",
+        "6/3": "That value comes from multiplying by the fraction or dividing by its denominator. The question asks how many fraction-sized groups fit into the whole amount.",
+        "3/6": "That reverses the starting whole number. Only the divisor changes to its reciprocal.",
+        "1/18": "That is a small fraction, not the requested number of groups."
+      }
+    },
+    {
+      "id": "MD-11-X04",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "practice",
+      "prompt": "A 5-metre cable is cut into pieces that are each 1/8 metre long. Which calculation finds the number of pieces?",
+      "target": "Number of unit-fraction groups",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "5 ÷ 1/8",
+          "5 × 1/8",
+          "1/8 ÷ 5",
+          "5 + 1/8"
+        ]
+      },
+      "answer": {
+        "value": "5 ÷ 1/8"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That calculation counts the piece lengths that fit into the cable.",
+        "correct_after_support": "That calculation counts the piece lengths that fit into the cable.",
+        "on_correct_math": "The total length and each piece length are known; the number of pieces is unknown. → The calculation is 5 ÷ 1/8.",
+        "on_incorrect_attempt_1": "Decide whether you need a count of pieces or a fraction of the original length.",
+        "on_incorrect_attempt_2": "Match the given total and piece length to the unknown count.",
+        "worked_explanation": "The total length and each piece length are known; the number of pieces is unknown. → The calculation is 5 ÷ 1/8."
+      },
+      "mathematical_support": {
+        "hint_1": "Decide whether you need a count of pieces or a fraction of the original length.",
+        "hint_2": "Use the given piece length as the size of each group.",
+        "worked_solution": "The total length and each piece length are known; the number of pieces is unknown. → The calculation is 5 ÷ 1/8."
+      },
+      "working": [
+        "The total length and each piece length are known; the number of pieces is unknown.",
+        "The calculation is 5 ÷ 1/8."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "unit_groups",
+          "wholes": 5,
+          "denominator": 8,
+          "object": "cable",
+          "target": "Number of unit-fraction groups",
+          "math_text": true,
+          "compact_captions": true,
+          "unit": "m",
+          "working_phases": [
+            "given",
+            "division"
+          ]
+        }
+      },
+      "response_feedback": {
+        "5 × 1/8": "That finds an eighth of the cable length, not the number of eighth-metre pieces.",
+        "1/8 ÷ 5": "That shares one piece into five parts instead of counting pieces in the full cable.",
+        "5 + 1/8": "Adding those lengths does not count how many pieces can be cut."
+      }
+    },
+    {
+      "id": "MD-11-E01",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "Work out 6 ÷ 1/4.",
+      "target": "Number of unit-fraction groups",
+      "response": {
+        "type": "integer",
+        "accept_exact_equivalents": true,
+        "input_label": "Your exact answer"
+      },
+      "answer": {
+        "value": 24
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The exact result counts the quarter-sized groups independently.",
+        "correct_after_support": "The exact result counts the quarter-sized groups independently.",
+        "on_correct_math": "The size of one group is 1/4. → One whole contains 4 groups of that size. → 6 wholes contain 6 × 4 = 24 groups. → Reciprocal check: 6 ÷ 1/4 = 6/1 × 4/1 = 24.",
+        "on_incorrect_attempt_1": "The divisor gives the size of each group. The question asks how many groups fit into the amount.",
+        "on_incorrect_attempt_2": "Check the count in one whole and then in the complete amount.",
+        "worked_explanation": "The size of one group is 1/4. → One whole contains 4 groups of that size. → 6 wholes contain 6 × 4 = 24 groups. → Reciprocal check: 6 ÷ 1/4 = 6/1 × 4/1 = 24.",
+        "on_locked_incorrect": "Check the count in one whole and then in the complete amount."
+      },
+      "mathematical_support": {
+        "hint_1": "The divisor gives the size of each group. The question asks how many groups fit into the amount.",
+        "hint_2": "Find the count in one whole, then include all the wholes. Any valid exact counting or calculation method is accepted.",
+        "worked_solution": "The size of one group is 1/4. → One whole contains 4 groups of that size. → 6 wholes contain 6 × 4 = 24 groups. → Reciprocal check: 6 ÷ 1/4 = 6/1 × 4/1 = 24."
+      },
+      "working": [
+        "The size of one group is 1/4.",
+        "One whole contains 4 groups of that size.",
+        "6 wholes contain 6 × 4 = 24 groups.",
+        "Reciprocal check: 6 ÷ 1/4 = 6/1 × 4/1 = 24."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "unit_groups",
+          "wholes": 6,
+          "denominator": 4,
+          "object": "bars",
+          "target": "Number of unit-fraction groups",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "group_size",
+            "one_whole",
+            "count_all",
+            "reciprocal"
+          ]
+        }
+      },
+      "response_feedback": {
+        "4": "That counts the groups in only one whole. Include every whole in the given amount.",
+        "6": "That counts the wholes, not the smaller fraction-sized groups.",
+        "6/4": "That value comes from multiplying by the fraction or dividing by its denominator. The question asks how many fraction-sized groups fit into the whole amount.",
+        "4/6": "That reverses the starting whole number. Only the divisor changes to its reciprocal.",
+        "1/24": "That is a small fraction, not the requested number of groups."
+      },
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "MD-11-E02",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "Work out 5 ÷ 1/9.",
+      "target": "Number of unit-fraction groups",
+      "response": {
+        "type": "integer",
+        "accept_exact_equivalents": true,
+        "input_label": "Your exact answer"
+      },
+      "answer": {
+        "value": 45
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The complete count of ninth-sized groups has been found independently.",
+        "correct_after_support": "The complete count of ninth-sized groups has been found independently.",
+        "on_correct_math": "The size of one group is 1/9. → One whole contains 9 groups of that size. → 5 wholes contain 5 × 9 = 45 groups. → Reciprocal check: 5 ÷ 1/9 = 5/1 × 9/1 = 45.",
+        "on_incorrect_attempt_1": "The divisor gives the size of each group. The question asks how many groups fit into the amount.",
+        "on_incorrect_attempt_2": "Compare the given group size with the count across all the wholes.",
+        "worked_explanation": "The size of one group is 1/9. → One whole contains 9 groups of that size. → 5 wholes contain 5 × 9 = 45 groups. → Reciprocal check: 5 ÷ 1/9 = 5/1 × 9/1 = 45.",
+        "on_locked_incorrect": "Compare the given group size with the count across all the wholes."
+      },
+      "mathematical_support": {
+        "hint_1": "The divisor gives the size of each group. The question asks how many groups fit into the amount.",
+        "hint_2": "Find the count in one whole, then include all the wholes. Any valid exact counting or calculation method is accepted.",
+        "worked_solution": "The size of one group is 1/9. → One whole contains 9 groups of that size. → 5 wholes contain 5 × 9 = 45 groups. → Reciprocal check: 5 ÷ 1/9 = 5/1 × 9/1 = 45."
+      },
+      "working": [
+        "The size of one group is 1/9.",
+        "One whole contains 9 groups of that size.",
+        "5 wholes contain 5 × 9 = 45 groups.",
+        "Reciprocal check: 5 ÷ 1/9 = 5/1 × 9/1 = 45."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "unit_groups",
+          "wholes": 5,
+          "denominator": 9,
+          "object": "bars",
+          "target": "Number of unit-fraction groups",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "group_size",
+            "one_whole",
+            "count_all",
+            "reciprocal"
+          ]
+        }
+      },
+      "response_feedback": {
+        "5": "That counts the wholes, not the smaller fraction-sized groups.",
+        "9": "That counts the groups in only one whole. Include every whole in the given amount.",
+        "5/9": "That value comes from multiplying by the fraction or dividing by its denominator. The question asks how many fraction-sized groups fit into the whole amount.",
+        "9/5": "That reverses the starting whole number. Only the divisor changes to its reciprocal.",
+        "1/45": "That is a small fraction, not the requested number of groups."
+      },
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "MD-11-E03",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "Which statement correctly describes dividing a whole number by a unit fraction?",
+      "target": "Method for dividing by a unit fraction",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Multiply the whole number by the unit fraction’s denominator.",
+          "Divide the whole number by the unit fraction’s denominator.",
+          "Multiply the whole number by the original unit fraction.",
+          "Reverse the whole number before multiplying."
+        ]
+      },
+      "answer": {
+        "value": "Multiply the whole number by the unit fraction’s denominator."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That method counts the unit-fraction groups in every whole.",
+        "correct_after_support": "That method counts the unit-fraction groups in every whole.",
+        "on_correct_math": "A unit fraction’s denominator tells how many of those parts make one whole. → Multiply that per-whole count by the number of wholes. → The reciprocal method gives the same whole-number result.",
+        "on_incorrect_attempt_1": "Think about the meaning of the denominator for a unit fraction.",
+        "on_incorrect_attempt_2": "Compare the roles of the whole-number amount and the unit-fraction group size.",
+        "worked_explanation": "A unit fraction’s denominator tells how many of those parts make one whole. → Multiply that per-whole count by the number of wholes. → The reciprocal method gives the same whole-number result.",
+        "on_locked_incorrect": "Compare the roles of the whole-number amount and the unit-fraction group size."
+      },
+      "mathematical_support": {
+        "hint_1": "Think about the meaning of the denominator for a unit fraction.",
+        "hint_2": "The required result counts equal-sized groups within the amount.",
+        "worked_solution": "A unit fraction’s denominator tells how many of those parts make one whole. → Multiply that per-whole count by the number of wholes. → The reciprocal method gives the same whole-number result."
+      },
+      "working": [
+        "A unit fraction’s denominator tells how many of those parts make one whole.",
+        "Multiply that per-whole count by the number of wholes.",
+        "The reciprocal method gives the same whole-number result."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "unit_groups_rule",
+          "object": "relationship",
+          "target": "Method for dividing by a unit fraction",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "final_error_feedback": "answer_specific"
+    }
+  ],
+  "canonical_lesson": {
+    "version": "MD11-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

@@ -1,0 +1,1759 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "AF-05 - Add fractions when one denominator is a multiple of the other",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-15",
+      "sha256": "bf3fa15401b96e32fd0c13232a0c0437648f888291120e5815a8c3c9a0fb645f"
+    },
+    "authored_scope": "Add the fractions accurately by working with equal-sized parts.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "AF05-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "verified_full_secure_path_denominator_addition_repair_exact_equivalence_narration_sound_captions_and_320_390_layouts",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        3,
+        4,
+        5,
+        6,
+        11,
+        13
+      ],
+      "source_repairs_consulted": [
+        7,
+        8,
+        9,
+        10,
+        14,
+        15
+      ],
+      "note": "All 15 source pages were read. Active pages 3 to 6, 11 and 13 were mapped; pages 7 to 10, 14 and 15 informed misconception feedback, exact equivalence acceptance and generation constraints. Entry, Diagnostic and delayed Retrieval remain excluded. Every active source calculation, method item and context is retained."
+    }
+  },
+  "identity": {
+    "id": "AF-05",
+    "slug": "add-fractions-when-one-denominator-is-a-multiple-of-the-other",
+    "title": "Add fractions when one denominator is a multiple of the other",
+    "strand": "Number",
+    "cluster": "Adding and Subtracting Fractions",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Add two proper fractions by rewriting one fraction so that both fractions have the same denominator.",
+    "success_criteria": [
+      "Recognise that the larger denominator is a valid common denominator when it is a multiple of the smaller one.",
+      "Rewrite only the smaller-denominator fraction with one equal scale factor.",
+      "Add the numerators after the denominators match.",
+      "Apply the method to exact fraction and contextual questions."
+    ],
+    "boundaries": {
+      "includes": [
+        "Two positive proper fractions",
+        "One denominator an exact multiple of the other",
+        "Sums below one in initial learning and mastery",
+        "Either addend may need rewriting",
+        "Exact equivalent answer forms"
+      ],
+      "excludes": [
+        "Subtraction",
+        "Cases where both fractions must be rewritten",
+        "Mixed numbers",
+        "Answers deliberately chosen to require simplification",
+        "Multi-step operation selection",
+        "Diagnostic and delayed Retrieval routes"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "AF-01",
+      "AF-04"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for AF-01, AF-04 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "integer",
+      "fraction",
+      "single_choice"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    }
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "Fractions can be added after they name equal-sized parts.",
+    "invariant": "Renaming one fraction changes its notation but not its amount; once the denominators match, the common denominator remains fixed.",
+    "mathematical_rule": "Use the larger denominator; rename the fraction with the smaller denominator; add the numerators; keep the common denominator.",
+    "must_notice": [
+      "Only one fraction needs rewriting.",
+      "The numerator and denominator use the same scale factor.",
+      "Denominators are not added after conversion."
+    ],
+    "common_confusions": [
+      "Changing the denominator but not the numerator",
+      "Using unequal scale factors",
+      "Adding denominators after conversion",
+      "Adding the original numerators over the larger denominator"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "Equal-sized parts first",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Equal-sized parts first",
+          "initial_state": "Equal-sized parts first",
+          "model": {
+            "kind": "one_multiple_add",
+            "a": 1,
+            "b": 4,
+            "c": 3,
+            "d": 8,
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "One quarter and three eighths cannot be combined by counting their numerators yet, because quarters and eighths are different-sized parts."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Rename one quarter",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Rename one quarter",
+          "initial_state": "Rename one quarter",
+          "model": {
+            "kind": "one_multiple_add",
+            "a": 1,
+            "b": 4,
+            "c": 3,
+            "d": 8,
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true
+          }
+        },
+        "narration": {
+          "script": "Split the quarter into two eighths. The amount stays fixed, and two eighths plus three eighths makes five eighths."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Choose the common denominator",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Choose the common denominator",
+          "initial_state": "Choose the common denominator",
+          "model": {
+            "kind": "one_multiple_add",
+            "a": 1,
+            "b": 4,
+            "c": 3,
+            "d": 8,
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Decide why eight is a valid common denominator for one quarter and three eighths."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "AF-05-C01"
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Build the worked example",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Build the worked example",
+          "initial_state": "Build the worked example",
+          "model": {
+            "kind": "one_multiple_add",
+            "a": 2,
+            "b": 3,
+            "c": 1,
+            "d": 6,
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true
+          }
+        },
+        "narration": {
+          "script": "For two thirds plus one sixth, use sixths. Two thirds becomes four sixths, then add one sixth to make five sixths."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Check the conversion method",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Check the conversion method",
+          "initial_state": "Check the conversion method",
+          "model": {
+            "kind": "one_multiple_add",
+            "a": 1,
+            "b": 3,
+            "c": 2,
+            "d": 9,
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Choose the method that keeps one third unchanged while renaming it in ninths."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "AF-05-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "AF-05-G01",
+        "support_level": "high",
+        "pre_question_script": "Start by choosing the denominator already able to name both fractions.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "AF-05-G02",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "faded",
+        "question_ref": "AF-05-G03",
+        "support_level": "reduced",
+        "pre_question_script": "",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "faded",
+        "question_ref": "AF-05-G04",
+        "support_level": "reduced",
+        "pre_question_script": "",
+        "correct_next": "G05"
+      },
+      "G05": {
+        "stage": "independent_transfer",
+        "question_ref": "AF-05-G05",
+        "support_level": "none",
+        "pre_question_script": "",
+        "correct_next": "P01"
+      }
+    },
+    "practice": {
+      "intro_script": "Work through all five source calculations, decide which answer is correct, then apply the same structure to the jug, journey, tank and bead contexts.",
+      "question_order": [
+        "AF-05-P01",
+        "AF-05-P02",
+        "AF-05-P03",
+        "AF-05-P04",
+        "AF-05-P05",
+        "AF-05-P06",
+        "AF-05-X01",
+        "AF-05-X02",
+        "AF-05-X03",
+        "AF-05-X04"
+      ],
+      "question_count": 10
+    },
+    "exit": {
+      "intro_script": "Add two new fraction pairs and select the valid conversion method. There are no hints, and each response locks after submission.",
+      "primary_question_refs": [
+        "AF-05-E01",
+        "AF-05-E02",
+        "AF-05-E03"
+      ],
+      "confirmation_question_refs": [],
+      "mastery_policy": {
+        "profile": "all_primary_unsupported",
+        "require_all": true,
+        "source_page": 11,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "You renamed only the fraction with the larger parts, then added after both denominators matched.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Match the part size before adding",
+      "ryan_script": "One or more final checks need another pass. Rename the smaller-denominator fraction without changing its value, then add only the numerators.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "AF-05-C01",
+      "source_ref": {
+        "page": 3
+      },
+      "stage": "practice",
+      "prompt": "Why can 8 be used as the common denominator in 1/4 + 3/8?",
+      "target": "Add fractions after matching the part size",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Eight is a multiple of 4.",
+          "Eight is the larger numerator.",
+          "Four and 8 must be added to make 12.",
+          "Every pair of fractions must use denominator 8."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "Eight is a multiple of 4."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Eight can name both fractions because it is a multiple of four.",
+        "correct_after_support": "Correct. Eight can name both fractions because it is a multiple of four.",
+        "on_correct_math": "8 is 4 × 2. → Each quarter can split into two eighths. → Only the quarter fraction needs renaming.",
+        "on_incorrect_attempt_1": "Check whether the larger denominator is an exact multiple of the smaller denominator.",
+        "on_incorrect_attempt_2": "Eight is two groups of four, so choose the statement saying eight is a multiple of four.",
+        "on_locked_incorrect": "Answer recorded. The common-denominator working will be available after the final set.",
+        "worked_explanation": "8 is 4 × 2. → Each quarter can split into two eighths. → Only the quarter fraction needs renaming."
+      },
+      "mathematical_support": {
+        "hint_1": "Check whether the larger denominator is an exact multiple of the smaller denominator.",
+        "hint_2": "Use the larger denominator, rename only the fraction with smaller parts, then add the numerators.",
+        "worked_solution": "8 is 4 × 2. → Each quarter can split into two eighths. → Only the quarter fraction needs renaming."
+      },
+      "working": [
+        "8 is 4 × 2.",
+        "Each quarter can split into two eighths.",
+        "Only the quarter fraction needs renaming."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "one_multiple_add",
+          "a": 1,
+          "b": 4,
+          "c": 3,
+          "d": 8,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-05-C02",
+      "source_ref": {
+        "page": 4
+      },
+      "stage": "practice",
+      "prompt": "Which method correctly works out 1/3 + 2/9?",
+      "target": "Add fractions after matching the part size",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "1/3 + 2/9 = 3/9 + 2/9 = 5/9",
+          "1/3 + 2/9 = 1/9 + 2/9 = 3/9",
+          "1/3 + 2/9 = 3/12",
+          "1/3 + 2/9 = 3/27"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "1/3 + 2/9 = 3/9 + 2/9 = 5/9"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The conversion keeps one third unchanged before the numerators are added.",
+        "correct_after_support": "Correct. The conversion keeps one third unchanged before the numerators are added.",
+        "on_correct_math": "9 is a multiple of 3. → 1/3 is renamed as 3/9. → 3/9 + 2/9 = 5/9.",
+        "on_incorrect_attempt_1": "The fraction one third must keep its value when it is renamed in ninths.",
+        "on_incorrect_attempt_2": "One third is three ninths. Select the method that then adds three ninths and two ninths.",
+        "on_locked_incorrect": "Answer recorded. The common-denominator working will be available after the final set.",
+        "worked_explanation": "9 is a multiple of 3. → 1/3 is renamed as 3/9. → 3/9 + 2/9 = 5/9."
+      },
+      "mathematical_support": {
+        "hint_1": "The fraction one third must keep its value when it is renamed in ninths.",
+        "hint_2": "Use the larger denominator, rename only the fraction with smaller parts, then add the numerators.",
+        "worked_solution": "9 is a multiple of 3. → 1/3 is renamed as 3/9. → 3/9 + 2/9 = 5/9."
+      },
+      "working": [
+        "9 is a multiple of 3.",
+        "1/3 is renamed as 3/9.",
+        "3/9 + 2/9 = 5/9."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "one_multiple_add",
+          "a": 1,
+          "b": 3,
+          "c": 2,
+          "d": 9,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-05-G01",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "For 1/6 + 2/3, which denominator should be used?",
+      "target": "Add fractions after matching the part size",
+      "response": {
+        "type": "integer",
+        "input_label": "Common denominator"
+      },
+      "answer": {
+        "value": 6
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both fractions can be written in sixths.",
+        "correct_after_support": "Correct. Both fractions can be written in sixths.",
+        "on_correct_math": "6 is a multiple of 3. → Use denominator 6.",
+        "on_incorrect_attempt_1": "Choose the denominator that is already a multiple of the other.",
+        "on_incorrect_attempt_2": "Six is a multiple of three. Enter six.",
+        "on_locked_incorrect": "Answer recorded. The common-denominator working will be available after the final set.",
+        "worked_explanation": "6 is a multiple of 3. → Use denominator 6."
+      },
+      "mathematical_support": {
+        "hint_1": "Choose the denominator that is already a multiple of the other.",
+        "hint_2": "Use the larger denominator, rename only the fraction with smaller parts, then add the numerators.",
+        "worked_solution": "6 is a multiple of 3. → Use denominator 6."
+      },
+      "working": [
+        "6 is a multiple of 3.",
+        "Use denominator 6."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "one_multiple_add_steps",
+          "label": "Choose the common denominator",
+          "expression": "Use denominator ?",
+          "completed": "Use denominator 6",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-05-G02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "Complete the missing numerator: 2/3 = ?/6.",
+      "target": "Add fractions after matching the part size",
+      "response": {
+        "type": "integer",
+        "input_label": "Equivalent numerator"
+      },
+      "answer": {
+        "value": 4
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Two thirds has been renamed as four sixths.",
+        "correct_after_support": "Correct. Two thirds has been renamed as four sixths.",
+        "on_correct_math": "3 × 2 = 6. → 2 × 2 = 4. → 2/3 = 4/6.",
+        "on_incorrect_attempt_1": "The denominator is multiplied by two, so apply that same factor to the numerator.",
+        "on_incorrect_attempt_2": "Two multiplied by two is four. Enter four.",
+        "on_locked_incorrect": "Answer recorded. The common-denominator working will be available after the final set.",
+        "worked_explanation": "3 × 2 = 6. → 2 × 2 = 4. → 2/3 = 4/6."
+      },
+      "mathematical_support": {
+        "hint_1": "The denominator is multiplied by two, so apply that same factor to the numerator.",
+        "hint_2": "Use the larger denominator, rename only the fraction with smaller parts, then add the numerators.",
+        "worked_solution": "3 × 2 = 6. → 2 × 2 = 4. → 2/3 = 4/6."
+      },
+      "working": [
+        "3 × 2 = 6.",
+        "2 × 2 = 4.",
+        "2/3 = 4/6."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "one_multiple_add_steps",
+          "label": "Rename two thirds",
+          "expression": "2/3 = ?/6",
+          "completed": "2/3 = 4/6",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-05-G03",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "faded",
+      "prompt": "Complete the converted addend: 1/6 + ?/6.",
+      "target": "Add fractions after matching the part size",
+      "response": {
+        "type": "integer",
+        "input_label": "Converted numerator"
+      },
+      "answer": {
+        "value": 4
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The two addends now name equal-sized parts.",
+        "correct_after_support": "Correct. The two addends now name equal-sized parts.",
+        "on_correct_math": "2/3 = 4/6. → The converted addend is 4/6.",
+        "on_incorrect_attempt_1": "Carry forward the equivalent numerator from the previous step.",
+        "on_incorrect_attempt_2": "Two thirds became four sixths. Enter four.",
+        "on_locked_incorrect": "Answer recorded. The common-denominator working will be available after the final set.",
+        "worked_explanation": "2/3 = 4/6. → The converted addend is 4/6."
+      },
+      "mathematical_support": {
+        "hint_1": "Carry forward the equivalent numerator from the previous step.",
+        "hint_2": "Use the larger denominator, rename only the fraction with smaller parts, then add the numerators.",
+        "worked_solution": "2/3 = 4/6. → The converted addend is 4/6."
+      },
+      "working": [
+        "2/3 = 4/6.",
+        "The converted addend is 4/6."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "one_multiple_add_steps",
+          "label": "Use the equivalent fraction",
+          "expression": "1/6 + ?/6",
+          "completed": "1/6 + 4/6",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-05-G04",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "faded",
+      "prompt": "Complete the sum numerator: 1/6 + 4/6 = ?/6.",
+      "target": "Add fractions after matching the part size",
+      "response": {
+        "type": "integer",
+        "input_label": "Sum numerator"
+      },
+      "answer": {
+        "value": 5
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. One sixth plus four sixths is five sixths.",
+        "correct_after_support": "Correct. One sixth plus four sixths is five sixths.",
+        "on_correct_math": "The denominators already match. → 1 + 4 = 5. → The denominator remains 6.",
+        "on_incorrect_attempt_1": "Add only the numerators; the part size stays sixths.",
+        "on_incorrect_attempt_2": "One plus four is five, and the denominator remains six. Enter five.",
+        "on_locked_incorrect": "Answer recorded. The common-denominator working will be available after the final set.",
+        "worked_explanation": "The denominators already match. → 1 + 4 = 5. → The denominator remains 6."
+      },
+      "mathematical_support": {
+        "hint_1": "Add only the numerators; the part size stays sixths.",
+        "hint_2": "Use the larger denominator, rename only the fraction with smaller parts, then add the numerators.",
+        "worked_solution": "The denominators already match. → 1 + 4 = 5. → The denominator remains 6."
+      },
+      "working": [
+        "The denominators already match.",
+        "1 + 4 = 5.",
+        "The denominator remains 6."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "one_multiple_add_steps",
+          "label": "Add equal-sized parts",
+          "expression": "1/6 + 4/6 = ?/6",
+          "completed": "1/6 + 4/6 = 5/6",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-05-G05",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "independent_transfer",
+      "prompt": "Which fraction needs to be rewritten in 1/6 + 2/3?",
+      "target": "Add fractions after matching the part size",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "1/6 only",
+          "2/3 only",
+          "Both fractions",
+          "Neither fraction"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "2/3 only"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Exactly. Only the fraction in thirds needs to be rewritten.",
+        "correct_after_support": "Exactly. Only the fraction in thirds needs to be rewritten.",
+        "on_correct_math": "6 is already the larger denominator. → 2/3 becomes 4/6. → Only 2/3 needs rewriting.",
+        "on_incorrect_attempt_1": "One fraction already has denominator six.",
+        "on_incorrect_attempt_2": "The sixths stay unchanged. Only two thirds must be renamed, so choose two thirds only.",
+        "on_locked_incorrect": "Answer recorded. The common-denominator working will be available after the final set.",
+        "worked_explanation": "6 is already the larger denominator. → 2/3 becomes 4/6. → Only 2/3 needs rewriting."
+      },
+      "mathematical_support": {
+        "hint_1": "One fraction already has denominator six.",
+        "hint_2": "Use the larger denominator, rename only the fraction with smaller parts, then add the numerators.",
+        "worked_solution": "6 is already the larger denominator. → 2/3 becomes 4/6. → Only 2/3 needs rewriting."
+      },
+      "working": [
+        "6 is already the larger denominator.",
+        "2/3 becomes 4/6.",
+        "Only 2/3 needs rewriting."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "one_multiple_add",
+          "a": 1,
+          "b": 6,
+          "c": 2,
+          "d": 3,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-05-P01",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "Work out 3/8 + 1/4. Give an exact fraction.",
+      "target": "Add fractions after matching the part size",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "show_authored_label": true,
+        "input_label": "Exact fraction"
+      },
+      "answer": {
+        "value": "5/8"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. In eighths, the two numerators add to 5.",
+        "correct_after_support": "Correct. In eighths, the two numerators add to 5.",
+        "on_correct_math": "8 is a multiple of 4, so use denominator 8. → 3/8 = 3/8 and 1/4 = 2/8. → 3/8 + 2/8 = 5/8.",
+        "on_incorrect_attempt_1": "Rewrite the second fraction using denominator 8; its numerator must change by the same factor.",
+        "on_incorrect_attempt_2": "Use denominator 8. After renaming the smaller-denominator fraction, add 3 and 2 while keeping the denominator fixed. Submit the corrected exact fraction.",
+        "on_locked_incorrect": "Answer recorded. The common-denominator working will be available after the final set.",
+        "worked_explanation": "8 is a multiple of 4, so use denominator 8. → 3/8 = 3/8 and 1/4 = 2/8. → 3/8 + 2/8 = 5/8."
+      },
+      "mathematical_support": {
+        "hint_1": "Rewrite the second fraction using denominator 8; its numerator must change by the same factor.",
+        "hint_2": "Use the larger denominator, rename only the fraction with smaller parts, then add the numerators.",
+        "worked_solution": "8 is a multiple of 4, so use denominator 8. → 3/8 = 3/8 and 1/4 = 2/8. → 3/8 + 2/8 = 5/8."
+      },
+      "working": [
+        "8 is a multiple of 4, so use denominator 8.",
+        "3/8 = 3/8 and 1/4 = 2/8.",
+        "3/8 + 2/8 = 5/8."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "one_multiple_add",
+          "a": 3,
+          "b": 8,
+          "c": 1,
+          "d": 4,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "4/12": "Adding the numerator and denominator pairs directly does not preserve either fraction.",
+        "4/8": "The larger denominator cannot simply replace the smaller one. Rename that fraction with the same scale factor first.",
+        "5/16": "The parts already have the same size. Add their numerators and keep the common denominator."
+      }
+    },
+    {
+      "id": "AF-05-P02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "Work out 1/6 + 2/3. Give an exact fraction.",
+      "target": "Add fractions after matching the part size",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "show_authored_label": true,
+        "input_label": "Exact fraction"
+      },
+      "answer": {
+        "value": "5/6"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. In sixths, the two numerators add to 5.",
+        "correct_after_support": "Correct. In sixths, the two numerators add to 5.",
+        "on_correct_math": "6 is a multiple of 3, so use denominator 6. → 1/6 = 1/6 and 2/3 = 4/6. → 1/6 + 4/6 = 5/6.",
+        "on_incorrect_attempt_1": "Rewrite the second fraction using denominator 6; its numerator must change by the same factor.",
+        "on_incorrect_attempt_2": "Use denominator 6. After renaming the smaller-denominator fraction, add 1 and 4 while keeping the denominator fixed. Submit the corrected exact fraction.",
+        "on_locked_incorrect": "Answer recorded. The common-denominator working will be available after the final set.",
+        "worked_explanation": "6 is a multiple of 3, so use denominator 6. → 1/6 = 1/6 and 2/3 = 4/6. → 1/6 + 4/6 = 5/6."
+      },
+      "mathematical_support": {
+        "hint_1": "Rewrite the second fraction using denominator 6; its numerator must change by the same factor.",
+        "hint_2": "Use the larger denominator, rename only the fraction with smaller parts, then add the numerators.",
+        "worked_solution": "6 is a multiple of 3, so use denominator 6. → 1/6 = 1/6 and 2/3 = 4/6. → 1/6 + 4/6 = 5/6."
+      },
+      "working": [
+        "6 is a multiple of 3, so use denominator 6.",
+        "1/6 = 1/6 and 2/3 = 4/6.",
+        "1/6 + 4/6 = 5/6."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "one_multiple_add",
+          "a": 1,
+          "b": 6,
+          "c": 2,
+          "d": 3,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "3/9": "Adding the numerator and denominator pairs directly does not preserve either fraction.",
+        "3/6": "The larger denominator cannot simply replace the smaller one. Rename that fraction with the same scale factor first.",
+        "5/12": "The parts already have the same size. Add their numerators and keep the common denominator."
+      }
+    },
+    {
+      "id": "AF-05-P03",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "Work out 2/9 + 1/3. Give an exact fraction.",
+      "target": "Add fractions after matching the part size",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "show_authored_label": true,
+        "input_label": "Exact fraction"
+      },
+      "answer": {
+        "value": "5/9"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. In ninths, the two numerators add to 5.",
+        "correct_after_support": "Correct. In ninths, the two numerators add to 5.",
+        "on_correct_math": "9 is a multiple of 3, so use denominator 9. → 2/9 = 2/9 and 1/3 = 3/9. → 2/9 + 3/9 = 5/9.",
+        "on_incorrect_attempt_1": "Rewrite the second fraction using denominator 9; its numerator must change by the same factor.",
+        "on_incorrect_attempt_2": "Use denominator 9. After renaming the smaller-denominator fraction, add 2 and 3 while keeping the denominator fixed. Submit the corrected exact fraction.",
+        "on_locked_incorrect": "Answer recorded. The common-denominator working will be available after the final set.",
+        "worked_explanation": "9 is a multiple of 3, so use denominator 9. → 2/9 = 2/9 and 1/3 = 3/9. → 2/9 + 3/9 = 5/9."
+      },
+      "mathematical_support": {
+        "hint_1": "Rewrite the second fraction using denominator 9; its numerator must change by the same factor.",
+        "hint_2": "Use the larger denominator, rename only the fraction with smaller parts, then add the numerators.",
+        "worked_solution": "9 is a multiple of 3, so use denominator 9. → 2/9 = 2/9 and 1/3 = 3/9. → 2/9 + 3/9 = 5/9."
+      },
+      "working": [
+        "9 is a multiple of 3, so use denominator 9.",
+        "2/9 = 2/9 and 1/3 = 3/9.",
+        "2/9 + 3/9 = 5/9."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "one_multiple_add",
+          "a": 2,
+          "b": 9,
+          "c": 1,
+          "d": 3,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "3/12": "Adding the numerator and denominator pairs directly does not preserve either fraction.",
+        "3/9": "The larger denominator cannot simply replace the smaller one. Rename that fraction with the same scale factor first.",
+        "5/18": "The parts already have the same size. Add their numerators and keep the common denominator."
+      }
+    },
+    {
+      "id": "AF-05-P04",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "Work out 2/7 + 1/14. Give an exact fraction.",
+      "target": "Add fractions after matching the part size",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "show_authored_label": true,
+        "input_label": "Exact fraction"
+      },
+      "answer": {
+        "value": "5/14"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. In fourteenths, the two numerators add to 5.",
+        "correct_after_support": "Correct. In fourteenths, the two numerators add to 5.",
+        "on_correct_math": "14 is a multiple of 7, so use denominator 14. → 2/7 = 4/14 and 1/14 = 1/14. → 4/14 + 1/14 = 5/14.",
+        "on_incorrect_attempt_1": "Rewrite the first fraction using denominator 14; its numerator must change by the same factor.",
+        "on_incorrect_attempt_2": "Use denominator 14. After renaming the smaller-denominator fraction, add 4 and 1 while keeping the denominator fixed. Submit the corrected exact fraction.",
+        "on_locked_incorrect": "Answer recorded. The common-denominator working will be available after the final set.",
+        "worked_explanation": "14 is a multiple of 7, so use denominator 14. → 2/7 = 4/14 and 1/14 = 1/14. → 4/14 + 1/14 = 5/14."
+      },
+      "mathematical_support": {
+        "hint_1": "Rewrite the first fraction using denominator 14; its numerator must change by the same factor.",
+        "hint_2": "Use the larger denominator, rename only the fraction with smaller parts, then add the numerators.",
+        "worked_solution": "14 is a multiple of 7, so use denominator 14. → 2/7 = 4/14 and 1/14 = 1/14. → 4/14 + 1/14 = 5/14."
+      },
+      "working": [
+        "14 is a multiple of 7, so use denominator 14.",
+        "2/7 = 4/14 and 1/14 = 1/14.",
+        "4/14 + 1/14 = 5/14."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "one_multiple_add",
+          "a": 2,
+          "b": 7,
+          "c": 1,
+          "d": 14,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "3/21": "Adding the numerator and denominator pairs directly does not preserve either fraction.",
+        "3/14": "The larger denominator cannot simply replace the smaller one. Rename that fraction with the same scale factor first.",
+        "5/28": "The parts already have the same size. Add their numerators and keep the common denominator."
+      }
+    },
+    {
+      "id": "AF-05-P05",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "Work out 1/12 + 1/3. Give an exact fraction.",
+      "target": "Add fractions after matching the part size",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "show_authored_label": true,
+        "input_label": "Exact fraction"
+      },
+      "answer": {
+        "value": "5/12"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. In twelfths, the two numerators add to 5.",
+        "correct_after_support": "Correct. In twelfths, the two numerators add to 5.",
+        "on_correct_math": "12 is a multiple of 3, so use denominator 12. → 1/12 = 1/12 and 1/3 = 4/12. → 1/12 + 4/12 = 5/12.",
+        "on_incorrect_attempt_1": "Rewrite the second fraction using denominator 12; its numerator must change by the same factor.",
+        "on_incorrect_attempt_2": "Use denominator 12. After renaming the smaller-denominator fraction, add 1 and 4 while keeping the denominator fixed. Submit the corrected exact fraction.",
+        "on_locked_incorrect": "Answer recorded. The common-denominator working will be available after the final set.",
+        "worked_explanation": "12 is a multiple of 3, so use denominator 12. → 1/12 = 1/12 and 1/3 = 4/12. → 1/12 + 4/12 = 5/12."
+      },
+      "mathematical_support": {
+        "hint_1": "Rewrite the second fraction using denominator 12; its numerator must change by the same factor.",
+        "hint_2": "Use the larger denominator, rename only the fraction with smaller parts, then add the numerators.",
+        "worked_solution": "12 is a multiple of 3, so use denominator 12. → 1/12 = 1/12 and 1/3 = 4/12. → 1/12 + 4/12 = 5/12."
+      },
+      "working": [
+        "12 is a multiple of 3, so use denominator 12.",
+        "1/12 = 1/12 and 1/3 = 4/12.",
+        "1/12 + 4/12 = 5/12."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "one_multiple_add",
+          "a": 1,
+          "b": 12,
+          "c": 1,
+          "d": 3,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "2/15": "Adding the numerator and denominator pairs directly does not preserve either fraction.",
+        "2/12": "The larger denominator cannot simply replace the smaller one. Rename that fraction with the same scale factor first.",
+        "5/24": "The parts already have the same size. Add their numerators and keep the common denominator."
+      }
+    },
+    {
+      "id": "AF-05-P06",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Which answer is correct for 3/5 + 1/10?",
+      "target": "Add fractions after matching the part size",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "4/15",
+          "7/10",
+          "4/10",
+          "7/20"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "7/10"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Three fifths becomes six tenths, then one more tenth makes seven tenths.",
+        "correct_after_support": "Correct. Three fifths becomes six tenths, then one more tenth makes seven tenths.",
+        "on_correct_math": "3/5 = 6/10. → 6/10 + 1/10 = 7/10.",
+        "on_incorrect_attempt_1": "Rename three fifths in tenths before adding.",
+        "on_incorrect_attempt_2": "Three fifths is six tenths. Add one more tenth and select seven tenths.",
+        "on_locked_incorrect": "Answer recorded. The common-denominator working will be available after the final set.",
+        "worked_explanation": "3/5 = 6/10. → 6/10 + 1/10 = 7/10."
+      },
+      "mathematical_support": {
+        "hint_1": "Rename three fifths in tenths before adding.",
+        "hint_2": "Use the larger denominator, rename only the fraction with smaller parts, then add the numerators.",
+        "worked_solution": "3/5 = 6/10. → 6/10 + 1/10 = 7/10."
+      },
+      "working": [
+        "3/5 = 6/10.",
+        "6/10 + 1/10 = 7/10."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "one_multiple_add",
+          "a": 3,
+          "b": 5,
+          "c": 1,
+          "d": 10,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-05-X01",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "practice",
+      "prompt": "A jug contains 3/8 litre of orange juice. Noah adds 1/4 litre of water. What is the total volume? Give an exact fraction of a litre.",
+      "target": "Add fractions after matching the part size",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "show_authored_label": true,
+        "input_label": "Exact fraction"
+      },
+      "answer": {
+        "value": "5/8"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The orange juice and water total five eighths of a litre.",
+        "correct_after_support": "Correct. The orange juice and water total five eighths of a litre.",
+        "on_correct_math": "8 is a multiple of 4, so use denominator 8. → 3/8 = 3/8 and 1/4 = 2/8. → 3/8 + 2/8 = 5/8.",
+        "on_incorrect_attempt_1": "Rewrite the second fraction using denominator 8; its numerator must change by the same factor.",
+        "on_incorrect_attempt_2": "Use denominator 8. After renaming the smaller-denominator fraction, add 3 and 2 while keeping the denominator fixed. Submit the corrected exact fraction.",
+        "on_locked_incorrect": "Answer recorded. The common-denominator working will be available after the final set.",
+        "worked_explanation": "8 is a multiple of 4, so use denominator 8. → 3/8 = 3/8 and 1/4 = 2/8. → 3/8 + 2/8 = 5/8."
+      },
+      "mathematical_support": {
+        "hint_1": "Rewrite the second fraction using denominator 8; its numerator must change by the same factor.",
+        "hint_2": "Use the larger denominator, rename only the fraction with smaller parts, then add the numerators.",
+        "worked_solution": "8 is a multiple of 4, so use denominator 8. → 3/8 = 3/8 and 1/4 = 2/8. → 3/8 + 2/8 = 5/8."
+      },
+      "working": [
+        "8 is a multiple of 4, so use denominator 8.",
+        "3/8 = 3/8 and 1/4 = 2/8.",
+        "3/8 + 2/8 = 5/8."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "one_multiple_add",
+          "a": 3,
+          "b": 8,
+          "c": 1,
+          "d": 4,
+          "object": "jug",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "4/12": "Adding the numerator and denominator pairs directly does not preserve either fraction.",
+        "4/8": "The larger denominator cannot simply replace the smaller one. Rename that fraction with the same scale factor first.",
+        "5/16": "The parts already have the same size. Add their numerators and keep the common denominator."
+      }
+    },
+    {
+      "id": "AF-05-X02",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "practice",
+      "prompt": "Maya completes 1/6 of a journey in the morning and 2/3 in the afternoon. What fraction of the journey does she complete altogether?",
+      "target": "Add fractions after matching the part size",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "show_authored_label": true,
+        "input_label": "Exact fraction"
+      },
+      "answer": {
+        "value": "5/6"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Maya completes five sixths of the journey altogether.",
+        "correct_after_support": "Correct. Maya completes five sixths of the journey altogether.",
+        "on_correct_math": "6 is a multiple of 3, so use denominator 6. → 1/6 = 1/6 and 2/3 = 4/6. → 1/6 + 4/6 = 5/6.",
+        "on_incorrect_attempt_1": "Rewrite the second fraction using denominator 6; its numerator must change by the same factor.",
+        "on_incorrect_attempt_2": "Use denominator 6. After renaming the smaller-denominator fraction, add 1 and 4 while keeping the denominator fixed. Submit the corrected exact fraction.",
+        "on_locked_incorrect": "Answer recorded. The common-denominator working will be available after the final set.",
+        "worked_explanation": "6 is a multiple of 3, so use denominator 6. → 1/6 = 1/6 and 2/3 = 4/6. → 1/6 + 4/6 = 5/6."
+      },
+      "mathematical_support": {
+        "hint_1": "Rewrite the second fraction using denominator 6; its numerator must change by the same factor.",
+        "hint_2": "Use the larger denominator, rename only the fraction with smaller parts, then add the numerators.",
+        "worked_solution": "6 is a multiple of 3, so use denominator 6. → 1/6 = 1/6 and 2/3 = 4/6. → 1/6 + 4/6 = 5/6."
+      },
+      "working": [
+        "6 is a multiple of 3, so use denominator 6.",
+        "1/6 = 1/6 and 2/3 = 4/6.",
+        "1/6 + 4/6 = 5/6."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "one_multiple_add",
+          "a": 1,
+          "b": 6,
+          "c": 2,
+          "d": 3,
+          "object": "journey",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "3/9": "Adding the numerator and denominator pairs directly does not preserve either fraction.",
+        "3/6": "The larger denominator cannot simply replace the smaller one. Rename that fraction with the same scale factor first.",
+        "5/12": "The parts already have the same size. Add their numerators and keep the common denominator."
+      }
+    },
+    {
+      "id": "AF-05-X03",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "practice",
+      "prompt": "A tank is 2/9 full. Water equal to 1/3 of its capacity is added. What fraction of the tank is now full?",
+      "target": "Add fractions after matching the part size",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "show_authored_label": true,
+        "input_label": "Exact fraction"
+      },
+      "answer": {
+        "value": "5/9"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The tank is now five ninths full.",
+        "correct_after_support": "Correct. The tank is now five ninths full.",
+        "on_correct_math": "9 is a multiple of 3, so use denominator 9. → 2/9 = 2/9 and 1/3 = 3/9. → 2/9 + 3/9 = 5/9.",
+        "on_incorrect_attempt_1": "Rewrite the second fraction using denominator 9; its numerator must change by the same factor.",
+        "on_incorrect_attempt_2": "Use denominator 9. After renaming the smaller-denominator fraction, add 2 and 3 while keeping the denominator fixed. Submit the corrected exact fraction.",
+        "on_locked_incorrect": "Answer recorded. The common-denominator working will be available after the final set.",
+        "worked_explanation": "9 is a multiple of 3, so use denominator 9. → 2/9 = 2/9 and 1/3 = 3/9. → 2/9 + 3/9 = 5/9."
+      },
+      "mathematical_support": {
+        "hint_1": "Rewrite the second fraction using denominator 9; its numerator must change by the same factor.",
+        "hint_2": "Use the larger denominator, rename only the fraction with smaller parts, then add the numerators.",
+        "worked_solution": "9 is a multiple of 3, so use denominator 9. → 2/9 = 2/9 and 1/3 = 3/9. → 2/9 + 3/9 = 5/9."
+      },
+      "working": [
+        "9 is a multiple of 3, so use denominator 9.",
+        "2/9 = 2/9 and 1/3 = 3/9.",
+        "2/9 + 3/9 = 5/9."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "one_multiple_add",
+          "a": 2,
+          "b": 9,
+          "c": 1,
+          "d": 3,
+          "object": "tank",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "3/12": "Adding the numerator and denominator pairs directly does not preserve either fraction.",
+        "3/9": "The larger denominator cannot simply replace the smaller one. Rename that fraction with the same scale factor first.",
+        "5/18": "The parts already have the same size. Add their numerators and keep the common denominator."
+      }
+    },
+    {
+      "id": "AF-05-X04",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "practice",
+      "prompt": "A bag has 3/10 kg of red beads and 1/5 kg of blue beads. Which calculation finds the total mass?",
+      "target": "Add fractions after matching the part size",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "3/10 + 1/5",
+          "3/10 − 1/5",
+          "3/10 × 1/5",
+          "3/10 ÷ 1/5"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "3/10 + 1/5"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Addition combines the two bead masses.",
+        "correct_after_support": "Correct. Addition combines the two bead masses.",
+        "on_correct_math": "The red and blue bead masses are combined. → A combined total uses addition. → Calculate 3/10 + 1/5.",
+        "on_incorrect_attempt_1": "The question asks for the total of two separate masses.",
+        "on_incorrect_attempt_2": "A total combines the red and blue bead masses. Select the addition calculation.",
+        "on_locked_incorrect": "Answer recorded. The common-denominator working will be available after the final set.",
+        "worked_explanation": "The red and blue bead masses are combined. → A combined total uses addition. → Calculate 3/10 + 1/5."
+      },
+      "mathematical_support": {
+        "hint_1": "The question asks for the total of two separate masses.",
+        "hint_2": "Use the larger denominator, rename only the fraction with smaller parts, then add the numerators.",
+        "worked_solution": "The red and blue bead masses are combined. → A combined total uses addition. → Calculate 3/10 + 1/5."
+      },
+      "working": [
+        "The red and blue bead masses are combined.",
+        "A combined total uses addition.",
+        "Calculate 3/10 + 1/5."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "one_multiple_add",
+          "a": 3,
+          "b": 10,
+          "c": 1,
+          "d": 5,
+          "object": "beads",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-05-E01",
+      "source_ref": {
+        "page": 11
+      },
+      "stage": "exit",
+      "prompt": "Work out 3/5 + 1/10. Give an exact fraction.",
+      "target": "Add fractions after matching the part size",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "show_authored_label": true,
+        "input_label": "Exact fraction"
+      },
+      "answer": {
+        "value": "7/10"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. In tenths, the two numerators add to 7.",
+        "correct_after_support": "Correct. In tenths, the two numerators add to 7.",
+        "on_correct_math": "10 is a multiple of 5, so use denominator 10. → 3/5 = 6/10 and 1/10 = 1/10. → 6/10 + 1/10 = 7/10.",
+        "on_incorrect_attempt_1": "Rewrite the first fraction using denominator 10; its numerator must change by the same factor.",
+        "on_incorrect_attempt_2": "Use denominator 10. After renaming the smaller-denominator fraction, add 6 and 1 while keeping the denominator fixed. Submit the corrected exact fraction.",
+        "on_locked_incorrect": "Answer recorded. The common-denominator working will be available after the final set.",
+        "worked_explanation": "10 is a multiple of 5, so use denominator 10. → 3/5 = 6/10 and 1/10 = 1/10. → 6/10 + 1/10 = 7/10."
+      },
+      "mathematical_support": {
+        "hint_1": "Rewrite the first fraction using denominator 10; its numerator must change by the same factor.",
+        "hint_2": "Use the larger denominator, rename only the fraction with smaller parts, then add the numerators.",
+        "worked_solution": "10 is a multiple of 5, so use denominator 10. → 3/5 = 6/10 and 1/10 = 1/10. → 6/10 + 1/10 = 7/10."
+      },
+      "working": [
+        "10 is a multiple of 5, so use denominator 10.",
+        "3/5 = 6/10 and 1/10 = 1/10.",
+        "6/10 + 1/10 = 7/10."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "one_multiple_add",
+          "a": 3,
+          "b": 5,
+          "c": 1,
+          "d": 10,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "4/15": "Adding the numerator and denominator pairs directly does not preserve either fraction.",
+        "4/10": "The larger denominator cannot simply replace the smaller one. Rename that fraction with the same scale factor first.",
+        "7/20": "The parts already have the same size. Add their numerators and keep the common denominator."
+      }
+    },
+    {
+      "id": "AF-05-E02",
+      "source_ref": {
+        "page": 11
+      },
+      "stage": "exit",
+      "prompt": "Work out 1/8 + 3/4. Give an exact fraction.",
+      "target": "Add fractions after matching the part size",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "show_authored_label": true,
+        "input_label": "Exact fraction"
+      },
+      "answer": {
+        "value": "7/8"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. In eighths, the two numerators add to 7.",
+        "correct_after_support": "Correct. In eighths, the two numerators add to 7.",
+        "on_correct_math": "8 is a multiple of 4, so use denominator 8. → 1/8 = 1/8 and 3/4 = 6/8. → 1/8 + 6/8 = 7/8.",
+        "on_incorrect_attempt_1": "Rewrite the second fraction using denominator 8; its numerator must change by the same factor.",
+        "on_incorrect_attempt_2": "Use denominator 8. After renaming the smaller-denominator fraction, add 1 and 6 while keeping the denominator fixed. Submit the corrected exact fraction.",
+        "on_locked_incorrect": "Answer recorded. The common-denominator working will be available after the final set.",
+        "worked_explanation": "8 is a multiple of 4, so use denominator 8. → 1/8 = 1/8 and 3/4 = 6/8. → 1/8 + 6/8 = 7/8."
+      },
+      "mathematical_support": {
+        "hint_1": "Rewrite the second fraction using denominator 8; its numerator must change by the same factor.",
+        "hint_2": "Use the larger denominator, rename only the fraction with smaller parts, then add the numerators.",
+        "worked_solution": "8 is a multiple of 4, so use denominator 8. → 1/8 = 1/8 and 3/4 = 6/8. → 1/8 + 6/8 = 7/8."
+      },
+      "working": [
+        "8 is a multiple of 4, so use denominator 8.",
+        "1/8 = 1/8 and 3/4 = 6/8.",
+        "1/8 + 6/8 = 7/8."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "one_multiple_add",
+          "a": 1,
+          "b": 8,
+          "c": 3,
+          "d": 4,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "4/12": "Adding the numerator and denominator pairs directly does not preserve either fraction.",
+        "4/8": "The larger denominator cannot simply replace the smaller one. Rename that fraction with the same scale factor first.",
+        "7/16": "The parts already have the same size. Add their numerators and keep the common denominator."
+      }
+    },
+    {
+      "id": "AF-05-E03",
+      "source_ref": {
+        "page": 11
+      },
+      "stage": "exit",
+      "prompt": "Which method is correct for 2/7 + 1/14?",
+      "target": "Add fractions after matching the part size",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "2/7 + 1/14 = 4/14 + 1/14 = 5/14",
+          "2/7 + 1/14 = 3/21",
+          "2/7 + 1/14 = 2/14 + 1/14 = 3/14",
+          "2/7 + 1/14 = 5/28"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "2/7 + 1/14 = 4/14 + 1/14 = 5/14"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Recorded. The valid method renames two sevenths as four fourteenths before adding.",
+        "correct_after_support": "Recorded. The valid method renames two sevenths as four fourteenths before adding.",
+        "on_correct_math": "2/7 = 4/14. → 4/14 + 1/14 = 5/14.",
+        "on_incorrect_attempt_1": "No hints are available in the final check.",
+        "on_incorrect_attempt_2": "The response is locked for this final check.",
+        "on_locked_incorrect": "Answer recorded. The common-denominator working will be available after the final set.",
+        "worked_explanation": "2/7 = 4/14. → 4/14 + 1/14 = 5/14."
+      },
+      "mathematical_support": {
+        "hint_1": "No hints are available in the final check.",
+        "hint_2": "Use the larger denominator, rename only the fraction with smaller parts, then add the numerators.",
+        "worked_solution": "2/7 = 4/14. → 4/14 + 1/14 = 5/14."
+      },
+      "working": [
+        "2/7 = 4/14.",
+        "4/14 + 1/14 = 5/14."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "one_multiple_add",
+          "a": 2,
+          "b": 7,
+          "c": 1,
+          "d": 14,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    }
+  ],
+  "canonical_lesson": {
+    "version": "AF05-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

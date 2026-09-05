@@ -1,0 +1,1774 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "AF-03 - Write a fraction in its simplest form",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-14",
+      "sha256": "31b475417a9ed07d3e3538f3e6d38fcf5563aab2c22ef69f63cff0e89fac7e21"
+    },
+    "authored_scope": "Write positive proper fractions in their simplest form.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "AF03-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "verified_full_secure_path_partial_simplification_repair_narration_sound_captions_320_390_and_console",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        3,
+        4,
+        5,
+        6,
+        11,
+        12
+      ],
+      "source_repairs_consulted": [
+        7,
+        8,
+        9,
+        10,
+        13,
+        14
+      ],
+      "note": "All 14 source pages were read. Active pages 3 to 6, 11 and 12 were mapped; pages 7 to 10, 13 and 14 informed feedback, strict simplest-form acceptance and generation constraints. Entry, Diagnostic and delayed Retrieval remain excluded. Every active source calculation, recognition item and context is retained."
+    }
+  },
+  "identity": {
+    "id": "AF-03",
+    "slug": "write-a-fraction-in-its-simplest-form",
+    "title": "Write a fraction in its simplest form",
+    "strand": "Number",
+    "cluster": "Adding and Subtracting Fractions",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Simplify a proper fraction by dividing the numerator and denominator by a common factor.",
+    "success_criteria": [
+      "Identify a common factor of the numerator and denominator.",
+      "Divide both parts by the same factor to preserve value.",
+      "Continue until no common factor greater than 1 remains.",
+      "Recognise fractions already in simplest form and use the method in context."
+    ],
+    "boundaries": {
+      "includes": [
+        "Positive proper fractions simplified in one or more steps",
+        "Recognition of already-simplest proper fractions",
+        "Any valid common-factor route to the unique simplest result",
+        "Counted GCSE-style contexts"
+      ],
+      "excludes": [
+        "Simplifying the result of another fraction operation",
+        "Improper fractions and mixed-number conversion",
+        "Algebraic fractions",
+        "Decimal approximations",
+        "Diagnostic and delayed Retrieval routes"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [],
+    "entry_assumptions": [
+      "The learner can read the quantities and use the required whole-number arithmetic."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "integer",
+      "fraction",
+      "single_choice"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    }
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "Rename the same fraction with fewer, larger equal parts by dividing both counts by one common factor.",
+    "invariant": "Using the same non-zero divisor on the numerator and denominator preserves the value.",
+    "mathematical_rule": "Find a common factor; divide both parts by it; repeat until the only common factor is 1.",
+    "must_notice": [
+      "An equivalent fraction may still not be simplest.",
+      "The same divisor must be used for both parts.",
+      "A fraction already in simplest form stays unchanged."
+    ],
+    "common_confusions": [
+      "Stopping at a partly simplified fraction",
+      "Changing one part only",
+      "Using different divisors",
+      "Adding or subtracting a factor"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "One amount, different-sized parts",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "One amount, different-sized parts",
+          "initial_state": "One amount, different-sized parts",
+          "model": {
+            "kind": "simplify_fraction",
+            "n": 6,
+            "d": 8,
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Six eighths names an amount using eight equal parts. The shaded amount will stay fixed while the groups change."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Regroup without changing value",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Regroup without changing value",
+          "initial_state": "Regroup without changing value",
+          "model": {
+            "kind": "simplify_fraction",
+            "n": 6,
+            "d": 8,
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "factor": 2
+          }
+        },
+        "narration": {
+          "script": "Pair the eighths. Six eighths becomes three quarters: both counts divide by two while the shaded amount stays the same."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Explain the equal change",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Explain the equal change",
+          "initial_state": "Explain the equal change",
+          "model": {
+            "kind": "simplify_fraction",
+            "n": 6,
+            "d": 8,
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Choose why the same divisor must be used on both parts."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "AF-03-C01"
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Build the worked method",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Build the worked method",
+          "initial_state": "Build the worked method",
+          "model": {
+            "kind": "simplify_fraction",
+            "n": 18,
+            "d": 24,
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "factor": 6
+          }
+        },
+        "narration": {
+          "script": "For eighteen twenty-fourths, six divides both counts. The result is three quarters, and three and four share no factor greater than one."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Check the worked method",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Check the worked method",
+          "initial_state": "Check the worked method",
+          "model": {
+            "kind": "simplify_fraction",
+            "n": 18,
+            "d": 24,
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Choose the calculation that divides both parts by the same common factor."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "AF-03-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "AF-03-G01",
+        "support_level": "high",
+        "pre_question_script": "Build the source method one blank at a time.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "AF-03-G02",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "faded",
+        "question_ref": "AF-03-G03",
+        "support_level": "reduced",
+        "pre_question_script": "",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "faded",
+        "question_ref": "AF-03-G04",
+        "support_level": "reduced",
+        "pre_question_script": "",
+        "correct_next": "G05"
+      },
+      "G05": {
+        "stage": "independent_transfer",
+        "question_ref": "AF-03-G05",
+        "support_level": "none",
+        "pre_question_script": "",
+        "correct_next": "G06"
+      },
+      "G06": {
+        "stage": "independent_transfer",
+        "question_ref": "AF-03-G06",
+        "support_level": "none",
+        "pre_question_script": "",
+        "correct_next": "P01"
+      }
+    },
+    "practice": {
+      "intro_script": "Write each fraction in fully simplified form, then decide which fraction needs no change and apply the idea to three counted contexts.",
+      "question_order": [
+        "AF-03-P01",
+        "AF-03-P02",
+        "AF-03-P03",
+        "AF-03-P04",
+        "AF-03-P05",
+        "AF-03-P06",
+        "AF-03-X01",
+        "AF-03-X02",
+        "AF-03-X03",
+        "AF-03-X04"
+      ],
+      "question_count": 10
+    },
+    "exit": {
+      "intro_script": "Simplify two fractions and identify the fraction already in simplest form. There are no hints, and each response locks after submission.",
+      "primary_question_refs": [
+        "AF-03-E01",
+        "AF-03-E02",
+        "AF-03-E03"
+      ],
+      "confirmation_question_refs": [],
+      "mastery_policy": {
+        "profile": "all_primary_unsupported",
+        "require_all": true,
+        "source_page": 11,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "You preserved each fraction’s value and continued until every result was fully simplified.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Check for one more common factor",
+      "ryan_script": "One or more final checks need another pass. Divide both parts by the same factor and continue until their only common factor is one.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "AF-03-C01",
+      "source_ref": {
+        "page": 3
+      },
+      "stage": "practice",
+      "prompt": "Why must the numerator and denominator be divided by the same number?",
+      "target": "Write the fraction in fully simplified exact form",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "This keeps the value of the fraction unchanged.",
+          "This always makes the numerator equal to 1.",
+          "This changes the fraction into a decimal.",
+          "This makes the denominator larger."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "This keeps the value of the fraction unchanged."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Exactly. Scaling both counts by the same factor preserves the fraction’s value.",
+        "correct_after_support": "Exactly. Scaling both counts by the same factor preserves the fraction’s value.",
+        "on_correct_math": "The numerator and denominator are scaled by one common factor. → The fraction keeps the same value.",
+        "on_incorrect_attempt_1": "Compare six eighths with three quarters in the model: the shaded amount has not moved.",
+        "on_incorrect_attempt_2": "Use the same divisor for both parts, continue until their only common factor is one, then submit the corrected fraction.",
+        "on_locked_incorrect": "Answer recorded. The complete method will be available after the final set.",
+        "worked_explanation": "The numerator and denominator are scaled by one common factor. → The fraction keeps the same value."
+      },
+      "mathematical_support": {
+        "hint_1": "Compare six eighths with three quarters in the model: the shaded amount has not moved.",
+        "hint_2": "An equivalent step is not necessarily the final step. Check the new numerator and denominator for another common factor.",
+        "worked_solution": "The numerator and denominator are scaled by one common factor. → The fraction keeps the same value."
+      },
+      "working": [
+        "The numerator and denominator are scaled by one common factor.",
+        "The fraction keeps the same value."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "simplify_fraction",
+          "n": 6,
+          "d": 8,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-03-C02",
+      "source_ref": {
+        "page": 4
+      },
+      "stage": "practice",
+      "prompt": "Which method correctly simplifies 18/24?",
+      "target": "Write the fraction in fully simplified exact form",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "18/24 = (18 ÷ 6)/(24 ÷ 6) = 3/4",
+          "18/24 = (18 − 6)/(24 − 6) = 12/18",
+          "18/24 = (18 ÷ 6)/(24 ÷ 3) = 3/8",
+          "18/24 = (18 ÷ 6)/24 = 3/24"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "18/24 = (18 ÷ 6)/(24 ÷ 6) = 3/4"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Dividing both parts by six gives three quarters, already in simplest form.",
+        "correct_after_support": "Correct. Dividing both parts by six gives three quarters, already in simplest form.",
+        "on_correct_math": "6 divides both 18 and 24. → 18 ÷ 6 = 3 and 24 ÷ 6 = 4. → 3 and 4 have no common factor greater than 1.",
+        "on_incorrect_attempt_1": "A valid equivalent fraction uses one divisor for both the numerator and denominator.",
+        "on_incorrect_attempt_2": "Use the same divisor for both parts, continue until their only common factor is one, then submit the corrected fraction.",
+        "on_locked_incorrect": "Answer recorded. The complete method will be available after the final set.",
+        "worked_explanation": "6 divides both 18 and 24. → 18 ÷ 6 = 3 and 24 ÷ 6 = 4. → 3 and 4 have no common factor greater than 1."
+      },
+      "mathematical_support": {
+        "hint_1": "A valid equivalent fraction uses one divisor for both the numerator and denominator.",
+        "hint_2": "An equivalent step is not necessarily the final step. Check the new numerator and denominator for another common factor.",
+        "worked_solution": "6 divides both 18 and 24. → 18 ÷ 6 = 3 and 24 ÷ 6 = 4. → 3 and 4 have no common factor greater than 1."
+      },
+      "working": [
+        "6 divides both 18 and 24.",
+        "18 ÷ 6 = 3 and 24 ÷ 6 = 4.",
+        "3 and 4 have no common factor greater than 1."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "simplify_fraction",
+          "n": 18,
+          "d": 24,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-03-G01",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "Complete the missing value: A common factor of 15 and 25 is ?",
+      "target": "Write the fraction in fully simplified exact form",
+      "response": {
+        "type": "integer",
+        "input_label": "Missing value"
+      },
+      "answer": {
+        "value": 5
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Five is a factor of both numbers.",
+        "correct_after_support": "Correct. Five is a factor of both numbers.",
+        "on_correct_math": "A common factor of 15 and 25 is 5",
+        "on_incorrect_attempt_1": "Use a multiplication fact shared by both 15 and 25.",
+        "on_incorrect_attempt_2": "Use the same divisor for both parts, continue until their only common factor is one, then submit the corrected fraction.",
+        "on_locked_incorrect": "Answer recorded. The complete method will be available after the final set.",
+        "worked_explanation": "A common factor of 15 and 25 is 5"
+      },
+      "mathematical_support": {
+        "hint_1": "Use a multiplication fact shared by both 15 and 25.",
+        "hint_2": "An equivalent step is not necessarily the final step. Check the new numerator and denominator for another common factor.",
+        "worked_solution": "A common factor of 15 and 25 is 5"
+      },
+      "working": [
+        "A common factor of 15 and 25 is 5"
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "guided_simplification",
+          "label": "Choose a common factor",
+          "expression": "A common factor of 15 and 25 is ?",
+          "completed": "A common factor of 15 and 25 is 5",
+          "math_text": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-03-G02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "Complete the missing value: 15 ÷ ?",
+      "target": "Write the fraction in fully simplified exact form",
+      "response": {
+        "type": "integer",
+        "input_label": "Missing value"
+      },
+      "answer": {
+        "value": 5
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The same divisor is used for both parts.",
+        "correct_after_support": "Correct. The same divisor is used for both parts.",
+        "on_correct_math": "15 ÷ 5",
+        "on_incorrect_attempt_1": "Use the same common factor selected in the first step.",
+        "on_incorrect_attempt_2": "Use the same divisor for both parts, continue until their only common factor is one, then submit the corrected fraction.",
+        "on_locked_incorrect": "Answer recorded. The complete method will be available after the final set.",
+        "worked_explanation": "15 ÷ 5"
+      },
+      "mathematical_support": {
+        "hint_1": "Use the same common factor selected in the first step.",
+        "hint_2": "An equivalent step is not necessarily the final step. Check the new numerator and denominator for another common factor.",
+        "worked_solution": "15 ÷ 5"
+      },
+      "working": [
+        "15 ÷ 5"
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "guided_simplification",
+          "label": "Divide the numerator",
+          "expression": "15 ÷ ?",
+          "completed": "15 ÷ 5",
+          "math_text": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-03-G03",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "Complete the missing value: 25 ÷ ?",
+      "target": "Write the fraction in fully simplified exact form",
+      "response": {
+        "type": "integer",
+        "input_label": "Missing value"
+      },
+      "answer": {
+        "value": 5
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The same divisor is used for both parts.",
+        "correct_after_support": "Correct. The same divisor is used for both parts.",
+        "on_correct_math": "25 ÷ 5",
+        "on_incorrect_attempt_1": "Use the same common factor selected in the first step.",
+        "on_incorrect_attempt_2": "Use the same divisor for both parts, continue until their only common factor is one, then submit the corrected fraction.",
+        "on_locked_incorrect": "Answer recorded. The complete method will be available after the final set.",
+        "worked_explanation": "25 ÷ 5"
+      },
+      "mathematical_support": {
+        "hint_1": "Use the same common factor selected in the first step.",
+        "hint_2": "An equivalent step is not necessarily the final step. Check the new numerator and denominator for another common factor.",
+        "worked_solution": "25 ÷ 5"
+      },
+      "working": [
+        "25 ÷ 5"
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "guided_simplification",
+          "label": "Divide the denominator",
+          "expression": "25 ÷ ?",
+          "completed": "25 ÷ 5",
+          "math_text": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-03-G04",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "Complete the missing value: 15 ÷ 5 = ?",
+      "target": "Write the fraction in fully simplified exact form",
+      "response": {
+        "type": "integer",
+        "input_label": "Missing value"
+      },
+      "answer": {
+        "value": 3
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The new numerator is three.",
+        "correct_after_support": "Correct. The new numerator is three.",
+        "on_correct_math": "15 ÷ 5 = 3",
+        "on_incorrect_attempt_1": "Use the same common factor selected in the first step.",
+        "on_incorrect_attempt_2": "Use the same divisor for both parts, continue until their only common factor is one, then submit the corrected fraction.",
+        "on_locked_incorrect": "Answer recorded. The complete method will be available after the final set.",
+        "worked_explanation": "15 ÷ 5 = 3"
+      },
+      "mathematical_support": {
+        "hint_1": "Use the same common factor selected in the first step.",
+        "hint_2": "An equivalent step is not necessarily the final step. Check the new numerator and denominator for another common factor.",
+        "worked_solution": "15 ÷ 5 = 3"
+      },
+      "working": [
+        "15 ÷ 5 = 3"
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "guided_simplification",
+          "label": "New numerator",
+          "expression": "15 ÷ 5 = ?",
+          "completed": "15 ÷ 5 = 3",
+          "math_text": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-03-G05",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "Complete the missing value: 25 ÷ 5 = ?",
+      "target": "Write the fraction in fully simplified exact form",
+      "response": {
+        "type": "integer",
+        "input_label": "Missing value"
+      },
+      "answer": {
+        "value": 5
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The new denominator is five.",
+        "correct_after_support": "Correct. The new denominator is five.",
+        "on_correct_math": "25 ÷ 5 = 5",
+        "on_incorrect_attempt_1": "Use the same common factor selected in the first step.",
+        "on_incorrect_attempt_2": "Use the same divisor for both parts, continue until their only common factor is one, then submit the corrected fraction.",
+        "on_locked_incorrect": "Answer recorded. The complete method will be available after the final set.",
+        "worked_explanation": "25 ÷ 5 = 5"
+      },
+      "mathematical_support": {
+        "hint_1": "Use the same common factor selected in the first step.",
+        "hint_2": "An equivalent step is not necessarily the final step. Check the new numerator and denominator for another common factor.",
+        "worked_solution": "25 ÷ 5 = 5"
+      },
+      "working": [
+        "25 ÷ 5 = 5"
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "guided_simplification",
+          "label": "New denominator",
+          "expression": "25 ÷ 5 = ?",
+          "completed": "25 ÷ 5 = 5",
+          "math_text": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-03-G06",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "Which statement shows that 3/5 is in its simplest form?",
+      "target": "Write the fraction in fully simplified exact form",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "3 and 5 have no common factor greater than 1.",
+          "3 is smaller than 5.",
+          "5 is an odd number.",
+          "The numerator and denominator add to 8."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "3 and 5 have no common factor greater than 1."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Three fifths is fully simplified because three and five are coprime.",
+        "correct_after_support": "Correct. Three fifths is fully simplified because three and five are coprime.",
+        "on_correct_math": "Factors of 3 are 1 and 3. → Factors of 5 are 1 and 5. → Their only common factor is 1.",
+        "on_incorrect_attempt_1": "Simplest form depends on common factors, not on size, parity or the sum of the two numbers.",
+        "on_incorrect_attempt_2": "Use the same divisor for both parts, continue until their only common factor is one, then submit the corrected fraction.",
+        "on_locked_incorrect": "Answer recorded. The complete method will be available after the final set.",
+        "worked_explanation": "Factors of 3 are 1 and 3. → Factors of 5 are 1 and 5. → Their only common factor is 1."
+      },
+      "mathematical_support": {
+        "hint_1": "Simplest form depends on common factors, not on size, parity or the sum of the two numbers.",
+        "hint_2": "An equivalent step is not necessarily the final step. Check the new numerator and denominator for another common factor.",
+        "worked_solution": "Factors of 3 are 1 and 3. → Factors of 5 are 1 and 5. → Their only common factor is 1."
+      },
+      "working": [
+        "Factors of 3 are 1 and 3.",
+        "Factors of 5 are 1 and 5.",
+        "Their only common factor is 1."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "simplify_fraction",
+          "n": 3,
+          "d": 5,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-03-P01",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "Write 4/10 in its simplest form.",
+      "target": "Write the fraction in fully simplified exact form",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": false,
+        "show_authored_label": true,
+        "input_label": "Simplest fraction"
+      },
+      "answer": {
+        "value": "2/5"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. two fifths is the fully simplified equivalent fraction.",
+        "correct_after_support": "Correct. two fifths is the fully simplified equivalent fraction.",
+        "on_correct_math": "A highest common factor is 2. → 4 ÷ 2 = 2 and 10 ÷ 2 = 5. → The simplest form is 2/5.",
+        "on_incorrect_attempt_1": "Look for a number greater than one that divides both 4 and 10.",
+        "on_incorrect_attempt_2": "Use the same divisor for both parts, continue until their only common factor is one, then submit the corrected fraction.",
+        "on_locked_incorrect": "Answer recorded. The complete method will be available after the final set.",
+        "worked_explanation": "A highest common factor is 2. → 4 ÷ 2 = 2 and 10 ÷ 2 = 5. → The simplest form is 2/5."
+      },
+      "mathematical_support": {
+        "hint_1": "Look for a number greater than one that divides both 4 and 10.",
+        "hint_2": "An equivalent step is not necessarily the final step. Check the new numerator and denominator for another common factor.",
+        "worked_solution": "A highest common factor is 2. → 4 ÷ 2 = 2 and 10 ÷ 2 = 5. → The simplest form is 2/5."
+      },
+      "working": [
+        "A highest common factor is 2.",
+        "4 ÷ 2 = 2 and 10 ÷ 2 = 5.",
+        "The simplest form is 2/5."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "simplify_fraction",
+          "n": 4,
+          "d": 10,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "4/10": "That keeps the original fraction. Find a common factor greater than one and divide both parts.",
+        "2/10": "Only the numerator has changed, so the value is no longer equivalent.",
+        "4/5": "Only the denominator has changed, so the value is no longer equivalent."
+      }
+    },
+    {
+      "id": "AF-03-P02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "Write 12/18 in its simplest form.",
+      "target": "Write the fraction in fully simplified exact form",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": false,
+        "show_authored_label": true,
+        "input_label": "Simplest fraction"
+      },
+      "answer": {
+        "value": "2/3"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. two thirds is the fully simplified equivalent fraction.",
+        "correct_after_support": "Correct. two thirds is the fully simplified equivalent fraction.",
+        "on_correct_math": "A highest common factor is 6. → 12 ÷ 6 = 2 and 18 ÷ 6 = 3. → The simplest form is 2/3.",
+        "on_incorrect_attempt_1": "Look for a number greater than one that divides both 12 and 18.",
+        "on_incorrect_attempt_2": "Use the same divisor for both parts, continue until their only common factor is one, then submit the corrected fraction.",
+        "on_locked_incorrect": "Answer recorded. The complete method will be available after the final set.",
+        "worked_explanation": "A highest common factor is 6. → 12 ÷ 6 = 2 and 18 ÷ 6 = 3. → The simplest form is 2/3."
+      },
+      "mathematical_support": {
+        "hint_1": "Look for a number greater than one that divides both 12 and 18.",
+        "hint_2": "An equivalent step is not necessarily the final step. Check the new numerator and denominator for another common factor.",
+        "worked_solution": "A highest common factor is 6. → 12 ÷ 6 = 2 and 18 ÷ 6 = 3. → The simplest form is 2/3."
+      },
+      "working": [
+        "A highest common factor is 6.",
+        "12 ÷ 6 = 2 and 18 ÷ 6 = 3.",
+        "The simplest form is 2/3."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "simplify_fraction",
+          "n": 12,
+          "d": 18,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "12/18": "That keeps the original fraction. Find a common factor greater than one and divide both parts.",
+        "2/18": "Only the numerator has changed, so the value is no longer equivalent.",
+        "12/3": "Only the denominator has changed, so the value is no longer equivalent.",
+        "6/9": "That fraction is equivalent, but it can still be simplified. Continue until no common factor greater than one remains."
+      }
+    },
+    {
+      "id": "AF-03-P03",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "Write 14/21 in its simplest form.",
+      "target": "Write the fraction in fully simplified exact form",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": false,
+        "show_authored_label": true,
+        "input_label": "Simplest fraction"
+      },
+      "answer": {
+        "value": "2/3"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. two thirds is the fully simplified equivalent fraction.",
+        "correct_after_support": "Correct. two thirds is the fully simplified equivalent fraction.",
+        "on_correct_math": "A highest common factor is 7. → 14 ÷ 7 = 2 and 21 ÷ 7 = 3. → The simplest form is 2/3.",
+        "on_incorrect_attempt_1": "Look for a number greater than one that divides both 14 and 21.",
+        "on_incorrect_attempt_2": "Use the same divisor for both parts, continue until their only common factor is one, then submit the corrected fraction.",
+        "on_locked_incorrect": "Answer recorded. The complete method will be available after the final set.",
+        "worked_explanation": "A highest common factor is 7. → 14 ÷ 7 = 2 and 21 ÷ 7 = 3. → The simplest form is 2/3."
+      },
+      "mathematical_support": {
+        "hint_1": "Look for a number greater than one that divides both 14 and 21.",
+        "hint_2": "An equivalent step is not necessarily the final step. Check the new numerator and denominator for another common factor.",
+        "worked_solution": "A highest common factor is 7. → 14 ÷ 7 = 2 and 21 ÷ 7 = 3. → The simplest form is 2/3."
+      },
+      "working": [
+        "A highest common factor is 7.",
+        "14 ÷ 7 = 2 and 21 ÷ 7 = 3.",
+        "The simplest form is 2/3."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "simplify_fraction",
+          "n": 14,
+          "d": 21,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "14/21": "That keeps the original fraction. Find a common factor greater than one and divide both parts.",
+        "2/21": "Only the numerator has changed, so the value is no longer equivalent.",
+        "14/3": "Only the denominator has changed, so the value is no longer equivalent."
+      }
+    },
+    {
+      "id": "AF-03-P04",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "Write 18/30 in its simplest form.",
+      "target": "Write the fraction in fully simplified exact form",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": false,
+        "show_authored_label": true,
+        "input_label": "Simplest fraction"
+      },
+      "answer": {
+        "value": "3/5"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. three fifths is the fully simplified equivalent fraction.",
+        "correct_after_support": "Correct. three fifths is the fully simplified equivalent fraction.",
+        "on_correct_math": "A highest common factor is 6. → 18 ÷ 6 = 3 and 30 ÷ 6 = 5. → The simplest form is 3/5.",
+        "on_incorrect_attempt_1": "Look for a number greater than one that divides both 18 and 30.",
+        "on_incorrect_attempt_2": "Use the same divisor for both parts, continue until their only common factor is one, then submit the corrected fraction.",
+        "on_locked_incorrect": "Answer recorded. The complete method will be available after the final set.",
+        "worked_explanation": "A highest common factor is 6. → 18 ÷ 6 = 3 and 30 ÷ 6 = 5. → The simplest form is 3/5."
+      },
+      "mathematical_support": {
+        "hint_1": "Look for a number greater than one that divides both 18 and 30.",
+        "hint_2": "An equivalent step is not necessarily the final step. Check the new numerator and denominator for another common factor.",
+        "worked_solution": "A highest common factor is 6. → 18 ÷ 6 = 3 and 30 ÷ 6 = 5. → The simplest form is 3/5."
+      },
+      "working": [
+        "A highest common factor is 6.",
+        "18 ÷ 6 = 3 and 30 ÷ 6 = 5.",
+        "The simplest form is 3/5."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "simplify_fraction",
+          "n": 18,
+          "d": 30,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "18/30": "That keeps the original fraction. Find a common factor greater than one and divide both parts.",
+        "3/30": "Only the numerator has changed, so the value is no longer equivalent.",
+        "18/5": "Only the denominator has changed, so the value is no longer equivalent.",
+        "9/15": "That fraction is equivalent, but it can still be simplified. Continue until no common factor greater than one remains."
+      }
+    },
+    {
+      "id": "AF-03-P05",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "Write 24/36 in its simplest form.",
+      "target": "Write the fraction in fully simplified exact form",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": false,
+        "show_authored_label": true,
+        "input_label": "Simplest fraction"
+      },
+      "answer": {
+        "value": "2/3"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. two thirds is the fully simplified equivalent fraction.",
+        "correct_after_support": "Correct. two thirds is the fully simplified equivalent fraction.",
+        "on_correct_math": "A highest common factor is 12. → 24 ÷ 12 = 2 and 36 ÷ 12 = 3. → The simplest form is 2/3.",
+        "on_incorrect_attempt_1": "Look for a number greater than one that divides both 24 and 36.",
+        "on_incorrect_attempt_2": "Use the same divisor for both parts, continue until their only common factor is one, then submit the corrected fraction.",
+        "on_locked_incorrect": "Answer recorded. The complete method will be available after the final set.",
+        "worked_explanation": "A highest common factor is 12. → 24 ÷ 12 = 2 and 36 ÷ 12 = 3. → The simplest form is 2/3."
+      },
+      "mathematical_support": {
+        "hint_1": "Look for a number greater than one that divides both 24 and 36.",
+        "hint_2": "An equivalent step is not necessarily the final step. Check the new numerator and denominator for another common factor.",
+        "worked_solution": "A highest common factor is 12. → 24 ÷ 12 = 2 and 36 ÷ 12 = 3. → The simplest form is 2/3."
+      },
+      "working": [
+        "A highest common factor is 12.",
+        "24 ÷ 12 = 2 and 36 ÷ 12 = 3.",
+        "The simplest form is 2/3."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "simplify_fraction",
+          "n": 24,
+          "d": 36,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "24/36": "That keeps the original fraction. Find a common factor greater than one and divide both parts.",
+        "2/36": "Only the numerator has changed, so the value is no longer equivalent.",
+        "24/3": "Only the denominator has changed, so the value is no longer equivalent.",
+        "12/18": "That fraction is equivalent, but it can still be simplified. Continue until no common factor greater than one remains."
+      }
+    },
+    {
+      "id": "AF-03-P06",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Which fraction is already in its simplest form?",
+      "target": "Write the fraction in fully simplified exact form",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "10/15",
+          "12/20",
+          "7/12",
+          "14/28"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "7/12"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Seven twelfths needs no change.",
+        "correct_after_support": "Correct. Seven twelfths needs no change.",
+        "on_correct_math": "7 and 12 have no common factor greater than 1. → So 7/12 is already in simplest form.",
+        "on_incorrect_attempt_1": "Check each numerator and denominator for a shared factor greater than one.",
+        "on_incorrect_attempt_2": "Use the same divisor for both parts, continue until their only common factor is one, then submit the corrected fraction.",
+        "on_locked_incorrect": "Answer recorded. The complete method will be available after the final set.",
+        "worked_explanation": "7 and 12 have no common factor greater than 1. → So 7/12 is already in simplest form."
+      },
+      "mathematical_support": {
+        "hint_1": "Check each numerator and denominator for a shared factor greater than one.",
+        "hint_2": "An equivalent step is not necessarily the final step. Check the new numerator and denominator for another common factor.",
+        "worked_solution": "7 and 12 have no common factor greater than 1. → So 7/12 is already in simplest form."
+      },
+      "working": [
+        "7 and 12 have no common factor greater than 1.",
+        "So 7/12 is already in simplest form."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "simplify_fraction",
+          "n": 7,
+          "d": 12,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-03-X01",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "practice",
+      "prompt": "There are 18 red counters and 24 blue counters in a bag. Write the red fraction 18/42 in its simplest form.",
+      "target": "Write the fraction in fully simplified exact form",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": false,
+        "show_authored_label": true,
+        "input_label": "Simplest fraction"
+      },
+      "answer": {
+        "value": "3/7"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. three sevenths is the fully simplified equivalent fraction.",
+        "correct_after_support": "Correct. three sevenths is the fully simplified equivalent fraction.",
+        "on_correct_math": "A highest common factor is 6. → 18 ÷ 6 = 3 and 42 ÷ 6 = 7. → The simplest form is 3/7.",
+        "on_incorrect_attempt_1": "Look for a number greater than one that divides both 18 and 42.",
+        "on_incorrect_attempt_2": "Use the same divisor for both parts, continue until their only common factor is one, then submit the corrected fraction.",
+        "on_locked_incorrect": "Answer recorded. The complete method will be available after the final set.",
+        "worked_explanation": "A highest common factor is 6. → 18 ÷ 6 = 3 and 42 ÷ 6 = 7. → The simplest form is 3/7."
+      },
+      "mathematical_support": {
+        "hint_1": "Look for a number greater than one that divides both 18 and 42.",
+        "hint_2": "An equivalent step is not necessarily the final step. Check the new numerator and denominator for another common factor.",
+        "worked_solution": "A highest common factor is 6. → 18 ÷ 6 = 3 and 42 ÷ 6 = 7. → The simplest form is 3/7."
+      },
+      "working": [
+        "A highest common factor is 6.",
+        "18 ÷ 6 = 3 and 42 ÷ 6 = 7.",
+        "The simplest form is 3/7."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "simplify_fraction",
+          "n": 18,
+          "d": 42,
+          "object": "counters",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "18/42": "That keeps the original fraction. Find a common factor greater than one and divide both parts.",
+        "3/42": "Only the numerator has changed, so the value is no longer equivalent.",
+        "18/7": "Only the denominator has changed, so the value is no longer equivalent.",
+        "9/21": "That fraction is equivalent, but it can still be simplified. Continue until no common factor greater than one remains."
+      }
+    },
+    {
+      "id": "AF-03-X02",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "practice",
+      "prompt": "A class has 12 boys and 20 girls. Write the boys fraction 12/32 in its simplest form.",
+      "target": "Write the fraction in fully simplified exact form",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": false,
+        "show_authored_label": true,
+        "input_label": "Simplest fraction"
+      },
+      "answer": {
+        "value": "3/8"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. three eighths is the fully simplified equivalent fraction.",
+        "correct_after_support": "Correct. three eighths is the fully simplified equivalent fraction.",
+        "on_correct_math": "A highest common factor is 4. → 12 ÷ 4 = 3 and 32 ÷ 4 = 8. → The simplest form is 3/8.",
+        "on_incorrect_attempt_1": "Look for a number greater than one that divides both 12 and 32.",
+        "on_incorrect_attempt_2": "Use the same divisor for both parts, continue until their only common factor is one, then submit the corrected fraction.",
+        "on_locked_incorrect": "Answer recorded. The complete method will be available after the final set.",
+        "worked_explanation": "A highest common factor is 4. → 12 ÷ 4 = 3 and 32 ÷ 4 = 8. → The simplest form is 3/8."
+      },
+      "mathematical_support": {
+        "hint_1": "Look for a number greater than one that divides both 12 and 32.",
+        "hint_2": "An equivalent step is not necessarily the final step. Check the new numerator and denominator for another common factor.",
+        "worked_solution": "A highest common factor is 4. → 12 ÷ 4 = 3 and 32 ÷ 4 = 8. → The simplest form is 3/8."
+      },
+      "working": [
+        "A highest common factor is 4.",
+        "12 ÷ 4 = 3 and 32 ÷ 4 = 8.",
+        "The simplest form is 3/8."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "simplify_fraction",
+          "n": 12,
+          "d": 32,
+          "object": "class",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "12/32": "That keeps the original fraction. Find a common factor greater than one and divide both parts.",
+        "3/32": "Only the numerator has changed, so the value is no longer equivalent.",
+        "12/8": "Only the denominator has changed, so the value is no longer equivalent.",
+        "6/16": "That fraction is equivalent, but it can still be simplified. Continue until no common factor greater than one remains."
+      }
+    },
+    {
+      "id": "AF-03-X03",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "practice",
+      "prompt": "A box has 14 green pencils and 21 yellow pencils. Write the green fraction 14/35 in its simplest form.",
+      "target": "Write the fraction in fully simplified exact form",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": false,
+        "show_authored_label": true,
+        "input_label": "Simplest fraction"
+      },
+      "answer": {
+        "value": "2/5"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. two fifths is the fully simplified equivalent fraction.",
+        "correct_after_support": "Correct. two fifths is the fully simplified equivalent fraction.",
+        "on_correct_math": "A highest common factor is 7. → 14 ÷ 7 = 2 and 35 ÷ 7 = 5. → The simplest form is 2/5.",
+        "on_incorrect_attempt_1": "Look for a number greater than one that divides both 14 and 35.",
+        "on_incorrect_attempt_2": "Use the same divisor for both parts, continue until their only common factor is one, then submit the corrected fraction.",
+        "on_locked_incorrect": "Answer recorded. The complete method will be available after the final set.",
+        "worked_explanation": "A highest common factor is 7. → 14 ÷ 7 = 2 and 35 ÷ 7 = 5. → The simplest form is 2/5."
+      },
+      "mathematical_support": {
+        "hint_1": "Look for a number greater than one that divides both 14 and 35.",
+        "hint_2": "An equivalent step is not necessarily the final step. Check the new numerator and denominator for another common factor.",
+        "worked_solution": "A highest common factor is 7. → 14 ÷ 7 = 2 and 35 ÷ 7 = 5. → The simplest form is 2/5."
+      },
+      "working": [
+        "A highest common factor is 7.",
+        "14 ÷ 7 = 2 and 35 ÷ 7 = 5.",
+        "The simplest form is 2/5."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "simplify_fraction",
+          "n": 14,
+          "d": 35,
+          "object": "pencils",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "14/35": "That keeps the original fraction. Find a common factor greater than one and divide both parts.",
+        "2/35": "Only the numerator has changed, so the value is no longer equivalent.",
+        "14/5": "Only the denominator has changed, so the value is no longer equivalent."
+      }
+    },
+    {
+      "id": "AF-03-X04",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "practice",
+      "prompt": "A student wants to write 24/36 in its simplest form. Which calculation should the student use?",
+      "target": "Write the fraction in fully simplified exact form",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "(24 ÷ 12)/(36 ÷ 12)",
+          "(24 − 12)/(36 − 12)",
+          "(24 ÷ 12)/(36 ÷ 6)",
+          "24/(36 ÷ 12)"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "(24 ÷ 12)/(36 ÷ 12)"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Dividing both counts by twelve preserves the value and reaches simplest form.",
+        "correct_after_support": "Correct. Dividing both counts by twelve preserves the value and reaches simplest form.",
+        "on_correct_math": "12 is a factor of both 24 and 36. → Divide both parts by 12. → The result is 2/3.",
+        "on_incorrect_attempt_1": "The same operation and the same divisor must be applied to both parts.",
+        "on_incorrect_attempt_2": "Use the same divisor for both parts, continue until their only common factor is one, then submit the corrected fraction.",
+        "on_locked_incorrect": "Answer recorded. The complete method will be available after the final set.",
+        "worked_explanation": "12 is a factor of both 24 and 36. → Divide both parts by 12. → The result is 2/3."
+      },
+      "mathematical_support": {
+        "hint_1": "The same operation and the same divisor must be applied to both parts.",
+        "hint_2": "An equivalent step is not necessarily the final step. Check the new numerator and denominator for another common factor.",
+        "worked_solution": "12 is a factor of both 24 and 36. → Divide both parts by 12. → The result is 2/3."
+      },
+      "working": [
+        "12 is a factor of both 24 and 36.",
+        "Divide both parts by 12.",
+        "The result is 2/3."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "simplify_fraction",
+          "n": 24,
+          "d": 36,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-03-E01",
+      "source_ref": {
+        "page": 11
+      },
+      "stage": "exit",
+      "prompt": "Write 16/24 in its simplest form.",
+      "target": "Write the fraction in fully simplified exact form",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": false,
+        "show_authored_label": true,
+        "input_label": "Simplest fraction"
+      },
+      "answer": {
+        "value": "2/3"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. two thirds is the fully simplified equivalent fraction.",
+        "correct_after_support": "Correct. two thirds is the fully simplified equivalent fraction.",
+        "on_correct_math": "A highest common factor is 8. → 16 ÷ 8 = 2 and 24 ÷ 8 = 3. → The simplest form is 2/3.",
+        "on_incorrect_attempt_1": "Look for a number greater than one that divides both 16 and 24.",
+        "on_incorrect_attempt_2": "Use the same divisor for both parts, continue until their only common factor is one, then submit the corrected fraction.",
+        "on_locked_incorrect": "Answer recorded. The complete method will be available after the final set.",
+        "worked_explanation": "A highest common factor is 8. → 16 ÷ 8 = 2 and 24 ÷ 8 = 3. → The simplest form is 2/3."
+      },
+      "mathematical_support": {
+        "hint_1": "Look for a number greater than one that divides both 16 and 24.",
+        "hint_2": "An equivalent step is not necessarily the final step. Check the new numerator and denominator for another common factor.",
+        "worked_solution": "A highest common factor is 8. → 16 ÷ 8 = 2 and 24 ÷ 8 = 3. → The simplest form is 2/3."
+      },
+      "working": [
+        "A highest common factor is 8.",
+        "16 ÷ 8 = 2 and 24 ÷ 8 = 3.",
+        "The simplest form is 2/3."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "simplify_fraction",
+          "n": 16,
+          "d": 24,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "16/24": "That keeps the original fraction. Find a common factor greater than one and divide both parts.",
+        "2/24": "Only the numerator has changed, so the value is no longer equivalent.",
+        "16/3": "Only the denominator has changed, so the value is no longer equivalent.",
+        "8/12": "That fraction is equivalent, but it can still be simplified. Continue until no common factor greater than one remains."
+      }
+    },
+    {
+      "id": "AF-03-E02",
+      "source_ref": {
+        "page": 11
+      },
+      "stage": "exit",
+      "prompt": "Write 27/36 in its simplest form.",
+      "target": "Write the fraction in fully simplified exact form",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": false,
+        "show_authored_label": true,
+        "input_label": "Simplest fraction"
+      },
+      "answer": {
+        "value": "3/4"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. three quarters is the fully simplified equivalent fraction.",
+        "correct_after_support": "Correct. three quarters is the fully simplified equivalent fraction.",
+        "on_correct_math": "A highest common factor is 9. → 27 ÷ 9 = 3 and 36 ÷ 9 = 4. → The simplest form is 3/4.",
+        "on_incorrect_attempt_1": "Look for a number greater than one that divides both 27 and 36.",
+        "on_incorrect_attempt_2": "Use the same divisor for both parts, continue until their only common factor is one, then submit the corrected fraction.",
+        "on_locked_incorrect": "Answer recorded. The complete method will be available after the final set.",
+        "worked_explanation": "A highest common factor is 9. → 27 ÷ 9 = 3 and 36 ÷ 9 = 4. → The simplest form is 3/4."
+      },
+      "mathematical_support": {
+        "hint_1": "Look for a number greater than one that divides both 27 and 36.",
+        "hint_2": "An equivalent step is not necessarily the final step. Check the new numerator and denominator for another common factor.",
+        "worked_solution": "A highest common factor is 9. → 27 ÷ 9 = 3 and 36 ÷ 9 = 4. → The simplest form is 3/4."
+      },
+      "working": [
+        "A highest common factor is 9.",
+        "27 ÷ 9 = 3 and 36 ÷ 9 = 4.",
+        "The simplest form is 3/4."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "simplify_fraction",
+          "n": 27,
+          "d": 36,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "27/36": "That keeps the original fraction. Find a common factor greater than one and divide both parts.",
+        "3/36": "Only the numerator has changed, so the value is no longer equivalent.",
+        "27/4": "Only the denominator has changed, so the value is no longer equivalent.",
+        "9/12": "That fraction is equivalent, but it can still be simplified. Continue until no common factor greater than one remains."
+      }
+    },
+    {
+      "id": "AF-03-E03",
+      "source_ref": {
+        "page": 11
+      },
+      "stage": "exit",
+      "prompt": "Select the fraction that is already in its simplest form.",
+      "target": "Write the fraction in fully simplified exact form",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "12/16",
+          "15/25",
+          "11/18",
+          "21/28"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "11/18"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Recorded. Eleven eighteenths is already in simplest form.",
+        "correct_after_support": "Recorded. Eleven eighteenths is already in simplest form.",
+        "on_correct_math": "11 is prime and does not divide 18. → Their only common factor is 1.",
+        "on_incorrect_attempt_1": "No hints are available in the final check.",
+        "on_incorrect_attempt_2": "Use the same divisor for both parts, continue until their only common factor is one, then submit the corrected fraction.",
+        "on_locked_incorrect": "Answer recorded. The complete method will be available after the final set.",
+        "worked_explanation": "11 is prime and does not divide 18. → Their only common factor is 1."
+      },
+      "mathematical_support": {
+        "hint_1": "No hints are available in the final check.",
+        "hint_2": "An equivalent step is not necessarily the final step. Check the new numerator and denominator for another common factor.",
+        "worked_solution": "11 is prime and does not divide 18. → Their only common factor is 1."
+      },
+      "working": [
+        "11 is prime and does not divide 18.",
+        "Their only common factor is 1."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "simplify_fraction",
+          "n": 11,
+          "d": 18,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    }
+  ],
+  "canonical_lesson": {
+    "version": "AF03-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

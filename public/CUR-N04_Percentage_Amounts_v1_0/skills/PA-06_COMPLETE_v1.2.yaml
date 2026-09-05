@@ -1,0 +1,460 @@
+schema_version: '1.2'
+spec_intent:
+  source_of_truth: true
+  implementation_status: production_batch_2
+  source_material: { title: 'PA 06 - Find 5% and Multiples of 5% of an Amount', path: 'authoring-source-redacted.pdf', authoritative_pages: 1-19 }
+  authored_scope: Teach 5% by halving 10%, then build percentages ending in 5 from complete 10% groups and one 5% half-group from the same whole.
+  excluded_from_active_route: [Entry check, Diagnostic questions, Delayed retrieval questions, Arbitrary percentages]
+
+identity:
+  id: PA-06
+  slug: find-five-percent-and-multiples
+  title: Find 5% and Multiples of 5% of an Amount
+  strand: Number
+  cluster: Percentage Amounts
+  tier: GCSE Foundation
+  status: production_batch_2
+  estimated_minutes: { min: 18, max: 24 }
+
+curriculum:
+  learning_objective: Find 5% and percentages ending in 5 by finding 10%, halving that value, and combining unchanged benchmark parts from the same original whole.
+  success_criteria: [Find 5% by halving the 10% value., Decompose a percentage ending in 5 into complete 10% groups and one 5% half-group., Keep every part tied to the same original whole., Combine the calculated values accurately., Preserve units and check against nearby multiples of 10%.]
+  boundaries:
+    includes: [5% and positive whole-number multiples of 5% below 100%, Whole-number and simple decimal results, Direct calculations and short GCSE-style contexts]
+    excludes: [Arbitrary percentages not divisible by 5%, Required general 1% or decimal-multiplier methods, Money conventions, Percentage change and reverse percentages]
+
+dependencies:
+  required_skill_refs: [PA-01, PA-02, PA-05]
+  entry_assumptions: [The learner can find 10% of an amount, The learner can form a multiple of 10%, The learner can halve whole numbers and simple decimals]
+  downstream_rule: PA-07 may combine the 5% benchmark with other benchmark parts; PA-06 keeps the taught construction to 10% groups and a 5% half-group.
+
+engine_capability_requirements:
+  input_types: [single_choice, decimal]
+  visual_primitives: [percentage_strip, caption_layer, progress_indicator]
+  animation_actions: [fade_in, highlight, reveal_equation, contrast, crossfade_phase]
+  audio_capabilities: [browser_speech, caption_sync, pause_for_input, cancel_on_navigation]
+  state_capabilities: [attempt_count, step_resume, exit_score, confirmation_branch]
+
+experience_contract:
+  authored_feedback_only: true
+  ordered_phases: [teaching, guided, faded, independent_transfer, practice, exit, completion]
+  navigation: { default: linear_forward, refresh_resume: Resume at the latest committed step., start_again: Reset only this lesson attempt and preserve historical completion records. }
+  interaction_rules: [Never auto-submit or auto-fill an answer., Keep input available while Ryan speaks., Keep every 10% group and 5% half-group tied to the original whole., Accept any mathematically valid method unless a prompt explicitly checks the benchmark construction.]
+
+voice_and_script:
+  performer_name: Ryan
+  dialogue_profile_ref: RYAN_DIALOGUE_PROFILE_v1.yaml
+  script_ownership: All mathematical narration and feedback is authored in this specification.
+  caption_policy: Every spoken line is captioned verbatim; empty narration leaves no visible caption container.
+  narration_playback: { mode: browser_speech_ryan, require_ryan_voice: true, browser_voice_name: 'Microsoft Ryan Online (Natural) - English (United Kingdom)', opening_delay_ms: 0 }
+  production_audio_note: Provider audio and word boundaries require separate owner permission.
+
+visual_language:
+  primary_visual_contract: { primitive: percentage_strip, rule: Divide the whole into twenty equal 5% cells, use a stronger boundary after every pair to show one 10% group, and vary only the cells selected. }
+  scene_rules: [Two 5% cells must visibly form one unchanged 10% group., Show the 10% value before halving it., Keep results hidden on scored prompts until submission., Use the same whole for every benchmark part.]
+  reduced_motion: Show the final selected-cell state immediately while retaining the paired-group boundaries and labels.
+
+diagnostic: { enabled: false, question_refs: [], reason: Diagnostic is outside the current implementation scope. }
+
+concept_model:
+  core_idea: One 10% group contains two equal 5% halves, so a percentage ending in 5 is complete 10% groups plus one 5% half-group.
+  invariant: The original whole fixes the values of both 10% and 5%; neither value changes as more groups are selected.
+  mathematical_rule: '5% of A = (A ÷ 10) ÷ 2; (10n + 5)% of A = n(A ÷ 10) + ((A ÷ 10) ÷ 2).'
+  must_notice: [Five percent is half of ten percent, not one fifth., Thirty-five percent uses three 10% groups and one 5% half-group., The final 5 names a percentage part rather than an amount to add., A percentage below 100% gives less than a positive whole.]
+  common_confusions: [Dividing the whole by 5., Finding 5% of the 10% result., Selecting the wrong number of 10% groups., Adding the numeral 5., Dropping the unit.]
+
+lesson:
+  teaching_steps:
+    - id: T01
+      stage: teaching
+      purpose: Establish that one 10% group contains two equal 5% halves.
+      estimated_seconds: 45
+      scene:
+        layout: paired_comparison
+        display_title: One ten-percent group splits into two equal halves
+        objects: [The same whole of 120 shown with 10% and 5% selected.]
+        initial_state: Keep twenty equal cells visible and place a stronger boundary after every pair.
+        model:
+          comparisonDefaults: { showRoles: false, showFormula: false, showResult: true, partitionCount: 20, majorEvery: 2 }
+          comparisons:
+            - { heading: '10% of 120', percent: 10, wholeAmount: 120, unit: counters, partAmount: 12, selectedGroups: 2, solutionLabel: 'Two 5% halves make 12 counters' }
+            - { heading: '5% of 120', percent: 5, wholeAmount: 120, unit: counters, partAmount: 6, selectedGroups: 1, solutionLabel: 'One equal half contains 6 counters' }
+      narration: { script: One ten-percent group can be cut into two equal halves. Each half is five percent of the same whole, so its value is half of the ten-percent value. }
+      animation_timeline: [{ id: A01, trigger: narration_sync, action: highlight, target: percentage_strip, duration_ms: 850 }]
+      learner_interaction: { question_ref: null }
+      next_step: T02
+
+    - id: T02
+      stage: teaching
+      purpose: Build 35% from full groups and one half-group.
+      estimated_seconds: 45
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: Build a percentage ending in five
+        objects: [Three complete 10% groups and one additional 5% half-group from a whole of 120.]
+        initial_state: Select seven 5% cells while retaining the stronger boundaries between 10% groups.
+        model: { heading: '35% of 120', percent: 35, wholeAmount: 120, unit: counters, partAmount: 42, partitionCount: 20, selectedGroups: 7, majorEvery: 2, showRoles: true, showResult: true, showMethod: true, methodSteps: ['10% of 120 = 12', '5% of 120 = 6', '30% + 5% = 36 + 6 = 42'] }
+      narration: { script: Thirty-five percent uses three complete ten-percent groups and one extra five-percent half. All four parts come from the original whole, so the last half is six counters. }
+      animation_timeline: [{ id: A02, trigger: narration_sync, action: highlight, target: percentage_strip, duration_ms: 900 }]
+      learner_interaction: { question_ref: null }
+      next_step: T03
+
+    - id: T03
+      stage: teaching
+      purpose: Check the benchmark structure.
+      estimated_seconds: 70
+      scene: { layout: single_central_teaching_canvas, display_title: Which parts make forty-five percent?, objects: [Twenty equal 5% cells grouped in pairs.], initial_state: Keep the correct decomposition and result hidden. }
+      narration: { script: Choose the statement that uses complete ten-percent groups and one five-percent half from the same whole. }
+      animation_timeline: [{ id: A03, trigger: narration_sync, action: highlight, target: percentage_strip, duration_ms: 650 }]
+      learner_interaction: { question_ref: PA-06-C01, auto_focus: true }
+      next_step: T04
+
+    - id: T04
+      stage: teaching
+      purpose: Model the approved method for 35% of 120.
+      estimated_seconds: 50
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: Find ten percent, halve it, then combine
+        objects: [A locked worked example for 35% of 120.]
+        initial_state: Reveal the benchmark values before the final total.
+        model: { heading: 'Worked example: 35% of 120', percent: 35, wholeAmount: 120, partAmount: 42, partitionCount: 20, selectedGroups: 7, majorEvery: 2, showRoles: true, showResult: true, showMethod: true, methodSteps: ['120 ÷ 10 = 12', '12 ÷ 2 = 6', '(3 × 12) + 6 = 42'] }
+      narration: { script: Start with one ten-percent group, then halve that group value for five percent. Three full groups and the half-group combine to give the required amount. }
+      animation_timeline: [{ id: A04, trigger: narration_sync, action: reveal_equation, target: percentage_strip, duration_ms: 900 }]
+      learner_interaction: { question_ref: null }
+      next_step: T05
+
+    - id: T05
+      stage: teaching
+      purpose: Check method selection without forcing it on open calculations.
+      estimated_seconds: 70
+      scene: { layout: single_central_teaching_canvas, display_title: Select the benchmark calculation, objects: [A 35% strip for a whole of 120.], initial_state: Keep all method steps hidden. }
+      narration: { script: This check asks specifically for the ten-percent-and-five-percent benchmark route. Choose the calculation that keeps both parts tied to one hundred and twenty. }
+      animation_timeline: [{ id: A05, trigger: narration_sync, action: contrast, target: percentage_strip, duration_ms: 650 }]
+      learner_interaction: { question_ref: PA-06-C02, auto_focus: true }
+      next_step: T06
+
+    - id: T06
+      stage: teaching
+      purpose: Guide 65% of 140 in deliberate stages.
+      estimated_seconds: 50
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: Six full groups and one half-group
+        objects: [A guided model for 65% of 140.]
+        initial_state: Show the 10% and 5% values before the six-group total and final addition.
+        model: { heading: 'Guided example: 65% of 140', percent: 65, wholeAmount: 140, partAmount: 91, partitionCount: 20, selectedGroups: 13, majorEvery: 2, showRoles: true, showResult: true, showMethod: true, methodSteps: ['10% = 14 and 5% = 7', '60% = 6 × 14 = 84', '65% = 84 + 7 = 91'] }
+      narration: { script: For this whole, ten percent is fourteen and its half is seven. Sixty-five percent takes six complete groups and one half-group, all unchanged. }
+      animation_timeline: [{ id: A06, trigger: narration_sync, action: highlight, target: percentage_strip, duration_ms: 850 }]
+      learner_interaction: { question_ref: null }
+      next_step: T07
+
+    - id: T07
+      stage: teaching
+      purpose: Check that 5% is halved from 10% rather than taken from a changed whole.
+      estimated_seconds: 70
+      scene: { layout: single_central_teaching_canvas, display_title: Keep the original whole fixed, objects: [One paired 10% group divided into equal 5% cells.], initial_state: Keep the half value hidden. }
+      narration: { script: Ten percent of an amount is already known. Choose the five-percent value that halves it without changing the whole. }
+      animation_timeline: [{ id: A07, trigger: narration_sync, action: highlight, target: percentage_strip, duration_ms: 650 }]
+      learner_interaction: { question_ref: PA-06-C03, auto_focus: true }
+      next_step: T08
+
+    - id: T08
+      stage: teaching
+      purpose: Add a nearby-benchmark reasonableness check.
+      estimated_seconds: 40
+      scene:
+        layout: paired_comparison
+        display_title: Check between nearby multiples of ten percent
+        objects: [30%, 35% and 40% of the same whole of 200.]
+        initial_state: Keep the whole unchanged across all comparison panels.
+        model:
+          comparisonDefaults: { showRoles: false, showFormula: false, showResult: true, partitionCount: 20, majorEvery: 2 }
+          comparisons:
+            - { heading: '30% of 200', percent: 30, wholeAmount: 200, partAmount: 60, selectedGroups: 6, solutionLabel: 'Lower benchmark: 60' }
+            - { heading: '35% of 200', percent: 35, wholeAmount: 200, partAmount: 70, selectedGroups: 7, solutionLabel: 'Target: 70' }
+            - { heading: '40% of 200', percent: 40, wholeAmount: 200, partAmount: 80, selectedGroups: 8, solutionLabel: 'Upper benchmark: 80' }
+      narration: { script: For a positive whole, thirty-five percent must lie between thirty and forty percent. Nearby benchmark values make a quick check on the result. }
+      animation_timeline: [{ id: A08, trigger: narration_sync, action: contrast, target: percentage_strip, duration_ms: 850 }]
+      learner_interaction: { question_ref: null }
+      next_step: T09
+
+    - id: T09
+      stage: teaching
+      purpose: Prepare for a decimal half without changing the structure.
+      estimated_seconds: 40
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: The half-group can have a decimal value
+        objects: [55% of 90 represented by eleven 5% cells.]
+        initial_state: Retain the paired boundaries while showing a decimal 5% value.
+        model: { heading: '55% of 90', percent: 55, wholeAmount: 90, partAmount: 49.5, partitionCount: 20, selectedGroups: 11, majorEvery: 2, showRoles: true, showResult: true, showMethod: true, methodSteps: ['10% of 90 = 9', '5% of 90 = 4.5', '50% + 5% = 45 + 4.5 = 49.5'] }
+      narration: { script: The structure does not change when the half is a decimal. Half of the ten-percent value still gives five percent of the original whole. }
+      animation_timeline: [{ id: A09, trigger: narration_sync, action: crossfade_phase, target: percentage_strip, duration_ms: 850 }]
+      learner_interaction: { question_ref: null }
+      next_step: T10
+
+    - id: T10
+      stage: teaching
+      purpose: Consolidate the method before supported transfer.
+      estimated_seconds: 35
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: Your benchmark plan
+        objects: [A 15% strip with one full pair and one half-cell selected.]
+        initial_state: Show the decomposition and withhold the amount.
+        model: { heading: '15% = 10% + 5%', percent: 15, wholeAmount: 180, partAmount: 27, partitionCount: 20, selectedGroups: 3, majorEvery: 2, showRoles: true, showResult: false, methodSteps: ['Find 10% from the whole', 'Halve it to find 5%', 'Combine the selected parts'] }
+      narration: { script: Find ten percent from the whole, halve that value for five percent, then combine the number of full and half-groups named by the target. You will now use that plan yourself. }
+      animation_timeline: [{ id: A10, trigger: narration_sync, action: fade_in, target: percentage_strip, duration_ms: 700 }]
+      learner_interaction: { question_ref: null }
+      next_step: G01
+
+  transfer_steps:
+    G01: { stage: guided, question_ref: PA-06-G01, support_level: high, estimated_seconds: 80, pre_question_script: Find ten percent, halve it, then combine the two benchmark parts., visual_before_answer: Show one complete group and one half-group without their values., correct_next: F01, recovery_ref: PA-06-R02 }
+    F01: { stage: faded, question_ref: PA-06-F01, support_level: reduced, estimated_seconds: 85, pre_question_script: Work out the benchmark values and use four complete groups plus one half., visual_before_answer: Show nine selected 5% cells without the result., correct_next: I01, recovery_ref: PA-06-R03 }
+    I01: { stage: independent_transfer, question_ref: PA-06-I01, support_level: none, estimated_seconds: 90, pre_question_script: Work independently and keep the decimal half accurate., visual_before_answer: No benchmark values or result are visible., correct_next: P01, recovery_ref: PA-06-R02 }
+
+  practice:
+    intro_script: Five questions now. Use the original whole for every ten-percent group and five-percent half.
+    question_order: [PA-06-P01, PA-06-P02, PA-06-P03, PA-06-P04, PA-06-P05]
+    question_count: 5
+    feedback_policy: First errors receive an authored clue; second errors reveal the benchmark working and a focused repair where configured.
+
+  exit:
+    intro_script: Final check. Two questions, one submission each, with no hints while you answer.
+    primary_question_refs: [PA-06-E01, PA-06-E02]
+    confirmation_question_refs: [PA-06-CFM01, PA-06-CFM02]
+    submission_policy: One submission per primary exit item; reveal the outcome only after both are complete.
+    mastery_logic: { 2_correct_of_2: SECURE, 1_correct_of_2: Ask one unused confirmation item; correct is SECURE and incorrect is NEEDS_WORK., 0_correct_of_2: NEEDS_WORK }
+    confirmation_selection: Use the first unseen confirmation item.
+
+completion:
+  secure: { title: Skill complete, ryan_script: 'You found five percent by halving ten percent, then combined full and half-groups from one unchanged whole. Multiples of five percent are ready to use.', state_write: SECURE, buttons: [Finish for today, Continue learning] }
+  needs_work: { title: One more pass will help, ryan_script: 'The paired benchmark model is ready. We will revisit how the ten-percent group splits and how the selected parts combine.', state_write: NEEDS_WORK, buttons: [Try this skill again, Finish for today] }
+
+question_bank:
+  - id: PA-06-C01
+    stage: teaching_checkpoint
+    target: Decompose a percentage ending in 5.
+    prompt: Which statement correctly describes 45% of a positive amount?
+    response: { type: single_choice, options: ['Four complete 10% groups and one 5% half-group, all from the same whole.', 'Forty-five equal 10% groups.', 'The whole divided by 45.', '40% of the whole followed by 5% of that result.'] }
+    answer: { value: 'Four complete 10% groups and one 5% half-group, all from the same whole.' }
+    attempt_policy: &supported { policy: two_attempt_then_targeted_repair, max_attempts_before_resolution: 2, feedback_timing: immediate, submit_label: Check answer, allow_change_before_submit: true, lock_after_final_submit: true }
+    scripts: { on_correct_reaction: You separated the full groups from the final half-group., on_correct_math: '45% = 4 × 10% + 5%, with every part from the same whole.', on_incorrect_attempt_1: Count the complete tens in forty-five, then account for the final five., on_incorrect_attempt_2: Forty-five percent uses four complete ten-percent groups and one five-percent half-group., worked_explanation: '45% = 40% + 5% = 4 × 10% + 5%.' }
+    mathematical_support: { hint_1: Four tens make forty., hint_2: The remaining five is half of one ten-percent group., worked_solution: 'Four 10% groups and one 5% half-group.' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 45, wholeAmount: 100, partAmount: 45, partitionCount: 20, selectedGroups: 9, majorEvery: 2, methodSteps: ['45% = 40% + 5%', '40% = four 10% groups', '5% = half of one 10% group'], solutionLabel: '45% uses four full groups and one half-group' } }
+    recovery_item_ref: PA-06-R03
+
+  - id: PA-06-C02
+    stage: teaching_checkpoint
+    target: Select the taught benchmark calculation.
+    prompt: Which calculation correctly finds 35% of 120 using 10% and 5% benchmark parts?
+    response: { type: single_choice, options: ['(120 ÷ 10 × 3) + (120 ÷ 10 ÷ 2)', '120 ÷ 35', '(120 ÷ 10 × 3) + (12 ÷ 5)', '120 ÷ 10 + 35'] }
+    answer: { value: '(120 ÷ 10 × 3) + (120 ÷ 10 ÷ 2)' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You kept both benchmark parts tied to one hundred and twenty., on_correct_math: The first term makes three 10% groups and the second halves one 10% group., on_incorrect_attempt_1: Locate the calculation that divides the whole by ten before both scaling and halving., on_incorrect_attempt_2: Use three copies of 12 and one half of 12., worked_explanation: '(120 ÷ 10 × 3) + (120 ÷ 10 ÷ 2) = 36 + 6 = 42.' }
+    mathematical_support: { hint_1: Ten percent is 120 divided by 10., hint_2: Five percent is half of that same value., worked_solution: '36 + 6 = 42' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 35, wholeAmount: 120, partAmount: 42, partitionCount: 20, selectedGroups: 7, majorEvery: 2, methodSteps: ['10% = 12', '30% = 36 and 5% = 6', '36 + 6 = 42'], solutionLabel: '35% of 120 = 42' } }
+    recovery_item_ref: PA-06-R02
+
+  - id: PA-06-C03
+    stage: teaching_checkpoint
+    target: Halve 10% without changing the whole.
+    prompt: Ten percent of an amount is 18. What is 5% of the same amount?
+    response: { type: single_choice, options: ['0.9', '3.6', '9', '90'] }
+    answer: { value: '9' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You halved the ten-percent value., on_correct_math: One 10% group of 18 splits into two equal 5% halves of 9., on_incorrect_attempt_1: Five percent is half of the known ten-percent value., on_incorrect_attempt_2: Halve 18 without taking a new percentage of it., worked_explanation: '18 ÷ 2 = 9.' }
+    mathematical_support: { hint_1: Split the 18 into two equal parts., hint_2: Do not find 5% of 18., worked_solution: '9' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 5, wholeAmount: 180, partAmount: 9, partitionCount: 20, selectedGroups: 1, majorEvery: 2, methodSteps: ['10% of the whole = 18', '5% is half of 18', '18 ÷ 2 = 9'], solutionLabel: '5% of the original whole = 9' } }
+    recovery_item_ref: PA-06-R02
+
+  - id: PA-06-G01
+    stage: guided
+    target: Combine one 10% group and one 5% half-group.
+    prompt: Find 15% of 180.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '27' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You combined one full group and its half., on_correct_math: '10% of 180 is 18; 5% is 9; 18 + 9 = 27.', on_incorrect_attempt_1: Find ten percent, then halve that value., on_incorrect_attempt_2: The two benchmark values are 18 and 9., worked_explanation: '15% of 180 = 18 + 9 = 27.' }
+    mathematical_support: { hint_1: Start with 180 ÷ 10., hint_2: Add 18 to half of 18., worked_solution: '27' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 15, wholeAmount: 180, partAmount: 27, partitionCount: 20, selectedGroups: 3, majorEvery: 2, methodSteps: ['10% = 18', '5% = 9', '18 + 9 = 27'], solutionLabel: '15% of 180 = 27' } }
+    recovery_item_ref: PA-06-R02
+
+  - id: PA-06-F01
+    stage: faded
+    target: Build four full groups and one half-group.
+    prompt: Find 45% of 240.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '108' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You selected four full groups and one half-group., on_correct_math: '10% is 24 and 5% is 12, so 96 + 12 = 108.', on_incorrect_attempt_1: Find one 10% group and its half before combining., on_incorrect_attempt_2: Four groups of 24 total 96; add the 12 half-group., worked_explanation: '45% of 240 = (4 × 24) + 12 = 108.' }
+    mathematical_support: { hint_1: Start with 240 ÷ 10., hint_2: Use four copies of 24 and half of 24., worked_solution: '108' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 45, wholeAmount: 240, partAmount: 108, partitionCount: 20, selectedGroups: 9, majorEvery: 2, methodSteps: ['10% = 24', '5% = 12', '(4 × 24) + 12 = 108'], solutionLabel: '45% of 240 = 108' } }
+    recovery_item_ref: PA-06-R03
+
+  - id: PA-06-I01
+    stage: independent_transfer
+    target: Retain a decimal half-group independently.
+    prompt: Find 55% of 90.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '49.5' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You kept the decimal half accurate., on_correct_math: '10% is 9 and 5% is 4.5, so 45 + 4.5 = 49.5.', on_incorrect_attempt_1: Keep every full group equal to 9 and halve 9 for the final part., on_incorrect_attempt_2: Five groups total 45 and the half-group is 4.5., worked_explanation: '55% of 90 = 49.5.' }
+    mathematical_support: { hint_1: Ten percent is 9., hint_2: Half of 9 is 4.5., worked_solution: '49.5' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 55, wholeAmount: 90, partAmount: 49.5, partitionCount: 20, selectedGroups: 11, majorEvery: 2, methodSteps: ['10% = 9', '50% = 45 and 5% = 4.5', '45 + 4.5 = 49.5'], solutionLabel: '55% of 90 = 49.5' } }
+    recovery_item_ref: PA-06-R02
+
+  - id: PA-06-P01
+    stage: practice
+    target: Find a single 5% half-group.
+    prompt: Find 5% of 260.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '13' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You halved the ten-percent value., on_correct_math: '10% of 260 is 26, so 5% is 13.', on_incorrect_attempt_1: Find 10% before halving., on_incorrect_attempt_2: Half of 26 is 13., worked_explanation: '260 ÷ 10 ÷ 2 = 13.' }
+    mathematical_support: { hint_1: Find 260 ÷ 10., hint_2: Halve 26., worked_solution: '13' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 5, wholeAmount: 260, partAmount: 13, partitionCount: 20, selectedGroups: 1, majorEvery: 2, methodSteps: ['10% = 26', '5% = 26 ÷ 2', 'Answer = 13'], solutionLabel: '5% of 260 = 13' } }
+
+  - id: PA-06-P02
+    stage: practice
+    target: Find 35% with a whole-number result.
+    prompt: Find 35% of 80.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '28' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You combined three eights and one four., on_correct_math: '10% is 8 and 5% is 4, so 24 + 4 = 28.', on_incorrect_attempt_1: Build thirty-five percent as thirty plus five., on_incorrect_attempt_2: Three groups of 8 and one half-group of 4 total 28., worked_explanation: '35% of 80 = 28.' }
+    mathematical_support: { hint_1: Ten percent is 8., hint_2: Use 8 + 8 + 8 + 4., worked_solution: '28' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 35, wholeAmount: 80, partAmount: 28, partitionCount: 20, selectedGroups: 7, majorEvery: 2, methodSteps: ['10% = 8', '5% = 4', '24 + 4 = 28'], solutionLabel: '35% of 80 = 28' } }
+
+  - id: PA-06-P03
+    stage: practice
+    target: Find 65% with a decimal benchmark half.
+    prompt: Find 65% of 150.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '97.5' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You combined six groups with the decimal half-group., on_correct_math: '10% is 15 and 5% is 7.5, so 90 + 7.5 = 97.5.', on_incorrect_attempt_1: Keep six full groups of 15 before adding half of 15., on_incorrect_attempt_2: Sixty percent is 90 and five percent is 7.5., worked_explanation: '65% of 150 = 97.5.' }
+    mathematical_support: { hint_1: Ten percent is 15., hint_2: Add 90 and 7.5., worked_solution: '97.5' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 65, wholeAmount: 150, partAmount: 97.5, partitionCount: 20, selectedGroups: 13, majorEvery: 2, methodSteps: ['10% = 15', '60% = 90 and 5% = 7.5', '90 + 7.5 = 97.5'], solutionLabel: '65% of 150 = 97.5' } }
+
+  - id: PA-06-P04
+    stage: practice
+    target: Find eight full groups and one half-group.
+    prompt: Find 85% of 40.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '34' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You built eighty-five percent from the fixed group values., on_correct_math: '10% is 4 and 5% is 2, so 32 + 2 = 34.', on_incorrect_attempt_1: Use eight ten-percent groups and one five-percent half., on_incorrect_attempt_2: Eight groups of 4 total 32; add 2., worked_explanation: '85% of 40 = 34.' }
+    mathematical_support: { hint_1: Ten percent is 4., hint_2: Five percent is 2., worked_solution: '34' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 85, wholeAmount: 40, partAmount: 34, partitionCount: 20, selectedGroups: 17, majorEvery: 2, methodSteps: ['10% = 4', '80% = 32 and 5% = 2', '32 + 2 = 34'], solutionLabel: '85% of 40 = 34' } }
+
+  - id: PA-06-P05
+    stage: practice
+    target: Preserve a length unit.
+    prompt: A cable is 160 cm long. Find 35% of its length.
+    response: { type: decimal, input_label: Answer in centimetres }
+    answer: { value: '56' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You retained the centimetre unit., on_correct_math: '10% is 16 cm and 5% is 8 cm, so 48 cm + 8 cm = 56 cm.', on_incorrect_attempt_1: Find all benchmark parts from the 160 cm whole., on_incorrect_attempt_2: Three groups of 16 cm and one half-group of 8 cm total 56 cm., worked_explanation: '35% of 160 cm = 56 cm.' }
+    mathematical_support: { hint_1: Ten percent is 16 cm., hint_2: Add 48 cm and 8 cm., worked_solution: '56 cm' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 35, wholeAmount: 160, unit: cm, partAmount: 56, partitionCount: 20, selectedGroups: 7, majorEvery: 2, methodSteps: ['10% = 16 cm', '30% = 48 cm and 5% = 8 cm', 'Answer = 56 cm'], solutionLabel: '35% of 160 cm = 56 cm' } }
+
+  - id: PA-06-E01
+    stage: exit
+    target: Find 5% independently.
+    prompt: Find 5% of 340.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '17' }
+    attempt_policy: &exit { policy: single_submit_locked, max_attempts_before_resolution: 1, feedback_timing: after_exit_set, submit_label: Check answer, allow_change_before_submit: true, lock_after_final_submit: true }
+    scripts: { on_correct_math: '10% is 34 and half is 17.', on_incorrect_attempt_1: Record the answer for the final result., on_incorrect_attempt_2: Not applicable., worked_explanation: '5% of 340 = 17.' }
+    mathematical_support: { hint_1: null, hint_2: null, worked_solution: '17' }
+    success_reaction: { mode: silent }
+    visual: { primitive: percentage_strip, model: { percent: 5, wholeAmount: 340, partAmount: 17, partitionCount: 20, selectedGroups: 1, majorEvery: 2, methodSteps: ['10% = 34', '5% = 34 ÷ 2', 'Answer = 17'], solutionLabel: '5% of 340 = 17' } }
+
+  - id: PA-06-E02
+    stage: exit
+    target: Find 45% with a decimal result.
+    prompt: Find 45% of 70.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '31.5' }
+    attempt_policy: *exit
+    scripts: { on_correct_math: '10% is 7 and 5% is 3.5, so 28 + 3.5 = 31.5.', on_incorrect_attempt_1: Record the answer for the final result., on_incorrect_attempt_2: Not applicable., worked_explanation: '45% of 70 = 31.5.' }
+    mathematical_support: { hint_1: null, hint_2: null, worked_solution: '31.5' }
+    success_reaction: { mode: silent }
+    visual: { primitive: percentage_strip, model: { percent: 45, wholeAmount: 70, partAmount: 31.5, partitionCount: 20, selectedGroups: 9, majorEvery: 2, methodSteps: ['10% = 7', '40% = 28 and 5% = 3.5', '28 + 3.5 = 31.5'], solutionLabel: '45% of 70 = 31.5' } }
+
+  - id: PA-06-CFM01
+    stage: confirmation
+    target: Confirm 65% in a measured context.
+    prompt: A container holds 240 litres. Find 65% of the liquid.
+    response: { type: decimal, input_label: Answer in litres }
+    answer: { value: '156' }
+    attempt_policy: *exit
+    scripts: { on_correct_math: '10% is 24 litres and 5% is 12 litres, so 144 + 12 = 156 litres.', on_incorrect_attempt_1: Record the answer for the final result., on_incorrect_attempt_2: Not applicable., worked_explanation: '65% of 240 litres = 156 litres.' }
+    mathematical_support: { hint_1: null, hint_2: null, worked_solution: '156 litres' }
+    success_reaction: { mode: silent }
+    visual: { primitive: percentage_strip, model: { percent: 65, wholeAmount: 240, unit: litres, partAmount: 156, partitionCount: 20, selectedGroups: 13, majorEvery: 2, methodSteps: ['10% = 24 litres', '60% = 144 litres and 5% = 12 litres', 'Answer = 156 litres'], solutionLabel: '65% of 240 litres = 156 litres' } }
+
+  - id: PA-06-CFM02
+    stage: confirmation
+    target: Confirm 35% in a GCSE-style context.
+    prompt: A concert hall has 640 seats. For one performance, 35% are occupied. How many seats are occupied?
+    response: { type: decimal, input_label: Number of seats }
+    answer: { value: '224' }
+    attempt_policy: *exit
+    scripts: { on_correct_math: '10% is 64 seats and 5% is 32 seats, so 192 + 32 = 224 seats.', on_incorrect_attempt_1: Record the answer for the final result., on_incorrect_attempt_2: Not applicable., worked_explanation: '35% of 640 = 224 seats.' }
+    mathematical_support: { hint_1: null, hint_2: null, worked_solution: '224 seats' }
+    success_reaction: { mode: silent }
+    visual: { primitive: percentage_strip, model: { percent: 35, wholeAmount: 640, unit: seats, partAmount: 224, partitionCount: 20, selectedGroups: 7, majorEvery: 2, methodSteps: ['10% = 64 seats', '30% = 192 seats and 5% = 32 seats', 'Answer = 224 seats'], solutionLabel: '35% of 640 = 224 seats' } }
+
+  - id: PA-06-R01
+    stage: repair
+    target: Repair an insecure 10% prerequisite.
+    prompt: Find 10% of 570.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '57' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You recovered the full ten-percent group., on_correct_math: '570 ÷ 10 = 57.', on_incorrect_attempt_1: Divide the original whole by ten., on_incorrect_attempt_2: Move every digit one place to the right in value., worked_explanation: '10% of 570 = 57.' }
+    mathematical_support: { hint_1: Use the PA-02 method., hint_2: One group is one tenth of the whole., worked_solution: '57' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 10, wholeAmount: 570, partAmount: 57, partitionCount: 20, selectedGroups: 2, majorEvery: 2, methodSteps: ['570 ÷ 10 = 57'], solutionLabel: '10% of 570 = 57' } }
+
+  - id: PA-06-R02
+    stage: repair
+    target: Repair dividing the whole by 5 or changing the whole.
+    prompt: Ten percent of 240 is 24. Which calculation finds 5% of 240?
+    response: { type: single_choice, options: ['24 ÷ 2', '240 ÷ 5', '24 − 5', '5% of 24'] }
+    answer: { value: '24 ÷ 2' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You split the known ten-percent group into equal halves., on_correct_math: Five percent is half of the 10% value from the original whole., on_incorrect_attempt_1: Do not treat five percent as one fifth., on_incorrect_attempt_2: Halve 24 without taking a new percentage of it., worked_explanation: '24 ÷ 2 = 12, so 5% of 240 is 12.' }
+    mathematical_support: { hint_1: One 10% group contains two equal 5% halves., hint_2: Use 24, not a new whole., worked_solution: '24 ÷ 2 = 12' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 5, wholeAmount: 240, partAmount: 12, partitionCount: 20, selectedGroups: 1, majorEvery: 2, methodSteps: ['10% = 24', '5% = half of 24', '24 ÷ 2 = 12'], solutionLabel: '5% of 240 = 12' } }
+
+  - id: PA-06-R03
+    stage: repair
+    target: Repair wrong group count or adding the percentage numeral.
+    prompt: Ten percent of 120 is 12 and 5% is 6. Which calculation finds 65% of 120?
+    response: { type: single_choice, options: ['12 × 6 + 6', '12 × 6 + 5', '12 + 6 + 5', '120 ÷ 65'] }
+    answer: { value: '12 × 6 + 6' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You used six full groups and the calculated half-group., on_correct_math: The final 5% contributes its value of 6, not the numeral 5., on_incorrect_attempt_1: Count the complete tens in sixty-five., on_incorrect_attempt_2: Multiply 12 by 6, then add the 5% amount of 6., worked_explanation: '12 × 6 + 6 = 78, so 65% of 120 is 78.' }
+    mathematical_support: { hint_1: Sixty-five percent is 60% plus 5%., hint_2: Add the calculated amount 6., worked_solution: '12 × 6 + 6 = 78' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 65, wholeAmount: 120, partAmount: 78, partitionCount: 20, selectedGroups: 13, majorEvery: 2, methodSteps: ['60% = 12 × 6 = 72', '5% = 6', '72 + 6 = 78'], solutionLabel: '65% of 120 = 78' } }
+
+qa_acceptance:
+  source_alignment: [The lesson teaches 5% as half of the 10% value from the same whole., Percentages ending in 5 use complete 10% groups and one half-group., Valid alternative methods remain acceptable unless a prompt checks the taught benchmark method., Diagnostic and delayed Retrieval banks remain outside the active route.]
+  learner_facing: [Supported items have distinct authored feedback., Exit items are one-shot and hint-free., Paired 5% cells and 10% boundaries remain visible., Methods and results remain hidden until the correct feedback state on scored items.]

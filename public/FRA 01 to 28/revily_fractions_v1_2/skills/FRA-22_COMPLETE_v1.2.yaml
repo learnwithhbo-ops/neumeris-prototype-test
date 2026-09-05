@@ -1,0 +1,1863 @@
+schema_version: '1.2'
+spec_intent:
+  source_of_truth: true
+  codex_role: implementation_only
+  codex_must_not_invent:
+  - mathematics
+  - question wording
+  - answers
+  - Ryan dialogue
+  - hints
+  - worked solutions
+  - animation storyboards
+  - branching behaviour
+  - mastery rules
+  - lesson sequence
+  - success reactions
+  - reaction sequencing
+  allowed_engine_interpretation: Codex may implement responsive layout, reusable components, state handling and animation
+    mechanics only where they preserve the authored behaviour in this file. The runtime engine may select among exact approved
+    Ryan reaction lines according to the referenced Ryan dialogue profile; it may not generate or paraphrase dialogue.
+identity:
+  id: FRA-22
+  slug: subtract-fractions-with-different-denominators
+  title: Subtract Fractions with Different Denominators
+  strand: Number
+  cluster: Fractions
+  tier: GCSE Foundation
+  status: spec_complete_pending_human_review_v1_2
+  estimated_minutes:
+    min: 24
+    max: 30
+curriculum:
+  basis: England GCSE Mathematics / national curriculum spine; board-neutral Revily Fractions Registry mapping.
+  role: direct_gcse
+  official_mapping:
+    direct_gcse_refs:
+    - source: England GCSE Mathematics / national curriculum spine
+      ref: DfE GCSE Number 2 and 8
+      relationship: Directly or materially assessed through subtract fractions with different denominators.
+    - source: England GCSE Mathematics / national curriculum spine
+      ref: AQA N2/N8
+      relationship: Directly or materially assessed through subtract fractions with different denominators.
+    supports_gcse_refs: []
+    registry_compatibility: Revily Fractions Curriculum Registry v0.9 Draft; atomic ID preserved.
+  learning_objective: Subtract two positive fractions with different denominators by creating exact equivalent fractions with
+    a valid common denominator, then subtracting the numerators in order.
+  success_criteria:
+  - Complete a direct example of subtract fractions with different denominators accurately.
+  - Explain or use the mathematical invariant rather than relying on a surface pattern.
+  - Transfer the idea to a fresh representation or GCSE-style context without initial support.
+  boundaries:
+    includes:
+    - Shared-factor and coprime pairs
+    - Positive exact results
+    - Valid common denominators
+    excludes:
+    - Negative-fraction answers
+    - Mixed-number subtraction
+    - Mandatory LCM
+dependencies:
+  required_skill_refs:
+  - FRA-08
+  - FRA-20
+  - P-N05
+  entry_assumptions: []
+  downstream_rule: Do not store leads_to. Derive downstream relationships from other skill prerequisite references and the
+    approved curriculum graph.
+engine_capability_requirements:
+  input_types:
+  - integer
+  - fraction
+  - single_choice
+  - yes_no
+  - comparison_symbol
+  - mixed_number
+  - ordered_sequence
+  visual_primitives:
+  - fraction_bar_subtract
+  - fraction_input
+  - integer_input
+  - single_choice
+  - comparison_symbol
+  - caption_layer
+  - progress_indicator
+  animation_actions:
+  - fade_in
+  - highlight
+  - subdivide
+  - shade
+  - move
+  - morph
+  - reveal_equation
+  - draw_arrow
+  - group
+  - ungroup
+  - combine
+  - remove
+  - crossfade_label
+  - ghost_non_focus
+  audio_capabilities:
+  - queued_tts_or_audio
+  - caption_sync
+  - narration_animation_sync
+  - pause_for_input
+  - cancel_on_navigation
+  state_capabilities:
+  - attempt_count
+  - step_resume
+  - skill_state
+  - diagnostic_evidence
+  - exit_score
+  - confirmation_branch
+  - used_ryan_reaction_ids
+experience_contract:
+  target_session_minutes:
+    min: 24
+    max: 30
+  ordered_phases:
+  - teaching
+  - guided
+  - faded
+  - independent_transfer
+  - practice
+  - exit
+  - completion
+  navigation:
+    default: linear_forward
+    back_button: May revisit completed explanatory screens but must not reset recorded submitted answers.
+    refresh_resume: Resume the current skill at the latest committed step.
+    start_again: Reset current lesson attempt only; preserve historical completion records.
+  global_ui_copy:
+    submit: Check answer
+    continue: Continue
+    try_again: Try again
+    show_me: Show me
+    finish: Finish
+    continue_learning: Continue learning
+    stop_for_today: Finish for today
+  progress_indicator:
+    show: true
+    student_facing_style: phase_progress_without_raw_internal_ids
+    do_not_show: Do not expose YAML ids, attempt counters or AO labels to the learner.
+  interaction_rules:
+  - Never auto-submit a mathematical answer.
+  - Disable Continue until the current required interaction is resolved.
+  - Do not use success confetti.
+  - Do not shake the entire screen on an error.
+  - Keep keyboard focus predictable after retry.
+voice_and_script:
+  performer_name: Ryan
+  dialogue_profile_ref: RYAN_DIALOGUE_PROFILE_v1.yaml
+  script_ownership: All mathematical narration, prompts, hints, worked explanations and completion scripts in this file are
+    exact authored content. The engine may select only generic reactions from the referenced Ryan profile and may not generate
+    or paraphrase dialogue.
+  delivery_style:
+  - Natural UK English
+  - Warm, conversational and encouraging
+  - Praise should respond to understanding, independence or recovery rather than merely announce correctness
+  - No one-word success reactions
+  - No repeated praise lead-ins anywhere in the same lesson attempt
+  - Do not begin a new slide by repeating praise or a conclusion that was just spoken
+  - Use pauses to let the learner inspect visuals
+  success_reaction_policy:
+    mode: engine_select_from_authored_profile
+    generation_allowed: false
+    selection_state_scope: lesson_attempt
+    persist_selection_history_on_refresh_resume: true
+    derive_context_from:
+    - stage
+    - attempt_count
+    - recovery_status
+    - practice_streak
+    no_repeat:
+    - reaction_id
+    - exact_text
+    - lead_family
+    fallback_when_pool_exhausted: Speak only the item-specific mathematical follow-up. Never repeat or invent praise.
+    diagnostic: silent
+    exit_and_confirmation: silent_until_completion_result
+    selection: Engine selects an unused approved Ryan reaction appropriate to context without replacement; no exact text or
+      lead family repeats within a lesson attempt.
+    exhaustion: If the eligible bank is exhausted, speak only the question-specific mathematical follow-up. Never repeat or
+      generate praise.
+  adjacent_speech_policy:
+    after_success: Do not play a second generic acknowledgement before the next scene.
+    next_scene: Begin directly with new mathematical content.
+    semantic_echo: The next scene must not restate the same mathematical conclusion just delivered in success feedback.
+    item_math_feedback: May follow the selected generic reaction only when it adds mathematical value.
+  caption_policy: Every spoken line must be captioned verbatim. Captions stay visible long enough to be read and disappear
+    before the next unrelated line.
+visual_language:
+  scene_rules:
+    composition: Single central teaching canvas. The mathematical object is always the largest visual element; controls remain
+      below or beside it without covering the model.
+    labels: Labels sit beside the exact object they describe. Symbolic notation remains close enough to the visual model to
+      make the connection obvious.
+    motion: Motion must reveal mathematical structure only. No decorative bouncing, confetti or unrelated character animation.
+    focus: At each narration beat, de-emphasise non-essential objects and emphasise only the mathematical relationship being
+      discussed.
+  semantic_roles:
+  - whole
+  - selected_quantity
+  - partition_or_unit
+  - current_operation
+  - unchanged_invariant
+  - student_focus
+  - error
+  - success
+  style_direction:
+  - Professional educational vector style
+  - Clean geometry and legible fraction typography
+  - Use multiple semantic colours consistently rather than a single monochrome palette
+  - Maintain high contrast and uncluttered spacing
+  - Animation timing should feel deliberate rather than game-like
+  primary_visual_contract:
+    primitive: fraction_bar_subtract
+    purpose: Unlike fractions must be expressed in equal-sized parts before one amount can be removed from the other.
+    rules:
+    - The same mathematical role keeps the same semantic colour within the lesson.
+    - A transformation must preserve every quantity declared invariant by the concept model.
+    - Do not animate an operation before Ryan has established what the motion means.
+  animation_blueprint:
+    setup: Show two equal-width bars with unrelated grids and a fixed subtraction-direction arrow from first fraction to second.
+    transform: Refine both bars to a valid common denominator while preserving shaded endpoints, then remove the subtrahend’s
+      matched cells from the minuend.
+    contrast: Keep original labels visible above equivalent labels so learner sees renaming, not value change.
+    error: Separate common-denominator/scaling errors from subtraction-order errors by highlighting only the relevant phase.
+    summary: Finish with common denominator → equivalent fractions → subtract numerators in order → retain denominator; simplify
+      only if requested.
+  reduced_motion: Replace long translations or subdivision movement with two-state morphs/crossfades while preserving all
+    mathematical labels, intermediate states and narration meaning.
+diagnostic:
+  purpose: Determine whether this atomic skill needs teaching. Each diagnostic item targets this skill directly; do not infer
+    a misconception label from a distractor in V1.
+  question_refs:
+  - FRA-22-D01
+  - FRA-22-D02
+  presentation: Two separate short items. No hints, worked solutions, correctness reveal or Ryan praise during diagnosis.
+  scoring:
+    2_of_2: DIAGNOSTIC_SECURE
+    0_or_1_of_2: NEEDS_WORK
+  routing: After all diagnostic skills are scored, start at the earliest non-secure skill in prerequisite order.
+concept_model:
+  core_idea: Unlike fractions must be expressed in equal-sized parts before one amount can be removed from the other.
+  invariant: Equivalent conversion preserves both original values; only the final subtraction changes the amount.
+  mathematical_rule: Choose a common denominator, rewrite both fractions, subtract numerators in order and keep the common
+    denominator.
+  vocabulary:
+  - common denominator
+  - equivalent fraction
+  - difference
+  - subtract
+  must_notice:
+  - Unlike fractions must be expressed in equal-sized parts before one amount can be removed from the other.
+  - Equivalent conversion preserves both original values; only the final subtraction changes the amount.
+  - Choose a common denominator, rewrite both fractions, subtract numerators in order and keep the common denominator.
+  common_confusions:
+  - Subtracts unlike numerators directly.
+  - Uses an invalid common denominator.
+  - Reverses the order of subtraction.
+lesson:
+  teaching_steps:
+  - id: T01
+    stage: teaching
+    purpose: Establish the core idea before any procedure is introduced.
+    estimated_seconds: 35
+    scene:
+      layout: Single central teaching canvas with the mathematical model dominant and Ryan captions below the model.
+      objects:
+      - 'fraction_bar_subtract: Show two equal-width bars with unrelated grids and a fixed subtraction-direction arrow from
+        first fraction to second. Ryan line for this scene is fixed as: To subtract fractions with unrelated denominators,
+        first rename both amounts using equal-sized parts. Render every numerical or symbolic example literally named in that
+        line; add no alternative example.'
+      initial_state: 'Show two equal-width bars with unrelated grids and a fixed subtraction-direction arrow from first fraction
+        to second. Ryan line for this scene is fixed as: To subtract fractions with unrelated denominators, first rename both
+        amounts using equal-sized parts. Render every numerical or symbolic example literally named in that line; add no alternative
+        example.'
+    narration:
+      script: To subtract fractions with unrelated denominators, first rename both amounts using equal-sized parts.
+      delivery: Warm, conversational, with a short pause before the key mathematical phrase.
+      sync_cues:
+      - cue: key mathematical phrase
+        action: fade_in on exact mathematical objects named by the scene narration or linked question prompt
+    animation_timeline:
+    - id: T01-A01
+      trigger: narration cue
+      action: fade_in
+      target: exact mathematical objects named by the scene narration or linked question prompt
+      from: 'Show two equal-width bars with unrelated grids and a fixed subtraction-direction arrow from first fraction to
+        second. Ryan line for this scene is fixed as: To subtract fractions with unrelated denominators, first rename both
+        amounts using equal-sized parts. Render every numerical or symbolic example literally named in that line; add no alternative
+        example.'
+      to: 'Show two equal-width bars with unrelated grids and a fixed subtraction-direction arrow from first fraction to second.
+        End with this invariant still true and visibly inspectable: Equivalent conversion preserves both original values;
+        only the final subtraction changes the amount.'
+      duration_ms: 750
+      easing: ease-in-out
+      semantic_purpose: Establish the core idea before any procedure is introduced.
+    learner_interaction:
+      question_ref: null
+      input_position: directly beneath the mathematical model
+      auto_focus: false
+    branching:
+      continue:
+        ryan_script: null
+        visual_action: Keep the final mathematical state visible until Continue is selected.
+        next_step: T02
+    next_step: T02
+  - id: T02
+    stage: teaching
+    purpose: Make the invariant visible through the primary mathematical model.
+    estimated_seconds: 35
+    scene:
+      layout: Single central teaching canvas with the mathematical model dominant and Ryan captions below the model.
+      objects:
+      - 'fraction_bar_subtract: Show two equal-width bars with unrelated grids and a fixed subtraction-direction arrow from
+        first fraction to second. Ryan line for this scene is fixed as: For three quarters minus one sixth, twelfths work
+        for both: nine twelfths minus two twelfths leaves seven twelfths. Render every numerical or symbolic example literally
+        named in that line; add no alternative example.'
+      initial_state: 'Show two equal-width bars with unrelated grids and a fixed subtraction-direction arrow from first fraction
+        to second. Ryan line for this scene is fixed as: For three quarters minus one sixth, twelfths work for both: nine
+        twelfths minus two twelfths leaves seven twelfths. Render every numerical or symbolic example literally named in that
+        line; add no alternative example.'
+    narration:
+      script: 'For three quarters minus one sixth, twelfths work for both: nine twelfths minus two twelfths leaves seven twelfths.'
+      delivery: Warm, conversational, with a short pause before the key mathematical phrase.
+      sync_cues:
+      - cue: key mathematical phrase
+        action: partition_or_group on exact mathematical objects named by the scene narration or linked question prompt
+    animation_timeline:
+    - id: T02-A01
+      trigger: narration cue
+      action: partition_or_group
+      target: exact mathematical objects named by the scene narration or linked question prompt
+      from: 'Show two equal-width bars with unrelated grids and a fixed subtraction-direction arrow from first fraction to
+        second. Ryan line for this scene is fixed as: For three quarters minus one sixth, twelfths work for both: nine twelfths
+        minus two twelfths leaves seven twelfths. Render every numerical or symbolic example literally named in that line;
+        add no alternative example.'
+      to: 'Refine both bars to a valid common denominator while preserving shaded endpoints, then remove the subtrahend’s
+        matched cells from the minuend. End with this invariant still true and visibly inspectable: Equivalent conversion
+        preserves both original values; only the final subtraction changes the amount.'
+      duration_ms: 800
+      easing: ease-in-out
+      semantic_purpose: Make the invariant visible through the primary mathematical model.
+    learner_interaction:
+      question_ref: null
+      input_position: directly beneath the mathematical model
+      auto_focus: false
+    branching:
+      continue:
+        ryan_script: null
+        visual_action: Keep the final mathematical state visible until Continue is selected.
+        next_step: T03
+    next_step: T03
+  - id: T03
+    stage: teaching
+    purpose: Require the learner to act on the first visible relationship.
+    estimated_seconds: 45
+    scene:
+      layout: Single central teaching canvas with the mathematical model dominant and Ryan captions below the model.
+      objects:
+      - 'fraction_bar_subtract: Interactive checkpoint. Show two equal-width bars with unrelated grids and a fixed subtraction-direction
+        arrow from first fraction to second. Render the exact quantities/representation required by this authored prompt:
+        Calculate 7/8 - 1/3. Do not pre-fill the learner answer.'
+      initial_state: 'Interactive checkpoint. Show two equal-width bars with unrelated grids and a fixed subtraction-direction
+        arrow from first fraction to second. Render the exact quantities/representation required by this authored prompt:
+        Calculate 7/8 - 1/3. Do not pre-fill the learner answer.'
+    narration:
+      script: Find a common denominator and rewrite both fractions exactly.
+      delivery: Warm, conversational, with a short pause before the key mathematical phrase.
+      sync_cues:
+      - cue: key mathematical phrase
+        action: highlight on exact mathematical objects named by the scene narration or linked question prompt
+    animation_timeline:
+    - id: T03-A01
+      trigger: narration cue
+      action: highlight
+      target: exact mathematical objects named by the scene narration or linked question prompt
+      from: 'Interactive checkpoint. Show two equal-width bars with unrelated grids and a fixed subtraction-direction arrow
+        from first fraction to second. Render the exact quantities/representation required by this authored prompt: Calculate
+        7/8 - 1/3. Do not pre-fill the learner answer.'
+      to: 'After resolution, preserve the submitted prompt quantities and apply this authored error/correctness model if needed:
+        Separate common-denominator/scaling errors from subtraction-order errors by highlighting only the relevant phase.
+        Keep the concept invariant visible: Equivalent conversion preserves both original values; only the final subtraction
+        changes the amount.'
+      duration_ms: 850
+      easing: ease-in-out
+      semantic_purpose: Require the learner to act on the first visible relationship.
+    learner_interaction:
+      question_ref: FRA-22-C01
+      input_position: directly beneath the mathematical model
+      auto_focus: true
+    branching:
+      correct:
+        ryan_script: Use the exact success-reaction selection policy, then the question-specific mathematical follow-up.
+        visual_action: Apply the question-specific correct visual feedback only.
+        next_step: T04
+      incorrect_attempt_1:
+        ryan_script: Use the exact question-specific first hint.
+        visual_action: Highlight only the mathematical feature named by the hint.
+        next_step: T03
+      incorrect_attempt_2:
+        ryan_script: Use the exact question-specific second hint and worked explanation.
+        visual_action: Reveal the critical relationship and run the authored recovery item when referenced.
+        next_step: FRA-22-R01
+    next_step: T04
+  - id: T04
+    stage: teaching
+    purpose: Connect the visual relationship to precise mathematical language or notation.
+    estimated_seconds: 35
+    scene:
+      layout: Single central teaching canvas with the mathematical model dominant and Ryan captions below the model.
+      objects:
+      - 'fraction_bar_subtract: Refine both bars to a valid common denominator while preserving shaded endpoints, then remove
+        the subtrahend’s matched cells from the minuend. Ryan line for this scene is fixed as: The common denominator must
+        work for both original denominators. Then make sure each numerator is scaled by the matching factor. Render every
+        numerical or symbolic example literally named in that line; add no alternative example.'
+      initial_state: 'Refine both bars to a valid common denominator while preserving shaded endpoints, then remove the subtrahend’s
+        matched cells from the minuend. Ryan line for this scene is fixed as: The common denominator must work for both original
+        denominators. Then make sure each numerator is scaled by the matching factor. Render every numerical or symbolic example
+        literally named in that line; add no alternative example.'
+    narration:
+      script: The common denominator must work for both original denominators. Then make sure each numerator is scaled by
+        the matching factor.
+      delivery: Warm, conversational, with a short pause before the key mathematical phrase.
+      sync_cues:
+      - cue: key mathematical phrase
+        action: reveal_equation on exact mathematical objects named by the scene narration or linked question prompt
+    animation_timeline:
+    - id: T04-A01
+      trigger: narration cue
+      action: reveal_equation
+      target: exact mathematical objects named by the scene narration or linked question prompt
+      from: 'Refine both bars to a valid common denominator while preserving shaded endpoints, then remove the subtrahend’s
+        matched cells from the minuend. Ryan line for this scene is fixed as: The common denominator must work for both original
+        denominators. Then make sure each numerator is scaled by the matching factor. Render every numerical or symbolic example
+        literally named in that line; add no alternative example.'
+      to: 'Keep original labels visible above equivalent labels so learner sees renaming, not value change. End with this
+        invariant still true and visibly inspectable: Equivalent conversion preserves both original values; only the final
+        subtraction changes the amount.'
+      duration_ms: 900
+      easing: ease-in-out
+      semantic_purpose: Connect the visual relationship to precise mathematical language or notation.
+    learner_interaction:
+      question_ref: null
+      input_position: directly beneath the mathematical model
+      auto_focus: false
+    branching:
+      continue:
+        ryan_script: null
+        visual_action: Keep the final mathematical state visible until Continue is selected.
+        next_step: T05
+    next_step: T05
+  - id: T05
+    stage: teaching
+    purpose: Show a second example that varies surface features while preserving the same structure.
+    estimated_seconds: 35
+    scene:
+      layout: Single central teaching canvas with the mathematical model dominant and Ryan captions below the model.
+      objects:
+      - 'fraction_bar_subtract: Show two equal-width bars with unrelated grids and a fixed subtraction-direction arrow from
+        first fraction to second. Ryan line for this scene is fixed as: After conversion, subtraction order still matters.
+        We remove the second amount from the first. Render every numerical or symbolic example literally named in that line;
+        add no alternative example.'
+      initial_state: 'Show two equal-width bars with unrelated grids and a fixed subtraction-direction arrow from first fraction
+        to second. Ryan line for this scene is fixed as: After conversion, subtraction order still matters. We remove the
+        second amount from the first. Render every numerical or symbolic example literally named in that line; add no alternative
+        example.'
+    narration:
+      script: After conversion, subtraction order still matters. We remove the second amount from the first.
+      delivery: Warm, conversational, with a short pause before the key mathematical phrase.
+      sync_cues:
+      - cue: key mathematical phrase
+        action: transform_representation on exact mathematical objects named by the scene narration or linked question prompt
+    animation_timeline:
+    - id: T05-A01
+      trigger: narration cue
+      action: transform_representation
+      target: exact mathematical objects named by the scene narration or linked question prompt
+      from: 'Show two equal-width bars with unrelated grids and a fixed subtraction-direction arrow from first fraction to
+        second. Ryan line for this scene is fixed as: After conversion, subtraction order still matters. We remove the second
+        amount from the first. Render every numerical or symbolic example literally named in that line; add no alternative
+        example.'
+      to: 'Refine both bars to a valid common denominator while preserving shaded endpoints, then remove the subtrahend’s
+        matched cells from the minuend. End with this invariant still true and visibly inspectable: Equivalent conversion
+        preserves both original values; only the final subtraction changes the amount.'
+      duration_ms: 950
+      easing: ease-in-out
+      semantic_purpose: Show a second example that varies surface features while preserving the same structure.
+    learner_interaction:
+      question_ref: null
+      input_position: directly beneath the mathematical model
+      auto_focus: false
+    branching:
+      continue:
+        ryan_script: null
+        visual_action: Keep the final mathematical state visible until Continue is selected.
+        next_step: T06
+    next_step: T06
+  - id: T06
+    stage: teaching
+    purpose: Require a second learner decision with reduced prompting.
+    estimated_seconds: 45
+    scene:
+      layout: Single central teaching canvas with the mathematical model dominant and Ryan captions below the model.
+      objects:
+      - 'fraction_bar_subtract: Interactive checkpoint. Show two equal-width bars with unrelated grids and a fixed subtraction-direction
+        arrow from first fraction to second. Render the exact quantities/representation required by this authored prompt:
+        Calculate 4/5 - 1/3. Do not pre-fill the learner answer.'
+      initial_state: 'Interactive checkpoint. Show two equal-width bars with unrelated grids and a fixed subtraction-direction
+        arrow from first fraction to second. Render the exact quantities/representation required by this authored prompt:
+        Calculate 4/5 - 1/3. Do not pre-fill the learner answer.'
+    narration:
+      script: Carry this pair through conversion and subtraction.
+      delivery: Warm, conversational, with a short pause before the key mathematical phrase.
+      sync_cues:
+      - cue: key mathematical phrase
+        action: highlight on exact mathematical objects named by the scene narration or linked question prompt
+    animation_timeline:
+    - id: T06-A01
+      trigger: narration cue
+      action: highlight
+      target: exact mathematical objects named by the scene narration or linked question prompt
+      from: 'Interactive checkpoint. Show two equal-width bars with unrelated grids and a fixed subtraction-direction arrow
+        from first fraction to second. Render the exact quantities/representation required by this authored prompt: Calculate
+        4/5 - 1/3. Do not pre-fill the learner answer.'
+      to: 'After resolution, preserve the submitted prompt quantities and apply this authored error/correctness model if needed:
+        Separate common-denominator/scaling errors from subtraction-order errors by highlighting only the relevant phase.
+        Keep the concept invariant visible: Equivalent conversion preserves both original values; only the final subtraction
+        changes the amount.'
+      duration_ms: 1000
+      easing: ease-in-out
+      semantic_purpose: Require a second learner decision with reduced prompting.
+    learner_interaction:
+      question_ref: FRA-22-C02
+      input_position: directly beneath the mathematical model
+      auto_focus: true
+    branching:
+      correct:
+        ryan_script: Use the exact success-reaction selection policy, then the question-specific mathematical follow-up.
+        visual_action: Apply the question-specific correct visual feedback only.
+        next_step: T07
+      incorrect_attempt_1:
+        ryan_script: Use the exact question-specific first hint.
+        visual_action: Highlight only the mathematical feature named by the hint.
+        next_step: T06
+      incorrect_attempt_2:
+        ryan_script: Use the exact question-specific second hint and worked explanation.
+        visual_action: Reveal the critical relationship and run the authored recovery item when referenced.
+        next_step: FRA-22-R02
+    next_step: T07
+  - id: T07
+    stage: teaching
+    purpose: State the general rule only after the learner has seen why it works.
+    estimated_seconds: 35
+    scene:
+      layout: Single central teaching canvas with the mathematical model dominant and Ryan captions below the model.
+      objects:
+      - 'fraction_bar_subtract: Refine both bars to a valid common denominator while preserving shaded endpoints, then remove
+        the subtrahend’s matched cells from the minuend. Ryan line for this scene is fixed as: The method is common denominator,
+        equivalent fractions, subtract numerators in order, keep the denominator, simplify only when asked. Render every numerical
+        or symbolic example literally named in that line; add no alternative example.'
+      initial_state: 'Refine both bars to a valid common denominator while preserving shaded endpoints, then remove the subtrahend’s
+        matched cells from the minuend. Ryan line for this scene is fixed as: The method is common denominator, equivalent
+        fractions, subtract numerators in order, keep the denominator, simplify only when asked. Render every numerical or
+        symbolic example literally named in that line; add no alternative example.'
+    narration:
+      script: The method is common denominator, equivalent fractions, subtract numerators in order, keep the denominator,
+        simplify only when asked.
+      delivery: Warm, conversational, with a short pause before the key mathematical phrase.
+      sync_cues:
+      - cue: key mathematical phrase
+        action: reveal_rule on exact mathematical objects named by the scene narration or linked question prompt
+    animation_timeline:
+    - id: T07-A01
+      trigger: narration cue
+      action: reveal_rule
+      target: exact mathematical objects named by the scene narration or linked question prompt
+      from: 'Refine both bars to a valid common denominator while preserving shaded endpoints, then remove the subtrahend’s
+        matched cells from the minuend. Ryan line for this scene is fixed as: The method is common denominator, equivalent
+        fractions, subtract numerators in order, keep the denominator, simplify only when asked. Render every numerical or
+        symbolic example literally named in that line; add no alternative example.'
+      to: 'Finish with common denominator → equivalent fractions → subtract numerators in order → retain denominator; simplify
+        only if requested. End with this invariant still true and visibly inspectable: Equivalent conversion preserves both
+        original values; only the final subtraction changes the amount.'
+      duration_ms: 1050
+      easing: ease-in-out
+      semantic_purpose: State the general rule only after the learner has seen why it works.
+    learner_interaction:
+      question_ref: null
+      input_position: directly beneath the mathematical model
+      auto_focus: false
+    branching:
+      continue:
+        ryan_script: null
+        visual_action: Keep the final mathematical state visible until Continue is selected.
+        next_step: T08
+    next_step: T08
+  - id: T08
+    stage: teaching
+    purpose: Check the common trap or boundary case before support fades.
+    estimated_seconds: 45
+    scene:
+      layout: Single central teaching canvas with the mathematical model dominant and Ryan captions below the model.
+      objects:
+      - 'fraction_bar_subtract: Interactive checkpoint. Show two equal-width bars with unrelated grids and a fixed subtraction-direction
+        arrow from first fraction to second. Render the exact quantities/representation required by this authored prompt:
+        Calculate 5/6 - 2/5. Do not pre-fill the learner answer.'
+      initial_state: 'Interactive checkpoint. Show two equal-width bars with unrelated grids and a fixed subtraction-direction
+        arrow from first fraction to second. Render the exact quantities/representation required by this authored prompt:
+        Calculate 5/6 - 2/5. Do not pre-fill the learner answer.'
+    narration:
+      script: Use the sequence here and check that your difference stays positive in this skill.
+      delivery: Warm, conversational, with a short pause before the key mathematical phrase.
+      sync_cues:
+      - cue: key mathematical phrase
+        action: highlight_error_boundary on exact mathematical objects named by the scene narration or linked question prompt
+    animation_timeline:
+    - id: T08-A01
+      trigger: narration cue
+      action: highlight_error_boundary
+      target: exact mathematical objects named by the scene narration or linked question prompt
+      from: 'Interactive checkpoint. Show two equal-width bars with unrelated grids and a fixed subtraction-direction arrow
+        from first fraction to second. Render the exact quantities/representation required by this authored prompt: Calculate
+        5/6 - 2/5. Do not pre-fill the learner answer.'
+      to: 'After resolution, preserve the submitted prompt quantities and apply this authored error/correctness model if needed:
+        Separate common-denominator/scaling errors from subtraction-order errors by highlighting only the relevant phase.
+        Keep the concept invariant visible: Equivalent conversion preserves both original values; only the final subtraction
+        changes the amount.'
+      duration_ms: 1100
+      easing: ease-in-out
+      semantic_purpose: Check the common trap or boundary case before support fades.
+    learner_interaction:
+      question_ref: FRA-22-C03
+      input_position: directly beneath the mathematical model
+      auto_focus: true
+    branching:
+      correct:
+        ryan_script: Use the exact success-reaction selection policy, then the question-specific mathematical follow-up.
+        visual_action: Apply the question-specific correct visual feedback only.
+        next_step: T09
+      incorrect_attempt_1:
+        ryan_script: Use the exact question-specific first hint.
+        visual_action: Highlight only the mathematical feature named by the hint.
+        next_step: T08
+      incorrect_attempt_2:
+        ryan_script: Use the exact question-specific second hint and worked explanation.
+        visual_action: Reveal the critical relationship and run the authored recovery item when referenced.
+        next_step: FRA-22-R03
+    next_step: T09
+  - id: T09
+    stage: teaching
+    purpose: Consolidate what changes and what remains invariant.
+    estimated_seconds: 35
+    scene:
+      layout: Single central teaching canvas with the mathematical model dominant and Ryan captions below the model.
+      objects:
+      - 'fraction_bar_subtract: Keep original labels visible above equivalent labels so learner sees renaming, not value change.
+        Ryan line for this scene is fixed as: The visual should show the two original amounts staying fixed while the partitions
+        are refined to a common size. Render every numerical or symbolic example literally named in that line; add no alternative
+        example.'
+      initial_state: 'Keep original labels visible above equivalent labels so learner sees renaming, not value change. Ryan
+        line for this scene is fixed as: The visual should show the two original amounts staying fixed while the partitions
+        are refined to a common size. Render every numerical or symbolic example literally named in that line; add no alternative
+        example.'
+    narration:
+      script: The visual should show the two original amounts staying fixed while the partitions are refined to a common size.
+      delivery: Warm, conversational, with a short pause before the key mathematical phrase.
+      sync_cues:
+      - cue: key mathematical phrase
+        action: compare_change_and_invariant on exact mathematical objects named by the scene narration or linked question
+          prompt
+    animation_timeline:
+    - id: T09-A01
+      trigger: narration cue
+      action: compare_change_and_invariant
+      target: exact mathematical objects named by the scene narration or linked question prompt
+      from: 'Keep original labels visible above equivalent labels so learner sees renaming, not value change. Ryan line for
+        this scene is fixed as: The visual should show the two original amounts staying fixed while the partitions are refined
+        to a common size. Render every numerical or symbolic example literally named in that line; add no alternative example.'
+      to: 'Finish with common denominator → equivalent fractions → subtract numerators in order → retain denominator; simplify
+        only if requested. End with this invariant still true and visibly inspectable: Equivalent conversion preserves both
+        original values; only the final subtraction changes the amount.'
+      duration_ms: 1150
+      easing: ease-in-out
+      semantic_purpose: Consolidate what changes and what remains invariant.
+    learner_interaction:
+      question_ref: null
+      input_position: directly beneath the mathematical model
+      auto_focus: false
+    branching:
+      continue:
+        ryan_script: null
+        visual_action: Keep the final mathematical state visible until Continue is selected.
+        next_step: T10
+    next_step: T10
+  - id: T10
+    stage: teaching
+    purpose: Transition from teaching into guided-to-independent transfer without repeating praise.
+    estimated_seconds: 35
+    scene:
+      layout: Single central teaching canvas with the mathematical model dominant and Ryan captions below the model.
+      objects:
+      - 'fraction_bar_subtract: Show two equal-width bars with unrelated grids and a fixed subtraction-direction arrow from
+        first fraction to second. Ryan line for this scene is fixed as: Now solve without the conversion arrows shown in advance.
+        Render every numerical or symbolic example literally named in that line; add no alternative example.'
+      initial_state: 'Show two equal-width bars with unrelated grids and a fixed subtraction-direction arrow from first fraction
+        to second. Ryan line for this scene is fixed as: Now solve without the conversion arrows shown in advance. Render
+        every numerical or symbolic example literally named in that line; add no alternative example.'
+    narration:
+      script: Now solve without the conversion arrows shown in advance.
+      delivery: Warm, conversational, with a short pause before the key mathematical phrase.
+      sync_cues:
+      - cue: key mathematical phrase
+        action: fade_scaffolds on exact mathematical objects named by the scene narration or linked question prompt
+    animation_timeline:
+    - id: T10-A01
+      trigger: narration cue
+      action: fade_scaffolds
+      target: exact mathematical objects named by the scene narration or linked question prompt
+      from: 'Show two equal-width bars with unrelated grids and a fixed subtraction-direction arrow from first fraction to
+        second. Ryan line for this scene is fixed as: Now solve without the conversion arrows shown in advance. Render every
+        numerical or symbolic example literally named in that line; add no alternative example.'
+      to: 'Finish with common denominator → equivalent fractions → subtract numerators in order → retain denominator; simplify
+        only if requested. End with this invariant still true and visibly inspectable: Equivalent conversion preserves both
+        original values; only the final subtraction changes the amount.'
+      duration_ms: 1200
+      easing: ease-in-out
+      semantic_purpose: Transition from teaching into guided-to-independent transfer without repeating praise.
+    learner_interaction:
+      question_ref: null
+      input_position: directly beneath the mathematical model
+      auto_focus: false
+    branching:
+      continue:
+        ryan_script: null
+        visual_action: Keep the final mathematical state visible until Continue is selected.
+        next_step: G01
+    next_step: G01
+  transfer_steps:
+    G01:
+      stage: guided
+      question_ref: FRA-22-G01
+      support_level: high
+      estimated_seconds: 100
+      pre_question_script: I will keep the key structure visible on this one. You make the mathematical decision; use the
+        picture if you need it.
+      visual_before_answer: Show the primary fraction_bar_subtract with the key invariant labelled, but do not fill the answer.
+      correct_next: F01
+      recovery_ref: FRA-22-R01
+    F01:
+      stage: faded
+      question_ref: FRA-22-F01
+      support_level: reduced
+      estimated_seconds: 110
+      pre_question_script: This time I am taking away one layer of support. The structure is still there, but you need to
+        choose the key step yourself.
+      visual_before_answer: Show only the essential fraction_bar_subtract with no worked numerical labels.
+      correct_next: I01
+      recovery_ref: FRA-22-R02
+    I01:
+      stage: independent_transfer
+      question_ref: FRA-22-I01
+      support_level: none
+      estimated_seconds: 120
+      pre_question_script: Now take this one independently. I will not point to the method before you answer.
+      visual_before_answer: Show only the exact representation required by the question; no hint arrows, method labels or
+        pre-filled steps.
+      correct_next: P01
+      recovery_ref: FRA-22-R03
+  practice:
+    intro_script: You have the idea. Here are five short questions that change the surface a little each time. I will help
+      if you genuinely get stuck, but I want you making the first move.
+    question_order:
+    - FRA-22-P01
+    - FRA-22-P02
+    - FRA-22-P03
+    - FRA-22-P04
+    - FRA-22-P05
+    question_count: 5
+    feedback_policy: First wrong attempt gives the authored focused hint; second wrong attempt reveals the critical visual
+      step and exact worked explanation. Supported correctness is learning evidence, not exit mastery.
+    between_question_transition: Use at most one unused Ryan success reaction after a correct submission. If the next question
+      or scene has its own spoken introduction, do not add a transition line.
+  exit:
+    intro_script: Last check. Two fresh questions, no hints while you are answering. I am stepping out of the method now so
+      we can see whether the idea is really yours.
+    primary_question_refs:
+    - FRA-22-E01
+    - FRA-22-E02
+    confirmation_question_refs:
+    - FRA-22-E03
+    - FRA-22-E04
+    submission_policy: One submission per exit item. Do not reveal correctness or give mathematical hints until both primary
+      exit items have been completed and the mastery branch has been chosen.
+    mastery_logic:
+      2_correct_of_2: SECURE
+      1_correct_of_2: Ask one unused confirmation item. Correct -> SECURE. Incorrect -> NEEDS_WORK.
+      0_correct_of_2: NEEDS_WORK
+    confirmation_selection: Use E03 first unless it has already appeared in the current lesson attempt; otherwise use E04.
+completion:
+  secure:
+    title: Skill complete
+    ryan_script: That was a strong finish. You have learned subtract fractions with different denominators and, more importantly,
+      you used the idea independently at the end. You can stop here for today, or keep going while it is feeling clear.
+    state_write: SECURE
+    buttons:
+    - Finish for today
+    - Continue learning
+  needs_work:
+    title: One more pass will help
+    ryan_script: You have made progress with subtract fractions with different denominators, but I do not want to rush you
+      past it while the final check is still shaky. We will give this idea one more focused pass and make the key step feel
+      automatic.
+    state_write: NEEDS_WORK
+    buttons:
+    - Try this skill again
+    - Finish for today
+question_bank:
+- id: FRA-22-D01
+  stage: diagnostic
+  target: subtract fractions with different denominators
+  ao: AO1
+  difficulty: 2
+  prompt: Calculate 3/4 - 1/6.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 7/12
+  attempt_policy:
+    policy: single_submit_silent
+    max_attempts_before_resolution: 1
+    feedback_timing: none_during_diagnostic
+    submit_label: Next
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: null
+    on_incorrect_attempt_1: Record the response silently and move on.
+    on_incorrect_attempt_2: Not applicable.
+    worked_explanation: No worked solution is shown during this assessment item.
+  mathematical_support:
+    hint_1: null
+    hint_2: null
+    worked_solution: No worked solution is shown during this assessment item.
+  branching:
+    on_submit: Record correctness as diagnostic evidence, do not reveal correctness, advance to the next diagnostic item.
+    next: Next diagnostic item or diagnostic routing result.
+  success_reaction:
+    mode: silent
+    context_override: null
+    selection_rule: No generic success reaction is spoken in diagnostic or exit assessment.
+  visual:
+    primitive: fraction_bar_subtract
+    description: 'Render the exact mathematical relationship in: Calculate 3/4 - 1/6.'
+    action: highlight
+- id: FRA-22-D02
+  stage: diagnostic
+  target: subtract fractions with different denominators
+  ao: AO1
+  difficulty: 2
+  prompt: Calculate 5/6 - 1/4.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 7/12
+  attempt_policy:
+    policy: single_submit_silent
+    max_attempts_before_resolution: 1
+    feedback_timing: none_during_diagnostic
+    submit_label: Next
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: null
+    on_incorrect_attempt_1: Record the response silently and move on.
+    on_incorrect_attempt_2: Not applicable.
+    worked_explanation: No worked solution is shown during this assessment item.
+  mathematical_support:
+    hint_1: null
+    hint_2: null
+    worked_solution: No worked solution is shown during this assessment item.
+  branching:
+    on_submit: Record correctness as diagnostic evidence, do not reveal correctness, advance to the next diagnostic item.
+    next: Next diagnostic item or diagnostic routing result.
+  success_reaction:
+    mode: silent
+    context_override: null
+    selection_rule: No generic success reaction is spoken in diagnostic or exit assessment.
+  visual:
+    primitive: fraction_bar_subtract
+    description: 'Render the exact mathematical relationship in: Calculate 5/6 - 1/4.'
+    action: highlight
+- id: FRA-22-C01
+  stage: teaching_checkpoint
+  target: subtract fractions with different denominators
+  ao: AO1
+  difficulty: 2
+  prompt: Calculate 7/8 - 1/3.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 13/24
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: A common denominator is 24. Rewrite 7/8 as 21/24 and 1/3 as 8/24. Then 21 - 8 = 13, giving 13/24.
+    on_incorrect_attempt_1: 'Use the mathematical relationship before you calculate: Create equivalent fractions with a common
+      denominator before subtracting the numerators in order.'
+    on_incorrect_attempt_2: I am going to expose the missing step now. Follow the highlighted subtract fractions with different
+      denominators, then compare it with the full working.
+    worked_explanation: A common denominator is 24. Rewrite 7/8 as 21/24 and 1/3 as 8/24. Then 21 - 8 = 13, giving 13/24.
+  mathematical_support:
+    hint_1: 'Use the mathematical relationship before you calculate: Create equivalent fractions with a common denominator
+      before subtracting the numerators in order.'
+    hint_2: I am going to expose the missing step now. Follow the highlighted subtract fractions with different denominators,
+      then compare it with the full working.
+    worked_solution: A common denominator is 24. Rewrite 7/8 as 21/24 and 1/3 as 8/24. Then 21 - 8 = 13, giving 13/24.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual:
+    primitive: fraction_bar_subtract
+    description: 'Render the exact mathematical relationship in: Calculate 7/8 - 1/3.'
+    action: highlight
+  recovery_item_ref: FRA-22-R01
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-22-C02
+  stage: teaching_checkpoint
+  target: subtract fractions with different denominators
+  ao: AO1
+  difficulty: 2
+  prompt: Calculate 4/5 - 1/3.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 7/15
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: A common denominator is 15. Rewrite 4/5 as 12/15 and 1/3 as 5/15. Then 12 - 5 = 7, giving 7/15.
+    on_incorrect_attempt_1: 'Take a second look at what stays fixed: Create equivalent fractions with a common denominator
+      before subtracting the numerators in order.'
+    on_incorrect_attempt_2: I am going to expose the missing step now. Follow the highlighted subtract fractions with different
+      denominators, then compare it with the full working.
+    worked_explanation: A common denominator is 15. Rewrite 4/5 as 12/15 and 1/3 as 5/15. Then 12 - 5 = 7, giving 7/15.
+  mathematical_support:
+    hint_1: 'Take a second look at what stays fixed: Create equivalent fractions with a common denominator before subtracting
+      the numerators in order.'
+    hint_2: I am going to expose the missing step now. Follow the highlighted subtract fractions with different denominators,
+      then compare it with the full working.
+    worked_solution: A common denominator is 15. Rewrite 4/5 as 12/15 and 1/3 as 5/15. Then 12 - 5 = 7, giving 7/15.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual:
+    primitive: fraction_bar_subtract
+    description: 'Render the exact mathematical relationship in: Calculate 4/5 - 1/3.'
+    action: highlight
+  recovery_item_ref: FRA-22-R02
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-22-C03
+  stage: teaching_checkpoint
+  target: subtract fractions with different denominators
+  ao: AO1
+  difficulty: 2
+  prompt: Calculate 5/6 - 2/5.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 13/30
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: A common denominator is 30. Rewrite 5/6 as 25/30 and 2/5 as 12/30. Then 25 - 12 = 13, giving 13/30.
+    on_incorrect_attempt_1: 'Narrow it down to the key step: Create equivalent fractions with a common denominator before
+      subtracting the numerators in order.'
+    on_incorrect_attempt_2: I am going to expose the missing step now. Follow the highlighted subtract fractions with different
+      denominators, then compare it with the full working.
+    worked_explanation: A common denominator is 30. Rewrite 5/6 as 25/30 and 2/5 as 12/30. Then 25 - 12 = 13, giving 13/30.
+  mathematical_support:
+    hint_1: 'Narrow it down to the key step: Create equivalent fractions with a common denominator before subtracting the
+      numerators in order.'
+    hint_2: I am going to expose the missing step now. Follow the highlighted subtract fractions with different denominators,
+      then compare it with the full working.
+    worked_solution: A common denominator is 30. Rewrite 5/6 as 25/30 and 2/5 as 12/30. Then 25 - 12 = 13, giving 13/30.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual:
+    primitive: fraction_bar_subtract
+    description: 'Render the exact mathematical relationship in: Calculate 5/6 - 2/5.'
+    action: highlight
+  recovery_item_ref: FRA-22-R03
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-22-G01
+  stage: guided
+  target: subtract fractions with different denominators
+  ao: AO1
+  difficulty: 2
+  prompt: Calculate 5/7 - 1/3.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 8/21
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: A common denominator is 21. Rewrite 5/7 as 15/21 and 1/3 as 7/21. Then 15 - 7 = 8, giving 8/21.
+    on_incorrect_attempt_1: 'Read the information in the order the method needs it: Create equivalent fractions with a common
+      denominator before subtracting the numerators in order.'
+    on_incorrect_attempt_2: I am going to expose the missing step now. Follow the highlighted subtract fractions with different
+      denominators, then compare it with the full working.
+    worked_explanation: A common denominator is 21. Rewrite 5/7 as 15/21 and 1/3 as 7/21. Then 15 - 7 = 8, giving 8/21.
+  mathematical_support:
+    hint_1: 'Read the information in the order the method needs it: Create equivalent fractions with a common denominator
+      before subtracting the numerators in order.'
+    hint_2: I am going to expose the missing step now. Follow the highlighted subtract fractions with different denominators,
+      then compare it with the full working.
+    worked_solution: A common denominator is 21. Rewrite 5/7 as 15/21 and 1/3 as 7/21. Then 15 - 7 = 8, giving 8/21.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual:
+    primitive: fraction_bar_subtract
+    description: 'Render the exact mathematical relationship in: Calculate 5/7 - 1/3.'
+    action: highlight
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-22-F01
+  stage: faded
+  target: subtract fractions with different denominators
+  ao: AO1
+  difficulty: 2
+  prompt: Calculate 7/9 - 1/6.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 11/18
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: A common denominator is 18. Rewrite 7/9 as 14/18 and 1/6 as 3/18. Then 14 - 3 = 11, giving 11/18.
+    on_incorrect_attempt_1: 'Before changing anything, check this: Create equivalent fractions with a common denominator before
+      subtracting the numerators in order.'
+    on_incorrect_attempt_2: I am going to expose the missing step now. Follow the highlighted subtract fractions with different
+      denominators, then compare it with the full working.
+    worked_explanation: A common denominator is 18. Rewrite 7/9 as 14/18 and 1/6 as 3/18. Then 14 - 3 = 11, giving 11/18.
+  mathematical_support:
+    hint_1: 'Before changing anything, check this: Create equivalent fractions with a common denominator before subtracting
+      the numerators in order.'
+    hint_2: I am going to expose the missing step now. Follow the highlighted subtract fractions with different denominators,
+      then compare it with the full working.
+    worked_solution: A common denominator is 18. Rewrite 7/9 as 14/18 and 1/6 as 3/18. Then 14 - 3 = 11, giving 11/18.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual:
+    primitive: fraction_bar_subtract
+    description: 'Render the exact mathematical relationship in: Calculate 7/9 - 1/6.'
+    action: highlight
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-22-I01
+  stage: independent_transfer
+  target: subtract fractions with different denominators
+  ao: AO2
+  difficulty: 2
+  prompt: Calculate 9/10 - 2/3.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 7/30
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: A common denominator is 30. Rewrite 9/10 as 27/30 and 2/3 as 20/30. Then 27 - 20 = 7, giving 7/30.
+    on_incorrect_attempt_1: 'Use the visual clue that matters here: Create equivalent fractions with a common denominator
+      before subtracting the numerators in order.'
+    on_incorrect_attempt_2: I am going to expose the missing step now. Follow the highlighted subtract fractions with different
+      denominators, then compare it with the full working.
+    worked_explanation: A common denominator is 30. Rewrite 9/10 as 27/30 and 2/3 as 20/30. Then 27 - 20 = 7, giving 7/30.
+  mathematical_support:
+    hint_1: 'Use the visual clue that matters here: Create equivalent fractions with a common denominator before subtracting
+      the numerators in order.'
+    hint_2: I am going to expose the missing step now. Follow the highlighted subtract fractions with different denominators,
+      then compare it with the full working.
+    worked_solution: A common denominator is 30. Rewrite 9/10 as 27/30 and 2/3 as 20/30. Then 27 - 20 = 7, giving 7/30.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual:
+    primitive: fraction_bar_subtract
+    description: 'Render the exact mathematical relationship in: Calculate 9/10 - 2/3.'
+    action: highlight
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-22-P01
+  stage: practice
+  target: subtract fractions with different denominators
+  ao: AO2
+  difficulty: 3
+  prompt: Calculate 5/6 - 3/8.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 11/24
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: A common denominator is 24. Rewrite 5/6 as 20/24 and 3/8 as 9/24. Then 20 - 9 = 11, giving 11/24.
+    on_incorrect_attempt_1: 'Treat the numbers as evidence for the rule: Create equivalent fractions with a common denominator
+      before subtracting the numerators in order.'
+    on_incorrect_attempt_2: I am going to expose the missing step now. Follow the highlighted subtract fractions with different
+      denominators, then compare it with the full working.
+    worked_explanation: A common denominator is 24. Rewrite 5/6 as 20/24 and 3/8 as 9/24. Then 20 - 9 = 11, giving 11/24.
+  mathematical_support:
+    hint_1: 'Treat the numbers as evidence for the rule: Create equivalent fractions with a common denominator before subtracting
+      the numerators in order.'
+    hint_2: I am going to expose the missing step now. Follow the highlighted subtract fractions with different denominators,
+      then compare it with the full working.
+    worked_solution: A common denominator is 24. Rewrite 5/6 as 20/24 and 3/8 as 9/24. Then 20 - 9 = 11, giving 11/24.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual:
+    primitive: fraction_bar_subtract
+    description: 'Render the exact mathematical relationship in: Calculate 5/6 - 3/8.'
+    action: highlight
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-22-P02
+  stage: practice
+  target: subtract fractions with different denominators
+  ao: AO2
+  difficulty: 3
+  prompt: Calculate 8/9 - 1/6.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 13/18
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: A common denominator is 18. Rewrite 8/9 as 16/18 and 1/6 as 3/18. Then 16 - 3 = 13, giving 13/18.
+    on_incorrect_attempt_1: 'One careful check will unlock this: Create equivalent fractions with a common denominator before
+      subtracting the numerators in order.'
+    on_incorrect_attempt_2: I am going to expose the missing step now. Follow the highlighted subtract fractions with different
+      denominators, then compare it with the full working.
+    worked_explanation: A common denominator is 18. Rewrite 8/9 as 16/18 and 1/6 as 3/18. Then 16 - 3 = 13, giving 13/18.
+  mathematical_support:
+    hint_1: 'One careful check will unlock this: Create equivalent fractions with a common denominator before subtracting
+      the numerators in order.'
+    hint_2: I am going to expose the missing step now. Follow the highlighted subtract fractions with different denominators,
+      then compare it with the full working.
+    worked_solution: A common denominator is 18. Rewrite 8/9 as 16/18 and 1/6 as 3/18. Then 16 - 3 = 13, giving 13/18.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual:
+    primitive: fraction_bar_subtract
+    description: 'Render the exact mathematical relationship in: Calculate 8/9 - 1/6.'
+    action: highlight
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-22-P03
+  stage: practice
+  target: subtract fractions with different denominators
+  ao: AO2
+  difficulty: 3
+  prompt: Calculate 7/10 - 1/4.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 9/20
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: A common denominator is 20. Rewrite 7/10 as 14/20 and 1/4 as 5/20. Then 14 - 5 = 9, giving 9/20.
+    on_incorrect_attempt_1: 'Do not restart the whole problem; focus here: Create equivalent fractions with a common denominator
+      before subtracting the numerators in order.'
+    on_incorrect_attempt_2: I am going to expose the missing step now. Follow the highlighted subtract fractions with different
+      denominators, then compare it with the full working.
+    worked_explanation: A common denominator is 20. Rewrite 7/10 as 14/20 and 1/4 as 5/20. Then 14 - 5 = 9, giving 9/20.
+  mathematical_support:
+    hint_1: 'Do not restart the whole problem; focus here: Create equivalent fractions with a common denominator before subtracting
+      the numerators in order.'
+    hint_2: I am going to expose the missing step now. Follow the highlighted subtract fractions with different denominators,
+      then compare it with the full working.
+    worked_solution: A common denominator is 20. Rewrite 7/10 as 14/20 and 1/4 as 5/20. Then 14 - 5 = 9, giving 9/20.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual:
+    primitive: fraction_bar_subtract
+    description: 'Render the exact mathematical relationship in: Calculate 7/10 - 1/4.'
+    action: highlight
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-22-P04
+  stage: practice
+  target: subtract fractions with different denominators
+  ao: AO2
+  difficulty: 3
+  prompt: Calculate 5/6 - 1/5.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 19/30
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: A common denominator is 30. Rewrite 5/6 as 25/30 and 1/5 as 6/30. Then 25 - 6 = 19, giving 19/30.
+    on_incorrect_attempt_1: 'Anchor yourself to the invariant: Create equivalent fractions with a common denominator before
+      subtracting the numerators in order.'
+    on_incorrect_attempt_2: I am going to expose the missing step now. Follow the highlighted subtract fractions with different
+      denominators, then compare it with the full working.
+    worked_explanation: A common denominator is 30. Rewrite 5/6 as 25/30 and 1/5 as 6/30. Then 25 - 6 = 19, giving 19/30.
+  mathematical_support:
+    hint_1: 'Anchor yourself to the invariant: Create equivalent fractions with a common denominator before subtracting the
+      numerators in order.'
+    hint_2: I am going to expose the missing step now. Follow the highlighted subtract fractions with different denominators,
+      then compare it with the full working.
+    worked_solution: A common denominator is 30. Rewrite 5/6 as 25/30 and 1/5 as 6/30. Then 25 - 6 = 19, giving 19/30.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual:
+    primitive: fraction_bar_subtract
+    description: 'Render the exact mathematical relationship in: Calculate 5/6 - 1/5.'
+    action: highlight
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-22-P05
+  stage: practice
+  target: subtract fractions with different denominators
+  ao: AO2
+  difficulty: 3
+  prompt: Calculate 4/5 - 1/6.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 19/30
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: A common denominator is 30. Rewrite 4/5 as 24/30 and 1/6 as 5/30. Then 24 - 5 = 19, giving 19/30.
+    on_incorrect_attempt_1: 'Use the part of the method you already know: Create equivalent fractions with a common denominator
+      before subtracting the numerators in order.'
+    on_incorrect_attempt_2: I am going to expose the missing step now. Follow the highlighted subtract fractions with different
+      denominators, then compare it with the full working.
+    worked_explanation: A common denominator is 30. Rewrite 4/5 as 24/30 and 1/6 as 5/30. Then 24 - 5 = 19, giving 19/30.
+  mathematical_support:
+    hint_1: 'Use the part of the method you already know: Create equivalent fractions with a common denominator before subtracting
+      the numerators in order.'
+    hint_2: I am going to expose the missing step now. Follow the highlighted subtract fractions with different denominators,
+      then compare it with the full working.
+    worked_solution: A common denominator is 30. Rewrite 4/5 as 24/30 and 1/6 as 5/30. Then 24 - 5 = 19, giving 19/30.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual:
+    primitive: fraction_bar_subtract
+    description: 'Render the exact mathematical relationship in: Calculate 4/5 - 1/6.'
+    action: highlight
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-22-E01
+  stage: exit
+  target: subtract fractions with different denominators
+  ao: AO1
+  difficulty: 2
+  prompt: Calculate 7/8 - 1/6.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 17/24
+  attempt_policy:
+    policy: single_submit_silent
+    max_attempts_before_resolution: 1
+    feedback_timing: deferred_until_exit_decision
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: null
+    on_incorrect_attempt_1: null
+    on_incorrect_attempt_2: Not applicable.
+    worked_explanation: No worked solution is shown during this assessment item.
+  mathematical_support:
+    hint_1: null
+    hint_2: null
+    worked_solution: No worked solution is shown during this assessment item.
+  branching:
+    on_submit: Record the response without correctness feedback. The exit controller decides mastery only after the required
+      exit items are complete.
+    next: Next exit item or mastery decision.
+  success_reaction:
+    mode: silent
+    context_override: null
+    selection_rule: No generic success reaction is spoken in diagnostic or exit assessment.
+  visual:
+    primitive: fraction_bar_subtract
+    description: 'Render the exact mathematical relationship in: Calculate 7/8 - 1/6.'
+    action: highlight
+- id: FRA-22-E02
+  stage: exit
+  target: subtract fractions with different denominators
+  ao: AO1
+  difficulty: 2
+  prompt: Calculate 8/9 - 1/6.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 13/18
+  attempt_policy:
+    policy: single_submit_silent
+    max_attempts_before_resolution: 1
+    feedback_timing: deferred_until_exit_decision
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: null
+    on_incorrect_attempt_1: null
+    on_incorrect_attempt_2: Not applicable.
+    worked_explanation: No worked solution is shown during this assessment item.
+  mathematical_support:
+    hint_1: null
+    hint_2: null
+    worked_solution: No worked solution is shown during this assessment item.
+  branching:
+    on_submit: Record the response without correctness feedback. The exit controller decides mastery only after the required
+      exit items are complete.
+    next: Next exit item or mastery decision.
+  success_reaction:
+    mode: silent
+    context_override: null
+    selection_rule: No generic success reaction is spoken in diagnostic or exit assessment.
+  visual:
+    primitive: fraction_bar_subtract
+    description: 'Render the exact mathematical relationship in: Calculate 8/9 - 1/6.'
+    action: highlight
+- id: FRA-22-E03
+  stage: confirmation
+  target: subtract fractions with different denominators
+  ao: AO1
+  difficulty: 2
+  prompt: Calculate 6/7 - 1/3.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 11/21
+  attempt_policy:
+    policy: single_submit_silent
+    max_attempts_before_resolution: 1
+    feedback_timing: deferred_until_exit_decision
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: null
+    on_incorrect_attempt_1: null
+    on_incorrect_attempt_2: Not applicable.
+    worked_explanation: No worked solution is shown during this assessment item.
+  mathematical_support:
+    hint_1: null
+    hint_2: null
+    worked_solution: No worked solution is shown during this assessment item.
+  branching:
+    on_submit: Record the response without correctness feedback. The exit controller decides mastery only after the required
+      exit items are complete.
+    next: Next exit item or mastery decision.
+  success_reaction:
+    mode: silent
+    context_override: null
+    selection_rule: No generic success reaction is spoken in diagnostic or exit assessment.
+  visual:
+    primitive: fraction_bar_subtract
+    description: 'Render the exact mathematical relationship in: Calculate 6/7 - 1/3.'
+    action: highlight
+- id: FRA-22-E04
+  stage: confirmation
+  target: subtract fractions with different denominators
+  ao: AO1
+  difficulty: 2
+  prompt: Calculate 7/8 - 1/4.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 5/8
+  attempt_policy:
+    policy: single_submit_silent
+    max_attempts_before_resolution: 1
+    feedback_timing: deferred_until_exit_decision
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: null
+    on_incorrect_attempt_1: null
+    on_incorrect_attempt_2: Not applicable.
+    worked_explanation: No worked solution is shown during this assessment item.
+  mathematical_support:
+    hint_1: null
+    hint_2: null
+    worked_solution: No worked solution is shown during this assessment item.
+  branching:
+    on_submit: Record the response without correctness feedback. The exit controller decides mastery only after the required
+      exit items are complete.
+    next: Next exit item or mastery decision.
+  success_reaction:
+    mode: silent
+    context_override: null
+    selection_rule: No generic success reaction is spoken in diagnostic or exit assessment.
+  visual:
+    primitive: fraction_bar_subtract
+    description: 'Render the exact mathematical relationship in: Calculate 7/8 - 1/4.'
+    action: highlight
+- id: FRA-22-R01
+  stage: recovery
+  target: subtract fractions with different denominators
+  ao: AO1
+  difficulty: 2
+  prompt: Calculate 2/3 - 1/4.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 5/12
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: A common denominator is 12. Rewrite 2/3 as 8/12 and 1/4 as 3/12. Then 8 - 3 = 5, giving 5/12.
+    on_incorrect_attempt_1: 'Pause on the mathematical meaning first: Create equivalent fractions with a common denominator
+      before subtracting the numerators in order.'
+    on_incorrect_attempt_2: I am going to expose the missing step now. Follow the highlighted subtract fractions with different
+      denominators, then compare it with the full working.
+    worked_explanation: A common denominator is 12. Rewrite 2/3 as 8/12 and 1/4 as 3/12. Then 8 - 3 = 5, giving 5/12.
+  mathematical_support:
+    hint_1: 'Pause on the mathematical meaning first: Create equivalent fractions with a common denominator before subtracting
+      the numerators in order.'
+    hint_2: I am going to expose the missing step now. Follow the highlighted subtract fractions with different denominators,
+      then compare it with the full working.
+    worked_solution: A common denominator is 12. Rewrite 2/3 as 8/12 and 1/4 as 3/12. Then 8 - 3 = 5, giving 5/12.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual:
+    primitive: fraction_bar_subtract
+    description: 'Render the exact mathematical relationship in: Calculate 2/3 - 1/4.'
+    action: highlight
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-22-R02
+  stage: recovery
+  target: subtract fractions with different denominators
+  ao: AO1
+  difficulty: 2
+  prompt: Calculate 3/5 - 1/3.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 4/15
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: A common denominator is 15. Rewrite 3/5 as 9/15 and 1/3 as 5/15. Then 9 - 5 = 4, giving 4/15.
+    on_incorrect_attempt_1: 'The quickest route is to notice this: Create equivalent fractions with a common denominator before
+      subtracting the numerators in order.'
+    on_incorrect_attempt_2: I am going to expose the missing step now. Follow the highlighted subtract fractions with different
+      denominators, then compare it with the full working.
+    worked_explanation: A common denominator is 15. Rewrite 3/5 as 9/15 and 1/3 as 5/15. Then 9 - 5 = 4, giving 4/15.
+  mathematical_support:
+    hint_1: 'The quickest route is to notice this: Create equivalent fractions with a common denominator before subtracting
+      the numerators in order.'
+    hint_2: I am going to expose the missing step now. Follow the highlighted subtract fractions with different denominators,
+      then compare it with the full working.
+    worked_solution: A common denominator is 15. Rewrite 3/5 as 9/15 and 1/3 as 5/15. Then 9 - 5 = 4, giving 4/15.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual:
+    primitive: fraction_bar_subtract
+    description: 'Render the exact mathematical relationship in: Calculate 3/5 - 1/3.'
+    action: highlight
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-22-R03
+  stage: recovery
+  target: subtract fractions with different denominators
+  ao: AO1
+  difficulty: 2
+  prompt: Calculate 5/7 - 1/2.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 3/14
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: A common denominator is 14. Rewrite 5/7 as 10/14 and 1/2 as 7/14. Then 10 - 7 = 3, giving 3/14.
+    on_incorrect_attempt_1: 'Keep your attention on the feature that cannot change: Create equivalent fractions with a common
+      denominator before subtracting the numerators in order.'
+    on_incorrect_attempt_2: I am going to expose the missing step now. Follow the highlighted subtract fractions with different
+      denominators, then compare it with the full working.
+    worked_explanation: A common denominator is 14. Rewrite 5/7 as 10/14 and 1/2 as 7/14. Then 10 - 7 = 3, giving 3/14.
+  mathematical_support:
+    hint_1: 'Keep your attention on the feature that cannot change: Create equivalent fractions with a common denominator
+      before subtracting the numerators in order.'
+    hint_2: I am going to expose the missing step now. Follow the highlighted subtract fractions with different denominators,
+      then compare it with the full working.
+    worked_solution: A common denominator is 14. Rewrite 5/7 as 10/14 and 1/2 as 7/14. Then 10 - 7 = 3, giving 3/14.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+  visual:
+    primitive: fraction_bar_subtract
+    description: 'Render the exact mathematical relationship in: Calculate 5/7 - 1/2.'
+    action: highlight
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+progress_and_persistence:
+  states:
+  - UNSEEN
+  - NEEDS_WORK
+  - LEARNING
+  - SECURE
+  on_lesson_start: Write LEARNING unless already SECURE and learner explicitly chose to review.
+  commit_points:
+  - after each submitted answer
+  - after each completed teaching checkpoint
+  - on phase transition
+  - on exit completion
+  - on completion screen
+  resume_payload:
+  - skill_id
+  - lesson_attempt_id
+  - current_step_id
+  - submitted_answers
+  - attempt_counts
+  - seen_recovery_items
+  - exit_state
+  history_policy: Starting again creates a new lesson attempt and does not delete previous attempts.
+analytics_events:
+  minimum_events:
+  - skill_started
+  - step_viewed
+  - answer_submitted
+  - hint_shown
+  - worked_solution_shown
+  - recovery_item_started
+  - phase_completed
+  - exit_completed
+  - skill_completed
+  privacy_note: Store only data required for learning/progress analytics; this file does not define personal profile fields.
+qa:
+  schema_validated: true
+  maths_answers_verified: true
+  curriculum_human_reviewed: false
+  scripts_human_reviewed: false
+  animation_storyboard_human_reviewed: false
+  branching_reference_validated: true
+  engine_render_tested: false
+  reduced_motion_tested: false
+  keyboard_accessibility_tested: false
+  student_calibration_tested: false
+  acceptance_criteria:
+  - Every learner-facing mathematical line is present in this YAML; Codex adds none.
+  - Every question has a canonical answer and exact response type.
+  - Every interactive non-diagnostic/non-exit item defines correct, first-wrong, second-wrong and worked-resolution behaviour.
+  - Every teaching checkpoint recovery reference points to an existing authored recovery item.
+  - No diagnostic distractor maps to a misconception label in V1.
+  - No exit hint or correctness reveal appears before the mastery decision.
+  - The primary visual preserves the concept-model invariant during every transformation.
+  - Refresh resumes without losing submitted progress or used Ryan reaction history.
+  - No skill-specific route or lesson engine is introduced; this skill renders through the shared engine.

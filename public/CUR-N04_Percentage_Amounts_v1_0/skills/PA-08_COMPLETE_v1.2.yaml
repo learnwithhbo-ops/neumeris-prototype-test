@@ -1,0 +1,3370 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "PA-08 - Find a Percentage Using a Fractional Equivalent",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-17",
+      "sha256": "63bd8ff54188e8e43d9441f3d96936f124545089b30360fe602d54c53abb98f3"
+    },
+    "authored_scope": "Find a percentage of an amount by using a useful exact fractional equivalent.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "PA08-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "verified_desktop_ready_phone_locked_invalid_method_learning_aligned_48_70_counter_models_required_optional_work_drafts_hints_audio_320_390",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        13,
+        15,
+        16,
+        17
+      ],
+      "source_repairs_consulted": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        16,
+        17
+      ],
+      "note": "All 17 source pages and the previous configuration reviewed. Restores the quarter/counter and hundredth-to-fifth models, prescribed worked and guided examples, all 25 active questions and the exact three-item unsupported final. Fractional method evidence is required only where specified. Valid unsimplified methods are accepted with simplification evidence tracked separately; invalid visible work cannot establish readiness. Explicit decimal-percentage items override the broad whole-number-percentage boundary. No Entry, Diagnostic, prerequisite-state mutation, delayed Retrieval or Strong state."
+    }
+  },
+  "identity": {
+    "id": "PA-08",
+    "slug": "find-a-percentage-using-a-fractional-equivalent",
+    "title": "Find a Percentage Using a Fractional Equivalent",
+    "strand": "Number",
+    "cluster": "Finding Percentages of Amounts",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Use an exact fractional equivalent to find the requested percentage of an unchanged original whole, with valid visible method where required.",
+    "success_criteria": [
+      "Convert the percentage to an exact equivalent fraction.",
+      "Simplify when useful without changing value.",
+      "Use denominator and numerator roles correctly.",
+      "Accept valid multiplication/division orders and unsimplified exact methods.",
+      "Keep the original whole and contextual unit.",
+      "Do not infer valid method from a final answer alone."
+    ],
+    "boundaries": {
+      "includes": [
+        "The complete prescribed percentages, including 12.5%, 37.5% and 62.5%",
+        "Direct calculations and approved short contexts",
+        "Required fractional methods and unrestricted alternatives where specified"
+      ],
+      "excludes": [
+        "Required general one-percent or decimal-multiplier methods",
+        "Percentages below one or above one hundred",
+        "Increase, decrease, reverse percentages and contextual rounding",
+        "Entry, Diagnostic, prerequisite-state mutation and delayed Retrieval"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "PA-01",
+      "FDP-03",
+      "FDP-04",
+      "MD-01",
+      "MD-02"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for PA-01, FDP-03, FDP-04, MD-01, MD-02 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "single_choice",
+      "percentage_fraction_amount"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    },
+    "place_value_profile": true
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "An equivalent fraction selects the same proportion of the original whole.",
+    "invariant": "The reference whole and percentage value remain unchanged.",
+    "must_notice": [
+      "Denominator creates equal groups.",
+      "Numerator selects equal groups.",
+      "Simplifying changes group size, not value.",
+      "Valid alternative operation order remains acceptable.",
+      "A correct final number cannot repair an invalid method."
+    ],
+    "common_confusions": [
+      "Reciprocal conversion",
+      "Wrong fraction roles",
+      "Changed whole",
+      "Correct answer with invalid visible working",
+      "Lost contextual unit"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "Rename the percentage as a useful fraction",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Rename the percentage as a useful fraction",
+          "initial_state": "Rename the percentage as a useful fraction",
+          "model": {
+            "kind": "percentage_fraction_amount",
+            "title": "Use equal groups of the original whole",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "principle",
+            "solved": true,
+            "steps": []
+          }
+        },
+        "narration": {
+          "script": "A percentage names parts out of one hundred. Simplifying its fraction can create fewer, larger equal groups without changing the selected proportion."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Select one quarter of the percentage whole",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Select one quarter of the percentage whole",
+          "initial_state": "Select one quarter of the percentage whole",
+          "model": {
+            "kind": "percentage_fraction_amount",
+            "title": "Match one quarter of the percentage and amount",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "quarters",
+            "whole": 48,
+            "n": 1,
+            "d": 4,
+            "unit": "counters",
+            "counters": true,
+            "solved": true,
+            "steps": [
+              "One of four equal percentage quarters is selected.",
+              "The same quarter selects one group of twelve from forty-eight counters.",
+              "25% = 1/4; one selected group contains 12 counters."
+            ],
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "The complete percentage strip is divided into four equal quarters. Selecting one quarter fixes the proportion to find."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Match that quarter in the amount",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Match that quarter in the amount",
+          "initial_state": "Match that quarter in the amount",
+          "model": {
+            "kind": "percentage_fraction_amount",
+            "title": "Match one quarter of the percentage and amount",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "quarters",
+            "whole": 48,
+            "n": 1,
+            "d": 4,
+            "unit": "counters",
+            "counters": true,
+            "solved": true,
+            "steps": [
+              "One of four equal percentage quarters is selected.",
+              "The same quarter selects one group of twelve from forty-eight counters.",
+              "25% = 1/4; one selected group contains 12 counters."
+            ],
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "The amount model uses exactly the same four equal partitions. The selected quarter matches one group of counters, with the complete amount unchanged."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Read the selected group",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Read the selected group",
+          "initial_state": "Read the selected group",
+          "model": {
+            "kind": "percentage_fraction_amount",
+            "title": "Match one quarter of the percentage and amount",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "quarters",
+            "whole": 48,
+            "n": 1,
+            "d": 4,
+            "unit": "counters",
+            "counters": true,
+            "solved": true,
+            "steps": [
+              "One of four equal percentage quarters is selected.",
+              "The same quarter selects one group of twelve from forty-eight counters.",
+              "25% = 1/4; one selected group contains 12 counters."
+            ],
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "The denominator determines the four equal groups. The numerator selects one group; its counter total is the requested amount."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Begin with selected hundredths",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Begin with selected hundredths",
+          "initial_state": "Begin with selected hundredths",
+          "model": {
+            "kind": "percentage_fraction_amount",
+            "title": "Regroup without changing the selected proportion",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "fifths",
+            "whole": 70,
+            "n": 2,
+            "d": 5,
+            "counters": true,
+            "solved": true,
+            "steps": [
+              "Four of ten columns select forty of one hundred equal cells.",
+              "Pair the columns to make five equal fifths; two are selected.",
+              "The original seventy is split into five groups of fourteen.",
+              "Two selected groups contain 28."
+            ],
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "Four complete columns are selected in the hundred-cell whole. Each column contains ten equal hundredths."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T06"
+      },
+      {
+        "id": "T06",
+        "stage": "teaching",
+        "purpose": "Pair the columns into fifths",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Pair the columns into fifths",
+          "initial_state": "Pair the columns into fifths",
+          "model": {
+            "kind": "percentage_fraction_amount",
+            "title": "Regroup without changing the selected proportion",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "fifths",
+            "whole": 70,
+            "n": 2,
+            "d": 5,
+            "counters": true,
+            "solved": true,
+            "steps": [
+              "Four of ten columns select forty of one hundred equal cells.",
+              "Pair the columns to make five equal fifths; two are selected.",
+              "The original seventy is split into five groups of fourteen.",
+              "Two selected groups contain 28."
+            ],
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "Pair neighbouring columns. The whole now has five equal groups, and the selected region covers exactly two of them."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T07"
+      },
+      {
+        "id": "T07",
+        "stage": "teaching",
+        "purpose": "Use the same fifths of the original amount",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Use the same fifths of the original amount",
+          "initial_state": "Use the same fifths of the original amount",
+          "model": {
+            "kind": "percentage_fraction_amount",
+            "title": "Regroup without changing the selected proportion",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "fifths",
+            "whole": 70,
+            "n": 2,
+            "d": 5,
+            "counters": true,
+            "solved": true,
+            "steps": [
+              "Four of ten columns select forty of one hundred equal cells.",
+              "Pair the columns to make five equal fifths; two are selected.",
+              "The original seventy is split into five groups of fourteen.",
+              "Two selected groups contain 28."
+            ],
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "Divide the original amount into five equal groups. Every selected group must come from that same original whole."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T08"
+      },
+      {
+        "id": "T08",
+        "stage": "teaching",
+        "purpose": "Combine the two selected groups",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Combine the two selected groups",
+          "initial_state": "Combine the two selected groups",
+          "model": {
+            "kind": "percentage_fraction_amount",
+            "title": "Regroup without changing the selected proportion",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "fifths",
+            "whole": 70,
+            "n": 2,
+            "d": 5,
+            "counters": true,
+            "solved": true,
+            "steps": [
+              "Four of ten columns select forty of one hundred equal cells.",
+              "Pair the columns to make five equal fifths; two are selected.",
+              "The original seventy is split into five groups of fourteen.",
+              "Two selected groups contain 28."
+            ],
+            "phase": 4
+          }
+        },
+        "narration": {
+          "script": "Two equal copies give the required amount. The fraction and percentage select the same proportion."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T09"
+      },
+      {
+        "id": "T09",
+        "stage": "teaching",
+        "purpose": "Check the conversion and the whole",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Check the conversion and the whole",
+          "initial_state": "Check the conversion and the whole",
+          "model": {
+            "kind": "percentage_fraction_amount",
+            "title": "Connect the fraction to the unchanged whole",
+            "given": "60% of 90",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "percent": 60,
+            "whole": 90,
+            "n": 3,
+            "d": 5,
+            "unit": "",
+            "steps": [
+              "60% = 60/100 = 3/5.",
+              "90 ÷ 5 = 18.",
+              "18 × 3 = 54."
+            ],
+            "stages": [
+              {
+                "title": "Use an equivalent fraction",
+                "lines": [
+                  "60% = 60/100 = 3/5."
+                ]
+              },
+              {
+                "title": "Find one equal group of the original whole",
+                "lines": [
+                  "90 ÷ 5 = 18."
+                ]
+              },
+              {
+                "title": "Select the required equal groups",
+                "lines": [
+                  "18 × 3 = 54."
+                ]
+              }
+            ]
+          }
+        },
+        "narration": {
+          "script": "Choose the route that uses an exact fraction of the original amount."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "PA-08-C01"
+        },
+        "next_step": "T10"
+      },
+      {
+        "id": "T10",
+        "stage": "teaching",
+        "purpose": "Write and simplify the fractional equivalent",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Write and simplify the fractional equivalent",
+          "initial_state": "Write and simplify the fractional equivalent",
+          "model": {
+            "kind": "percentage_fraction_amount",
+            "title": "Find sixty percent using equal fifths",
+            "given": "60% of 150",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "percent": 60,
+            "whole": 150,
+            "n": 3,
+            "d": 5,
+            "unit": "",
+            "steps": [
+              "60% = 60/100 = 3/5.",
+              "150 ÷ 5 = 30.",
+              "30 × 3 = 90."
+            ],
+            "stages": [
+              {
+                "title": "Use an equivalent fraction",
+                "lines": [
+                  "60% = 60/100 = 3/5."
+                ]
+              },
+              {
+                "title": "Find one equal group of the original whole",
+                "lines": [
+                  "150 ÷ 5 = 30."
+                ],
+                "groups": true
+              },
+              {
+                "title": "Select the required equal groups",
+                "lines": [
+                  "30 × 3 = 90."
+                ],
+                "groups": true,
+                "select": true
+              }
+            ],
+            "solved": true,
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "Write the percentage out of one hundred, then divide both fraction parts by the same factor. The simplified fraction keeps the selected proportion unchanged."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T11"
+      },
+      {
+        "id": "T11",
+        "stage": "teaching",
+        "purpose": "Find one fifth of the original whole",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Find one fifth of the original whole",
+          "initial_state": "Find one fifth of the original whole",
+          "model": {
+            "kind": "percentage_fraction_amount",
+            "title": "Find sixty percent using equal fifths",
+            "given": "60% of 150",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "percent": 60,
+            "whole": 150,
+            "n": 3,
+            "d": 5,
+            "unit": "",
+            "steps": [
+              "60% = 60/100 = 3/5.",
+              "150 ÷ 5 = 30.",
+              "30 × 3 = 90."
+            ],
+            "stages": [
+              {
+                "title": "Use an equivalent fraction",
+                "lines": [
+                  "60% = 60/100 = 3/5."
+                ]
+              },
+              {
+                "title": "Find one equal group of the original whole",
+                "lines": [
+                  "150 ÷ 5 = 30."
+                ],
+                "groups": true
+              },
+              {
+                "title": "Select the required equal groups",
+                "lines": [
+                  "30 × 3 = 90."
+                ],
+                "groups": true,
+                "select": true
+              }
+            ],
+            "solved": true,
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "The denominator creates five equal groups. Divide the original amount to find the size of one group."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T12"
+      },
+      {
+        "id": "T12",
+        "stage": "teaching",
+        "purpose": "Select three equal fifths",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Select three equal fifths",
+          "initial_state": "Select three equal fifths",
+          "model": {
+            "kind": "percentage_fraction_amount",
+            "title": "Find sixty percent using equal fifths",
+            "given": "60% of 150",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "percent": 60,
+            "whole": 150,
+            "n": 3,
+            "d": 5,
+            "unit": "",
+            "steps": [
+              "60% = 60/100 = 3/5.",
+              "150 ÷ 5 = 30.",
+              "30 × 3 = 90."
+            ],
+            "stages": [
+              {
+                "title": "Use an equivalent fraction",
+                "lines": [
+                  "60% = 60/100 = 3/5."
+                ]
+              },
+              {
+                "title": "Find one equal group of the original whole",
+                "lines": [
+                  "150 ÷ 5 = 30."
+                ],
+                "groups": true
+              },
+              {
+                "title": "Select the required equal groups",
+                "lines": [
+                  "30 × 3 = 90."
+                ],
+                "groups": true,
+                "select": true
+              }
+            ],
+            "solved": true,
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "Use three equal copies of that group, not a new fraction of the previous result. The final amount remains a portion of the original whole."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T13"
+      },
+      {
+        "id": "T13",
+        "stage": "teaching",
+        "purpose": "Choose a fresh fractional start",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Choose a fresh fractional start",
+          "initial_state": "Choose a fresh fractional start",
+          "model": {
+            "kind": "percentage_fraction_amount",
+            "title": "Choose an exact fractional start",
+            "given": "35% of 80",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "rule",
+            "steps": [
+              "35% = 35/100.",
+              "Divide both fraction parts by 5: 35/100 = 7/20."
+            ]
+          }
+        },
+        "narration": {
+          "script": "Choose an exact fractional start for the new percentage before calculating any amount."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "PA-08-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "PA-08-G01",
+        "support_level": "high",
+        "pre_question_script": "Complete the numerator over the printed denominator.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "PA-08-G02",
+        "support_level": "high",
+        "pre_question_script": "Keep both fraction parts equivalent as the denominator changes.",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "faded",
+        "question_ref": "PA-08-G03",
+        "support_level": "reduced",
+        "pre_question_script": "Find the amount in one equal group.",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "faded",
+        "question_ref": "PA-08-G04",
+        "support_level": "reduced",
+        "pre_question_script": "Complete the group size and the selected total.",
+        "correct_next": "G05"
+      },
+      "G05": {
+        "stage": "independent_transfer",
+        "question_ref": "PA-08-G05",
+        "support_level": "none",
+        "pre_question_script": "Explain the denominator’s role in this method.",
+        "correct_next": "P01"
+      }
+    },
+    "practice": {
+      "intro_script": "Use a fractional equivalent where the question asks for one. Record the equivalent fraction, your calculation from the original whole and the final amount. Work independently, with clues available if needed. Some later contexts accept any valid exact method.",
+      "question_order": [
+        "PA-08-P01",
+        "PA-08-P02",
+        "PA-08-P03",
+        "PA-08-P04",
+        "PA-08-P05",
+        "PA-08-P06",
+        "PA-08-P07",
+        "PA-08-P08",
+        "PA-08-P09",
+        "PA-08-P10",
+        "PA-08-P11",
+        "PA-08-X01",
+        "PA-08-X02",
+        "PA-08-X03",
+        "PA-08-X04"
+      ],
+      "question_count": 15,
+      "feedback_policy": "Assess conversion, visible calculation and final amount independently; accept valid equivalent methods and record simplification separately."
+    },
+    "exit": {
+      "intro_script": "Complete three final questions without hints. Each requires a fractional equivalent, a valid calculation and the final amount. Keep the printed unit. Each response locks; feedback follows after all three are saved.",
+      "primary_question_refs": [
+        "PA-08-E01",
+        "PA-08-E02",
+        "PA-08-E03"
+      ],
+      "confirmation_question_refs": [],
+      "submission_policy": "Withhold correctness, answers and working until all three final responses are locked.",
+      "mastery_policy": {
+        "profile": "all_primary_unsupported_deferred",
+        "require_all": true,
+        "source_page": 13,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "All three final amounts and visible fractional methods are valid. Each percentage is applied to its original whole, with the required unit retained.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Connect the fraction, method and amount",
+      "ryan_script": "One or more final responses need another pass. Review the equivalent fraction, the calculation from the original whole and the final amount.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "PA-08-C01",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "Which method correctly uses a fractional equivalent to find 60% of 90?",
+      "target": "Preserve the percentage, fraction and original whole",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Rewrite 60% as 3/5, divide 90 by 5, then multiply by 3.",
+          "Rewrite 60% as 5/3, divide 90 by 5, then multiply by 3.",
+          "Divide 90 by 60.",
+          "Find 3/5 of 60."
+        ],
+        "math_layout": "decimal_compound_fraction"
+      },
+      "answer": {
+        "value": "Rewrite 60% as 3/5, divide 90 by 5, then multiply by 3."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The fraction matches the percentage, and the operations use the original whole.",
+        "correct_after_support": "Correct. The fraction matches the percentage, and the operations use the original whole.",
+        "on_correct_math": "60% = 60/100 = 3/5. → 90 ÷ 5 = 18. → 18 × 3 = 54.",
+        "on_incorrect_attempt_1": "Check the equivalent fraction and identify which number is the original whole.",
+        "on_incorrect_attempt_2": "The denominator creates equal groups of the original amount; the numerator selects groups.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "60% = 60/100 = 3/5. → 90 ÷ 5 = 18. → 18 × 3 = 54."
+      },
+      "mathematical_support": {
+        "hint_1": "Check the equivalent fraction and identify which number is the original whole.",
+        "hint_2": "The denominator creates equal groups of the original amount; the numerator selects groups.",
+        "worked_solution": "60% = 60/100 = 3/5. → 90 ÷ 5 = 18. → 18 × 3 = 54."
+      },
+      "working": [
+        "60% = 60/100 = 3/5.",
+        "90 ÷ 5 = 18.",
+        "18 × 3 = 54."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_fraction_amount",
+          "title": "Connect the fraction to the unchanged whole",
+          "given": "60% of 90",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 60,
+          "whole": 90,
+          "n": 3,
+          "d": 5,
+          "unit": "",
+          "steps": [
+            "60% = 60/100 = 3/5.",
+            "90 ÷ 5 = 18.",
+            "18 × 3 = 54."
+          ],
+          "stages": [
+            {
+              "title": "Use an equivalent fraction",
+              "lines": [
+                "60% = 60/100 = 3/5."
+              ]
+            },
+            {
+              "title": "Find one equal group of the original whole",
+              "lines": [
+                "90 ÷ 5 = 18."
+              ]
+            },
+            {
+              "title": "Select the required equal groups",
+              "lines": [
+                "18 × 3 = 54."
+              ]
+            }
+          ]
+        }
+      },
+      "response_feedback": {
+        "Rewrite 60% as 5/3, divide 90 by 5, then multiply by 3.": "The division and multiplication are suitable, but the written fraction is reversed and is not sixty percent.",
+        "Divide 90 by 60.": "The percentage number is not the denominator of its useful fractional equivalent.",
+        "Find 3/5 of 60.": "That changes the whole from ninety to sixty. Take the fraction of the original amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-08-C02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "Which first line is the most direct fractional start for finding 35% of 80?",
+      "target": "Preserve the percentage, fraction and original whole",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "35% = 35/100 = 7/20",
+          "35% = 3/5",
+          "80 ÷ 35",
+          "35 ÷ 80"
+        ],
+        "math_layout": "decimal_compound_fraction"
+      },
+      "answer": {
+        "value": "35% = 35/100 = 7/20"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The exact fractional equivalent prepares a valid fraction-of-an-amount method.",
+        "correct_after_support": "Correct. The exact fractional equivalent prepares a valid fraction-of-an-amount method.",
+        "on_correct_math": "35% = 35/100. → Divide both fraction parts by 5: 35/100 = 7/20.",
+        "on_incorrect_attempt_1": "Start by renaming the percentage as the same fraction of one whole.",
+        "on_incorrect_attempt_2": "Percent means out of one hundred; simplify both fraction parts by the same factor.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "35% = 35/100. → Divide both fraction parts by 5: 35/100 = 7/20."
+      },
+      "mathematical_support": {
+        "hint_1": "Start by renaming the percentage as the same fraction of one whole.",
+        "hint_2": "Percent means out of one hundred; simplify both fraction parts by the same factor.",
+        "worked_solution": "35% = 35/100. → Divide both fraction parts by 5: 35/100 = 7/20."
+      },
+      "working": [
+        "35% = 35/100.",
+        "Divide both fraction parts by 5: 35/100 = 7/20."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_fraction_amount",
+          "title": "Choose an exact fractional start",
+          "given": "35% of 80",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "35% = 35/100.",
+            "Divide both fraction parts by 5: 35/100 = 7/20."
+          ]
+        }
+      },
+      "response_feedback": {
+        "35% = 3/5": "Three fifths is sixty percent, not the requested percentage.",
+        "80 ÷ 35": "Dividing the whole by the percentage number does not identify its fractional equivalent.",
+        "35 ÷ 80": "Dividing the percentage number by the whole reverses the quantities instead of converting the percentage."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-08-G01",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "Write 45% as a fraction out of 100. Complete the numerator.",
+      "target": "Preserve the percentage, fraction and original whole",
+      "response": {
+        "type": "percentage_fraction_amount",
+        "mode": "fields",
+        "fields": [
+          {
+            "key": "n",
+            "label": "Numerator",
+            "fixedDenominator": 100
+          }
+        ]
+      },
+      "answer": {
+        "value": {
+          "n": "45"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The numerator counts the selected hundredths.",
+        "correct_after_support": "Correct. The numerator counts the selected hundredths.",
+        "on_correct_math": "45% means 45 parts out of 100. → 45% = 45/100.",
+        "on_incorrect_attempt_1": "Percent names parts out of one hundred.",
+        "on_incorrect_attempt_2": "Keep the stated percentage number as the count of hundredths.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "45% means 45 parts out of 100. → 45% = 45/100."
+      },
+      "mathematical_support": {
+        "hint_1": "Percent names parts out of one hundred.",
+        "hint_2": "Keep the stated percentage number as the count of hundredths.",
+        "worked_solution": "45% means 45 parts out of 100. → 45% = 45/100."
+      },
+      "working": [
+        "45% means 45 parts out of 100.",
+        "45% = 45/100."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_fraction_amount",
+          "title": "Complete the stated fractional-method step",
+          "given": "45% of 160",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "stages": [
+            {
+              "lines": [
+                "45% means 45 parts out of 100."
+              ]
+            },
+            {
+              "lines": [
+                "45% = 45/100."
+              ]
+            }
+          ],
+          "steps": [
+            "45% means 45 parts out of 100.",
+            "45% = 45/100."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_n": "The denominator is already one hundred. Use the percentage number as the numerator."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-08-G02",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "Simplify 45/100 to an equivalent fraction with denominator 20. Complete the numerator.",
+      "target": "Preserve the percentage, fraction and original whole",
+      "response": {
+        "type": "percentage_fraction_amount",
+        "mode": "fields",
+        "fields": [
+          {
+            "key": "n",
+            "label": "Numerator",
+            "fixedDenominator": 20
+          }
+        ]
+      },
+      "answer": {
+        "value": {
+          "n": "9"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both parts were divided equally, preserving the fraction.",
+        "correct_after_support": "Correct. Both parts were divided equally, preserving the fraction.",
+        "on_correct_math": "100 ÷ 5 = 20. → 45 ÷ 5 = 9, so 45/100 = 9/20.",
+        "on_incorrect_attempt_1": "Find the factor that changes the denominator from one hundred to twenty.",
+        "on_incorrect_attempt_2": "Divide the numerator by exactly the same factor as the denominator.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "100 ÷ 5 = 20. → 45 ÷ 5 = 9, so 45/100 = 9/20."
+      },
+      "mathematical_support": {
+        "hint_1": "Find the factor that changes the denominator from one hundred to twenty.",
+        "hint_2": "Divide the numerator by exactly the same factor as the denominator.",
+        "worked_solution": "100 ÷ 5 = 20. → 45 ÷ 5 = 9, so 45/100 = 9/20."
+      },
+      "working": [
+        "100 ÷ 5 = 20.",
+        "45 ÷ 5 = 9, so 45/100 = 9/20."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_fraction_amount",
+          "title": "Complete the stated fractional-method step",
+          "given": "45% of 160",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "stages": [
+            {
+              "lines": [
+                "100 ÷ 5 = 20."
+              ]
+            },
+            {
+              "lines": [
+                "45 ÷ 5 = 9, so 45/100 = 9/20."
+              ]
+            }
+          ],
+          "steps": [
+            "100 ÷ 5 = 20.",
+            "45 ÷ 5 = 9, so 45/100 = 9/20."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_n": "Match the denominator’s division by five in the numerator; do not change only one part."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-08-G03",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "faded",
+      "prompt": "Divide the original whole by the denominator: 160 ÷ 20 = ___.",
+      "target": "Preserve the percentage, fraction and original whole",
+      "response": {
+        "type": "percentage_fraction_amount",
+        "mode": "fields",
+        "fields": [
+          {
+            "key": "group",
+            "label": "Amount in one equal group"
+          }
+        ]
+      },
+      "answer": {
+        "value": {
+          "group": "8"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. That is one twentieth of the original amount.",
+        "correct_after_support": "Correct. That is one twentieth of the original amount.",
+        "on_correct_math": "160 ÷ 20 = 8.",
+        "on_incorrect_attempt_1": "Divide the original amount into twenty equal groups.",
+        "on_incorrect_attempt_2": "Check the group size by multiplying it by twenty to recover the original whole.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "160 ÷ 20 = 8."
+      },
+      "mathematical_support": {
+        "hint_1": "Divide the original amount into twenty equal groups.",
+        "hint_2": "Check the group size by multiplying it by twenty to recover the original whole.",
+        "worked_solution": "160 ÷ 20 = 8."
+      },
+      "working": [
+        "160 ÷ 20 = 8."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_fraction_amount",
+          "title": "Complete the stated fractional-method step",
+          "given": "45% of 160",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "stages": [
+            {
+              "lines": [
+                "160 ÷ 20 = 8."
+              ]
+            }
+          ],
+          "steps": [
+            "160 ÷ 20 = 8."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_group": "The denominator creates twenty equal groups of the original one hundred and sixty."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-08-G04",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "faded",
+      "prompt": "Complete both blanks to select nine equal groups: ___ × 9 = ___.",
+      "target": "Preserve the percentage, fraction and original whole",
+      "response": {
+        "type": "percentage_fraction_amount",
+        "mode": "fields",
+        "fields": [
+          {
+            "key": "group",
+            "label": "Amount in one equal group"
+          },
+          {
+            "key": "amount",
+            "label": "Total selected amount"
+          }
+        ]
+      },
+      "answer": {
+        "value": {
+          "group": "8",
+          "amount": "72"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Nine equal copies give the required portion without changing the original whole.",
+        "correct_after_support": "Correct. Nine equal copies give the required portion without changing the original whole.",
+        "on_correct_math": "One equal group contains 8. → 8 × 9 = 72.",
+        "on_incorrect_attempt_1": "Keep the size of one group fixed, then select nine equal copies.",
+        "on_incorrect_attempt_2": "Use the quotient from the original whole in the first blank and the multiplication result in the second.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "One equal group contains 8. → 8 × 9 = 72."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the size of one group fixed, then select nine equal copies.",
+        "hint_2": "Use the quotient from the original whole in the first blank and the multiplication result in the second.",
+        "worked_solution": "One equal group contains 8. → 8 × 9 = 72."
+      },
+      "working": [
+        "One equal group contains 8.",
+        "8 × 9 = 72."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_fraction_amount",
+          "title": "Complete the stated fractional-method step",
+          "given": "45% of 160",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "stages": [
+            {
+              "lines": [
+                "One equal group contains 8."
+              ]
+            },
+            {
+              "lines": [
+                "8 × 9 = 72."
+              ]
+            }
+          ],
+          "steps": [
+            "One equal group contains 8.",
+            "8 × 9 = 72."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_group": "The selected total is correct. Recheck the amount in each of the nine equal groups.",
+        "check_amount": "One group is correct. Recheck the total of nine equal groups.",
+        "check_multiple": "Find one twentieth of the original amount, then multiply that group size by nine."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-08-G05",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "independent_transfer",
+      "prompt": "Why is the whole divided by 20 in this method?",
+      "target": "Preserve the percentage, fraction and original whole",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "The denominator shows that the whole is split into 20 equal groups.",
+          "The numerator always tells us what to divide by.",
+          "There are 20 percent signs in 45%.",
+          "The answer must be smaller than 20."
+        ],
+        "math_layout": "decimal_compound_fraction"
+      },
+      "answer": {
+        "value": "The denominator shows that the whole is split into 20 equal groups."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Division follows the denominator’s equal-group role.",
+        "correct_after_support": "Correct. Division follows the denominator’s equal-group role.",
+        "on_correct_math": "The denominator 20 creates twenty equal groups of the original whole. → The numerator 9 selects nine of those equal groups.",
+        "on_incorrect_attempt_1": "Read the denominator as the total number of equal groups.",
+        "on_incorrect_attempt_2": "The numerator selects groups after the original whole has been partitioned.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The denominator 20 creates twenty equal groups of the original whole. → The numerator 9 selects nine of those equal groups."
+      },
+      "mathematical_support": {
+        "hint_1": "Read the denominator as the total number of equal groups.",
+        "hint_2": "The numerator selects groups after the original whole has been partitioned.",
+        "worked_solution": "The denominator 20 creates twenty equal groups of the original whole. → The numerator 9 selects nine of those equal groups."
+      },
+      "working": [
+        "The denominator 20 creates twenty equal groups of the original whole.",
+        "The numerator 9 selects nine of those equal groups."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_fraction_amount",
+          "title": "Explain the denominator’s role",
+          "given": "45% = 9/20",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "The denominator 20 creates twenty equal groups of the original whole.",
+            "The numerator 9 selects nine of those equal groups."
+          ]
+        }
+      },
+      "response_feedback": {
+        "The numerator always tells us what to divide by.": "The numerator selects groups; it is not the divisor in this fraction-of-an-amount method.",
+        "There are 20 percent signs in 45%.": "The denominator counts equal groups of the whole, not percent signs.",
+        "The answer must be smaller than 20.": "The denominator describes grouping; it does not impose that limit on the answer."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-08-P01",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Use a fractional equivalent to find 20% of 85.",
+      "target": "Preserve the percentage, fraction and original whole",
+      "response": {
+        "type": "percentage_fraction_amount",
+        "require_fraction_method": true,
+        "percent": 20,
+        "whole": 85,
+        "unit": ""
+      },
+      "answer": {
+        "value": {
+          "n": "1",
+          "d": "5",
+          "calculation": "85 ÷ 5 × 1",
+          "amount": "17"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. One of the five equal groups gives the requested percentage.",
+        "correct_after_support": "Correct. One of the five equal groups gives the requested percentage.",
+        "on_correct_math": "20% = 20/100 = 1/5. → 85 ÷ 5 = 17. → 17 × 1 = 17.",
+        "on_incorrect_attempt_1": "One fifth selects one of five equal groups.",
+        "on_incorrect_attempt_2": "The denominator creates equal groups and the numerator selects them. Keep every calculation tied to the original amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "20% = 20/100 = 1/5. → 85 ÷ 5 = 17. → 17 × 1 = 17."
+      },
+      "mathematical_support": {
+        "hint_1": "One fifth selects one of five equal groups.",
+        "hint_2": "The denominator creates equal groups and the numerator selects them. Keep every calculation tied to the original amount.",
+        "worked_solution": "20% = 20/100 = 1/5. → 85 ÷ 5 = 17. → 17 × 1 = 17."
+      },
+      "working": [
+        "20% = 20/100 = 1/5.",
+        "85 ÷ 5 = 17.",
+        "17 × 1 = 17."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_fraction_amount",
+          "title": "Find the selected part of the original whole",
+          "given": "20% of 85",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 20,
+          "whole": 85,
+          "n": 1,
+          "d": 5,
+          "unit": "",
+          "steps": [
+            "20% = 20/100 = 1/5.",
+            "85 ÷ 5 = 17.",
+            "17 × 1 = 17."
+          ],
+          "stages": [
+            {
+              "title": "Use an equivalent fraction",
+              "lines": [
+                "20% = 20/100 = 1/5."
+              ]
+            },
+            {
+              "title": "Find one equal group of the original whole",
+              "lines": [
+                "85 ÷ 5 = 17."
+              ]
+            },
+            {
+              "title": "Select the required equal groups",
+              "lines": [
+                "17 × 1 = 17."
+              ]
+            }
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "The calculation and final amount are correct. Recheck that the written fraction equals the stated percentage.",
+        "check_method": "The fraction and final amount are correct. Record a valid fractional calculation from the original whole; the written calculation is not yet valid evidence.",
+        "check_amount": "The fraction and calculation are valid. Recheck the final answer and retain the printed unit.",
+        "check_multiple": "Check the fraction conversion, the calculation from the original whole and the final amount separately."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-08-P02",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Use a fractional equivalent to find 25% of 148.",
+      "target": "Preserve the percentage, fraction and original whole",
+      "response": {
+        "type": "percentage_fraction_amount",
+        "require_fraction_method": true,
+        "percent": 25,
+        "whole": 148,
+        "unit": ""
+      },
+      "answer": {
+        "value": {
+          "n": "1",
+          "d": "4",
+          "calculation": "148 ÷ 4 × 1",
+          "amount": "37"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The quarter is taken from the complete original amount.",
+        "correct_after_support": "Correct. The quarter is taken from the complete original amount.",
+        "on_correct_math": "25% = 25/100 = 1/4. → 148 ÷ 4 = 37. → 37 × 1 = 37.",
+        "on_incorrect_attempt_1": "A quarter selects one of four equal groups.",
+        "on_incorrect_attempt_2": "The denominator creates equal groups and the numerator selects them. Keep every calculation tied to the original amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "25% = 25/100 = 1/4. → 148 ÷ 4 = 37. → 37 × 1 = 37."
+      },
+      "mathematical_support": {
+        "hint_1": "A quarter selects one of four equal groups.",
+        "hint_2": "The denominator creates equal groups and the numerator selects them. Keep every calculation tied to the original amount.",
+        "worked_solution": "25% = 25/100 = 1/4. → 148 ÷ 4 = 37. → 37 × 1 = 37."
+      },
+      "working": [
+        "25% = 25/100 = 1/4.",
+        "148 ÷ 4 = 37.",
+        "37 × 1 = 37."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_fraction_amount",
+          "title": "Find the selected part of the original whole",
+          "given": "25% of 148",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 25,
+          "whole": 148,
+          "n": 1,
+          "d": 4,
+          "unit": "",
+          "steps": [
+            "25% = 25/100 = 1/4.",
+            "148 ÷ 4 = 37.",
+            "37 × 1 = 37."
+          ],
+          "stages": [
+            {
+              "title": "Use an equivalent fraction",
+              "lines": [
+                "25% = 25/100 = 1/4."
+              ]
+            },
+            {
+              "title": "Find one equal group of the original whole",
+              "lines": [
+                "148 ÷ 4 = 37."
+              ]
+            },
+            {
+              "title": "Select the required equal groups",
+              "lines": [
+                "37 × 1 = 37."
+              ]
+            }
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "The calculation and final amount are correct. Recheck that the written fraction equals the stated percentage.",
+        "check_method": "The fraction and final amount are correct. Record a valid fractional calculation from the original whole; the written calculation is not yet valid evidence.",
+        "check_amount": "The fraction and calculation are valid. Recheck the final answer and retain the printed unit.",
+        "check_multiple": "Check the fraction conversion, the calculation from the original whole and the final amount separately."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-08-P03",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Use a fractional equivalent to find 40% of 95.",
+      "target": "Preserve the percentage, fraction and original whole",
+      "response": {
+        "type": "percentage_fraction_amount",
+        "require_fraction_method": true,
+        "percent": 40,
+        "whole": 95,
+        "unit": ""
+      },
+      "answer": {
+        "value": {
+          "n": "2",
+          "d": "5",
+          "calculation": "95 ÷ 5 × 2",
+          "amount": "38"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Two fifths selects two equal groups of the unchanged whole.",
+        "correct_after_support": "Correct. Two fifths selects two equal groups of the unchanged whole.",
+        "on_correct_math": "40% = 40/100 = 2/5. → 95 ÷ 5 = 19. → 19 × 2 = 38.",
+        "on_incorrect_attempt_1": "Use the exact fraction for forty hundredths.",
+        "on_incorrect_attempt_2": "The denominator creates equal groups and the numerator selects them. Keep every calculation tied to the original amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "40% = 40/100 = 2/5. → 95 ÷ 5 = 19. → 19 × 2 = 38."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the exact fraction for forty hundredths.",
+        "hint_2": "The denominator creates equal groups and the numerator selects them. Keep every calculation tied to the original amount.",
+        "worked_solution": "40% = 40/100 = 2/5. → 95 ÷ 5 = 19. → 19 × 2 = 38."
+      },
+      "working": [
+        "40% = 40/100 = 2/5.",
+        "95 ÷ 5 = 19.",
+        "19 × 2 = 38."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_fraction_amount",
+          "title": "Find the selected part of the original whole",
+          "given": "40% of 95",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 40,
+          "whole": 95,
+          "n": 2,
+          "d": 5,
+          "unit": "",
+          "steps": [
+            "40% = 40/100 = 2/5.",
+            "95 ÷ 5 = 19.",
+            "19 × 2 = 38."
+          ],
+          "stages": [
+            {
+              "title": "Use an equivalent fraction",
+              "lines": [
+                "40% = 40/100 = 2/5."
+              ]
+            },
+            {
+              "title": "Find one equal group of the original whole",
+              "lines": [
+                "95 ÷ 5 = 19."
+              ]
+            },
+            {
+              "title": "Select the required equal groups",
+              "lines": [
+                "19 × 2 = 38."
+              ]
+            }
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "The calculation and final amount are correct. Recheck that the written fraction equals the stated percentage.",
+        "check_method": "The fraction and final amount are correct. Record a valid fractional calculation from the original whole; the written calculation is not yet valid evidence.",
+        "check_amount": "The fraction and calculation are valid. Recheck the final answer and retain the printed unit.",
+        "check_multiple": "Check the fraction conversion, the calculation from the original whole and the final amount separately."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-08-P04",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Use a fractional equivalent to find 60% of 240.",
+      "target": "Preserve the percentage, fraction and original whole",
+      "response": {
+        "type": "percentage_fraction_amount",
+        "require_fraction_method": true,
+        "percent": 60,
+        "whole": 240,
+        "unit": ""
+      },
+      "answer": {
+        "value": {
+          "n": "3",
+          "d": "5",
+          "calculation": "240 ÷ 5 × 3",
+          "amount": "144"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The three selected fifths belong to the same original amount.",
+        "correct_after_support": "Correct. The three selected fifths belong to the same original amount.",
+        "on_correct_math": "60% = 60/100 = 3/5. → 240 ÷ 5 = 48. → 48 × 3 = 144.",
+        "on_incorrect_attempt_1": "Simplify sixty hundredths before selecting its equal groups.",
+        "on_incorrect_attempt_2": "The denominator creates equal groups and the numerator selects them. Keep every calculation tied to the original amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "60% = 60/100 = 3/5. → 240 ÷ 5 = 48. → 48 × 3 = 144."
+      },
+      "mathematical_support": {
+        "hint_1": "Simplify sixty hundredths before selecting its equal groups.",
+        "hint_2": "The denominator creates equal groups and the numerator selects them. Keep every calculation tied to the original amount.",
+        "worked_solution": "60% = 60/100 = 3/5. → 240 ÷ 5 = 48. → 48 × 3 = 144."
+      },
+      "working": [
+        "60% = 60/100 = 3/5.",
+        "240 ÷ 5 = 48.",
+        "48 × 3 = 144."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_fraction_amount",
+          "title": "Find the selected part of the original whole",
+          "given": "60% of 240",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 60,
+          "whole": 240,
+          "n": 3,
+          "d": 5,
+          "unit": "",
+          "steps": [
+            "60% = 60/100 = 3/5.",
+            "240 ÷ 5 = 48.",
+            "48 × 3 = 144."
+          ],
+          "stages": [
+            {
+              "title": "Use an equivalent fraction",
+              "lines": [
+                "60% = 60/100 = 3/5."
+              ]
+            },
+            {
+              "title": "Find one equal group of the original whole",
+              "lines": [
+                "240 ÷ 5 = 48."
+              ]
+            },
+            {
+              "title": "Select the required equal groups",
+              "lines": [
+                "48 × 3 = 144."
+              ]
+            }
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "The calculation and final amount are correct. Recheck that the written fraction equals the stated percentage.",
+        "check_method": "The fraction and final amount are correct. Record a valid fractional calculation from the original whole; the written calculation is not yet valid evidence.",
+        "check_amount": "The fraction and calculation are valid. Recheck the final answer and retain the printed unit.",
+        "check_multiple": "Check the fraction conversion, the calculation from the original whole and the final amount separately."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-08-P05",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Use a fractional equivalent to find 75% of 68.",
+      "target": "Preserve the percentage, fraction and original whole",
+      "response": {
+        "type": "percentage_fraction_amount",
+        "require_fraction_method": true,
+        "percent": 75,
+        "whole": 68,
+        "unit": ""
+      },
+      "answer": {
+        "value": {
+          "n": "3",
+          "d": "4",
+          "calculation": "68 ÷ 4 × 3",
+          "amount": "51"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Three quarters preserves the original whole throughout.",
+        "correct_after_support": "Correct. Three quarters preserves the original whole throughout.",
+        "on_correct_math": "75% = 75/100 = 3/4. → 68 ÷ 4 = 17. → 17 × 3 = 51.",
+        "on_incorrect_attempt_1": "Connect seventy-five hundredths to quarters.",
+        "on_incorrect_attempt_2": "The denominator creates equal groups and the numerator selects them. Keep every calculation tied to the original amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "75% = 75/100 = 3/4. → 68 ÷ 4 = 17. → 17 × 3 = 51."
+      },
+      "mathematical_support": {
+        "hint_1": "Connect seventy-five hundredths to quarters.",
+        "hint_2": "The denominator creates equal groups and the numerator selects them. Keep every calculation tied to the original amount.",
+        "worked_solution": "75% = 75/100 = 3/4. → 68 ÷ 4 = 17. → 17 × 3 = 51."
+      },
+      "working": [
+        "75% = 75/100 = 3/4.",
+        "68 ÷ 4 = 17.",
+        "17 × 3 = 51."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_fraction_amount",
+          "title": "Find the selected part of the original whole",
+          "given": "75% of 68",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 75,
+          "whole": 68,
+          "n": 3,
+          "d": 4,
+          "unit": "",
+          "steps": [
+            "75% = 75/100 = 3/4.",
+            "68 ÷ 4 = 17.",
+            "17 × 3 = 51."
+          ],
+          "stages": [
+            {
+              "title": "Use an equivalent fraction",
+              "lines": [
+                "75% = 75/100 = 3/4."
+              ]
+            },
+            {
+              "title": "Find one equal group of the original whole",
+              "lines": [
+                "68 ÷ 4 = 17."
+              ]
+            },
+            {
+              "title": "Select the required equal groups",
+              "lines": [
+                "17 × 3 = 51."
+              ]
+            }
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "The calculation and final amount are correct. Recheck that the written fraction equals the stated percentage.",
+        "check_method": "The fraction and final amount are correct. Record a valid fractional calculation from the original whole; the written calculation is not yet valid evidence.",
+        "check_amount": "The fraction and calculation are valid. Recheck the final answer and retain the printed unit.",
+        "check_multiple": "Check the fraction conversion, the calculation from the original whole and the final amount separately."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-08-P06",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Use a fractional equivalent to find 35% of 120.",
+      "target": "Preserve the percentage, fraction and original whole",
+      "response": {
+        "type": "percentage_fraction_amount",
+        "require_fraction_method": true,
+        "percent": 35,
+        "whole": 120,
+        "unit": ""
+      },
+      "answer": {
+        "value": {
+          "n": "7",
+          "d": "20",
+          "calculation": "120 ÷ 20 × 7",
+          "amount": "42"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Seven twentieths gives the requested portion.",
+        "correct_after_support": "Correct. Seven twentieths gives the requested portion.",
+        "on_correct_math": "35% = 35/100 = 7/20. → 120 ÷ 20 = 6. → 6 × 7 = 42.",
+        "on_incorrect_attempt_1": "Simplify thirty-five hundredths by the same factor in both parts.",
+        "on_incorrect_attempt_2": "The denominator creates equal groups and the numerator selects them. Keep every calculation tied to the original amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "35% = 35/100 = 7/20. → 120 ÷ 20 = 6. → 6 × 7 = 42."
+      },
+      "mathematical_support": {
+        "hint_1": "Simplify thirty-five hundredths by the same factor in both parts.",
+        "hint_2": "The denominator creates equal groups and the numerator selects them. Keep every calculation tied to the original amount.",
+        "worked_solution": "35% = 35/100 = 7/20. → 120 ÷ 20 = 6. → 6 × 7 = 42."
+      },
+      "working": [
+        "35% = 35/100 = 7/20.",
+        "120 ÷ 20 = 6.",
+        "6 × 7 = 42."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_fraction_amount",
+          "title": "Find the selected part of the original whole",
+          "given": "35% of 120",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 35,
+          "whole": 120,
+          "n": 7,
+          "d": 20,
+          "unit": "",
+          "steps": [
+            "35% = 35/100 = 7/20.",
+            "120 ÷ 20 = 6.",
+            "6 × 7 = 42."
+          ],
+          "stages": [
+            {
+              "title": "Use an equivalent fraction",
+              "lines": [
+                "35% = 35/100 = 7/20."
+              ]
+            },
+            {
+              "title": "Find one equal group of the original whole",
+              "lines": [
+                "120 ÷ 20 = 6."
+              ]
+            },
+            {
+              "title": "Select the required equal groups",
+              "lines": [
+                "6 × 7 = 42."
+              ]
+            }
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "The calculation and final amount are correct. Recheck that the written fraction equals the stated percentage.",
+        "check_method": "The fraction and final amount are correct. Record a valid fractional calculation from the original whole; the written calculation is not yet valid evidence.",
+        "check_amount": "The fraction and calculation are valid. Recheck the final answer and retain the printed unit.",
+        "check_multiple": "Check the fraction conversion, the calculation from the original whole and the final amount separately."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-08-P07",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Use a fractional equivalent to find 45% of 260.",
+      "target": "Preserve the percentage, fraction and original whole",
+      "response": {
+        "type": "percentage_fraction_amount",
+        "require_fraction_method": true,
+        "percent": 45,
+        "whole": 260,
+        "unit": ""
+      },
+      "answer": {
+        "value": {
+          "n": "9",
+          "d": "20",
+          "calculation": "260 ÷ 20 × 9",
+          "amount": "117"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The equivalent fraction and calculation retain the complete original amount.",
+        "correct_after_support": "Correct. The equivalent fraction and calculation retain the complete original amount.",
+        "on_correct_math": "45% = 45/100 = 9/20. → 260 ÷ 20 = 13. → 13 × 9 = 117.",
+        "on_incorrect_attempt_1": "Write forty-five hundredths and simplify both parts equally.",
+        "on_incorrect_attempt_2": "The denominator creates equal groups and the numerator selects them. Keep every calculation tied to the original amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "45% = 45/100 = 9/20. → 260 ÷ 20 = 13. → 13 × 9 = 117."
+      },
+      "mathematical_support": {
+        "hint_1": "Write forty-five hundredths and simplify both parts equally.",
+        "hint_2": "The denominator creates equal groups and the numerator selects them. Keep every calculation tied to the original amount.",
+        "worked_solution": "45% = 45/100 = 9/20. → 260 ÷ 20 = 13. → 13 × 9 = 117."
+      },
+      "working": [
+        "45% = 45/100 = 9/20.",
+        "260 ÷ 20 = 13.",
+        "13 × 9 = 117."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_fraction_amount",
+          "title": "Find the selected part of the original whole",
+          "given": "45% of 260",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 45,
+          "whole": 260,
+          "n": 9,
+          "d": 20,
+          "unit": "",
+          "steps": [
+            "45% = 45/100 = 9/20.",
+            "260 ÷ 20 = 13.",
+            "13 × 9 = 117."
+          ],
+          "stages": [
+            {
+              "title": "Use an equivalent fraction",
+              "lines": [
+                "45% = 45/100 = 9/20."
+              ]
+            },
+            {
+              "title": "Find one equal group of the original whole",
+              "lines": [
+                "260 ÷ 20 = 13."
+              ]
+            },
+            {
+              "title": "Select the required equal groups",
+              "lines": [
+                "13 × 9 = 117."
+              ]
+            }
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "The calculation and final amount are correct. Recheck that the written fraction equals the stated percentage.",
+        "check_method": "The fraction and final amount are correct. Record a valid fractional calculation from the original whole; the written calculation is not yet valid evidence.",
+        "check_amount": "The fraction and calculation are valid. Recheck the final answer and retain the printed unit.",
+        "check_multiple": "Check the fraction conversion, the calculation from the original whole and the final amount separately."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-08-P08",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Use a fractional equivalent to find 65% of 180.",
+      "target": "Preserve the percentage, fraction and original whole",
+      "response": {
+        "type": "percentage_fraction_amount",
+        "require_fraction_method": true,
+        "percent": 65,
+        "whole": 180,
+        "unit": ""
+      },
+      "answer": {
+        "value": {
+          "n": "13",
+          "d": "20",
+          "calculation": "180 ÷ 20 × 13",
+          "amount": "117"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Thirteen twentieths selects the required part of this whole.",
+        "correct_after_support": "Correct. Thirteen twentieths selects the required part of this whole.",
+        "on_correct_math": "65% = 65/100 = 13/20. → 180 ÷ 20 = 9. → 9 × 13 = 117.",
+        "on_incorrect_attempt_1": "Use an exact fraction for sixty-five hundredths.",
+        "on_incorrect_attempt_2": "The denominator creates equal groups and the numerator selects them. Keep every calculation tied to the original amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "65% = 65/100 = 13/20. → 180 ÷ 20 = 9. → 9 × 13 = 117."
+      },
+      "mathematical_support": {
+        "hint_1": "Use an exact fraction for sixty-five hundredths.",
+        "hint_2": "The denominator creates equal groups and the numerator selects them. Keep every calculation tied to the original amount.",
+        "worked_solution": "65% = 65/100 = 13/20. → 180 ÷ 20 = 9. → 9 × 13 = 117."
+      },
+      "working": [
+        "65% = 65/100 = 13/20.",
+        "180 ÷ 20 = 9.",
+        "9 × 13 = 117."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_fraction_amount",
+          "title": "Find the selected part of the original whole",
+          "given": "65% of 180",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 65,
+          "whole": 180,
+          "n": 13,
+          "d": 20,
+          "unit": "",
+          "steps": [
+            "65% = 65/100 = 13/20.",
+            "180 ÷ 20 = 9.",
+            "9 × 13 = 117."
+          ],
+          "stages": [
+            {
+              "title": "Use an equivalent fraction",
+              "lines": [
+                "65% = 65/100 = 13/20."
+              ]
+            },
+            {
+              "title": "Find one equal group of the original whole",
+              "lines": [
+                "180 ÷ 20 = 9."
+              ]
+            },
+            {
+              "title": "Select the required equal groups",
+              "lines": [
+                "9 × 13 = 117."
+              ]
+            }
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "The calculation and final amount are correct. Recheck that the written fraction equals the stated percentage.",
+        "check_method": "The fraction and final amount are correct. Record a valid fractional calculation from the original whole; the written calculation is not yet valid evidence.",
+        "check_amount": "The fraction and calculation are valid. Recheck the final answer and retain the printed unit.",
+        "check_multiple": "Check the fraction conversion, the calculation from the original whole and the final amount separately."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-08-P09",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Use a fractional equivalent to find 12.5% of 96.",
+      "target": "Preserve the percentage, fraction and original whole",
+      "response": {
+        "type": "percentage_fraction_amount",
+        "require_fraction_method": true,
+        "percent": 12.5,
+        "whole": 96,
+        "unit": ""
+      },
+      "answer": {
+        "value": {
+          "n": "1",
+          "d": "8",
+          "calculation": "96 ÷ 8 × 1",
+          "amount": "12"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. One eighth is the exact fractional equivalent here.",
+        "correct_after_support": "Correct. One eighth is the exact fractional equivalent here.",
+        "on_correct_math": "12.5% = 12.5/100 = 125/1000 = 1/8. → 96 ÷ 8 = 12. → 12 × 1 = 12.",
+        "on_incorrect_attempt_1": "A decimal percentage can still have a useful exact fractional equivalent.",
+        "on_incorrect_attempt_2": "The denominator creates equal groups and the numerator selects them. Keep every calculation tied to the original amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "12.5% = 12.5/100 = 125/1000 = 1/8. → 96 ÷ 8 = 12. → 12 × 1 = 12."
+      },
+      "mathematical_support": {
+        "hint_1": "A decimal percentage can still have a useful exact fractional equivalent.",
+        "hint_2": "The denominator creates equal groups and the numerator selects them. Keep every calculation tied to the original amount.",
+        "worked_solution": "12.5% = 12.5/100 = 125/1000 = 1/8. → 96 ÷ 8 = 12. → 12 × 1 = 12."
+      },
+      "working": [
+        "12.5% = 12.5/100 = 125/1000 = 1/8.",
+        "96 ÷ 8 = 12.",
+        "12 × 1 = 12."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_fraction_amount",
+          "title": "Find the selected part of the original whole",
+          "given": "12.5% of 96",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 12.5,
+          "whole": 96,
+          "n": 1,
+          "d": 8,
+          "unit": "",
+          "steps": [
+            "12.5% = 12.5/100 = 125/1000 = 1/8.",
+            "96 ÷ 8 = 12.",
+            "12 × 1 = 12."
+          ],
+          "stages": [
+            {
+              "title": "Use an equivalent fraction",
+              "lines": [
+                "12.5% = 12.5/100 = 125/1000 = 1/8."
+              ]
+            },
+            {
+              "title": "Find one equal group of the original whole",
+              "lines": [
+                "96 ÷ 8 = 12."
+              ]
+            },
+            {
+              "title": "Select the required equal groups",
+              "lines": [
+                "12 × 1 = 12."
+              ]
+            }
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "The calculation and final amount are correct. Recheck that the written fraction equals the stated percentage.",
+        "check_method": "The fraction and final amount are correct. Record a valid fractional calculation from the original whole; the written calculation is not yet valid evidence.",
+        "check_amount": "The fraction and calculation are valid. Recheck the final answer and retain the printed unit.",
+        "check_multiple": "Check the fraction conversion, the calculation from the original whole and the final amount separately."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-08-P10",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "A ribbon is 140 cm long. Use a fractional equivalent to find 30% of its length.",
+      "target": "Preserve the percentage, fraction and original whole",
+      "response": {
+        "type": "percentage_fraction_amount",
+        "require_fraction_method": true,
+        "percent": 30,
+        "whole": 140,
+        "unit": "cm"
+      },
+      "answer": {
+        "value": {
+          "n": "3",
+          "d": "10",
+          "calculation": "140 ÷ 10 × 3",
+          "amount": "42"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The fractional method selects the requested length of the original ribbon.",
+        "correct_after_support": "Correct. The fractional method selects the requested length of the original ribbon.",
+        "on_correct_math": "30% = 30/100 = 3/10. → 140 ÷ 10 = 14. → 14 × 3 = 42 cm.",
+        "on_incorrect_attempt_1": "Keep the complete ribbon as the original whole and express the selected length in centimetres.",
+        "on_incorrect_attempt_2": "The denominator creates equal groups and the numerator selects them. Keep every calculation tied to the original amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "30% = 30/100 = 3/10. → 140 ÷ 10 = 14. → 14 × 3 = 42 cm."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the complete ribbon as the original whole and express the selected length in centimetres.",
+        "hint_2": "The denominator creates equal groups and the numerator selects them. Keep every calculation tied to the original amount.",
+        "worked_solution": "30% = 30/100 = 3/10. → 140 ÷ 10 = 14. → 14 × 3 = 42 cm."
+      },
+      "working": [
+        "30% = 30/100 = 3/10.",
+        "140 ÷ 10 = 14.",
+        "14 × 3 = 42 cm."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_fraction_amount",
+          "title": "Keep the original quantity and its unit",
+          "given": "30% of 140 cm",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 30,
+          "whole": 140,
+          "n": 3,
+          "d": 10,
+          "unit": "cm",
+          "steps": [
+            "30% = 30/100 = 3/10.",
+            "140 ÷ 10 = 14.",
+            "14 × 3 = 42 cm."
+          ],
+          "stages": [
+            {
+              "title": "Use an equivalent fraction",
+              "lines": [
+                "30% = 30/100 = 3/10."
+              ]
+            },
+            {
+              "title": "Find one equal group of the original whole",
+              "lines": [
+                "140 ÷ 10 = 14."
+              ]
+            },
+            {
+              "title": "Select the required equal groups",
+              "lines": [
+                "14 × 3 = 42 cm."
+              ]
+            }
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "The calculation and final amount are correct. Recheck that the written fraction equals the stated percentage.",
+        "check_method": "The fraction and final amount are correct. Record a valid fractional calculation from the original whole; the written calculation is not yet valid evidence.",
+        "check_amount": "The fraction and calculation are valid. Recheck the final answer and retain the printed unit.",
+        "check_multiple": "Check the fraction conversion, the calculation from the original whole and the final amount separately."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-08-P11",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Which fraction gives the most direct exact method for finding 12.5% of an amount?",
+      "target": "Preserve the percentage, fraction and original whole",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "1/8",
+          "1/12.5",
+          "12/5",
+          "1/8 of 100 only"
+        ],
+        "math_layout": "decimal_compound_fraction"
+      },
+      "answer": {
+        "value": "1/8"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. One eighth works for any stated original amount.",
+        "correct_after_support": "Correct. One eighth works for any stated original amount.",
+        "on_correct_math": "12.5% = 12.5/100 = 125/1000. → 125/1000 = 1/8. → Apply one eighth to the stated original amount, not only to one hundred.",
+        "on_incorrect_attempt_1": "Treat the decimal percentage as parts out of one hundred, then keep the value unchanged when simplifying.",
+        "on_incorrect_attempt_2": "Multiplying both parts by ten clears the decimal; a common factor then gives a unit fraction.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "12.5% = 12.5/100 = 125/1000. → 125/1000 = 1/8. → Apply one eighth to the stated original amount, not only to one hundred."
+      },
+      "mathematical_support": {
+        "hint_1": "Treat the decimal percentage as parts out of one hundred, then keep the value unchanged when simplifying.",
+        "hint_2": "Multiplying both parts by ten clears the decimal; a common factor then gives a unit fraction.",
+        "worked_solution": "12.5% = 12.5/100 = 125/1000. → 125/1000 = 1/8. → Apply one eighth to the stated original amount, not only to one hundred."
+      },
+      "working": [
+        "12.5% = 12.5/100 = 125/1000.",
+        "125/1000 = 1/8.",
+        "Apply one eighth to the stated original amount, not only to one hundred."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_fraction_amount",
+          "title": "Recognise the exact fractional equivalent",
+          "given": "12.5% of an amount",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "12.5% = 12.5/100 = 125/1000.",
+            "125/1000 = 1/8.",
+            "Apply one eighth to the stated original amount, not only to one hundred."
+          ]
+        }
+      },
+      "response_feedback": {
+        "1/12.5": "The percentage number does not become the denominator of a unit fraction.",
+        "12/5": "Twelve fifths is greater than one whole and does not equal this small percentage.",
+        "1/8 of 100 only": "The fractional equivalent applies to the given whole; it is not restricted to an amount of one hundred."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-08-X01",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A library has 360 science books. Of these, 35% are physics books. Use a fractional equivalent to find the number of physics books.",
+      "target": "Preserve the percentage, fraction and original whole",
+      "response": {
+        "type": "percentage_fraction_amount",
+        "require_fraction_method": true,
+        "percent": 35,
+        "whole": 360,
+        "unit": "books"
+      },
+      "answer": {
+        "value": {
+          "n": "7",
+          "d": "20",
+          "calculation": "360 ÷ 20 × 7",
+          "amount": "126"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The selected count is the physics portion of the science books.",
+        "correct_after_support": "Correct. The selected count is the physics portion of the science books.",
+        "on_correct_math": "35% = 35/100 = 7/20. → 360 ÷ 20 = 18. → 18 × 7 = 126 books.",
+        "on_incorrect_attempt_1": "The science-book total is the whole. Apply the exact fractional equivalent to that total.",
+        "on_incorrect_attempt_2": "The denominator creates equal groups and the numerator selects them. Keep every calculation tied to the original amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "35% = 35/100 = 7/20. → 360 ÷ 20 = 18. → 18 × 7 = 126 books."
+      },
+      "mathematical_support": {
+        "hint_1": "The science-book total is the whole. Apply the exact fractional equivalent to that total.",
+        "hint_2": "The denominator creates equal groups and the numerator selects them. Keep every calculation tied to the original amount.",
+        "worked_solution": "35% = 35/100 = 7/20. → 360 ÷ 20 = 18. → 18 × 7 = 126 books."
+      },
+      "working": [
+        "35% = 35/100 = 7/20.",
+        "360 ÷ 20 = 18.",
+        "18 × 7 = 126 books."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_fraction_amount",
+          "title": "Keep the original quantity and its unit",
+          "given": "35% of 360 books",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 35,
+          "whole": 360,
+          "n": 7,
+          "d": 20,
+          "unit": "books",
+          "steps": [
+            "35% = 35/100 = 7/20.",
+            "360 ÷ 20 = 18.",
+            "18 × 7 = 126 books."
+          ],
+          "stages": [
+            {
+              "title": "Use an equivalent fraction",
+              "lines": [
+                "35% = 35/100 = 7/20."
+              ]
+            },
+            {
+              "title": "Find one equal group of the original whole",
+              "lines": [
+                "360 ÷ 20 = 18."
+              ]
+            },
+            {
+              "title": "Select the required equal groups",
+              "lines": [
+                "18 × 7 = 126 books."
+              ]
+            }
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "The calculation and final amount are correct. Recheck that the written fraction equals the stated percentage.",
+        "check_method": "The fraction and final amount are correct. Record a valid fractional calculation from the original whole; the written calculation is not yet valid evidence.",
+        "check_amount": "The fraction and calculation are valid. Recheck the final answer and retain the printed unit.",
+        "check_multiple": "Check the fraction conversion, the calculation from the original whole and the final amount separately."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-08-X02",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A water tank holds 480 litres when full. It currently contains 62.5% of its full capacity. Work out the volume of water in the tank.",
+      "target": "Preserve the percentage, fraction and original whole",
+      "response": {
+        "type": "percentage_fraction_amount",
+        "require_fraction_method": false,
+        "percent": 62.5,
+        "whole": 480,
+        "unit": "litres"
+      },
+      "answer": {
+        "value": {
+          "amount": "300"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The volume represents the stated proportion of the tank’s full capacity.",
+        "correct_after_support": "Correct. The volume represents the stated proportion of the tank’s full capacity.",
+        "on_correct_math": "62.5% = 62.5/100 = 625/1000 = 5/8. → 480 ÷ 8 = 60. → 60 × 5 = 300 litres.",
+        "on_incorrect_attempt_1": "Use the full capacity as the original whole and choose any exact method for the filled proportion.",
+        "on_incorrect_attempt_2": "An exact fractional, benchmark or decimal method is valid. Do not replace the full capacity with an intermediate part.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "62.5% = 62.5/100 = 625/1000 = 5/8. → 480 ÷ 8 = 60. → 60 × 5 = 300 litres."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the full capacity as the original whole and choose any exact method for the filled proportion.",
+        "hint_2": "An exact fractional, benchmark or decimal method is valid. Do not replace the full capacity with an intermediate part.",
+        "worked_solution": "62.5% = 62.5/100 = 625/1000 = 5/8. → 480 ÷ 8 = 60. → 60 × 5 = 300 litres."
+      },
+      "working": [
+        "62.5% = 62.5/100 = 625/1000 = 5/8.",
+        "480 ÷ 8 = 60.",
+        "60 × 5 = 300 litres."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_fraction_amount",
+          "title": "Keep the original quantity and its unit",
+          "given": "62.5% of 480 litres",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 62.5,
+          "whole": 480,
+          "n": 5,
+          "d": 8,
+          "unit": "litres",
+          "steps": [
+            "62.5% = 62.5/100 = 625/1000 = 5/8.",
+            "480 ÷ 8 = 60.",
+            "60 × 5 = 300 litres."
+          ],
+          "stages": [
+            {
+              "title": "Use an equivalent fraction",
+              "lines": [
+                "62.5% = 62.5/100 = 625/1000 = 5/8."
+              ]
+            },
+            {
+              "title": "Find one equal group of the original whole",
+              "lines": [
+                "480 ÷ 8 = 60."
+              ]
+            },
+            {
+              "title": "Select the required equal groups",
+              "lines": [
+                "60 × 5 = 300 litres."
+              ]
+            }
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "The calculation and final amount are correct. Recheck that the written fraction equals the stated percentage.",
+        "check_method": "The final amount is correct, but the recorded calculation is not valid. Correct the calculation or remove optional work that you did not use.",
+        "check_amount": "Recheck the selected portion of the original whole and keep its unit.",
+        "check_multiple": "Recheck the original whole, the requested percentage and any recorded calculation."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-08-X03",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A roll of fabric is 240 m long. A factory uses 45% of the fabric. Work out the length of fabric used.",
+      "target": "Preserve the percentage, fraction and original whole",
+      "response": {
+        "type": "percentage_fraction_amount",
+        "require_fraction_method": false,
+        "percent": 45,
+        "whole": 240,
+        "unit": "m"
+      },
+      "answer": {
+        "value": {
+          "amount": "108"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The answer gives the used length, measured in metres.",
+        "correct_after_support": "Correct. The answer gives the used length, measured in metres.",
+        "on_correct_math": "45% = 45/100 = 9/20. → 240 ÷ 20 = 12. → 12 × 9 = 108 m.",
+        "on_incorrect_attempt_1": "Use the original fabric length as the whole and find only the portion used.",
+        "on_incorrect_attempt_2": "Any exact method is accepted; preserve metres and do not report the unused remainder.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "45% = 45/100 = 9/20. → 240 ÷ 20 = 12. → 12 × 9 = 108 m."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the original fabric length as the whole and find only the portion used.",
+        "hint_2": "Any exact method is accepted; preserve metres and do not report the unused remainder.",
+        "worked_solution": "45% = 45/100 = 9/20. → 240 ÷ 20 = 12. → 12 × 9 = 108 m."
+      },
+      "working": [
+        "45% = 45/100 = 9/20.",
+        "240 ÷ 20 = 12.",
+        "12 × 9 = 108 m."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_fraction_amount",
+          "title": "Keep the original quantity and its unit",
+          "given": "45% of 240 m",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 45,
+          "whole": 240,
+          "n": 9,
+          "d": 20,
+          "unit": "m",
+          "steps": [
+            "45% = 45/100 = 9/20.",
+            "240 ÷ 20 = 12.",
+            "12 × 9 = 108 m."
+          ],
+          "stages": [
+            {
+              "title": "Use an equivalent fraction",
+              "lines": [
+                "45% = 45/100 = 9/20."
+              ]
+            },
+            {
+              "title": "Find one equal group of the original whole",
+              "lines": [
+                "240 ÷ 20 = 12."
+              ]
+            },
+            {
+              "title": "Select the required equal groups",
+              "lines": [
+                "12 × 9 = 108 m."
+              ]
+            }
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "The calculation and final amount are correct. Recheck that the written fraction equals the stated percentage.",
+        "check_method": "The final amount is correct, but the recorded calculation is not valid. Correct the calculation or remove optional work that you did not use.",
+        "check_amount": "Recheck the selected portion of the original whole and keep its unit.",
+        "check_multiple": "Recheck the original whole, the requested percentage and any recorded calculation."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-08-X04",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A student writes 40% = 2/5 and then calculates 90 ÷ 2 × 5. Which statement is correct?",
+      "target": "Preserve the percentage, fraction and original whole",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "The fraction is correct, but the denominator and numerator have been used in the wrong roles.",
+          "The fraction should be 5/2.",
+          "The method is correct.",
+          "The student should divide 40 by 90."
+        ],
+        "math_layout": "decimal_compound_fraction"
+      },
+      "answer": {
+        "value": "The fraction is correct, but the denominator and numerator have been used in the wrong roles."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The conversion is valid; the calculation reverses the two fraction roles.",
+        "correct_after_support": "Correct. The conversion is valid; the calculation reverses the two fraction roles.",
+        "on_correct_math": "40% = 2/5 is correct. → The denominator 5 creates equal groups; the numerator 2 selects groups. → The valid fractional calculation is 90 ÷ 5 × 2 = 36.",
+        "on_incorrect_attempt_1": "Check the conversion separately from the roles used in the calculation.",
+        "on_incorrect_attempt_2": "A correct fraction does not make a reversed division and multiplication valid.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "40% = 2/5 is correct. → The denominator 5 creates equal groups; the numerator 2 selects groups. → The valid fractional calculation is 90 ÷ 5 × 2 = 36."
+      },
+      "mathematical_support": {
+        "hint_1": "Check the conversion separately from the roles used in the calculation.",
+        "hint_2": "A correct fraction does not make a reversed division and multiplication valid.",
+        "worked_solution": "40% = 2/5 is correct. → The denominator 5 creates equal groups; the numerator 2 selects groups. → The valid fractional calculation is 90 ÷ 5 × 2 = 36."
+      },
+      "working": [
+        "40% = 2/5 is correct.",
+        "The denominator 5 creates equal groups; the numerator 2 selects groups.",
+        "The valid fractional calculation is 90 ÷ 5 × 2 = 36."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_fraction_amount",
+          "title": "Distinguish conversion from operation roles",
+          "given": "40% = 2/5; student calculation: 90 ÷ 2 × 5",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "40% = 2/5 is correct.",
+            "The denominator 5 creates equal groups; the numerator 2 selects groups.",
+            "The valid fractional calculation is 90 ÷ 5 × 2 = 36."
+          ]
+        }
+      },
+      "response_feedback": {
+        "The fraction should be 5/2.": "The stated two fifths is already correct. Reversing it would change the percentage.",
+        "The method is correct.": "The calculation divides by the numerator and multiplies by the denominator, reversing their roles.",
+        "The student should divide 40 by 90.": "Dividing the percentage number by the whole does not repair the fractional calculation."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-08-E01",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "exit",
+      "prompt": "Final check: use a fractional equivalent to find 40% of 135.",
+      "target": "Preserve the percentage, fraction and original whole",
+      "response": {
+        "type": "percentage_fraction_amount",
+        "require_fraction_method": true,
+        "percent": 40,
+        "whole": 135,
+        "unit": ""
+      },
+      "answer": {
+        "value": {
+          "n": "2",
+          "d": "5",
+          "calculation": "135 ÷ 5 × 2",
+          "amount": "54"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The conversion and visible fractional method support the final amount.",
+        "correct_after_support": "Correct. The conversion and visible fractional method support the final amount.",
+        "on_correct_math": "40% = 40/100 = 2/5. → 135 ÷ 5 = 27. → 27 × 2 = 54.",
+        "on_incorrect_attempt_1": "Rename the percentage as an exact fraction, then apply it to the original whole.",
+        "on_incorrect_attempt_2": "The denominator creates equal groups and the numerator selects them. Keep every calculation tied to the original amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "40% = 40/100 = 2/5. → 135 ÷ 5 = 27. → 27 × 2 = 54."
+      },
+      "mathematical_support": {
+        "hint_1": "Rename the percentage as an exact fraction, then apply it to the original whole.",
+        "hint_2": "The denominator creates equal groups and the numerator selects them. Keep every calculation tied to the original amount.",
+        "worked_solution": "40% = 40/100 = 2/5. → 135 ÷ 5 = 27. → 27 × 2 = 54."
+      },
+      "working": [
+        "40% = 40/100 = 2/5.",
+        "135 ÷ 5 = 27.",
+        "27 × 2 = 54."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_fraction_amount",
+          "title": "Find the selected part of the original whole",
+          "given": "40% of 135",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 40,
+          "whole": 135,
+          "n": 2,
+          "d": 5,
+          "unit": "",
+          "steps": [
+            "40% = 40/100 = 2/5.",
+            "135 ÷ 5 = 27.",
+            "27 × 2 = 54."
+          ],
+          "stages": [
+            {
+              "title": "Use an equivalent fraction",
+              "lines": [
+                "40% = 40/100 = 2/5."
+              ]
+            },
+            {
+              "title": "Find one equal group of the original whole",
+              "lines": [
+                "135 ÷ 5 = 27."
+              ]
+            },
+            {
+              "title": "Select the required equal groups",
+              "lines": [
+                "27 × 2 = 54."
+              ]
+            }
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "The calculation and final amount are correct. Recheck that the written fraction equals the stated percentage.",
+        "check_method": "The fraction and final amount are correct. Record a valid fractional calculation from the original whole; the written calculation is not yet valid evidence.",
+        "check_amount": "The fraction and calculation are valid. Recheck the final answer and retain the printed unit.",
+        "check_multiple": "Check the fraction conversion, the calculation from the original whole and the final amount separately."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-08-E02",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "exit",
+      "prompt": "Final check: use a fractional equivalent to find 55% of 240.",
+      "target": "Preserve the percentage, fraction and original whole",
+      "response": {
+        "type": "percentage_fraction_amount",
+        "require_fraction_method": true,
+        "percent": 55,
+        "whole": 240,
+        "unit": ""
+      },
+      "answer": {
+        "value": {
+          "n": "11",
+          "d": "20",
+          "calculation": "240 ÷ 20 × 11",
+          "amount": "132"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The exact fractional calculation preserves the original whole.",
+        "correct_after_support": "Correct. The exact fractional calculation preserves the original whole.",
+        "on_correct_math": "55% = 55/100 = 11/20. → 240 ÷ 20 = 12. → 12 × 11 = 132.",
+        "on_incorrect_attempt_1": "Rename the percentage as an exact fraction, then apply it to the original whole.",
+        "on_incorrect_attempt_2": "The denominator creates equal groups and the numerator selects them. Keep every calculation tied to the original amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "55% = 55/100 = 11/20. → 240 ÷ 20 = 12. → 12 × 11 = 132."
+      },
+      "mathematical_support": {
+        "hint_1": "Rename the percentage as an exact fraction, then apply it to the original whole.",
+        "hint_2": "The denominator creates equal groups and the numerator selects them. Keep every calculation tied to the original amount.",
+        "worked_solution": "55% = 55/100 = 11/20. → 240 ÷ 20 = 12. → 12 × 11 = 132."
+      },
+      "working": [
+        "55% = 55/100 = 11/20.",
+        "240 ÷ 20 = 12.",
+        "12 × 11 = 132."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_fraction_amount",
+          "title": "Find the selected part of the original whole",
+          "given": "55% of 240",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 55,
+          "whole": 240,
+          "n": 11,
+          "d": 20,
+          "unit": "",
+          "steps": [
+            "55% = 55/100 = 11/20.",
+            "240 ÷ 20 = 12.",
+            "12 × 11 = 132."
+          ],
+          "stages": [
+            {
+              "title": "Use an equivalent fraction",
+              "lines": [
+                "55% = 55/100 = 11/20."
+              ]
+            },
+            {
+              "title": "Find one equal group of the original whole",
+              "lines": [
+                "240 ÷ 20 = 12."
+              ]
+            },
+            {
+              "title": "Select the required equal groups",
+              "lines": [
+                "12 × 11 = 132."
+              ]
+            }
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "The calculation and final amount are correct. Recheck that the written fraction equals the stated percentage.",
+        "check_method": "The fraction and final amount are correct. Record a valid fractional calculation from the original whole; the written calculation is not yet valid evidence.",
+        "check_amount": "The fraction and calculation are valid. Recheck the final answer and retain the printed unit.",
+        "check_multiple": "Check the fraction conversion, the calculation from the original whole and the final amount separately."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-08-E03",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "exit",
+      "prompt": "Final check: a container holds 224 litres. Use a fractional equivalent to find 37.5% of this volume.",
+      "target": "Preserve the percentage, fraction and original whole",
+      "response": {
+        "type": "percentage_fraction_amount",
+        "require_fraction_method": true,
+        "percent": 37.5,
+        "whole": 224,
+        "unit": "litres"
+      },
+      "answer": {
+        "value": {
+          "n": "3",
+          "d": "8",
+          "calculation": "224 ÷ 8 × 3",
+          "amount": "84"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The fractional method gives the requested volume in litres.",
+        "correct_after_support": "Correct. The fractional method gives the requested volume in litres.",
+        "on_correct_math": "37.5% = 37.5/100 = 375/1000 = 3/8. → 224 ÷ 8 = 28. → 28 × 3 = 84 litres.",
+        "on_incorrect_attempt_1": "Rename the percentage as an exact fraction, then apply it to the original whole.",
+        "on_incorrect_attempt_2": "The denominator creates equal groups and the numerator selects them. Keep every calculation tied to the original amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "37.5% = 37.5/100 = 375/1000 = 3/8. → 224 ÷ 8 = 28. → 28 × 3 = 84 litres."
+      },
+      "mathematical_support": {
+        "hint_1": "Rename the percentage as an exact fraction, then apply it to the original whole.",
+        "hint_2": "The denominator creates equal groups and the numerator selects them. Keep every calculation tied to the original amount.",
+        "worked_solution": "37.5% = 37.5/100 = 375/1000 = 3/8. → 224 ÷ 8 = 28. → 28 × 3 = 84 litres."
+      },
+      "working": [
+        "37.5% = 37.5/100 = 375/1000 = 3/8.",
+        "224 ÷ 8 = 28.",
+        "28 × 3 = 84 litres."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_fraction_amount",
+          "title": "Keep the original quantity and its unit",
+          "given": "37.5% of 224 litres",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 37.5,
+          "whole": 224,
+          "n": 3,
+          "d": 8,
+          "unit": "litres",
+          "steps": [
+            "37.5% = 37.5/100 = 375/1000 = 3/8.",
+            "224 ÷ 8 = 28.",
+            "28 × 3 = 84 litres."
+          ],
+          "stages": [
+            {
+              "title": "Use an equivalent fraction",
+              "lines": [
+                "37.5% = 37.5/100 = 375/1000 = 3/8."
+              ]
+            },
+            {
+              "title": "Find one equal group of the original whole",
+              "lines": [
+                "224 ÷ 8 = 28."
+              ]
+            },
+            {
+              "title": "Select the required equal groups",
+              "lines": [
+                "28 × 3 = 84 litres."
+              ]
+            }
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "The calculation and final amount are correct. Recheck that the written fraction equals the stated percentage.",
+        "check_method": "The fraction and final amount are correct. Record a valid fractional calculation from the original whole; the written calculation is not yet valid evidence.",
+        "check_amount": "The fraction and calculation are valid. Recheck the final answer and retain the printed unit.",
+        "check_multiple": "Check the fraction conversion, the calculation from the original whole and the final amount separately."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    }
+  ],
+  "canonical_lesson": {
+    "version": "PA08-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

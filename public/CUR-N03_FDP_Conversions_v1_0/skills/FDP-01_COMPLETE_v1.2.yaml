@@ -1,0 +1,2100 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "FDP-01 - Interpret tenths and hundredths as fractions and decimals",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-16",
+      "sha256": "95bfec3e400157fb41453b68ad71265798178aeb931d43fb8323ac817cd27ebd"
+    },
+    "authored_scope": "Match tenths and hundredths written as fractions and decimals.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "FDP01-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "verified_desktop_ready_phone_locked_placeholder_failure_paired_drafts_feedback_review_resume_320_390",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        3,
+        4,
+        5,
+        6,
+        12,
+        14,
+        15,
+        16
+      ],
+      "source_repairs_consulted": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        15,
+        16
+      ],
+      "note": "All 16 source pages and the bulk configuration reviewed. Active source pages rendered. All approved active questions restored, with paired guided blanks and fraction/decimal answers. Printed denominators are not editable. Leading decimal points and trailing-zero equivalents accepted; percentages rejected. No simplification required. Final models and feedback deferred until all four responses lock. No diagnostic confirmation, prerequisite state change or delayed retrieval activated."
+    }
+  },
+  "identity": {
+    "id": "FDP-01",
+    "slug": "interpret-tenths-and-hundredths-as-fractions-and-decimals",
+    "title": "Interpret tenths and hundredths as fractions and decimals",
+    "strand": "Number",
+    "cluster": "Fractions, Decimals and Percentages",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Interpret tenths and hundredths as fractions and decimals for values from zero to less than one.",
+    "success_criteria": [
+      "Connect tenths with denominator 10 and hundredths with denominator 100.",
+      "Preserve both decimal digits when counting hundredths.",
+      "Retain zero placeholders.",
+      "Complete numerical and visual equivalences without requiring simplification."
+    ],
+    "boundaries": {
+      "includes": [
+        "One and two decimal places",
+        "Denominators 10 and 100",
+        "Zero placeholders",
+        "Model and short context interpretation"
+      ],
+      "excludes": [
+        "Percentages",
+        "Fraction simplification",
+        "Thousandths",
+        "Values at or above one",
+        "General division and recurring decimals",
+        "Entry, Diagnostic and delayed Retrieval routes"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [],
+    "entry_assumptions": [
+      "The learner can read the quantities and use the required whole-number arithmetic."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "single_choice",
+      "integer",
+      "decimal",
+      "place_value_pair"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    },
+    "place_value_profile": true
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "The denominator records the place value.",
+    "invariant": "Fraction and decimal name the same part of the same whole.",
+    "must_notice": [
+      "Tenths are the first decimal place.",
+      "Hundredths are the second decimal place.",
+      "Both digits contribute to the total hundredths.",
+      "A zero placeholder preserves later place values."
+    ],
+    "common_confusions": [
+      "Using a tenths denominator for hundredths",
+      "Dropping the zero placeholder",
+      "Reversing numerator and denominator",
+      "Counting lines, rows or unselected parts",
+      "Using only one decimal digit"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "Four tenths of one whole",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Four tenths of one whole",
+          "initial_state": "Four tenths of one whole",
+          "model": {
+            "kind": "place_value_conversion",
+            "mode": "conversion",
+            "title": "Four tenths",
+            "numerator": 4,
+            "denominator": 10,
+            "decimal": "0.4",
+            "given": "0.4 = 4/10",
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 3,
+            "model_given": true,
+            "object": "strip",
+            "model_caption": "10 equal parts, with 4 shaded."
+          }
+        },
+        "narration": {
+          "script": "The strip is one whole split into equal tenths. The shaded parts and the decimal name the same amount."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Tenths within hundredths",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Tenths within hundredths",
+          "initial_state": "Tenths within hundredths",
+          "model": {
+            "kind": "place_value_conversion",
+            "mode": "conversion",
+            "title": "The same amount, two forms",
+            "numerator": 37,
+            "denominator": 100,
+            "decimal": "0.37",
+            "given": "0.37 = 37/100",
+            "math_text": true,
+            "compact_captions": true,
+            "steps": [
+              "3 tenths + 7 hundredths",
+              "30 hundredths + 7 hundredths",
+              "37 hundredths",
+              "37/100",
+              "0.37 = 3/10 + 7/100 = 30/100 + 7/100 = 37/100"
+            ],
+            "solved": true,
+            "model_given": true,
+            "phase": 5
+          }
+        },
+        "narration": {
+          "script": "The full rows represent tenths. Each row contains smaller hundredths. Include those rows and the extra shaded squares."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Explain the equivalence",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Explain the equivalence",
+          "initial_state": "Explain the equivalence",
+          "model": {
+            "kind": "place_value_conversion",
+            "mode": "conversion",
+            "title": "The same amount, two forms",
+            "numerator": 37,
+            "denominator": 100,
+            "decimal": "0.37",
+            "given": "0.37 = 37/100",
+            "math_text": true,
+            "compact_captions": true,
+            "steps": [
+              "3 tenths + 7 hundredths",
+              "30 hundredths + 7 hundredths",
+              "37 hundredths",
+              "37/100",
+              "0.37 = 3/10 + 7/100 = 30/100 + 7/100 = 37/100"
+            ],
+            "explanation_question": true
+          }
+        },
+        "narration": {
+          "script": "Choose the explanation that accounts for both decimal places."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "FDP-01-C01"
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Read the place value",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Read the place value",
+          "initial_state": "Read the place value",
+          "model": {
+            "kind": "place_value_conversion",
+            "mode": "conversion",
+            "title": "Write 0.46 with denominator 100",
+            "numerator": 46,
+            "denominator": 100,
+            "decimal": "0.46",
+            "given": "0.46",
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "Start with the number of decimal places. The chart identifies the part size before we write the fraction."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Count the hundredths",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Count the hundredths",
+          "initial_state": "Count the hundredths",
+          "model": {
+            "kind": "place_value_conversion",
+            "mode": "conversion",
+            "title": "Count the hundredths",
+            "numerator": 46,
+            "denominator": 100,
+            "decimal": "0.46",
+            "given": "0.46",
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "Keep the tenths and the extra hundredths together. Their combined count will be the numerator."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T06"
+      },
+      {
+        "id": "T06",
+        "stage": "teaching",
+        "purpose": "Write the same value as a fraction",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Write the same value as a fraction",
+          "initial_state": "Write the same value as a fraction",
+          "model": {
+            "kind": "place_value_conversion",
+            "mode": "conversion",
+            "title": "The required fraction",
+            "numerator": 46,
+            "denominator": 100,
+            "decimal": "0.46",
+            "given": "0.46",
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "The numerator records the count. The denominator records how many equal parts make one whole. No simplification is needed here."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T07"
+      },
+      {
+        "id": "T07",
+        "stage": "teaching",
+        "purpose": "Choose a method",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Choose a method",
+          "initial_state": "Choose a method",
+          "model": {
+            "kind": "place_value_conversion",
+            "mode": "conversion",
+            "title": "Choose a place-value method",
+            "numerator": 52,
+            "denominator": 100,
+            "decimal": "0.52",
+            "given": "0.52",
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Which option keeps both place values and uses the appropriate denominator?"
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "FDP-01-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "FDP-01-G01",
+        "support_level": "high",
+        "pre_question_script": "Complete the named-part count and the fraction numerator yourself.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "faded",
+        "question_ref": "FDP-01-G02",
+        "support_level": "reduced",
+        "pre_question_script": "Now notice what changes when a zero holds the first decimal place.",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "faded",
+        "question_ref": "FDP-01-G03",
+        "support_level": "reduced",
+        "pre_question_script": "Compare the values and choose a symbol.",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "independent_transfer",
+        "question_ref": "FDP-01-G04",
+        "support_level": "none",
+        "pre_question_script": "Choose the explanation for this decimal.",
+        "correct_next": "P01"
+      }
+    },
+    "practice": {
+      "intro_script": "Work through the equal forms, then use them in diagrams and contexts. The denominator is printed whenever only a numerator is needed.",
+      "question_order": [
+        "FDP-01-P01",
+        "FDP-01-P02",
+        "FDP-01-P03",
+        "FDP-01-P04",
+        "FDP-01-P05",
+        "FDP-01-P06",
+        "FDP-01-P07",
+        "FDP-01-X01",
+        "FDP-01-X02",
+        "FDP-01-X03",
+        "FDP-01-X04"
+      ],
+      "question_count": 11,
+      "feedback_policy": "Question-specific clues, then sequential working; the learner corrects their own response."
+    },
+    "exit": {
+      "intro_script": "Complete three equivalences and one statement without hints or models. Each response locks. Feedback waits until all four are saved.",
+      "primary_question_refs": [
+        "FDP-01-E01",
+        "FDP-01-E02",
+        "FDP-01-E03",
+        "FDP-01-E04"
+      ],
+      "confirmation_question_refs": [],
+      "submission_policy": "One locked response per item. No model, correctness or repair before all four are submitted.",
+      "mastery_policy": {
+        "profile": "all_primary_unsupported_deferred",
+        "require_all": true,
+        "source_page": 12,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "All three equivalences and the place-value statement are correct. You kept the placeholder and completed the final check without support.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Keep the place values connected",
+      "ryan_script": "One or more final responses need another pass. Use the reviewed working to check the part size, the count and any zero placeholder.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "FDP-01-C01",
+      "source_ref": {
+        "page": 4
+      },
+      "stage": "practice",
+      "prompt": "Explain why these two forms are equal: 0.37 = 37/100.",
+      "target": "Interpret tenths and hundredths as equal fractions and decimals",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "The digits 3 and 7 are added to make 10.",
+          "Three tenths is thirty hundredths, and seven more hundredths makes thirty-seven hundredths.",
+          "Every decimal must have denominator 10.",
+          "The numerator and denominator are written in reverse order."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "Three tenths is thirty hundredths, and seven more hundredths makes thirty-seven hundredths."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Yes. Both place values contribute to the total number of hundredths.",
+        "correct_after_support": "Yes. Both place values contribute to the total number of hundredths.",
+        "on_correct_math": "3 tenths + 7 hundredths → 30 hundredths + 7 hundredths → 37 hundredths → 37/100 → 0.37 = 3/10 + 7/100 = 30/100 + 7/100 = 37/100",
+        "on_incorrect_attempt_1": "Consider the value of each digit, not just the two digit names.",
+        "on_incorrect_attempt_2": "The first decimal digit counts tenths; each tenth contains smaller hundredths.",
+        "on_locked_incorrect": "Your response is saved. The answers will be reviewed after the whole final check.",
+        "worked_explanation": "3 tenths + 7 hundredths → 30 hundredths + 7 hundredths → 37 hundredths → 37/100 → 0.37 = 3/10 + 7/100 = 30/100 + 7/100 = 37/100"
+      },
+      "mathematical_support": {
+        "hint_1": "Consider the value of each digit, not just the two digit names.",
+        "hint_2": "The first decimal digit counts tenths; each tenth contains smaller hundredths.",
+        "worked_solution": "3 tenths + 7 hundredths → 30 hundredths + 7 hundredths → 37 hundredths → 37/100 → 0.37 = 3/10 + 7/100 = 30/100 + 7/100 = 37/100"
+      },
+      "working": [
+        "3 tenths + 7 hundredths",
+        "30 hundredths + 7 hundredths",
+        "37 hundredths",
+        "37/100",
+        "0.37 = 3/10 + 7/100 = 30/100 + 7/100 = 37/100"
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "place_value_conversion",
+          "mode": "conversion",
+          "title": "The same amount, two forms",
+          "numerator": 37,
+          "denominator": 100,
+          "decimal": "0.37",
+          "given": "0.37 = 37/100",
+          "math_text": true,
+          "compact_captions": true,
+          "steps": [
+            "3 tenths + 7 hundredths",
+            "30 hundredths + 7 hundredths",
+            "37 hundredths",
+            "37/100",
+            "0.37 = 3/10 + 7/100 = 30/100 + 7/100 = 37/100"
+          ],
+          "explanation_question": true
+        }
+      },
+      "response_feedback": {
+        "The digits 3 and 7 are added to make 10.": "Those digits occupy different places. Adding their digit names ignores the different part sizes.",
+        "Every decimal must have denominator 10.": "A hundredths fraction uses a different part size from a tenths fraction. Check the second decimal place.",
+        "The numerator and denominator are written in reverse order.": "The numerator counts the selected parts; the denominator counts equal parts in one whole. Reversing them changes the amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-01-C02",
+      "source_ref": {
+        "page": 4
+      },
+      "stage": "practice",
+      "prompt": "Which method correctly interprets 0.52?",
+      "target": "Interpret tenths and hundredths as equal fractions and decimals",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Two digits follow the decimal point, so 0.52 = 52/100.",
+          "Two digits follow the decimal point, so 0.52 = 52/10.",
+          "Add the digits: 5 + 2 = 7, so 0.52 = 7/100.",
+          "Reverse the numbers, so 0.52 = 100/52."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "Two digits follow the decimal point, so 0.52 = 52/100."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The selected method preserves the value of both decimal digits.",
+        "correct_after_support": "Correct. The selected method preserves the value of both decimal digits.",
+        "on_correct_math": "Two decimal places measure hundredths. → 0.52 is 52 hundredths. → 0.52 = 52/100.",
+        "on_incorrect_attempt_1": "The number of decimal places determines the size of each part.",
+        "on_incorrect_attempt_2": "The number of decimal places determines the size of each part.",
+        "on_locked_incorrect": "Your response is saved. The answers will be reviewed after the whole final check.",
+        "worked_explanation": "Two decimal places measure hundredths. → 0.52 is 52 hundredths. → 0.52 = 52/100."
+      },
+      "mathematical_support": {
+        "hint_1": "The number of decimal places determines the size of each part.",
+        "hint_2": "Match the number of equal parts in one whole to the denominator. Then keep the digit in its correct decimal place.",
+        "worked_solution": "Two decimal places measure hundredths. → 0.52 is 52 hundredths. → 0.52 = 52/100."
+      },
+      "working": [
+        "Two decimal places measure hundredths.",
+        "0.52 is 52 hundredths.",
+        "0.52 = 52/100."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "place_value_conversion",
+          "mode": "conversion",
+          "title": "Choose a place-value method",
+          "numerator": 52,
+          "denominator": 100,
+          "decimal": "0.52",
+          "given": "0.52",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "Two digits follow the decimal point, so 0.52 = 52/10.": "This notices two places but gives a denominator for tenths. Match the denominator to the smallest place shown.",
+        "Add the digits: 5 + 2 = 7, so 0.52 = 7/100.": "The digits do not represent equally sized parts. Preserve their place values instead of adding their names.",
+        "Reverse the numbers, so 0.52 = 100/52.": "The equal parts in the whole belong in the denominator. Reversing the two counts changes the value."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-01-G01",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "Complete both blanks: 0.8 = ? tenths = ?/10.",
+      "target": "Interpret tenths and hundredths as equal fractions and decimals",
+      "response": {
+        "type": "place_value_pair",
+        "pair_kind": "count_and_numerator",
+        "fixedDenominator": 10,
+        "input_label": "Complete both blanks"
+      },
+      "answer": {
+        "value": {
+          "count": 8,
+          "n": 8
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both blanks count the same tenths.",
+        "correct_after_support": "Correct. Both blanks count the same tenths.",
+        "on_correct_math": "0.8 is 8 tenths. → 8 tenths = 8/10. → 0.8 = 8/10.",
+        "on_incorrect_attempt_1": "The first place after the decimal point counts tenths.",
+        "on_incorrect_attempt_2": "The first place after the decimal point counts tenths.",
+        "on_locked_incorrect": "Your response is saved. The answers will be reviewed after the whole final check.",
+        "worked_explanation": "0.8 is 8 tenths. → 8 tenths = 8/10. → 0.8 = 8/10."
+      },
+      "mathematical_support": {
+        "hint_1": "The first place after the decimal point counts tenths.",
+        "hint_2": "Match the number of equal parts in one whole to the denominator. Then keep the digit in its correct decimal place.",
+        "worked_solution": "0.8 is 8 tenths. → 8 tenths = 8/10. → 0.8 = 8/10."
+      },
+      "working": [
+        "0.8 is 8 tenths.",
+        "8 tenths = 8/10.",
+        "0.8 = 8/10."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "place_value_conversion",
+          "mode": "conversion",
+          "title": "Connect the count to the fraction",
+          "numerator": 8,
+          "denominator": 10,
+          "decimal": "0.8",
+          "given": "0.8 = ? tenths = ?/10",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "count_only": "The fraction numerator is correct. Check that the named-part count records that same amount.",
+        "numerator_only": "Your named-part count is correct. Use that count as the numerator over the printed denominator.",
+        "check_place_value": "Read the tenths digit and use its count in both blanks."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-01-G02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "faded",
+      "prompt": "Complete both blanks: 0.08 = ? hundredths = ?/100.",
+      "target": "Interpret tenths and hundredths as equal fractions and decimals",
+      "response": {
+        "type": "place_value_pair",
+        "pair_kind": "count_and_numerator",
+        "fixedDenominator": 100,
+        "input_label": "Complete both blanks"
+      },
+      "answer": {
+        "value": {
+          "count": 8,
+          "n": 8
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both blanks count hundredths; the zero keeps the tenths place empty.",
+        "correct_after_support": "Correct. Both blanks count hundredths; the zero keeps the tenths place empty.",
+        "on_correct_math": "0.08 is 8 hundredths. → 8 hundredths = 8/100. → 0.08 = 8/100.",
+        "on_incorrect_attempt_1": "The zero holds the tenths place. Read the next digit as a count of hundredths.",
+        "on_incorrect_attempt_2": "The zero holds the tenths place. Read the next digit as a count of hundredths.",
+        "on_locked_incorrect": "Your response is saved. The answers will be reviewed after the whole final check.",
+        "worked_explanation": "0.08 is 8 hundredths. → 8 hundredths = 8/100. → 0.08 = 8/100."
+      },
+      "mathematical_support": {
+        "hint_1": "The zero holds the tenths place. Read the next digit as a count of hundredths.",
+        "hint_2": "Match the number of equal parts in one whole to the denominator. Then keep the digit in its correct decimal place.",
+        "worked_solution": "0.08 is 8 hundredths. → 8 hundredths = 8/100. → 0.08 = 8/100."
+      },
+      "working": [
+        "0.08 is 8 hundredths.",
+        "8 hundredths = 8/100.",
+        "0.08 = 8/100."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "place_value_conversion",
+          "mode": "conversion",
+          "title": "Connect the count to the fraction",
+          "numerator": 8,
+          "denominator": 100,
+          "decimal": "0.08",
+          "given": "0.08 = ? hundredths = ?/100",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "count_only": "The fraction numerator is correct. Check that the named-part count records that same amount.",
+        "numerator_only": "Your named-part count is correct. Use that count as the numerator over the printed denominator.",
+        "check_place_value": "Keep the zero in the tenths place. The visible nonzero digit counts hundredths, not tenths."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-01-G03",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "faded",
+      "prompt": "Choose the symbol that completes 0.8 ? 0.08.",
+      "target": "Interpret tenths and hundredths as equal fractions and decimals",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          ">",
+          "<",
+          "="
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": ">"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The digit in the tenths place represents the larger amount.",
+        "correct_after_support": "Correct. The digit in the tenths place represents the larger amount.",
+        "on_correct_math": "0.8 = 80/100. → 0.08 = 8/100. → 80 hundredths > 8 hundredths, so 0.8 > 0.08.",
+        "on_incorrect_attempt_1": "The same digit has different values in different positions.",
+        "on_incorrect_attempt_2": "The same digit has different values in different positions.",
+        "on_locked_incorrect": "Your response is saved. The answers will be reviewed after the whole final check.",
+        "worked_explanation": "0.8 = 80/100. → 0.08 = 8/100. → 80 hundredths > 8 hundredths, so 0.8 > 0.08."
+      },
+      "mathematical_support": {
+        "hint_1": "The same digit has different values in different positions.",
+        "hint_2": "Match the number of equal parts in one whole to the denominator. Then keep the digit in its correct decimal place.",
+        "worked_solution": "0.8 = 80/100. → 0.08 = 8/100. → 80 hundredths > 8 hundredths, so 0.8 > 0.08."
+      },
+      "working": [
+        "0.8 = 80/100.",
+        "0.08 = 8/100.",
+        "80 hundredths > 8 hundredths, so 0.8 > 0.08."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "place_value_conversion",
+          "mode": "comparison",
+          "title": "Compare the two decimals",
+          "given": "0.8 ? 0.08",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "<": "That puts the hundredths amount above the tenths amount. Compare the size represented by each position.",
+        "=": "Matching digit names do not mean matching values. The digit occupies a different place in each decimal."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-01-G04",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "independent_transfer",
+      "prompt": "Which statement correctly describes 0.08?",
+      "target": "Interpret tenths and hundredths as equal fractions and decimals",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "0.08 is eight tenths because the digit 8 is visible.",
+          "0.08 is eight hundredths because the zero holds the tenths place.",
+          "0.8 and 0.08 are equal because both contain the digit 8.",
+          "0.08 is eighty hundredths."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "0.08 is eight hundredths because the zero holds the tenths place."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Yes. The placeholder keeps the nonzero digit in the hundredths place.",
+        "correct_after_support": "Yes. The placeholder keeps the nonzero digit in the hundredths place.",
+        "on_correct_math": "The zero occupies the tenths place. → The digit 8 occupies the hundredths place. → 0.08 = 8/100.",
+        "on_incorrect_attempt_1": "Use the position of the digit, not just its name.",
+        "on_incorrect_attempt_2": "Use the position of the digit, not just its name.",
+        "on_locked_incorrect": "Your response is saved. The answers will be reviewed after the whole final check.",
+        "worked_explanation": "The zero occupies the tenths place. → The digit 8 occupies the hundredths place. → 0.08 = 8/100."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the position of the digit, not just its name.",
+        "hint_2": "Match the number of equal parts in one whole to the denominator. Then keep the digit in its correct decimal place.",
+        "worked_solution": "The zero occupies the tenths place. → The digit 8 occupies the hundredths place. → 0.08 = 8/100."
+      },
+      "working": [
+        "The zero occupies the tenths place.",
+        "The digit 8 occupies the hundredths place.",
+        "0.08 = 8/100."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "place_value_conversion",
+          "mode": "conversion",
+          "title": "Explain the zero placeholder",
+          "numerator": 8,
+          "denominator": 100,
+          "decimal": "0.08",
+          "given": "0.08",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "0.08 is eight tenths because the digit 8 is visible.": "The nonzero digit is in the second decimal place. Its position matters, not just its name.",
+        "0.8 and 0.08 are equal because both contain the digit 8.": "The two digits occupy different decimal places, so their values differ.",
+        "0.08 is eighty hundredths.": "That amount would occupy the tenths place too. In the given decimal, the tenths place is empty."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-01-P01",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Write 0.3 as a fraction with denominator 10. Enter only the numerator.",
+      "target": "Interpret tenths and hundredths as equal fractions and decimals",
+      "response": {
+        "type": "integer",
+        "presentation": "fraction_builder",
+        "editableField": "numerator",
+        "fixedDenominator": 10,
+        "input_label": "Numerator"
+      },
+      "answer": {
+        "value": 3
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The numerator counts the parts of the required size.",
+        "correct_after_support": "Correct. The numerator counts the parts of the required size.",
+        "on_correct_math": "Tenths divide a whole into 10 equal parts. → 3 tenths = 3/10. → 3/10 = 0.3.",
+        "on_incorrect_attempt_1": "Count the named parts without changing the given denominator.",
+        "on_incorrect_attempt_2": "Count the named parts without changing the given denominator.",
+        "on_locked_incorrect": "Your response is saved. The answers will be reviewed after the whole final check.",
+        "worked_explanation": "Tenths divide a whole into 10 equal parts. → 3 tenths = 3/10. → 3/10 = 0.3."
+      },
+      "mathematical_support": {
+        "hint_1": "Count the named parts without changing the given denominator.",
+        "hint_2": "Match the number of equal parts in one whole to the denominator. Then keep the digit in its correct decimal place.",
+        "worked_solution": "Tenths divide a whole into 10 equal parts. → 3 tenths = 3/10. → 3/10 = 0.3."
+      },
+      "working": [
+        "Tenths divide a whole into 10 equal parts.",
+        "3 tenths = 3/10.",
+        "3/10 = 0.3."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "place_value_conversion",
+          "mode": "conversion",
+          "title": "Write the equal form",
+          "numerator": 3,
+          "denominator": 10,
+          "decimal": "0.3",
+          "given": "0.3 = ?/10",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {},
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-01-P02",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Write 0.54 as a fraction with denominator 100. Enter only the numerator.",
+      "target": "Interpret tenths and hundredths as equal fractions and decimals",
+      "response": {
+        "type": "integer",
+        "presentation": "fraction_builder",
+        "editableField": "numerator",
+        "fixedDenominator": 100,
+        "input_label": "Numerator"
+      },
+      "answer": {
+        "value": 54
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The numerator counts the parts of the required size.",
+        "correct_after_support": "Correct. The numerator counts the parts of the required size.",
+        "on_correct_math": "Hundredths divide a whole into 100 equal parts. → 54 hundredths = 54/100. → 54/100 = 0.54.",
+        "on_incorrect_attempt_1": "Count the named parts without changing the given denominator.",
+        "on_incorrect_attempt_2": "Count the named parts without changing the given denominator.",
+        "on_locked_incorrect": "Your response is saved. The answers will be reviewed after the whole final check.",
+        "worked_explanation": "Hundredths divide a whole into 100 equal parts. → 54 hundredths = 54/100. → 54/100 = 0.54."
+      },
+      "mathematical_support": {
+        "hint_1": "Count the named parts without changing the given denominator.",
+        "hint_2": "Match the number of equal parts in one whole to the denominator. Then keep the digit in its correct decimal place.",
+        "worked_solution": "Hundredths divide a whole into 100 equal parts. → 54 hundredths = 54/100. → 54/100 = 0.54."
+      },
+      "working": [
+        "Hundredths divide a whole into 100 equal parts.",
+        "54 hundredths = 54/100.",
+        "54/100 = 0.54."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "place_value_conversion",
+          "mode": "conversion",
+          "title": "Write the equal form",
+          "numerator": 54,
+          "denominator": 100,
+          "decimal": "0.54",
+          "given": "0.54 = ?/100",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "4": "That keeps only the hundredths digit. The tenths also contribute to the total count.",
+        "5": "That keeps only the tenths digit. Include the additional hundredths too.",
+        "9": "Adding the digit names ignores their different place values."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-01-P03",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Write 7/10 as a decimal.",
+      "target": "Interpret tenths and hundredths as equal fractions and decimals",
+      "response": {
+        "type": "decimal",
+        "allow_leading_decimal_point": true,
+        "input_label": "Decimal"
+      },
+      "answer": {
+        "value": "0.7"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decimal names the same fraction of one whole.",
+        "correct_after_support": "Correct. The decimal names the same fraction of one whole.",
+        "on_correct_math": "Tenths divide a whole into 10 equal parts. → 7 tenths = 7/10. → 7/10 = 0.7.",
+        "on_incorrect_attempt_1": "Use the denominator to identify the size of the equal parts.",
+        "on_incorrect_attempt_2": "Use the denominator to identify the size of the equal parts.",
+        "on_locked_incorrect": "Your response is saved. The answers will be reviewed after the whole final check.",
+        "worked_explanation": "Tenths divide a whole into 10 equal parts. → 7 tenths = 7/10. → 7/10 = 0.7."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the denominator to identify the size of the equal parts.",
+        "hint_2": "Match the number of equal parts in one whole to the denominator. Then keep the digit in its correct decimal place.",
+        "worked_solution": "Tenths divide a whole into 10 equal parts. → 7 tenths = 7/10. → 7/10 = 0.7."
+      },
+      "working": [
+        "Tenths divide a whole into 10 equal parts.",
+        "7 tenths = 7/10.",
+        "7/10 = 0.7."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "place_value_conversion",
+          "mode": "conversion",
+          "title": "Write the equal form",
+          "numerator": 7,
+          "denominator": 10,
+          "decimal": "0.7",
+          "given": "7/10 = ?",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "0.07": "That records hundredths, but the denominator names tenths."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-01-P04",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Write 9/100 as a decimal.",
+      "target": "Interpret tenths and hundredths as equal fractions and decimals",
+      "response": {
+        "type": "decimal",
+        "allow_leading_decimal_point": true,
+        "input_label": "Decimal"
+      },
+      "answer": {
+        "value": "0.09"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The placeholder keeps the nonzero digit in the hundredths place.",
+        "correct_after_support": "Correct. The placeholder keeps the nonzero digit in the hundredths place.",
+        "on_correct_math": "Hundredths divide a whole into 100 equal parts. → 9 hundredths = 9/100. → 9/100 = 0.09.",
+        "on_incorrect_attempt_1": "Keep the tenths place empty while recording the hundredths.",
+        "on_incorrect_attempt_2": "Keep the tenths place empty while recording the hundredths.",
+        "on_locked_incorrect": "Your response is saved. The answers will be reviewed after the whole final check.",
+        "worked_explanation": "Hundredths divide a whole into 100 equal parts. → 9 hundredths = 9/100. → 9/100 = 0.09."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the tenths place empty while recording the hundredths.",
+        "hint_2": "Match the number of equal parts in one whole to the denominator. Then keep the digit in its correct decimal place.",
+        "worked_solution": "Hundredths divide a whole into 100 equal parts. → 9 hundredths = 9/100. → 9/100 = 0.09."
+      },
+      "working": [
+        "Hundredths divide a whole into 100 equal parts.",
+        "9 hundredths = 9/100.",
+        "9/100 = 0.09."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "place_value_conversion",
+          "mode": "conversion",
+          "title": "Write the equal form",
+          "numerator": 9,
+          "denominator": 100,
+          "decimal": "0.09",
+          "given": "9/100 = ?",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "0.9": "That puts the digit in the tenths place. The given fraction counts hundredths."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-01-P05",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Write 0.06 as a fraction with denominator 100. Enter only the numerator.",
+      "target": "Interpret tenths and hundredths as equal fractions and decimals",
+      "response": {
+        "type": "integer",
+        "presentation": "fraction_builder",
+        "editableField": "numerator",
+        "fixedDenominator": 100,
+        "input_label": "Numerator"
+      },
+      "answer": {
+        "value": 6
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The numerator counts the parts of the required size.",
+        "correct_after_support": "Correct. The numerator counts the parts of the required size.",
+        "on_correct_math": "Hundredths divide a whole into 100 equal parts. → 6 hundredths = 6/100. → 6/100 = 0.06.",
+        "on_incorrect_attempt_1": "Count the named parts without changing the given denominator.",
+        "on_incorrect_attempt_2": "Count the named parts without changing the given denominator.",
+        "on_locked_incorrect": "Your response is saved. The answers will be reviewed after the whole final check.",
+        "worked_explanation": "Hundredths divide a whole into 100 equal parts. → 6 hundredths = 6/100. → 6/100 = 0.06."
+      },
+      "mathematical_support": {
+        "hint_1": "Count the named parts without changing the given denominator.",
+        "hint_2": "Match the number of equal parts in one whole to the denominator. Then keep the digit in its correct decimal place.",
+        "worked_solution": "Hundredths divide a whole into 100 equal parts. → 6 hundredths = 6/100. → 6/100 = 0.06."
+      },
+      "working": [
+        "Hundredths divide a whole into 100 equal parts.",
+        "6 hundredths = 6/100.",
+        "6/100 = 0.06."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "place_value_conversion",
+          "mode": "conversion",
+          "title": "Write the equal form",
+          "numerator": 6,
+          "denominator": 100,
+          "decimal": "0.06",
+          "given": "0.06 = ?/100",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "60": "That count represents tenths. The zero in the given decimal keeps the tenths place empty."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-01-P06",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "A hundred-square has 28 shaded squares. Write the shaded part as a fraction with denominator 100 and as a decimal.",
+      "target": "Interpret tenths and hundredths as equal fractions and decimals",
+      "response": {
+        "type": "place_value_pair",
+        "pair_kind": "fraction_and_decimal",
+        "fixedDenominator": 100,
+        "input_label": "Write the fraction and decimal"
+      },
+      "answer": {
+        "value": {
+          "n": 28,
+          "decimal": "0.28"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both forms describe the selected part of the same whole.",
+        "correct_after_support": "Correct. Both forms describe the selected part of the same whole.",
+        "on_correct_math": "28 of the 100 equal parts are selected. → The fraction is 28/100. → 28/100 = 0.28.",
+        "on_incorrect_attempt_1": "Count selected equal parts, then express that same amount in both forms.",
+        "on_incorrect_attempt_2": "The printed denominator names the total number of equal parts. Keep the decimal digit in the matching place.",
+        "on_locked_incorrect": "Your response is saved. The answers will be reviewed after the whole final check.",
+        "worked_explanation": "28 of the 100 equal parts are selected. → The fraction is 28/100. → 28/100 = 0.28."
+      },
+      "mathematical_support": {
+        "hint_1": "Count selected equal parts, then express that same amount in both forms.",
+        "hint_2": "The printed denominator names the total number of equal parts. Keep the decimal digit in the matching place.",
+        "worked_solution": "28 of the 100 equal parts are selected. → The fraction is 28/100. → 28/100 = 0.28."
+      },
+      "working": [
+        "28 of the 100 equal parts are selected.",
+        "The fraction is 28/100.",
+        "28/100 = 0.28."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "place_value_conversion",
+          "mode": "conversion",
+          "title": "A hundred-square with a shaded part",
+          "numerator": 28,
+          "denominator": 100,
+          "decimal": "0.28",
+          "given": "",
+          "math_text": true,
+          "compact_captions": true,
+          "object": "square",
+          "model_given": true,
+          "model_caption": "One whole, divided into 100 equal squares."
+        }
+      },
+      "response_feedback": {
+        "decimal_only": "Your fraction is correct. Keep that count and check the decimal place.",
+        "numerator_only": "Your decimal is correct. Check the numerator over the printed denominator.",
+        "check_place_value": "Count the selected regions, not grid lines or unselected regions. Both forms must describe that same amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-01-P07",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Which fraction–decimal pair is correct?",
+      "target": "Interpret tenths and hundredths as equal fractions and decimals",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "0.09 = 9/10",
+          "0.09 = 9/100",
+          "0.09 = 90/10",
+          "0.09 = 100/9"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "0.09 = 9/100"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. This pair preserves the hundredths place.",
+        "correct_after_support": "Correct. This pair preserves the hundredths place.",
+        "on_correct_math": "The digit 9 is in the hundredths place. → Nine hundredths is 9/100. → 0.09 = 9/100.",
+        "on_incorrect_attempt_1": "Keep the zero placeholder and check the denominator.",
+        "on_incorrect_attempt_2": "Keep the zero placeholder and check the denominator.",
+        "on_locked_incorrect": "Your response is saved. The answers will be reviewed after the whole final check.",
+        "worked_explanation": "The digit 9 is in the hundredths place. → Nine hundredths is 9/100. → 0.09 = 9/100."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the zero placeholder and check the denominator.",
+        "hint_2": "Match the number of equal parts in one whole to the denominator. Then keep the digit in its correct decimal place.",
+        "worked_solution": "The digit 9 is in the hundredths place. → Nine hundredths is 9/100. → 0.09 = 9/100."
+      },
+      "working": [
+        "The digit 9 is in the hundredths place.",
+        "Nine hundredths is 9/100.",
+        "0.09 = 9/100."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "place_value_conversion",
+          "mode": "conversion",
+          "title": "Recognise the equal pair",
+          "numerator": 9,
+          "denominator": 100,
+          "decimal": "0.09",
+          "given": "0.09",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "0.09 = 9/10": "This changes hundredths into tenths. The placeholder in the decimal matters.",
+        "0.09 = 90/10": "That fraction is greater than one, unlike the small decimal shown. Check both counts.",
+        "0.09 = 100/9": "This reverses the count of selected parts and the number of equal parts in one whole."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-01-X01",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "practice",
+      "prompt": "A ribbon is divided into 10 equal sections. Six sections are coloured blue. Write the blue part as a fraction with denominator 10 and as a decimal.",
+      "target": "Interpret tenths and hundredths as equal fractions and decimals",
+      "response": {
+        "type": "place_value_pair",
+        "pair_kind": "fraction_and_decimal",
+        "fixedDenominator": 10,
+        "input_label": "Write the fraction and decimal"
+      },
+      "answer": {
+        "value": {
+          "n": 6,
+          "decimal": "0.6"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both forms describe the selected part of the same whole.",
+        "correct_after_support": "Correct. Both forms describe the selected part of the same whole.",
+        "on_correct_math": "6 of the 10 equal parts are selected. → The fraction is 6/10. → 6/10 = 0.6.",
+        "on_incorrect_attempt_1": "Count selected equal parts, then express that same amount in both forms.",
+        "on_incorrect_attempt_2": "The printed denominator names the total number of equal parts. Keep the decimal digit in the matching place.",
+        "on_locked_incorrect": "Your response is saved. The answers will be reviewed after the whole final check.",
+        "worked_explanation": "6 of the 10 equal parts are selected. → The fraction is 6/10. → 6/10 = 0.6."
+      },
+      "mathematical_support": {
+        "hint_1": "Count selected equal parts, then express that same amount in both forms.",
+        "hint_2": "The printed denominator names the total number of equal parts. Keep the decimal digit in the matching place.",
+        "worked_solution": "6 of the 10 equal parts are selected. → The fraction is 6/10. → 6/10 = 0.6."
+      },
+      "working": [
+        "6 of the 10 equal parts are selected.",
+        "The fraction is 6/10.",
+        "6/10 = 0.6."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "place_value_conversion",
+          "mode": "conversion",
+          "title": "Blue sections of one ribbon",
+          "numerator": 6,
+          "denominator": 10,
+          "decimal": "0.6",
+          "given": "",
+          "math_text": true,
+          "compact_captions": true,
+          "object": "ribbon",
+          "model_given": true,
+          "model_caption": "One ribbon, divided into 10 equal sections."
+        }
+      },
+      "response_feedback": {
+        "decimal_only": "Your fraction is correct. Keep that count and check the decimal place.",
+        "numerator_only": "Your decimal is correct. Check the numerator over the printed denominator.",
+        "check_place_value": "Count the selected regions, not grid lines or unselected regions. Both forms must describe that same amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-01-X02",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "practice",
+      "prompt": "A square design contains 100 equal small squares. Forty-three are shaded. Write the shaded part as a fraction with denominator 100 and as a decimal.",
+      "target": "Interpret tenths and hundredths as equal fractions and decimals",
+      "response": {
+        "type": "place_value_pair",
+        "pair_kind": "fraction_and_decimal",
+        "fixedDenominator": 100,
+        "input_label": "Write the fraction and decimal"
+      },
+      "answer": {
+        "value": {
+          "n": 43,
+          "decimal": "0.43"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both forms describe the selected part of the same whole.",
+        "correct_after_support": "Correct. Both forms describe the selected part of the same whole.",
+        "on_correct_math": "43 of the 100 equal parts are selected. → The fraction is 43/100. → 43/100 = 0.43.",
+        "on_incorrect_attempt_1": "Count selected equal parts, then express that same amount in both forms.",
+        "on_incorrect_attempt_2": "The printed denominator names the total number of equal parts. Keep the decimal digit in the matching place.",
+        "on_locked_incorrect": "Your response is saved. The answers will be reviewed after the whole final check.",
+        "worked_explanation": "43 of the 100 equal parts are selected. → The fraction is 43/100. → 43/100 = 0.43."
+      },
+      "mathematical_support": {
+        "hint_1": "Count selected equal parts, then express that same amount in both forms.",
+        "hint_2": "The printed denominator names the total number of equal parts. Keep the decimal digit in the matching place.",
+        "worked_solution": "43 of the 100 equal parts are selected. → The fraction is 43/100. → 43/100 = 0.43."
+      },
+      "working": [
+        "43 of the 100 equal parts are selected.",
+        "The fraction is 43/100.",
+        "43/100 = 0.43."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "place_value_conversion",
+          "mode": "conversion",
+          "title": "A shaded square design",
+          "numerator": 43,
+          "denominator": 100,
+          "decimal": "0.43",
+          "given": "",
+          "math_text": true,
+          "compact_captions": true,
+          "object": "square",
+          "model_given": true,
+          "model_caption": "One whole, divided into 100 equal squares."
+        }
+      },
+      "response_feedback": {
+        "decimal_only": "Your fraction is correct. Keep that count and check the decimal place.",
+        "numerator_only": "Your decimal is correct. Check the numerator over the printed denominator.",
+        "check_place_value": "Count the selected regions, not grid lines or unselected regions. Both forms must describe that same amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-01-X03",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "practice",
+      "prompt": "A measuring container is filled to 9 of its 10 equal intervals. Write the fraction of the container that is filled as a decimal.",
+      "target": "Interpret tenths and hundredths as equal fractions and decimals",
+      "response": {
+        "type": "decimal",
+        "allow_leading_decimal_point": true,
+        "input_label": "Decimal"
+      },
+      "answer": {
+        "value": "0.9"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Your decimal records the filled part of the full container.",
+        "correct_after_support": "Correct. Your decimal records the filled part of the full container.",
+        "on_correct_math": "Tenths divide a whole into 10 equal parts. → 9 tenths = 9/10. → 9/10 = 0.9.",
+        "on_incorrect_attempt_1": "Use the denominator to identify the size of the equal parts.",
+        "on_incorrect_attempt_2": "Use the denominator to identify the size of the equal parts.",
+        "on_locked_incorrect": "Your response is saved. The answers will be reviewed after the whole final check.",
+        "worked_explanation": "Tenths divide a whole into 10 equal parts. → 9 tenths = 9/10. → 9/10 = 0.9."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the denominator to identify the size of the equal parts.",
+        "hint_2": "Match the number of equal parts in one whole to the denominator. Then keep the digit in its correct decimal place.",
+        "worked_solution": "Tenths divide a whole into 10 equal parts. → 9 tenths = 9/10. → 9/10 = 0.9."
+      },
+      "working": [
+        "Tenths divide a whole into 10 equal parts.",
+        "9 tenths = 9/10.",
+        "9/10 = 0.9."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "place_value_conversion",
+          "mode": "conversion",
+          "title": "A measuring container",
+          "numerator": 9,
+          "denominator": 10,
+          "decimal": "0.9",
+          "given": "",
+          "math_text": true,
+          "compact_captions": true,
+          "object": "container",
+          "model_given": true,
+          "model_caption": "One full container: 10 equal intervals."
+        }
+      },
+      "response_feedback": {
+        "0.1": "That describes the unfilled part. The question asks for the filled amount.",
+        "0.09": "The container has tenths intervals, not hundredths intervals."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-01-X04",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "practice",
+      "prompt": "A diagram shows 0.28 of a field planted with trees. Which fraction with denominator 100 represents the planted part?",
+      "target": "Interpret tenths and hundredths as equal fractions and decimals",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "28/100",
+          "28/10",
+          "100/28",
+          "2/8"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "28/100"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The fraction describes the planted area as part of the entire field.",
+        "correct_after_support": "Correct. The fraction describes the planted area as part of the entire field.",
+        "on_correct_math": "The field is divided into 100 equal parts. → 0.28 represents 28 hundredths. → The planted part is 28/100.",
+        "on_incorrect_attempt_1": "Use the specified denominator and preserve both decimal place values.",
+        "on_incorrect_attempt_2": "Use the specified denominator and preserve both decimal place values.",
+        "on_locked_incorrect": "Your response is saved. The answers will be reviewed after the whole final check.",
+        "worked_explanation": "The field is divided into 100 equal parts. → 0.28 represents 28 hundredths. → The planted part is 28/100."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the specified denominator and preserve both decimal place values.",
+        "hint_2": "Match the number of equal parts in one whole to the denominator. Then keep the digit in its correct decimal place.",
+        "worked_solution": "The field is divided into 100 equal parts. → 0.28 represents 28 hundredths. → The planted part is 28/100."
+      },
+      "working": [
+        "The field is divided into 100 equal parts.",
+        "0.28 represents 28 hundredths.",
+        "The planted part is 28/100."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "place_value_conversion",
+          "mode": "conversion",
+          "title": "A field partly planted with trees",
+          "numerator": 28,
+          "denominator": 100,
+          "decimal": "0.28",
+          "given": "0.28 of the field is planted",
+          "math_text": true,
+          "compact_captions": true,
+          "object": "field",
+          "model_given": true,
+          "model_caption": "One field divided into 100 equal regions. Green regions are planted."
+        }
+      },
+      "response_feedback": {
+        "28/10": "This uses tenths instead of the requested hundredths. It also gives more than a whole field.",
+        "100/28": "This reverses the selected part count and the number of equal parts in the field.",
+        "2/8": "The two decimal digits are not a numerator and denominator. Their places determine their values."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-01-E01",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "Write 0.9 as a fraction with denominator 10. Enter only the numerator.",
+      "target": "Interpret tenths and hundredths as equal fractions and decimals",
+      "response": {
+        "type": "integer",
+        "presentation": "fraction_builder",
+        "editableField": "numerator",
+        "fixedDenominator": 10,
+        "input_label": "Numerator"
+      },
+      "answer": {
+        "value": 9
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The numerator counts the parts of the required size.",
+        "correct_after_support": "Correct. The numerator counts the parts of the required size.",
+        "on_correct_math": "Tenths divide a whole into 10 equal parts. → 9 tenths = 9/10. → 9/10 = 0.9.",
+        "on_incorrect_attempt_1": "Count the named parts without changing the given denominator.",
+        "on_incorrect_attempt_2": "Count the named parts without changing the given denominator.",
+        "on_locked_incorrect": "Your response is saved. The answers will be reviewed after the whole final check.",
+        "worked_explanation": "Tenths divide a whole into 10 equal parts. → 9 tenths = 9/10. → 9/10 = 0.9."
+      },
+      "mathematical_support": {
+        "hint_1": "Count the named parts without changing the given denominator.",
+        "hint_2": "Match the number of equal parts in one whole to the denominator. Then keep the digit in its correct decimal place.",
+        "worked_solution": "Tenths divide a whole into 10 equal parts. → 9 tenths = 9/10. → 9/10 = 0.9."
+      },
+      "working": [
+        "Tenths divide a whole into 10 equal parts.",
+        "9 tenths = 9/10.",
+        "9/10 = 0.9."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "place_value_conversion",
+          "mode": "conversion",
+          "title": "Write the equal form",
+          "numerator": 9,
+          "denominator": 10,
+          "decimal": "0.9",
+          "given": "0.9 = ?/10",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {},
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-01-E02",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "Write 0.43 as a fraction with denominator 100. Enter only the numerator.",
+      "target": "Interpret tenths and hundredths as equal fractions and decimals",
+      "response": {
+        "type": "integer",
+        "presentation": "fraction_builder",
+        "editableField": "numerator",
+        "fixedDenominator": 100,
+        "input_label": "Numerator"
+      },
+      "answer": {
+        "value": 43
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The numerator counts the parts of the required size.",
+        "correct_after_support": "Correct. The numerator counts the parts of the required size.",
+        "on_correct_math": "Hundredths divide a whole into 100 equal parts. → 43 hundredths = 43/100. → 43/100 = 0.43.",
+        "on_incorrect_attempt_1": "Count the named parts without changing the given denominator.",
+        "on_incorrect_attempt_2": "Count the named parts without changing the given denominator.",
+        "on_locked_incorrect": "Your response is saved. The answers will be reviewed after the whole final check.",
+        "worked_explanation": "Hundredths divide a whole into 100 equal parts. → 43 hundredths = 43/100. → 43/100 = 0.43."
+      },
+      "mathematical_support": {
+        "hint_1": "Count the named parts without changing the given denominator.",
+        "hint_2": "Match the number of equal parts in one whole to the denominator. Then keep the digit in its correct decimal place.",
+        "worked_solution": "Hundredths divide a whole into 100 equal parts. → 43 hundredths = 43/100. → 43/100 = 0.43."
+      },
+      "working": [
+        "Hundredths divide a whole into 100 equal parts.",
+        "43 hundredths = 43/100.",
+        "43/100 = 0.43."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "place_value_conversion",
+          "mode": "conversion",
+          "title": "Write the equal form",
+          "numerator": 43,
+          "denominator": 100,
+          "decimal": "0.43",
+          "given": "0.43 = ?/100",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "3": "That keeps only the hundredths digit; the tenths also contribute to the total count.",
+        "4": "That keeps only the tenths digit; the additional hundredths are not included.",
+        "7": "Adding the digit names does not preserve their different place values."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-01-E03",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "Write 7/100 as a decimal.",
+      "target": "Interpret tenths and hundredths as equal fractions and decimals",
+      "response": {
+        "type": "decimal",
+        "allow_leading_decimal_point": true,
+        "input_label": "Decimal"
+      },
+      "answer": {
+        "value": "0.07"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The placeholder keeps the nonzero digit in the hundredths place.",
+        "correct_after_support": "Correct. The placeholder keeps the nonzero digit in the hundredths place.",
+        "on_correct_math": "Hundredths divide a whole into 100 equal parts. → 7 hundredths = 7/100. → 7/100 = 0.07.",
+        "on_incorrect_attempt_1": "Keep the tenths place empty while recording the hundredths.",
+        "on_incorrect_attempt_2": "Keep the tenths place empty while recording the hundredths.",
+        "on_locked_incorrect": "Your response is saved. The answers will be reviewed after the whole final check.",
+        "worked_explanation": "Hundredths divide a whole into 100 equal parts. → 7 hundredths = 7/100. → 7/100 = 0.07."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the tenths place empty while recording the hundredths.",
+        "hint_2": "Match the number of equal parts in one whole to the denominator. Then keep the digit in its correct decimal place.",
+        "worked_solution": "Hundredths divide a whole into 100 equal parts. → 7 hundredths = 7/100. → 7/100 = 0.07."
+      },
+      "working": [
+        "Hundredths divide a whole into 100 equal parts.",
+        "7 hundredths = 7/100.",
+        "7/100 = 0.07."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "place_value_conversion",
+          "mode": "conversion",
+          "title": "Write the equal form",
+          "numerator": 7,
+          "denominator": 100,
+          "decimal": "0.07",
+          "given": "7/100 = ?",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "0.7": "That puts the nonzero digit in the tenths place. Check the denominator of the given fraction."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-01-E04",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "Final statement check: which statement is correct?",
+      "target": "Interpret tenths and hundredths as equal fractions and decimals",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "One digit after the decimal point represents tenths, and two digits represent hundredths.",
+          "Every decimal less than one has denominator 10.",
+          "A zero after the decimal point can always be ignored.",
+          "The denominator is found by reversing the decimal digits."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "One digit after the decimal point represents tenths, and two digits represent hundredths."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The statement connects the number of decimal places with the size of the parts.",
+        "correct_after_support": "Correct. The statement connects the number of decimal places with the size of the parts.",
+        "on_correct_math": "The first decimal place is tenths. → The second decimal place is hundredths. → The denominator records the number of equal parts in a whole.",
+        "on_incorrect_attempt_1": "Review the place-value statement against the written working.",
+        "on_incorrect_attempt_2": "Review the place-value statement against the written working.",
+        "on_locked_incorrect": "Your response is saved. The answers will be reviewed after the whole final check.",
+        "worked_explanation": "The first decimal place is tenths. → The second decimal place is hundredths. → The denominator records the number of equal parts in a whole."
+      },
+      "mathematical_support": {
+        "hint_1": "Review the place-value statement against the written working.",
+        "hint_2": "Match the number of equal parts in one whole to the denominator. Then keep the digit in its correct decimal place.",
+        "worked_solution": "The first decimal place is tenths. → The second decimal place is hundredths. → The denominator records the number of equal parts in a whole."
+      },
+      "working": [
+        "The first decimal place is tenths.",
+        "The second decimal place is hundredths.",
+        "The denominator records the number of equal parts in a whole."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "place_value_conversion",
+          "mode": "principle",
+          "title": "Final place-value check",
+          "given": "Choose the correct statement.",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "Every decimal less than one has denominator 10.": "Being less than one does not determine the denominator. The decimal places name the part sizes.",
+        "A zero after the decimal point can always be ignored.": "A zero may hold a place and keep later digits at their correct values. Removing it can change the amount.",
+        "The denominator is found by reversing the decimal digits.": "Reversing the digits does not identify a part size. The denominator records equal parts in one whole."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    }
+  ],
+  "canonical_lesson": {
+    "version": "FDP01-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

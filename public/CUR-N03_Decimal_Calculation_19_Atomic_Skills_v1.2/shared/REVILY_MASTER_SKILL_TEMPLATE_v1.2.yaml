@@ -1,0 +1,151 @@
+schema_version: '1.2'
+spec_intent:
+  source_of_truth: true
+  codex_role: implementation_only
+  codex_must_not_invent:
+  - mathematics
+  - question wording
+  - answers
+  - Ryan dialogue
+  - hints
+  - worked solutions
+  - animation storyboards
+  - branching behaviour
+  - mastery rules
+  - lesson sequence
+  allowed_engine_interpretation: <responsive implementation constraints only>
+identity:
+  id: <PROVISIONAL-OR-APPROVED-ID>
+  slug: <kebab-case-slug>
+  title: <student-facing title>
+  strand: <strand>
+  cluster: <cluster>
+  tier: GCSE Foundation
+  status: draft
+  estimated_minutes:
+    min: 24
+    max: 30
+curriculum:
+  basis: England GCSE Mathematics / national curriculum spine
+  role: <direct_gcse_content|gcse_enabling_prerequisite>
+  official_mapping:
+    direct_gcse_refs: []
+    supports_gcse_refs: []
+    prior_curriculum_refs: []
+  learning_objective: <one atomic objective>
+  success_criteria:
+  - <criterion>
+  boundaries:
+    includes:
+    - <included>
+    excludes:
+    - <excluded>
+dependencies:
+  required_skill_refs: []
+  entry_assumptions:
+  - <minimum learner assumption>
+  downstream_rule: Do not store leads_to. Derive downstream relationships from other skills prerequisite references.
+engine_capability_requirements:
+  input_types: []
+  visual_primitives: []
+  animation_actions: []
+  audio_capabilities:
+  - queued_tts_or_audio
+  - caption_sync
+  - narration_animation_sync
+  - pause_for_input
+  - cancel_on_navigation
+  state_capabilities:
+  - attempt_count
+  - step_resume
+  - skill_state
+  - diagnostic_evidence
+  - exit_score
+  - confirmation_branch
+experience_contract:
+  target_session_minutes:
+    min: 24
+    max: 30
+  ordered_phases:
+  - teaching
+  - guided
+  - faded
+  - independent_transfer
+  - practice
+  - exit
+  - completion
+  navigation:
+    default: linear_forward
+    back_button: <exact behaviour>
+    refresh_resume: <exact behaviour>
+    start_again: <exact behaviour>
+  global_ui_copy:
+    submit: Check answer
+    continue: Continue
+    try_again: Try again
+    show_me: Show me
+    finish: Finish
+    continue_learning: Continue learning
+    stop_for_today: Finish for today
+  progress_indicator:
+    show: true
+    student_facing_style: <description>
+    do_not_show: <internal data hidden>
+  interaction_rules:
+  - <exact interaction rule>
+voice_and_script:
+  performer_name: Ryan
+  dialogue_profile_ref: RYAN_DIALOGUE_PROFILE_v1.yaml
+  script_ownership: All lesson-specific mathematical speech is authored exactly in the skill file; the engine never
+    generates or paraphrases.
+  delivery_style:
+  - Natural UK English
+  - Warm and conversational
+  success_reaction_policy: {}
+  adjacent_speech_policy: {}
+  caption_policy: <exact caption rule>
+visual_language:
+  scene_rules: {}
+  semantic_roles: []
+  style_direction: []
+  reduced_motion: <equivalent non-motion behaviour>
+diagnostic:
+  purpose: <purpose>
+  question_refs:
+  - <SKILL-D01>
+  - <SKILL-D02>
+  presentation: <behaviour>
+  scoring:
+    2_of_2: DIAGNOSTIC_SECURE
+    0_or_1_of_2: NEEDS_WORK
+  routing: Start at earliest non-secure skill in prerequisite order.
+concept_model:
+  core_idea: <idea>
+  invariant: <invariant>
+  mathematical_rule: <rule>
+  vocabulary: []
+  must_notice: []
+  common_confusions: []
+lesson:
+  teaching_steps: []
+  transfer_steps: {}
+  practice: {}
+  exit: {}
+completion:
+  secure: {}
+  needs_work: {}
+question_bank: []
+progress_and_persistence: {}
+analytics_events: {}
+qa:
+  schema_validated: false
+  maths_answers_verified: false
+  curriculum_human_reviewed: false
+  scripts_human_reviewed: false
+  animation_storyboard_human_reviewed: false
+  branching_reference_validated: false
+  engine_render_tested: false
+  reduced_motion_tested: false
+  keyboard_accessibility_tested: false
+  student_calibration_tested: false
+  acceptance_criteria: []

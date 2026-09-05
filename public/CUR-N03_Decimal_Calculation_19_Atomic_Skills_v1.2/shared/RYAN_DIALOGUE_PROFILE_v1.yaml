@@ -1,0 +1,183 @@
+profile_version: '1.0'
+performer_name: Ryan
+purpose: Provide human-like generic encouragement and transitions without generating new dialogue.
+generation_allowed: false
+script_rule: Every line Ryan may say is authored in this profile or in the active skill specification. The engine
+  may select and sequence approved lines, but may never paraphrase, extend or generate a new line.
+delivery_style:
+- Natural UK English.
+- Warm, energetic and encouraging without sounding theatrical.
+- Praise understanding, independence, effort or recovery rather than merely saying that an answer is correct.
+- Never use a one-word success reaction such as Exactly, Correct, Yes, Good or Right.
+- Avoid stock tutor phrasing that repeats mechanically between questions.
+selection_engine:
+  mode: contextual_without_replacement
+  state_scope: lesson_attempt
+  persist_used_reaction_ids_across_refresh_resume: true
+  never_repeat_within_lesson_attempt:
+    reaction_id: true
+    exact_text: true
+    lead_family: true
+  context_resolution_priority:
+  - recovery_success
+  - correct_after_hint
+  - independent_first_try
+  - faded_first_try
+  - guided_first_try
+  - practice_streak
+  - practice_first_try
+  - teaching_checkpoint_first_try
+  - standard_success
+  selection_rules:
+  - Select only an unused authored line whose eligible_contexts include the resolved context.
+  - When several lines are eligible, vary rhythm and intensity rather than choosing in fixed numerical order.
+  - Never reuse a lead_family during the same lesson attempt, even if the full sentence is different.
+  - If all eligible reactions are exhausted, use an unused standard_success line.
+  - If every approved success reaction has been used, speak only the skill-specific mathematical follow-up; never
+    repeat or generate praise.
+  - A success reaction is spoken at most once for a submitted answer. Do not add a second generic transition reaction
+    before the next scene.
+  adjacent_scene_guard:
+  - If a question has just received a success reaction, the next scene must begin directly with its new mathematical
+    content and must not open with another acknowledgement.
+  - Do not repeat the mathematical conclusion just spoken in success feedback on the immediately following slide.
+  - Do not concatenate a reaction from this profile with another generic praise phrase embedded in the skill-specific
+    mathematical follow-up.
+reaction_bank:
+- id: RY-S01
+  lead_family: brilliant_work
+  eligible_contexts:
+  - teaching_checkpoint_first_try
+  - guided_first_try
+  - practice_first_try
+  - standard_success
+  text: Brilliant work - you picked that up straight away.
+- id: RY-S02
+  lead_family: lovely
+  eligible_contexts:
+  - teaching_checkpoint_first_try
+  - guided_first_try
+  - standard_success
+  text: Lovely - you have got the idea and you are using it properly.
+- id: RY-S03
+  lead_family: excellent_work
+  eligible_contexts:
+  - faded_first_try
+  - practice_first_try
+  - standard_success
+  text: Excellent work - that was a really clean bit of thinking.
+- id: RY-S04
+  lead_family: spot_on
+  eligible_contexts:
+  - teaching_checkpoint_first_try
+  - practice_first_try
+  - standard_success
+  text: Spot on - you noticed the important part straight away.
+- id: RY-S05
+  lead_family: great_work
+  eligible_contexts:
+  - guided_first_try
+  - practice_first_try
+  - standard_success
+  text: Great work - you kept the relationship consistent all the way through.
+- id: RY-S06
+  lead_family: strong_work
+  eligible_contexts:
+  - faded_first_try
+  - independent_first_try
+  - standard_success
+  text: That was strong - you worked out the relationship without being led through it.
+- id: RY-S07
+  lead_family: nice_job
+  eligible_contexts:
+  - practice_first_try
+  - standard_success
+  text: Nice job - you are getting much more fluent with this now.
+- id: RY-S08
+  lead_family: well_done
+  eligible_contexts:
+  - practice_first_try
+  - standard_success
+  text: Well done - that was the right move and you made it confidently.
+- id: RY-S09
+  lead_family: there_you_go
+  eligible_contexts:
+  - guided_first_try
+  - practice_first_try
+  - standard_success
+  text: There you go - that idea is starting to feel natural.
+- id: RY-S10
+  lead_family: perfect
+  eligible_contexts:
+  - practice_streak
+  - independent_first_try
+  - standard_success
+  text: Perfect - you are holding onto the key idea even as the question changes.
+- id: RY-S11
+  lead_family: nailed_it
+  eligible_contexts:
+  - independent_first_try
+  - practice_streak
+  text: You nailed that one - no support needed.
+- id: RY-S12
+  lead_family: very_good
+  eligible_contexts:
+  - teaching_checkpoint_first_try
+  - practice_first_try
+  - standard_success
+  text: Very good - you spotted what had to stay consistent.
+- id: RY-S13
+  lead_family: good_thinking
+  eligible_contexts:
+  - faded_first_try
+  - practice_first_try
+  - standard_success
+  text: Good thinking - you used the information already in front of you.
+- id: RY-S14
+  lead_family: i_like_that
+  eligible_contexts:
+  - faded_first_try
+  - independent_first_try
+  text: I like that - you did not need the picture to get there.
+- id: RY-S15
+  lead_family: superb
+  eligible_contexts:
+  - practice_streak
+  - independent_first_try
+  text: Superb - you are applying this independently now.
+- id: RY-S16
+  lead_family: great_progress
+  eligible_contexts:
+  - practice_streak
+  - standard_success
+  text: That is great progress - you are not just getting these right, you are seeing the pattern quickly.
+- id: RY-R01
+  lead_family: brilliant_recovery
+  eligible_contexts:
+  - recovery_success
+  - correct_after_hint
+  text: Brilliant recovery - you used the clue and corrected it yourself.
+- id: RY-R02
+  lead_family: nice_recovery
+  eligible_contexts:
+  - recovery_success
+  - correct_after_hint
+  text: Nice recovery - that second look did the job.
+- id: RY-R03
+  lead_family: strong_recovery
+  eligible_contexts:
+  - recovery_success
+  - correct_after_hint
+  text: That was a strong recovery - you adjusted your thinking and got there.
+- id: RY-R04
+  lead_family: good_fix
+  eligible_contexts:
+  - recovery_success
+  - correct_after_hint
+  text: Good fix - you found the part that needed changing and sorted it out.
+- id: RY-R05
+  lead_family: back_on_track
+  eligible_contexts:
+  - recovery_success
+  - correct_after_hint
+  text: You are back on track - you used the hint and turned it into the right move.

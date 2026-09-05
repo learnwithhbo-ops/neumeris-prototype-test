@@ -1,0 +1,2636 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "AF-16 - Select the correct operation in fraction problems",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-17",
+      "sha256": "640b9eb38b366c733df97ee16d7d0c84063f30f76f1ed4a4e60345661df32d1e"
+    },
+    "authored_scope": "Select addition or subtraction from the quantitative relationship in a one-step fraction problem.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "AF16-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "verified_desktop_secure_mobile_locked_nonmastery_operation_order_evidence_exact_guided_drafts_three_stage_working_320_390_layouts",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        4,
+        5,
+        6,
+        7,
+        13,
+        15,
+        16
+      ],
+      "source_repairs_consulted": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        17
+      ],
+      "note": "All 17 source pages read; active pages visually inspected. Source numbers, names, option orders, five guided stages and three unsupported final checks retained. Operation selection is not arithmetic assessment. Visuals identify actual contexts and quantity roles without a pre-submit operation or numerical result. A reversed subtraction retains positive operation evidence separately from incorrect order. Entry, Diagnostic and delayed Retrieval are excluded."
+    }
+  },
+  "identity": {
+    "id": "AF-16",
+    "slug": "select-the-correct-operation-in-fraction-problems",
+    "title": "Select the correct operation in fraction problems",
+    "strand": "Number",
+    "cluster": "Adding and Subtracting Fractions",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Select addition or subtraction from the complete quantity relationship in a one-step fraction problem, putting subtraction quantities in the correct order without requiring a numerical result.",
+    "success_criteria": [
+      "Identify the known and requested quantities.",
+      "Join separate amounts for a total.",
+      "Subtract to remove, compare or find a missing part.",
+      "Interpret “more than” according to whose amount is known.",
+      "Keep the starting, full or larger quantity first in subtraction."
+    ],
+    "boundaries": {
+      "includes": [
+        "One-step selection of addition or subtraction",
+        "Proper and mixed fraction quantities",
+        "Combine, remove, compare and missing-part relationships",
+        "Length, mass, volume and journeys",
+        "Given-quantity identification in the guided example"
+      ],
+      "excludes": [
+        "Calculation of numerical results",
+        "Multi-step arithmetic",
+        "Assessment of multiplication or division",
+        "Written explanations",
+        "Algebra or percentages",
+        "Entry, Diagnostic and delayed Retrieval routes"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "AF-01",
+      "AF-02",
+      "AF-12",
+      "AF-15"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for AF-01, AF-02, AF-12, AF-15 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "fraction",
+      "single_choice"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    }
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "The relationship between the quantities determines the operation.",
+    "invariant": "Read what is known and what must be found; a keyword alone cannot determine the operation.",
+    "mathematical_rule": "Join for a total; subtract for a remainder, difference or missing part. Keep the full, starting or larger amount first.",
+    "must_notice": [
+      "More than can describe a known extra amount or an unknown smaller amount.",
+      "A known part is already included in a full amount.",
+      "Correct subtraction with reversed operands is operation-positive but order-negative evidence."
+    ],
+    "common_confusions": [
+      "Subtracting whenever values differ",
+      "Treating more as automatic addition",
+      "Reversing subtraction",
+      "Adding a known part to a full amount when the missing part is requested",
+      "Choosing multiplication or division for these one-step relationships"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "Choose from the relationship",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Choose from the relationship",
+          "initial_state": "Choose from the relationship",
+          "model": {
+            "kind": "fraction_situation_rule",
+            "object": "relationship_diagrams",
+            "solved": true,
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "First identify what must be found. Joining amounts gives a total. Removing, comparing or finding a missing part uses subtraction. Read the whole relationship instead of relying on one word."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Find the operation for water used",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Find the operation for water used",
+          "initial_state": "Find the operation for water used",
+          "model": {
+            "kind": "fraction_situation",
+            "object": "tank",
+            "title": "Water before and after use",
+            "first": {
+              "whole": 3,
+              "n": 1,
+              "d": 2
+            },
+            "second": {
+              "whole": 1,
+              "n": 3,
+              "d": 4
+            },
+            "first_label": "Water before use",
+            "second_label": "Water remaining",
+            "requested_label": "Water used",
+            "relationship": "missing",
+            "roles": "The amount before use includes both the water used and the water remaining.",
+            "relationship_text": "Subtract the remaining water from the amount before use to find the missing used part.",
+            "unit": "L",
+            "unit_name": "litre",
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Identify the unknown water amount, then choose the operation."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "AF-16-C01"
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Choose a calculation for the baker’s total",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Choose a calculation for the baker’s total",
+          "initial_state": "Choose a calculation for the baker’s total",
+          "model": {
+            "kind": "fraction_situation",
+            "object": "flour",
+            "title": "Flour for bread and cakes",
+            "first": {
+              "whole": 1,
+              "n": 1,
+              "d": 4
+            },
+            "second": {
+              "whole": 0,
+              "n": 5,
+              "d": 6
+            },
+            "first_label": "Flour for bread",
+            "second_label": "Flour for cakes",
+            "requested_label": "Total flour",
+            "relationship": "join",
+            "roles": "Both separate amounts of flour contribute to the total mass.",
+            "relationship_text": "Join the bread flour and the cake flour using addition.",
+            "unit": "kg",
+            "unit_name": "kilogram",
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true
+          }
+        },
+        "narration": {
+          "script": "Both flour amounts contribute to the baker’s total. Join them with addition. Selecting the calculation is enough; you do not need to work out the total."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Choose a calculation for the rope difference",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Choose a calculation for the rope difference",
+          "initial_state": "Choose a calculation for the rope difference",
+          "model": {
+            "kind": "fraction_situation",
+            "object": "rope",
+            "title": "Compare the blue and red ropes",
+            "first": {
+              "whole": 2,
+              "n": 3,
+              "d": 8
+            },
+            "second": {
+              "whole": 1,
+              "n": 5,
+              "d": 6
+            },
+            "first_label": "Blue rope",
+            "second_label": "Red rope",
+            "requested_label": "How much longer the blue rope is",
+            "relationship": "compare",
+            "roles": "The blue rope is longer; the question asks for the difference between the two lengths.",
+            "relationship_text": "Subtract the red rope’s length from the blue rope’s length.",
+            "unit": "m",
+            "unit_name": "metre",
+            "math_text": true,
+            "compact_captions": true,
+            "first_color": "#267caa",
+            "second_color": "#b34e57",
+            "solved": true
+          }
+        },
+        "narration": {
+          "script": "This time the lengths are being compared. Subtract the shorter rope’s length from the longer rope’s length. Again, select the calculation without working out its numerical result."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Choose a calculation for the bottle",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Choose a calculation for the bottle",
+          "initial_state": "Choose a calculation for the bottle",
+          "model": {
+            "kind": "fraction_situation",
+            "object": "bottle",
+            "title": "A bottle and its current contents",
+            "first": {
+              "whole": 2,
+              "n": 1,
+              "d": 2
+            },
+            "second": {
+              "whole": 1,
+              "n": 3,
+              "d": 5
+            },
+            "first_label": "Bottle capacity",
+            "second_label": "Water currently in the bottle",
+            "requested_label": "Additional water needed",
+            "relationship": "missing",
+            "roles": "The full bottle consists of the current water and the additional water needed.",
+            "relationship_text": "Subtract the current amount from the full capacity to find the missing part.",
+            "unit": "L",
+            "unit_name": "litre",
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Read the full capacity, the current amount and what must be found."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "AF-16-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "AF-16-G01",
+        "support_level": "high",
+        "pre_question_script": "Identify the quantities in the fabric story before choosing its calculation.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "AF-16-G02",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "faded",
+        "question_ref": "AF-16-G03",
+        "support_level": "reduced",
+        "pre_question_script": "",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "faded",
+        "question_ref": "AF-16-G04",
+        "support_level": "reduced",
+        "pre_question_script": "",
+        "correct_next": "G05"
+      },
+      "G05": {
+        "stage": "independent_transfer",
+        "question_ref": "AF-16-G05",
+        "support_level": "none",
+        "pre_question_script": "",
+        "correct_next": "P01"
+      }
+    },
+    "practice": {
+      "intro_script": "Choose the calculation for each situation. Some quantities are joined; others are removed, compared or form a missing-part relationship. No numerical result is required.",
+      "question_order": [
+        "AF-16-P01",
+        "AF-16-P02",
+        "AF-16-P03",
+        "AF-16-P04",
+        "AF-16-P05",
+        "AF-16-P06",
+        "AF-16-P07",
+        "AF-16-X01",
+        "AF-16-X02",
+        "AF-16-X03",
+        "AF-16-X04"
+      ],
+      "question_count": 11
+    },
+    "exit": {
+      "intro_script": "Select the calculation for each final situation. Check the relationship and subtraction order. No hints are available, and each submitted response locks.",
+      "primary_question_refs": [
+        "AF-16-E01",
+        "AF-16-E02",
+        "AF-16-E03"
+      ],
+      "confirmation_question_refs": [],
+      "mastery_policy": {
+        "profile": "all_primary_unsupported",
+        "require_all": true,
+        "source_page": 13,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "You selected all three final calculations correctly, including the subtraction order and the ribbon comparison.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Review the relationship or order",
+      "ryan_script": "One or more final selections need attention. The feedback distinguishes an operation error from subtraction in the wrong order.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "AF-16-C01",
+      "source_ref": {
+        "page": 4
+      },
+      "stage": "practice",
+      "prompt": "A tank contains 3 1/2 litres of water. After some water is used, 1 3/4 litres remain. Which operation finds the amount of water used?",
+      "target": "Identify the quantity relationship and select the correct operation, with subtraction quantities in the correct order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Addition",
+          "Subtraction",
+          "Multiplication",
+          "Division"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "Subtraction"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The water used is the missing part of the original amount.",
+        "correct_after_support": "Correct. The water used is the missing part of the original amount.",
+        "on_correct_math": "The amount before use includes both the water used and the water remaining. → Subtract the remaining water from the amount before use to find the missing used part. → Select subtraction. No numerical result is required.",
+        "on_incorrect_attempt_1": "Identify which quantity is unknown: the water used, the water remaining or the original amount.",
+        "on_incorrect_attempt_2": "Identify which quantity is unknown: the water used, the water remaining or the original amount.",
+        "on_locked_incorrect": "Response recorded. Review the relationship and the order of the quantities.",
+        "worked_explanation": "The amount before use includes both the water used and the water remaining. → Subtract the remaining water from the amount before use to find the missing used part. → Select subtraction. No numerical result is required."
+      },
+      "mathematical_support": {
+        "hint_1": "Identify which quantity is unknown: the water used, the water remaining or the original amount.",
+        "hint_2": "Subtract the remaining water from the amount before use to find the missing used part.",
+        "worked_solution": "The amount before use includes both the water used and the water remaining. → Subtract the remaining water from the amount before use to find the missing used part. → Select subtraction. No numerical result is required."
+      },
+      "working": [
+        "The amount before use includes both the water used and the water remaining.",
+        "Subtract the remaining water from the amount before use to find the missing used part.",
+        "Select subtraction. No numerical result is required."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_situation",
+          "object": "tank",
+          "title": "Water before and after use",
+          "first": {
+            "whole": 3,
+            "n": 1,
+            "d": 2
+          },
+          "second": {
+            "whole": 1,
+            "n": 3,
+            "d": 4
+          },
+          "first_label": "Water before use",
+          "second_label": "Water remaining",
+          "requested_label": "Water used",
+          "relationship": "missing",
+          "roles": "The amount before use includes both the water used and the water remaining.",
+          "relationship_text": "Subtract the remaining water from the amount before use to find the missing used part.",
+          "unit": "L",
+          "unit_name": "litre",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "Addition": "Adding would combine the original water with water already included in it. Find the used part within the original amount.",
+        "Multiplication": "There are no repeated groups or scale factors here. Find the missing used part of the original water.",
+        "Division": "The water is not being shared into equal groups. Find the part used from the original amount."
+      },
+      "final_error_feedback": "answer_specific",
+      "retain_answer_specific_feedback": true,
+      "evidence_profile": "fraction_operation_selection",
+      "required_operation": "subtract",
+      "operation_choices": [
+        {
+          "value": "Addition",
+          "operation": "add",
+          "order": null
+        },
+        {
+          "value": "Subtraction",
+          "operation": "subtract",
+          "order": null
+        },
+        {
+          "value": "Multiplication",
+          "operation": "multiply",
+          "order": null
+        },
+        {
+          "value": "Division",
+          "operation": "divide",
+          "order": null
+        }
+      ]
+    },
+    {
+      "id": "AF-16-C02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "A bottle can hold 2 1/2 litres. It currently contains 1 3/5 litres. Which calculation gives the additional amount needed to fill the bottle?",
+      "target": "Identify the quantity relationship and select the correct operation, with subtraction quantities in the correct order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "2 1/2 + 1 3/5",
+          "2 1/2 − 1 3/5",
+          "1 3/5 − 2 1/2",
+          "2 1/2 × 1 3/5"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "2 1/2 − 1 3/5"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The missing amount is the full capacity minus the amount already present.",
+        "correct_after_support": "Correct. The missing amount is the full capacity minus the amount already present.",
+        "on_correct_math": "The full bottle consists of the current water and the additional water needed. → Subtract the current amount from the full capacity to find the missing part. → Select 2 1/2 − 1 3/5. No numerical result is required.",
+        "on_incorrect_attempt_1": "Relate the full capacity to the amount already in the bottle.",
+        "on_incorrect_attempt_2": "Relate the full capacity to the amount already in the bottle.",
+        "on_locked_incorrect": "Response recorded. Review the relationship and the order of the quantities.",
+        "worked_explanation": "The full bottle consists of the current water and the additional water needed. → Subtract the current amount from the full capacity to find the missing part. → Select 2 1/2 − 1 3/5. No numerical result is required."
+      },
+      "mathematical_support": {
+        "hint_1": "Relate the full capacity to the amount already in the bottle.",
+        "hint_2": "Subtract the current amount from the full capacity to find the missing part.",
+        "worked_solution": "The full bottle consists of the current water and the additional water needed. → Subtract the current amount from the full capacity to find the missing part. → Select 2 1/2 − 1 3/5. No numerical result is required."
+      },
+      "working": [
+        "The full bottle consists of the current water and the additional water needed.",
+        "Subtract the current amount from the full capacity to find the missing part.",
+        "Select 2 1/2 − 1 3/5. No numerical result is required."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_situation",
+          "object": "bottle",
+          "title": "A bottle and its current contents",
+          "first": {
+            "whole": 2,
+            "n": 1,
+            "d": 2
+          },
+          "second": {
+            "whole": 1,
+            "n": 3,
+            "d": 5
+          },
+          "first_label": "Bottle capacity",
+          "second_label": "Water currently in the bottle",
+          "requested_label": "Additional water needed",
+          "relationship": "missing",
+          "roles": "The full bottle consists of the current water and the additional water needed.",
+          "relationship_text": "Subtract the current amount from the full capacity to find the missing part.",
+          "unit": "L",
+          "unit_name": "litre",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "2 1/2 + 1 3/5": "The current water is already part of the full capacity. Adding them would count that water again.",
+        "1 3/5 − 2 1/2": "Subtraction is the right operation. Put the full capacity first and the current amount second.",
+        "2 1/2 × 1 3/5": "Multiplication would describe repeated groups or scaling. This question asks about additional water needed."
+      },
+      "final_error_feedback": "answer_specific",
+      "retain_answer_specific_feedback": true,
+      "evidence_profile": "fraction_operation_selection",
+      "required_operation": "subtract",
+      "operation_choices": [
+        {
+          "value": "2 1/2 + 1 3/5",
+          "operation": "add",
+          "order": null
+        },
+        {
+          "value": "2 1/2 − 1 3/5",
+          "operation": "subtract",
+          "order": "original"
+        },
+        {
+          "value": "1 3/5 − 2 1/2",
+          "operation": "subtract",
+          "order": "reversed"
+        },
+        {
+          "value": "2 1/2 × 1 3/5",
+          "operation": "multiply",
+          "order": null
+        }
+      ]
+    },
+    {
+      "id": "AF-16-G01",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "A roll contains 4 1/3 metres of fabric. A tailor uses 1 3/4 metres. What is the starting amount, in metres?",
+      "target": "Identify the quantity relationship and select the correct operation, with subtraction quantities in the correct order",
+      "response": {
+        "type": "fraction",
+        "allow_mixed_number": true,
+        "default_form": "mixed",
+        "require_all_mixed_fields": true,
+        "input_label": "Starting amount",
+        "suffix": "m"
+      },
+      "answer": {
+        "value": "4 1/3"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. That is the full length on the roll before the tailor uses any fabric.",
+        "correct_after_support": "Correct. That is the full length on the roll before the tailor uses any fabric.",
+        "on_correct_math": "Starting amount: 4 1/3 m.",
+        "on_incorrect_attempt_1": "Find the length on the roll before any fabric is used.",
+        "on_incorrect_attempt_2": "Find the length on the roll before any fabric is used.",
+        "on_locked_incorrect": "Response recorded. Review the relationship and the order of the quantities.",
+        "worked_explanation": "Starting amount: 4 1/3 m."
+      },
+      "mathematical_support": {
+        "hint_1": "Find the length on the roll before any fabric is used.",
+        "hint_2": "Subtract the amount used from the starting length to find the remainder.",
+        "worked_solution": "Starting amount: 4 1/3 m."
+      },
+      "working": [
+        "Starting amount: 4 1/3 m."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_situation",
+          "object": "fabric",
+          "title": "A tailor’s fabric roll",
+          "first": {
+            "whole": 4,
+            "n": 1,
+            "d": 3
+          },
+          "second": {
+            "whole": 1,
+            "n": 3,
+            "d": 4
+          },
+          "first_label": "Fabric on the roll",
+          "second_label": "Fabric used",
+          "requested_label": "Fabric remaining",
+          "relationship": "remain",
+          "roles": "The fabric used is removed from the fabric that was on the roll.",
+          "relationship_text": "Subtract the amount used from the starting length to find the remainder.",
+          "unit": "m",
+          "unit_name": "metre",
+          "math_text": true,
+          "compact_captions": true,
+          "response_mode": "given",
+          "completed": "Starting amount: 4 1/3 m."
+        }
+      },
+      "response_feedback": {},
+      "final_error_feedback": "answer_specific",
+      "retain_answer_specific_feedback": true
+    },
+    {
+      "id": "AF-16-G02",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "The roll contains 4 1/3 metres of fabric, and the tailor uses 1 3/4 metres. What is the amount used, in metres?",
+      "target": "Identify the quantity relationship and select the correct operation, with subtraction quantities in the correct order",
+      "response": {
+        "type": "fraction",
+        "allow_mixed_number": true,
+        "default_form": "mixed",
+        "require_all_mixed_fields": true,
+        "input_label": "Amount used",
+        "suffix": "m"
+      },
+      "answer": {
+        "value": "1 3/4"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. That is the length the tailor removes from the roll.",
+        "correct_after_support": "Correct. That is the length the tailor removes from the roll.",
+        "on_correct_math": "Amount used: 1 3/4 m.",
+        "on_incorrect_attempt_1": "Find the length the tailor uses, not the full roll length.",
+        "on_incorrect_attempt_2": "Find the length the tailor uses, not the full roll length.",
+        "on_locked_incorrect": "Response recorded. Review the relationship and the order of the quantities.",
+        "worked_explanation": "Amount used: 1 3/4 m."
+      },
+      "mathematical_support": {
+        "hint_1": "Find the length the tailor uses, not the full roll length.",
+        "hint_2": "Subtract the amount used from the starting length to find the remainder.",
+        "worked_solution": "Amount used: 1 3/4 m."
+      },
+      "working": [
+        "Amount used: 1 3/4 m."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_situation",
+          "object": "fabric",
+          "title": "A tailor’s fabric roll",
+          "first": {
+            "whole": 4,
+            "n": 1,
+            "d": 3
+          },
+          "second": {
+            "whole": 1,
+            "n": 3,
+            "d": 4
+          },
+          "first_label": "Fabric on the roll",
+          "second_label": "Fabric used",
+          "requested_label": "Fabric remaining",
+          "relationship": "remain",
+          "roles": "The fabric used is removed from the fabric that was on the roll.",
+          "relationship_text": "Subtract the amount used from the starting length to find the remainder.",
+          "unit": "m",
+          "unit_name": "metre",
+          "math_text": true,
+          "compact_captions": true,
+          "response_mode": "given",
+          "completed": "Amount used: 1 3/4 m."
+        }
+      },
+      "response_feedback": {},
+      "final_error_feedback": "answer_specific",
+      "retain_answer_specific_feedback": true
+    },
+    {
+      "id": "AF-16-G03",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "faded",
+      "prompt": "A roll contains 4 1/3 metres of fabric. A tailor uses 1 3/4 metres. We need to find the fabric left on the roll. The question asks for:",
+      "target": "Identify the quantity relationship and select the correct operation, with subtraction quantities in the correct order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "A combined total",
+          "An amount remaining",
+          "A product"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "An amount remaining"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The unknown is the fabric remaining on the roll.",
+        "correct_after_support": "Correct. The unknown is the fabric remaining on the roll.",
+        "on_correct_math": "The tailor has used part of the original roll. → The question asks for the amount remaining, not a total or a product.",
+        "on_incorrect_attempt_1": "Focus on what is left on the roll after the tailor uses a piece.",
+        "on_incorrect_attempt_2": "Focus on what is left on the roll after the tailor uses a piece.",
+        "on_locked_incorrect": "Response recorded. Review the relationship and the order of the quantities.",
+        "worked_explanation": "The tailor has used part of the original roll. → The question asks for the amount remaining, not a total or a product."
+      },
+      "mathematical_support": {
+        "hint_1": "Focus on what is left on the roll after the tailor uses a piece.",
+        "hint_2": "Subtract the amount used from the starting length to find the remainder.",
+        "worked_solution": "The tailor has used part of the original roll. → The question asks for the amount remaining, not a total or a product."
+      },
+      "working": [
+        "The tailor has used part of the original roll.",
+        "The question asks for the amount remaining, not a total or a product."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_situation",
+          "object": "fabric",
+          "title": "A tailor’s fabric roll",
+          "first": {
+            "whole": 4,
+            "n": 1,
+            "d": 3
+          },
+          "second": {
+            "whole": 1,
+            "n": 3,
+            "d": 4
+          },
+          "first_label": "Fabric on the roll",
+          "second_label": "Fabric used",
+          "requested_label": "Fabric remaining",
+          "relationship": "remain",
+          "roles": "The fabric used is removed from the fabric that was on the roll.",
+          "relationship_text": "Subtract the amount used from the starting length to find the remainder.",
+          "unit": "m",
+          "unit_name": "metre",
+          "math_text": true,
+          "compact_captions": true,
+          "response_mode": "target",
+          "completed": "The requested quantity is an amount remaining."
+        }
+      },
+      "response_feedback": {
+        "A combined total": "The used fabric is not a new length being added to the roll. The question asks about what is left.",
+        "A product": "There are no repeated groups or scaling here. The question asks what is left after some fabric is used."
+      },
+      "final_error_feedback": "answer_specific",
+      "retain_answer_specific_feedback": true
+    },
+    {
+      "id": "AF-16-G04",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "faded",
+      "prompt": "A roll contains 4 1/3 metres of fabric. A tailor uses 1 3/4 metres. Select the calculation that gives the fabric remaining.",
+      "target": "Identify the quantity relationship and select the correct operation, with subtraction quantities in the correct order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "4 1/3 + 1 3/4",
+          "4 1/3 − 1 3/4",
+          "1 3/4 − 4 1/3",
+          "4 1/3 ÷ 1 3/4"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "4 1/3 − 1 3/4"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Start with the roll length, then subtract the length used.",
+        "correct_after_support": "Correct. Start with the roll length, then subtract the length used.",
+        "on_correct_math": "The fabric used is removed from the fabric that was on the roll. → Subtract the amount used from the starting length to find the remainder. → Select 4 1/3 − 1 3/4. No numerical result is required.",
+        "on_incorrect_attempt_1": "Map the starting length and the length used into the calculation.",
+        "on_incorrect_attempt_2": "Map the starting length and the length used into the calculation.",
+        "on_locked_incorrect": "Response recorded. Review the relationship and the order of the quantities.",
+        "worked_explanation": "The fabric used is removed from the fabric that was on the roll. → Subtract the amount used from the starting length to find the remainder. → Select 4 1/3 − 1 3/4. No numerical result is required."
+      },
+      "mathematical_support": {
+        "hint_1": "Map the starting length and the length used into the calculation.",
+        "hint_2": "Subtract the amount used from the starting length to find the remainder.",
+        "worked_solution": "The fabric used is removed from the fabric that was on the roll. → Subtract the amount used from the starting length to find the remainder. → Select 4 1/3 − 1 3/4. No numerical result is required."
+      },
+      "working": [
+        "The fabric used is removed from the fabric that was on the roll.",
+        "Subtract the amount used from the starting length to find the remainder.",
+        "Select 4 1/3 − 1 3/4. No numerical result is required."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_situation",
+          "object": "fabric",
+          "title": "A tailor’s fabric roll",
+          "first": {
+            "whole": 4,
+            "n": 1,
+            "d": 3
+          },
+          "second": {
+            "whole": 1,
+            "n": 3,
+            "d": 4
+          },
+          "first_label": "Fabric on the roll",
+          "second_label": "Fabric used",
+          "requested_label": "Fabric remaining",
+          "relationship": "remain",
+          "roles": "The fabric used is removed from the fabric that was on the roll.",
+          "relationship_text": "Subtract the amount used from the starting length to find the remainder.",
+          "unit": "m",
+          "unit_name": "metre",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "4 1/3 + 1 3/4": "The used length is being removed, not added to the roll.",
+        "1 3/4 − 4 1/3": "Subtraction is appropriate. The starting roll length must come before the amount used.",
+        "4 1/3 ÷ 1 3/4": "Division would describe sharing or counting equal groups. This question asks about fabric remaining."
+      },
+      "final_error_feedback": "answer_specific",
+      "retain_answer_specific_feedback": true,
+      "evidence_profile": "fraction_operation_selection",
+      "required_operation": "subtract",
+      "operation_choices": [
+        {
+          "value": "4 1/3 + 1 3/4",
+          "operation": "add",
+          "order": null
+        },
+        {
+          "value": "4 1/3 − 1 3/4",
+          "operation": "subtract",
+          "order": "original"
+        },
+        {
+          "value": "1 3/4 − 4 1/3",
+          "operation": "subtract",
+          "order": "reversed"
+        },
+        {
+          "value": "4 1/3 ÷ 1 3/4",
+          "operation": "divide",
+          "order": null
+        }
+      ]
+    },
+    {
+      "id": "AF-16-G05",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "independent_transfer",
+      "prompt": "Why is subtraction required for the fabric remaining after the tailor uses a piece?",
+      "target": "Identify the quantity relationship and select the correct operation, with subtraction quantities in the correct order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "An amount is removed from a starting amount and the remainder is required.",
+          "The question contains two fractions.",
+          "The larger denominator is 4.",
+          "Subtraction is always used with fabric."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "An amount is removed from a starting amount and the remainder is required."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Exactly. The removal relationship determines the operation; the material and denominators do not.",
+        "correct_after_support": "Exactly. The removal relationship determines the operation; the material and denominators do not.",
+        "on_correct_math": "The operation follows the relationship between the quantities. → The fabric used is removed from the starting roll, and the remainder is required.",
+        "on_incorrect_attempt_1": "Choose the reason that describes what happens to the fabric, rather than its numbers or its material.",
+        "on_incorrect_attempt_2": "Choose the reason that describes what happens to the fabric, rather than its numbers or its material.",
+        "on_locked_incorrect": "Response recorded. Review the relationship and the order of the quantities.",
+        "worked_explanation": "The operation follows the relationship between the quantities. → The fabric used is removed from the starting roll, and the remainder is required."
+      },
+      "mathematical_support": {
+        "hint_1": "Choose the reason that describes what happens to the fabric, rather than its numbers or its material.",
+        "hint_2": "Subtract the amount used from the starting length to find the remainder.",
+        "worked_solution": "The operation follows the relationship between the quantities. → The fabric used is removed from the starting roll, and the remainder is required."
+      },
+      "working": [
+        "The operation follows the relationship between the quantities.",
+        "The fabric used is removed from the starting roll, and the remainder is required."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_situation",
+          "object": "fabric",
+          "title": "A tailor’s fabric roll",
+          "first": {
+            "whole": 4,
+            "n": 1,
+            "d": 3
+          },
+          "second": {
+            "whole": 1,
+            "n": 3,
+            "d": 4
+          },
+          "first_label": "Fabric on the roll",
+          "second_label": "Fabric used",
+          "requested_label": "Fabric remaining",
+          "relationship": "remain",
+          "roles": "The fabric used is removed from the fabric that was on the roll.",
+          "relationship_text": "Subtract the amount used from the starting length to find the remainder.",
+          "unit": "m",
+          "unit_name": "metre",
+          "math_text": true,
+          "compact_captions": true,
+          "response_mode": "reason",
+          "completed": "An amount is removed from a starting amount and the remainder is required."
+        }
+      },
+      "response_feedback": {
+        "The question contains two fractions.": "Two fractions could be combined or compared. Their relationship determines the operation.",
+        "The larger denominator is 4.": "Denominators describe part sizes. They do not tell us whether quantities are joined or removed.",
+        "Subtraction is always used with fabric.": "Fabric lengths can also be joined. This problem needs subtraction because a piece is used and the remainder is required."
+      },
+      "final_error_feedback": "answer_specific",
+      "retain_answer_specific_feedback": true
+    },
+    {
+      "id": "AF-16-P01",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Aisha drinks 2/5 litre of water in the morning and 3/4 litre in the afternoon. Which calculation gives the total amount she drinks?",
+      "target": "Identify the quantity relationship and select the correct operation, with subtraction quantities in the correct order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "2/5 + 3/4",
+          "3/4 − 2/5"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "2/5 + 3/4"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The two drinks are combined, even though their volumes differ.",
+        "correct_after_support": "Correct. The two drinks are combined, even though their volumes differ.",
+        "on_correct_math": "The morning and afternoon drinks are separate amounts. → Join both drinks to find Aisha’s total. → Select 2/5 + 3/4. No numerical result is required.",
+        "on_incorrect_attempt_1": "Both drinks contribute to the requested total.",
+        "on_incorrect_attempt_2": "Both drinks contribute to the requested total.",
+        "on_locked_incorrect": "Response recorded. Review the relationship and the order of the quantities.",
+        "worked_explanation": "The morning and afternoon drinks are separate amounts. → Join both drinks to find Aisha’s total. → Select 2/5 + 3/4. No numerical result is required."
+      },
+      "mathematical_support": {
+        "hint_1": "Both drinks contribute to the requested total.",
+        "hint_2": "Join both drinks to find Aisha’s total.",
+        "worked_solution": "The morning and afternoon drinks are separate amounts. → Join both drinks to find Aisha’s total. → Select 2/5 + 3/4. No numerical result is required."
+      },
+      "working": [
+        "The morning and afternoon drinks are separate amounts.",
+        "Join both drinks to find Aisha’s total.",
+        "Select 2/5 + 3/4. No numerical result is required."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_situation",
+          "object": "water",
+          "title": "Aisha’s water over the day",
+          "first": {
+            "whole": 0,
+            "n": 2,
+            "d": 5
+          },
+          "second": {
+            "whole": 0,
+            "n": 3,
+            "d": 4
+          },
+          "first_label": "Morning water",
+          "second_label": "Afternoon water",
+          "requested_label": "Total water Aisha drinks",
+          "relationship": "join",
+          "roles": "The morning and afternoon drinks are separate amounts.",
+          "relationship_text": "Join both drinks to find Aisha’s total.",
+          "unit": "L",
+          "unit_name": "litre",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "3/4 − 2/5": "A difference would compare the drinks. This question asks for both drinks together."
+      },
+      "final_error_feedback": "answer_specific",
+      "retain_answer_specific_feedback": true,
+      "evidence_profile": "fraction_operation_selection",
+      "required_operation": "add",
+      "operation_choices": [
+        {
+          "value": "2/5 + 3/4",
+          "operation": "add",
+          "order": null
+        },
+        {
+          "value": "3/4 − 2/5",
+          "operation": "subtract",
+          "order": "reversed"
+        }
+      ]
+    },
+    {
+      "id": "AF-16-P02",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "A plank is 3 1/2 metres long. A piece measuring 1 1/4 metres is removed. Which calculation gives the length remaining?",
+      "target": "Identify the quantity relationship and select the correct operation, with subtraction quantities in the correct order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "3 1/2 + 1 1/4",
+          "3 1/2 − 1 1/4"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "3 1/2 − 1 1/4"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The removed piece is subtracted from the original plank.",
+        "correct_after_support": "Correct. The removed piece is subtracted from the original plank.",
+        "on_correct_math": "A piece is removed from the original plank. → Subtract the removed length from the original length. → Select 3 1/2 − 1 1/4. No numerical result is required.",
+        "on_incorrect_attempt_1": "Identify the original plank length and the piece removed.",
+        "on_incorrect_attempt_2": "Identify the original plank length and the piece removed.",
+        "on_locked_incorrect": "Response recorded. Review the relationship and the order of the quantities.",
+        "worked_explanation": "A piece is removed from the original plank. → Subtract the removed length from the original length. → Select 3 1/2 − 1 1/4. No numerical result is required."
+      },
+      "mathematical_support": {
+        "hint_1": "Identify the original plank length and the piece removed.",
+        "hint_2": "Subtract the removed length from the original length.",
+        "worked_solution": "A piece is removed from the original plank. → Subtract the removed length from the original length. → Select 3 1/2 − 1 1/4. No numerical result is required."
+      },
+      "working": [
+        "A piece is removed from the original plank.",
+        "Subtract the removed length from the original length.",
+        "Select 3 1/2 − 1 1/4. No numerical result is required."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_situation",
+          "object": "plank",
+          "title": "A piece removed from a plank",
+          "first": {
+            "whole": 3,
+            "n": 1,
+            "d": 2
+          },
+          "second": {
+            "whole": 1,
+            "n": 1,
+            "d": 4
+          },
+          "first_label": "Original plank",
+          "second_label": "Piece removed",
+          "requested_label": "Length remaining",
+          "relationship": "remain",
+          "roles": "A piece is removed from the original plank.",
+          "relationship_text": "Subtract the removed length from the original length.",
+          "unit": "m",
+          "unit_name": "metre",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "3 1/2 + 1 1/4": "Adding would increase the length, but this piece has been removed."
+      },
+      "final_error_feedback": "answer_specific",
+      "retain_answer_specific_feedback": true,
+      "evidence_profile": "fraction_operation_selection",
+      "required_operation": "subtract",
+      "operation_choices": [
+        {
+          "value": "3 1/2 + 1 1/4",
+          "operation": "add",
+          "order": null
+        },
+        {
+          "value": "3 1/2 − 1 1/4",
+          "operation": "subtract",
+          "order": "original"
+        }
+      ]
+    },
+    {
+      "id": "AF-16-P03",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "One parcel has a mass of 2 1/6 kg. Another has a mass of 1 3/5 kg. Which calculation gives the difference between their masses?",
+      "target": "Identify the quantity relationship and select the correct operation, with subtraction quantities in the correct order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "2 1/6 − 1 3/5",
+          "2 1/6 + 1 3/5"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "2 1/6 − 1 3/5"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The larger mass minus the smaller mass gives the difference.",
+        "correct_after_support": "Correct. The larger mass minus the smaller mass gives the difference.",
+        "on_correct_math": "The first parcel is heavier; the question asks how much the masses differ. → Subtract the smaller mass from the larger mass. → Select 2 1/6 − 1 3/5. No numerical result is required.",
+        "on_incorrect_attempt_1": "Decide whether the parcels are being combined or compared.",
+        "on_incorrect_attempt_2": "Decide whether the parcels are being combined or compared.",
+        "on_locked_incorrect": "Response recorded. Review the relationship and the order of the quantities.",
+        "worked_explanation": "The first parcel is heavier; the question asks how much the masses differ. → Subtract the smaller mass from the larger mass. → Select 2 1/6 − 1 3/5. No numerical result is required."
+      },
+      "mathematical_support": {
+        "hint_1": "Decide whether the parcels are being combined or compared.",
+        "hint_2": "Subtract the smaller mass from the larger mass.",
+        "worked_solution": "The first parcel is heavier; the question asks how much the masses differ. → Subtract the smaller mass from the larger mass. → Select 2 1/6 − 1 3/5. No numerical result is required."
+      },
+      "working": [
+        "The first parcel is heavier; the question asks how much the masses differ.",
+        "Subtract the smaller mass from the larger mass.",
+        "Select 2 1/6 − 1 3/5. No numerical result is required."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_situation",
+          "object": "parcel",
+          "title": "Two parcel masses",
+          "first": {
+            "whole": 2,
+            "n": 1,
+            "d": 6
+          },
+          "second": {
+            "whole": 1,
+            "n": 3,
+            "d": 5
+          },
+          "first_label": "First parcel",
+          "second_label": "Second parcel",
+          "requested_label": "Difference between the masses",
+          "relationship": "compare",
+          "roles": "The first parcel is heavier; the question asks how much the masses differ.",
+          "relationship_text": "Subtract the smaller mass from the larger mass.",
+          "unit": "kg",
+          "unit_name": "kilogram",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "2 1/6 + 1 3/5": "Adding would give their combined mass, not the difference."
+      },
+      "final_error_feedback": "answer_specific",
+      "retain_answer_specific_feedback": true,
+      "evidence_profile": "fraction_operation_selection",
+      "required_operation": "subtract",
+      "operation_choices": [
+        {
+          "value": "2 1/6 − 1 3/5",
+          "operation": "subtract",
+          "order": "original"
+        },
+        {
+          "value": "2 1/6 + 1 3/5",
+          "operation": "add",
+          "order": null
+        }
+      ]
+    },
+    {
+      "id": "AF-16-P04",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "A container holds 7/8 litre. Another 1/3 litre is added. Which calculation gives the new amount?",
+      "target": "Identify the quantity relationship and select the correct operation, with subtraction quantities in the correct order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "7/8 − 1/3",
+          "7/8 + 1/3"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "7/8 + 1/3"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The new amount includes the liquid already there and the liquid added.",
+        "correct_after_support": "Correct. The new amount includes the liquid already there and the liquid added.",
+        "on_correct_math": "The original liquid stays in the container and more liquid is added. → Join the original amount and the extra amount. → Select 7/8 + 1/3. No numerical result is required.",
+        "on_incorrect_attempt_1": "Track whether the extra liquid enters or leaves the container.",
+        "on_incorrect_attempt_2": "Track whether the extra liquid enters or leaves the container.",
+        "on_locked_incorrect": "Response recorded. Review the relationship and the order of the quantities.",
+        "worked_explanation": "The original liquid stays in the container and more liquid is added. → Join the original amount and the extra amount. → Select 7/8 + 1/3. No numerical result is required."
+      },
+      "mathematical_support": {
+        "hint_1": "Track whether the extra liquid enters or leaves the container.",
+        "hint_2": "Join the original amount and the extra amount.",
+        "worked_solution": "The original liquid stays in the container and more liquid is added. → Join the original amount and the extra amount. → Select 7/8 + 1/3. No numerical result is required."
+      },
+      "working": [
+        "The original liquid stays in the container and more liquid is added.",
+        "Join the original amount and the extra amount.",
+        "Select 7/8 + 1/3. No numerical result is required."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_situation",
+          "object": "container",
+          "title": "More liquid added to a container",
+          "first": {
+            "whole": 0,
+            "n": 7,
+            "d": 8
+          },
+          "second": {
+            "whole": 0,
+            "n": 1,
+            "d": 3
+          },
+          "first_label": "Liquid already present",
+          "second_label": "Liquid added",
+          "requested_label": "New amount of liquid",
+          "relationship": "join",
+          "roles": "The original liquid stays in the container and more liquid is added.",
+          "relationship_text": "Join the original amount and the extra amount.",
+          "unit": "L",
+          "unit_name": "litre",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "7/8 − 1/3": "Subtraction would remove liquid, but the extra amount is being added."
+      },
+      "final_error_feedback": "answer_specific",
+      "retain_answer_specific_feedback": true,
+      "evidence_profile": "fraction_operation_selection",
+      "required_operation": "add",
+      "operation_choices": [
+        {
+          "value": "7/8 − 1/3",
+          "operation": "subtract",
+          "order": "original"
+        },
+        {
+          "value": "7/8 + 1/3",
+          "operation": "add",
+          "order": null
+        }
+      ]
+    },
+    {
+      "id": "AF-16-P05",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "A walking route is 5 1/4 km long. Ben has completed 3 2/3 km. Which calculation gives the distance still to walk?",
+      "target": "Identify the quantity relationship and select the correct operation, with subtraction quantities in the correct order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "5 1/4 − 3 2/3",
+          "3 2/3 − 5 1/4"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "5 1/4 − 3 2/3"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The full route comes first and the completed distance is subtracted.",
+        "correct_after_support": "Correct. The full route comes first and the completed distance is subtracted.",
+        "on_correct_math": "The completed distance is part of the full route. → Subtract the completed distance from the full route. → Select 5 1/4 − 3 2/3. No numerical result is required.",
+        "on_incorrect_attempt_1": "The full route includes the completed part and the part still to walk.",
+        "on_incorrect_attempt_2": "The full route includes the completed part and the part still to walk.",
+        "on_locked_incorrect": "Response recorded. Review the relationship and the order of the quantities.",
+        "worked_explanation": "The completed distance is part of the full route. → Subtract the completed distance from the full route. → Select 5 1/4 − 3 2/3. No numerical result is required."
+      },
+      "mathematical_support": {
+        "hint_1": "The full route includes the completed part and the part still to walk.",
+        "hint_2": "Subtract the completed distance from the full route.",
+        "worked_solution": "The completed distance is part of the full route. → Subtract the completed distance from the full route. → Select 5 1/4 − 3 2/3. No numerical result is required."
+      },
+      "working": [
+        "The completed distance is part of the full route.",
+        "Subtract the completed distance from the full route.",
+        "Select 5 1/4 − 3 2/3. No numerical result is required."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_situation",
+          "object": "route",
+          "title": "Ben’s walking route",
+          "first": {
+            "whole": 5,
+            "n": 1,
+            "d": 4
+          },
+          "second": {
+            "whole": 3,
+            "n": 2,
+            "d": 3
+          },
+          "first_label": "Full route",
+          "second_label": "Distance Ben has completed",
+          "requested_label": "Distance still to walk",
+          "relationship": "remain",
+          "roles": "The completed distance is part of the full route.",
+          "relationship_text": "Subtract the completed distance from the full route.",
+          "unit": "km",
+          "unit_name": "kilometre",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "3 2/3 − 5 1/4": "The operation is right, but the order is reversed. Subtract the completed distance from the full route."
+      },
+      "final_error_feedback": "answer_specific",
+      "retain_answer_specific_feedback": true,
+      "evidence_profile": "fraction_operation_selection",
+      "required_operation": "subtract",
+      "operation_choices": [
+        {
+          "value": "5 1/4 − 3 2/3",
+          "operation": "subtract",
+          "order": "original"
+        },
+        {
+          "value": "3 2/3 − 5 1/4",
+          "operation": "subtract",
+          "order": "reversed"
+        }
+      ]
+    },
+    {
+      "id": "AF-16-P06",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Sam has 1 5/6 metres of wire. Priya has 7/12 metre more than Sam. Which calculation gives the amount of wire Priya has?",
+      "target": "Identify the quantity relationship and select the correct operation, with subtraction quantities in the correct order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "1 5/6 − 7/12",
+          "1 5/6 + 7/12"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "1 5/6 + 7/12"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Priya’s wire is Sam’s length together with the extra amount.",
+        "correct_after_support": "Correct. Priya’s wire is Sam’s length together with the extra amount.",
+        "on_correct_math": "Priya has all of Sam’s amount plus an extra length. → Join Sam’s length and the extra length to find Priya’s amount. → Select 1 5/6 + 7/12. No numerical result is required.",
+        "on_incorrect_attempt_1": "Here the extra amount is known. Decide how it relates to Priya’s full length.",
+        "on_incorrect_attempt_2": "Here the extra amount is known. Decide how it relates to Priya’s full length.",
+        "on_locked_incorrect": "Response recorded. Review the relationship and the order of the quantities.",
+        "worked_explanation": "Priya has all of Sam’s amount plus an extra length. → Join Sam’s length and the extra length to find Priya’s amount. → Select 1 5/6 + 7/12. No numerical result is required."
+      },
+      "mathematical_support": {
+        "hint_1": "Here the extra amount is known. Decide how it relates to Priya’s full length.",
+        "hint_2": "Join Sam’s length and the extra length to find Priya’s amount.",
+        "worked_solution": "Priya has all of Sam’s amount plus an extra length. → Join Sam’s length and the extra length to find Priya’s amount. → Select 1 5/6 + 7/12. No numerical result is required."
+      },
+      "working": [
+        "Priya has all of Sam’s amount plus an extra length.",
+        "Join Sam’s length and the extra length to find Priya’s amount.",
+        "Select 1 5/6 + 7/12. No numerical result is required."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_situation",
+          "object": "wire",
+          "title": "Sam’s wire and Priya’s extra wire",
+          "first": {
+            "whole": 1,
+            "n": 5,
+            "d": 6
+          },
+          "second": {
+            "whole": 0,
+            "n": 7,
+            "d": 12
+          },
+          "first_label": "Sam’s wire",
+          "second_label": "Priya’s extra amount",
+          "requested_label": "Priya’s wire",
+          "relationship": "join",
+          "roles": "Priya has all of Sam’s amount plus an extra length.",
+          "relationship_text": "Join Sam’s length and the extra length to find Priya’s amount.",
+          "unit": "m",
+          "unit_name": "metre",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "1 5/6 − 7/12": "Subtracting the extra would give a shorter length, but Priya has more wire than Sam."
+      },
+      "final_error_feedback": "answer_specific",
+      "retain_answer_specific_feedback": true,
+      "evidence_profile": "fraction_operation_selection",
+      "required_operation": "add",
+      "operation_choices": [
+        {
+          "value": "1 5/6 − 7/12",
+          "operation": "subtract",
+          "order": "original"
+        },
+        {
+          "value": "1 5/6 + 7/12",
+          "operation": "add",
+          "order": null
+        }
+      ]
+    },
+    {
+      "id": "AF-16-P07",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "A tank has a capacity of 6 1/2 litres. It contains 4 3/4 litres. Which expression gives the empty space in the tank?",
+      "target": "Identify the quantity relationship and select the correct operation, with subtraction quantities in the correct order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "6 1/2 + 4 3/4",
+          "6 1/2 − 4 3/4",
+          "4 3/4 − 6 1/2",
+          "6 1/2 × 4 3/4"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "6 1/2 − 4 3/4"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Empty space is the missing part of the tank’s full capacity.",
+        "correct_after_support": "Correct. Empty space is the missing part of the tank’s full capacity.",
+        "on_correct_math": "The full capacity consists of the liquid present and the empty space. → Subtract the amount present from the full capacity. → Select 6 1/2 − 4 3/4. No numerical result is required.",
+        "on_incorrect_attempt_1": "Relate the tank’s contents and its empty space to its full capacity.",
+        "on_incorrect_attempt_2": "Relate the tank’s contents and its empty space to its full capacity.",
+        "on_locked_incorrect": "Response recorded. Review the relationship and the order of the quantities.",
+        "worked_explanation": "The full capacity consists of the liquid present and the empty space. → Subtract the amount present from the full capacity. → Select 6 1/2 − 4 3/4. No numerical result is required."
+      },
+      "mathematical_support": {
+        "hint_1": "Relate the tank’s contents and its empty space to its full capacity.",
+        "hint_2": "Subtract the amount present from the full capacity.",
+        "worked_solution": "The full capacity consists of the liquid present and the empty space. → Subtract the amount present from the full capacity. → Select 6 1/2 − 4 3/4. No numerical result is required."
+      },
+      "working": [
+        "The full capacity consists of the liquid present and the empty space.",
+        "Subtract the amount present from the full capacity.",
+        "Select 6 1/2 − 4 3/4. No numerical result is required."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_situation",
+          "object": "tank",
+          "title": "Tank capacity and contents",
+          "first": {
+            "whole": 6,
+            "n": 1,
+            "d": 2
+          },
+          "second": {
+            "whole": 4,
+            "n": 3,
+            "d": 4
+          },
+          "first_label": "Full capacity",
+          "second_label": "Liquid in the tank",
+          "requested_label": "Empty space in the tank",
+          "relationship": "missing",
+          "roles": "The full capacity consists of the liquid present and the empty space.",
+          "relationship_text": "Subtract the amount present from the full capacity.",
+          "unit": "L",
+          "unit_name": "litre",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "6 1/2 + 4 3/4": "Adding the contents to the full capacity counts the contents again.",
+        "4 3/4 − 6 1/2": "Subtraction is right. Start with full capacity, then subtract the amount already present.",
+        "6 1/2 × 4 3/4": "Multiplication would describe repeated groups or scaling. This question asks about empty space in the tank."
+      },
+      "final_error_feedback": "answer_specific",
+      "retain_answer_specific_feedback": true,
+      "evidence_profile": "fraction_operation_selection",
+      "required_operation": "subtract",
+      "operation_choices": [
+        {
+          "value": "6 1/2 + 4 3/4",
+          "operation": "add",
+          "order": null
+        },
+        {
+          "value": "6 1/2 − 4 3/4",
+          "operation": "subtract",
+          "order": "original"
+        },
+        {
+          "value": "4 3/4 − 6 1/2",
+          "operation": "subtract",
+          "order": "reversed"
+        },
+        {
+          "value": "6 1/2 × 4 3/4",
+          "operation": "multiply",
+          "order": null
+        }
+      ]
+    },
+    {
+      "id": "AF-16-X01",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "On Monday, a machine uses 3 1/4 litres of oil. On Tuesday, it uses 2 5/6 litres. Which calculation gives the total amount of oil used on the two days?",
+      "target": "Identify the quantity relationship and select the correct operation, with subtraction quantities in the correct order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "3 1/4 + 2 5/6",
+          "3 1/4 − 2 5/6",
+          "2 5/6 − 3 1/4",
+          "3 1/4 × 2 5/6"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "3 1/4 + 2 5/6"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The total includes the oil used on both days.",
+        "correct_after_support": "Correct. The total includes the oil used on both days.",
+        "on_correct_math": "Each day contributes a separate amount to the total oil used. → Join the oil used on Monday and Tuesday. → Select 3 1/4 + 2 5/6. No numerical result is required.",
+        "on_incorrect_attempt_1": "Both days contribute to one total.",
+        "on_incorrect_attempt_2": "Both days contribute to one total.",
+        "on_locked_incorrect": "Response recorded. Review the relationship and the order of the quantities.",
+        "worked_explanation": "Each day contributes a separate amount to the total oil used. → Join the oil used on Monday and Tuesday. → Select 3 1/4 + 2 5/6. No numerical result is required."
+      },
+      "mathematical_support": {
+        "hint_1": "Both days contribute to one total.",
+        "hint_2": "Join the oil used on Monday and Tuesday.",
+        "worked_solution": "Each day contributes a separate amount to the total oil used. → Join the oil used on Monday and Tuesday. → Select 3 1/4 + 2 5/6. No numerical result is required."
+      },
+      "working": [
+        "Each day contributes a separate amount to the total oil used.",
+        "Join the oil used on Monday and Tuesday.",
+        "Select 3 1/4 + 2 5/6. No numerical result is required."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_situation",
+          "object": "oil",
+          "title": "A machine’s oil use",
+          "first": {
+            "whole": 3,
+            "n": 1,
+            "d": 4
+          },
+          "second": {
+            "whole": 2,
+            "n": 5,
+            "d": 6
+          },
+          "first_label": "Monday’s oil",
+          "second_label": "Tuesday’s oil",
+          "requested_label": "Oil used over both days",
+          "relationship": "join",
+          "roles": "Each day contributes a separate amount to the total oil used.",
+          "relationship_text": "Join the oil used on Monday and Tuesday.",
+          "unit": "L",
+          "unit_name": "litre",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "3 1/4 − 2 5/6": "Subtraction compares the days. The question asks for their combined use.",
+        "2 5/6 − 3 1/4": "Subtraction compares the days, whereas both days’ amounts must be included in the total.",
+        "3 1/4 × 2 5/6": "Multiplication would describe repeated groups or scaling. This question asks about oil used over both days."
+      },
+      "final_error_feedback": "answer_specific",
+      "retain_answer_specific_feedback": true,
+      "evidence_profile": "fraction_operation_selection",
+      "required_operation": "add",
+      "operation_choices": [
+        {
+          "value": "3 1/4 + 2 5/6",
+          "operation": "add",
+          "order": null
+        },
+        {
+          "value": "3 1/4 − 2 5/6",
+          "operation": "subtract",
+          "order": "original"
+        },
+        {
+          "value": "2 5/6 − 3 1/4",
+          "operation": "subtract",
+          "order": "reversed"
+        },
+        {
+          "value": "3 1/4 × 2 5/6",
+          "operation": "multiply",
+          "order": null
+        }
+      ]
+    },
+    {
+      "id": "AF-16-X02",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A wooden board is 5 3/8 metres long. After a section is removed, 3 7/10 metres remain. Which calculation gives the length of the section removed?",
+      "target": "Identify the quantity relationship and select the correct operation, with subtraction quantities in the correct order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "5 3/8 + 3 7/10",
+          "5 3/8 − 3 7/10",
+          "3 7/10 − 5 3/8",
+          "5 3/8 ÷ 3 7/10"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "5 3/8 − 3 7/10"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The removed section is the original board minus the part remaining.",
+        "correct_after_support": "Correct. The removed section is the original board minus the part remaining.",
+        "on_correct_math": "The original board consists of the section removed and the board remaining. → Subtract the remaining length from the original length to find the removed section. → Select 5 3/8 − 3 7/10. No numerical result is required.",
+        "on_incorrect_attempt_1": "The unknown is the section removed; the remaining length is already known.",
+        "on_incorrect_attempt_2": "The unknown is the section removed; the remaining length is already known.",
+        "on_locked_incorrect": "Response recorded. Review the relationship and the order of the quantities.",
+        "worked_explanation": "The original board consists of the section removed and the board remaining. → Subtract the remaining length from the original length to find the removed section. → Select 5 3/8 − 3 7/10. No numerical result is required."
+      },
+      "mathematical_support": {
+        "hint_1": "The unknown is the section removed; the remaining length is already known.",
+        "hint_2": "Subtract the remaining length from the original length to find the removed section.",
+        "worked_solution": "The original board consists of the section removed and the board remaining. → Subtract the remaining length from the original length to find the removed section. → Select 5 3/8 − 3 7/10. No numerical result is required."
+      },
+      "working": [
+        "The original board consists of the section removed and the board remaining.",
+        "Subtract the remaining length from the original length to find the removed section.",
+        "Select 5 3/8 − 3 7/10. No numerical result is required."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_situation",
+          "object": "board",
+          "title": "A wooden board before and after a cut",
+          "first": {
+            "whole": 5,
+            "n": 3,
+            "d": 8
+          },
+          "second": {
+            "whole": 3,
+            "n": 7,
+            "d": 10
+          },
+          "first_label": "Board before the cut",
+          "second_label": "Board remaining",
+          "requested_label": "Section removed",
+          "relationship": "missing",
+          "roles": "The original board consists of the section removed and the board remaining.",
+          "relationship_text": "Subtract the remaining length from the original length to find the removed section.",
+          "unit": "m",
+          "unit_name": "metre",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "5 3/8 + 3 7/10": "The remaining part is already included in the original board. Adding them would not find the removed section.",
+        "3 7/10 − 5 3/8": "Subtraction is right. Put the original board first and its remaining part second.",
+        "5 3/8 ÷ 3 7/10": "Division would describe sharing or counting equal groups. This question asks about section removed."
+      },
+      "final_error_feedback": "answer_specific",
+      "retain_answer_specific_feedback": true,
+      "evidence_profile": "fraction_operation_selection",
+      "required_operation": "subtract",
+      "operation_choices": [
+        {
+          "value": "5 3/8 + 3 7/10",
+          "operation": "add",
+          "order": null
+        },
+        {
+          "value": "5 3/8 − 3 7/10",
+          "operation": "subtract",
+          "order": "original"
+        },
+        {
+          "value": "3 7/10 − 5 3/8",
+          "operation": "subtract",
+          "order": "reversed"
+        },
+        {
+          "value": "5 3/8 ÷ 3 7/10",
+          "operation": "divide",
+          "order": null
+        }
+      ]
+    },
+    {
+      "id": "AF-16-X03",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "Aisha has 4 1/5 kg of clay. This is 1 3/4 kg more than Ben has. Which calculation gives the amount of clay Ben has?",
+      "target": "Identify the quantity relationship and select the correct operation, with subtraction quantities in the correct order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "4 1/5 + 1 3/4",
+          "4 1/5 − 1 3/4",
+          "1 3/4 − 4 1/5",
+          "4 1/5 × 1 3/4"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "4 1/5 − 1 3/4"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Ben has less clay than Aisha, so her extra amount is removed from her total.",
+        "correct_after_support": "Correct. Ben has less clay than Aisha, so her extra amount is removed from her total.",
+        "on_correct_math": "Aisha’s amount consists of Ben’s amount and the extra clay she has. → Remove the extra amount from Aisha’s total to find Ben’s amount. → Select 4 1/5 − 1 3/4. No numerical result is required.",
+        "on_incorrect_attempt_1": "Read whose amount is larger and whose amount must be found.",
+        "on_incorrect_attempt_2": "Read whose amount is larger and whose amount must be found.",
+        "on_locked_incorrect": "Response recorded. Review the relationship and the order of the quantities.",
+        "worked_explanation": "Aisha’s amount consists of Ben’s amount and the extra clay she has. → Remove the extra amount from Aisha’s total to find Ben’s amount. → Select 4 1/5 − 1 3/4. No numerical result is required."
+      },
+      "mathematical_support": {
+        "hint_1": "Read whose amount is larger and whose amount must be found.",
+        "hint_2": "Remove the extra amount from Aisha’s total to find Ben’s amount.",
+        "worked_solution": "Aisha’s amount consists of Ben’s amount and the extra clay she has. → Remove the extra amount from Aisha’s total to find Ben’s amount. → Select 4 1/5 − 1 3/4. No numerical result is required."
+      },
+      "working": [
+        "Aisha’s amount consists of Ben’s amount and the extra clay she has.",
+        "Remove the extra amount from Aisha’s total to find Ben’s amount.",
+        "Select 4 1/5 − 1 3/4. No numerical result is required."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_situation",
+          "object": "clay",
+          "title": "Aisha’s clay and her extra amount",
+          "first": {
+            "whole": 4,
+            "n": 1,
+            "d": 5
+          },
+          "second": {
+            "whole": 1,
+            "n": 3,
+            "d": 4
+          },
+          "first_label": "Aisha’s clay",
+          "second_label": "Aisha’s extra amount above Ben",
+          "requested_label": "Ben’s clay",
+          "relationship": "missing",
+          "roles": "Aisha’s amount consists of Ben’s amount and the extra clay she has.",
+          "relationship_text": "Remove the extra amount from Aisha’s total to find Ben’s amount.",
+          "unit": "kg",
+          "unit_name": "kilogram",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "4 1/5 + 1 3/4": "The word “more” describes Aisha’s amount. Adding would make Ben’s amount larger than hers, which contradicts the story.",
+        "1 3/4 − 4 1/5": "Subtraction is appropriate. Remove the extra amount from Aisha’s total, not the other way round.",
+        "4 1/5 × 1 3/4": "Multiplication would describe repeated groups or scaling. This question asks about ben’s clay."
+      },
+      "final_error_feedback": "answer_specific",
+      "retain_answer_specific_feedback": true,
+      "evidence_profile": "fraction_operation_selection",
+      "required_operation": "subtract",
+      "operation_choices": [
+        {
+          "value": "4 1/5 + 1 3/4",
+          "operation": "add",
+          "order": null
+        },
+        {
+          "value": "4 1/5 − 1 3/4",
+          "operation": "subtract",
+          "order": "original"
+        },
+        {
+          "value": "1 3/4 − 4 1/5",
+          "operation": "subtract",
+          "order": "reversed"
+        },
+        {
+          "value": "4 1/5 × 1 3/4",
+          "operation": "multiply",
+          "order": null
+        }
+      ]
+    },
+    {
+      "id": "AF-16-X04",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "Which situation is represented by the calculation 4 1/2 − 2 1/3 ?",
+      "target": "Identify the quantity relationship and select the correct operation, with subtraction quantities in the correct order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "A container holds 4 1/2 litres and another 2 1/3 litres are added.",
+          "A rope is 4 1/2 metres long and 2 1/3 metres are cut off.",
+          "Two ribbons have lengths 4 1/2 metres and 2 1/3 metres, and their total is required.",
+          "A quantity of 4 1/2 is repeated 2 1/3 times."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "A rope is 4 1/2 metres long and 2 1/3 metres are cut off."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The rope’s original length comes first, and the cut length is removed.",
+        "correct_after_support": "Correct. The rope’s original length comes first, and the cut length is removed.",
+        "on_correct_math": "The expression starts with an amount and subtracts another amount. → The rope situation removes the cut length from the original length. → The required calculation is 4 1/2 − 2 1/3.",
+        "on_incorrect_attempt_1": "Match both the operation and the roles of its two quantities to the story.",
+        "on_incorrect_attempt_2": "Match both the operation and the roles of its two quantities to the story.",
+        "on_locked_incorrect": "Response recorded. Review the relationship and the order of the quantities.",
+        "worked_explanation": "The expression starts with an amount and subtracts another amount. → The rope situation removes the cut length from the original length. → The required calculation is 4 1/2 − 2 1/3."
+      },
+      "mathematical_support": {
+        "hint_1": "Match both the operation and the roles of its two quantities to the story.",
+        "hint_2": "Match both the operation and the roles of its two quantities to the story.",
+        "worked_solution": "The expression starts with an amount and subtracts another amount. → The rope situation removes the cut length from the original length. → The required calculation is 4 1/2 − 2 1/3."
+      },
+      "working": [
+        "The expression starts with an amount and subtracts another amount.",
+        "The rope situation removes the cut length from the original length.",
+        "The required calculation is 4 1/2 − 2 1/3."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "operation_to_story",
+          "label": "Match this calculation to a situation",
+          "expression": "4 1/2 − 2 1/3",
+          "completed": "A starting rope length − the length cut off",
+          "response_kind": "explanation",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "A container holds 4 1/2 litres and another 2 1/3 litres are added.": "This situation adds liquid, so it needs addition rather than the given subtraction.",
+        "Two ribbons have lengths 4 1/2 metres and 2 1/3 metres, and their total is required.": "Finding a combined ribbon total needs addition, not the given subtraction.",
+        "A quantity of 4 1/2 is repeated 2 1/3 times.": "Repeating a quantity is represented by multiplication, not the given subtraction."
+      },
+      "final_error_feedback": "answer_specific",
+      "retain_answer_specific_feedback": true
+    },
+    {
+      "id": "AF-16-E01",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "exit",
+      "prompt": "A container holds 1 3/4 litres of paint. Another 5/8 litre is added. Which calculation gives the new amount of paint?",
+      "target": "Identify the quantity relationship and select the correct operation, with subtraction quantities in the correct order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "1 3/4 + 5/8",
+          "1 3/4 − 5/8",
+          "5/8 − 1 3/4",
+          "1 3/4 × 5/8"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "1 3/4 + 5/8"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Recorded. Both amounts contribute to the new amount of paint.",
+        "correct_after_support": "Recorded. Both amounts contribute to the new amount of paint.",
+        "on_correct_math": "The original paint remains and another amount is added. → Join the two amounts to find the new amount of paint. → Select 1 3/4 + 5/8. No numerical result is required.",
+        "on_incorrect_attempt_1": "No hints are available in the final check.",
+        "on_incorrect_attempt_2": "No hints are available in the final check.",
+        "on_locked_incorrect": "Response recorded. Review the relationship and the order of the quantities.",
+        "worked_explanation": "The original paint remains and another amount is added. → Join the two amounts to find the new amount of paint. → Select 1 3/4 + 5/8. No numerical result is required."
+      },
+      "mathematical_support": {
+        "hint_1": "No hints are available in the final check.",
+        "hint_2": "Join the two amounts to find the new amount of paint.",
+        "worked_solution": "The original paint remains and another amount is added. → Join the two amounts to find the new amount of paint. → Select 1 3/4 + 5/8. No numerical result is required."
+      },
+      "working": [
+        "The original paint remains and another amount is added.",
+        "Join the two amounts to find the new amount of paint.",
+        "Select 1 3/4 + 5/8. No numerical result is required."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_situation",
+          "object": "paint",
+          "title": "Paint already present and paint added",
+          "first": {
+            "whole": 1,
+            "n": 3,
+            "d": 4
+          },
+          "second": {
+            "whole": 0,
+            "n": 5,
+            "d": 8
+          },
+          "first_label": "Paint already present",
+          "second_label": "Paint added",
+          "requested_label": "New amount of paint",
+          "relationship": "join",
+          "roles": "The original paint remains and another amount is added.",
+          "relationship_text": "Join the two amounts to find the new amount of paint.",
+          "unit": "L",
+          "unit_name": "litre",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "1 3/4 − 5/8": "Subtracting would remove paint, but the story adds more paint.",
+        "5/8 − 1 3/4": "Subtraction would remove paint; the two amounts must be joined here.",
+        "1 3/4 × 5/8": "Multiplication would describe repeated groups or scaling. This question asks about new amount of paint."
+      },
+      "final_error_feedback": "answer_specific",
+      "retain_answer_specific_feedback": true,
+      "evidence_profile": "fraction_operation_selection",
+      "required_operation": "add",
+      "operation_choices": [
+        {
+          "value": "1 3/4 + 5/8",
+          "operation": "add",
+          "order": null
+        },
+        {
+          "value": "1 3/4 − 5/8",
+          "operation": "subtract",
+          "order": "original"
+        },
+        {
+          "value": "5/8 − 1 3/4",
+          "operation": "subtract",
+          "order": "reversed"
+        },
+        {
+          "value": "1 3/4 × 5/8",
+          "operation": "multiply",
+          "order": null
+        }
+      ]
+    },
+    {
+      "id": "AF-16-E02",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "exit",
+      "prompt": "A route is 4 1/6 km long. Mia has walked 2 3/5 km. Which calculation gives the distance remaining?",
+      "target": "Identify the quantity relationship and select the correct operation, with subtraction quantities in the correct order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "4 1/6 + 2 3/5",
+          "2 3/5 − 4 1/6",
+          "4 1/6 − 2 3/5",
+          "4 1/6 ÷ 2 3/5"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "4 1/6 − 2 3/5"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Recorded. The full route comes first, with the walked distance subtracted.",
+        "correct_after_support": "Recorded. The full route comes first, with the walked distance subtracted.",
+        "on_correct_math": "The walked distance is a known part of Mia’s full route. → Subtract the distance walked from the full route. → Select 4 1/6 − 2 3/5. No numerical result is required.",
+        "on_incorrect_attempt_1": "No hints are available in the final check.",
+        "on_incorrect_attempt_2": "No hints are available in the final check.",
+        "on_locked_incorrect": "Response recorded. Review the relationship and the order of the quantities.",
+        "worked_explanation": "The walked distance is a known part of Mia’s full route. → Subtract the distance walked from the full route. → Select 4 1/6 − 2 3/5. No numerical result is required."
+      },
+      "mathematical_support": {
+        "hint_1": "No hints are available in the final check.",
+        "hint_2": "Subtract the distance walked from the full route.",
+        "worked_solution": "The walked distance is a known part of Mia’s full route. → Subtract the distance walked from the full route. → Select 4 1/6 − 2 3/5. No numerical result is required."
+      },
+      "working": [
+        "The walked distance is a known part of Mia’s full route.",
+        "Subtract the distance walked from the full route.",
+        "Select 4 1/6 − 2 3/5. No numerical result is required."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_situation",
+          "object": "route",
+          "title": "Mia’s walking route",
+          "first": {
+            "whole": 4,
+            "n": 1,
+            "d": 6
+          },
+          "second": {
+            "whole": 2,
+            "n": 3,
+            "d": 5
+          },
+          "first_label": "Full route",
+          "second_label": "Distance Mia has walked",
+          "requested_label": "Distance remaining",
+          "relationship": "remain",
+          "roles": "The walked distance is a known part of Mia’s full route.",
+          "relationship_text": "Subtract the distance walked from the full route.",
+          "unit": "km",
+          "unit_name": "kilometre",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "4 1/6 + 2 3/5": "Adding counts the completed part again. Find the part of the route that remains.",
+        "2 3/5 − 4 1/6": "Subtraction is the right operation, but the order is reversed. The full route must come first.",
+        "4 1/6 ÷ 2 3/5": "Division would describe sharing or counting equal groups. This question asks about distance remaining."
+      },
+      "final_error_feedback": "answer_specific",
+      "retain_answer_specific_feedback": true,
+      "evidence_profile": "fraction_operation_selection",
+      "required_operation": "subtract",
+      "operation_choices": [
+        {
+          "value": "4 1/6 + 2 3/5",
+          "operation": "add",
+          "order": null
+        },
+        {
+          "value": "2 3/5 − 4 1/6",
+          "operation": "subtract",
+          "order": "reversed"
+        },
+        {
+          "value": "4 1/6 − 2 3/5",
+          "operation": "subtract",
+          "order": "original"
+        },
+        {
+          "value": "4 1/6 ÷ 2 3/5",
+          "operation": "divide",
+          "order": null
+        }
+      ]
+    },
+    {
+      "id": "AF-16-E03",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "exit",
+      "prompt": "Ava has 3 1/8 metres of ribbon. This is 3/4 metre more than Leo has. Which calculation gives the length of Leo’s ribbon?",
+      "target": "Identify the quantity relationship and select the correct operation, with subtraction quantities in the correct order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "3 1/8 + 3/4",
+          "3 1/8 − 3/4",
+          "3/4 − 3 1/8",
+          "3 1/8 × 3/4"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "3 1/8 − 3/4"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Recorded. Leo’s smaller amount is found by removing Ava’s extra length from her total.",
+        "correct_after_support": "Recorded. Leo’s smaller amount is found by removing Ava’s extra length from her total.",
+        "on_correct_math": "Ava’s amount includes Leo’s amount and the extra ribbon she has. → Subtract Ava’s extra length from her total to find Leo’s length. → Select 3 1/8 − 3/4. No numerical result is required.",
+        "on_incorrect_attempt_1": "No hints are available in the final check.",
+        "on_incorrect_attempt_2": "No hints are available in the final check.",
+        "on_locked_incorrect": "Response recorded. Review the relationship and the order of the quantities.",
+        "worked_explanation": "Ava’s amount includes Leo’s amount and the extra ribbon she has. → Subtract Ava’s extra length from her total to find Leo’s length. → Select 3 1/8 − 3/4. No numerical result is required."
+      },
+      "mathematical_support": {
+        "hint_1": "No hints are available in the final check.",
+        "hint_2": "Subtract Ava’s extra length from her total to find Leo’s length.",
+        "worked_solution": "Ava’s amount includes Leo’s amount and the extra ribbon she has. → Subtract Ava’s extra length from her total to find Leo’s length. → Select 3 1/8 − 3/4. No numerical result is required."
+      },
+      "working": [
+        "Ava’s amount includes Leo’s amount and the extra ribbon she has.",
+        "Subtract Ava’s extra length from her total to find Leo’s length.",
+        "Select 3 1/8 − 3/4. No numerical result is required."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_situation",
+          "object": "ribbon",
+          "title": "Ava’s ribbon and her extra length",
+          "first": {
+            "whole": 3,
+            "n": 1,
+            "d": 8
+          },
+          "second": {
+            "whole": 0,
+            "n": 3,
+            "d": 4
+          },
+          "first_label": "Ava’s ribbon",
+          "second_label": "Ava’s extra length above Leo",
+          "requested_label": "Leo’s ribbon",
+          "relationship": "missing",
+          "roles": "Ava’s amount includes Leo’s amount and the extra ribbon she has.",
+          "relationship_text": "Subtract Ava’s extra length from her total to find Leo’s length.",
+          "unit": "m",
+          "unit_name": "metre",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "3 1/8 + 3/4": "“More” describes Ava’s ribbon, not an instruction to add. Leo has less, so remove the extra length from Ava’s amount.",
+        "3/4 − 3 1/8": "Subtraction is appropriate, but Ava’s full length must come before the extra amount.",
+        "3 1/8 × 3/4": "Multiplication would describe repeated groups or scaling. This question asks about leo’s ribbon."
+      },
+      "final_error_feedback": "answer_specific",
+      "retain_answer_specific_feedback": true,
+      "evidence_profile": "fraction_operation_selection",
+      "required_operation": "subtract",
+      "operation_choices": [
+        {
+          "value": "3 1/8 + 3/4",
+          "operation": "add",
+          "order": null
+        },
+        {
+          "value": "3 1/8 − 3/4",
+          "operation": "subtract",
+          "order": "original"
+        },
+        {
+          "value": "3/4 − 3 1/8",
+          "operation": "subtract",
+          "order": "reversed"
+        },
+        {
+          "value": "3 1/8 × 3/4",
+          "operation": "multiply",
+          "order": null
+        }
+      ]
+    }
+  ],
+  "canonical_lesson": {
+    "version": "AF16-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

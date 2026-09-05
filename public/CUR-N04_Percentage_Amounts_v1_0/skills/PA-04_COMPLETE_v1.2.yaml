@@ -1,0 +1,461 @@
+schema_version: '1.2'
+spec_intent:
+  source_of_truth: true
+  implementation_status: production_batch_1
+  source_material: { title: PA 04 — Find 50%, 25% and 75% of an Amount, path: authoring-source-redacted.pdf, authoritative_pages: 1-18 }
+  authored_scope: Teach 50%, 25% and 75% as one half, one quarter and three quarters of the same whole.
+  excluded_from_active_route: [Diagnostic questions, Delayed retrieval questions, Multiples of 10% and arbitrary percentages]
+
+identity:
+  id: PA-04
+  slug: find-fifty-twenty-five-and-seventy-five-percent
+  title: Find 50%, 25% and 75% of an Amount
+  strand: Number
+  cluster: Percentage Amounts
+  tier: GCSE Foundation
+  status: production_batch_1
+  estimated_minutes: { min: 18, max: 24 }
+
+curriculum:
+  learning_objective: Find 50%, 25% and 75% of a stated amount using the equivalent fractions 1/2, 1/4 and 3/4 and equal parts of the same whole.
+  success_criteria: [Find 50% by selecting one of two equal parts., Find 25% by selecting one of four equal parts., Find 75% by selecting three equal quarters or combining 50% and 25% from the same whole., Preserve units and use percentage size to check the result.]
+  boundaries:
+    includes: [Exactly 50%, 25% and 75% of positive whole-number amounts, Whole-number and simple one-decimal results, Direct calculations and short contexts]
+    excludes: [Multiples of 10% and 5%, Arbitrary percentages, Money-specific conventions, Percentage change and reverse percentages]
+
+dependencies:
+  required_skill_refs: [PA-01, FDP-03, MD-01, MD-02]
+  entry_assumptions: [The learner recognises halves and quarters, The learner can find unit and non-unit fractions of amounts]
+  downstream_rule: PA-07 may combine these benchmarks with other percentage parts; PA-04 keeps all parts tied to the same whole.
+
+engine_capability_requirements:
+  input_types: [single_choice, decimal]
+  visual_primitives: [percentage_strip, caption_layer, progress_indicator]
+  animation_actions: [fade_in, highlight, reveal_equation, contrast, crossfade_phase]
+  audio_capabilities: [browser_speech, caption_sync, pause_for_input, cancel_on_navigation]
+  state_capabilities: [attempt_count, step_resume, exit_score, confirmation_branch]
+
+experience_contract:
+  authored_feedback_only: true
+  ordered_phases: [teaching, guided, faded, independent_transfer, practice, exit, completion]
+  navigation: { default: linear_forward, refresh_resume: Resume at the latest committed step., start_again: Reset only this lesson attempt and preserve historical completion records. }
+  interaction_rules: [Never auto-submit or auto-fill an answer., Keep input available while Ryan speaks., Keep every selected half or quarter tied to the original whole.]
+
+voice_and_script:
+  performer_name: Ryan
+  dialogue_profile_ref: RYAN_DIALOGUE_PROFILE_v1.yaml
+  script_ownership: All mathematical narration and feedback is authored in this specification.
+  caption_policy: Every spoken line is captioned verbatim; empty narration leaves no visible caption container.
+  narration_playback: { mode: browser_speech_ryan, require_ryan_voice: true, browser_voice_name: Microsoft Ryan Online (Natural) - English (United Kingdom), opening_delay_ms: 0 }
+  production_audio_note: Provider audio and word boundaries require separate owner permission.
+
+visual_language:
+  primary_visual_contract: { primitive: percentage_strip, rule: Use the same complete strip width for halves and quarters; only the number of equal selected parts changes. }
+  scene_rules: [Show two equal parts for 50% and four equal parts for 25% and 75%., Keep quarter groups equal in size., Do not reveal a scored result before submission.]
+  reduced_motion: Show the completed equal-part comparison without movement.
+
+diagnostic: { enabled: false, question_refs: [], reason: Diagnostic is outside the current implementation scope. }
+
+concept_model:
+  core_idea: Fifty percent is one half, twenty-five percent is one quarter and seventy-five percent is three quarters of the same whole.
+  invariant: The complete whole and equal-part size stay fixed while the number of selected parts changes.
+  mathematical_rule: 50% = 1/2; 25% = 1/4; 75% = 3/4 = 1/2 + 1/4.
+  must_notice: [The denominator gives the number of equal parts., Seventy-five percent selects three quarters., Both parts in 50% plus 25% come from the same whole., For a positive whole 25% < 50% < 75% < 100%.]
+  common_confusions: [Dividing by 50, 25 or 75., Swapping halves and quarters., Stopping after one quarter for 75%., Combining percentage parts from different wholes.]
+
+lesson:
+  teaching_steps:
+    - id: T01
+      stage: teaching
+      purpose: Connect benchmark percentages to familiar fractions.
+      estimated_seconds: 40
+      scene:
+        layout: paired_comparison
+        display_title: Familiar fractions of one whole
+        objects: [The same whole shown as one half, one quarter and three quarters.]
+        initial_state: Keep the complete strip width unchanged across all three models.
+        model:
+          comparisonDefaults: { showRoles: false, showFormula: false, showResult: true }
+          comparisons:
+            - { heading: '50% = 1/2', percent: 50, wholeAmount: 36, unit: counters, partAmount: 18, partitionCount: 2, selectedGroups: 1, solutionLabel: 'one of two equal parts' }
+            - { heading: '25% = 1/4', percent: 25, wholeAmount: 36, unit: counters, partAmount: 9, partitionCount: 4, selectedGroups: 1, solutionLabel: 'one of four equal parts' }
+            - { heading: '75% = 3/4', percent: 75, wholeAmount: 36, unit: counters, partAmount: 27, partitionCount: 4, selectedGroups: 3, solutionLabel: 'three of four equal parts' }
+      narration: { script: These three percentages are familiar fractions of the same whole. Fifty percent is one half, twenty-five percent is one quarter, and seventy-five percent is three quarters. }
+      animation_timeline: [{ id: A01, trigger: narration_sync, action: contrast, target: percentage_strip, duration_ms: 900 }]
+      learner_interaction: { question_ref: null }
+      next_step: T02
+
+    - id: T02
+      stage: teaching
+      purpose: Compare equal groups from the same amount.
+      estimated_seconds: 45
+      scene:
+        layout: paired_comparison
+        display_title: The group size stays fixed
+        objects: [Thirty-six counters split into four equal groups of nine.]
+        initial_state: Select one, two and three unchanged quarter-groups.
+        model:
+          comparisonDefaults: { showRoles: false, showFormula: false, showResult: true }
+          comparisons:
+            - { heading: '25%: one group', percent: 25, wholeAmount: 36, unit: counters, partAmount: 9, partitionCount: 4, selectedGroups: 1 }
+            - { heading: '50%: two groups', percent: 50, wholeAmount: 36, unit: counters, partAmount: 18, partitionCount: 4, selectedGroups: 2 }
+            - { heading: '75%: three groups', percent: 75, wholeAmount: 36, unit: counters, partAmount: 27, partitionCount: 4, selectedGroups: 3 }
+      narration: { script: Each row starts with the same thirty-six counters split into four equal groups of nine. Select one group for twenty-five percent, two for fifty percent, and three for seventy-five percent. }
+      animation_timeline: [{ id: A02, trigger: narration_sync, action: highlight, target: percentage_strip, duration_ms: 900 }]
+      learner_interaction: { question_ref: null }
+      next_step: T03
+
+    - id: T03
+      stage: teaching
+      purpose: Model three quarters of an amount.
+      estimated_seconds: 40
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: Find one quarter, then select three
+        objects: [A worked example finding 75% of 64.]
+        initial_state: Reveal the one-quarter value before the three-quarter result.
+        model: { heading: 'Find 75% of 64', percent: 75, wholeAmount: 64, partAmount: 48, partitionCount: 4, selectedGroups: 3, showRoles: true, showResult: true, showMethod: true, methodSteps: ['75% = 3/4', '64 ÷ 4 = 16', '16 × 3 = 48'] }
+      narration: { script: Seventy-five percent is three quarters. Divide sixty-four by four to find one quarter, then select three equal quarters. The result is forty-eight. }
+      animation_timeline: [{ id: A03, trigger: narration_sync, action: reveal_equation, target: percentage_strip, duration_ms: 850 }]
+      learner_interaction: { question_ref: null }
+      next_step: T04
+
+    - id: T04
+      stage: teaching
+      purpose: Show the alternative same-whole route.
+      estimated_seconds: 40
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: Fifty percent plus twenty-five percent
+        objects: [The same whole of 64 used for both percentage parts.]
+        initial_state: Reveal half and quarter values before adding them.
+        model: { heading: 'Another route to 75% of 64', percent: 75, wholeAmount: 64, partAmount: 48, partitionCount: 4, selectedGroups: 3, showRoles: true, showResult: true, showMethod: true, methodSteps: ['50% of 64 = 32', '25% of 64 = 16', '32 + 16 = 48'] }
+      narration: { script: You can also combine fifty percent and twenty-five percent, but both parts must come from the original whole of sixty-four. Thirty-two plus sixteen is forty-eight. }
+      animation_timeline: [{ id: A04, trigger: narration_sync, action: reveal_equation, target: percentage_strip, duration_ms: 850 }]
+      learner_interaction: { question_ref: null }
+      next_step: T05
+
+    - id: T05
+      stage: teaching
+      purpose: Check the three-quarter structure.
+      estimated_seconds: 70
+      scene: { layout: single_central_teaching_canvas, display_title: What does seventy-five percent select?, objects: [Four equal parts with no answer label.], initial_state: Keep the selected-count explanation hidden. }
+      narration: { script: Choose the statement that keeps four equal parts and selects the correct number of them. }
+      animation_timeline: [{ id: A05, trigger: narration_sync, action: highlight, target: percentage_strip, duration_ms: 650 }]
+      learner_interaction: { question_ref: PA-04-C01, auto_focus: true }
+      next_step: T06
+
+    - id: T06
+      stage: teaching
+      purpose: Guide 75% of 52.
+      estimated_seconds: 45
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: Keep each quarter equal
+        objects: [A guided example finding 75% of 52.]
+        initial_state: Reveal one quarter before the final three-quarter value.
+        model: { heading: 'Find 75% of 52', percent: 75, wholeAmount: 52, partAmount: 39, partitionCount: 4, selectedGroups: 3, showRoles: true, showResult: true, showMethod: true, methodSteps: ['52 ÷ 4 = 13', '13 × 3 = 39'] }
+      narration: { script: Divide fifty-two into four equal quarters. One quarter is thirteen, so three unchanged quarters contain thirty-nine. }
+      animation_timeline: [{ id: A06, trigger: narration_sync, action: highlight, target: percentage_strip, duration_ms: 850 }]
+      learner_interaction: { question_ref: null }
+      next_step: T07
+
+    - id: T07
+      stage: teaching
+      purpose: Check the alternative route.
+      estimated_seconds: 70
+      scene: { layout: single_central_teaching_canvas, display_title: Combine parts from the same whole, objects: [A 75% strip for 52 with no method shown.], initial_state: Hide both component values before submission. }
+      narration: { script: Choose the alternative method that keeps both percentage parts tied to the original fifty-two. }
+      animation_timeline: [{ id: A07, trigger: narration_sync, action: highlight, target: percentage_strip, duration_ms: 650 }]
+      learner_interaction: { question_ref: PA-04-C02, auto_focus: true }
+      next_step: T08
+
+    - id: T08
+      stage: teaching
+      purpose: Compare benchmark sizes.
+      estimated_seconds: 40
+      scene:
+        layout: paired_comparison
+        display_title: More selected quarters means a larger part
+        objects: [The same positive whole with 25%, 50%, 75% and 100% marked.]
+        initial_state: Show the benchmark order without changing the whole.
+        model:
+          comparisonDefaults: { showRoles: false, showFormula: false, showResult: true }
+          comparisons:
+            - { heading: '25%', percent: 25, wholeAmount: 80, partAmount: 20, partitionCount: 4, selectedGroups: 1 }
+            - { heading: '50%', percent: 50, wholeAmount: 80, partAmount: 40, partitionCount: 4, selectedGroups: 2 }
+            - { heading: '75%', percent: 75, wholeAmount: 80, partAmount: 60, partitionCount: 4, selectedGroups: 3 }
+      narration: { script: Keep the whole fixed. One quarter is smaller than two quarters, and two quarters are smaller than three. So twenty-five percent is below fifty percent, which is below seventy-five percent. }
+      animation_timeline: [{ id: A08, trigger: narration_sync, action: contrast, target: percentage_strip, duration_ms: 900 }]
+      learner_interaction: { question_ref: null }
+      next_step: T09
+
+    - id: T09
+      stage: teaching
+      purpose: Check a full benchmark calculation.
+      estimated_seconds: 75
+      scene: { layout: single_central_teaching_canvas, display_title: Select three equal quarters yourself, objects: [A four-part strip for 80.], initial_state: Keep the quarter value and result hidden. }
+      narration: { script: Find seventy-five percent of eighty. Enter the final amount yourself. }
+      animation_timeline: [{ id: A09, trigger: narration_sync, action: highlight, target: percentage_strip, duration_ms: 650 }]
+      learner_interaction: { question_ref: PA-04-C03, auto_focus: true }
+      next_step: T10
+
+    - id: T10
+      stage: teaching
+      purpose: Hand control to the learner.
+      estimated_seconds: 25
+      scene: { layout: single_central_teaching_canvas, display_title: Match the benchmark to equal parts, objects: [An unsolved quartered whole.], initial_state: Keep only the equal partitions as a cue., model: { heading: 'Your turn', percent: 50, wholeAmount: 86, partitionCount: 2, selectedGroups: 1, showRoles: false, showResult: false } }
+      narration: { script: Now choose the matching fraction, use equal parts of the correct whole, and check the result against the benchmark size. }
+      animation_timeline: [{ id: A10, trigger: narration_sync, action: crossfade_phase, target: percentage_strip, duration_ms: 700 }]
+      learner_interaction: { question_ref: null }
+      next_step: G01
+
+  transfer_steps:
+    G01: { stage: guided, question_ref: PA-04-G01, support_level: high, estimated_seconds: 80, pre_question_script: Fifty percent selects one of two equal parts., visual_before_answer: Show two equal parts without the result., correct_next: F01, recovery_ref: PA-04-R01 }
+    F01: { stage: faded, question_ref: PA-04-F01, support_level: reduced, estimated_seconds: 85, pre_question_script: Twenty-five percent selects one of four equal parts., visual_before_answer: Show four equal parts without the result., correct_next: I01, recovery_ref: PA-04-R01 }
+    I01: { stage: independent_transfer, question_ref: PA-04-I01, support_level: none, estimated_seconds: 90, pre_question_script: Select three quarters independently and retain the decimal accurately., visual_before_answer: No quarter value or result is visible., correct_next: P01, recovery_ref: PA-04-R02 }
+
+  practice:
+    intro_script: Five questions now. Keep the whole fixed and select the required number of equal halves or quarters.
+    question_order: [PA-04-P01, PA-04-P02, PA-04-P03, PA-04-P04, PA-04-P05]
+    question_count: 5
+    feedback_policy: First errors receive an authored clue; second errors reveal the equal-part method and a focused repair where configured.
+
+  exit:
+    intro_script: Final check. Two questions, one submission each, with no hints while you answer.
+    primary_question_refs: [PA-04-E01, PA-04-E02]
+    confirmation_question_refs: [PA-04-CFM01, PA-04-CFM02]
+    submission_policy: One submission per primary exit item; reveal the outcome only after both are complete.
+    mastery_logic: { 2_correct_of_2: SECURE, 1_correct_of_2: Ask one unused confirmation item; correct is SECURE and incorrect is NEEDS_WORK., 0_correct_of_2: NEEDS_WORK }
+    confirmation_selection: Use the first unseen confirmation item.
+
+completion:
+  secure: { title: Skill complete, ryan_script: 'You kept halves and quarters tied to the same whole and selected the correct number of equal parts. These benchmark percentages are ready to use.', state_write: SECURE, buttons: [Finish for today, Continue learning] }
+  needs_work: { title: One more pass will help, ryan_script: 'The benchmark fractions are visible. We will revisit how many equal parts are selected before moving on.', state_write: NEEDS_WORK, buttons: [Try this skill again, Finish for today] }
+
+question_bank:
+  - id: PA-04-C01
+    stage: teaching_checkpoint
+    target: Interpret 75% as three quarters.
+    prompt: Which statement is correct?
+    response: { type: single_choice, options: [75% is found by dividing the whole into three equal groups and selecting one., 75% is found by dividing the whole into four equal groups and selecting three., 25% is found by dividing the whole by 25., 50% is greater than the complete whole.] }
+    answer: { value: 75% is found by dividing the whole into four equal groups and selecting three. }
+    attempt_policy: &supported { policy: two_attempt_then_targeted_repair, max_attempts_before_resolution: 2, feedback_timing: immediate, submit_label: Check answer, allow_change_before_submit: true, lock_after_final_submit: true }
+    scripts: { on_correct_reaction: You kept four equal quarters and selected three., on_correct_math: '75% = 3/4.', on_incorrect_attempt_1: The denominator tells how many equal parts make the whole., on_incorrect_attempt_2: Split the whole into four equal parts and select three., worked_explanation: 'Three selected quarters represent 3/4, which is 75%.' }
+    mathematical_support: { hint_1: Which fraction equals 75%?, hint_2: Three quarters means three selected parts out of four., worked_solution: '75% = 3/4.' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 75, wholeAmount: 64, partAmount: 48, partitionCount: 4, selectedGroups: 3, showRoles: false, showResult: false, methodSteps: ['75% = 3/4'], solutionLabel: '75% selects three of four equal parts' } }
+    recovery_item_ref: PA-04-R02
+
+  - id: PA-04-C02
+    stage: teaching_checkpoint
+    target: Combine benchmark parts from the same whole.
+    prompt: Which alternative calculation also finds 75% of 52?
+    response: { type: single_choice, options: [Find 50% of 52 and 25% of 52, then add the two parts., Find 50% of 52 and 25% of 26, then add the two parts., Divide 52 by 75., Subtract 75 from 52.] }
+    answer: { value: Find 50% of 52 and 25% of 52, then add the two parts. }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You kept both component parts on the same whole., on_correct_math: '50% of 52 plus 25% of 52 equals 75% of 52.', on_incorrect_attempt_1: Both percentage parts must be calculated from the original whole., on_incorrect_attempt_2: Use 50% of 52 and 25% of 52., worked_explanation: '26 + 13 = 39, so 75% of 52 is 39.' }
+    mathematical_support: { hint_1: Do not change the whole after finding the half., hint_2: Both calculations must say “of 52”., worked_solution: '26 + 13 = 39.' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 75, wholeAmount: 52, partAmount: 39, partitionCount: 4, selectedGroups: 3, methodSteps: ['50% of 52 = 26', '25% of 52 = 13', '26 + 13 = 39'], solutionLabel: '75% of 52 = 39' } }
+    recovery_item_ref: PA-04-R03
+
+  - id: PA-04-C03
+    stage: teaching_checkpoint
+    target: Calculate three quarters.
+    prompt: Find 75% of 80.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '60' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You selected three equal quarter-values., on_correct_math: '80 ÷ 4 = 20, then 20 × 3 = 60.', on_incorrect_attempt_1: Find one quarter before selecting three., on_incorrect_attempt_2: One quarter is 20, so three quarters are 60., worked_explanation: '75% of 80 = 3/4 of 80 = 60.' }
+    mathematical_support: { hint_1: Divide 80 by 4., hint_2: Multiply the one-quarter value by 3., worked_solution: '60' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 75, wholeAmount: 80, partAmount: 60, partitionCount: 4, selectedGroups: 3, methodSteps: ['80 ÷ 4 = 20', '20 × 3 = 60'], solutionLabel: '75% of 80 = 60' } }
+    recovery_item_ref: PA-04-R02
+
+  - id: PA-04-G01
+    stage: guided
+    target: Find one half.
+    prompt: Find 50% of 86.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '43' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You selected one of two equal halves., on_correct_math: '86 ÷ 2 = 43.', on_incorrect_attempt_1: Fifty percent is one half., on_incorrect_attempt_2: Divide 86 into two equal parts., worked_explanation: '50% of 86 = 1/2 of 86 = 43.' }
+    mathematical_support: { hint_1: Use 50% = 1/2., hint_2: Halve 86., worked_solution: '43' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 50, wholeAmount: 86, partAmount: 43, partitionCount: 2, selectedGroups: 1, solutionLabel: '50% of 86 = 43' } }
+    recovery_item_ref: PA-04-R01
+
+  - id: PA-04-F01
+    stage: faded
+    target: Find one quarter.
+    prompt: Find 25% of 72.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '18' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You selected one of four equal quarters., on_correct_math: '72 ÷ 4 = 18.', on_incorrect_attempt_1: Twenty-five percent is one quarter., on_incorrect_attempt_2: Divide 72 by 4., worked_explanation: '25% of 72 = 1/4 of 72 = 18.' }
+    mathematical_support: { hint_1: Use 25% = 1/4., hint_2: Find one of four equal groups., worked_solution: '18' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 25, wholeAmount: 72, partAmount: 18, partitionCount: 4, selectedGroups: 1, solutionLabel: '25% of 72 = 18' } }
+    recovery_item_ref: PA-04-R01
+
+  - id: PA-04-I01
+    stage: independent_transfer
+    target: Find three quarters with a decimal result.
+    prompt: Find 75% of 26.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '19.5' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You kept the half-unit quarter accurately., on_correct_math: '26 ÷ 4 = 6.5, then 6.5 × 3 = 19.5.', on_incorrect_attempt_1: Find one quarter of 26 before selecting three., on_incorrect_attempt_2: One quarter is 6.5, so three quarters are 19.5., worked_explanation: '75% of 26 = 19.5.' }
+    mathematical_support: { hint_1: Divide 26 by 4., hint_2: Keep the decimal when you multiply by 3., worked_solution: '19.5' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 75, wholeAmount: 26, partAmount: 19.5, partitionCount: 4, selectedGroups: 3, solutionLabel: '75% of 26 = 19.5' } }
+    recovery_item_ref: PA-04-R02
+
+  - id: PA-04-P01
+    stage: practice
+    target: Find a quarter with a decimal result.
+    prompt: Find 25% of 54.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '13.5' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You quartered the whole accurately., on_correct_math: '54 ÷ 4 = 13.5.', on_incorrect_attempt_1: Divide the whole into four equal parts., on_incorrect_attempt_2: One quarter of 54 is 13.5., worked_explanation: '25% of 54 = 13.5.' }
+    mathematical_support: { hint_1: Use 25% = 1/4., hint_2: Halve 54 twice., worked_solution: '13.5' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 25, wholeAmount: 54, partAmount: 13.5, partitionCount: 4, selectedGroups: 1, solutionLabel: '25% of 54 = 13.5' } }
+
+  - id: PA-04-P02
+    stage: practice
+    target: Retain a measurement unit.
+    prompt: A cable is 96 cm long. Find 75% of its length.
+    response: { type: decimal, input_label: Answer in centimetres }
+    answer: { value: '72' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You kept the centimetre unit with three quarters., on_correct_math: '96 ÷ 4 × 3 = 72 cm.', on_incorrect_attempt_1: Quarter the full 96 cm, then select three groups., on_incorrect_attempt_2: One quarter is 24 cm; three are 72 cm., worked_explanation: '75% of 96 cm = 72 cm.' }
+    mathematical_support: { hint_1: Divide by 4 first., hint_2: Multiply the quarter value by 3., worked_solution: '72 cm' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 75, wholeAmount: 96, unit: cm, partAmount: 72, partitionCount: 4, selectedGroups: 3, solutionLabel: '75% of 96 cm = 72 cm' } }
+
+  - id: PA-04-P03
+    stage: practice
+    target: Recognise the quarter method.
+    prompt: Which statement is correct?
+    response: { type: single_choice, options: [To find 25%, split the whole into four equal parts and select one., To find 25%, split the whole into twenty-five equal parts and select one., To find 75%, divide the whole by 75., To find 50%, multiply the whole by 50.] }
+    answer: { value: To find 25%, split the whole into four equal parts and select one. }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You matched twenty-five percent to one quarter., on_correct_math: '25% = 1/4.', on_incorrect_attempt_1: Use the benchmark fraction for twenty-five percent., on_incorrect_attempt_2: Split into four equal parts and select one., worked_explanation: 'One quarter of the whole is 25%.' }
+    mathematical_support: { hint_1: Which fraction equals 25%?, hint_2: One quarter has denominator 4., worked_solution: '25% = 1/4.' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 25, wholeAmount: 80, partAmount: 20, partitionCount: 4, selectedGroups: 1, solutionLabel: '25% selects one of four equal parts' } }
+
+  - id: PA-04-P04
+    stage: practice
+    target: Combine 50% and 25% from one whole.
+    prompt: A school raises 360 tokens. It gives 50% to one class and 25% to another. How many tokens are given altogether?
+    response: { type: decimal, input_label: Number of tokens }
+    answer: { value: '270' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You combined both parts from the same 360-token whole., on_correct_math: '180 + 90 = 270 tokens.', on_incorrect_attempt_1: Find both percentages from the original 360 tokens., on_incorrect_attempt_2: Fifty percent is 180 and twenty-five percent is 90., worked_explanation: '50% + 25% = 75%; 75% of 360 = 270.' }
+    mathematical_support: { hint_1: Find half and quarter of 360., hint_2: Add 180 and 90., worked_solution: '270 tokens' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 75, wholeAmount: 360, unit: tokens, partAmount: 270, partitionCount: 4, selectedGroups: 3, methodSteps: ['50% of 360 = 180', '25% of 360 = 90', '180 + 90 = 270'], solutionLabel: '270 tokens altogether' } }
+
+  - id: PA-04-P05
+    stage: practice
+    target: Compare benchmark sizes.
+    prompt: For the same positive whole, which order is correct?
+    response: { type: single_choice, options: ['75% < 50% < 25% < 100%', '25% < 50% < 75% < 100%', '100% < 75% < 50% < 25%', '25% = 50% = 75% = 100%'] }
+    answer: { value: '25% < 50% < 75% < 100%' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You ordered the selected parts while keeping the whole fixed., on_correct_math: One quarter is below one half, which is below three quarters., on_incorrect_attempt_1: Compare one, two and three selected quarters., on_incorrect_attempt_2: More selected equal quarters means a larger part., worked_explanation: '1/4 < 1/2 < 3/4 < 1.' }
+    mathematical_support: { hint_1: Rewrite each percentage as quarters., hint_2: Compare 1, 2, 3 and 4 selected quarters., worked_solution: '25% < 50% < 75% < 100%' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 75, wholeAmount: 100, partAmount: 75, partitionCount: 4, selectedGroups: 3, solutionLabel: '25% < 50% < 75% < 100%' } }
+
+  - id: PA-04-E01
+    stage: exit
+    target: Calculate one half independently.
+    prompt: Find 50% of 94.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '47' }
+    attempt_policy: &exit { policy: single_submit_locked, max_attempts_before_resolution: 1, feedback_timing: after_exit_set, submit_label: Check answer, allow_change_before_submit: true, lock_after_final_submit: true }
+    scripts: { on_correct_math: '94 ÷ 2 = 47.', on_incorrect_attempt_1: Record the answer for the final result., on_incorrect_attempt_2: Not applicable., worked_explanation: '50% of 94 = 47.' }
+    mathematical_support: { hint_1: null, hint_2: null, worked_solution: '47' }
+    success_reaction: { mode: silent }
+    visual: { primitive: percentage_strip, model: { percent: 50, wholeAmount: 94, partAmount: 47, partitionCount: 2, selectedGroups: 1, solutionLabel: '50% of 94 = 47' } }
+
+  - id: PA-04-E02
+    stage: exit
+    target: Calculate one quarter independently.
+    prompt: Find 25% of 66.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '16.5' }
+    attempt_policy: *exit
+    scripts: { on_correct_math: '66 ÷ 4 = 16.5.', on_incorrect_attempt_1: Record the answer for the final result., on_incorrect_attempt_2: Not applicable., worked_explanation: '25% of 66 = 16.5.' }
+    mathematical_support: { hint_1: null, hint_2: null, worked_solution: '16.5' }
+    success_reaction: { mode: silent }
+    visual: { primitive: percentage_strip, model: { percent: 25, wholeAmount: 66, partAmount: 16.5, partitionCount: 4, selectedGroups: 1, solutionLabel: '25% of 66 = 16.5' } }
+
+  - id: PA-04-CFM01
+    stage: confirmation
+    target: Confirm three quarters in context.
+    prompt: A tank contains 88 litres. Find 75% of the water.
+    response: { type: decimal, input_label: Answer in litres }
+    answer: { value: '66' }
+    attempt_policy: *exit
+    scripts: { on_correct_math: '88 ÷ 4 × 3 = 66 litres.', on_incorrect_attempt_1: Record the answer for the final result., on_incorrect_attempt_2: Not applicable., worked_explanation: '75% of 88 litres = 66 litres.' }
+    mathematical_support: { hint_1: null, hint_2: null, worked_solution: '66 litres' }
+    success_reaction: { mode: silent }
+    visual: { primitive: percentage_strip, model: { percent: 75, wholeAmount: 88, unit: litres, partAmount: 66, partitionCount: 4, selectedGroups: 3, solutionLabel: '75% of 88 litres = 66 litres' } }
+
+  - id: PA-04-CFM02
+    stage: confirmation
+    target: Confirm three quarters in a seat context.
+    prompt: A theatre has 240 seats and 75% are occupied. How many seats are occupied?
+    response: { type: decimal, input_label: Number of seats }
+    answer: { value: '180' }
+    attempt_policy: *exit
+    scripts: { on_correct_math: '240 ÷ 4 × 3 = 180 seats.', on_incorrect_attempt_1: Record the answer for the final result., on_incorrect_attempt_2: Not applicable., worked_explanation: '75% of 240 seats = 180 seats.' }
+    mathematical_support: { hint_1: null, hint_2: null, worked_solution: '180 seats' }
+    success_reaction: { mode: silent }
+    visual: { primitive: percentage_strip, model: { percent: 75, wholeAmount: 240, unit: seats, partAmount: 180, partitionCount: 4, selectedGroups: 3, solutionLabel: '75% of 240 seats = 180 seats' } }
+
+  - id: PA-04-R01
+    stage: repair
+    target: Repair the benchmark divisor.
+    prompt: Which calculation finds 25% of 92?
+    response: { type: single_choice, options: ['92 ÷ 4', '92 ÷ 25', '92 × 25', '92 − 25'] }
+    answer: { value: '92 ÷ 4' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You used the denominator of one quarter., on_correct_math: '25% = 1/4, so use 92 ÷ 4.', on_incorrect_attempt_1: Match twenty-five percent to its fraction., on_incorrect_attempt_2: One quarter means divide by four., worked_explanation: '92 ÷ 4 = 23.' }
+    mathematical_support: { hint_1: Which fraction equals 25%?, hint_2: Use the fraction denominator as the number of equal parts., worked_solution: '92 ÷ 4 = 23.' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 25, wholeAmount: 92, partAmount: 23, partitionCount: 4, selectedGroups: 1, solutionLabel: '25% of 92 = 23' } }
+
+  - id: PA-04-R02
+    stage: repair
+    target: Repair stopping after one quarter.
+    prompt: One quarter of 72 is 18. Find 75% of 72.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '54' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You selected three copies of the quarter-value., on_correct_math: '18 × 3 = 54.', on_incorrect_attempt_1: Seventy-five percent needs three quarters, not one., on_incorrect_attempt_2: Multiply the quarter-value 18 by 3., worked_explanation: '75% of 72 = 3 × 18 = 54.' }
+    mathematical_support: { hint_1: How many quarters are selected for 75%?, hint_2: Use three equal groups of 18., worked_solution: '54' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 75, wholeAmount: 72, partAmount: 54, partitionCount: 4, selectedGroups: 3, solutionLabel: '75% of 72 = 54' } }
+
+  - id: PA-04-R03
+    stage: repair
+    target: Repair changing the whole while combining parts.
+    prompt: Which calculation correctly finds 75% of 48 by adding 50% and 25%?
+    response: { type: single_choice, options: ['24 + 12', '24 + 6', '12 + 3', '48 + 75'] }
+    answer: { value: '24 + 12' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You calculated both parts from the original forty-eight., on_correct_math: '50% of 48 is 24 and 25% of 48 is 12.', on_incorrect_attempt_1: Keep forty-eight as the whole for both parts., on_incorrect_attempt_2: Add 24 and 12., worked_explanation: '24 + 12 = 36, which is 75% of 48.' }
+    mathematical_support: { hint_1: Find half and quarter of the same whole., hint_2: Do not take 25% of the half., worked_solution: '24 + 12 = 36.' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 75, wholeAmount: 48, partAmount: 36, partitionCount: 4, selectedGroups: 3, methodSteps: ['50% of 48 = 24', '25% of 48 = 12', '24 + 12 = 36'], solutionLabel: '75% of 48 = 36' } }
+
+qa_acceptance:
+  source_alignment: [The lesson teaches 50%, 25% and 75% through equal halves and quarters., Both valid 75% routes are accepted., Diagnostic and delayed retrieval banks remain outside the active route.]
+  learner_facing: [Supported items have distinct authored feedback., Exit items are one-shot and hint-free., Equal-part results remain hidden until the correct feedback state.]

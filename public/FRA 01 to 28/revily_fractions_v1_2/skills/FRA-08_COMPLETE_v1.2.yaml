@@ -1,0 +1,1772 @@
+schema_version: '1.2'
+spec_intent:
+  source_of_truth: true
+  codex_role: implementation_only
+  codex_must_not_invent:
+  - mathematics
+  - question wording
+  - answers
+  - Ryan dialogue
+  - hints
+  - worked solutions
+  - animation storyboards
+  - branching behaviour
+  - mastery rules
+  - lesson sequence
+  - success reactions
+  - reaction sequencing
+  allowed_engine_interpretation: Codex may implement responsive layout, reusable components, state handling and animation
+    mechanics only where they preserve the authored behaviour in this file. The runtime engine may select among exact approved
+    Ryan reaction lines according to the referenced Ryan dialogue profile; it may not generate or paraphrase dialogue.
+identity:
+  id: FRA-08
+  slug: equivalent-fractions
+  title: Equivalent Fractions
+  strand: Number
+  cluster: Fractions
+  tier: GCSE Foundation
+  status: spec_complete_pending_human_review_v1_2
+  estimated_minutes:
+    min: 24
+    max: 30
+curriculum:
+  basis: England GCSE Mathematics / national curriculum spine
+  role: gcse_enabling_prerequisite
+  official_mapping:
+    direct_gcse_refs: []
+    supports_gcse_refs:
+    - source: DfE GCSE Mathematics subject content
+      ref: Number 1
+      relationship: Equivalent-fraction fluency supports ordering fractions.
+    - source: DfE GCSE Mathematics subject content
+      ref: Number 2
+      relationship: Equivalent fractions are an enabling idea for accurate calculation with simple fractions and mixed numbers.
+    - source: DfE GCSE Mathematics subject content
+      ref: Number 8
+      relationship: Equivalent-fraction fluency supports exact calculation with fractions.
+    prior_curriculum_refs:
+    - source: National curriculum in England
+      ref: Key stage 3 working mathematically
+      relationship: Pupils should move freely between representations, including equivalent fractions.
+    - source: National curriculum in England
+      ref: Key stage 3 Number
+      relationship: GCSE builds on earlier fraction fluency and operations; Key stage 4 explicitly consolidates Key stage
+        3 content.
+    registry_compatibility: Revily Fractions Curriculum Registry v0.9 Draft; FRA-08 stable implemented ID preserved.
+  learning_objective: Generate an equivalent fraction by multiplying or dividing the numerator and denominator by the same
+    non-zero whole-number factor.
+  success_criteria:
+  - Recognise when two simple fractions are equivalent.
+  - Generate an equivalent fraction using a stated or inferred integer scale factor.
+  - Find a missing numerator or denominator in a pair of equivalent fractions.
+  - Explain, at a basic level, that the value stays the same because numerator and denominator are scaled by the same factor.
+  boundaries:
+    includes:
+    - Missing numerator
+    - Missing denominator
+    - Multiplication scaling
+    - Exact division scaling
+    excludes:
+    - LCM
+    - Unlike-denominator operations
+    - Full simplification as the main target
+dependencies:
+  required_skill_refs:
+  - FRA-01
+  - FRA-07
+  - P-N01
+  entry_assumptions:
+  - The learner understands fractions as equal parts and can recognise equivalent fractions.
+  - The learner can use basic multiplication and division facts for small whole numbers.
+  downstream_rule: Do not store leads_to. Derive downstream relationships from other skills prerequisite references.
+engine_capability_requirements:
+  input_types:
+  - integer
+  - fraction
+  - single_choice
+  - yes_no
+  visual_primitives:
+  - fraction_bar
+  - fraction_relation
+  - fraction_input
+  - integer_input
+  - single_choice
+  - yes_no
+  animation_actions:
+  - fade_in
+  - subdivide_each_partition
+  - crossfade_label
+  - slide_compare_bars_into_alignment
+  - reveal_equation
+  - relabel
+  - draw_linked_multiplier_markers
+  - highlight
+  - pulse
+  - ghost
+  - crossfade_phase
+  audio_capabilities:
+  - queued_tts_or_audio
+  - caption_sync
+  - narration_animation_sync
+  - pause_for_input
+  - cancel_on_navigation
+  state_capabilities:
+  - attempt_count
+  - step_resume
+  - skill_state
+  - diagnostic_evidence
+  - exit_score
+  - confirmation_branch
+experience_contract:
+  target_session_minutes:
+    min: 24
+    max: 30
+  ordered_phases:
+  - teaching
+  - guided
+  - faded
+  - independent_transfer
+  - practice
+  - exit
+  - completion
+  navigation:
+    default: linear_forward
+    back_button: May revisit completed explanatory screens but must not reset recorded submitted answers.
+    refresh_resume: Resume the current skill at the latest committed step.
+    start_again: Reset current lesson attempt only; preserve historical completion records.
+  global_ui_copy:
+    submit: Check answer
+    continue: Continue
+    try_again: Try again
+    show_me: Show me
+    finish: Finish
+    continue_learning: Continue learning
+    stop_for_today: Finish for today
+  progress_indicator:
+    show: true
+    student_facing_style: phase_progress_without_raw_internal_ids
+    do_not_show: Do not expose YAML ids, attempt counters or AO labels to the learner.
+  interaction_rules:
+  - Never auto-submit a mathematical answer.
+  - Disable Continue until the current required interaction is resolved.
+  - Do not use success confetti.
+  - Do not shake the entire screen on an error.
+  - Keep keyboard focus predictable after retry.
+voice_and_script:
+  performer_name: Ryan
+  dialogue_profile_ref: RYAN_DIALOGUE_PROFILE_v1.yaml
+  script_ownership: All lesson-specific mathematical speech is authored exactly in this skill file. Generic encouragement
+    is authored exactly in the referenced Ryan dialogue profile. The engine chooses eligible generic reactions; neither Codex
+    nor TTS may invent, paraphrase or extend any spoken line.
+  delivery_style:
+  - Natural UK English
+  - Warm, conversational and encouraging
+  - Praise should respond to understanding, independence or recovery rather than merely announce correctness
+  - No one-word success reactions
+  - No repeated praise lead-ins anywhere in the same lesson attempt
+  - Do not begin a new slide by repeating praise or a conclusion that was just spoken
+  - Use pauses to let the learner inspect visuals
+  success_reaction_policy:
+    mode: engine_select_from_authored_profile
+    generation_allowed: false
+    selection_state_scope: lesson_attempt
+    persist_selection_history_on_refresh_resume: true
+    derive_context_from:
+    - stage
+    - attempt_count
+    - recovery_status
+    - practice_streak
+    no_repeat:
+    - reaction_id
+    - exact_text
+    - lead_family
+    fallback_when_pool_exhausted: Speak only the item-specific mathematical follow-up. Never repeat or invent praise.
+    diagnostic: silent
+    exit_and_confirmation: silent_until_completion_result
+  adjacent_speech_policy:
+    after_success: Do not play a second generic acknowledgement before the next scene.
+    next_scene: Begin directly with new mathematical content.
+    semantic_echo: The next scene must not restate the same mathematical conclusion just delivered in success feedback.
+    item_math_feedback: May follow the selected generic reaction only when it adds mathematical value.
+  caption_policy: Every spoken line must be captioned verbatim. Captions stay visible long enough to be read and disappear
+    before the next unrelated line.
+visual_language:
+  scene_rules:
+    composition: Single central teaching canvas. Keep the primary fraction bar centred. Never show more than two comparison
+      bars simultaneously.
+    labels: Place fraction labels directly beneath their bars. Keep symbolic equality close to the visuals it describes.
+    motion: Use movement only to expose mathematical structure. No decorative bouncing, confetti or unrelated character motion.
+    focus: At each narration beat, de-emphasise non-essential objects and emphasise only the mathematical object being discussed.
+  semantic_roles:
+  - whole
+  - shaded_quantity
+  - original_partition
+  - new_partition
+  - active_multiplier
+  - student_focus
+  - error
+  - success
+  style_direction:
+  - Professional educational vector style
+  - Clean geometry
+  - High contrast between mathematical roles
+  - Multiple relevant semantic colours rather than one monochrome palette
+  - No decorative illustrations that compete with the maths
+  fraction_bar_contract:
+    whole_size: All comparison bars representing the same whole must have identical total width.
+    partition_lines: Partition lines appear only where mathematically meaningful and stay aligned during subdivision.
+    shading: Shaded quantity must preserve its physical extent during an equivalence transformation.
+    labels: Fraction label beneath bar; numerator and denominator vertically stacked when shown as a fraction.
+  reduced_motion: If reduced-motion is enabled, replace physical subdivision with a two-state morph/crossfade while preserving
+    intermediate mathematical labels and narration meaning.
+  animation_blueprint:
+    setup: 'Use the existing FRA-08 fraction-bar contract: identical whole width, original partitions visible, target subdivisions
+      introduced only when narration calls for them.'
+    transform: Subdivide or regroup every original partition by the exact stated scale factor while preserving shaded physical
+      extent; draw linked multiplier markers on numerator and denominator.
+    contrast: Animate a one-sided scale change as an invalid ghost state, then restore and apply the same factor to both fields.
+    error: Highlight the known scale factor first, then the missing numerator/denominator field; never move shaded endpoint
+      during a valid equivalence change.
+    summary: Finish with numerator ×/÷ k and denominator ×/÷ k linked by one bracket, value unchanged.
+diagnostic:
+  purpose: Locate whether this skill should be taught; do not infer misconception type from a distractor.
+  question_refs:
+  - FRA-08-D01
+  - FRA-08-D02
+  presentation: Two separate short items. No hints, worked solutions, correctness reveal or Ryan praise during diagnostic.
+  scoring:
+    2_of_2: DIAGNOSTIC_SECURE
+    0_or_1_of_2: NEEDS_WORK
+  routing: After all diagnostic skills are scored, start at the earliest non-secure skill in prerequisite order.
+concept_model:
+  core_idea: You can rename a fraction without changing its value by scaling both parts together.
+  invariant: The value remains unchanged only when numerator and denominator are multiplied or divided by the same non-zero
+    factor.
+  mathematical_rule: Apply the same scale factor to numerator and denominator.
+  vocabulary:
+  - equivalent
+  - numerator
+  - denominator
+  - scale factor
+  - same value
+  must_notice:
+  - The whole stays the same size.
+  - The shaded amount stays the same even when the number of pieces changes.
+  - If each original piece is split into the same number of smaller pieces, both numerator and denominator are multiplied
+    by that number.
+  - Changing only the numerator or only the denominator changes the value and does not preserve equivalence.
+  common_confusions:
+  - Changes denominator only.
+  - Uses inconsistent scale factors.
+  - Uses addition instead of multiplication/division scaling.
+lesson:
+  teaching_steps:
+  - id: T01
+    stage: teaching
+    purpose: Hook with the invariant before introducing a rule.
+    estimated_seconds: 35
+    scene:
+      layout: single_bar_focus
+      objects:
+      - 'bar_A: one whole split into 2'
+      - 'label_A: 1/2'
+      initial_state: bar_A has two equal cells; left cell uses shaded_quantity role; label 1/2 visible.
+    narration:
+      script: Look at this half. I'm going to cut every piece into smaller pieces - but I'm not changing how much is shaded.
+      delivery: Warm, curious, unhurried. Short pause after "smaller pieces".
+      sync_cues:
+      - cue: on_line_start
+        action: show bar_A
+      - cue: 'on_words: not changing how much is shaded'
+        action: soft emphasis on shaded region
+    animation_timeline:
+    - id: A01
+      trigger: on_scene_enter
+      action: fade_in
+      target: bar_A
+      duration_ms: 350
+      easing: ease-out
+      semantic_purpose: Establish one whole and one-half.
+    next_step: T02
+  - id: T02
+    stage: teaching
+    purpose: Make equivalence visible through subdivision.
+    estimated_seconds: 30
+    scene:
+      layout: single_bar_focus
+      objects:
+      - bar_A
+      initial_state: Carry forward T01.
+    narration:
+      script: Each half is splitting into two equal pieces. Same bar. Same shaded amount. Just more, smaller pieces.
+      delivery: Synchronise "splitting" with motion; stress "Same" lightly.
+      sync_cues:
+      - cue: 'on_word: splitting'
+        action: start A02
+      - cue: 'on_phrase: Same shaded amount'
+        action: brief glow on unchanged shaded extent
+    animation_timeline:
+    - id: A02
+      trigger: narration_sync
+      action: subdivide_each_partition
+      target: bar_A
+      from: 2 equal parts
+      to: 4 equal parts
+      factor: 2
+      preserve_shaded_extent: true
+      duration_ms: 1100
+      easing: ease-in-out
+      semantic_purpose: Show that subdivision changes the number of parts, not the represented amount.
+    - id: A03
+      trigger: after:A02
+      action: crossfade_label
+      target: label_A
+      from: 1/2
+      to: 2/4
+      duration_ms: 300
+      easing: ease-out
+      semantic_purpose: Connect the visual state to the equivalent symbolic fraction.
+    next_step: T03
+  - id: T03
+    stage: teaching_checkpoint
+    purpose: Learner reads the new numerator from the visual.
+    estimated_seconds: 55
+    scene:
+      layout: single_bar_with_prompt
+      objects:
+      - bar_A labelled 2/4
+      - question input
+      initial_state: Keep the subdivided bar visible. Pulse the two shaded cells once, then stop.
+    narration:
+      script: How many of the four smaller pieces are shaded now?
+      delivery: Ask naturally, then remain silent while learner works.
+      sync_cues: []
+    animation_timeline: []
+    learner_interaction:
+      question_ref: FRA-08-C01
+      input_position: below_visual
+      auto_focus: true
+    branching:
+      correct:
+        visual_action: Highlight the two shaded cells once; display 1/2 = 2/4.
+        next_step: T04
+        spoken_feedback_source: question_bank item success reaction + scripts.on_correct_math
+      incorrect_attempt_1:
+        visual_action: Highlight only shaded cells; allow retry.
+        next_step: T03
+        spoken_feedback_source: question_bank item scripts.on_incorrect_attempt_1
+      incorrect_attempt_2:
+        visual_action: Replay subdivision on shaded half at half speed, then show worked explanation.
+        next_step: FRA-08-R01
+        spoken_feedback_source: question_bank item scripts.on_incorrect_attempt_2
+      recovery_correct:
+        next_step: T04
+      recovery_resolved_after_two_attempts:
+        next_step: T04
+  - id: T04
+    stage: teaching
+    purpose: Connect the visual to symbolic equality.
+    estimated_seconds: 30
+    scene:
+      layout: two_bar_compare
+      objects:
+      - 'bar_left: 1/2'
+      - 'bar_right: 2/4'
+      - equality label
+      initial_state: Bars aligned to identical total width; shaded endpoints line up.
+    narration:
+      script: 'Here is the name for what you have just seen: one half and two quarters are equivalent fractions. Different
+        numbers, same amount.'
+      delivery: Introduce the term "equivalent fractions" clearly. Do not add another success acknowledgement at scene start.
+      sync_cues:
+      - cue: 'on_phrase: same amount'
+        action: draw thin alignment guide between shaded endpoints, then fade it
+    animation_timeline:
+    - id: A04
+      trigger: on_scene_enter
+      action: slide_compare_bars_into_alignment
+      target: bar_left,bar_right
+      duration_ms: 500
+      easing: ease-out
+      semantic_purpose: Make equal represented quantities visually comparable.
+    - id: A05
+      trigger: after:A04
+      action: reveal_equation
+      target: 1/2 = 2/4
+      duration_ms: 250
+      easing: ease-out
+      semantic_purpose: Connect representation to notation.
+    next_step: T05
+  - id: T05
+    stage: teaching
+    purpose: Generalise to a scale factor of three.
+    estimated_seconds: 45
+    scene:
+      layout: single_bar_focus
+      objects:
+      - 'bar_B: 3/5'
+      - label_B
+      initial_state: Show five equal cells with three shaded.
+    narration:
+      script: Now watch three fifths. If every fifth is split into three equal pieces, the denominator becomes fifteen - and
+        the shaded pieces triple as well.
+      delivery: Synchronise the word "split" with subdivision and "triple" with grouped shaded pieces.
+      sync_cues: []
+    animation_timeline:
+    - id: A06
+      trigger: 'on_phrase: split into three'
+      action: subdivide_each_partition
+      target: bar_B
+      from: 5 equal parts
+      to: 15 equal parts
+      factor: 3
+      preserve_shaded_extent: true
+      duration_ms: 1250
+      easing: ease-in-out
+      semantic_purpose: Show common scale factor 3.
+    - id: A07
+      trigger: after:A06
+      action: relabel
+      target: label_B
+      from: 3/5
+      to: 9/15
+      duration_ms: 300
+      easing: ease-out
+      semantic_purpose: Show both numerator and denominator scale together.
+    next_step: T06
+  - id: T06
+    stage: teaching_checkpoint
+    purpose: Learner links denominator scaling to numerator scaling.
+    estimated_seconds: 55
+    scene:
+      layout: two_fraction_relation
+      objects:
+      - 3/5
+      - 9/15
+      - x3 marker under denominators
+      - multiple-choice response
+      initial_state: Show x3 only from 5 to 15. Do not show numerator relation before response.
+    narration:
+      script: The denominator was multiplied by three. What has to happen to the numerator?
+      delivery: Emphasise "same" only in feedback, not in the question.
+      sync_cues: []
+    animation_timeline: []
+    learner_interaction:
+      question_ref: FRA-08-C02
+      input_position: below_equation
+      auto_focus: false
+    branching:
+      correct:
+        visual_action: Reveal matching x3 marker from 3 to 9.
+        next_step: T07
+        spoken_feedback_source: question_bank item success reaction + scripts.on_correct_math
+      incorrect_attempt_1:
+        visual_action: Pulse 3 and 9 only.
+        next_step: T06
+        spoken_feedback_source: question_bank item scripts.on_incorrect_attempt_1
+      incorrect_attempt_2:
+        visual_action: Animate 3 x 3 -> 9 and 5 x 3 -> 15 side by side.
+        next_step: FRA-08-R02
+        spoken_feedback_source: question_bank item scripts.on_incorrect_attempt_2
+      recovery_correct:
+        next_step: T07
+      recovery_resolved_after_two_attempts:
+        next_step: T07
+  - id: T07
+    stage: teaching
+    purpose: State the general rule only after the visual reasoning.
+    estimated_seconds: 35
+    scene:
+      layout: rule_summary
+      objects:
+      - a/b
+      - (a x k)/(b x k)
+      - paired multiplier markers
+      initial_state: Fraction bars shrink to a small reference at the top; symbolic rule becomes main focus.
+    narration:
+      script: That's the rule. Whatever multiplier you use on the bottom, use the same multiplier on the top. The numbers
+        change; the value doesn't.
+      delivery: Confident and concise. Small pause before final sentence.
+      sync_cues: []
+    animation_timeline:
+    - id: A08
+      trigger: 'on_phrase: same multiplier'
+      action: draw_linked_multiplier_markers
+      target: numerator and denominator
+      duration_ms: 450
+      easing: ease-out
+      semantic_purpose: Encode the same scale factor acting on both parts.
+    next_step: T08
+  - id: T08
+    stage: teaching_checkpoint
+    purpose: Contrast a valid and invalid change.
+    estimated_seconds: 55
+    scene:
+      layout: contrast_card
+      objects:
+      - 2/5 bar
+      - 4/7 bar
+      - Yes/No controls
+      initial_state: Bars have same whole width. Do not reveal endpoint mismatch emphasis until submission.
+    narration:
+      script: One quick check. Two fifths becomes four sevenths. Equivalent or not?
+      delivery: Neutral; do not cue the answer.
+      sync_cues: []
+    animation_timeline: []
+    learner_interaction:
+      question_ref: FRA-08-C03
+      input_position: below_visual
+      auto_focus: false
+    branching:
+      correct:
+        visual_action: Show 2/5 -> 4/10 as the correct doubling and ghost out 4/7.
+        next_step: T09
+        spoken_feedback_source: question_bank item success reaction + scripts.on_correct_math
+      incorrect_attempt_1:
+        visual_action: Reveal x2 above 2 -> 4 and leave denominator blank for learner to reconsider.
+        next_step: T08
+        spoken_feedback_source: question_bank item scripts.on_incorrect_attempt_1
+      incorrect_attempt_2:
+        visual_action: Animate 5 x 2 -> 10 and place 4/10 beside 4/7.
+        next_step: FRA-08-R03
+        spoken_feedback_source: question_bank item scripts.on_incorrect_attempt_2
+      recovery_correct:
+        next_step: T09
+      recovery_resolved_after_two_attempts:
+        next_step: T09
+  - id: T09
+    stage: teaching
+    purpose: Resolve the contrast and reinforce the invariant.
+    estimated_seconds: 30
+    scene:
+      layout: contrast_resolution
+      objects:
+      - 2/5
+      - 4/10
+      - 4/7 crossed softly
+      initial_state: Carry forward correct doubling from T08.
+    narration:
+      script: 'Now compare the valid pair: two fifths and four tenths. The pieces are smaller, but the shaded amount still
+        ends at the same point.'
+      delivery: Use the aligned bars to reinforce the invariant visually. Do not repeat "not equivalent" from the previous
+        feedback.
+      sync_cues: []
+    animation_timeline:
+    - id: A09
+      trigger: 'on_phrase: same scale factor'
+      action: highlight_matching_x2
+      target: 2->4 and 5->10
+      duration_ms: 500
+      easing: ease-out
+      semantic_purpose: Reinforce common scaling.
+    next_step: T10
+  - id: T10
+    stage: teaching
+    purpose: Transition into transfer with fading support.
+    estimated_seconds: 25
+    scene:
+      layout: clean_transition
+      objects:
+      - 'phase label: Try it with me'
+      initial_state: Clear prior visuals. Keep progress indicator.
+    narration:
+      script: You have seen the idea from the picture and from the numbers. I will stay with you for one question, then the
+        support starts to come away.
+      delivery: Warm transition into learner responsibility; no generic praise opener.
+      sync_cues: []
+    animation_timeline:
+    - id: A10
+      trigger: on_scene_enter
+      action: crossfade_phase
+      target: teaching -> guided
+      duration_ms: 350
+      easing: ease-out
+      semantic_purpose: Signal a change in learner responsibility.
+    next_step: G01
+  transfer_steps:
+    G01:
+      stage: guided
+      question_ref: FRA-08-G01
+      support_level: high
+      estimated_seconds: 90
+      pre_question_script: I'll give you the scale factor this time. Five has become fifteen - that's times three. What should
+        happen to the two?
+      visual_before_answer: Show 2/5 as a bar. Subdivide each fifth into three and display 5 x 3 = 15 below the denominator;
+        leave the numerator answer blank.
+      correct_next: F01
+      recovery_ref: FRA-08-R04
+    F01:
+      stage: faded
+      question_ref: FRA-08-F01
+      support_level: reduced
+      estimated_seconds: 100
+      pre_question_script: This time I won't give you the multiplier. Find it from the numbers you can already see.
+      visual_before_answer: No bar and no multiplier marker on first attempt. Show only 4/7 = 12/? in a clean fraction layout.
+      correct_next: I01
+      recovery_ref: FRA-08-R05
+    I01:
+      stage: independent_transfer
+      question_ref: FRA-08-I01
+      support_level: none
+      estimated_seconds: 110
+      pre_question_script: Now take this one on your own. No picture first - just use the idea you've learned.
+      visual_before_answer: Show only 5/6 = ?/24 with no hints, multiplier marks or fraction bar.
+      correct_next: P01
+      recovery_ref: FRA-08-R06
+  practice:
+    intro_script: Five questions now. The first couple are straightforward; then the format gets a little less familiar.
+    question_order:
+    - FRA-08-P01
+    - FRA-08-P02
+    - FRA-08-P03
+    - FRA-08-P04
+    - FRA-08-P05
+    question_count: 5
+    feedback_policy: Immediate authored feedback. Up to two attempts. After the second miss, show the worked explanation and
+      continue; practice does not by itself decide mastery.
+    between_question_transition: Do not add a generic transition immediately after a success reaction. Move directly to the
+      next question unless the Ryan dialogue engine selects an unused transition because the interface genuinely needs a spoken
+      bridge.
+  exit:
+    intro_script: Last check. Two questions, no hints while you're answering. This is just to see whether the idea holds when
+      I step away.
+    primary_question_refs:
+    - FRA-08-E01
+    - FRA-08-E02
+    confirmation_question_refs:
+    - FRA-08-E03
+    - FRA-08-E04
+    submission_policy: One submission per exit item. Do not reveal correctness until both primary exit items are completed.
+    mastery_logic:
+      2_correct_of_2: SECURE
+      1_correct_of_2: Ask one unused confirmation item. Correct -> SECURE. Incorrect -> NEEDS_WORK.
+      0_correct_of_2: NEEDS_WORK
+    confirmation_selection: Use E03 first unless already seen in this lesson attempt; otherwise E04.
+completion:
+  secure:
+    title: Skill complete
+    ryan_script: 'That was a really strong finish. You have learned the key idea and you were able to use it on your own:
+      equivalent fractions can look different while the amount stays the same. You can call it there for today, or keep going
+      while it is fresh.'
+    state_write: SECURE
+    buttons:
+    - Finish for today
+    - Continue learning
+  needs_work:
+    title: One more pass will help
+    ryan_script: You have made good progress here. The scale-factor idea is not quite automatic yet, so I would rather give
+      it one more short pass than rush you into the next skill. We will keep the next round focused and make it click.
+    state_write: NEEDS_WORK
+    buttons:
+    - Try this skill again
+    - Finish for today
+question_bank:
+- id: FRA-08-D01
+  stage: diagnostic
+  target: Recognise an equivalent fraction
+  ao: AO1
+  difficulty: 1
+  prompt: Which fraction is equivalent to 2/3?
+  response:
+    type: single_choice
+    options:
+    - 4/6
+    - 4/5
+    - 3/6
+    - 6/8
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+    shuffle_options: false
+  answer:
+    value: 4/6
+  attempt_policy:
+    policy: single_submit_silent
+    max_attempts_before_resolution: 1
+    feedback_timing: none_during_diagnostic
+    submit_label: Next
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: null
+    on_incorrect_attempt_1: Record the response silently and move on.
+    on_incorrect_attempt_2: Not applicable in diagnostic.
+    worked_explanation: No worked solution is shown during the diagnostic.
+  mathematical_support:
+    hint_1: null
+    hint_2: null
+    worked_solution: No worked solution is shown during the diagnostic.
+  branching:
+    on_submit: Record correctness as diagnostic evidence, do not reveal correctness, advance to next diagnostic item.
+    next: Next diagnostic item or diagnostic routing result.
+  success_reaction:
+    mode: silent
+    context_override: null
+    selection_rule: No spoken success reaction in this stage.
+- id: FRA-08-D02
+  stage: diagnostic
+  target: Complete a missing denominator using a scale factor
+  ao: AO1
+  difficulty: 2
+  prompt: 'Complete: 3/5 = 9/?'
+  response:
+    type: integer
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+    integer_only: true
+  answer:
+    value: 15
+  attempt_policy:
+    policy: single_submit_silent
+    max_attempts_before_resolution: 1
+    feedback_timing: none_during_diagnostic
+    submit_label: Next
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: null
+    on_incorrect_attempt_1: Record the response silently and move on.
+    on_incorrect_attempt_2: Not applicable in diagnostic.
+    worked_explanation: No worked solution is shown during the diagnostic.
+  mathematical_support:
+    hint_1: null
+    hint_2: null
+    worked_solution: No worked solution is shown during the diagnostic.
+  branching:
+    on_submit: Record correctness as diagnostic evidence, do not reveal correctness, advance to next diagnostic item.
+    next: Next diagnostic item or diagnostic routing result.
+  success_reaction:
+    mode: silent
+    context_override: null
+    selection_rule: No spoken success reaction in this stage.
+- id: FRA-08-C01
+  stage: teaching_checkpoint
+  target: Read the new numerator from a subdivided visual
+  ao: AO1
+  difficulty: 1
+  prompt: The same half is now split into 4 equal pieces. How many pieces are shaded?
+  response:
+    type: integer
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+    integer_only: true
+  answer:
+    value: 2
+  visual:
+    primitive: fraction_bar
+    description: Show the subdivided 2/4 bar with two shaded pieces.
+    action: show
+  attempt_policy:
+    policy: hint_retry_show_then_recovery
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: Two of the four smaller pieces are shaded, so one half and two quarters show the same amount.
+    on_incorrect_attempt_1: Look only at the shaded half. How many smaller pieces is that shaded part split into now?
+    on_incorrect_attempt_2: Watch the shaded half split once more. Nothing new is being shaded - we're only cutting it into
+      smaller pieces.
+    worked_explanation: The shaded half becomes 2 of the 4 equal pieces. So one half equals two quarters.
+  mathematical_support:
+    hint_1: Count only the shaded smaller pieces.
+    hint_2: The original shaded half was split into two pieces.
+    worked_solution: The shaded half becomes 2 of the 4 smaller pieces, so 1/2 = 2/4.
+  recovery_item_ref: FRA-08-R01
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark the response as incorrect without shaking the whole card; highlight only the mathematical object
+      referenced by the first hint.
+    incorrect_attempt_2: Reveal or animate the critical scale-factor relationship and then show the worked explanation.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct where present, then continue.
+    on_incorrect_attempt_1: Run scripts.on_incorrect_attempt_1 and visual_feedback.incorrect_attempt_1, then retry same item.
+    on_incorrect_attempt_2: Run scripts.on_incorrect_attempt_2, visual_feedback.incorrect_attempt_2, show scripts.worked_explanation,
+      then route to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+- id: FRA-08-C02
+  stage: teaching_checkpoint
+  target: Use the same scale factor on numerator and denominator
+  ao: AO1
+  difficulty: 1
+  prompt: 3/5 becomes 9/15. The denominator was multiplied by 3. What happened to the numerator?
+  response:
+    type: single_choice
+    options:
+    - ×2
+    - ×3
+    - '+3'
+    - '+6'
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+    shuffle_options: false
+  answer:
+    value: ×3
+  attempt_policy:
+    policy: hint_retry_show_then_recovery
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: The denominator used times three, so the numerator uses times three as well.
+    on_incorrect_attempt_1: Compare the three on top with the nine. What multiplication takes three to nine?
+    on_incorrect_attempt_2: 'Three times three is nine. Now notice the bottom: five times three is fifteen. Same multiplier
+      on both.'
+    worked_explanation: Both numerator and denominator are multiplied by 3, so 3/5 becomes 9/15.
+  mathematical_support:
+    hint_1: Compare 3 with 9.
+    hint_2: 3 × ? = 9.
+    worked_solution: 3 × 3 = 9 and 5 × 3 = 15, so both parts use the same multiplier, 3.
+  recovery_item_ref: FRA-08-R02
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark the response as incorrect without shaking the whole card; highlight only the mathematical object
+      referenced by the first hint.
+    incorrect_attempt_2: Reveal or animate the critical scale-factor relationship and then show the worked explanation.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct where present, then continue.
+    on_incorrect_attempt_1: Run scripts.on_incorrect_attempt_1 and visual_feedback.incorrect_attempt_1, then retry same item.
+    on_incorrect_attempt_2: Run scripts.on_incorrect_attempt_2, visual_feedback.incorrect_attempt_2, show scripts.worked_explanation,
+      then route to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+- id: FRA-08-C03
+  stage: teaching_checkpoint
+  target: Reject a non-equivalent change
+  ao: AO2
+  difficulty: 1
+  prompt: Is 2/5 equivalent to 4/7?
+  response:
+    type: yes_no
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+    display_options:
+    - 'Yes'
+    - 'No'
+  answer:
+    value: false
+    display: 'No'
+  attempt_policy:
+    policy: hint_retry_show_then_recovery
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: If the top doubles, the bottom must double too. Five would become ten, not seven.
+    on_incorrect_attempt_1: The numerator changed from two to four. That's times two. What would five become if it also used
+      times two?
+    on_incorrect_attempt_2: Five times two is ten, not seven. So four sevenths cannot be equivalent to two fifths.
+    worked_explanation: Doubling 2/5 gives 4/10, not 4/7.
+  mathematical_support:
+    hint_1: The numerator doubled. What would happen to 5 if the denominator used the same multiplier?
+    hint_2: 5 × 2 = 10, not 7.
+    worked_solution: For equivalence, both numerator and denominator must be multiplied by the same factor. Doubling 2/5 gives
+      4/10, not 4/7.
+  recovery_item_ref: FRA-08-R03
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark the response as incorrect without shaking the whole card; highlight only the mathematical object
+      referenced by the first hint.
+    incorrect_attempt_2: Reveal or animate the critical scale-factor relationship and then show the worked explanation.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct where present, then continue.
+    on_incorrect_attempt_1: Run scripts.on_incorrect_attempt_1 and visual_feedback.incorrect_attempt_1, then retry same item.
+    on_incorrect_attempt_2: Run scripts.on_incorrect_attempt_2, visual_feedback.incorrect_attempt_2, show scripts.worked_explanation,
+      then route to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+- id: FRA-08-G01
+  stage: guided
+  target: Generate an equivalent fraction with explicit support
+  ao: AO1
+  difficulty: 1
+  prompt: 'Complete: 2/5 = ?/15'
+  response:
+    type: integer
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+    integer_only: true
+  answer:
+    value: 6
+  visual:
+    primitive: fraction_bar
+    description: Show 2/5 subdividing by 3 into fifteenths; mark 5 × 3 = 15 before the learner answers.
+    action: subdivide
+    factor: 3
+  attempt_policy:
+    policy: hint_retry_show_then_recovery
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: Five to fifteen is times three, so two to six has to use times three as well.
+    on_incorrect_attempt_1: 'The denominator has already told you the multiplier: five to fifteen is times three. Do the same
+      thing to two.'
+    on_incorrect_attempt_2: Two times three is six. Watch the two shaded fifths split into three smaller pieces each.
+    worked_explanation: 2 x 3 = 6 and 5 x 3 = 15, so 2/5 = 6/15.
+  mathematical_support:
+    hint_1: 5 became 15 by multiplying by 3. Do the same to 2.
+    hint_2: 2 × 3 = ?
+    worked_solution: 2 × 3 = 6 and 5 × 3 = 15, so 2/5 = 6/15.
+  recovery_item_ref: FRA-08-R04
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark the response as incorrect without shaking the whole card; highlight only the mathematical object
+      referenced by the first hint.
+    incorrect_attempt_2: Reveal or animate the critical scale-factor relationship and then show the worked explanation.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct where present, then continue.
+    on_incorrect_attempt_1: Run scripts.on_incorrect_attempt_1 and visual_feedback.incorrect_attempt_1, then retry same item.
+    on_incorrect_attempt_2: Run scripts.on_incorrect_attempt_2, visual_feedback.incorrect_attempt_2, show scripts.worked_explanation,
+      then route to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+- id: FRA-08-F01
+  stage: faded
+  target: Infer a scale factor and complete a missing denominator
+  ao: AO1
+  difficulty: 2
+  prompt: 'Complete: 4/7 = 12/?'
+  response:
+    type: integer
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+    integer_only: true
+  answer:
+    value: 21
+  attempt_policy:
+    policy: hint_retry_show_then_recovery
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: Four to twelve is times three, so seven to twenty-one follows the same scale factor.
+    on_incorrect_attempt_1: Start with the side you can compare. What multiplier changes four into twelve?
+    on_incorrect_attempt_2: 'That''s times three. Mirror that multiplier on the denominator: seven times three is twenty-one.'
+    worked_explanation: 4 x 3 = 12, so 7 x 3 = 21. Therefore 4/7 = 12/21.
+  mathematical_support:
+    hint_1: What multiplier changes 4 into 12?
+    hint_2: Use that same multiplier on 7.
+    worked_solution: 4 × 3 = 12, so 7 × 3 = 21. Therefore 4/7 = 12/21.
+  recovery_item_ref: FRA-08-R05
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark the response as incorrect without shaking the whole card; highlight only the mathematical object
+      referenced by the first hint.
+    incorrect_attempt_2: Reveal or animate the critical scale-factor relationship and then show the worked explanation.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct where present, then continue.
+    on_incorrect_attempt_1: Run scripts.on_incorrect_attempt_1 and visual_feedback.incorrect_attempt_1, then retry same item.
+    on_incorrect_attempt_2: Run scripts.on_incorrect_attempt_2, visual_feedback.incorrect_attempt_2, show scripts.worked_explanation,
+      then route to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+- id: FRA-08-I01
+  stage: independent
+  target: Complete an equivalent fraction without support
+  ao: AO1
+  difficulty: 2
+  prompt: 'Complete: 5/6 = ?/24'
+  response:
+    type: integer
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+    integer_only: true
+  answer:
+    value: 20
+  attempt_policy:
+    policy: hint_retry_show_then_recovery
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: You found the multiplier from six to twenty-four and then used that same multiplier on five.
+    on_incorrect_attempt_1: Compare six with twenty-four. Find that multiplier first, then use it on five.
+    on_incorrect_attempt_2: Six times four is twenty-four, so five also needs times four. Five times four is twenty.
+    worked_explanation: 5 x 4 = 20 and 6 x 4 = 24, so 5/6 = 20/24.
+  mathematical_support:
+    hint_1: Compare 6 and 24.
+    hint_2: 6 × 4 = 24, so use ×4 on the numerator too.
+    worked_solution: 5 × 4 = 20 and 6 × 4 = 24, so 5/6 = 20/24.
+  recovery_item_ref: FRA-08-R06
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark the response as incorrect without shaking the whole card; highlight only the mathematical object
+      referenced by the first hint.
+    incorrect_attempt_2: Reveal or animate the critical scale-factor relationship and then show the worked explanation.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct where present, then continue.
+    on_incorrect_attempt_1: Run scripts.on_incorrect_attempt_1 and visual_feedback.incorrect_attempt_1, then retry same item.
+    on_incorrect_attempt_2: Run scripts.on_incorrect_attempt_2, visual_feedback.incorrect_attempt_2, show scripts.worked_explanation,
+      then route to recovery_item_ref.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+- id: FRA-08-P01
+  stage: practice
+  target: Generate an equivalent fraction using a stated multiplier
+  ao: AO1
+  difficulty: 1
+  prompt: Multiply the numerator and denominator of 3/8 by 2. Write the equivalent fraction.
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+    fraction_layout: stacked_numerator_denominator
+    accept_equivalent_notation: false
+  answer:
+    value: 6/16
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: Both numbers doubled, so three eighths became six sixteenths without changing value.
+    on_incorrect_attempt_1: Multiply both parts by two - not just one of them.
+    on_incorrect_attempt_2: Three times two is six, and eight times two is sixteen.
+    worked_explanation: (3 x 2)/(8 x 2) = 6/16.
+  mathematical_support:
+    hint_1: Multiply both 3 and 8 by 2.
+    hint_2: 3 × 2 = 6 and 8 × 2 = 16.
+    worked_solution: (3 × 2)/(8 × 2) = 6/16.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark the response as incorrect without shaking the whole card; highlight only the mathematical object
+      referenced by the first hint.
+    incorrect_attempt_2: Reveal or animate the critical scale-factor relationship and then show the worked explanation.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct where present, then continue.
+    on_incorrect_attempt_1: Run scripts.on_incorrect_attempt_1, reveal mathematical_support.hint_1 where available, then retry.
+    on_incorrect_attempt_2: Run scripts.on_incorrect_attempt_2, reveal critical visual step, show scripts.worked_explanation,
+      then continue.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+- id: FRA-08-P02
+  stage: practice
+  target: Find a missing denominator
+  ao: AO1
+  difficulty: 2
+  prompt: 'Complete: 5/9 = 15/?'
+  response:
+    type: integer
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+    integer_only: true
+  answer:
+    value: 27
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: Five to fifteen is times three, so nine to twenty-seven uses times three as well.
+    on_incorrect_attempt_1: Read the multiplier from five to fifteen first.
+    on_incorrect_attempt_2: Five times three is fifteen. Now nine times three gives twenty-seven.
+    worked_explanation: 5 x 3 = 15 and 9 x 3 = 27, so 5/9 = 15/27.
+  mathematical_support:
+    hint_1: 5 became 15. What is the scale factor?
+    hint_2: Use ×3 on 9.
+    worked_solution: 5 × 3 = 15, so 9 × 3 = 27. The missing denominator is 27.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark the response as incorrect without shaking the whole card; highlight only the mathematical object
+      referenced by the first hint.
+    incorrect_attempt_2: Reveal or animate the critical scale-factor relationship and then show the worked explanation.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct where present, then continue.
+    on_incorrect_attempt_1: Run scripts.on_incorrect_attempt_1, reveal mathematical_support.hint_1 where available, then retry.
+    on_incorrect_attempt_2: Run scripts.on_incorrect_attempt_2, reveal critical visual step, show scripts.worked_explanation,
+      then continue.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+- id: FRA-08-P03
+  stage: practice
+  target: Recognise an equivalent fraction among distractors
+  ao: AO2
+  difficulty: 2
+  prompt: Which fraction is equivalent to 7/10?
+  response:
+    type: single_choice
+    options:
+    - 14/20
+    - 14/10
+    - 7/20
+    - 21/20
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+    shuffle_options: false
+  answer:
+    value: 14/20
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: Doubling both seven and ten gives fourteen twentieths.
+    on_incorrect_attempt_1: Check both numbers in each option. One matching number isn't enough.
+    on_incorrect_attempt_2: Double seven to get fourteen, then double ten to get twenty.
+    worked_explanation: 7 x 2 = 14 and 10 x 2 = 20, so 7/10 = 14/20.
+  mathematical_support:
+    hint_1: Look for an option where both 7 and 10 were changed by the same multiplier.
+    hint_2: Doubling 7 gives 14. Doubling 10 gives 20.
+    worked_solution: 7 × 2 = 14 and 10 × 2 = 20, so 7/10 = 14/20.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark the response as incorrect without shaking the whole card; highlight only the mathematical object
+      referenced by the first hint.
+    incorrect_attempt_2: Reveal or animate the critical scale-factor relationship and then show the worked explanation.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct where present, then continue.
+    on_incorrect_attempt_1: Run scripts.on_incorrect_attempt_1, reveal mathematical_support.hint_1 where available, then retry.
+    on_incorrect_attempt_2: Run scripts.on_incorrect_attempt_2, reveal critical visual step, show scripts.worked_explanation,
+      then continue.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+- id: FRA-08-P04
+  stage: practice
+  target: Find a missing numerator from a target denominator
+  ao: AO2
+  difficulty: 2
+  prompt: 'Complete: ?/28 = 3/4'
+  response:
+    type: integer
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+    integer_only: true
+  answer:
+    value: 21
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: Four to twenty-eight is times seven, so three to twenty-one must also use times seven.
+    on_incorrect_attempt_1: 'Use the denominator to find the scale factor: four to twenty-eight.'
+    on_incorrect_attempt_2: Four times seven is twenty-eight, so three times seven is twenty-one.
+    worked_explanation: 3 x 7 = 21 and 4 x 7 = 28, so 21/28 = 3/4.
+  mathematical_support:
+    hint_1: 4 became 28. Work out that multiplier first.
+    hint_2: 4 × 7 = 28, so apply ×7 to 3.
+    worked_solution: 3 × 7 = 21 and 4 × 7 = 28, so 21/28 = 3/4.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark the response as incorrect without shaking the whole card; highlight only the mathematical object
+      referenced by the first hint.
+    incorrect_attempt_2: Reveal or animate the critical scale-factor relationship and then show the worked explanation.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct where present, then continue.
+    on_incorrect_attempt_1: Run scripts.on_incorrect_attempt_1, reveal mathematical_support.hint_1 where available, then retry.
+    on_incorrect_attempt_2: Run scripts.on_incorrect_attempt_2, reveal critical visual step, show scripts.worked_explanation,
+      then continue.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+- id: FRA-08-P05
+  stage: practice
+  target: Apply equivalence in a simple representation context
+  ao: AO3
+  difficulty: 2
+  prompt: A progress bar is 2/5 complete. The same bar is redrawn using 15 equal sections. How many sections should be filled?
+  response:
+    type: integer
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+    integer_only: true
+  answer:
+    value: 6
+  visual:
+    primitive: fraction_bar
+    description: Show an unfilled 15-section progress bar after the learner has read the prompt; do not pre-shade it.
+    action: show
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: 'The bar is divided more finely, but the same two fifths is shaded: six of the fifteen sections.'
+    on_incorrect_attempt_1: Five sections became fifteen. Find that multiplier first.
+    on_incorrect_attempt_2: 'That''s times three. So the two filled parts also become times three: six filled sections.'
+    worked_explanation: 5 x 3 = 15, so 2 x 3 = 6. Six of the fifteen sections are filled.
+  mathematical_support:
+    hint_1: 5 sections became 15 sections. What multiplier is that?
+    hint_2: Use ×3 on the 2 filled parts as well.
+    worked_solution: 5 × 3 = 15, so 2 × 3 = 6. Six of the fifteen sections should be filled.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark the response as incorrect without shaking the whole card; highlight only the mathematical object
+      referenced by the first hint.
+    incorrect_attempt_2: Reveal or animate the critical scale-factor relationship and then show the worked explanation.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct where present, then continue.
+    on_incorrect_attempt_1: Run scripts.on_incorrect_attempt_1, reveal mathematical_support.hint_1 where available, then retry.
+    on_incorrect_attempt_2: Run scripts.on_incorrect_attempt_2, reveal critical visual step, show scripts.worked_explanation,
+      then continue.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+- id: FRA-08-E01
+  stage: exit
+  target: Independent missing numerator
+  ao: AO1
+  difficulty: 2
+  prompt: 'Complete: 7/9 = ?/27'
+  response:
+    type: integer
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+    integer_only: true
+  answer:
+    value: 21
+  attempt_policy:
+    policy: single_submit_deferred_feedback
+    max_attempts_before_resolution: 1
+    feedback_timing: after_mastery_decision
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: null
+    on_incorrect_attempt_1: No hint or correctness message during the exit check.
+    on_incorrect_attempt_2: Not applicable; one submission only.
+    worked_explanation: 'After the exit is scored: 9 x 3 = 27, so 7 x 3 = 21. Therefore 7/9 = 21/27.'
+  mathematical_support:
+    hint_1: After the exit attempt, compare 9 with 27.
+    hint_2: null
+    worked_solution: 9 × 3 = 27, so 7 × 3 = 21. Therefore 7/9 = 21/27.
+  branching:
+    on_submit: Lock response and record correctness without revealing it immediately.
+    next: Continue exit sequence; reveal worked feedback only after mastery decision.
+  success_reaction:
+    mode: silent
+    context_override: null
+    selection_rule: No spoken success reaction in this stage.
+- id: FRA-08-E02
+  stage: exit
+  target: Independent recognition of equivalence
+  ao: AO2
+  difficulty: 2
+  prompt: Which fraction is equivalent to 8/12?
+  response:
+    type: single_choice
+    options:
+    - 2/3
+    - 4/5
+    - 6/10
+    - 10/14
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+    shuffle_options: false
+  answer:
+    value: 2/3
+  attempt_policy:
+    policy: single_submit_deferred_feedback
+    max_attempts_before_resolution: 1
+    feedback_timing: after_mastery_decision
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: null
+    on_incorrect_attempt_1: No hint or correctness message during the exit check.
+    on_incorrect_attempt_2: Not applicable; one submission only.
+    worked_explanation: 'After the exit is scored: divide 8 and 12 by 4 to get 2/3.'
+  mathematical_support:
+    hint_1: After the exit attempt, look for a fraction made by dividing 8 and 12 by the same number.
+    hint_2: null
+    worked_solution: 8 ÷ 4 = 2 and 12 ÷ 4 = 3, so 8/12 = 2/3.
+  branching:
+    on_submit: Lock response and record correctness without revealing it immediately.
+    next: Continue exit sequence; reveal worked feedback only after mastery decision.
+  success_reaction:
+    mode: silent
+    context_override: null
+    selection_rule: No spoken success reaction in this stage.
+- id: FRA-08-E03
+  stage: confirmation
+  target: Confirm missing denominator independently
+  ao: AO1
+  difficulty: 2
+  prompt: 'Complete: 4/11 = 12/?'
+  response:
+    type: integer
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+    integer_only: true
+  answer:
+    value: 33
+  attempt_policy:
+    policy: single_submit_deferred_feedback
+    max_attempts_before_resolution: 1
+    feedback_timing: after_mastery_decision
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: null
+    on_incorrect_attempt_1: No hint or correctness message during confirmation.
+    on_incorrect_attempt_2: Not applicable; one submission only.
+    worked_explanation: 'After scoring: 4 x 3 = 12, so 11 x 3 = 33.'
+  mathematical_support:
+    hint_1: After the attempt, compare 4 with 12.
+    hint_2: null
+    worked_solution: 4 × 3 = 12, so 11 × 3 = 33. Therefore 4/11 = 12/33.
+  branching:
+    on_submit: Lock response and record correctness without revealing it immediately.
+    next: Continue exit sequence; reveal worked feedback only after mastery decision.
+  success_reaction:
+    mode: silent
+    context_override: null
+    selection_rule: No spoken success reaction in this stage.
+- id: FRA-08-E04
+  stage: confirmation
+  target: Confirm missing numerator independently
+  ao: AO1
+  difficulty: 2
+  prompt: 'Complete: ?/35 = 3/5'
+  response:
+    type: integer
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+    integer_only: true
+  answer:
+    value: 21
+  attempt_policy:
+    policy: single_submit_deferred_feedback
+    max_attempts_before_resolution: 1
+    feedback_timing: after_mastery_decision
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: null
+    on_incorrect_attempt_1: No hint or correctness message during confirmation.
+    on_incorrect_attempt_2: Not applicable; one submission only.
+    worked_explanation: 'After scoring: 5 x 7 = 35, so 3 x 7 = 21.'
+  mathematical_support:
+    hint_1: After the attempt, compare 5 with 35.
+    hint_2: null
+    worked_solution: 5 × 7 = 35, so 3 × 7 = 21. Therefore 21/35 = 3/5.
+  branching:
+    on_submit: Lock response and record correctness without revealing it immediately.
+    next: Continue exit sequence; reveal worked feedback only after mastery decision.
+  success_reaction:
+    mode: silent
+    context_override: null
+    selection_rule: No spoken success reaction in this stage.
+- id: FRA-08-R01
+  stage: teaching_recovery
+  target: Read an equivalent fraction after subdivision
+  ao: AO1
+  difficulty: 1
+  prompt: 'Complete the visual: 1/3 = ?/6'
+  response:
+    type: integer
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+    integer_only: true
+  answer:
+    value: 2
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: One third becomes two sixths when every third is split into two.
+    on_incorrect_attempt_1: One shaded third is split into two smaller shaded pieces.
+    on_incorrect_attempt_2: Watch that one shaded third split into two. The new fraction is two sixths.
+    worked_explanation: 1/3 = 2/6.
+  mathematical_support:
+    hint_1: null
+    hint_2: null
+    worked_solution: 1/3 = 2/6.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark the response as incorrect without shaking the whole card; highlight only the mathematical object
+      referenced by the first hint.
+    incorrect_attempt_2: Reveal or animate the critical scale-factor relationship and then show the worked explanation.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct where present, then continue.
+    on_incorrect_attempt_1: Run scripts.on_incorrect_attempt_1, reveal mathematical_support.hint_1 where available, then retry.
+    on_incorrect_attempt_2: Run scripts.on_incorrect_attempt_2, reveal critical visual step, show scripts.worked_explanation,
+      then continue.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+- id: FRA-08-R02
+  stage: teaching_recovery
+  target: Apply the same scale factor
+  ao: AO1
+  difficulty: 1
+  prompt: 'Complete: 2/7 = 6/?'
+  response:
+    type: integer
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+    integer_only: true
+  answer:
+    value: 21
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: Both numerator and denominator use times three.
+    on_incorrect_attempt_1: Two to six is times three. Use the same multiplier on seven.
+    on_incorrect_attempt_2: Seven times three is twenty-one.
+    worked_explanation: 2/7 = 6/21.
+  mathematical_support:
+    hint_1: null
+    hint_2: null
+    worked_solution: 2/7 = 6/21.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark the response as incorrect without shaking the whole card; highlight only the mathematical object
+      referenced by the first hint.
+    incorrect_attempt_2: Reveal or animate the critical scale-factor relationship and then show the worked explanation.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct where present, then continue.
+    on_incorrect_attempt_1: Run scripts.on_incorrect_attempt_1, reveal mathematical_support.hint_1 where available, then retry.
+    on_incorrect_attempt_2: Run scripts.on_incorrect_attempt_2, reveal critical visual step, show scripts.worked_explanation,
+      then continue.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+- id: FRA-08-R03
+  stage: teaching_recovery
+  target: Recognise a valid equivalent change
+  ao: AO2
+  difficulty: 1
+  prompt: Is 3/4 equivalent to 6/8?
+  response:
+    type: yes_no
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+    display_options:
+    - 'Yes'
+    - 'No'
+  answer:
+    value: true
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: Three quarters and six eighths are equivalent because both numbers doubled.
+    on_incorrect_attempt_1: Check whether three and four both use the same multiplier.
+    on_incorrect_attempt_2: Three times two is six and four times two is eight.
+    worked_explanation: 3/4 = 6/8.
+  mathematical_support:
+    hint_1: null
+    hint_2: null
+    worked_solution: 3/4 = 6/8.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark the response as incorrect without shaking the whole card; highlight only the mathematical object
+      referenced by the first hint.
+    incorrect_attempt_2: Reveal or animate the critical scale-factor relationship and then show the worked explanation.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct where present, then continue.
+    on_incorrect_attempt_1: Run scripts.on_incorrect_attempt_1, reveal mathematical_support.hint_1 where available, then retry.
+    on_incorrect_attempt_2: Run scripts.on_incorrect_attempt_2, reveal critical visual step, show scripts.worked_explanation,
+      then continue.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+- id: FRA-08-R04
+  stage: guided_recovery
+  target: Repeat guided scaling
+  ao: AO1
+  difficulty: 1
+  prompt: 'Complete: 3/4 = ?/12'
+  response:
+    type: integer
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+    integer_only: true
+  answer:
+    value: 9
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: Three quarters becomes nine twelfths when both parts use times three.
+    on_incorrect_attempt_1: Four to twelve is times three. Use times three on the numerator.
+    on_incorrect_attempt_2: Three times three is nine.
+    worked_explanation: 3/4 = 9/12.
+  mathematical_support:
+    hint_1: null
+    hint_2: null
+    worked_solution: 3/4 = 9/12.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark the response as incorrect without shaking the whole card; highlight only the mathematical object
+      referenced by the first hint.
+    incorrect_attempt_2: Reveal or animate the critical scale-factor relationship and then show the worked explanation.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct where present, then continue.
+    on_incorrect_attempt_1: Run scripts.on_incorrect_attempt_1, reveal mathematical_support.hint_1 where available, then retry.
+    on_incorrect_attempt_2: Run scripts.on_incorrect_attempt_2, reveal critical visual step, show scripts.worked_explanation,
+      then continue.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+- id: FRA-08-R05
+  stage: faded_recovery
+  target: Repeat inferred scaling
+  ao: AO1
+  difficulty: 2
+  prompt: 'Complete: 2/5 = 8/?'
+  response:
+    type: integer
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+    integer_only: true
+  answer:
+    value: 20
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: Two fifths becomes eight twentieths when both parts use times four.
+    on_incorrect_attempt_1: Two to eight is times four. Use times four on five.
+    on_incorrect_attempt_2: Five times four is twenty.
+    worked_explanation: 2/5 = 8/20.
+  mathematical_support:
+    hint_1: null
+    hint_2: null
+    worked_solution: 2/5 = 8/20.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark the response as incorrect without shaking the whole card; highlight only the mathematical object
+      referenced by the first hint.
+    incorrect_attempt_2: Reveal or animate the critical scale-factor relationship and then show the worked explanation.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct where present, then continue.
+    on_incorrect_attempt_1: Run scripts.on_incorrect_attempt_1, reveal mathematical_support.hint_1 where available, then retry.
+    on_incorrect_attempt_2: Run scripts.on_incorrect_attempt_2, reveal critical visual step, show scripts.worked_explanation,
+      then continue.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+- id: FRA-08-R06
+  stage: independent_recovery
+  target: Repeat independent scaling
+  ao: AO1
+  difficulty: 2
+  prompt: 'Complete: 3/7 = ?/28'
+  response:
+    type: integer
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+    integer_only: true
+  answer:
+    value: 12
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: Three sevenths becomes twelve twenty-eighths when both parts use times four.
+    on_incorrect_attempt_1: Seven to twenty-eight is times four. Use times four on three.
+    on_incorrect_attempt_2: Three times four is twelve.
+    worked_explanation: 3/7 = 12/28.
+  mathematical_support:
+    hint_1: null
+    hint_2: null
+    worked_solution: 3/7 = 12/28.
+  visual_feedback:
+    correct: Briefly mark the submitted response as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark the response as incorrect without shaking the whole card; highlight only the mathematical object
+      referenced by the first hint.
+    incorrect_attempt_2: Reveal or animate the critical scale-factor relationship and then show the worked explanation.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct where present, then continue.
+    on_incorrect_attempt_1: Run scripts.on_incorrect_attempt_1, reveal mathematical_support.hint_1 where available, then retry.
+    on_incorrect_attempt_2: Run scripts.on_incorrect_attempt_2, reveal critical visual step, show scripts.worked_explanation,
+      then continue.
+  success_reaction:
+    mode: engine_auto
+    context_override: null
+    selection_rule: Resolve context from stage, attempt_count, recovery_status and practice_streak using RYAN_DIALOGUE_PROFILE_v1.yaml;
+      select an unused authored reaction without replacement.
+progress_and_persistence:
+  states:
+  - UNSEEN
+  - NEEDS_WORK
+  - LEARNING
+  - SECURE
+  on_lesson_start: Write LEARNING unless already SECURE and learner explicitly chose to review.
+  commit_points:
+  - after each submitted answer
+  - after each completed teaching checkpoint
+  - on phase transition
+  - on exit completion
+  - on completion screen
+  resume_payload:
+  - skill_id
+  - lesson_attempt_id
+  - current_step_id
+  - submitted_answers
+  - attempt_counts
+  - seen_recovery_items
+  - exit_state
+  history_policy: Starting again creates a new lesson attempt and does not delete previous attempts.
+analytics_events:
+  minimum_events:
+  - skill_started
+  - step_viewed
+  - answer_submitted
+  - hint_shown
+  - worked_solution_shown
+  - recovery_item_started
+  - phase_completed
+  - exit_completed
+  - skill_completed
+  privacy_note: Store only data required for learning/progress analytics; this file does not define personal profile fields.
+qa:
+  schema_validated: true
+  maths_answers_verified: true
+  curriculum_human_reviewed: false
+  scripts_human_reviewed: false
+  animation_storyboard_human_reviewed: false
+  branching_reference_validated: true
+  engine_render_tested: false
+  reduced_motion_tested: false
+  keyboard_accessibility_tested: false
+  student_calibration_tested: false
+  acceptance_criteria:
+  - Every learner-facing mathematical line is present in the YAML; Codex adds none.
+  - Every question has a canonical answer and exact response type.
+  - Every interactive non-diagnostic/non-exit item defines correct, first-wrong, second-wrong and worked-resolution behaviour.
+  - Every teaching checkpoint with a recovery reference points to an existing authored recovery item.
+  - No diagnostic distractor maps to a misconception label.
+  - No exit hint appears before the exit mastery decision.
+  - All fraction bars preserve whole width and shaded extent during equivalence animations.
+  - Refresh resumes without losing submitted progress.
+  - No skill-specific route or lesson engine is introduced for FRA-08.

@@ -1,0 +1,2819 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "PA-11 - Choose an Efficient Method for a Percentage of an Amount",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-17",
+      "sha256": "64b4a80f1ab20d712b1e700d68f999c9dfdf355ff5f9fffa0a46c49e6ddc7542"
+    },
+    "authored_scope": "Select an efficient valid method for a percentage of an amount and complete it accurately.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "PA11-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "verified_desktop_mixed_families_ready_phone_single_family_correct_learning_neutral_prompts_aligned_boundaries_drafts_keyboard_320_390_audio_captions",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        13,
+        15,
+        16,
+        17
+      ],
+      "source_repairs_consulted": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        16,
+        17
+      ],
+      "note": "All seventeen approved pages, rendered source diagrams and complete previous configuration reviewed. Restores chunk-size and same-boundary models, prescribed worked/guided examples and all 25 active questions. Required working proves the requested proportion of the original whole with exact arithmetic; longer routes and equivalent benchmark decompositions remain valid. The three-item immediate rule additionally requires two method families and the existing application acceptance check. No Entry, Diagnostic, prerequisite mutation, delayed Retrieval or Strong state."
+    }
+  },
+  "identity": {
+    "id": "PA-11",
+    "slug": "choose-an-efficient-method-for-a-percentage-of-an-amount",
+    "title": "Choose an Efficient Method for a Percentage of an Amount",
+    "strand": "Number",
+    "cluster": "Finding Percentages of Amounts",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Choose and complete a valid efficient route suited to the percentage and whole, while accepting other correct methods.",
+    "success_criteria": [
+      "Recognise useful fractions and benchmark chunks.",
+      "Use one-percent shares or decimal multipliers when convenient.",
+      "Keep the original whole in the visible calculation.",
+      "Separate method validity from arithmetic accuracy and efficiency.",
+      "Use at least two method families across the final set.",
+      "Accept another valid method and retain contextual units."
+    ],
+    "boundaries": {
+      "includes": [
+        "All prescribed calculations and closed method-reasoning checks",
+        "Calculator conditions when the source specifies them",
+        "Equivalent benchmark decompositions and longer valid routes"
+      ],
+      "excludes": [
+        "Money rounding and measured-decimal accuracy",
+        "Percentage change or reverse percentages",
+        "Entry, Diagnostic, prerequisite mutation, delayed Retrieval and Strong"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "PA-01",
+      "PA-02",
+      "PA-07",
+      "PA-08",
+      "PA-10"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for PA-01, PA-02, PA-07, PA-08, PA-10 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "single_choice",
+      "method_choice_amount"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    },
+    "place_value_profile": true
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "Choose convenient chunks without mistaking a longer valid route for an invalid one.",
+    "invariant": "Different correct methods select the same proportion of the same original whole.",
+    "must_notice": [
+      "The percentage and whole jointly affect convenience.",
+      "A fractional route and a multiplier can be equivalent.",
+      "A valid method can contain an arithmetic error.",
+      "Method variety is separate from numerical correctness."
+    ],
+    "common_confusions": [
+      "Penalise a correct longer route",
+      "Use an unconverted percentage as a multiplier",
+      "Treat the percentage as an amount to subtract",
+      "Discard a valid method because of arithmetic",
+      "Reject an equivalent alternative"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "Inspect both the percentage and the whole",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Inspect both the percentage and the whole",
+          "initial_state": "Inspect both the percentage and the whole",
+          "model": {
+            "kind": "method_choice_amount",
+            "title": "Choose convenient chunks",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "principle",
+            "solved": true,
+            "steps": []
+          }
+        },
+        "narration": {
+          "script": "Choose chunks that make the calculation convenient. Different methods can select the same proportion; a longer correct route is still valid."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "A quarter is one convenient chunk",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "A quarter is one convenient chunk",
+          "initial_state": "A quarter is one convenient chunk",
+          "model": {
+            "kind": "method_choice_amount",
+            "title": "Let the percentage suggest the chunk size",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "chunks",
+            "solved": true,
+            "steps": [],
+            "rows": [
+              {
+                "percent": 25,
+                "label": "four equal quarters",
+                "detail": "One large quarter chunk is selected."
+              },
+              {
+                "percent": 35,
+                "label": "tenths and half a tenth",
+                "detail": "Three 10% chunks and one 5% half-chunk are selected."
+              },
+              {
+                "percent": 37,
+                "label": "hundredths or multiplier 0.37",
+                "detail": "Three tenths and seven hundredths are selected."
+              }
+            ],
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "This first percentage selects one of four equal quarters. One large chunk reaches the selected boundary."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Build from tenths and a half-tenth",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Build from tenths and a half-tenth",
+          "initial_state": "Build from tenths and a half-tenth",
+          "model": {
+            "kind": "method_choice_amount",
+            "title": "Let the percentage suggest the chunk size",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "chunks",
+            "solved": true,
+            "steps": [],
+            "rows": [
+              {
+                "percent": 25,
+                "label": "four equal quarters",
+                "detail": "One large quarter chunk is selected."
+              },
+              {
+                "percent": 35,
+                "label": "tenths and half a tenth",
+                "detail": "Three 10% chunks and one 5% half-chunk are selected."
+              },
+              {
+                "percent": 37,
+                "label": "hundredths or multiplier 0.37",
+                "detail": "Three tenths and seven hundredths are selected."
+              }
+            ],
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "This percentage is built from three full tenths and half of the next tenth. All those chunks belong to the same original whole."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Use finer shares when useful",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Use finer shares when useful",
+          "initial_state": "Use finer shares when useful",
+          "model": {
+            "kind": "method_choice_amount",
+            "title": "Let the percentage suggest the chunk size",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "chunks",
+            "solved": true,
+            "steps": [],
+            "rows": [
+              {
+                "percent": 25,
+                "label": "four equal quarters",
+                "detail": "One large quarter chunk is selected."
+              },
+              {
+                "percent": 35,
+                "label": "tenths and half a tenth",
+                "detail": "Three 10% chunks and one 5% half-chunk are selected."
+              },
+              {
+                "percent": 37,
+                "label": "hundredths or multiplier 0.37",
+                "detail": "Three tenths and seven hundredths are selected."
+              }
+            ],
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "Here the boundary falls at three tenths and seven hundredths. One-percent shares or an equivalent decimal multiplier give useful routes."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Select one quarter",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Select one quarter",
+          "initial_state": "Select one quarter",
+          "model": {
+            "kind": "method_choice_amount",
+            "title": "Same selected share, different number of pieces",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "comparison",
+            "solved": true,
+            "steps": [],
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "The first route selects one large quarter of the whole. Notice exactly where the selected region ends."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T06"
+      },
+      {
+        "id": "T06",
+        "stage": "teaching",
+        "purpose": "Reach the same boundary with smaller pieces",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Reach the same boundary with smaller pieces",
+          "initial_state": "Reach the same boundary with smaller pieces",
+          "model": {
+            "kind": "method_choice_amount",
+            "title": "Same selected share, different number of pieces",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "comparison",
+            "solved": true,
+            "steps": [],
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "The second route selects twenty-five one-percent pieces. The boundary aligns exactly with the quarter above. The longer route remains valid."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T07"
+      },
+      {
+        "id": "T07",
+        "stage": "teaching",
+        "purpose": "Judge validity separately from efficiency",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Judge validity separately from efficiency",
+          "initial_state": "Judge validity separately from efficiency",
+          "model": {
+            "kind": "method_choice_amount",
+            "title": "Distinguish a longer route from an invalid route",
+            "given": "25% of 360",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "steps": [
+              "The 1% route is valid: 360 ÷ 100 × 25 = 90.",
+              "The quarter route is also valid: 360 ÷ 4 = 90.",
+              "Dividing by four usually needs fewer calculations, but the longer correct route is not wrong."
+            ],
+            "mode": "rule"
+          }
+        },
+        "narration": {
+          "script": "Decide what can be said about a correct method that uses more steps."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "PA-11-C01"
+        },
+        "next_step": "T08"
+      },
+      {
+        "id": "T08",
+        "stage": "teaching",
+        "purpose": "Choose an easy benchmark route",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Choose an easy benchmark route",
+          "initial_state": "Choose an easy benchmark route",
+          "model": {
+            "kind": "method_choice_amount",
+            "title": "Choose convenient benchmark parts",
+            "given": "35% of 260 — without a calculator",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "solved": true,
+            "steps": [
+              "10% of 260 = 26.",
+              "30% = 78 and 5% = 13.",
+              "35% of 260 = 78 + 13 = 91."
+            ],
+            "stages": [
+              {
+                "title": "Start with an easy tenth",
+                "lines": [
+                  "35% = 30% + 5%.",
+                  "10% of 260 = 26."
+                ]
+              },
+              {
+                "title": "Build the two selected parts",
+                "lines": [
+                  "30% of 260 = 26 × 3 = 78.",
+                  "5% of 260 = 26 ÷ 2 = 13."
+                ]
+              },
+              {
+                "title": "Combine the parts of the same whole",
+                "lines": [
+                  "35% of 260 = 78 + 13 = 91."
+                ]
+              }
+            ],
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "Without a calculator, this whole makes a tenth easy to find. Use that tenth to build the two convenient parts of the target percentage."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T09"
+      },
+      {
+        "id": "T09",
+        "stage": "teaching",
+        "purpose": "Build the larger and smaller parts",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Build the larger and smaller parts",
+          "initial_state": "Build the larger and smaller parts",
+          "model": {
+            "kind": "method_choice_amount",
+            "title": "Choose convenient benchmark parts",
+            "given": "35% of 260 — without a calculator",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "solved": true,
+            "steps": [
+              "10% of 260 = 26.",
+              "30% = 78 and 5% = 13.",
+              "35% of 260 = 78 + 13 = 91."
+            ],
+            "stages": [
+              {
+                "title": "Start with an easy tenth",
+                "lines": [
+                  "35% = 30% + 5%.",
+                  "10% of 260 = 26."
+                ]
+              },
+              {
+                "title": "Build the two selected parts",
+                "lines": [
+                  "30% of 260 = 26 × 3 = 78.",
+                  "5% of 260 = 26 ÷ 2 = 13."
+                ]
+              },
+              {
+                "title": "Combine the parts of the same whole",
+                "lines": [
+                  "35% of 260 = 78 + 13 = 91."
+                ]
+              }
+            ],
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "Repeat the tenth to make the larger part, and halve that same tenth for the smaller part. Both amounts still refer to the original whole."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T10"
+      },
+      {
+        "id": "T10",
+        "stage": "teaching",
+        "purpose": "Combine the selected parts",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Combine the selected parts",
+          "initial_state": "Combine the selected parts",
+          "model": {
+            "kind": "method_choice_amount",
+            "title": "Choose convenient benchmark parts",
+            "given": "35% of 260 — without a calculator",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "solved": true,
+            "steps": [
+              "10% of 260 = 26.",
+              "30% = 78 and 5% = 13.",
+              "35% of 260 = 78 + 13 = 91."
+            ],
+            "stages": [
+              {
+                "title": "Start with an easy tenth",
+                "lines": [
+                  "35% = 30% + 5%.",
+                  "10% of 260 = 26."
+                ]
+              },
+              {
+                "title": "Build the two selected parts",
+                "lines": [
+                  "30% of 260 = 26 × 3 = 78.",
+                  "5% of 260 = 26 ÷ 2 = 13."
+                ]
+              },
+              {
+                "title": "Combine the parts of the same whole",
+                "lines": [
+                  "35% of 260 = 78 + 13 = 91."
+                ]
+              }
+            ],
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "Add the two benchmark amounts. The working shows one efficient route; a different correct route would still be valid."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T11"
+      },
+      {
+        "id": "T11",
+        "stage": "teaching",
+        "purpose": "Explain the convenience",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Explain the convenience",
+          "initial_state": "Explain the convenience",
+          "model": {
+            "kind": "method_choice_amount",
+            "title": "Explain why these chunks are convenient",
+            "given": "35% of 260",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "steps": [
+              "35% = 30% + 5% = three 10% parts and one 5% part.",
+              "10% of 260 = 26; 30% = 78 and 5% = 13.",
+              "The convenient parts combine: 78 + 13 = 91."
+            ],
+            "mode": "rule"
+          }
+        },
+        "narration": {
+          "script": "Choose why the percentage structure and these numbers suit the benchmark method."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "PA-11-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "PA-11-G01",
+        "support_level": "high",
+        "pre_question_script": "Choose a convenient fractional description.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "faded",
+        "question_ref": "PA-11-G02",
+        "support_level": "reduced",
+        "pre_question_script": "Complete the divisor and quotient of the selected route.",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "faded",
+        "question_ref": "PA-11-G03",
+        "support_level": "reduced",
+        "pre_question_script": "Record the selected amount in the final statement.",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "independent_transfer",
+        "question_ref": "PA-11-G04",
+        "support_level": "none",
+        "pre_question_script": "Compare the two methods and choose the statement that describes them.",
+        "correct_next": "P01"
+      }
+    },
+    "practice": {
+      "intro_script": "Choose your own valid route and show it in one calculation using the original whole. Check the arithmetic and final amount. A longer correct route is accepted. Later contexts accept an answer with optional working.",
+      "question_order": [
+        "PA-11-P01",
+        "PA-11-P02",
+        "PA-11-P03",
+        "PA-11-P04",
+        "PA-11-P05",
+        "PA-11-P06",
+        "PA-11-P07",
+        "PA-11-P08",
+        "PA-11-P09",
+        "PA-11-P10",
+        "PA-11-P11",
+        "PA-11-P12",
+        "PA-11-X01",
+        "PA-11-X02",
+        "PA-11-X03",
+        "PA-11-X04"
+      ],
+      "question_count": 16,
+      "feedback_policy": "Independent method selection with no optional hints. Submitted errors receive specific feedback and learner-entered correction; no Diagnostic or prerequisite branch."
+    },
+    "exit": {
+      "intro_script": "Complete three final calculations without hints, showing a valid route for each. Across the set, use at least two different method families. Correct longer routes remain accepted. All responses lock before feedback.",
+      "primary_question_refs": [
+        "PA-11-E01",
+        "PA-11-E02",
+        "PA-11-E03"
+      ],
+      "confirmation_question_refs": [],
+      "submission_policy": "Withhold correctness and working until all three responses are saved.",
+      "mastery_policy": {
+        "profile": "all_primary_unsupported_deferred",
+        "require_all": true,
+        "source_page": 13,
+        "method_choice_rule": "two_families_and_acceptance",
+        "minimum_method_families": 2,
+        "alternative_acceptance_question_ref": "PA-11-X04",
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "All three final calculations are valid and unsupported. You used more than one method family and accepted another correct route.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Keep building method choice",
+      "ryan_script": "Review your saved answers and methods. Ready for retrieval needs three valid unsupported calculations, at least two method families, and acceptance of another valid route. A correct longer method is not a wrong answer.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "PA-11-C01",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "A student finds 25% of 360 by first finding 1% and then multiplying by 25. The answer is correct. Which statement is best?",
+      "target": "Choose and complete a valid percentage route",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "The method is valid, but dividing by 4 would usually be more efficient.",
+          "The method is invalid because only one method may be used.",
+          "The answer must be marked wrong because the method is long.",
+          "Finding 1% can never be used for a percentage of an amount."
+        ]
+      },
+      "answer": {
+        "value": "The method is valid, but dividing by 4 would usually be more efficient."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The longer route is valid even though a quarter is usually quicker.",
+        "correct_after_support": "Correct. The longer route is valid even though a quarter is usually quicker.",
+        "on_correct_math": "The 1% route is valid: 360 ÷ 100 × 25 = 90. → The quarter route is also valid: 360 ÷ 4 = 90. → Dividing by four usually needs fewer calculations, but the longer correct route is not wrong.",
+        "on_incorrect_attempt_1": "Judge whether the proportion is correct separately from how many steps the method uses.",
+        "on_incorrect_attempt_2": "Compare the two complete routes in the working. They reach the same amount with different numbers of steps.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The 1% route is valid: 360 ÷ 100 × 25 = 90. → The quarter route is also valid: 360 ÷ 4 = 90. → Dividing by four usually needs fewer calculations, but the longer correct route is not wrong."
+      },
+      "mathematical_support": {
+        "hint_1": "Judge whether the proportion is correct separately from how many steps the method uses.",
+        "hint_2": "Compare the two complete routes in the working. They reach the same amount with different numbers of steps.",
+        "worked_solution": "The 1% route is valid: 360 ÷ 100 × 25 = 90. → The quarter route is also valid: 360 ÷ 4 = 90. → Dividing by four usually needs fewer calculations, but the longer correct route is not wrong."
+      },
+      "working": [
+        "The 1% route is valid: 360 ÷ 100 × 25 = 90.",
+        "The quarter route is also valid: 360 ÷ 4 = 90.",
+        "Dividing by four usually needs fewer calculations, but the longer correct route is not wrong."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "method_choice_amount",
+          "title": "Distinguish a longer route from an invalid route",
+          "given": "25% of 360",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "steps": [
+            "The 1% route is valid: 360 ÷ 100 × 25 = 90.",
+            "The quarter route is also valid: 360 ÷ 4 = 90.",
+            "Dividing by four usually needs fewer calculations, but the longer correct route is not wrong."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "The method is invalid because only one method may be used.": "More than one method can preserve the same percentage of the same whole.",
+        "The answer must be marked wrong because the method is long.": "Length alone does not make a mathematically correct method wrong.",
+        "Finding 1% can never be used for a percentage of an amount.": "One-percent shares can be combined to find many other percentages."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-11-C02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "Without a calculator, why is the benchmark route efficient for finding 35% of 260?",
+      "target": "Choose and complete a valid percentage route",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "35% is three 10% parts and one 5% part, and 10% of 260 is easy to find.",
+          "35 must always be divided by the whole.",
+          "Every percentage must first be changed to a fraction with denominator 35.",
+          "The answer should be larger than the whole because 35 is larger than 1."
+        ]
+      },
+      "answer": {
+        "value": "35% is three 10% parts and one 5% part, and 10% of 260 is easy to find."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both the percentage structure and the whole make these chunks convenient.",
+        "correct_after_support": "Correct. Both the percentage structure and the whole make these chunks convenient.",
+        "on_correct_math": "35% = 30% + 5% = three 10% parts and one 5% part. → 10% of 260 = 26; 30% = 78 and 5% = 13. → The convenient parts combine: 78 + 13 = 91.",
+        "on_incorrect_attempt_1": "Look for a useful decomposition and an easy first calculation on this whole.",
+        "on_incorrect_attempt_2": "The working links the percentage decomposition to the easy tenth of this whole; compare both features with the choices.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "35% = 30% + 5% = three 10% parts and one 5% part. → 10% of 260 = 26; 30% = 78 and 5% = 13. → The convenient parts combine: 78 + 13 = 91."
+      },
+      "mathematical_support": {
+        "hint_1": "Look for a useful decomposition and an easy first calculation on this whole.",
+        "hint_2": "The working links the percentage decomposition to the easy tenth of this whole; compare both features with the choices.",
+        "worked_solution": "35% = 30% + 5% = three 10% parts and one 5% part. → 10% of 260 = 26; 30% = 78 and 5% = 13. → The convenient parts combine: 78 + 13 = 91."
+      },
+      "working": [
+        "35% = 30% + 5% = three 10% parts and one 5% part.",
+        "10% of 260 = 26; 30% = 78 and 5% = 13.",
+        "The convenient parts combine: 78 + 13 = 91."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "method_choice_amount",
+          "title": "Explain why these chunks are convenient",
+          "given": "35% of 260",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "steps": [
+            "35% = 30% + 5% = three 10% parts and one 5% part.",
+            "10% of 260 = 26; 30% = 78 and 5% = 13.",
+            "The convenient parts combine: 78 + 13 = 91."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "35 must always be divided by the whole.": "Dividing the percentage number by the whole reverses the relationship.",
+        "Every percentage must first be changed to a fraction with denominator 35.": "The percentage number is not automatically a denominator for equal parts.",
+        "The answer should be larger than the whole because 35 is larger than 1.": "Compare the percentage with one hundred percent, not its number with one."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-11-G01",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "Choose an efficient method for 12.5% of 640. Which is the best description of 12.5%?",
+      "target": "Choose and complete a valid percentage route",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "one eighth of the whole",
+          "twelve times the whole",
+          "the whole divided by 12.5 and then by 100",
+          "one half of the whole"
+        ]
+      },
+      "answer": {
+        "value": "one eighth of the whole"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. One eighth gives a short route for this whole.",
+        "correct_after_support": "Correct. One eighth gives a short route for this whole.",
+        "on_correct_math": "Eight equal shares make 100%, because 8 × 12.5% = 100%. → 12.5% = 1/8 of the original whole.",
+        "on_incorrect_attempt_1": "Think how many equal copies of this percentage complete one hundred percent.",
+        "on_incorrect_attempt_2": "The working connects the percentage to equal shares of the whole. Choose the matching fractional description.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Eight equal shares make 100%, because 8 × 12.5% = 100%. → 12.5% = 1/8 of the original whole."
+      },
+      "mathematical_support": {
+        "hint_1": "Think how many equal copies of this percentage complete one hundred percent.",
+        "hint_2": "The working connects the percentage to equal shares of the whole. Choose the matching fractional description.",
+        "worked_solution": "Eight equal shares make 100%, because 8 × 12.5% = 100%. → 12.5% = 1/8 of the original whole."
+      },
+      "working": [
+        "Eight equal shares make 100%, because 8 × 12.5% = 100%.",
+        "12.5% = 1/8 of the original whole."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "method_choice_amount",
+          "title": "Recognise the convenient fraction",
+          "given": "12.5% of 640",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "steps": [
+            "Eight equal shares make 100%, because 8 × 12.5% = 100%.",
+            "12.5% = 1/8 of the original whole."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "twelve times the whole": "Twelve times the whole is much larger than this percentage below one hundred.",
+        "the whole divided by 12.5 and then by 100": "Dividing the amount by the percentage number does not produce that percentage share.",
+        "one half of the whole": "One half represents fifty percent, not this smaller fraction."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-11-G02",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "faded",
+      "prompt": "Complete the selected route: 640 ÷ ___ = ___.",
+      "target": "Choose and complete a valid percentage route",
+      "response": {
+        "type": "method_choice_amount",
+        "mode": "fields",
+        "fields": [
+          {
+            "key": "divisor",
+            "label": "Divisor"
+          },
+          {
+            "key": "quotient",
+            "label": "Quotient"
+          }
+        ]
+      },
+      "answer": {
+        "value": {
+          "divisor": "8",
+          "quotient": "80"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The equal-group division completes the chosen route.",
+        "correct_after_support": "Correct. The equal-group division completes the chosen route.",
+        "on_correct_math": "Use eight equal groups: 640 ÷ 8 = 80. → One of those groups is 12.5% of the original whole.",
+        "on_incorrect_attempt_1": "Keep the selected fraction as the method and check the division arithmetic separately.",
+        "on_incorrect_attempt_2": "Use the division in the working to compare the group count and group value with your two blanks.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Use eight equal groups: 640 ÷ 8 = 80. → One of those groups is 12.5% of the original whole."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the selected fraction as the method and check the division arithmetic separately.",
+        "hint_2": "Use the division in the working to compare the group count and group value with your two blanks.",
+        "worked_solution": "Use eight equal groups: 640 ÷ 8 = 80. → One of those groups is 12.5% of the original whole."
+      },
+      "working": [
+        "Use eight equal groups: 640 ÷ 8 = 80.",
+        "One of those groups is 12.5% of the original whole."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "method_choice_amount",
+          "title": "Complete the eighth route",
+          "given": "12.5% of 640",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "steps": [
+            "Use eight equal groups: 640 ÷ 8 = 80.",
+            "One of those groups is 12.5% of the original whole."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_divisor": "The quotient is correct. Check how many equal groups make eighths.",
+        "check_quotient": "The divisor matches the chosen route. Recheck the division arithmetic.",
+        "check_multiple": "Check the number of equal groups, then calculate the amount in one group."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-11-G03",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "faded",
+      "prompt": "Record the answer: 12.5% of 640 = ___.",
+      "target": "Choose and complete a valid percentage route",
+      "response": {
+        "type": "method_choice_amount",
+        "mode": "fields",
+        "fields": [
+          {
+            "key": "amount",
+            "label": "Final amount"
+          }
+        ]
+      },
+      "answer": {
+        "value": {
+          "amount": "80"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The answer is the selected amount of the original whole.",
+        "correct_after_support": "Correct. The answer is the selected amount of the original whole.",
+        "on_correct_math": "12.5% of 640 = 640 ÷ 8 = 80.",
+        "on_incorrect_attempt_1": "Record the amount in one selected group, not the number of groups.",
+        "on_incorrect_attempt_2": "The working names the selected amount at the end of the route. Enter that amount in the statement.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "12.5% of 640 = 640 ÷ 8 = 80."
+      },
+      "mathematical_support": {
+        "hint_1": "Record the amount in one selected group, not the number of groups.",
+        "hint_2": "The working names the selected amount at the end of the route. Enter that amount in the statement.",
+        "worked_solution": "12.5% of 640 = 640 ÷ 8 = 80."
+      },
+      "working": [
+        "12.5% of 640 = 640 ÷ 8 = 80."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "method_choice_amount",
+          "title": "State the selected amount",
+          "given": "12.5% of 640",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "steps": [
+            "12.5% of 640 = 640 ÷ 8 = 80."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_amount": "The final blank needs the selected amount, not the divisor or percentage number."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-11-G04",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "independent_transfer",
+      "prompt": "A second student uses 640 × 0.125 and also gets 80. Which statement is correct?",
+      "target": "Choose and complete a valid percentage route",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Both methods are valid; dividing by 8 is especially efficient without a calculator.",
+          "The multiplier method is invalid because a fraction method exists.",
+          "Only the multiplier method can be accepted.",
+          "Both methods are invalid."
+        ]
+      },
+      "answer": {
+        "value": "Both methods are valid; dividing by 8 is especially efficient without a calculator."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both routes are valid; the tool condition affects convenience, not equivalence.",
+        "correct_after_support": "Correct. Both routes are valid; the tool condition affects convenience, not equivalence.",
+        "on_correct_math": "The fraction route gives 640 ÷ 8 = 80. → The multiplier route gives 640 × 0.125 = 80. → Both select the same share; dividing by eight is especially convenient without a calculator.",
+        "on_incorrect_attempt_1": "A convenient fraction does not make an equivalent multiplier invalid.",
+        "on_incorrect_attempt_2": "Compare the two results in the working, then distinguish validity from non-calculator convenience.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The fraction route gives 640 ÷ 8 = 80. → The multiplier route gives 640 × 0.125 = 80. → Both select the same share; dividing by eight is especially convenient without a calculator."
+      },
+      "mathematical_support": {
+        "hint_1": "A convenient fraction does not make an equivalent multiplier invalid.",
+        "hint_2": "Compare the two results in the working, then distinguish validity from non-calculator convenience.",
+        "worked_solution": "The fraction route gives 640 ÷ 8 = 80. → The multiplier route gives 640 × 0.125 = 80. → Both select the same share; dividing by eight is especially convenient without a calculator."
+      },
+      "working": [
+        "The fraction route gives 640 ÷ 8 = 80.",
+        "The multiplier route gives 640 × 0.125 = 80.",
+        "Both select the same share; dividing by eight is especially convenient without a calculator."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "method_choice_amount",
+          "title": "Compare two routes to the stated share",
+          "given": "12.5% of 640",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "steps": [
+            "The fraction route gives 640 ÷ 8 = 80.",
+            "The multiplier route gives 640 × 0.125 = 80.",
+            "Both select the same share; dividing by eight is especially convenient without a calculator."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "The multiplier method is invalid because a fraction method exists.": "A fractional shortcut does not invalidate an equivalent decimal multiplier.",
+        "Only the multiplier method can be accepted.": "The equal-eighth division is also mathematically valid.",
+        "Both methods are invalid.": "Both calculations preserve the same percentage of the original whole."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-11-P01",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Find 25% of 440. Show your chosen valid route.",
+      "target": "Choose and complete a valid percentage route",
+      "response": {
+        "type": "method_choice_amount",
+        "require_working": true,
+        "percent": 25,
+        "whole": 440,
+        "unit": ""
+      },
+      "answer": {
+        "value": {
+          "calculation": "440 / 4",
+          "amount": "110"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Your route selects a quarter of the original whole.",
+        "correct_after_support": "Correct. Your route selects a quarter of the original whole.",
+        "on_correct_math": "25% = 1/4. → 440 ÷ 4 = 110. → A valid alternative is 440 ÷ 100 × 25 = 110.",
+        "on_incorrect_attempt_1": "A quarter is one convenient route; any other correct route remains valid.",
+        "on_incorrect_attempt_2": "Compare the quarter route with the longer one-percent route in the working. Both select the same amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "25% = 1/4. → 440 ÷ 4 = 110. → A valid alternative is 440 ÷ 100 × 25 = 110."
+      },
+      "mathematical_support": {
+        "hint_1": "A quarter is one convenient route; any other correct route remains valid.",
+        "hint_2": "Compare the quarter route with the longer one-percent route in the working. Both select the same amount.",
+        "worked_solution": "25% = 1/4. → 440 ÷ 4 = 110. → A valid alternative is 440 ÷ 100 × 25 = 110."
+      },
+      "working": [
+        "25% = 1/4.",
+        "440 ÷ 4 = 110.",
+        "A valid alternative is 440 ÷ 100 × 25 = 110."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "method_choice_amount",
+          "title": "Select a route for the stated percentage and whole",
+          "given": "25% of 440",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 25,
+          "whole": 440,
+          "unit": "",
+          "steps": [
+            "25% = 1/4.",
+            "440 ÷ 4 = 110.",
+            "A valid alternative is 440 ÷ 100 × 25 = 110."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_method": "The final amount is correct, but the recorded calculation does not establish the requested percentage of the original whole. Make that route visible.",
+        "check_arithmetic": "The proportional route is valid. Recheck the arithmetic or any written equality without discarding the method.",
+        "check_amount": "The working is valid. Recheck the final amount recorded in the answer field.",
+        "check_multiple": "A quarter is one convenient route; any other correct route remains valid."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-11-P02",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Find 35% of 180. Show your chosen valid route.",
+      "target": "Choose and complete a valid percentage route",
+      "response": {
+        "type": "method_choice_amount",
+        "require_working": true,
+        "percent": 35,
+        "whole": 180,
+        "unit": ""
+      },
+      "answer": {
+        "value": {
+          "calculation": "180 / 10 * 3 + 180 / 20",
+          "amount": "63"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The method combines the required proportion of this whole.",
+        "correct_after_support": "Correct. The method combines the required proportion of this whole.",
+        "on_correct_math": "35% = 30% + 5%. → 10% of 180 = 18; 30% = 54 and 5% = 9. → 54 + 9 = 63.",
+        "on_incorrect_attempt_1": "Keep all benchmark parts as shares of the same original amount.",
+        "on_incorrect_attempt_2": "Follow the two benchmark amounts into their sum, or compare another valid route with that total.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "35% = 30% + 5%. → 10% of 180 = 18; 30% = 54 and 5% = 9. → 54 + 9 = 63."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep all benchmark parts as shares of the same original amount.",
+        "hint_2": "Follow the two benchmark amounts into their sum, or compare another valid route with that total.",
+        "worked_solution": "35% = 30% + 5%. → 10% of 180 = 18; 30% = 54 and 5% = 9. → 54 + 9 = 63."
+      },
+      "working": [
+        "35% = 30% + 5%.",
+        "10% of 180 = 18; 30% = 54 and 5% = 9.",
+        "54 + 9 = 63."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "method_choice_amount",
+          "title": "Select a route for the stated percentage and whole",
+          "given": "35% of 180",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 35,
+          "whole": 180,
+          "unit": "",
+          "steps": [
+            "35% = 30% + 5%.",
+            "10% of 180 = 18; 30% = 54 and 5% = 9.",
+            "54 + 9 = 63."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_method": "The final amount is correct, but the recorded calculation does not establish the requested percentage of the original whole. Make that route visible.",
+        "check_arithmetic": "The proportional route is valid. Recheck the arithmetic or any written equality without discarding the method.",
+        "check_amount": "The working is valid. Recheck the final amount recorded in the answer field.",
+        "check_multiple": "Keep all benchmark parts as shares of the same original amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-11-P03",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Find 12.5% of 720. Show your chosen valid route.",
+      "target": "Choose and complete a valid percentage route",
+      "response": {
+        "type": "method_choice_amount",
+        "require_working": true,
+        "percent": 12.5,
+        "whole": 720,
+        "unit": ""
+      },
+      "answer": {
+        "value": {
+          "calculation": "720 / 8",
+          "amount": "90"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The chosen route preserves the eighth share.",
+        "correct_after_support": "Correct. The chosen route preserves the eighth share.",
+        "on_correct_math": "12.5% = 1/8. → 720 ÷ 8 = 90. → 720 × 0.125 = 90 is another valid route.",
+        "on_incorrect_attempt_1": "Recognise the small fraction without changing the original whole.",
+        "on_incorrect_attempt_2": "The working compares an eighth with an equivalent multiplier. Check your arithmetic within your chosen route.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "12.5% = 1/8. → 720 ÷ 8 = 90. → 720 × 0.125 = 90 is another valid route."
+      },
+      "mathematical_support": {
+        "hint_1": "Recognise the small fraction without changing the original whole.",
+        "hint_2": "The working compares an eighth with an equivalent multiplier. Check your arithmetic within your chosen route.",
+        "worked_solution": "12.5% = 1/8. → 720 ÷ 8 = 90. → 720 × 0.125 = 90 is another valid route."
+      },
+      "working": [
+        "12.5% = 1/8.",
+        "720 ÷ 8 = 90.",
+        "720 × 0.125 = 90 is another valid route."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "method_choice_amount",
+          "title": "Select a route for the stated percentage and whole",
+          "given": "12.5% of 720",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 12.5,
+          "whole": 720,
+          "unit": "",
+          "steps": [
+            "12.5% = 1/8.",
+            "720 ÷ 8 = 90.",
+            "720 × 0.125 = 90 is another valid route."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_method": "The final amount is correct, but the recorded calculation does not establish the requested percentage of the original whole. Make that route visible.",
+        "check_arithmetic": "The proportional route is valid. Recheck the arithmetic or any written equality without discarding the method.",
+        "check_amount": "The working is valid. Recheck the final amount recorded in the answer field.",
+        "check_multiple": "Recognise the small fraction without changing the original whole."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-11-P04",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Find 37% of 500. Show your chosen valid route.",
+      "target": "Choose and complete a valid percentage route",
+      "response": {
+        "type": "method_choice_amount",
+        "require_working": true,
+        "percent": 37,
+        "whole": 500,
+        "unit": ""
+      },
+      "answer": {
+        "value": {
+          "calculation": "500 / 100 * 37",
+          "amount": "185"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The route selects the stated number of hundredths.",
+        "correct_after_support": "Correct. The route selects the stated number of hundredths.",
+        "on_correct_math": "1% of 500 = 500 ÷ 100 = 5. → 37% of 500 = 5 × 37 = 185. → 500 × 0.37 = 185 is also valid.",
+        "on_incorrect_attempt_1": "One-percent shares or an equivalent multiplier can handle this percentage directly.",
+        "on_incorrect_attempt_2": "Follow the unchanged one-percent value through the displayed scaling, or check the equivalent multiplier route.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "1% of 500 = 500 ÷ 100 = 5. → 37% of 500 = 5 × 37 = 185. → 500 × 0.37 = 185 is also valid."
+      },
+      "mathematical_support": {
+        "hint_1": "One-percent shares or an equivalent multiplier can handle this percentage directly.",
+        "hint_2": "Follow the unchanged one-percent value through the displayed scaling, or check the equivalent multiplier route.",
+        "worked_solution": "1% of 500 = 500 ÷ 100 = 5. → 37% of 500 = 5 × 37 = 185. → 500 × 0.37 = 185 is also valid."
+      },
+      "working": [
+        "1% of 500 = 500 ÷ 100 = 5.",
+        "37% of 500 = 5 × 37 = 185.",
+        "500 × 0.37 = 185 is also valid."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "method_choice_amount",
+          "title": "Select a route for the stated percentage and whole",
+          "given": "37% of 500",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 37,
+          "whole": 500,
+          "unit": "",
+          "steps": [
+            "1% of 500 = 500 ÷ 100 = 5.",
+            "37% of 500 = 5 × 37 = 185.",
+            "500 × 0.37 = 185 is also valid."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_method": "The final amount is correct, but the recorded calculation does not establish the requested percentage of the original whole. Make that route visible.",
+        "check_arithmetic": "The proportional route is valid. Recheck the arithmetic or any written equality without discarding the method.",
+        "check_amount": "The working is valid. Recheck the final amount recorded in the answer field.",
+        "check_multiple": "One-percent shares or an equivalent multiplier can handle this percentage directly."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-11-P05",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Find 60% of 350. Show your chosen valid route.",
+      "target": "Choose and complete a valid percentage route",
+      "response": {
+        "type": "method_choice_amount",
+        "require_working": true,
+        "percent": 60,
+        "whole": 350,
+        "unit": ""
+      },
+      "answer": {
+        "value": {
+          "calculation": "350 / 5 * 3",
+          "amount": "210"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The valid route selects three fifths of the whole.",
+        "correct_after_support": "Correct. The valid route selects three fifths of the whole.",
+        "on_correct_math": "60% = 3/5. → 350 ÷ 5 × 3 = 210. → Six 10% parts also give 35 × 6 = 210.",
+        "on_incorrect_attempt_1": "Use equal fractional groups or convenient benchmark parts of the original total.",
+        "on_incorrect_attempt_2": "The working gives two valid decompositions. Keep your chosen proportion while checking the selected amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "60% = 3/5. → 350 ÷ 5 × 3 = 210. → Six 10% parts also give 35 × 6 = 210."
+      },
+      "mathematical_support": {
+        "hint_1": "Use equal fractional groups or convenient benchmark parts of the original total.",
+        "hint_2": "The working gives two valid decompositions. Keep your chosen proportion while checking the selected amount.",
+        "worked_solution": "60% = 3/5. → 350 ÷ 5 × 3 = 210. → Six 10% parts also give 35 × 6 = 210."
+      },
+      "working": [
+        "60% = 3/5.",
+        "350 ÷ 5 × 3 = 210.",
+        "Six 10% parts also give 35 × 6 = 210."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "method_choice_amount",
+          "title": "Select a route for the stated percentage and whole",
+          "given": "60% of 350",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 60,
+          "whole": 350,
+          "unit": "",
+          "steps": [
+            "60% = 3/5.",
+            "350 ÷ 5 × 3 = 210.",
+            "Six 10% parts also give 35 × 6 = 210."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_method": "The final amount is correct, but the recorded calculation does not establish the requested percentage of the original whole. Make that route visible.",
+        "check_arithmetic": "The proportional route is valid. Recheck the arithmetic or any written equality without discarding the method.",
+        "check_amount": "The working is valid. Recheck the final amount recorded in the answer field.",
+        "check_multiple": "Use equal fractional groups or convenient benchmark parts of the original total."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-11-P06",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Find 8% of 425. Show your chosen valid route.",
+      "target": "Choose and complete a valid percentage route",
+      "response": {
+        "type": "method_choice_amount",
+        "require_working": true,
+        "percent": 8,
+        "whole": 425,
+        "unit": ""
+      },
+      "answer": {
+        "value": {
+          "calculation": "425 / 100 * 8",
+          "amount": "34"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The exact share value is preserved in the result.",
+        "correct_after_support": "Correct. The exact share value is preserved in the result.",
+        "on_correct_math": "1% of 425 = 425 ÷ 100 = 4.25. → 8% of 425 = 4.25 × 8 = 34. → 425 × 0.08 = 34 is also valid.",
+        "on_incorrect_attempt_1": "Keep the decimal share exact when the first division is not a whole number.",
+        "on_incorrect_attempt_2": "Trace the exact decimal share through the multiplication; an equivalent direct multiplier is also accepted.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "1% of 425 = 425 ÷ 100 = 4.25. → 8% of 425 = 4.25 × 8 = 34. → 425 × 0.08 = 34 is also valid."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the decimal share exact when the first division is not a whole number.",
+        "hint_2": "Trace the exact decimal share through the multiplication; an equivalent direct multiplier is also accepted.",
+        "worked_solution": "1% of 425 = 425 ÷ 100 = 4.25. → 8% of 425 = 4.25 × 8 = 34. → 425 × 0.08 = 34 is also valid."
+      },
+      "working": [
+        "1% of 425 = 425 ÷ 100 = 4.25.",
+        "8% of 425 = 4.25 × 8 = 34.",
+        "425 × 0.08 = 34 is also valid."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "method_choice_amount",
+          "title": "Select a route for the stated percentage and whole",
+          "given": "8% of 425",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 8,
+          "whole": 425,
+          "unit": "",
+          "steps": [
+            "1% of 425 = 425 ÷ 100 = 4.25.",
+            "8% of 425 = 4.25 × 8 = 34.",
+            "425 × 0.08 = 34 is also valid."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_method": "The final amount is correct, but the recorded calculation does not establish the requested percentage of the original whole. Make that route visible.",
+        "check_arithmetic": "The proportional route is valid. Recheck the arithmetic or any written equality without discarding the method.",
+        "check_amount": "The working is valid. Recheck the final amount recorded in the answer field.",
+        "check_multiple": "Keep the decimal share exact when the first division is not a whole number."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-11-P07",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Find 75% of 96. Show your chosen valid route.",
+      "target": "Choose and complete a valid percentage route",
+      "response": {
+        "type": "method_choice_amount",
+        "require_working": true,
+        "percent": 75,
+        "whole": 96,
+        "unit": ""
+      },
+      "answer": {
+        "value": {
+          "calculation": "96 / 4 * 3",
+          "amount": "72"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The method selects three equal quarters.",
+        "correct_after_support": "Correct. The method selects three equal quarters.",
+        "on_correct_math": "75% = 3/4. → 96 ÷ 4 = 24; three quarters give 24 × 3 = 72.",
+        "on_incorrect_attempt_1": "A valid three-quarter route must select three groups, not just one.",
+        "on_incorrect_attempt_2": "The working distinguishes one quarter from three quarters. Compare your selected total with the complete route.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "75% = 3/4. → 96 ÷ 4 = 24; three quarters give 24 × 3 = 72."
+      },
+      "mathematical_support": {
+        "hint_1": "A valid three-quarter route must select three groups, not just one.",
+        "hint_2": "The working distinguishes one quarter from three quarters. Compare your selected total with the complete route.",
+        "worked_solution": "75% = 3/4. → 96 ÷ 4 = 24; three quarters give 24 × 3 = 72."
+      },
+      "working": [
+        "75% = 3/4.",
+        "96 ÷ 4 = 24; three quarters give 24 × 3 = 72."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "method_choice_amount",
+          "title": "Select a route for the stated percentage and whole",
+          "given": "75% of 96",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 75,
+          "whole": 96,
+          "unit": "",
+          "steps": [
+            "75% = 3/4.",
+            "96 ÷ 4 = 24; three quarters give 24 × 3 = 72."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_method": "The final amount is correct, but the recorded calculation does not establish the requested percentage of the original whole. Make that route visible.",
+        "check_arithmetic": "The proportional route is valid. Recheck the arithmetic or any written equality without discarding the method.",
+        "check_amount": "The working is valid. Recheck the final amount recorded in the answer field.",
+        "check_multiple": "A valid three-quarter route must select three groups, not just one."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-11-P08",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Find 42% of 250. Show your chosen valid route.",
+      "target": "Choose and complete a valid percentage route",
+      "response": {
+        "type": "method_choice_amount",
+        "require_working": true,
+        "percent": 42,
+        "whole": 250,
+        "unit": ""
+      },
+      "answer": {
+        "value": {
+          "calculation": "250 * .42",
+          "amount": "105"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The multiplier or equal-share route gives the same selected amount.",
+        "correct_after_support": "Correct. The multiplier or equal-share route gives the same selected amount.",
+        "on_correct_math": "42% = 0.42. → 250 × 0.42 = 105. → 250 ÷ 100 × 42 = 105 is also valid.",
+        "on_incorrect_attempt_1": "Convert the percentage or establish one-percent shares before scaling the whole.",
+        "on_incorrect_attempt_2": "Compare the multiplier and one-percent routes in the working; they preserve the same proportion.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "42% = 0.42. → 250 × 0.42 = 105. → 250 ÷ 100 × 42 = 105 is also valid."
+      },
+      "mathematical_support": {
+        "hint_1": "Convert the percentage or establish one-percent shares before scaling the whole.",
+        "hint_2": "Compare the multiplier and one-percent routes in the working; they preserve the same proportion.",
+        "worked_solution": "42% = 0.42. → 250 × 0.42 = 105. → 250 ÷ 100 × 42 = 105 is also valid."
+      },
+      "working": [
+        "42% = 0.42.",
+        "250 × 0.42 = 105.",
+        "250 ÷ 100 × 42 = 105 is also valid."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "method_choice_amount",
+          "title": "Select a route for the stated percentage and whole",
+          "given": "42% of 250",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 42,
+          "whole": 250,
+          "unit": "",
+          "steps": [
+            "42% = 0.42.",
+            "250 × 0.42 = 105.",
+            "250 ÷ 100 × 42 = 105 is also valid."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_method": "The final amount is correct, but the recorded calculation does not establish the requested percentage of the original whole. Make that route visible.",
+        "check_arithmetic": "The proportional route is valid. Recheck the arithmetic or any written equality without discarding the method.",
+        "check_amount": "The working is valid. Recheck the final amount recorded in the answer field.",
+        "check_multiple": "Convert the percentage or establish one-percent shares before scaling the whole."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-11-P09",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Find 15% of 360. Show your chosen valid route.",
+      "target": "Choose and complete a valid percentage route",
+      "response": {
+        "type": "method_choice_amount",
+        "require_working": true,
+        "percent": 15,
+        "whole": 360,
+        "unit": ""
+      },
+      "answer": {
+        "value": {
+          "calculation": "360 / 10 + 360 / 20",
+          "amount": "54"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The method selects the same share as a tenth plus half a tenth.",
+        "correct_after_support": "Correct. The method selects the same share as a tenth plus half a tenth.",
+        "on_correct_math": "15% = 10% + 5%. → 10% of 360 = 36; 5% = 18. → 36 + 18 = 54.",
+        "on_incorrect_attempt_1": "Keep the half-tenth and full tenth tied to the same original whole.",
+        "on_incorrect_attempt_2": "Follow the full tenth and half-tenth into their sum; any equivalent valid route is accepted.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "15% = 10% + 5%. → 10% of 360 = 36; 5% = 18. → 36 + 18 = 54."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the half-tenth and full tenth tied to the same original whole.",
+        "hint_2": "Follow the full tenth and half-tenth into their sum; any equivalent valid route is accepted.",
+        "worked_solution": "15% = 10% + 5%. → 10% of 360 = 36; 5% = 18. → 36 + 18 = 54."
+      },
+      "working": [
+        "15% = 10% + 5%.",
+        "10% of 360 = 36; 5% = 18.",
+        "36 + 18 = 54."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "method_choice_amount",
+          "title": "Select a route for the stated percentage and whole",
+          "given": "15% of 360",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 15,
+          "whole": 360,
+          "unit": "",
+          "steps": [
+            "15% = 10% + 5%.",
+            "10% of 360 = 36; 5% = 18.",
+            "36 + 18 = 54."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_method": "The final amount is correct, but the recorded calculation does not establish the requested percentage of the original whole. Make that route visible.",
+        "check_arithmetic": "The proportional route is valid. Recheck the arithmetic or any written equality without discarding the method.",
+        "check_amount": "The working is valid. Recheck the final amount recorded in the answer field.",
+        "check_multiple": "Keep the half-tenth and full tenth tied to the same original whole."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-11-P10",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Find 2.5% of 800. Show your chosen valid route.",
+      "target": "Choose and complete a valid percentage route",
+      "response": {
+        "type": "method_choice_amount",
+        "require_working": true,
+        "percent": 2.5,
+        "whole": 800,
+        "unit": ""
+      },
+      "answer": {
+        "value": {
+          "calculation": "800 / 40",
+          "amount": "20"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The small selected share is consistent with the original whole.",
+        "correct_after_support": "Correct. The small selected share is consistent with the original whole.",
+        "on_correct_math": "2.5% = 1/40. → 800 ÷ 40 = 20. → Alternatively, 10% = 80, so one quarter of that is 20.",
+        "on_incorrect_attempt_1": "This small percentage is a quarter of ten percent, not a quarter of the whole.",
+        "on_incorrect_attempt_2": "The working distinguishes a quarter of a tenth from a quarter of the original amount. Check the route you chose.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "2.5% = 1/40. → 800 ÷ 40 = 20. → Alternatively, 10% = 80, so one quarter of that is 20."
+      },
+      "mathematical_support": {
+        "hint_1": "This small percentage is a quarter of ten percent, not a quarter of the whole.",
+        "hint_2": "The working distinguishes a quarter of a tenth from a quarter of the original amount. Check the route you chose.",
+        "worked_solution": "2.5% = 1/40. → 800 ÷ 40 = 20. → Alternatively, 10% = 80, so one quarter of that is 20."
+      },
+      "working": [
+        "2.5% = 1/40.",
+        "800 ÷ 40 = 20.",
+        "Alternatively, 10% = 80, so one quarter of that is 20."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "method_choice_amount",
+          "title": "Select a route for the stated percentage and whole",
+          "given": "2.5% of 800",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 2.5,
+          "whole": 800,
+          "unit": "",
+          "steps": [
+            "2.5% = 1/40.",
+            "800 ÷ 40 = 20.",
+            "Alternatively, 10% = 80, so one quarter of that is 20."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_method": "The final amount is correct, but the recorded calculation does not establish the requested percentage of the original whole. Make that route visible.",
+        "check_arithmetic": "The proportional route is valid. Recheck the arithmetic or any written equality without discarding the method.",
+        "check_amount": "The working is valid. Recheck the final amount recorded in the answer field.",
+        "check_multiple": "This small percentage is a quarter of ten percent, not a quarter of the whole."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-11-P11",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Which pairing is most efficient without a calculator?",
+      "target": "Choose and complete a valid percentage route",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "25% of 320: divide by 4; 35% of 240: use 10% and 5%.",
+          "25% of 320: multiply by 25; 35% of 240: divide by 35.",
+          "25% of 320: subtract 25; 35% of 240: add 35.",
+          "25% of 320: divide by 25; 35% of 240: multiply by 100."
+        ]
+      },
+      "answer": {
+        "value": "25% of 320: divide by 4; 35% of 240: use 10% and 5%."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Each route suits its percentage and the non-calculator condition.",
+        "correct_after_support": "Correct. Each route suits its percentage and the non-calculator condition.",
+        "on_correct_math": "25% is one quarter, so divide 320 by 4. → 35% can be built from 30% and 5%, using the easy 10% share of 240. → Both suggested routes are valid and convenient without a calculator.",
+        "on_incorrect_attempt_1": "Check that both operations preserve the stated percentages before comparing convenience.",
+        "on_incorrect_attempt_2": "Match the quarter and benchmark descriptions in the working to the two percentages separately.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "25% is one quarter, so divide 320 by 4. → 35% can be built from 30% and 5%, using the easy 10% share of 240. → Both suggested routes are valid and convenient without a calculator."
+      },
+      "mathematical_support": {
+        "hint_1": "Check that both operations preserve the stated percentages before comparing convenience.",
+        "hint_2": "Match the quarter and benchmark descriptions in the working to the two percentages separately.",
+        "worked_solution": "25% is one quarter, so divide 320 by 4. → 35% can be built from 30% and 5%, using the easy 10% share of 240. → Both suggested routes are valid and convenient without a calculator."
+      },
+      "working": [
+        "25% is one quarter, so divide 320 by 4.",
+        "35% can be built from 30% and 5%, using the easy 10% share of 240.",
+        "Both suggested routes are valid and convenient without a calculator."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "method_choice_amount",
+          "title": "Match each percentage to convenient chunks",
+          "given": "25% of 320 and 35% of 240",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "steps": [
+            "25% is one quarter, so divide 320 by 4.",
+            "35% can be built from 30% and 5%, using the easy 10% share of 240.",
+            "Both suggested routes are valid and convenient without a calculator."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "25% of 320: multiply by 25; 35% of 240: divide by 35.": "Multiplying by an unconverted percentage and dividing by the percentage number do not select the required shares.",
+        "25% of 320: subtract 25; 35% of 240: add 35.": "Adding or subtracting the percentage number treats it as an amount.",
+        "25% of 320: divide by 25; 35% of 240: multiply by 100.": "Neither operation creates the correct quarter or benchmark selection."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-11-P12",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Which is the first incorrect step in this student’s method for 12.5% of 640?",
+      "target": "Choose and complete a valid percentage route",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Step 1",
+          "Step 2",
+          "Step 3",
+          "No step is incorrect"
+        ]
+      },
+      "answer": {
+        "value": "Step 2"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The chosen route is valid; the division arithmetic is the first error.",
+        "correct_after_support": "Correct. The chosen route is valid; the division arithmetic is the first error.",
+        "on_correct_math": "The equivalence 12.5% = 1/8 is correct. → The first error is Step 2: 640 ÷ 8 = 80, not 70. → Keep the eighth route and correct its arithmetic.",
+        "on_incorrect_attempt_1": "Check the fractional equivalence and the division as separate steps.",
+        "on_incorrect_attempt_2": "The working preserves the correct fraction and identifies the first inaccurate calculation, before the final repeated statement.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The equivalence 12.5% = 1/8 is correct. → The first error is Step 2: 640 ÷ 8 = 80, not 70. → Keep the eighth route and correct its arithmetic."
+      },
+      "mathematical_support": {
+        "hint_1": "Check the fractional equivalence and the division as separate steps.",
+        "hint_2": "The working preserves the correct fraction and identifies the first inaccurate calculation, before the final repeated statement.",
+        "worked_solution": "The equivalence 12.5% = 1/8 is correct. → The first error is Step 2: 640 ÷ 8 = 80, not 70. → Keep the eighth route and correct its arithmetic."
+      },
+      "working": [
+        "The equivalence 12.5% = 1/8 is correct.",
+        "The first error is Step 2: 640 ÷ 8 = 80, not 70.",
+        "Keep the eighth route and correct its arithmetic."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "method_choice_amount",
+          "title": "Find the first incorrect step",
+          "given": "12.5% of 640",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "student_work": [
+            "12.5% = 1/8",
+            "640 ÷ 8 = 70",
+            "12.5% of 640 = 70"
+          ],
+          "steps": [
+            "The equivalence 12.5% = 1/8 is correct.",
+            "The first error is Step 2: 640 ÷ 8 = 80, not 70.",
+            "Keep the eighth route and correct its arithmetic."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "Step 1": "The eighth equivalence is correct. Check the calculation that uses it.",
+        "Step 3": "The final statement repeats an error introduced by an earlier calculation.",
+        "No step is incorrect": "The chosen fraction is valid, but the division does not give the written quotient."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-11-X01",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A school has 640 students. 12.5% travel by train. Work out the number who travel by train.",
+      "target": "Choose and complete a valid percentage route",
+      "response": {
+        "type": "method_choice_amount",
+        "require_working": false,
+        "percent": 12.5,
+        "whole": 640,
+        "unit": "students"
+      },
+      "answer": {
+        "value": {
+          "amount": "80"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The selected amount counts the students who travel by train.",
+        "correct_after_support": "Correct. The selected amount counts the students who travel by train.",
+        "on_correct_math": "12.5% = 1/8. → 640 ÷ 8 = 80 students travel by train.",
+        "on_incorrect_attempt_1": "Select the train-travelling share of the complete school total.",
+        "on_incorrect_attempt_2": "The working shows one valid route to the train-travelling count. Your alternative route may also be valid.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "12.5% = 1/8. → 640 ÷ 8 = 80 students travel by train."
+      },
+      "mathematical_support": {
+        "hint_1": "Select the train-travelling share of the complete school total.",
+        "hint_2": "The working shows one valid route to the train-travelling count. Your alternative route may also be valid.",
+        "worked_solution": "12.5% = 1/8. → 640 ÷ 8 = 80 students travel by train."
+      },
+      "working": [
+        "12.5% = 1/8.",
+        "640 ÷ 8 = 80 students travel by train."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "method_choice_amount",
+          "title": "Select a route for the stated percentage and whole",
+          "given": "12.5% of 640 students",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 12.5,
+          "whole": 640,
+          "unit": "students",
+          "steps": [
+            "12.5% = 1/8.",
+            "640 ÷ 8 = 80 students travel by train."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_method": "The final amount is correct, but the optional calculation is not valid. Correct it or remove work you did not use.",
+        "check_arithmetic": "The proportional route is valid. Recheck the arithmetic or any written equality without discarding the method.",
+        "check_amount": "Recheck the requested selected amount from the original whole, keeping its contextual unit.",
+        "check_multiple": "Select the train-travelling share of the complete school total."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-11-X02",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A tank contains 3600 litres of water. 35% of the water is used. Work out the volume used.",
+      "target": "Choose and complete a valid percentage route",
+      "response": {
+        "type": "method_choice_amount",
+        "require_working": false,
+        "percent": 35,
+        "whole": 3600,
+        "unit": "litres"
+      },
+      "answer": {
+        "value": {
+          "amount": "1260"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The answer is the used volume, with litres retained.",
+        "correct_after_support": "Correct. The answer is the used volume, with litres retained.",
+        "on_correct_math": "10% of 3600 = 360; 30% = 1080 and 5% = 180. → 35% used = 1080 + 180 = 1260 litres.",
+        "on_incorrect_attempt_1": "Find the used share of the original tank volume, not the volume left.",
+        "on_incorrect_attempt_2": "The final working line describes water used. Check your chosen route against that requested quantity.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "10% of 3600 = 360; 30% = 1080 and 5% = 180. → 35% used = 1080 + 180 = 1260 litres."
+      },
+      "mathematical_support": {
+        "hint_1": "Find the used share of the original tank volume, not the volume left.",
+        "hint_2": "The final working line describes water used. Check your chosen route against that requested quantity.",
+        "worked_solution": "10% of 3600 = 360; 30% = 1080 and 5% = 180. → 35% used = 1080 + 180 = 1260 litres."
+      },
+      "working": [
+        "10% of 3600 = 360; 30% = 1080 and 5% = 180.",
+        "35% used = 1080 + 180 = 1260 litres."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "method_choice_amount",
+          "title": "Select a route for the stated percentage and whole",
+          "given": "35% of 3600 litres",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 35,
+          "whole": 3600,
+          "unit": "litres",
+          "steps": [
+            "10% of 3600 = 360; 30% = 1080 and 5% = 180.",
+            "35% used = 1080 + 180 = 1260 litres."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_method": "The final amount is correct, but the optional calculation is not valid. Correct it or remove work you did not use.",
+        "check_arithmetic": "The proportional route is valid. Recheck the arithmetic or any written equality without discarding the method.",
+        "check_amount": "Recheck the requested selected amount from the original whole, keeping its contextual unit.",
+        "check_multiple": "Find the used share of the original tank volume, not the volume left."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-11-X03",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A factory makes 750 components. During inspection, 8% are found to be defective. Work out the number of defective components.",
+      "target": "Choose and complete a valid percentage route",
+      "response": {
+        "type": "method_choice_amount",
+        "require_working": false,
+        "percent": 8,
+        "whole": 750,
+        "unit": "components"
+      },
+      "answer": {
+        "value": {
+          "amount": "60"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The result counts the defective part of the production.",
+        "correct_after_support": "Correct. The result counts the defective part of the production.",
+        "on_correct_math": "1% of 750 = 7.5. → 8% defective = 7.5 × 8 = 60 components.",
+        "on_incorrect_attempt_1": "The selected share counts defective components from the full production total.",
+        "on_incorrect_attempt_2": "Trace the original production total through the working to the defective count; valid alternative routes remain accepted.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "1% of 750 = 7.5. → 8% defective = 7.5 × 8 = 60 components."
+      },
+      "mathematical_support": {
+        "hint_1": "The selected share counts defective components from the full production total.",
+        "hint_2": "Trace the original production total through the working to the defective count; valid alternative routes remain accepted.",
+        "worked_solution": "1% of 750 = 7.5. → 8% defective = 7.5 × 8 = 60 components."
+      },
+      "working": [
+        "1% of 750 = 7.5.",
+        "8% defective = 7.5 × 8 = 60 components."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "method_choice_amount",
+          "title": "Select a route for the stated percentage and whole",
+          "given": "8% of 750 components",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 8,
+          "whole": 750,
+          "unit": "components",
+          "steps": [
+            "1% of 750 = 7.5.",
+            "8% defective = 7.5 × 8 = 60 components."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_method": "The final amount is correct, but the optional calculation is not valid. Correct it or remove work you did not use.",
+        "check_arithmetic": "The proportional route is valid. Recheck the arithmetic or any written equality without discarding the method.",
+        "check_amount": "Recheck the requested selected amount from the original whole, keeping its contextual unit.",
+        "check_multiple": "The selected share counts defective components from the full production total."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-11-X04",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "One student correctly uses a decimal multiplier to find 25% of 520. Another divides 520 by 4 and gets the same answer. Which statement is correct?",
+      "target": "Choose and complete a valid percentage route",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Both methods are mathematically valid.",
+          "Only the first method is valid.",
+          "Only the second method is valid.",
+          "Both methods must be rejected because they are different."
+        ]
+      },
+      "answer": {
+        "value": "Both methods are mathematically valid."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both methods are accepted when no route is prescribed.",
+        "correct_after_support": "Correct. Both methods are accepted when no route is prescribed.",
+        "on_correct_math": "25% = 0.25 = 1/4. → 520 × 0.25 = 130 and 520 ÷ 4 = 130. → Both routes select the same quarter of the same whole.",
+        "on_incorrect_attempt_1": "Different calculations can express the same proportion of the same whole.",
+        "on_incorrect_attempt_2": "The working connects the decimal and fraction to the same selected share. Judge each route on validity.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "25% = 0.25 = 1/4. → 520 × 0.25 = 130 and 520 ÷ 4 = 130. → Both routes select the same quarter of the same whole."
+      },
+      "mathematical_support": {
+        "hint_1": "Different calculations can express the same proportion of the same whole.",
+        "hint_2": "The working connects the decimal and fraction to the same selected share. Judge each route on validity.",
+        "worked_solution": "25% = 0.25 = 1/4. → 520 × 0.25 = 130 and 520 ÷ 4 = 130. → Both routes select the same quarter of the same whole."
+      },
+      "working": [
+        "25% = 0.25 = 1/4.",
+        "520 × 0.25 = 130 and 520 ÷ 4 = 130.",
+        "Both routes select the same quarter of the same whole."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "method_choice_amount",
+          "title": "Judge both routes by their mathematics",
+          "given": "25% of 520",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "steps": [
+            "25% = 0.25 = 1/4.",
+            "520 × 0.25 = 130 and 520 ÷ 4 = 130.",
+            "Both routes select the same quarter of the same whole."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "Only the first method is valid.": "Dividing by four is a valid quarter method too.",
+        "Only the second method is valid.": "The decimal multiplier is equivalent to a quarter, so it is valid too.",
+        "Both methods must be rejected because they are different.": "Different routes are not a reason to reject two correct calculations."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-11-E01",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "exit",
+      "prompt": "Final check: find 12.5% of 880. Show your chosen valid route.",
+      "target": "Choose and complete a valid percentage route",
+      "response": {
+        "type": "method_choice_amount",
+        "require_working": true,
+        "percent": 12.5,
+        "whole": 880,
+        "unit": "",
+        "method_variety_notice": true
+      },
+      "answer": {
+        "value": {
+          "calculation": "880 / 8",
+          "amount": "110"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Your visible route and final selected amount agree.",
+        "correct_after_support": "Correct. Your visible route and final selected amount agree.",
+        "on_correct_math": "12.5% = 1/8. → 880 ÷ 8 = 110. → An equivalent multiplier or another valid route is also accepted.",
+        "on_incorrect_attempt_1": "Check that the visible route selects the requested share of the full original amount.",
+        "on_incorrect_attempt_2": "Compare your saved route with the worked eighth calculation; a different valid method is still accepted.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "12.5% = 1/8. → 880 ÷ 8 = 110. → An equivalent multiplier or another valid route is also accepted."
+      },
+      "mathematical_support": {
+        "hint_1": "Check that the visible route selects the requested share of the full original amount.",
+        "hint_2": "Compare your saved route with the worked eighth calculation; a different valid method is still accepted.",
+        "worked_solution": "12.5% = 1/8. → 880 ÷ 8 = 110. → An equivalent multiplier or another valid route is also accepted."
+      },
+      "working": [
+        "12.5% = 1/8.",
+        "880 ÷ 8 = 110.",
+        "An equivalent multiplier or another valid route is also accepted."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "method_choice_amount",
+          "title": "Select a route for the stated percentage and whole",
+          "given": "12.5% of 880",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 12.5,
+          "whole": 880,
+          "unit": "",
+          "steps": [
+            "12.5% = 1/8.",
+            "880 ÷ 8 = 110.",
+            "An equivalent multiplier or another valid route is also accepted."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_method": "The final amount is correct, but the recorded calculation does not establish the requested percentage of the original whole. Make that route visible.",
+        "check_arithmetic": "The proportional route is valid. Recheck the arithmetic or any written equality without discarding the method.",
+        "check_amount": "The working is valid. Recheck the final amount recorded in the answer field.",
+        "check_multiple": "Check that the visible route selects the requested share of the full original amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-11-E02",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "exit",
+      "prompt": "Final check: find 35% of 420. Show your chosen valid route.",
+      "target": "Choose and complete a valid percentage route",
+      "response": {
+        "type": "method_choice_amount",
+        "require_working": true,
+        "percent": 35,
+        "whole": 420,
+        "unit": "",
+        "method_variety_notice": true
+      },
+      "answer": {
+        "value": {
+          "calculation": "420 / 10 * 3 + 420 / 20",
+          "amount": "147"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The chosen route preserves the requested percentage of this whole.",
+        "correct_after_support": "Correct. The chosen route preserves the requested percentage of this whole.",
+        "on_correct_math": "35% = 30% + 5%. → 10% of 420 = 42; 30% = 126 and 5% = 21. → 126 + 21 = 147. → A 40%-minus-5% route or another valid method is also accepted.",
+        "on_incorrect_attempt_1": "Keep every selected percentage part attached to the same original whole.",
+        "on_incorrect_attempt_2": "Follow the benchmark amounts into the worked total, then compare your saved valid decomposition or alternative route.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "35% = 30% + 5%. → 10% of 420 = 42; 30% = 126 and 5% = 21. → 126 + 21 = 147. → A 40%-minus-5% route or another valid method is also accepted."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep every selected percentage part attached to the same original whole.",
+        "hint_2": "Follow the benchmark amounts into the worked total, then compare your saved valid decomposition or alternative route.",
+        "worked_solution": "35% = 30% + 5%. → 10% of 420 = 42; 30% = 126 and 5% = 21. → 126 + 21 = 147. → A 40%-minus-5% route or another valid method is also accepted."
+      },
+      "working": [
+        "35% = 30% + 5%.",
+        "10% of 420 = 42; 30% = 126 and 5% = 21.",
+        "126 + 21 = 147.",
+        "A 40%-minus-5% route or another valid method is also accepted."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "method_choice_amount",
+          "title": "Select a route for the stated percentage and whole",
+          "given": "35% of 420",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 35,
+          "whole": 420,
+          "unit": "",
+          "steps": [
+            "35% = 30% + 5%.",
+            "10% of 420 = 42; 30% = 126 and 5% = 21.",
+            "126 + 21 = 147.",
+            "A 40%-minus-5% route or another valid method is also accepted."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_method": "The final amount is correct, but the recorded calculation does not establish the requested percentage of the original whole. Make that route visible.",
+        "check_arithmetic": "The proportional route is valid. Recheck the arithmetic or any written equality without discarding the method.",
+        "check_amount": "The working is valid. Recheck the final amount recorded in the answer field.",
+        "check_multiple": "Keep every selected percentage part attached to the same original whole."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-11-E03",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "exit",
+      "prompt": "Final check: find 38% of 250. Show your chosen valid route.",
+      "target": "Choose and complete a valid percentage route",
+      "response": {
+        "type": "method_choice_amount",
+        "require_working": true,
+        "percent": 38,
+        "whole": 250,
+        "unit": "",
+        "method_variety_notice": true
+      },
+      "answer": {
+        "value": {
+          "calculation": "250 * .38",
+          "amount": "95"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Your route gives the exact requested share.",
+        "correct_after_support": "Correct. Your route gives the exact requested share.",
+        "on_correct_math": "38% = 0.38. → 250 × 0.38 = 95. → The one-percent route also gives 250 ÷ 100 × 38 = 95.",
+        "on_incorrect_attempt_1": "Show how the original whole is scaled to the stated percentage, then check the exact amount.",
+        "on_incorrect_attempt_2": "The working displays multiplier and one-percent alternatives. Compare the proportional structure and arithmetic with your saved route.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "38% = 0.38. → 250 × 0.38 = 95. → The one-percent route also gives 250 ÷ 100 × 38 = 95."
+      },
+      "mathematical_support": {
+        "hint_1": "Show how the original whole is scaled to the stated percentage, then check the exact amount.",
+        "hint_2": "The working displays multiplier and one-percent alternatives. Compare the proportional structure and arithmetic with your saved route.",
+        "worked_solution": "38% = 0.38. → 250 × 0.38 = 95. → The one-percent route also gives 250 ÷ 100 × 38 = 95."
+      },
+      "working": [
+        "38% = 0.38.",
+        "250 × 0.38 = 95.",
+        "The one-percent route also gives 250 ÷ 100 × 38 = 95."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "method_choice_amount",
+          "title": "Select a route for the stated percentage and whole",
+          "given": "38% of 250",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 38,
+          "whole": 250,
+          "unit": "",
+          "steps": [
+            "38% = 0.38.",
+            "250 × 0.38 = 95.",
+            "The one-percent route also gives 250 ÷ 100 × 38 = 95."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_method": "The final amount is correct, but the recorded calculation does not establish the requested percentage of the original whole. Make that route visible.",
+        "check_arithmetic": "The proportional route is valid. Recheck the arithmetic or any written equality without discarding the method.",
+        "check_amount": "The working is valid. Recheck the final amount recorded in the answer field.",
+        "check_multiple": "Show how the original whole is scaled to the stated percentage, then check the exact amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    }
+  ],
+  "canonical_lesson": {
+    "version": "PA11-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

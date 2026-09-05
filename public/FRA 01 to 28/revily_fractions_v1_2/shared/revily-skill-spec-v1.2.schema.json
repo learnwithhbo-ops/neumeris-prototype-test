@@ -1,0 +1,405 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://revily.local/schemas/revily-skill-spec-v1.2.schema.json",
+  "title": "Revily Skill Specification v1.2",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "spec_intent",
+    "identity",
+    "curriculum",
+    "dependencies",
+    "engine_capability_requirements",
+    "experience_contract",
+    "voice_and_script",
+    "visual_language",
+    "diagnostic",
+    "concept_model",
+    "lesson",
+    "completion",
+    "question_bank",
+    "progress_and_persistence",
+    "analytics_events",
+    "qa"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.2"
+    },
+    "spec_intent": {
+      "type": "object"
+    },
+    "identity": {
+      "type": "object",
+      "required": [
+        "id",
+        "slug",
+        "title",
+        "strand",
+        "cluster",
+        "tier",
+        "status",
+        "estimated_minutes"
+      ]
+    },
+    "curriculum": {
+      "type": "object",
+      "required": [
+        "basis",
+        "role",
+        "official_mapping",
+        "learning_objective",
+        "success_criteria",
+        "boundaries"
+      ]
+    },
+    "dependencies": {
+      "type": "object",
+      "required": [
+        "required_skill_refs",
+        "entry_assumptions",
+        "downstream_rule"
+      ]
+    },
+    "engine_capability_requirements": {
+      "type": "object"
+    },
+    "experience_contract": {
+      "type": "object",
+      "required": [
+        "target_session_minutes",
+        "ordered_phases",
+        "navigation",
+        "global_ui_copy",
+        "progress_indicator",
+        "interaction_rules"
+      ]
+    },
+    "voice_and_script": {
+      "type": "object",
+      "required": [
+        "performer_name",
+        "dialogue_profile_ref",
+        "script_ownership",
+        "delivery_style",
+        "success_reaction_policy",
+        "adjacent_speech_policy",
+        "caption_policy"
+      ],
+      "properties": {
+        "performer_name": {
+          "type": "string"
+        },
+        "dialogue_profile_ref": {
+          "type": "string"
+        },
+        "script_ownership": {
+          "type": "string"
+        },
+        "delivery_style": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "success_reaction_policy": {
+          "type": "object"
+        },
+        "adjacent_speech_policy": {
+          "type": "object"
+        },
+        "caption_policy": {
+          "type": "string"
+        },
+        "opening_mode": {
+          "enum": [
+            "topic_lead_then_authored_scene",
+            "authored_scene_only"
+          ]
+        },
+        "narration_playback": {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "enum": [
+                "authored_audio_then_browser_speech",
+                "browser_speech_ryan"
+              ]
+            },
+            "voice_id": {
+              "type": "string"
+            },
+            "require_ryan_voice": {
+              "type": "boolean"
+            },
+            "timing_source": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "caption_presentation": {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "enum": [
+                "panel_full_line",
+                "on_canvas_progressive"
+              ]
+            },
+            "accessible_full_text": {
+              "type": "boolean"
+            },
+            "max_visual_lines": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 3
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "visual_language": {
+      "type": "object",
+      "required": [
+        "scene_rules",
+        "semantic_roles",
+        "style_direction",
+        "reduced_motion"
+      ]
+    },
+    "diagnostic": {
+      "type": "object",
+      "required": [
+        "purpose",
+        "question_refs",
+        "presentation",
+        "scoring",
+        "routing"
+      ]
+    },
+    "concept_model": {
+      "type": "object",
+      "required": [
+        "core_idea",
+        "invariant",
+        "mathematical_rule",
+        "vocabulary",
+        "must_notice",
+        "common_confusions"
+      ]
+    },
+    "lesson": {
+      "type": "object",
+      "required": [
+        "teaching_steps",
+        "transfer_steps",
+        "practice",
+        "exit"
+      ]
+    },
+    "completion": {
+      "type": "object",
+      "required": [
+        "secure",
+        "needs_work"
+      ]
+    },
+    "question_bank": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "stage",
+          "target",
+          "ao",
+          "difficulty",
+          "prompt",
+          "response",
+          "answer",
+          "attempt_policy",
+          "success_reaction",
+          "scripts",
+          "mathematical_support",
+          "branching"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "stage": {
+            "type": "string"
+          },
+          "target": {
+            "type": "string"
+          },
+          "ao": {
+            "enum": [
+              "AO1",
+              "AO2",
+              "AO3"
+            ]
+          },
+          "difficulty": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "prompt": {
+            "type": "string"
+          },
+          "response": {
+            "type": "object",
+            "required": [
+              "type",
+              "keyboard_submit"
+            ],
+            "properties": {
+              "type": {
+                "type": "string"
+              },
+              "keyboard_submit": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": true
+          },
+          "answer": {
+            "type": "object",
+            "required": [
+              "value"
+            ],
+            "properties": {
+              "value": {}
+            },
+            "additionalProperties": true
+          },
+          "attempt_policy": {
+            "type": "object",
+            "required": [
+              "policy",
+              "max_attempts_before_resolution",
+              "feedback_timing",
+              "submit_label",
+              "allow_change_before_submit",
+              "lock_after_final_submit"
+            ],
+            "additionalProperties": true
+          },
+          "scripts": {
+            "type": "object",
+            "required": [
+              "on_correct_math",
+              "on_incorrect_attempt_1",
+              "on_incorrect_attempt_2",
+              "worked_explanation"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "on_correct_math": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "on_incorrect_attempt_1": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "on_incorrect_attempt_2": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "worked_explanation": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "mathematical_support": {
+            "type": "object",
+            "required": [
+              "hint_1",
+              "hint_2",
+              "worked_solution"
+            ],
+            "additionalProperties": true
+          },
+          "visual": {
+            "type": "object"
+          },
+          "visual_feedback": {
+            "type": "object"
+          },
+          "recovery_item_ref": {
+            "type": "string"
+          },
+          "branching": {
+            "type": "object"
+          },
+          "success_reaction": {
+            "type": "object",
+            "required": [
+              "mode",
+              "context_override",
+              "selection_rule"
+            ],
+            "properties": {
+              "mode": {
+                "enum": [
+                  "engine_auto",
+                  "silent"
+                ]
+              },
+              "context_override": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "selection_rule": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "progress_and_persistence": {
+      "type": "object"
+    },
+    "analytics_events": {
+      "type": "object"
+    },
+    "qa": {
+      "type": "object",
+      "required": [
+        "schema_validated",
+        "maths_answers_verified",
+        "curriculum_human_reviewed",
+        "scripts_human_reviewed",
+        "animation_storyboard_human_reviewed",
+        "branching_reference_validated",
+        "engine_render_tested",
+        "reduced_motion_tested",
+        "keyboard_accessibility_tested",
+        "student_calibration_tested",
+        "acceptance_criteria"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

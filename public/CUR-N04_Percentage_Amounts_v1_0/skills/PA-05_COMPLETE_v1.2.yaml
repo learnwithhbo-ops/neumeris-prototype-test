@@ -1,0 +1,450 @@
+schema_version: '1.2'
+spec_intent:
+  source_of_truth: true
+  implementation_status: production_batch_1
+  source_material: { title: PA 05 — Find Multiples of 10% of an Amount, path: authoring-source-redacted.pdf, authoritative_pages: 1-18 }
+  authored_scope: Teach multiples of 10% by finding one 10% group and selecting the required number of equal groups from the same whole.
+  excluded_from_active_route: [Diagnostic questions, Delayed retrieval questions, 5% and arbitrary percentages]
+
+identity:
+  id: PA-05
+  slug: find-multiples-of-ten-percent
+  title: Find Multiples of 10% of an Amount
+  strand: Number
+  cluster: Percentage Amounts
+  tier: GCSE Foundation
+  status: production_batch_1
+  estimated_minutes: { min: 18, max: 24 }
+
+curriculum:
+  learning_objective: Find 20%, 30%, 40%, 60%, 70%, 80% and 90% by finding 10% first and selecting the required number of equal 10% groups.
+  success_criteria: [Find one 10% group from the original whole., Match a multiple of 10% to the correct number of equal groups., Scale the unchanged 10% value by the group count., Preserve units and check that the result stays below the positive whole.]
+  boundaries:
+    includes: [Positive whole-number multiples of 10% from 20% to 90%, Whole-number and simple decimal results, Direct calculations and short contexts]
+    excludes: [5% and other multiples of 5%, Arbitrary percentages, Money-specific conventions, Percentage change and reverse percentages]
+
+dependencies:
+  required_skill_refs: [PA-01, PA-02]
+  entry_assumptions: [The learner can find 10% by dividing by 10, The learner can multiply by a one-digit group count]
+  downstream_rule: PA-06 and PA-07 may combine this equal-group structure with other benchmarks; PA-05 uses only whole multiples of 10%.
+
+engine_capability_requirements:
+  input_types: [single_choice, decimal]
+  visual_primitives: [percentage_strip, caption_layer, progress_indicator]
+  animation_actions: [fade_in, highlight, reveal_equation, contrast, crossfade_phase]
+  audio_capabilities: [browser_speech, caption_sync, pause_for_input, cancel_on_navigation]
+  state_capabilities: [attempt_count, step_resume, exit_score, confirmation_branch]
+
+experience_contract:
+  authored_feedback_only: true
+  ordered_phases: [teaching, guided, faded, independent_transfer, practice, exit, completion]
+  navigation: { default: linear_forward, refresh_resume: Resume at the latest committed step., start_again: Reset only this lesson attempt and preserve historical completion records. }
+  interaction_rules: [Never auto-submit or auto-fill an answer., Keep input available while Ryan speaks., Keep every repeated 10% group equal and tied to the original whole.]
+
+voice_and_script:
+  performer_name: Ryan
+  dialogue_profile_ref: RYAN_DIALOGUE_PROFILE_v1.yaml
+  script_ownership: All mathematical narration and feedback is authored in this specification.
+  caption_policy: Every spoken line is captioned verbatim; empty narration leaves no visible caption container.
+  narration_playback: { mode: browser_speech_ryan, require_ryan_voice: true, browser_voice_name: Microsoft Ryan Online (Natural) - English (United Kingdom), opening_delay_ms: 0 }
+  production_audio_note: Provider audio and word boundaries require separate owner permission.
+
+visual_language:
+  primary_visual_contract: { primitive: percentage_strip, rule: Align ten equal percentage segments with ten equal groups from the same amount and vary only the number selected. }
+  scene_rules: [Every selected 10% group has the same size., Show the 10% value before the group multiplication., Do not reveal a scored result before submission.]
+  reduced_motion: Show the final selected-group state immediately while retaining all labels.
+
+diagnostic: { enabled: false, question_refs: [], reason: Diagnostic is outside the current implementation scope. }
+
+concept_model:
+  core_idea: A multiple of 10% is several unchanged 10% groups selected from the same whole.
+  invariant: The value of one 10% group and the original whole stay fixed while the number of selected groups changes.
+  mathematical_rule: n × 10% of A = (A ÷ 10) × n.
+  must_notice: [Thirty percent uses three equal 10% groups., The group count multiplies the 10% value., Each repeated group comes from the original whole., A percentage below 100% gives less than the positive whole.]
+  common_confusions: [Dividing by the stated percentage number., Adding the group count., Taking 10% of the previous 10% result., Selecting the wrong number of groups.]
+
+lesson:
+  teaching_steps:
+    - id: T01
+      stage: teaching
+      purpose: Establish ten equal 10% groups.
+      estimated_seconds: 40
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: Ten unchanged groups make the whole
+        objects: [A whole of 80 counters divided into ten equal groups of 8.]
+        initial_state: Select three groups while keeping all group boundaries aligned.
+        model: { heading: '30% of 80', percent: 30, wholeAmount: 80, unit: counters, partAmount: 24, partitionCount: 10, selectedGroups: 3, showRoles: true, showResult: true }
+      narration: { script: The whole contains ten equal ten-percent groups. For eighty counters, each group contains eight. Thirty percent selects three of those unchanged groups. }
+      animation_timeline: [{ id: A01, trigger: narration_sync, action: highlight, target: percentage_strip, duration_ms: 850 }]
+      learner_interaction: { question_ref: null }
+      next_step: T02
+
+    - id: T02
+      stage: teaching
+      purpose: Separate group size from group count.
+      estimated_seconds: 45
+      scene:
+        layout: paired_comparison
+        display_title: The group value stays the same
+        objects: [The same whole of 90 shown with two and seven selected 10% groups.]
+        initial_state: Keep each group equal to 9 while changing only the number selected.
+        model:
+          comparisonDefaults: { showRoles: false, showFormula: false, showResult: true }
+          comparisons:
+            - { heading: '20%: two groups', percent: 20, wholeAmount: 90, unit: counters, partAmount: 18, partitionCount: 10, selectedGroups: 2, solutionLabel: '2 groups of 9' }
+            - { heading: '70%: seven groups', percent: 70, wholeAmount: 90, unit: counters, partAmount: 63, partitionCount: 10, selectedGroups: 7, solutionLabel: '7 groups of 9' }
+      narration: { script: Keep the whole at ninety. One ten-percent group is always nine counters. Twenty percent selects two groups, while seventy percent selects seven groups of the same size. }
+      animation_timeline: [{ id: A02, trigger: narration_sync, action: contrast, target: percentage_strip, duration_ms: 900 }]
+      learner_interaction: { question_ref: null }
+      next_step: T03
+
+    - id: T03
+      stage: teaching
+      purpose: Model the two-stage method.
+      estimated_seconds: 45
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: Find one group, then scale it
+        objects: [A worked example finding 60% of 90.]
+        initial_state: Reveal the 10% value before the group count and result.
+        model: { heading: 'Find 60% of 90', percent: 60, wholeAmount: 90, partAmount: 54, partitionCount: 10, selectedGroups: 6, showRoles: true, showResult: true, showMethod: true, methodSteps: ['10% of 90 = 90 ÷ 10 = 9', '60% = 6 equal groups', '9 × 6 = 54'] }
+      narration: { script: First find one ten-percent group. Ninety divided by ten is nine. Sixty percent needs six equal groups, so multiply nine by six to get fifty-four. }
+      animation_timeline: [{ id: A03, trigger: narration_sync, action: reveal_equation, target: percentage_strip, duration_ms: 900 }]
+      learner_interaction: { question_ref: null }
+      next_step: T04
+
+    - id: T04
+      stage: teaching
+      purpose: Emphasise multiplication by the group count.
+      estimated_seconds: 35
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: The percentage tells how many groups
+        objects: [Six selected groups of 9 from the same whole.]
+        initial_state: Highlight six identical selected groups.
+        model: { heading: '60% = 6 × 10%', percent: 60, wholeAmount: 90, partAmount: 54, partitionCount: 10, selectedGroups: 6, showRoles: true, showResult: true, showMethod: true, methodSteps: ['One group = 9', 'Six groups = 9 × 6', 'Answer = 54'] }
+      narration: { script: The six is a group count. It tells us to use six copies of nine. Adding six to nine would change the meaning of the percentage. }
+      animation_timeline: [{ id: A04, trigger: narration_sync, action: highlight, target: percentage_strip, duration_ms: 800 }]
+      learner_interaction: { question_ref: null }
+      next_step: T05
+
+    - id: T05
+      stage: teaching
+      purpose: Check the equal-group structure.
+      estimated_seconds: 70
+      scene: { layout: single_central_teaching_canvas, display_title: What does sixty percent select?, objects: [Ten equal groups with no method shown.], initial_state: Keep the selected-count explanation hidden. }
+      narration: { script: Choose the statement that uses six unchanged ten-percent groups. }
+      animation_timeline: [{ id: A05, trigger: narration_sync, action: highlight, target: percentage_strip, duration_ms: 650 }]
+      learner_interaction: { question_ref: PA-05-C01, auto_focus: true }
+      next_step: T06
+
+    - id: T06
+      stage: teaching
+      purpose: Guide 40% of 130.
+      estimated_seconds: 45
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: Four equal groups from one whole
+        objects: [A guided example finding 40% of 130.]
+        initial_state: Reveal the 10% group value before selecting four groups.
+        model: { heading: 'Find 40% of 130', percent: 40, wholeAmount: 130, partAmount: 52, partitionCount: 10, selectedGroups: 4, showRoles: true, showResult: true, showMethod: true, methodSteps: ['130 ÷ 10 = 13', '40% = 4 groups', '13 × 4 = 52'] }
+      narration: { script: Ten percent of one hundred and thirty is thirteen. Forty percent selects four equal groups of thirteen, giving fifty-two. }
+      animation_timeline: [{ id: A06, trigger: narration_sync, action: highlight, target: percentage_strip, duration_ms: 850 }]
+      learner_interaction: { question_ref: null }
+      next_step: T07
+
+    - id: T07
+      stage: teaching
+      purpose: Check group selection.
+      estimated_seconds: 70
+      scene: { layout: single_central_teaching_canvas, display_title: Map the percentage to its groups, objects: [A ten-part strip for 70%.], initial_state: Keep the selected group count hidden. }
+      narration: { script: Choose the statement that maps seventy percent to the correct number of ten-percent groups. }
+      animation_timeline: [{ id: A07, trigger: narration_sync, action: highlight, target: percentage_strip, duration_ms: 650 }]
+      learner_interaction: { question_ref: PA-05-C02, auto_focus: true }
+      next_step: T08
+
+    - id: T08
+      stage: teaching
+      purpose: Reject a changing-whole method.
+      estimated_seconds: 45
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: Repeat the same group, not a smaller one
+        objects: [Two equal 10% groups of 6 from a whole of 60.]
+        initial_state: Contrast 6 plus 6 with 6 plus 0.6.
+        model: { heading: 'Find 20% of 60', percent: 20, wholeAmount: 60, partAmount: 12, partitionCount: 10, selectedGroups: 2, showRoles: true, showResult: true, showMethod: true, methodSteps: ['10% of 60 = 6', 'Second group is also 6', '6 + 6 = 12'] }
+      narration: { script: Every ten-percent group comes from the original whole of sixty. The second group is another six, not ten percent of the first group. }
+      animation_timeline: [{ id: A08, trigger: narration_sync, action: contrast, target: percentage_strip, duration_ms: 900 }]
+      learner_interaction: { question_ref: null }
+      next_step: T09
+
+    - id: T09
+      stage: teaching
+      purpose: Check a multiple independently.
+      estimated_seconds: 75
+      scene: { layout: single_central_teaching_canvas, display_title: Select seven equal groups yourself, objects: [A ten-part strip for 70% of 120.], initial_state: Keep the 10% value and result hidden. }
+      narration: { script: Find seventy percent of one hundred and twenty. Enter the final amount yourself. }
+      animation_timeline: [{ id: A09, trigger: narration_sync, action: highlight, target: percentage_strip, duration_ms: 650 }]
+      learner_interaction: { question_ref: PA-05-C03, auto_focus: true }
+      next_step: T10
+
+    - id: T10
+      stage: teaching
+      purpose: Hand control to the learner.
+      estimated_seconds: 25
+      scene: { layout: single_central_teaching_canvas, display_title: Find ten percent, then count groups, objects: [An unsolved ten-part strip.], initial_state: Keep only the equal group boundaries as a cue., model: { heading: 'Your turn', percent: 20, wholeAmount: 65, partitionCount: 10, selectedGroups: 2, showRoles: false, showResult: false } }
+      narration: { script: Now find one ten-percent group from the original whole, match the requested percentage to its group count, and scale the unchanged value. }
+      animation_timeline: [{ id: A10, trigger: narration_sync, action: crossfade_phase, target: percentage_strip, duration_ms: 700 }]
+      learner_interaction: { question_ref: null }
+      next_step: G01
+
+  transfer_steps:
+    G01: { stage: guided, question_ref: PA-05-G01, support_level: high, estimated_seconds: 80, pre_question_script: Find one ten-percent group, then select two copies., visual_before_answer: Show two selected groups without the result., correct_next: F01, recovery_ref: PA-05-R01 }
+    F01: { stage: faded, question_ref: PA-05-F01, support_level: reduced, estimated_seconds: 85, pre_question_script: Find ten percent and use four unchanged groups., visual_before_answer: Show four selected groups without the group value., correct_next: I01, recovery_ref: PA-05-R02 }
+    I01: { stage: independent_transfer, question_ref: PA-05-I01, support_level: none, estimated_seconds: 90, pre_question_script: Work independently and keep the decimal result accurate., visual_before_answer: No group value or result is visible., correct_next: P01, recovery_ref: PA-05-R03 }
+
+  practice:
+    intro_script: Five questions now. Find ten percent first and keep every repeated group equal.
+    question_order: [PA-05-P01, PA-05-P02, PA-05-P03, PA-05-P04, PA-05-P05]
+    question_count: 5
+    feedback_policy: First errors receive an authored clue; second errors reveal the equal-group method and a focused repair where configured.
+
+  exit:
+    intro_script: Final check. Two questions, one submission each, with no hints while you answer.
+    primary_question_refs: [PA-05-E01, PA-05-E02]
+    confirmation_question_refs: [PA-05-CFM01, PA-05-CFM02]
+    submission_policy: One submission per primary exit item; reveal the outcome only after both are complete.
+    mastery_logic: { 2_correct_of_2: SECURE, 1_correct_of_2: Ask one unused confirmation item; correct is SECURE and incorrect is NEEDS_WORK., 0_correct_of_2: NEEDS_WORK }
+    confirmation_selection: Use the first unseen confirmation item.
+
+completion:
+  secure: { title: Skill complete, ryan_script: 'You kept every ten-percent group equal and selected the correct number from the original whole. Multiples of ten percent are ready to use.', state_write: SECURE, buttons: [Finish for today, Continue learning] }
+  needs_work: { title: One more pass will help, ryan_script: 'The ten-percent group is visible. We will revisit how the percentage sets the group count before moving on.', state_write: NEEDS_WORK, buttons: [Try this skill again, Finish for today] }
+
+question_bank:
+  - id: PA-05-C01
+    stage: teaching_checkpoint
+    target: Explain the equal-group method.
+    prompt: Which statement correctly describes how to find 60% of a positive amount?
+    response: { type: single_choice, options: [Divide the whole into 6 equal groups and select one., Find 10% of the whole and select six equal 10% groups., Divide the whole by 60., Find 10% and then add 6.] }
+    answer: { value: Find 10% of the whole and select six equal 10% groups. }
+    attempt_policy: &supported { policy: two_attempt_then_targeted_repair, max_attempts_before_resolution: 2, feedback_timing: immediate, submit_label: Check answer, allow_change_before_submit: true, lock_after_final_submit: true }
+    scripts: { on_correct_reaction: You used six unchanged ten-percent groups., on_correct_math: '60% = 6 × 10% of the same whole.', on_incorrect_attempt_1: First identify the value of one ten-percent group., on_incorrect_attempt_2: Sixty percent needs six equal copies of that group., worked_explanation: 'Find A ÷ 10, then multiply that result by 6.' }
+    mathematical_support: { hint_1: Remove the zero from 60% to count the groups., hint_2: The group value does not change., worked_solution: '60% of A = (A ÷ 10) × 6.' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 60, wholeAmount: 90, partAmount: 54, partitionCount: 10, selectedGroups: 6, methodSteps: ['90 ÷ 10 = 9', '9 × 6 = 54'], solutionLabel: '60% uses six equal 10% groups' } }
+    recovery_item_ref: PA-05-R02
+
+  - id: PA-05-C02
+    stage: teaching_checkpoint
+    target: Match a percentage to its group count.
+    prompt: Which statement is correct?
+    response: { type: single_choice, options: [70% contains seven equal 10% groups., 70% contains seventy equal 10% groups., 70% contains one equal 10% group., 70% contains ten equal 70% groups.] }
+    answer: { value: 70% contains seven equal 10% groups. }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You mapped seventy percent to seven groups., on_correct_math: Seven copies of 10% make 70%., on_incorrect_attempt_1: Count how many tens are in seventy., on_incorrect_attempt_2: Seventy percent selects seven equal ten-percent groups., worked_explanation: '70% = 7 × 10%.' }
+    mathematical_support: { hint_1: Remove the zero from 70%., hint_2: Ten percent is one group., worked_solution: '7 groups' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 70, wholeAmount: 100, partAmount: 70, partitionCount: 10, selectedGroups: 7, solutionLabel: '70% uses seven equal 10% groups' } }
+    recovery_item_ref: PA-05-R03
+
+  - id: PA-05-C03
+    stage: teaching_checkpoint
+    target: Calculate seven equal 10% groups.
+    prompt: Find 70% of 120.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '84' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You scaled the unchanged ten-percent value by seven., on_correct_math: '120 ÷ 10 = 12, then 12 × 7 = 84.', on_incorrect_attempt_1: Find ten percent of 120 before using seven groups., on_incorrect_attempt_2: One group is 12 and seven groups total 84., worked_explanation: '70% of 120 = 84.' }
+    mathematical_support: { hint_1: Start with 120 ÷ 10., hint_2: Multiply 12 by 7., worked_solution: '84' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 70, wholeAmount: 120, partAmount: 84, partitionCount: 10, selectedGroups: 7, methodSteps: ['120 ÷ 10 = 12', '12 × 7 = 84'], solutionLabel: '70% of 120 = 84' } }
+    recovery_item_ref: PA-05-R02
+
+  - id: PA-05-G01
+    stage: guided
+    target: Find two equal 10% groups.
+    prompt: Find 20% of 65.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '13' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You used two equal groups of six point five., on_correct_math: '65 ÷ 10 = 6.5, then 6.5 × 2 = 13.', on_incorrect_attempt_1: Find one 10% group first., on_incorrect_attempt_2: One group is 6.5; two groups total 13., worked_explanation: '20% of 65 = 13.' }
+    mathematical_support: { hint_1: Start with 65 ÷ 10., hint_2: Double the ten-percent value., worked_solution: '13' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 20, wholeAmount: 65, partAmount: 13, partitionCount: 10, selectedGroups: 2, solutionLabel: '20% of 65 = 13' } }
+    recovery_item_ref: PA-05-R01
+
+  - id: PA-05-F01
+    stage: faded
+    target: Find four equal 10% groups.
+    prompt: Find 40% of 85.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '34' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You used four equal groups of eight point five., on_correct_math: '85 ÷ 10 = 8.5, then 8.5 × 4 = 34.', on_incorrect_attempt_1: Find ten percent before selecting four groups., on_incorrect_attempt_2: One group is 8.5; four groups total 34., worked_explanation: '40% of 85 = 34.' }
+    mathematical_support: { hint_1: Start with 85 ÷ 10., hint_2: Multiply 8.5 by 4., worked_solution: '34' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 40, wholeAmount: 85, partAmount: 34, partitionCount: 10, selectedGroups: 4, solutionLabel: '40% of 85 = 34' } }
+    recovery_item_ref: PA-05-R02
+
+  - id: PA-05-I01
+    stage: independent_transfer
+    target: Find nine equal groups with a decimal result.
+    prompt: Find 90% of 46.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '41.4' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You kept all nine groups equal to four point six., on_correct_math: '46 ÷ 10 = 4.6, then 4.6 × 9 = 41.4.', on_incorrect_attempt_1: Find ten percent of 46 and use nine equal groups., on_incorrect_attempt_2: One group is 4.6 and nine total 41.4., worked_explanation: '90% of 46 = 41.4.' }
+    mathematical_support: { hint_1: Start with 46 ÷ 10., hint_2: Multiply 4.6 by 9., worked_solution: '41.4' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 90, wholeAmount: 46, partAmount: 41.4, partitionCount: 10, selectedGroups: 9, solutionLabel: '90% of 46 = 41.4' } }
+    recovery_item_ref: PA-05-R03
+
+  - id: PA-05-P01
+    stage: practice
+    target: Find three equal groups.
+    prompt: Find 30% of 140.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '42' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You selected three equal groups of fourteen., on_correct_math: '140 ÷ 10 = 14, then 14 × 3 = 42.', on_incorrect_attempt_1: Find one 10% group before using three groups., on_incorrect_attempt_2: One group is 14 and three total 42., worked_explanation: '30% of 140 = 42.' }
+    mathematical_support: { hint_1: Start with 140 ÷ 10., hint_2: Multiply 14 by 3., worked_solution: '42' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 30, wholeAmount: 140, partAmount: 42, partitionCount: 10, selectedGroups: 3, solutionLabel: '30% of 140 = 42' } }
+
+  - id: PA-05-P02
+    stage: practice
+    target: Find six equal groups.
+    prompt: Find 60% of 75.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '45' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You used six unchanged groups of seven point five., on_correct_math: '75 ÷ 10 = 7.5, then 7.5 × 6 = 45.', on_incorrect_attempt_1: Find one ten-percent group first., on_incorrect_attempt_2: Six groups of 7.5 total 45., worked_explanation: '60% of 75 = 45.' }
+    mathematical_support: { hint_1: Start with 75 ÷ 10., hint_2: Multiply 7.5 by 6., worked_solution: '45' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 60, wholeAmount: 75, partAmount: 45, partitionCount: 10, selectedGroups: 6, solutionLabel: '60% of 75 = 45' } }
+
+  - id: PA-05-P03
+    stage: practice
+    target: Retain a measurement unit.
+    prompt: A cable is 150 cm long. Find 80% of its length.
+    response: { type: decimal, input_label: Answer in centimetres }
+    answer: { value: '120' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You kept the centimetre unit across all eight groups., on_correct_math: '150 ÷ 10 = 15, then 15 × 8 = 120 cm.', on_incorrect_attempt_1: Find ten percent of 150 cm and use eight groups., on_incorrect_attempt_2: Eight groups of 15 cm total 120 cm., worked_explanation: '80% of 150 cm = 120 cm.' }
+    mathematical_support: { hint_1: One group is 15 cm., hint_2: Multiply by 8 and retain cm., worked_solution: '120 cm' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 80, wholeAmount: 150, unit: cm, partAmount: 120, partitionCount: 10, selectedGroups: 8, solutionLabel: '80% of 150 cm = 120 cm' } }
+
+  - id: PA-05-P04
+    stage: practice
+    target: Recognise equal group invariance.
+    prompt: Which statement is correct?
+    response: { type: single_choice, options: [Repeated 10% groups are all calculated from the original whole., Each new 10% group is 10% of the previous group., 60% is found by dividing the whole by 60., 80% contains eighty groups of 10%.] }
+    answer: { value: Repeated 10% groups are all calculated from the original whole. }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You kept the original whole fixed., on_correct_math: Every repeated 10% group has the same value., on_incorrect_attempt_1: Ask whether the whole changes between selected groups., on_incorrect_attempt_2: Each group is one tenth of the original whole., worked_explanation: Repeated groups must be equal and come from the same whole. }
+    mathematical_support: { hint_1: Equal groups cannot shrink each time., hint_2: Reuse the first ten-percent value., worked_solution: All groups come from the original whole. }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 60, wholeAmount: 100, partAmount: 60, partitionCount: 10, selectedGroups: 6, solutionLabel: 'Six equal groups from the same whole' } }
+
+  - id: PA-05-P05
+    stage: practice
+    target: Combine two multiples from the same whole.
+    prompt: A school has 480 reward points. It gives 30% to one class and 20% to another. How many points are given altogether?
+    response: { type: decimal, input_label: Number of points }
+    answer: { value: '240' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You combined five equal groups from the same whole., on_correct_math: '30% plus 20% is 50%, and 50% of 480 is 240 points.', on_incorrect_attempt_1: Find the same ten-percent group and use three plus two copies., on_incorrect_attempt_2: Ten percent is 48; five groups total 240., worked_explanation: '480 ÷ 10 = 48; 48 × 5 = 240.' }
+    mathematical_support: { hint_1: Three groups plus two groups make five groups., hint_2: One group is 48 points., worked_solution: '240 points' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 50, wholeAmount: 480, unit: points, partAmount: 240, partitionCount: 10, selectedGroups: 5, methodSteps: ['10% of 480 = 48', '30% + 20% = 5 groups', '48 × 5 = 240'], solutionLabel: '240 points altogether' } }
+
+  - id: PA-05-E01
+    stage: exit
+    target: Calculate two groups independently.
+    prompt: Find 20% of 170.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '34' }
+    attempt_policy: &exit { policy: single_submit_locked, max_attempts_before_resolution: 1, feedback_timing: after_exit_set, submit_label: Check answer, allow_change_before_submit: true, lock_after_final_submit: true }
+    scripts: { on_correct_math: '170 ÷ 10 × 2 = 34.', on_incorrect_attempt_1: Record the answer for the final result., on_incorrect_attempt_2: Not applicable., worked_explanation: '20% of 170 = 34.' }
+    mathematical_support: { hint_1: null, hint_2: null, worked_solution: '34' }
+    success_reaction: { mode: silent }
+    visual: { primitive: percentage_strip, model: { percent: 20, wholeAmount: 170, partAmount: 34, partitionCount: 10, selectedGroups: 2, solutionLabel: '20% of 170 = 34' } }
+
+  - id: PA-05-E02
+    stage: exit
+    target: Calculate seven groups with a decimal result.
+    prompt: Find 70% of 84.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '58.8' }
+    attempt_policy: *exit
+    scripts: { on_correct_math: '84 ÷ 10 × 7 = 58.8.', on_incorrect_attempt_1: Record the answer for the final result., on_incorrect_attempt_2: Not applicable., worked_explanation: '70% of 84 = 58.8.' }
+    mathematical_support: { hint_1: null, hint_2: null, worked_solution: '58.8' }
+    success_reaction: { mode: silent }
+    visual: { primitive: percentage_strip, model: { percent: 70, wholeAmount: 84, partAmount: 58.8, partitionCount: 10, selectedGroups: 7, solutionLabel: '70% of 84 = 58.8' } }
+
+  - id: PA-05-CFM01
+    stage: confirmation
+    target: Confirm nine groups in context.
+    prompt: A tank contains 160 litres. Find 90% of the water.
+    response: { type: decimal, input_label: Answer in litres }
+    answer: { value: '144' }
+    attempt_policy: *exit
+    scripts: { on_correct_math: '160 ÷ 10 × 9 = 144 litres.', on_incorrect_attempt_1: Record the answer for the final result., on_incorrect_attempt_2: Not applicable., worked_explanation: '90% of 160 litres = 144 litres.' }
+    mathematical_support: { hint_1: null, hint_2: null, worked_solution: '144 litres' }
+    success_reaction: { mode: silent }
+    visual: { primitive: percentage_strip, model: { percent: 90, wholeAmount: 160, unit: litres, partAmount: 144, partitionCount: 10, selectedGroups: 9, solutionLabel: '90% of 160 litres = 144 litres' } }
+
+  - id: PA-05-CFM02
+    stage: confirmation
+    target: Confirm four groups in context.
+    prompt: A roll of fabric is 85 metres long. A designer uses 40%. How many metres are used?
+    response: { type: decimal, input_label: Answer in metres }
+    answer: { value: '34' }
+    attempt_policy: *exit
+    scripts: { on_correct_math: '85 ÷ 10 × 4 = 34 metres.', on_incorrect_attempt_1: Record the answer for the final result., on_incorrect_attempt_2: Not applicable., worked_explanation: '40% of 85 metres = 34 metres.' }
+    mathematical_support: { hint_1: null, hint_2: null, worked_solution: '34 metres' }
+    success_reaction: { mode: silent }
+    visual: { primitive: percentage_strip, model: { percent: 40, wholeAmount: 85, unit: metres, partAmount: 34, partitionCount: 10, selectedGroups: 4, solutionLabel: '40% of 85 metres = 34 metres' } }
+
+  - id: PA-05-R01
+    stage: repair
+    target: Repair the 10% prerequisite.
+    prompt: Find 10% of 470.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '47' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You recovered the value of one ten-percent group., on_correct_math: '470 ÷ 10 = 47.', on_incorrect_attempt_1: Divide the original whole by ten., on_incorrect_attempt_2: One equal group is 47., worked_explanation: '10% of 470 = 47.' }
+    mathematical_support: { hint_1: Use the PA-02 method., hint_2: Make every digit one tenth as valuable., worked_solution: '47' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 10, wholeAmount: 470, partAmount: 47, partitionCount: 10, selectedGroups: 1, solutionLabel: '10% of 470 = 47' } }
+
+  - id: PA-05-R02
+    stage: repair
+    target: Repair adding the group count.
+    prompt: Ten percent of 150 is 15. Which calculation finds 40% of 150?
+    response: { type: single_choice, options: ['15 + 4', '15 × 4', '15 ÷ 4', '150 − 4'] }
+    answer: { value: '15 × 4' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You treated four as a number of groups., on_correct_math: Four equal groups of 15 are found with multiplication., on_incorrect_attempt_1: The 4 counts copies of the ten-percent value., on_incorrect_attempt_2: Multiply 15 by 4., worked_explanation: '15 × 4 = 60, so 40% of 150 is 60.' }
+    mathematical_support: { hint_1: How do you combine four equal copies?, hint_2: Use repeated addition as multiplication., worked_solution: '15 × 4 = 60.' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 40, wholeAmount: 150, partAmount: 60, partitionCount: 10, selectedGroups: 4, methodSteps: ['One group = 15', 'Four groups = 15 × 4', 'Answer = 60'], solutionLabel: '40% of 150 = 60' } }
+
+  - id: PA-05-R03
+    stage: repair
+    target: Repair changing the group size.
+    prompt: Ten percent of 80 is 8. Which pair of equal groups makes 20% of 80?
+    response: { type: single_choice, options: ['8 and 0.8', '8 and 8', '80 and 8', '20 and 20'] }
+    answer: { value: '8 and 8' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You kept both groups equal to eight., on_correct_math: Two equal ten-percent groups are 8 and 8., on_incorrect_attempt_1: Both groups come from the original whole of eighty., on_incorrect_attempt_2: Repeat eight without finding ten percent of eight., worked_explanation: '8 + 8 = 16, so 20% of 80 is 16.' }
+    mathematical_support: { hint_1: Equal groups must have equal values., hint_2: Reuse the first group value., worked_solution: '8 and 8' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 20, wholeAmount: 80, partAmount: 16, partitionCount: 10, selectedGroups: 2, solutionLabel: 'Two equal groups of 8 make 16' } }
+
+qa_acceptance:
+  source_alignment: [The lesson teaches multiples of 10% through equal repeated groups from the same whole., It does not introduce 5% or arbitrary-percentage methods., Diagnostic and delayed retrieval banks remain outside the active route.]
+  learner_facing: [Supported items have distinct authored feedback., Exit items are one-shot and hint-free., Group values and results remain hidden until the correct feedback state.]

@@ -1,0 +1,460 @@
+schema_version: '1.2'
+spec_intent:
+  source_of_truth: true
+  implementation_status: production_batch_2
+  source_material: { title: PA 07 - Find a Percentage by Combining Benchmark Parts, path: 'authoring-source-redacted.pdf', authoritative_pages: 1-20 }
+  authored_scope: Teach non-benchmark whole-number percentages by choosing useful benchmark parts, calculating every part from the same original whole, and combining the values accurately.
+  excluded_from_active_route: [Entry check, Diagnostic questions, Delayed retrieval questions, Required fractional-equivalent method, Required general 1% method, Required decimal-multiplier method]
+
+identity:
+  id: PA-07
+  slug: combine-percentage-benchmarks
+  title: Find a Percentage by Combining Benchmark Parts
+  strand: Number
+  cluster: Percentage Amounts
+  tier: GCSE Foundation
+  status: production_batch_2
+  estimated_minutes: { min: 20, max: 26 }
+
+curriculum:
+  learning_objective: Find a non-benchmark whole-number percentage by decomposing it into useful known parts, calculating every part from the same original whole, and combining the values accurately.
+  success_criteria: [Choose benchmark percentages that combine to the target., Calculate every benchmark part from the original whole., Add or subtract the calculated amounts rather than the percentage numerals., Recognise that different valid decompositions can give the same result., Preserve units and check against nearby benchmarks.]
+  boundaries:
+    includes: [Non-benchmark whole-number percentages from 1% to 99%, Additive decompositions and efficient subtraction from a nearby benchmark, Whole-number and simple decimal results, Direct calculations and short GCSE-style contexts]
+    excludes: [Required fractional-equivalent method, Required universal 1% method, Required decimal-multiplier method, Percentages below 1% or above 100%, Money conventions, Percentage change and reverse percentages]
+
+dependencies:
+  required_skill_refs: [PA-01, PA-02, PA-03, PA-04, PA-05, PA-06]
+  entry_assumptions: [The learner can find 50%, 25%, 10%, 5% and small multiples of 1%, The learner can add and subtract whole numbers and simple decimals]
+  downstream_rule: PA-11 may compare this flexible benchmark route with fractional, unitary, and multiplier methods; PA-07 accepts multiple valid decompositions.
+
+engine_capability_requirements:
+  input_types: [single_choice, decimal]
+  visual_primitives: [percentage_strip, caption_layer, progress_indicator]
+  animation_actions: [fade_in, highlight, reveal_equation, contrast, crossfade_phase]
+  audio_capabilities: [browser_speech, caption_sync, pause_for_input, cancel_on_navigation]
+  state_capabilities: [attempt_count, step_resume, exit_score, confirmation_branch]
+
+experience_contract:
+  authored_feedback_only: true
+  ordered_phases: [teaching, guided, faded, independent_transfer, practice, exit, completion]
+  navigation: { default: linear_forward, refresh_resume: Resume at the latest committed step., start_again: Reset only this lesson attempt and preserve historical completion records. }
+  interaction_rules: [Never auto-submit or auto-fill an answer., Keep input available while Ryan speaks., Calculate every selected part from the same original whole., Accept any mathematically valid decomposition or alternative method unless a prompt explicitly checks one stated route.]
+
+voice_and_script:
+  performer_name: Ryan
+  dialogue_profile_ref: RYAN_DIALOGUE_PROFILE_v1.yaml
+  script_ownership: All mathematical narration and feedback is authored in this specification.
+  caption_policy: Every spoken line is captioned verbatim; empty narration leaves no visible caption container.
+  narration_playback: { mode: browser_speech_ryan, require_ryan_voice: true, browser_voice_name: 'Microsoft Ryan Online (Natural) - English (United Kingdom)', opening_delay_ms: 0 }
+  production_audio_note: Provider audio and word boundaries require separate owner permission.
+
+visual_language:
+  primary_visual_contract: { primitive: percentage_strip, rule: Use a hundred-cell grid or aligned strips to show every benchmark region cut from one unchanged whole and the same target boundary for different valid routes. }
+  scene_rules: [Benchmark regions must align to the same whole., A selected grid cell always represents 1% of the original whole., Different valid routes must finish at the same percentage boundary., Keep calculated results hidden on scored prompts until submission.]
+  reduced_motion: Show the final selected regions and route endpoints immediately while retaining all benchmark labels.
+
+diagnostic: { enabled: false, question_refs: [], reason: Diagnostic is outside the current implementation scope. }
+
+concept_model:
+  core_idea: A non-benchmark percentage can be assembled from familiar benchmark parts, provided every part is calculated from the same original whole.
+  invariant: The original whole remains fixed while the chosen decomposition may change.
+  mathematical_rule: 'If p = a + b + ..., then p% of W = a% of W + b% of W + ...; subtraction routes are also valid when all parts use W.'
+  must_notice: [The benchmark percentages must combine to the target., Each benchmark value is calculated separately from the original whole., Add the calculated amounts rather than the percentage numerals., More than one valid route can reach the same result.]
+  common_confusions: [Choosing parts that do not total the target., Finding a new part from a previous result., Adding percentage numerals to amounts., Multiplying benchmark values., Rejecting a valid alternative decomposition., Dropping the unit.]
+
+lesson:
+  teaching_steps:
+    - id: T01
+      stage: teaching
+      purpose: Assemble 32% from benchmark regions of one whole.
+      estimated_seconds: 50
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: Build the target from familiar regions
+        objects: [A hundred-cell grid for a whole of 200 with 25%, 5% and 2% regions aligned.]
+        initial_state: Select thirty-two cells and retain the complete grid as the original whole.
+        model: { heading: '32% of 200', layout: hundred_grid, percent: 32, wholeAmount: 200, partAmount: 64, selectedGroups: 32, showRoles: true, showResult: true, showMethod: true, methodSteps: ['32% = 25% + 5% + 2%', 'Each 1% cell of 200 is worth 2', '32 selected cells contain 64'] }
+      narration: { script: The hundred cells are one unchanged whole. We can select a quarter region, a five-percent region and two single cells. Together they make thirty-two percent. }
+      animation_timeline: [{ id: A01, trigger: narration_sync, action: highlight, target: percentage_strip, duration_ms: 900 }]
+      learner_interaction: { question_ref: null }
+      next_step: T02
+
+    - id: T02
+      stage: teaching
+      purpose: Establish that every part is cut from the original whole.
+      estimated_seconds: 45
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: Return to the same whole for every part
+        objects: [The 25%, 5% and 2% values for a whole of 200.]
+        initial_state: Keep all benchmark regions aligned to the hundred-cell grid.
+        model: { heading: 'One whole, three benchmark values', layout: hundred_grid, percent: 32, wholeAmount: 200, partAmount: 64, selectedGroups: 32, showRoles: true, showResult: true, showMethod: true, methodSteps: ['25% of 200 = 50', '5% of 200 = 10', '2% of 200 = 4', '50 + 10 + 4 = 64'] }
+      narration: { script: Each selected part is calculated from two hundred. The five-percent part is not taken from the quarter result, and the two-percent part is not taken from the five-percent result. }
+      animation_timeline: [{ id: A02, trigger: narration_sync, action: contrast, target: percentage_strip, duration_ms: 850 }]
+      learner_interaction: { question_ref: null }
+      next_step: T03
+
+    - id: T03
+      stage: teaching
+      purpose: Check the same-whole decomposition principle.
+      estimated_seconds: 70
+      scene: { layout: single_central_teaching_canvas, display_title: Which benchmark plan is valid?, objects: [A 37% target on a hundred-cell grid.], initial_state: Keep the selected values and result hidden. }
+      narration: { script: Choose the plan that makes thirty-seven percent and calculates each part from the same original amount. }
+      animation_timeline: [{ id: A03, trigger: narration_sync, action: highlight, target: percentage_strip, duration_ms: 650 }]
+      learner_interaction: { question_ref: PA-07-C01, auto_focus: true }
+      next_step: T04
+
+    - id: T04
+      stage: teaching
+      purpose: Model 37% of 300 using a valid benchmark route.
+      estimated_seconds: 55
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: Choose, calculate, combine
+        objects: [A locked worked example for 37% of 300.]
+        initial_state: Reveal each benchmark value from 300 before the final total.
+        model: { heading: 'Worked example: 37% of 300', layout: hundred_grid, percent: 37, wholeAmount: 300, partAmount: 111, selectedGroups: 37, showRoles: true, showResult: true, showMethod: true, methodSteps: ['37% = 25% + 10% + 2%', '25% = 75, 10% = 30, 2% = 6', '75 + 30 + 6 = 111'] }
+      narration: { script: One useful route is a quarter, ten percent and two percent. Calculate those three values separately from three hundred, then combine the amounts. }
+      animation_timeline: [{ id: A04, trigger: narration_sync, action: reveal_equation, target: percentage_strip, duration_ms: 900 }]
+      learner_interaction: { question_ref: null }
+      next_step: T05
+
+    - id: T05
+      stage: teaching
+      purpose: Check the benchmark calculation for the worked example.
+      estimated_seconds: 70
+      scene: { layout: single_central_teaching_canvas, display_title: Select a calculation that preserves the whole, objects: [A 37% target for a whole of 300.], initial_state: Keep all benchmark values and the result hidden. }
+      narration: { script: Choose the calculation where the quarter, ten-percent and two-percent parts are each found directly from three hundred. }
+      animation_timeline: [{ id: A05, trigger: narration_sync, action: contrast, target: percentage_strip, duration_ms: 650 }]
+      learner_interaction: { question_ref: PA-07-C02, auto_focus: true }
+      next_step: T06
+
+    - id: T06
+      stage: teaching
+      purpose: Guide 68% of 150 through four benchmark parts.
+      estimated_seconds: 55
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: Combine a half, a tenth, a half-tenth and three hundredths
+        objects: [A guided model for 68% of 150.]
+        initial_state: Reveal the decomposition before the four calculated values and final sum.
+        model: { heading: 'Guided example: 68% of 150', layout: hundred_grid, percent: 68, wholeAmount: 150, partAmount: 102, selectedGroups: 68, showRoles: true, showResult: true, showMethod: true, methodSteps: ['68% = 50% + 10% + 5% + 3%', 'Values from 150: 75, 15, 7.5 and 4.5', '75 + 15 + 7.5 + 4.5 = 102'] }
+      narration: { script: Sixty-eight percent can be built from fifty, ten, five and three percent. Every part is found from one hundred and fifty before their values are added. }
+      animation_timeline: [{ id: A06, trigger: narration_sync, action: highlight, target: percentage_strip, duration_ms: 900 }]
+      learner_interaction: { question_ref: null }
+      next_step: T07
+
+    - id: T07
+      stage: teaching
+      purpose: Check that benchmark parts never use a changing whole.
+      estimated_seconds: 70
+      scene: { layout: single_central_teaching_canvas, display_title: Keep the base fixed, objects: [A 68% grid for a whole of 150.], initial_state: Keep the result hidden. }
+      narration: { script: Select the statement that keeps the half, tenth, five-percent and three-percent parts tied to the same whole. }
+      animation_timeline: [{ id: A07, trigger: narration_sync, action: highlight, target: percentage_strip, duration_ms: 650 }]
+      learner_interaction: { question_ref: PA-07-C03, auto_focus: true }
+      next_step: T08
+
+    - id: T08
+      stage: teaching
+      purpose: Validate multiple routes to the same percentage.
+      estimated_seconds: 50
+      scene:
+        layout: paired_comparison
+        display_title: Two routes can reach the same target
+        objects: [Two aligned strips ending at 68% of the same whole.]
+        initial_state: Align both route endpoints at sixty-eight percent.
+        model:
+          comparisonDefaults: { showRoles: false, showFormula: false, showResult: true, partitionCount: 100 }
+          comparisons:
+            - { heading: 'Build forwards', percent: 68, wholeAmount: 150, partAmount: 102, selectedGroups: 68, showMethod: true, methodSteps: ['50% + 10% + 5% + 3%', '75 + 15 + 7.5 + 4.5'], solutionLabel: '68% of 150 = 102' }
+            - { heading: 'Step back from 75%', percent: 68, wholeAmount: 150, partAmount: 102, selectedGroups: 68, showMethod: true, methodSteps: ['75% − 7%', '112.5 − 10.5'], solutionLabel: '68% of 150 = 102' }
+      narration: { script: A forward build and a subtraction from seventy-five percent both reach the same boundary. Choose whichever valid benchmark route is efficient for the whole you are given. }
+      animation_timeline: [{ id: A08, trigger: narration_sync, action: contrast, target: percentage_strip, duration_ms: 900 }]
+      learner_interaction: { question_ref: null }
+      next_step: T09
+
+    - id: T09
+      stage: teaching
+      purpose: Check reasonableness against nearby benchmarks.
+      estimated_seconds: 40
+      scene:
+        layout: paired_comparison
+        display_title: Locate the answer between familiar benchmarks
+        objects: [25%, 37% and 50% of the same whole of 200.]
+        initial_state: Keep the whole unchanged across all three panels.
+        model:
+          comparisonDefaults: { showRoles: false, showFormula: false, showResult: true, partitionCount: 100 }
+          comparisons:
+            - { heading: '25% of 200', percent: 25, wholeAmount: 200, partAmount: 50, selectedGroups: 25, solutionLabel: 'Lower benchmark: 50' }
+            - { heading: '37% of 200', percent: 37, wholeAmount: 200, partAmount: 74, selectedGroups: 37, solutionLabel: 'Target: 74' }
+            - { heading: '50% of 200', percent: 50, wholeAmount: 200, partAmount: 100, selectedGroups: 50, solutionLabel: 'Upper benchmark: 100' }
+      narration: { script: Thirty-seven percent of a positive whole must lie between a quarter and a half of that whole. Use the nearby amounts to catch an unreasonable total. }
+      animation_timeline: [{ id: A09, trigger: narration_sync, action: contrast, target: percentage_strip, duration_ms: 850 }]
+      learner_interaction: { question_ref: null }
+      next_step: T10
+
+    - id: T10
+      stage: teaching
+      purpose: Consolidate the flexible benchmark plan before transfer.
+      estimated_seconds: 35
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: Your benchmark plan
+        objects: [A 17% target on a hundred-cell grid.]
+        initial_state: Show seventeen selected cells without their amount value.
+        model: { heading: '17% can be 10% + 5% + 2%', layout: hundred_grid, percent: 17, wholeAmount: 300, partAmount: 51, selectedGroups: 17, showRoles: true, showResult: false, methodSteps: ['Choose parts that make 17%', 'Find every part from 300', 'Combine their values'] }
+      narration: { script: Choose parts that combine to the target, find every part from the original whole, and combine the amounts. Another valid route is welcome if it preserves that same whole. }
+      animation_timeline: [{ id: A10, trigger: narration_sync, action: fade_in, target: percentage_strip, duration_ms: 700 }]
+      learner_interaction: { question_ref: null }
+      next_step: G01
+
+  transfer_steps:
+    G01: { stage: guided, question_ref: PA-07-G01, support_level: high, estimated_seconds: 85, pre_question_script: Build seventeen percent from ten, five and two percent., visual_before_answer: Show seventeen selected cells without benchmark values., correct_next: F01, recovery_ref: PA-07-R01 }
+    F01: { stage: faded, question_ref: PA-07-F01, support_level: reduced, estimated_seconds: 90, pre_question_script: Choose useful benchmark parts and keep the whole fixed., visual_before_answer: Show thirty-two selected cells without a route or result., correct_next: I01, recovery_ref: PA-07-R02 }
+    I01: { stage: independent_transfer, question_ref: PA-07-I01, support_level: none, estimated_seconds: 95, pre_question_script: Work independently; any valid decomposition is accepted., visual_before_answer: Show only the target percentage and original whole., correct_next: P01, recovery_ref: PA-07-R03 }
+
+  practice:
+    intro_script: Five questions now. Choose efficient benchmark parts, calculate each from the original whole, and preserve any unit.
+    question_order: [PA-07-P01, PA-07-P02, PA-07-P03, PA-07-P04, PA-07-P05]
+    question_count: 5
+    feedback_policy: First errors receive an authored clue; second errors reveal one valid same-whole route and a focused repair where configured.
+
+  exit:
+    intro_script: Final check. Two questions, one submission each, with no hints while you answer.
+    primary_question_refs: [PA-07-E01, PA-07-E02]
+    confirmation_question_refs: [PA-07-CFM01, PA-07-CFM02]
+    submission_policy: One submission per primary exit item; reveal the outcome only after both are complete.
+    mastery_logic: { 2_correct_of_2: SECURE, 1_correct_of_2: Ask one unused confirmation item; correct is SECURE and incorrect is NEEDS_WORK., 0_correct_of_2: NEEDS_WORK }
+    confirmation_selection: Use the first unseen confirmation item.
+
+completion:
+  secure: { title: Skill complete, ryan_script: 'You chose valid benchmark parts, kept every calculation tied to one whole, and combined the values accurately. Flexible percentage decomposition is ready to use.', state_write: SECURE, buttons: [Finish for today, Continue learning] }
+  needs_work: { title: One more pass will help, ryan_script: 'The hundred-cell model is ready. We will revisit how the benchmark parts combine and why each one returns to the original whole.', state_write: NEEDS_WORK, buttons: [Try this skill again, Finish for today] }
+
+question_bank:
+  - id: PA-07-C01
+    stage: teaching_checkpoint
+    target: Recognise a valid same-whole decomposition.
+    prompt: Which statement correctly describes how to find 37% of an amount using benchmark parts?
+    response: { type: single_choice, options: ['Find 25%, 10% and 2% of the same whole, then add the three calculated values.', 'Find 25% of the whole, then find 10% of that result, then find 2% of the new result.', 'Add 25, 10 and 2 to the whole.', 'Divide the whole by 37.'] }
+    answer: { value: 'Find 25%, 10% and 2% of the same whole, then add the three calculated values.' }
+    attempt_policy: &supported { policy: two_attempt_then_targeted_repair, max_attempts_before_resolution: 2, feedback_timing: immediate, submit_label: Check answer, allow_change_before_submit: true, lock_after_final_submit: true }
+    scripts: { on_correct_reaction: You kept all three benchmark parts attached to one whole., on_correct_math: '37% = 25% + 10% + 2%, with each value found from the original amount.', on_incorrect_attempt_1: Check that the percentages total thirty-seven and that every part starts from the original whole., on_incorrect_attempt_2: Each benchmark part must return to the same original whole., worked_explanation: 'Find the 25%, 10% and 2% values separately, then add them.' }
+    mathematical_support: { hint_1: A quarter plus ten percent plus two percent makes thirty-seven percent only when all three use the same whole., hint_2: Do not take one percentage from the previous result., worked_solution: '25% of W + 10% of W + 2% of W' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { layout: hundred_grid, percent: 37, wholeAmount: 100, partAmount: 37, selectedGroups: 37, methodSteps: ['37% = 25% + 10% + 2%', 'Find each part from the whole', 'Add the calculated values'], solutionLabel: 'A valid same-whole decomposition for 37%' } }
+    recovery_item_ref: PA-07-R01
+
+  - id: PA-07-C02
+    stage: teaching_checkpoint
+    target: Select the stated benchmark calculation.
+    prompt: Which calculation finds 37% of 300 using 25%, 10% and 2% parts?
+    response: { type: single_choice, options: ['(300 ÷ 4) + (300 ÷ 10) + (300 ÷ 100 × 2)', '(300 ÷ 4) + (75 ÷ 10) + (7.5 ÷ 100 × 2)', '300 + 25 + 10 + 2', '300 ÷ 37'] }
+    answer: { value: '(300 ÷ 4) + (300 ÷ 10) + (300 ÷ 100 × 2)' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You calculated every benchmark from three hundred., on_correct_math: The three terms find 25%, 10% and 2% from the original whole., on_incorrect_attempt_1: Check the starting amount in every term., on_incorrect_attempt_2: Every part must begin from 300., worked_explanation: '75 + 30 + 6 = 111.' }
+    mathematical_support: { hint_1: The same 300 should appear in each benchmark calculation., hint_2: Add the three calculated amounts., worked_solution: '111' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { layout: hundred_grid, percent: 37, wholeAmount: 300, partAmount: 111, selectedGroups: 37, methodSteps: ['25% = 75', '10% = 30 and 2% = 6', '75 + 30 + 6 = 111'], solutionLabel: '37% of 300 = 111' } }
+    recovery_item_ref: PA-07-R02
+
+  - id: PA-07-C03
+    stage: teaching_checkpoint
+    target: Preserve the original whole across benchmark parts.
+    prompt: Which statement is correct when finding 68% of 150 as 50% + 10% + 5% + 3%?
+    response: { type: single_choice, options: ['The 50%, 10%, 5% and 3% parts must all be found from 150.', 'The 10% part should be found from the 50% result.', 'The final 3 means add the number 3 to the other amounts.', 'The benchmark values should be multiplied together.'] }
+    answer: { value: 'The 50%, 10%, 5% and 3% parts must all be found from 150.' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You held the whole fixed at one hundred and fifty., on_correct_math: Every benchmark region is a part of the same original whole., on_incorrect_attempt_1: Ask what represents one hundred percent throughout the method., on_incorrect_attempt_2: Return to 150 before calculating each part., worked_explanation: 'Find 50%, 10%, 5% and 3% separately from 150, then add their values.' }
+    mathematical_support: { hint_1: The base amount never changes., hint_2: Do not chain percentages through previous results., worked_solution: 'All four parts come from 150.' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { layout: hundred_grid, percent: 68, wholeAmount: 150, partAmount: 102, selectedGroups: 68, methodSteps: ['50%, 10%, 5% and 3% all use 150', '75 + 15 + 7.5 + 4.5 = 102'], solutionLabel: 'Every benchmark part uses the whole of 150' } }
+    recovery_item_ref: PA-07-R02
+
+  - id: PA-07-G01
+    stage: guided
+    target: Combine 10%, 5% and 2%.
+    prompt: Find 17% of 300.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '51' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You combined three useful benchmark parts., on_correct_math: '10% is 30, 5% is 15 and 2% is 6; their total is 51.', on_incorrect_attempt_1: Decompose seventeen percent as ten plus five plus two., on_incorrect_attempt_2: The benchmark values are 30, 15 and 6., worked_explanation: '17% of 300 = 30 + 15 + 6 = 51.' }
+    mathematical_support: { hint_1: Use 10% + 5% + 2%., hint_2: Add 30 + 15 + 6., worked_solution: '51' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { layout: hundred_grid, percent: 17, wholeAmount: 300, partAmount: 51, selectedGroups: 17, methodSteps: ['10% = 30', '5% = 15 and 2% = 6', '30 + 15 + 6 = 51'], solutionLabel: '17% of 300 = 51' } }
+    recovery_item_ref: PA-07-R01
+
+  - id: PA-07-F01
+    stage: faded
+    target: Combine a quarter, 5%, and 2%.
+    prompt: Find 32% of 450.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '144' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You kept the quarter and smaller parts on one whole., on_correct_math: '25% is 112.5, 5% is 22.5 and 2% is 9; their total is 144.', on_incorrect_attempt_1: One useful route is twenty-five plus five plus two percent., on_incorrect_attempt_2: Add 112.5, 22.5 and 9., worked_explanation: '32% of 450 = 144.' }
+    mathematical_support: { hint_1: Use 25% + 5% + 2%., hint_2: Each part comes from 450., worked_solution: '144' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { layout: hundred_grid, percent: 32, wholeAmount: 450, partAmount: 144, selectedGroups: 32, methodSteps: ['25% = 112.5', '5% = 22.5 and 2% = 9', '112.5 + 22.5 + 9 = 144'], solutionLabel: '32% of 450 = 144' } }
+    recovery_item_ref: PA-07-R02
+
+  - id: PA-07-I01
+    stage: independent_transfer
+    target: Choose a valid route independently.
+    prompt: Find 68% of 350.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '238' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You chose and completed a valid same-whole route., on_correct_math: 'One route is 50% + 10% + 5% + 3%: 175 + 35 + 17.5 + 10.5 = 238.', on_incorrect_attempt_1: Choose benchmark percentages that total sixty-eight., on_incorrect_attempt_2: Keep every value attached to the whole of 350., worked_explanation: '68% of 350 = 238.' }
+    mathematical_support: { hint_1: One route is 50% + 10% + 5% + 3%., hint_2: Add 175 + 35 + 17.5 + 10.5., worked_solution: '238' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { layout: hundred_grid, percent: 68, wholeAmount: 350, partAmount: 238, selectedGroups: 68, methodSteps: ['50% = 175 and 10% = 35', '5% = 17.5 and 3% = 10.5', 'Total = 238'], solutionLabel: '68% of 350 = 238' } }
+    recovery_item_ref: PA-07-R03
+
+  - id: PA-07-P01
+    stage: practice
+    target: Find 28% using useful benchmark parts.
+    prompt: Find 28% of 250.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '70' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You combined a quarter and three one-percent parts., on_correct_math: '25% is 62.5 and 3% is 7.5, so the total is 70.', on_incorrect_attempt_1: Try twenty-five percent plus three percent., on_incorrect_attempt_2: Add 62.5 and 7.5., worked_explanation: '28% of 250 = 70.' }
+    mathematical_support: { hint_1: Use 25% + 3%., hint_2: Three percent is 7.5., worked_solution: '70' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { layout: hundred_grid, percent: 28, wholeAmount: 250, partAmount: 70, selectedGroups: 28, methodSteps: ['25% = 62.5', '3% = 7.5', '62.5 + 7.5 = 70'], solutionLabel: '28% of 250 = 70' } }
+
+  - id: PA-07-P02
+    stage: practice
+    target: Find 37% with a decimal result.
+    prompt: Find 37% of 160.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '59.2' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You combined the quarter, tenth and two-percent values accurately., on_correct_math: '25% is 40, 10% is 16 and 2% is 3.2; their total is 59.2.', on_incorrect_attempt_1: Use twenty-five plus ten plus two percent., on_incorrect_attempt_2: Add 40, 16 and 3.2., worked_explanation: '37% of 160 = 59.2.' }
+    mathematical_support: { hint_1: Each benchmark uses 160., hint_2: Add 40 + 16 + 3.2., worked_solution: '59.2' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { layout: hundred_grid, percent: 37, wholeAmount: 160, partAmount: 59.2, selectedGroups: 37, methodSteps: ['25% = 40', '10% = 16 and 2% = 3.2', 'Total = 59.2'], solutionLabel: '37% of 160 = 59.2' } }
+
+  - id: PA-07-P03
+    stage: practice
+    target: Find 42% using 40% and 2%.
+    prompt: Find 42% of 280.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '117.6' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You combined four ten-percent groups with two percent., on_correct_math: '40% is 112 and 2% is 5.6, so the total is 117.6.', on_incorrect_attempt_1: Build forty-two percent as forty plus two percent., on_incorrect_attempt_2: Add 112 and 5.6., worked_explanation: '42% of 280 = 117.6.' }
+    mathematical_support: { hint_1: Ten percent is 28., hint_2: Two percent is 5.6., worked_solution: '117.6' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { layout: hundred_grid, percent: 42, wholeAmount: 280, partAmount: 117.6, selectedGroups: 42, methodSteps: ['40% = 112', '2% = 5.6', '112 + 5.6 = 117.6'], solutionLabel: '42% of 280 = 117.6' } }
+
+  - id: PA-07-P04
+    stage: practice
+    target: Find 63% using a flexible decomposition.
+    prompt: Find 63% of 240.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '151.2' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You assembled sixty-three percent from valid parts., on_correct_math: 'One route is 50% + 10% + 3%: 120 + 24 + 7.2 = 151.2.', on_incorrect_attempt_1: Try fifty plus ten plus three percent., on_incorrect_attempt_2: Add 120, 24 and 7.2., worked_explanation: '63% of 240 = 151.2.' }
+    mathematical_support: { hint_1: Use 50% + 10% + 3%., hint_2: Three percent is 7.2., worked_solution: '151.2' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { layout: hundred_grid, percent: 63, wholeAmount: 240, partAmount: 151.2, selectedGroups: 63, methodSteps: ['50% = 120', '10% = 24 and 3% = 7.2', 'Total = 151.2'], solutionLabel: '63% of 240 = 151.2' } }
+
+  - id: PA-07-P05
+    stage: practice
+    target: Preserve a length unit.
+    prompt: A cable is 250 m long. Find 38% of its length.
+    response: { type: decimal, input_label: Answer in metres }
+    answer: { value: '95' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You kept the metre unit through the decomposition., on_correct_math: '25% is 62.5 m, 10% is 25 m and 3% is 7.5 m; their total is 95 m.', on_incorrect_attempt_1: One route is twenty-five plus ten plus three percent of 250 metres., on_incorrect_attempt_2: Add 62.5 m, 25 m and 7.5 m., worked_explanation: '38% of 250 m = 95 m.' }
+    mathematical_support: { hint_1: Keep every part in metres., hint_2: Add 62.5 + 25 + 7.5., worked_solution: '95 m' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { layout: hundred_grid, percent: 38, wholeAmount: 250, unit: m, partAmount: 95, selectedGroups: 38, methodSteps: ['25% = 62.5 m', '10% = 25 m and 3% = 7.5 m', 'Total = 95 m'], solutionLabel: '38% of 250 m = 95 m' } }
+
+  - id: PA-07-E01
+    stage: exit
+    target: Find 18% independently.
+    prompt: Find 18% of 450.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '81' }
+    attempt_policy: &exit { policy: single_submit_locked, max_attempts_before_resolution: 1, feedback_timing: after_exit_set, submit_label: Check answer, allow_change_before_submit: true, lock_after_final_submit: true }
+    scripts: { on_correct_math: 'One route is 10% + 5% + 3%: 45 + 22.5 + 13.5 = 81.', on_incorrect_attempt_1: Record the answer for the final result., on_incorrect_attempt_2: Not applicable., worked_explanation: '18% of 450 = 81.' }
+    mathematical_support: { hint_1: null, hint_2: null, worked_solution: '81' }
+    success_reaction: { mode: silent }
+    visual: { primitive: percentage_strip, model: { layout: hundred_grid, percent: 18, wholeAmount: 450, partAmount: 81, selectedGroups: 18, methodSteps: ['10% = 45', '5% = 22.5 and 3% = 13.5', 'Total = 81'], solutionLabel: '18% of 450 = 81' } }
+
+  - id: PA-07-E02
+    stage: exit
+    target: Find 43% with a decimal result.
+    prompt: Find 43% of 260.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '111.8' }
+    attempt_policy: *exit
+    scripts: { on_correct_math: 'One route is 40% + 3%: 104 + 7.8 = 111.8.', on_incorrect_attempt_1: Record the answer for the final result., on_incorrect_attempt_2: Not applicable., worked_explanation: '43% of 260 = 111.8.' }
+    mathematical_support: { hint_1: null, hint_2: null, worked_solution: '111.8' }
+    success_reaction: { mode: silent }
+    visual: { primitive: percentage_strip, model: { layout: hundred_grid, percent: 43, wholeAmount: 260, partAmount: 111.8, selectedGroups: 43, methodSteps: ['40% = 104', '3% = 7.8', '104 + 7.8 = 111.8'], solutionLabel: '43% of 260 = 111.8' } }
+
+  - id: PA-07-CFM01
+    stage: confirmation
+    target: Confirm 38% in a measured context.
+    prompt: A path is 360 m long. Find 38% of its length.
+    response: { type: decimal, input_label: Answer in metres }
+    answer: { value: '136.8' }
+    attempt_policy: *exit
+    scripts: { on_correct_math: 'One route is 25% + 10% + 3%: 90 + 36 + 10.8 = 136.8 m.', on_incorrect_attempt_1: Record the answer for the final result., on_incorrect_attempt_2: Not applicable., worked_explanation: '38% of 360 m = 136.8 m.' }
+    mathematical_support: { hint_1: null, hint_2: null, worked_solution: '136.8 m' }
+    success_reaction: { mode: silent }
+    visual: { primitive: percentage_strip, model: { layout: hundred_grid, percent: 38, wholeAmount: 360, unit: m, partAmount: 136.8, selectedGroups: 38, methodSteps: ['25% = 90 m', '10% = 36 m and 3% = 10.8 m', 'Total = 136.8 m'], solutionLabel: '38% of 360 m = 136.8 m' } }
+
+  - id: PA-07-CFM02
+    stage: confirmation
+    target: Confirm 38% in a GCSE-style context.
+    prompt: A theatre has 750 seats. For one performance, 38% are occupied. How many seats are occupied?
+    response: { type: decimal, input_label: Number of seats }
+    answer: { value: '285' }
+    attempt_policy: *exit
+    scripts: { on_correct_math: 'One route is 25% + 10% + 3%: 187.5 + 75 + 22.5 = 285 seats.', on_incorrect_attempt_1: Record the answer for the final result., on_incorrect_attempt_2: Not applicable., worked_explanation: '38% of 750 = 285 seats.' }
+    mathematical_support: { hint_1: null, hint_2: null, worked_solution: '285 seats' }
+    success_reaction: { mode: silent }
+    visual: { primitive: percentage_strip, model: { layout: hundred_grid, percent: 38, wholeAmount: 750, unit: seats, partAmount: 285, selectedGroups: 38, methodSteps: ['25% = 187.5 seats', '10% = 75 seats and 3% = 22.5 seats', 'Total = 285 seats'], solutionLabel: '38% of 750 = 285 seats' } }
+
+  - id: PA-07-R01
+    stage: repair
+    target: Repair an invalid decomposition.
+    prompt: Which decomposition makes 43%?
+    response: { type: single_choice, options: ['25% + 10% + 5% + 3%', '25% + 10% + 3%', '50% − 5%', '40% + 30%'] }
+    answer: { value: '25% + 10% + 5% + 3%' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You checked that the benchmark percentages total forty-three., on_correct_math: '25 + 10 + 5 + 3 = 43.', on_incorrect_attempt_1: Add or subtract the percentage labels before calculating any amounts., on_incorrect_attempt_2: The selected parts must combine to exactly forty-three percent., worked_explanation: '25% + 10% + 5% + 3% = 43%.' }
+    mathematical_support: { hint_1: Test each total., hint_2: Twenty-five plus ten plus five plus three is forty-three., worked_solution: '25% + 10% + 5% + 3%' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { layout: hundred_grid, percent: 43, wholeAmount: 100, partAmount: 43, selectedGroups: 43, methodSteps: ['25 + 10 + 5 + 3 = 43', 'The decomposition matches the target'], solutionLabel: 'A valid decomposition for 43%' } }
+
+  - id: PA-07-R02
+    stage: repair
+    target: Repair a changing whole.
+    prompt: Twenty-five percent of 240 is 60. What is 10% of the original whole of 240?
+    response: { type: single_choice, options: ['6', '10', '24', '60'] }
+    answer: { value: '24' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You returned to the original whole., on_correct_math: Ten percent of 240 is 24; it is not ten percent of the quarter result., on_incorrect_attempt_1: The words original whole identify the base for this calculation., on_incorrect_attempt_2: Divide 240 by 10., worked_explanation: '240 ÷ 10 = 24.' }
+    mathematical_support: { hint_1: Ignore the previous part while finding this new benchmark., hint_2: Use 240, not 60., worked_solution: '24' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { layout: hundred_grid, percent: 10, wholeAmount: 240, partAmount: 24, selectedGroups: 10, methodSteps: ['Return to the whole of 240', '10% = 240 ÷ 10', 'Answer = 24'], solutionLabel: '10% of the original whole = 24' } }
+
+  - id: PA-07-R03
+    stage: repair
+    target: Repair adding percentage numerals instead of calculated values.
+    prompt: For one whole, 25% is 50, 5% is 10 and 2% is 4. Which calculation finds 32%?
+    response: { type: single_choice, options: ['50 + 10 + 4', '50 + 5 + 2', '25 + 5 + 2', '50 × 10 × 4'] }
+    answer: { value: '50 + 10 + 4' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You combined the amounts represented by the benchmark parts., on_correct_math: The percentage labels choose the parts; the values 50, 10 and 4 are what must be added., on_incorrect_attempt_1: Separate each percentage label from its calculated amount., on_incorrect_attempt_2: Add 50, 10 and 4., worked_explanation: '50 + 10 + 4 = 64, so 32% of the whole is 64.' }
+    mathematical_support: { hint_1: Add the calculated values, not 25 + 5 + 2., hint_2: Use 50 + 10 + 4., worked_solution: '64' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { layout: hundred_grid, percent: 32, wholeAmount: 200, partAmount: 64, selectedGroups: 32, methodSteps: ['25% amount = 50', '5% amount = 10 and 2% amount = 4', '50 + 10 + 4 = 64'], solutionLabel: '32% of the whole = 64' } }
+
+qa_acceptance:
+  source_alignment: [The lesson teaches flexible decomposition with every part calculated from the same original whole., It explicitly validates more than one correct route., Valid alternative methods remain acceptable unless a prompt checks a stated route., Diagnostic and delayed Retrieval banks remain outside the active route.]
+  learner_facing: [Supported items have distinct authored feedback., Exit items are one-shot and hint-free., Hundred-cell selections match the named percentages., Methods and results remain hidden until the correct feedback state on scored items.]

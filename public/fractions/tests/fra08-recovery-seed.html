@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head><meta charset="utf-8" /><title>Seed FRA08 score-three recovery QA</title></head>
+  <body>
+    <p>Preparing the FRA08 score-three recovery route…</p>
+    <script>
+      localStorage.setItem("revily.fractions.FRA-08.current.v1", JSON.stringify({
+        version: 1,
+        contentVersion: "fra08-equivalent-fractions-v1",
+        topicId: "fractions",
+        skillId: "FRA-08",
+        cursor: "M5",
+        started: true,
+        soundOn: false,
+        exit: {
+          responses: {
+            "FRA-08-M1": { response: { n: "20", d: "45" }, correct: true },
+            "FRA-08-M2": { response: "21", correct: true },
+            "FRA-08-M3": { response: "30", correct: false },
+            "FRA-08-M4": { response: "4/10", correct: true }
+          },
+          result: null,
+          confirmationId: null,
+          primaryScore: null,
+          missedPrimaryIds: [],
+          remediation: null
+        },
+        evidence: {
+          firstAttemptCorrect: {
+            "FRA-08-M1": true,
+            "FRA-08-M2": true,
+            "FRA-08-M3": false,
+            "FRA-08-M4": true
+          },
+          errorFamily: { "FRA-08-M3": "direction" },
+          candidateErrorFamily: { "FRA-08-M3": "direction" }
+        }
+      }));
+      location.replace("../?dev=1#/fractions/FRA-08");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>All-topic checks | Revily</title>
+    <link rel="stylesheet" href="../styles.css?v=41" />
+    <link rel="stylesheet" href="../fra18.css?v=1" />
+    <link rel="stylesheet" href="../fra19.css?v=1" />
+    <link rel="stylesheet" href="../fra27.css?v=2" />
+    <link rel="stylesheet" href="../operation-structure.css?v=73" />
+    <style>
+      .test-main { width: min(1060px, calc(100% - 28px)); margin: 34px auto; padding: clamp(24px, 5vw, 52px); border-radius: 26px; background: var(--paper); box-shadow: var(--shadow); }
+      .test-main h1 { margin: 5px 0 12px; font: 500 clamp(2.2rem, 6vw, 4rem)/1 Georgia, serif; }
+      .test-summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 25px 0; }
+      .test-summary div { padding: 18px; border-radius: 15px; background: var(--teal-soft); }
+      .test-summary strong { display: block; font-size: 1.8rem; }
+      .test-log { display: grid; gap: 7px; padding: 0; list-style: none; }
+      .test-log li { padding: 11px 13px; border-left: 4px solid var(--success); border-radius: 8px; background: #f3f7f4; }
+      .test-log li.fail { border-color: var(--danger); color: var(--danger); background: var(--danger-soft); }
+      .test-fixture { position: fixed; width: 1px; height: 1px; overflow: hidden; left: -9999px; }
+      @media (max-width: 560px) { .test-summary { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <main class="test-main" id="main-content">
+      <span class="eyebrow">Development mode</span>
+      <h1>All-topic skill checks</h1>
+      <p id="test-status" role="status">Loading all 125 registered YAML specifications…</p>
+      <section class="test-summary" id="test-summary" hidden></section>
+      <ul class="test-log" id="test-log"></ul>
+      <a class="secondary-button" href="../#/topics">Back to Topics</a>
+    </main>
+    <div class="test-fixture" id="test-fixture" aria-hidden="true"></div>
+
+    <script src="../vendor/js-yaml.min.js?v=4.1.0"></script>
+    <script src="../js/topics.js?v=3"></script>
+    <script src="../js/fra01-canonical.js?v=2"></script>
+    <script src="../js/fra01-canonical-v2.js?v=4"></script>
+    <script src="../js/fra02-canonical.js?v=7"></script>
+    <script src="../js/fra03-canonical.js?v=4"></script>
+    <script src="../js/fra04-canonical.js?v=2"></script>
+    <script src="../js/fra05-approved-spec.js?v=4"></script>
+    <script src="../js/fra05-canonical.js?v=3"></script>
+    <script src="../js/fra06-approved-spec.js?v=1"></script>
+    <script src="../js/fra06-canonical.js?v=2"></script>
+    <script src="../js/fra07-approved-spec.js?v=1"></script>
+    <script src="../js/fra07-canonical.js?v=1"></script>
+    <script src="../js/fra08-approved-spec.js?v=1"></script>
+    <script src="../js/fra08-canonical.js?v=1"></script>
+    <script src="../js/fra09-approved-spec.js?v=1"></script>
+    <script src="../js/fra09-canonical.js?v=1"></script>
+    <script src="../js/fra10-approved-spec.js?v=2"></script>
+    <script src="../js/fra10-canonical.js?v=6"></script>
+    <script src="../js/fra11-approved-spec.js?v=2"></script>
+    <script src="../js/fra11-canonical.js?v=2"></script>
+    <script src="../js/fra12-approved-spec.js?v=1"></script>
+    <script src="../js/fra12-canonical.js?v=3"></script>
+    <script src="../js/fra13-approved-spec.js?v=1"></script>
+    <script src="../js/fra13-canonical.js?v=1"></script>
+    <script src="../js/fra14-approved-spec.js?v=1"></script>
+    <script src="../js/fra14-canonical.js?v=4"></script>
+    <script src="../js/fra15-approved-spec.js?v=1"></script>
+    <script src="../js/fra15-canonical.js?v=1"></script>
+    <script src="../js/fra16-approved-spec.js?v=1"></script>
+    <script src="../js/fra16-canonical.js?v=1"></script>
+    <script src="../js/fra17-approved-spec.js?v=1"></script>
+    <script src="../js/fra17-canonical.js?v=1"></script>
+    <script src="../js/fra18-approved-spec.js?v=1"></script>
+    <script src="../js/fra18-canonical.js?v=1"></script>
+    <script src="../js/fra19-approved-spec.js?v=1"></script>
+    <script src="../js/fra19-canonical.js?v=1"></script>
+    <script src="../js/fra20-approved-spec.js?v=1"></script>
+    <script src="../js/fra20-canonical.js?v=2"></script>
+    <script src="../js/fra21-approved-spec.js?v=1"></script>
+    <script src="../js/fra21-canonical.js?v=3"></script>
+    <script src="../js/fra22-approved-spec.js?v=1"></script>
+    <script src="../js/fra22-canonical.js?v=2"></script>
+    <script src="../js/fra23-approved-spec.js?v=1"></script>
+    <script src="../js/fra23-canonical.js?v=2"></script>
+    <script src="../js/fra24-approved-spec.js?v=1"></script>
+    <script src="../js/fra24-canonical.js?v=2"></script>
+    <script src="../js/fra26-approved-spec.js?v=1"></script>
+    <script src="../js/fra26-canonical.js?v=1"></script>
+    <script src="../js/fra27-approved-spec.js?v=3"></script>
+    <script src="../js/fra27-canonical.js?v=3"></script>
+    <script src="../js/fra28-approved-spec.js?v=1"></script>
+    <script src="../js/fra28-canonical.js?v=1"></script>
+    <script src="../js/skill-loader.js?v=28"></script>
+    <script src="../js/fra18-loader-profile.js?v=2"></script>
+    <script src="../js/fra19-loader-profile.js?v=1"></script>
+    <script src="../js/validators.js?v=43"></script>
+    <script src="../js/lesson-model.js?v=17"></script>
+    <script src="../js/fra01-visuals.js?v=5"></script>
+    <script src="../js/fra02-visuals.js?v=3"></script>
+    <script src="../js/fra03-visuals.js?v=4"></script>
+    <script src="../js/fra04-visuals.js?v=1"></script>
+    <script src="../js/fra05-visuals.js?v=3"></script>
+    <script src="../js/fra06-visuals.js?v=2"></script>
+    <script src="../js/fra07-visuals.js?v=1"></script>
+    <script src="../js/fra08-visuals.js?v=1"></script>
+    <script src="../js/fra09-visuals.js?v=1"></script>
+    <script src="../js/fra10-visuals.js?v=4"></script>
+    <script src="../js/fra11-visuals.js?v=3"></script>
+    <script src="../js/fra12-visuals.js?v=1"></script>
+    <script src="../js/fra13-visuals.js?v=1"></script>
+    <script src="../js/fra14-visuals.js?v=3"></script>
+    <script src="../js/fra15-visuals.js?v=1"></script>
+    <script src="../js/fra16-visuals.js?v=1"></script>
+    <script src="../js/fra17-visuals.js?v=1"></script>
+    <script src="../js/fra18-visuals.js?v=1"></script>
+    <script src="../js/fra19-visuals.js?v=1"></script>
+    <script src="../js/fra20-visuals.js?v=3"></script>
+    <script src="../js/fra21-visuals.js?v=3"></script>
+    <script src="../js/fra22-visuals.js?v=2"></script>
+    <script src="../js/fra23-visuals.js?v=1"></script>
+    <script src="../js/fra24-visuals.js?v=2"></script>
+    <script src="../js/fra26-visuals.js?v=5"></script>
+    <script src="../js/fra27-visuals.js?v=6"></script>
+    <script src="../js/fra28-visuals.js?v=1"></script>
+    <script src="../js/mixed-product-visuals.js?v=1"></script>
+    <script src="../js/reciprocal-visuals.js?v=4"></script>
+    <script src="../js/fraction-share-visuals.js?v=2"></script>
+    <script src="../js/unit-group-visuals.js?v=2"></script>
+    <script src="../js/proper-group-visuals.js?v=1"></script>
+    <script src="../js/fraction-group-visuals.js?v=1"></script>
+    <script src="../js/mixed-division-visuals.js?v=1"></script>
+    <script src="../js/multi-step-visuals.js?v=1"></script>
+    <script src="../js/simplify-operation-visuals.js?v=1"></script>
+    <script src="../js/mixed-conversion.js?v=3"></script>
+    <script src="../js/mixed-addition-visuals.js?v=3"></script>
+    <script src="../js/mixed-regroup.js?v=1"></script>
+    <script src="../js/mixed-exchange.js?v=1"></script>
+    <script src="../js/mixed-subtraction.js?v=3"></script>
+    <script src="../js/fraction-situation.js?v=4"></script>
+    <script src="../js/additive-timeline.js?v=1"></script>
+    <script src="../js/capstone-fraction-visuals.js?v=2"></script>
+    <script src="../js/place-value-conversion.js?v=23"></script>
+    <script src="../js/benchmark-conversion.js?v=3"></script>
+    <script src="../js/decimal-scaling.js?v=2"></script>
+    <script src="../js/decimal-fraction-conversion.js?v=1"></script>
+    <script src="../js/percent-fraction.js?v=1"></script>
+    <script src="../js/fdp-comparison.js?v=2"></script>
+    <script src="../js/fdp-ordering.js?v=2"></script>
+    <script src="../js/mixed-fdp.js?v=2"></script>
+    <script src="../js/percentage-fraction-amount.js?v=4"></script>
+    <script src="../js/one-percent-amount.js?v=2"></script>
+    <script src="../js/decimal-multiplier-amount.js?v=2"></script>
+    <script src="../js/method-choice-amount.js?v=2"></script>
+    <script src="../js/money-percentage-amount.js?v=1"></script>
+    <script src="../js/measured-percentage-amount.js?v=1"></script>
+    <script src="../js/percentage-comparison.js?v=1"></script>
+    <script src="../js/mixed-percentage-questions.js?v=3"></script>
+    <script src="../js/multiplier-method-evidence.js?v=1"></script>
+    <script src="../js/percentage-change-structure.js?v=18"></script>
+    <script src="../js/power-ten-decimal.js?v=1"></script>
+    <script src="../js/equivalent-decimal.js?v=1"></script>
+    <script src="../js/division-decimal.js?v=2"></script>
+    <script src="../js/equivalent-percent.js?v=2"></script>
+    <script src="../js/decimal-percent.js?v=2"></script>
+    <script src="../js/percent-hundred-visuals.js?v=1"></script>
+    <script src="../js/operation-structure-visuals.js?v=61"></script>
+    <script src="../js/visual-primitives.js?v=37"></script>
+    <script src="../js/fra27-runtime-bridge.js?v=3"></script>
+    <script src="../js/narration-sync.js?v=3"></script>
+    <script src="../js/narration-assets.js?v=3"></script>
+    <script src="../js/fra01-v2-narration-assets.js?v=3"></script>
+    <script src="../js/fra02-narration-assets.js?v=2"></script>
+    <script src="../js/fra03-narration-assets.js?v=2"></script>
+    <script src="../js/fra04-narration-assets.js?v=2"></script>
+    <script src="../js/fra05-narration-assets.js?v=4"></script>
+    <script src="../js/fra16-narration-assets.js?v=1"></script>
+    <script src="../js/fra06-28-narration-assets.js?v=1"></script>
+    <script src="../js/decimal-narration-assets.js?v=1"></script>
+    <script src="../js/refined-narration-assets.js?v=73"></script>
+    <script src="../js/lesson-engine.js?v=72"></script>
+    <script src="../js/fra27-engine-extension.js?v=4"></script>
+    <script src="../js/fra18-engine-profile.js?v=1"></script>
+    <script src="../js/fra19-engine-profile.js?v=1"></script>
+    <script src="../js/cancellation-workspace.js?v=1"></script>
+    <script src="../js/conversion-product-workspace.js?v=3"></script>
+    <script src="../js/source-aligned-engine-profile.js?v=29"></script>
+    <script src="../js/af18-capstone-profile.js?v=2"></script>
+    <script src="../js/place-value-engine-profile.js?v=23"></script>
+    <script src="../js/deferred-mastery-profile.js?v=9"></script>
+    <script src="source-audit-contracts.js?v=1"></script>
+    <script src="smoke-tests.js?v=85"></script>
+  </body>
+</html>

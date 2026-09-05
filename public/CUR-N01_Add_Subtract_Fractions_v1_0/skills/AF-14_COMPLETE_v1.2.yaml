@@ -1,0 +1,2159 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "AF-14 - Subtract mixed numbers without exchange",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-17",
+      "sha256": "d82a1c158a8ad67eb1b976caed34f3ad29c620af4426f4f334bda416a1112302"
+    },
+    "authored_scope": "Subtract mixed numbers without an extra regrouping step.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "AF14-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "verified_desktop_secure_mobile_component_and_form_errors_locked_nonmastery_resume_removal_counts_reference_scales_320_390_layouts",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        3,
+        4,
+        5,
+        6,
+        12,
+        14,
+        15
+      ],
+      "source_repairs_consulted": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        16,
+        17
+      ],
+      "note": "All 17 source pages read; active pages visually checked. Exact source key, worked, guided, independent, context and final items retained. Dedicated removal visuals preserve the no-exchange boundary. Independent and final calculations require simplest mixed form; guided final requires proper mixed form without an added simplification rule; contexts accept exact equivalent mixed and improper answers. Component evidence is recorded only when supported by the submitted representation. Correct improper methods are never labelled misconceptions, and a numerical answer is not used to infer an unseen method. Entry, Diagnostic and delayed Retrieval remain excluded."
+    }
+  },
+  "identity": {
+    "id": "AF-14",
+    "slug": "subtract-mixed-numbers-without-exchange",
+    "title": "Subtract mixed numbers without exchange",
+    "strand": "Number",
+    "cluster": "Adding and Subtracting Fractions",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Subtract positive mixed numbers without exchange, using a common denominator when needed and preserving the original subtraction order.",
+    "success_criteria": [
+      "Subtract second whole-number part from first.",
+      "Rename fractional parts using a common denominator.",
+      "Subtract second fractional part from first.",
+      "Explain why the first fraction already contains enough parts.",
+      "Combine the remaining wholes and fraction, using simplest mixed form when requested."
+    ],
+    "boundaries": {
+      "includes": [
+        "Positive mixed numbers",
+        "Equal and unequal denominators",
+        "First fractional part at least as large as second",
+        "Positive mixed or whole results",
+        "Simplest mixed form only where requested",
+        "Exact equivalent answers in unqualified applications",
+        "Ribbon, container water, walking and tank liquid contexts"
+      ],
+      "excludes": [
+        "Exchange from a whole",
+        "Reversing either subtraction",
+        "Negative results",
+        "Addition",
+        "More than two operands",
+        "Entry, Diagnostic and delayed Retrieval routes"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "AF-02",
+      "AF-04",
+      "AF-11"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for AF-02, AF-04, AF-11 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "integer",
+      "fraction",
+      "mixed_number",
+      "single_choice"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    }
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "Remove complete wholes from complete wholes and matching fractional parts from fractional parts.",
+    "invariant": "The first fractional part already contains enough parts, so no whole needs exchanging.",
+    "mathematical_rule": "Whole-number difference + fractional difference, preserving the original order.",
+    "must_notice": [
+      "Keep both subtractions in the original order.",
+      "Use matching fractional part sizes.",
+      "Include both kinds of remaining amount."
+    ],
+    "common_confusions": [
+      "Omitting the whole-number or fractional difference",
+      "Combining denominators",
+      "Reversing only part of a subtraction",
+      "Exchanging unnecessarily",
+      "Treating a correct improper-fraction method as a misconception"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "See the starting amount and what is removed",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "See the starting amount and what is removed",
+          "initial_state": "See the starting amount and what is removed",
+          "model": {
+            "kind": "mixed_subtract_no_exchange",
+            "left": {
+              "whole": 4,
+              "n": 3,
+              "d": 5
+            },
+            "right": {
+              "whole": 2,
+              "n": 1,
+              "d": 5
+            },
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "The first mixed number is the starting amount. The second is the amount removed. Keep track of their complete wholes and fractional parts."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Remove wholes and matching fractional parts",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Remove wholes and matching fractional parts",
+          "initial_state": "Remove wholes and matching fractional parts",
+          "model": {
+            "kind": "mixed_subtract_no_exchange",
+            "left": {
+              "whole": 4,
+              "n": 3,
+              "d": 5
+            },
+            "right": {
+              "whole": 2,
+              "n": 1,
+              "d": 5
+            },
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true
+          }
+        },
+        "narration": {
+          "script": "The crosses show the amounts removed. Count what remains in the complete wholes and in the fraction. There are already enough fifths, so no whole needs exchanging."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Explain why exchange is not needed",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Explain why exchange is not needed",
+          "initial_state": "Explain why exchange is not needed",
+          "model": {
+            "kind": "mixed_subtract_no_exchange",
+            "left": {
+              "whole": 4,
+              "n": 3,
+              "d": 5
+            },
+            "right": {
+              "whole": 2,
+              "n": 1,
+              "d": 5
+            },
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Choose the reason that applies to the two fractional amounts in this example."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "AF-14-C01"
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Subtract two and one sixth from six and two thirds",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Subtract two and one sixth from six and two thirds",
+          "initial_state": "Subtract two and one sixth from six and two thirds",
+          "model": {
+            "kind": "mixed_subtract_no_exchange",
+            "left": {
+              "whole": 6,
+              "n": 2,
+              "d": 3
+            },
+            "right": {
+              "whole": 2,
+              "n": 1,
+              "d": 6
+            },
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true
+          }
+        },
+        "narration": {
+          "script": "Keep the subtraction order for both kinds of part. Rename the thirds as sixths, remove the matching parts, then simplify the fraction that remains."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Check the complete subtraction method",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Check the complete subtraction method",
+          "initial_state": "Check the complete subtraction method",
+          "model": {
+            "kind": "mixed_subtract_no_exchange",
+            "left": {
+              "whole": 5,
+              "n": 7,
+              "d": 8
+            },
+            "right": {
+              "whole": 2,
+              "n": 1,
+              "d": 4
+            },
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Check the whole-number subtraction and the fractional calculation separately."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "AF-14-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "AF-14-G01",
+        "support_level": "high",
+        "pre_question_script": "Now subtract three and one eighth from seven and three quarters, completing each part of the method.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "AF-14-G02",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "faded",
+        "question_ref": "AF-14-G03",
+        "support_level": "reduced",
+        "pre_question_script": "",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "faded",
+        "question_ref": "AF-14-G04",
+        "support_level": "reduced",
+        "pre_question_script": "",
+        "correct_next": "G05"
+      },
+      "G05": {
+        "stage": "faded",
+        "question_ref": "AF-14-G05",
+        "support_level": "reduced",
+        "pre_question_script": "",
+        "correct_next": "G06"
+      },
+      "G06": {
+        "stage": "independent_transfer",
+        "question_ref": "AF-14-G06",
+        "support_level": "none",
+        "pre_question_script": "",
+        "correct_next": "P01"
+      }
+    },
+    "practice": {
+      "intro_script": "Subtract the mixed numbers using simplest mixed form where requested. Then find remaining amounts in ribbon, water and walking situations.",
+      "question_order": [
+        "AF-14-P01",
+        "AF-14-P02",
+        "AF-14-P03",
+        "AF-14-P04",
+        "AF-14-P05",
+        "AF-14-P06",
+        "AF-14-P07",
+        "AF-14-X01",
+        "AF-14-X02",
+        "AF-14-X03",
+        "AF-14-X04"
+      ],
+      "question_count": 11
+    },
+    "exit": {
+      "intro_script": "Complete two subtractions in simplest mixed form and select the correct method. No hints are available. Each response locks when submitted.",
+      "primary_question_refs": [
+        "AF-14-E01",
+        "AF-14-E02",
+        "AF-14-E03"
+      ],
+      "confirmation_question_refs": [],
+      "mastery_policy": {
+        "profile": "all_primary_unsupported",
+        "require_all": true,
+        "source_page": 12,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "You subtracted the mixed numbers while preserving their order and matching the fractional part sizes. No exchange was needed.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Check the part that needs attention",
+      "ryan_script": "One or more final checks need another pass. The feedback shows whether the whole-number subtraction, fractional calculation or requested final form needs attention.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "AF-14-C01",
+      "source_ref": {
+        "page": 3
+      },
+      "stage": "practice",
+      "prompt": "Why is no exchange needed in 4 3/5 − 2 1/5?",
+      "target": "Subtract the second whole-number and fractional parts from the first without exchange",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "The first fractional part, 3/5, is already greater than 1/5.",
+          "Mixed-number subtraction never needs exchange.",
+          "The whole-number parts are different.",
+          "The denominators are both 5."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "The first fractional part, 3/5, is already greater than 1/5."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Exactly. Enough fractional parts are already available, so no whole needs exchanging.",
+        "correct_after_support": "Exactly. Enough fractional parts are already available, so no whole needs exchanging.",
+        "on_correct_math": "4 − 2 = 2 complete wholes. → Both fractional parts count fifths. → 3/5 − 1/5 = 2/5; the first fraction has enough fifths to remove one. → The remaining amount is 2 2/5, without exchanging a whole.",
+        "on_incorrect_attempt_1": "Compare the fractional amount available with the fractional amount being removed.",
+        "on_incorrect_attempt_2": "The first fraction already contains enough fifths. Select the explanation about their sizes.",
+        "on_locked_incorrect": "Response recorded. Review the whole-number subtraction and the matching fractional parts after the final check.",
+        "worked_explanation": "4 − 2 = 2 complete wholes. → Both fractional parts count fifths. → 3/5 − 1/5 = 2/5; the first fraction has enough fifths to remove one. → The remaining amount is 2 2/5, without exchanging a whole."
+      },
+      "mathematical_support": {
+        "hint_1": "Compare the fractional amount available with the fractional amount being removed.",
+        "hint_2": "Keep the original subtraction order. Rename the fractional parts to the same denominator before subtracting their counts.",
+        "worked_solution": "4 − 2 = 2 complete wholes. → Both fractional parts count fifths. → 3/5 − 1/5 = 2/5; the first fraction has enough fifths to remove one. → The remaining amount is 2 2/5, without exchanging a whole."
+      },
+      "working": [
+        "4 − 2 = 2 complete wholes.",
+        "Both fractional parts count fifths.",
+        "3/5 − 1/5 = 2/5; the first fraction has enough fifths to remove one.",
+        "The remaining amount is 2 2/5, without exchanging a whole."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_subtract_no_exchange",
+          "left": {
+            "whole": 4,
+            "n": 3,
+            "d": 5
+          },
+          "right": {
+            "whole": 2,
+            "n": 1,
+            "d": 5
+          },
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "Mixed-number subtraction never needs exchange.": "Some mixed-number subtractions do need exchange. Check the fractional amounts in this particular example.",
+        "The whole-number parts are different.": "Different whole-number parts do not determine whether the first fraction contains enough parts.",
+        "The denominators are both 5.": "Matching denominators give equal-sized parts, but the first fraction must also contain enough of them."
+      }
+    },
+    {
+      "id": "AF-14-C02",
+      "source_ref": {
+        "page": 4
+      },
+      "stage": "practice",
+      "prompt": "Which method correctly works out 5 7/8 − 2 1/4?",
+      "target": "Subtract the second whole-number and fractional parts from the first without exchange",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "5 − 2 = 3; 7/8 − 1/4 = 7/8 − 2/8 = 5/8; answer 3 5/8",
+          "5 − 2 = 3; 7/8 − 1/4 = 6/4; answer 3 6/4",
+          "5 − 2 = 3; 7/8 − 1/4 = 6/12; answer 3 6/12",
+          "5 7/8 − 2 1/4 = 3/4"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "5 − 2 = 3; 7/8 − 1/4 = 7/8 − 2/8 = 5/8; answer 3 5/8"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The quarter is renamed as eighths before its parts are removed.",
+        "correct_after_support": "Correct. The quarter is renamed as eighths before its parts are removed.",
+        "on_correct_math": "5 − 2 = 3 complete wholes. → 1/4 = 2/8, while 7/8 stays unchanged. → 7/8 − 2/8 = 5/8. → The remaining amount is 3 5/8.",
+        "on_incorrect_attempt_1": "Check the whole-number subtraction and whether the fractional parts are made the same size.",
+        "on_incorrect_attempt_2": "The complete method keeps the subtraction order and renames the quarter as eighths. Select that method.",
+        "on_locked_incorrect": "Response recorded. Review the whole-number subtraction and the matching fractional parts after the final check.",
+        "worked_explanation": "5 − 2 = 3 complete wholes. → 1/4 = 2/8, while 7/8 stays unchanged. → 7/8 − 2/8 = 5/8. → The remaining amount is 3 5/8."
+      },
+      "mathematical_support": {
+        "hint_1": "Check the whole-number subtraction and whether the fractional parts are made the same size.",
+        "hint_2": "Keep the original subtraction order. Rename the fractional parts to the same denominator before subtracting their counts.",
+        "worked_solution": "5 − 2 = 3 complete wholes. → 1/4 = 2/8, while 7/8 stays unchanged. → 7/8 − 2/8 = 5/8. → The remaining amount is 3 5/8."
+      },
+      "working": [
+        "5 − 2 = 3 complete wholes.",
+        "1/4 = 2/8, while 7/8 stays unchanged.",
+        "7/8 − 2/8 = 5/8.",
+        "The remaining amount is 3 5/8."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_subtract_no_exchange",
+          "left": {
+            "whole": 5,
+            "n": 7,
+            "d": 8
+          },
+          "right": {
+            "whole": 2,
+            "n": 1,
+            "d": 4
+          },
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "5 − 2 = 3; 7/8 − 1/4 = 6/4; answer 3 6/4": "The whole-number subtraction is correct. The fractions must be renamed before their numerators can be subtracted.",
+        "5 − 2 = 3; 7/8 − 1/4 = 6/12; answer 3 6/12": "The whole-number subtraction is correct, but adding denominators does not create equivalent fractions.",
+        "5 7/8 − 2 1/4 = 3/4": "That omits the remaining complete wholes. Keep the whole-number subtraction separate from the fractions."
+      }
+    },
+    {
+      "id": "AF-14-G01",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "For 7 3/4 − 3 1/8, complete 7 − 3 = ?.",
+      "target": "Subtract the second whole-number and fractional parts from the first without exchange",
+      "response": {
+        "type": "integer",
+        "input_label": "Whole-number difference"
+      },
+      "answer": {
+        "value": 4
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Four complete wholes remain.",
+        "correct_after_support": "Correct. Four complete wholes remain.",
+        "on_correct_math": "7 − 3 = 4",
+        "on_incorrect_attempt_1": "Subtract the three complete wholes from the seven complete wholes.",
+        "on_incorrect_attempt_2": "Seven minus three is four. Enter four.",
+        "on_locked_incorrect": "Response recorded. Review the whole-number subtraction and the matching fractional parts after the final check.",
+        "worked_explanation": "7 − 3 = 4"
+      },
+      "mathematical_support": {
+        "hint_1": "Subtract the three complete wholes from the seven complete wholes.",
+        "hint_2": "Keep the original subtraction order. Rename the fractional parts to the same denominator before subtracting their counts.",
+        "worked_solution": "7 − 3 = 4"
+      },
+      "working": [
+        "7 − 3 = 4"
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "mixed_subtraction_steps",
+          "label": "Subtract the complete wholes",
+          "expression": "7 − 3 = ?",
+          "completed": "7 − 3 = 4",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-14-G02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "Complete the equivalent fraction: 3/4 = ?/8.",
+      "target": "Subtract the second whole-number and fractional parts from the first without exchange",
+      "response": {
+        "type": "integer",
+        "input_label": "Equivalent numerator"
+      },
+      "answer": {
+        "value": 6
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Three quarters has been renamed without changing its value.",
+        "correct_after_support": "Correct. Three quarters has been renamed without changing its value.",
+        "on_correct_math": "3/4 = 6/8",
+        "on_incorrect_attempt_1": "The denominator doubles, so the numerator must change by the same factor.",
+        "on_incorrect_attempt_2": "Three quarters is six eighths. Enter six.",
+        "on_locked_incorrect": "Response recorded. Review the whole-number subtraction and the matching fractional parts after the final check.",
+        "worked_explanation": "3/4 = 6/8"
+      },
+      "mathematical_support": {
+        "hint_1": "The denominator doubles, so the numerator must change by the same factor.",
+        "hint_2": "Keep the original subtraction order. Rename the fractional parts to the same denominator before subtracting their counts.",
+        "worked_solution": "3/4 = 6/8"
+      },
+      "working": [
+        "3/4 = 6/8"
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "mixed_subtraction_steps",
+          "label": "Match the fractional part sizes",
+          "expression": "3/4 = ?/8",
+          "completed": "3/4 = 6/8",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-14-G03",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "faded",
+      "prompt": "Carry the equivalent numerator into ?/8 − 1/8.",
+      "target": "Subtract the second whole-number and fractional parts from the first without exchange",
+      "response": {
+        "type": "integer",
+        "input_label": "First numerator"
+      },
+      "answer": {
+        "value": 6
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The subtraction order is preserved and both fractions count eighths.",
+        "correct_after_support": "Correct. The subtraction order is preserved and both fractions count eighths.",
+        "on_correct_math": "6/8 − 1/8",
+        "on_incorrect_attempt_1": "Use the equivalent numerator from the previous step, keeping the first fraction first.",
+        "on_incorrect_attempt_2": "The renamed three quarters contributes six eighths. Enter six.",
+        "on_locked_incorrect": "Response recorded. Review the whole-number subtraction and the matching fractional parts after the final check.",
+        "worked_explanation": "6/8 − 1/8"
+      },
+      "mathematical_support": {
+        "hint_1": "Use the equivalent numerator from the previous step, keeping the first fraction first.",
+        "hint_2": "Keep the original subtraction order. Rename the fractional parts to the same denominator before subtracting their counts.",
+        "worked_solution": "6/8 − 1/8"
+      },
+      "working": [
+        "6/8 − 1/8"
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "mixed_subtraction_steps",
+          "label": "Carry the renamed fraction",
+          "expression": "?/8 − 1/8",
+          "completed": "6/8 − 1/8",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-14-G04",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "faded",
+      "prompt": "Complete the fractional difference: 6/8 − 1/8 = ?/8.",
+      "target": "Subtract the second whole-number and fractional parts from the first without exchange",
+      "response": {
+        "type": "integer",
+        "input_label": "Fractional numerator"
+      },
+      "answer": {
+        "value": 5
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Five eighths remain after the fractional subtraction.",
+        "correct_after_support": "Correct. Five eighths remain after the fractional subtraction.",
+        "on_correct_math": "6/8 − 1/8 = 5/8",
+        "on_incorrect_attempt_1": "Remove one of the six eighths, keeping the same part size.",
+        "on_incorrect_attempt_2": "Six eighths minus one eighth leaves five eighths. Enter five.",
+        "on_locked_incorrect": "Response recorded. Review the whole-number subtraction and the matching fractional parts after the final check.",
+        "worked_explanation": "6/8 − 1/8 = 5/8"
+      },
+      "mathematical_support": {
+        "hint_1": "Remove one of the six eighths, keeping the same part size.",
+        "hint_2": "Keep the original subtraction order. Rename the fractional parts to the same denominator before subtracting their counts.",
+        "worked_solution": "6/8 − 1/8 = 5/8"
+      },
+      "working": [
+        "6/8 − 1/8 = 5/8"
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "mixed_subtraction_steps",
+          "label": "Subtract matching fractional parts",
+          "expression": "6/8 − 1/8 = ?/8",
+          "completed": "6/8 − 1/8 = 5/8",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-14-G05",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "faded",
+      "prompt": "Write the mixed-number answer for 7 3/4 − 3 1/8.",
+      "target": "Subtract the second whole-number and fractional parts from the first without exchange",
+      "response": {
+        "type": "mixed_number",
+        "require_proper_fractional_part": true
+      },
+      "answer": {
+        "value": "4 5/8"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The four remaining wholes and five remaining eighths belong in the same answer.",
+        "correct_after_support": "Correct. The four remaining wholes and five remaining eighths belong in the same answer.",
+        "on_correct_math": "7 − 3 = 4 complete wholes. → 3/4 = 6/8; 1/8 = 1/8. → 6/8 − 1/8 = 5/8. → 4 + 5/8 = 4 5/8.",
+        "on_incorrect_attempt_1": "Keep the complete wholes and fractional parts separate. Subtract the second amount from the first in both calculations.",
+        "on_incorrect_attempt_2": "Check the unremoved wholes, then the remaining matching fractional parts. Use both in your corrected answer.",
+        "on_locked_incorrect": "Response recorded. Review the whole-number subtraction and the matching fractional parts after the final check.",
+        "worked_explanation": "7 − 3 = 4 complete wholes. → 3/4 = 6/8; 1/8 = 1/8. → 6/8 − 1/8 = 5/8. → 4 + 5/8 = 4 5/8."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the complete wholes and fractional parts separate. Subtract the second amount from the first in both calculations.",
+        "hint_2": "Keep the original subtraction order. Rename the fractional parts to the same denominator before subtracting their counts.",
+        "worked_solution": "7 − 3 = 4 complete wholes. → 3/4 = 6/8; 1/8 = 1/8. → 6/8 − 1/8 = 5/8. → 4 + 5/8 = 4 5/8."
+      },
+      "working": [
+        "7 − 3 = 4 complete wholes.",
+        "3/4 = 6/8; 1/8 = 1/8.",
+        "6/8 − 1/8 = 5/8.",
+        "4 + 5/8 = 4 5/8."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_subtract_no_exchange",
+          "left": {
+            "whole": 7,
+            "n": 3,
+            "d": 4
+          },
+          "right": {
+            "whole": 3,
+            "n": 1,
+            "d": 8
+          },
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "whole_only": "The fractional part is correct. Check the whole-number subtraction: take the second whole-number part away from the first.",
+        "fraction_only": "The whole-number part is correct. Check the fractional subtraction using matching part sizes and the original order.",
+        "both_parts": "Both parts need another check. Subtract the second whole-number part from the first, and do the same with matching fractional parts.",
+        "omitted_fraction": "That gives the remaining complete wholes only. Include the fractional amount that remains as well.",
+        "omitted_wholes": "That gives only the remaining fraction. Include the complete wholes that remain as well.",
+        "check_value": "The remaining amount needs another check. An improper-fraction method is valid, but it must subtract the full second amount from the full first amount.",
+        "simplify_only": "The subtraction is correct. Only the fractional part needs simplifying to meet the requested final form.",
+        "mixed_form_required": "The value is correct. This question asks for a mixed number with a proper fractional part."
+      },
+      "evidence_profile": "mixed_subtract_components",
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-14-G06",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "independent_transfer",
+      "prompt": "Which statement explains the subtraction method used?",
+      "target": "Subtract the second whole-number and fractional parts from the first without exchange",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Subtract the second whole-number part from the first, and the second fractional part from the first.",
+          "Subtract the smaller number from the larger number in every position.",
+          "Subtract the denominators and keep the numerators.",
+          "Exchange one whole every time mixed numbers are subtracted."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "Subtract the second whole-number part from the first, and the second fractional part from the first."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The same subtraction order applies to both kinds of part.",
+        "correct_after_support": "Correct. The same subtraction order applies to both kinds of part.",
+        "on_correct_math": "Keep the order of the two mixed numbers. → Subtract the second complete-whole amount from the first. → Rename the fractions to matching parts, then subtract the second fraction from the first.",
+        "on_incorrect_attempt_1": "Think about the order of the two amounts, not just which written number looks larger.",
+        "on_incorrect_attempt_2": "Both subtractions must follow the original order. Select the explanation that keeps the second amount being removed from the first.",
+        "on_locked_incorrect": "Response recorded. Review the whole-number subtraction and the matching fractional parts after the final check.",
+        "worked_explanation": "Keep the order of the two mixed numbers. → Subtract the second complete-whole amount from the first. → Rename the fractions to matching parts, then subtract the second fraction from the first."
+      },
+      "mathematical_support": {
+        "hint_1": "Think about the order of the two amounts, not just which written number looks larger.",
+        "hint_2": "Keep the original subtraction order. Rename the fractional parts to the same denominator before subtracting their counts.",
+        "worked_solution": "Keep the order of the two mixed numbers. → Subtract the second complete-whole amount from the first. → Rename the fractions to matching parts, then subtract the second fraction from the first."
+      },
+      "working": [
+        "Keep the order of the two mixed numbers.",
+        "Subtract the second complete-whole amount from the first.",
+        "Rename the fractions to matching parts, then subtract the second fraction from the first."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "mixed_subtraction_steps",
+          "label": "Preserve the subtraction order",
+          "expression": "Choose the explanation below",
+          "completed": "Second whole-number part from first; second fractional part from first.",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "Subtract the smaller number from the larger number in every position.": "That rule could reverse part of a subtraction. Keep the original first and second amounts in their original order.",
+        "Subtract the denominators and keep the numerators.": "The denominator names the part size. Match that size, then subtract the counts of parts.",
+        "Exchange one whole every time mixed numbers are subtracted.": "Exchange is only needed when the first fractional part is too small. It is not needed in this example."
+      }
+    },
+    {
+      "id": "AF-14-P01",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "Work out 6 4/5 − 2 1/5. Give your answer as a mixed number in simplest form.",
+      "target": "Subtract the second whole-number and fractional parts from the first without exchange",
+      "response": {
+        "type": "mixed_number",
+        "require_proper_fractional_part": true,
+        "require_simplest_form": true
+      },
+      "answer": {
+        "value": "4 3/5"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The whole-number subtraction and the subtraction of fifths are both included.",
+        "correct_after_support": "Correct. The whole-number subtraction and the subtraction of fifths are both included.",
+        "on_correct_math": "6 − 2 = 4 complete wholes. → 4/5 = 4/5; 1/5 = 1/5. → 4/5 − 1/5 = 3/5. → 4 + 3/5 = 4 3/5.",
+        "on_incorrect_attempt_1": "Keep the complete wholes and fractional parts separate. Subtract the second amount from the first in both calculations.",
+        "on_incorrect_attempt_2": "Check the unremoved wholes, then the remaining matching fractional parts. Use both in your corrected answer.",
+        "on_locked_incorrect": "Response recorded. Review the whole-number subtraction and the matching fractional parts after the final check.",
+        "worked_explanation": "6 − 2 = 4 complete wholes. → 4/5 = 4/5; 1/5 = 1/5. → 4/5 − 1/5 = 3/5. → 4 + 3/5 = 4 3/5."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the complete wholes and fractional parts separate. Subtract the second amount from the first in both calculations.",
+        "hint_2": "Keep the original subtraction order. Rename the fractional parts to the same denominator before subtracting their counts.",
+        "worked_solution": "6 − 2 = 4 complete wholes. → 4/5 = 4/5; 1/5 = 1/5. → 4/5 − 1/5 = 3/5. → 4 + 3/5 = 4 3/5."
+      },
+      "working": [
+        "6 − 2 = 4 complete wholes.",
+        "4/5 = 4/5; 1/5 = 1/5.",
+        "4/5 − 1/5 = 3/5.",
+        "4 + 3/5 = 4 3/5."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_subtract_no_exchange",
+          "left": {
+            "whole": 6,
+            "n": 4,
+            "d": 5
+          },
+          "right": {
+            "whole": 2,
+            "n": 1,
+            "d": 5
+          },
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "whole_only": "The fractional part is correct. Check the whole-number subtraction: take the second whole-number part away from the first.",
+        "fraction_only": "The whole-number part is correct. Check the fractional subtraction using matching part sizes and the original order.",
+        "both_parts": "Both parts need another check. Subtract the second whole-number part from the first, and do the same with matching fractional parts.",
+        "omitted_fraction": "That gives the remaining complete wholes only. Include the fractional amount that remains as well.",
+        "omitted_wholes": "That gives only the remaining fraction. Include the complete wholes that remain as well.",
+        "check_value": "The remaining amount needs another check. An improper-fraction method is valid, but it must subtract the full second amount from the full first amount.",
+        "simplify_only": "The subtraction is correct. Only the fractional part needs simplifying to meet the requested final form.",
+        "mixed_form_required": "The value is correct. This question asks for a mixed number with a proper fractional part."
+      },
+      "evidence_profile": "mixed_subtract_components",
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-14-P02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "Work out 5 7/8 − 1 3/8. Give your answer as a mixed number in simplest form.",
+      "target": "Subtract the second whole-number and fractional parts from the first without exchange",
+      "response": {
+        "type": "mixed_number",
+        "require_proper_fractional_part": true,
+        "require_simplest_form": true
+      },
+      "answer": {
+        "value": "4 1/2"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The remaining four eighths have been simplified to one half.",
+        "correct_after_support": "Correct. The remaining four eighths have been simplified to one half.",
+        "on_correct_math": "5 − 1 = 4 complete wholes. → 7/8 = 7/8; 3/8 = 3/8. → 7/8 − 3/8 = 4/8 = 1/2. → 4 + 1/2 = 4 1/2.",
+        "on_incorrect_attempt_1": "Keep the complete wholes and fractional parts separate. Subtract the second amount from the first in both calculations.",
+        "on_incorrect_attempt_2": "Check the unremoved wholes, then the remaining matching fractional parts. Use both in your corrected answer.",
+        "on_locked_incorrect": "Response recorded. Review the whole-number subtraction and the matching fractional parts after the final check.",
+        "worked_explanation": "5 − 1 = 4 complete wholes. → 7/8 = 7/8; 3/8 = 3/8. → 7/8 − 3/8 = 4/8 = 1/2. → 4 + 1/2 = 4 1/2."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the complete wholes and fractional parts separate. Subtract the second amount from the first in both calculations.",
+        "hint_2": "Keep the original subtraction order. Rename the fractional parts to the same denominator before subtracting their counts.",
+        "worked_solution": "5 − 1 = 4 complete wholes. → 7/8 = 7/8; 3/8 = 3/8. → 7/8 − 3/8 = 4/8 = 1/2. → 4 + 1/2 = 4 1/2."
+      },
+      "working": [
+        "5 − 1 = 4 complete wholes.",
+        "7/8 = 7/8; 3/8 = 3/8.",
+        "7/8 − 3/8 = 4/8 = 1/2.",
+        "4 + 1/2 = 4 1/2."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_subtract_no_exchange",
+          "left": {
+            "whole": 5,
+            "n": 7,
+            "d": 8
+          },
+          "right": {
+            "whole": 1,
+            "n": 3,
+            "d": 8
+          },
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "whole_only": "The fractional part is correct. Check the whole-number subtraction: take the second whole-number part away from the first.",
+        "fraction_only": "The whole-number part is correct. Check the fractional subtraction using matching part sizes and the original order.",
+        "both_parts": "Both parts need another check. Subtract the second whole-number part from the first, and do the same with matching fractional parts.",
+        "omitted_fraction": "That gives the remaining complete wholes only. Include the fractional amount that remains as well.",
+        "omitted_wholes": "That gives only the remaining fraction. Include the complete wholes that remain as well.",
+        "check_value": "The remaining amount needs another check. An improper-fraction method is valid, but it must subtract the full second amount from the full first amount.",
+        "simplify_only": "The subtraction is correct. Only the fractional part needs simplifying to meet the requested final form.",
+        "mixed_form_required": "The value is correct. This question asks for a mixed number with a proper fractional part."
+      },
+      "evidence_profile": "mixed_subtract_components",
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-14-P03",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Work out 4 5/6 − 2 1/3. Give your answer as a mixed number in simplest form.",
+      "target": "Subtract the second whole-number and fractional parts from the first without exchange",
+      "response": {
+        "type": "mixed_number",
+        "require_proper_fractional_part": true,
+        "require_simplest_form": true
+      },
+      "answer": {
+        "value": "2 1/2"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Renaming the third as sixths gives matching parts to subtract.",
+        "correct_after_support": "Correct. Renaming the third as sixths gives matching parts to subtract.",
+        "on_correct_math": "4 − 2 = 2 complete wholes. → 5/6 = 5/6; 1/3 = 2/6. → 5/6 − 2/6 = 3/6 = 1/2. → 2 + 1/2 = 2 1/2.",
+        "on_incorrect_attempt_1": "Keep the complete wholes and fractional parts separate. Subtract the second amount from the first in both calculations.",
+        "on_incorrect_attempt_2": "Check the unremoved wholes, then the remaining matching fractional parts. Use both in your corrected answer.",
+        "on_locked_incorrect": "Response recorded. Review the whole-number subtraction and the matching fractional parts after the final check.",
+        "worked_explanation": "4 − 2 = 2 complete wholes. → 5/6 = 5/6; 1/3 = 2/6. → 5/6 − 2/6 = 3/6 = 1/2. → 2 + 1/2 = 2 1/2."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the complete wholes and fractional parts separate. Subtract the second amount from the first in both calculations.",
+        "hint_2": "Keep the original subtraction order. Rename the fractional parts to the same denominator before subtracting their counts.",
+        "worked_solution": "4 − 2 = 2 complete wholes. → 5/6 = 5/6; 1/3 = 2/6. → 5/6 − 2/6 = 3/6 = 1/2. → 2 + 1/2 = 2 1/2."
+      },
+      "working": [
+        "4 − 2 = 2 complete wholes.",
+        "5/6 = 5/6; 1/3 = 2/6.",
+        "5/6 − 2/6 = 3/6 = 1/2.",
+        "2 + 1/2 = 2 1/2."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_subtract_no_exchange",
+          "left": {
+            "whole": 4,
+            "n": 5,
+            "d": 6
+          },
+          "right": {
+            "whole": 2,
+            "n": 1,
+            "d": 3
+          },
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "whole_only": "The fractional part is correct. Check the whole-number subtraction: take the second whole-number part away from the first.",
+        "fraction_only": "The whole-number part is correct. Check the fractional subtraction using matching part sizes and the original order.",
+        "both_parts": "Both parts need another check. Subtract the second whole-number part from the first, and do the same with matching fractional parts.",
+        "omitted_fraction": "That gives the remaining complete wholes only. Include the fractional amount that remains as well.",
+        "omitted_wholes": "That gives only the remaining fraction. Include the complete wholes that remain as well.",
+        "check_value": "The remaining amount needs another check. An improper-fraction method is valid, but it must subtract the full second amount from the full first amount.",
+        "simplify_only": "The subtraction is correct. Only the fractional part needs simplifying to meet the requested final form.",
+        "mixed_form_required": "The value is correct. This question asks for a mixed number with a proper fractional part."
+      },
+      "evidence_profile": "mixed_subtract_components",
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-14-P04",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Work out 7 3/4 − 3 1/6. Give your answer as a mixed number in simplest form.",
+      "target": "Subtract the second whole-number and fractional parts from the first without exchange",
+      "response": {
+        "type": "mixed_number",
+        "require_proper_fractional_part": true,
+        "require_simplest_form": true
+      },
+      "answer": {
+        "value": "4 7/12"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both fractional parts were renamed as twelfths before subtraction.",
+        "correct_after_support": "Correct. Both fractional parts were renamed as twelfths before subtraction.",
+        "on_correct_math": "7 − 3 = 4 complete wholes. → 3/4 = 9/12; 1/6 = 2/12. → 9/12 − 2/12 = 7/12. → 4 + 7/12 = 4 7/12.",
+        "on_incorrect_attempt_1": "Keep the complete wholes and fractional parts separate. Subtract the second amount from the first in both calculations.",
+        "on_incorrect_attempt_2": "Check the unremoved wholes, then the remaining matching fractional parts. Use both in your corrected answer.",
+        "on_locked_incorrect": "Response recorded. Review the whole-number subtraction and the matching fractional parts after the final check.",
+        "worked_explanation": "7 − 3 = 4 complete wholes. → 3/4 = 9/12; 1/6 = 2/12. → 9/12 − 2/12 = 7/12. → 4 + 7/12 = 4 7/12."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the complete wholes and fractional parts separate. Subtract the second amount from the first in both calculations.",
+        "hint_2": "Keep the original subtraction order. Rename the fractional parts to the same denominator before subtracting their counts.",
+        "worked_solution": "7 − 3 = 4 complete wholes. → 3/4 = 9/12; 1/6 = 2/12. → 9/12 − 2/12 = 7/12. → 4 + 7/12 = 4 7/12."
+      },
+      "working": [
+        "7 − 3 = 4 complete wholes.",
+        "3/4 = 9/12; 1/6 = 2/12.",
+        "9/12 − 2/12 = 7/12.",
+        "4 + 7/12 = 4 7/12."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_subtract_no_exchange",
+          "left": {
+            "whole": 7,
+            "n": 3,
+            "d": 4
+          },
+          "right": {
+            "whole": 3,
+            "n": 1,
+            "d": 6
+          },
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "whole_only": "The fractional part is correct. Check the whole-number subtraction: take the second whole-number part away from the first.",
+        "fraction_only": "The whole-number part is correct. Check the fractional subtraction using matching part sizes and the original order.",
+        "both_parts": "Both parts need another check. Subtract the second whole-number part from the first, and do the same with matching fractional parts.",
+        "omitted_fraction": "That gives the remaining complete wholes only. Include the fractional amount that remains as well.",
+        "omitted_wholes": "That gives only the remaining fraction. Include the complete wholes that remain as well.",
+        "check_value": "The remaining amount needs another check. An improper-fraction method is valid, but it must subtract the full second amount from the full first amount.",
+        "simplify_only": "The subtraction is correct. Only the fractional part needs simplifying to meet the requested final form.",
+        "mixed_form_required": "The value is correct. This question asks for a mixed number with a proper fractional part."
+      },
+      "evidence_profile": "mixed_subtract_components",
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-14-P05",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Work out 8 7/10 − 5 1/5. Give your answer as a mixed number in simplest form.",
+      "target": "Subtract the second whole-number and fractional parts from the first without exchange",
+      "response": {
+        "type": "mixed_number",
+        "require_proper_fractional_part": true,
+        "require_simplest_form": true
+      },
+      "answer": {
+        "value": "3 1/2"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The fifth was renamed as tenths, then the remaining fraction was simplified.",
+        "correct_after_support": "Correct. The fifth was renamed as tenths, then the remaining fraction was simplified.",
+        "on_correct_math": "8 − 5 = 3 complete wholes. → 7/10 = 7/10; 1/5 = 2/10. → 7/10 − 2/10 = 5/10 = 1/2. → 3 + 1/2 = 3 1/2.",
+        "on_incorrect_attempt_1": "Keep the complete wholes and fractional parts separate. Subtract the second amount from the first in both calculations.",
+        "on_incorrect_attempt_2": "Check the unremoved wholes, then the remaining matching fractional parts. Use both in your corrected answer.",
+        "on_locked_incorrect": "Response recorded. Review the whole-number subtraction and the matching fractional parts after the final check.",
+        "worked_explanation": "8 − 5 = 3 complete wholes. → 7/10 = 7/10; 1/5 = 2/10. → 7/10 − 2/10 = 5/10 = 1/2. → 3 + 1/2 = 3 1/2."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the complete wholes and fractional parts separate. Subtract the second amount from the first in both calculations.",
+        "hint_2": "Keep the original subtraction order. Rename the fractional parts to the same denominator before subtracting their counts.",
+        "worked_solution": "8 − 5 = 3 complete wholes. → 7/10 = 7/10; 1/5 = 2/10. → 7/10 − 2/10 = 5/10 = 1/2. → 3 + 1/2 = 3 1/2."
+      },
+      "working": [
+        "8 − 5 = 3 complete wholes.",
+        "7/10 = 7/10; 1/5 = 2/10.",
+        "7/10 − 2/10 = 5/10 = 1/2.",
+        "3 + 1/2 = 3 1/2."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_subtract_no_exchange",
+          "left": {
+            "whole": 8,
+            "n": 7,
+            "d": 10
+          },
+          "right": {
+            "whole": 5,
+            "n": 1,
+            "d": 5
+          },
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "whole_only": "The fractional part is correct. Check the whole-number subtraction: take the second whole-number part away from the first.",
+        "fraction_only": "The whole-number part is correct. Check the fractional subtraction using matching part sizes and the original order.",
+        "both_parts": "Both parts need another check. Subtract the second whole-number part from the first, and do the same with matching fractional parts.",
+        "omitted_fraction": "That gives the remaining complete wholes only. Include the fractional amount that remains as well.",
+        "omitted_wholes": "That gives only the remaining fraction. Include the complete wholes that remain as well.",
+        "check_value": "The remaining amount needs another check. An improper-fraction method is valid, but it must subtract the full second amount from the full first amount.",
+        "simplify_only": "The subtraction is correct. Only the fractional part needs simplifying to meet the requested final form.",
+        "mixed_form_required": "The value is correct. This question asks for a mixed number with a proper fractional part."
+      },
+      "evidence_profile": "mixed_subtract_components",
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-14-P06",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Work out 6 11/12 − 2 1/4. Give your answer as a mixed number in simplest form.",
+      "target": "Subtract the second whole-number and fractional parts from the first without exchange",
+      "response": {
+        "type": "mixed_number",
+        "require_proper_fractional_part": true,
+        "require_simplest_form": true
+      },
+      "answer": {
+        "value": "4 2/3"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. After removing the quarter as twelfths, the remaining fraction simplifies to two thirds.",
+        "correct_after_support": "Correct. After removing the quarter as twelfths, the remaining fraction simplifies to two thirds.",
+        "on_correct_math": "6 − 2 = 4 complete wholes. → 11/12 = 11/12; 1/4 = 3/12. → 11/12 − 3/12 = 8/12 = 2/3. → 4 + 2/3 = 4 2/3.",
+        "on_incorrect_attempt_1": "Keep the complete wholes and fractional parts separate. Subtract the second amount from the first in both calculations.",
+        "on_incorrect_attempt_2": "Check the unremoved wholes, then the remaining matching fractional parts. Use both in your corrected answer.",
+        "on_locked_incorrect": "Response recorded. Review the whole-number subtraction and the matching fractional parts after the final check.",
+        "worked_explanation": "6 − 2 = 4 complete wholes. → 11/12 = 11/12; 1/4 = 3/12. → 11/12 − 3/12 = 8/12 = 2/3. → 4 + 2/3 = 4 2/3."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the complete wholes and fractional parts separate. Subtract the second amount from the first in both calculations.",
+        "hint_2": "Keep the original subtraction order. Rename the fractional parts to the same denominator before subtracting their counts.",
+        "worked_solution": "6 − 2 = 4 complete wholes. → 11/12 = 11/12; 1/4 = 3/12. → 11/12 − 3/12 = 8/12 = 2/3. → 4 + 2/3 = 4 2/3."
+      },
+      "working": [
+        "6 − 2 = 4 complete wholes.",
+        "11/12 = 11/12; 1/4 = 3/12.",
+        "11/12 − 3/12 = 8/12 = 2/3.",
+        "4 + 2/3 = 4 2/3."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_subtract_no_exchange",
+          "left": {
+            "whole": 6,
+            "n": 11,
+            "d": 12
+          },
+          "right": {
+            "whole": 2,
+            "n": 1,
+            "d": 4
+          },
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "whole_only": "The fractional part is correct. Check the whole-number subtraction: take the second whole-number part away from the first.",
+        "fraction_only": "The whole-number part is correct. Check the fractional subtraction using matching part sizes and the original order.",
+        "both_parts": "Both parts need another check. Subtract the second whole-number part from the first, and do the same with matching fractional parts.",
+        "omitted_fraction": "That gives the remaining complete wholes only. Include the fractional amount that remains as well.",
+        "omitted_wholes": "That gives only the remaining fraction. Include the complete wholes that remain as well.",
+        "check_value": "The remaining amount needs another check. An improper-fraction method is valid, but it must subtract the full second amount from the full first amount.",
+        "simplify_only": "The subtraction is correct. Only the fractional part needs simplifying to meet the requested final form.",
+        "mixed_form_required": "The value is correct. This question asks for a mixed number with a proper fractional part."
+      },
+      "evidence_profile": "mixed_subtract_components",
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-14-P07",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Which answer is correct for 5 5/7 − 2 2/7?",
+      "target": "Subtract the second whole-number and fractional parts from the first without exchange",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "3 3/7",
+          "3 3/14",
+          "2 3/7",
+          "3/7"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "3 3/7"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The remaining wholes are included, and the parts still count sevenths.",
+        "correct_after_support": "Correct. The remaining wholes are included, and the parts still count sevenths.",
+        "on_correct_math": "5 − 2 = 3 complete wholes. → Both fractional parts already count sevenths. → 5/7 − 2/7 = 3/7. → The remaining amount is 3 3/7.",
+        "on_incorrect_attempt_1": "Check the remaining complete wholes and the size of the fractional parts.",
+        "on_incorrect_attempt_2": "Three complete wholes and three sevenths both remain. Select the answer that includes both.",
+        "on_locked_incorrect": "Response recorded. Review the whole-number subtraction and the matching fractional parts after the final check.",
+        "worked_explanation": "5 − 2 = 3 complete wholes. → Both fractional parts already count sevenths. → 5/7 − 2/7 = 3/7. → The remaining amount is 3 3/7."
+      },
+      "mathematical_support": {
+        "hint_1": "Check the remaining complete wholes and the size of the fractional parts.",
+        "hint_2": "Keep the original subtraction order. Rename the fractional parts to the same denominator before subtracting their counts.",
+        "worked_solution": "5 − 2 = 3 complete wholes. → Both fractional parts already count sevenths. → 5/7 − 2/7 = 3/7. → The remaining amount is 3 3/7."
+      },
+      "working": [
+        "5 − 2 = 3 complete wholes.",
+        "Both fractional parts already count sevenths.",
+        "5/7 − 2/7 = 3/7.",
+        "The remaining amount is 3 3/7."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_subtract_no_exchange",
+          "left": {
+            "whole": 5,
+            "n": 5,
+            "d": 7
+          },
+          "right": {
+            "whole": 2,
+            "n": 2,
+            "d": 7
+          },
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "3 3/14": "The whole-number subtraction is right, but the denominator stays seven when subtracting sevenths.",
+        "2 3/7": "The fraction is right. Check how many complete wholes remain after subtracting two from five.",
+        "3/7": "That gives only the fractional difference and omits the complete wholes that remain."
+      }
+    },
+    {
+      "id": "AF-14-X01",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "practice",
+      "prompt": "A roll of ribbon is 7 3/4 metres long. A length of 2 1/8 metres is cut from it. What length of ribbon remains?",
+      "target": "Subtract the second whole-number and fractional parts from the first without exchange",
+      "response": {
+        "type": "fraction",
+        "allow_mixed_number": true,
+        "default_form": "mixed",
+        "require_all_mixed_fields": true,
+        "input_label": "Remaining amount",
+        "suffix": "m"
+      },
+      "answer": {
+        "value": "5 5/8"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The remaining ribbon excludes both the complete metres and fractional length cut off.",
+        "correct_after_support": "Correct. The remaining ribbon excludes both the complete metres and fractional length cut off.",
+        "on_correct_math": "7 − 2 = 5 complete wholes. → 3/4 = 6/8; 1/8 = 1/8. → 6/8 − 1/8 = 5/8. → 5 + 5/8 = 5 5/8 m.",
+        "on_incorrect_attempt_1": "Keep the complete wholes and fractional parts separate. Subtract the second amount from the first in both calculations.",
+        "on_incorrect_attempt_2": "Check the unremoved wholes, then the remaining matching fractional parts. Use both in your corrected answer.",
+        "on_locked_incorrect": "Response recorded. Review the whole-number subtraction and the matching fractional parts after the final check.",
+        "worked_explanation": "7 − 2 = 5 complete wholes. → 3/4 = 6/8; 1/8 = 1/8. → 6/8 − 1/8 = 5/8. → 5 + 5/8 = 5 5/8 m."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the complete wholes and fractional parts separate. Subtract the second amount from the first in both calculations.",
+        "hint_2": "Keep the original subtraction order. Rename the fractional parts to the same denominator before subtracting their counts.",
+        "worked_solution": "7 − 2 = 5 complete wholes. → 3/4 = 6/8; 1/8 = 1/8. → 6/8 − 1/8 = 5/8. → 5 + 5/8 = 5 5/8 m."
+      },
+      "working": [
+        "7 − 2 = 5 complete wholes.",
+        "3/4 = 6/8; 1/8 = 1/8.",
+        "6/8 − 1/8 = 5/8.",
+        "5 + 5/8 = 5 5/8 m."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_subtract_no_exchange",
+          "left": {
+            "whole": 7,
+            "n": 3,
+            "d": 4
+          },
+          "right": {
+            "whole": 2,
+            "n": 1,
+            "d": 8
+          },
+          "object": "ribbon",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "whole_only": "The fractional part is correct. Check the whole-number subtraction: take the second whole-number part away from the first.",
+        "fraction_only": "The whole-number part is correct. Check the fractional subtraction using matching part sizes and the original order.",
+        "both_parts": "Both parts need another check. Subtract the second whole-number part from the first, and do the same with matching fractional parts.",
+        "omitted_fraction": "That gives the remaining complete wholes only. Include the fractional amount that remains as well.",
+        "omitted_wholes": "That gives only the remaining fraction. Include the complete wholes that remain as well.",
+        "check_value": "The remaining amount needs another check. An improper-fraction method is valid, but it must subtract the full second amount from the full first amount.",
+        "simplify_only": "The subtraction is correct. Only the fractional part needs simplifying to meet the requested final form.",
+        "mixed_form_required": "The value is correct. This question asks for a mixed number with a proper fractional part."
+      },
+      "evidence_profile": "mixed_subtract_components",
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-14-X02",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "practice",
+      "prompt": "A container holds 6 5/6 litres of water. A volume of 2 1/3 litres is poured out. How much water remains?",
+      "target": "Subtract the second whole-number and fractional parts from the first without exchange",
+      "response": {
+        "type": "fraction",
+        "allow_mixed_number": true,
+        "default_form": "mixed",
+        "require_all_mixed_fields": true,
+        "input_label": "Remaining amount",
+        "suffix": "litres"
+      },
+      "answer": {
+        "value": "4 1/2"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The remaining volume excludes both the complete litres and the fractional amount poured out.",
+        "correct_after_support": "Correct. The remaining volume excludes both the complete litres and the fractional amount poured out.",
+        "on_correct_math": "6 − 2 = 4 complete wholes. → 5/6 = 5/6; 1/3 = 2/6. → 5/6 − 2/6 = 3/6 = 1/2. → 4 + 1/2 = 4 1/2 litres.",
+        "on_incorrect_attempt_1": "Keep the complete wholes and fractional parts separate. Subtract the second amount from the first in both calculations.",
+        "on_incorrect_attempt_2": "Check the unremoved wholes, then the remaining matching fractional parts. Use both in your corrected answer.",
+        "on_locked_incorrect": "Response recorded. Review the whole-number subtraction and the matching fractional parts after the final check.",
+        "worked_explanation": "6 − 2 = 4 complete wholes. → 5/6 = 5/6; 1/3 = 2/6. → 5/6 − 2/6 = 3/6 = 1/2. → 4 + 1/2 = 4 1/2 litres."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the complete wholes and fractional parts separate. Subtract the second amount from the first in both calculations.",
+        "hint_2": "Keep the original subtraction order. Rename the fractional parts to the same denominator before subtracting their counts.",
+        "worked_solution": "6 − 2 = 4 complete wholes. → 5/6 = 5/6; 1/3 = 2/6. → 5/6 − 2/6 = 3/6 = 1/2. → 4 + 1/2 = 4 1/2 litres."
+      },
+      "working": [
+        "6 − 2 = 4 complete wholes.",
+        "5/6 = 5/6; 1/3 = 2/6.",
+        "5/6 − 2/6 = 3/6 = 1/2.",
+        "4 + 1/2 = 4 1/2 litres."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_subtract_no_exchange",
+          "left": {
+            "whole": 6,
+            "n": 5,
+            "d": 6
+          },
+          "right": {
+            "whole": 2,
+            "n": 1,
+            "d": 3
+          },
+          "object": "water",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "whole_only": "The fractional part is correct. Check the whole-number subtraction: take the second whole-number part away from the first.",
+        "fraction_only": "The whole-number part is correct. Check the fractional subtraction using matching part sizes and the original order.",
+        "both_parts": "Both parts need another check. Subtract the second whole-number part from the first, and do the same with matching fractional parts.",
+        "omitted_fraction": "That gives the remaining complete wholes only. Include the fractional amount that remains as well.",
+        "omitted_wholes": "That gives only the remaining fraction. Include the complete wholes that remain as well.",
+        "check_value": "The remaining amount needs another check. An improper-fraction method is valid, but it must subtract the full second amount from the full first amount.",
+        "simplify_only": "The subtraction is correct. Only the fractional part needs simplifying to meet the requested final form.",
+        "mixed_form_required": "The value is correct. This question asks for a mixed number with a proper fractional part."
+      },
+      "evidence_profile": "mixed_subtract_components",
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-14-X03",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "practice",
+      "prompt": "Maya plans to walk 8 7/10 kilometres. She has already walked 3 1/5 kilometres. How far does she have left to walk?",
+      "target": "Subtract the second whole-number and fractional parts from the first without exchange",
+      "response": {
+        "type": "fraction",
+        "allow_mixed_number": true,
+        "default_form": "mixed",
+        "require_all_mixed_fields": true,
+        "input_label": "Remaining amount",
+        "suffix": "km"
+      },
+      "answer": {
+        "value": "5 1/2"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The distance already walked has been removed from Maya’s planned distance.",
+        "correct_after_support": "Correct. The distance already walked has been removed from Maya’s planned distance.",
+        "on_correct_math": "8 − 3 = 5 complete wholes. → 7/10 = 7/10; 1/5 = 2/10. → 7/10 − 2/10 = 5/10 = 1/2. → 5 + 1/2 = 5 1/2 km.",
+        "on_incorrect_attempt_1": "Keep the complete wholes and fractional parts separate. Subtract the second amount from the first in both calculations.",
+        "on_incorrect_attempt_2": "Check the unremoved wholes, then the remaining matching fractional parts. Use both in your corrected answer.",
+        "on_locked_incorrect": "Response recorded. Review the whole-number subtraction and the matching fractional parts after the final check.",
+        "worked_explanation": "8 − 3 = 5 complete wholes. → 7/10 = 7/10; 1/5 = 2/10. → 7/10 − 2/10 = 5/10 = 1/2. → 5 + 1/2 = 5 1/2 km."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the complete wholes and fractional parts separate. Subtract the second amount from the first in both calculations.",
+        "hint_2": "Keep the original subtraction order. Rename the fractional parts to the same denominator before subtracting their counts.",
+        "worked_solution": "8 − 3 = 5 complete wholes. → 7/10 = 7/10; 1/5 = 2/10. → 7/10 − 2/10 = 5/10 = 1/2. → 5 + 1/2 = 5 1/2 km."
+      },
+      "working": [
+        "8 − 3 = 5 complete wholes.",
+        "7/10 = 7/10; 1/5 = 2/10.",
+        "7/10 − 2/10 = 5/10 = 1/2.",
+        "5 + 1/2 = 5 1/2 km."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_subtract_no_exchange",
+          "left": {
+            "whole": 8,
+            "n": 7,
+            "d": 10
+          },
+          "right": {
+            "whole": 3,
+            "n": 1,
+            "d": 5
+          },
+          "object": "walk",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "whole_only": "The fractional part is correct. Check the whole-number subtraction: take the second whole-number part away from the first.",
+        "fraction_only": "The whole-number part is correct. Check the fractional subtraction using matching part sizes and the original order.",
+        "both_parts": "Both parts need another check. Subtract the second whole-number part from the first, and do the same with matching fractional parts.",
+        "omitted_fraction": "That gives the remaining complete wholes only. Include the fractional amount that remains as well.",
+        "omitted_wholes": "That gives only the remaining fraction. Include the complete wholes that remain as well.",
+        "check_value": "The remaining amount needs another check. An improper-fraction method is valid, but it must subtract the full second amount from the full first amount.",
+        "simplify_only": "The subtraction is correct. Only the fractional part needs simplifying to meet the requested final form.",
+        "mixed_form_required": "The value is correct. This question asks for a mixed number with a proper fractional part."
+      },
+      "evidence_profile": "mixed_subtract_components",
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-14-X04",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A tank contains 9 3/8 litres of liquid. A volume of 4 1/8 litres is removed. Which calculation finds the volume remaining?",
+      "target": "Subtract the second whole-number and fractional parts from the first without exchange",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "9 3/8 − 4 1/8",
+          "9 3/8 + 4 1/8",
+          "9 3/8 × 4 1/8",
+          "9 3/8 ÷ 4 1/8"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "9 3/8 − 4 1/8"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Subtraction removes the stated volume from the original tank contents.",
+        "correct_after_support": "Correct. Subtraction removes the stated volume from the original tank contents.",
+        "on_correct_math": "The volume removed is no longer in the tank. → Subtract the removed volume from the original volume. → Use 9 3/8 − 4 1/8.",
+        "on_incorrect_attempt_1": "Decide how removing some liquid changes the original amount.",
+        "on_incorrect_attempt_2": "The liquid removed is taken away from the original volume. Select subtraction in that order.",
+        "on_locked_incorrect": "Response recorded. Review the whole-number subtraction and the matching fractional parts after the final check.",
+        "worked_explanation": "The volume removed is no longer in the tank. → Subtract the removed volume from the original volume. → Use 9 3/8 − 4 1/8."
+      },
+      "mathematical_support": {
+        "hint_1": "Decide how removing some liquid changes the original amount.",
+        "hint_2": "Keep the original subtraction order. Rename the fractional parts to the same denominator before subtracting their counts.",
+        "worked_solution": "The volume removed is no longer in the tank. → Subtract the removed volume from the original volume. → Use 9 3/8 − 4 1/8."
+      },
+      "working": [
+        "The volume removed is no longer in the tank.",
+        "Subtract the removed volume from the original volume.",
+        "Use 9 3/8 − 4 1/8."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_subtract_no_exchange",
+          "left": {
+            "whole": 9,
+            "n": 3,
+            "d": 8
+          },
+          "right": {
+            "whole": 4,
+            "n": 1,
+            "d": 8
+          },
+          "object": "tank",
+          "math_text": true,
+          "compact_captions": true,
+          "operation_choice": true
+        }
+      },
+      "response_feedback": {
+        "9 3/8 + 4 1/8": "Addition would put more liquid into the tank. This volume is being removed.",
+        "9 3/8 × 4 1/8": "The question is not scaling a volume. Some of the original liquid is removed.",
+        "9 3/8 ÷ 4 1/8": "Division would count groups or compare volumes by a ratio. Here the question asks what remains."
+      }
+    },
+    {
+      "id": "AF-14-E01",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "Work out 7 6/7 − 3 2/7. Give your answer as a mixed number in simplest form.",
+      "target": "Subtract the second whole-number and fractional parts from the first without exchange",
+      "response": {
+        "type": "mixed_number",
+        "require_proper_fractional_part": true,
+        "require_simplest_form": true
+      },
+      "answer": {
+        "value": "4 4/7"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Recorded. Both the remaining wholes and the remaining sevenths are included.",
+        "correct_after_support": "Recorded. Both the remaining wholes and the remaining sevenths are included.",
+        "on_correct_math": "7 − 3 = 4 complete wholes. → 6/7 = 6/7; 2/7 = 2/7. → 6/7 − 2/7 = 4/7. → 4 + 4/7 = 4 4/7.",
+        "on_incorrect_attempt_1": "Keep the complete wholes and fractional parts separate. Subtract the second amount from the first in both calculations.",
+        "on_incorrect_attempt_2": "Check the unremoved wholes, then the remaining matching fractional parts. Use both in your corrected answer.",
+        "on_locked_incorrect": "Response recorded. Review the whole-number subtraction and the matching fractional parts after the final check.",
+        "worked_explanation": "7 − 3 = 4 complete wholes. → 6/7 = 6/7; 2/7 = 2/7. → 6/7 − 2/7 = 4/7. → 4 + 4/7 = 4 4/7."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the complete wholes and fractional parts separate. Subtract the second amount from the first in both calculations.",
+        "hint_2": "Keep the original subtraction order. Rename the fractional parts to the same denominator before subtracting their counts.",
+        "worked_solution": "7 − 3 = 4 complete wholes. → 6/7 = 6/7; 2/7 = 2/7. → 6/7 − 2/7 = 4/7. → 4 + 4/7 = 4 4/7."
+      },
+      "working": [
+        "7 − 3 = 4 complete wholes.",
+        "6/7 = 6/7; 2/7 = 2/7.",
+        "6/7 − 2/7 = 4/7.",
+        "4 + 4/7 = 4 4/7."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_subtract_no_exchange",
+          "left": {
+            "whole": 7,
+            "n": 6,
+            "d": 7
+          },
+          "right": {
+            "whole": 3,
+            "n": 2,
+            "d": 7
+          },
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "whole_only": "The fractional part is correct. Check the whole-number subtraction: take the second whole-number part away from the first.",
+        "fraction_only": "The whole-number part is correct. Check the fractional subtraction using matching part sizes and the original order.",
+        "both_parts": "Both parts need another check. Subtract the second whole-number part from the first, and do the same with matching fractional parts.",
+        "omitted_fraction": "That gives the remaining complete wholes only. Include the fractional amount that remains as well.",
+        "omitted_wholes": "That gives only the remaining fraction. Include the complete wholes that remain as well.",
+        "check_value": "The remaining amount needs another check. An improper-fraction method is valid, but it must subtract the full second amount from the full first amount.",
+        "simplify_only": "The subtraction is correct. Only the fractional part needs simplifying to meet the requested final form.",
+        "mixed_form_required": "The value is correct. This question asks for a mixed number with a proper fractional part."
+      },
+      "evidence_profile": "mixed_subtract_components",
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-14-E02",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "Work out 6 5/6 − 2 1/4. Give your answer as a mixed number in simplest form.",
+      "target": "Subtract the second whole-number and fractional parts from the first without exchange",
+      "response": {
+        "type": "mixed_number",
+        "require_proper_fractional_part": true,
+        "require_simplest_form": true
+      },
+      "answer": {
+        "value": "4 7/12"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Recorded. Matching fractional parts were subtracted in the original order.",
+        "correct_after_support": "Recorded. Matching fractional parts were subtracted in the original order.",
+        "on_correct_math": "6 − 2 = 4 complete wholes. → 5/6 = 10/12; 1/4 = 3/12. → 10/12 − 3/12 = 7/12. → 4 + 7/12 = 4 7/12.",
+        "on_incorrect_attempt_1": "Keep the complete wholes and fractional parts separate. Subtract the second amount from the first in both calculations.",
+        "on_incorrect_attempt_2": "Check the unremoved wholes, then the remaining matching fractional parts. Use both in your corrected answer.",
+        "on_locked_incorrect": "Response recorded. Review the whole-number subtraction and the matching fractional parts after the final check.",
+        "worked_explanation": "6 − 2 = 4 complete wholes. → 5/6 = 10/12; 1/4 = 3/12. → 10/12 − 3/12 = 7/12. → 4 + 7/12 = 4 7/12."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the complete wholes and fractional parts separate. Subtract the second amount from the first in both calculations.",
+        "hint_2": "Keep the original subtraction order. Rename the fractional parts to the same denominator before subtracting their counts.",
+        "worked_solution": "6 − 2 = 4 complete wholes. → 5/6 = 10/12; 1/4 = 3/12. → 10/12 − 3/12 = 7/12. → 4 + 7/12 = 4 7/12."
+      },
+      "working": [
+        "6 − 2 = 4 complete wholes.",
+        "5/6 = 10/12; 1/4 = 3/12.",
+        "10/12 − 3/12 = 7/12.",
+        "4 + 7/12 = 4 7/12."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_subtract_no_exchange",
+          "left": {
+            "whole": 6,
+            "n": 5,
+            "d": 6
+          },
+          "right": {
+            "whole": 2,
+            "n": 1,
+            "d": 4
+          },
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "whole_only": "The fractional part is correct. Check the whole-number subtraction: take the second whole-number part away from the first.",
+        "fraction_only": "The whole-number part is correct. Check the fractional subtraction using matching part sizes and the original order.",
+        "both_parts": "Both parts need another check. Subtract the second whole-number part from the first, and do the same with matching fractional parts.",
+        "omitted_fraction": "That gives the remaining complete wholes only. Include the fractional amount that remains as well.",
+        "omitted_wholes": "That gives only the remaining fraction. Include the complete wholes that remain as well.",
+        "check_value": "The remaining amount needs another check. An improper-fraction method is valid, but it must subtract the full second amount from the full first amount.",
+        "simplify_only": "The subtraction is correct. Only the fractional part needs simplifying to meet the requested final form.",
+        "mixed_form_required": "The value is correct. This question asks for a mixed number with a proper fractional part."
+      },
+      "evidence_profile": "mixed_subtract_components",
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "AF-14-E03",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "Which method correctly works out 5 9/10 − 2 1/5?",
+      "target": "Subtract the second whole-number and fractional parts from the first without exchange",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "5 − 2 = 3; 9/10 − 1/5 = 9/10 − 2/10 = 7/10; answer 3 7/10",
+          "5 − 2 = 3; 9/10 − 1/5 = 8/5; answer 3 8/5",
+          "5 − 2 = 3; 9/10 − 1/5 = 8/15; answer 3 8/15",
+          "5 9/10 − 2 1/5 = 3/7"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "5 − 2 = 3; 9/10 − 1/5 = 9/10 − 2/10 = 7/10; answer 3 7/10"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Recorded. The method preserves the subtraction order and removes matching fractional parts.",
+        "correct_after_support": "Recorded. The method preserves the subtraction order and removes matching fractional parts.",
+        "on_correct_math": "5 − 2 = 3 complete wholes. → 1/5 = 2/10, while 9/10 stays unchanged. → 9/10 − 2/10 = 7/10. → The remaining amount is 3 7/10.",
+        "on_incorrect_attempt_1": "No hints are available in the final check.",
+        "on_incorrect_attempt_2": "The final response is locked.",
+        "on_locked_incorrect": "Response recorded. Review the whole-number subtraction and the matching fractional parts after the final check.",
+        "worked_explanation": "5 − 2 = 3 complete wholes. → 1/5 = 2/10, while 9/10 stays unchanged. → 9/10 − 2/10 = 7/10. → The remaining amount is 3 7/10."
+      },
+      "mathematical_support": {
+        "hint_1": "No hints are available in the final check.",
+        "hint_2": "Keep the original subtraction order. Rename the fractional parts to the same denominator before subtracting their counts.",
+        "worked_solution": "5 − 2 = 3 complete wholes. → 1/5 = 2/10, while 9/10 stays unchanged. → 9/10 − 2/10 = 7/10. → The remaining amount is 3 7/10."
+      },
+      "working": [
+        "5 − 2 = 3 complete wholes.",
+        "1/5 = 2/10, while 9/10 stays unchanged.",
+        "9/10 − 2/10 = 7/10.",
+        "The remaining amount is 3 7/10."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_subtract_no_exchange",
+          "left": {
+            "whole": 5,
+            "n": 9,
+            "d": 10
+          },
+          "right": {
+            "whole": 2,
+            "n": 1,
+            "d": 5
+          },
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "5 − 2 = 3; 9/10 − 1/5 = 8/5; answer 3 8/5": "The whole-number subtraction is correct. The fractional calculation must rename the fifth as tenths before subtracting.",
+        "5 − 2 = 3; 9/10 − 1/5 = 8/15; answer 3 8/15": "The whole-number subtraction is correct, but adding denominators changes the part size. Subtract matching tenths.",
+        "5 9/10 − 2 1/5 = 3/7": "The remaining complete wholes are missing, and subtracting denominators does not give a valid fractional difference."
+      },
+      "final_error_feedback": "answer_specific"
+    }
+  ],
+  "canonical_lesson": {
+    "version": "AF14-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

@@ -1,0 +1,2199 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "MD-13 - Divide one fraction by another",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-17",
+      "sha256": "61fe4df64f8cc1fcfcacb9aaaaa5e8d76be2f0e05a68d8a66345ca9d8a3bf426"
+    },
+    "authored_scope": "The approved equal-part regrouping model, reciprocal worked method, exact graduated practice and grouping contexts.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "MD13-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "pending",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        3,
+        4,
+        5,
+        6,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "source_repairs_consulted": [
+        9,
+        10,
+        11
+      ],
+      "note": "All 17 source pages and p3–5 storyboard reviewed. Proper and improper divisors retain different size effects relative to the dividend. Both final pairs are fresh in the active route. Direct grouping, cancellation and other exact methods remain valid. The method check rejects a correct-looking final result preceded by invalid equalities. No claims are made about unobserved written work. Browser QA remains pending while its automatic approval service is unavailable."
+    }
+  },
+  "identity": {
+    "id": "MD-13",
+    "slug": "divide-one-fraction-by-another",
+    "title": "Divide one fraction by another",
+    "strand": "Number",
+    "cluster": "Multiplying and Dividing Fractions",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Divide one positive fraction by another using any valid exact method, simplify where requested and interpret the quotient as a group count.",
+    "success_criteria": [
+      "Keep the first fraction unchanged.",
+      "Change division to multiplication and reciprocate only the divisor.",
+      "Multiply and simplify accurately.",
+      "Use the divisor’s size relative to one to check the quotient’s size relative to the dividend.",
+      "Apply exact grouping in short measuring and capacity contexts."
+    ],
+    "boundaries": {
+      "includes": [
+        "Positive proper and improper fractions",
+        "Exact whole, proper-fraction, improper-fraction and mixed-number results",
+        "Reciprocal, common-denominator grouping and repeated-subtraction methods",
+        "Optional cancellation",
+        "Divisors below and above one",
+        "Short grouping and measuring contexts"
+      ],
+      "excludes": [
+        "Mixed numbers in the starting calculation",
+        "Zero divisors",
+        "Negative fractions",
+        "Decimal divisors",
+        "Algebraic fractions",
+        "Multi-step operation selection",
+        "Diagnostic and delayed Retrieval routes"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "MD-09",
+      "MD-05",
+      "MD-06",
+      "MD-07",
+      "AF-04"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for MD-09, MD-05, MD-06, MD-07, AF-04 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "fraction",
+      "integer",
+      "single_choice"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    }
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "The quotient counts copies of the divisor within the unchanged starting fraction.",
+    "invariant": "The exact quotient multiplied by the divisor restores the dividend.",
+    "mathematical_rule": "Keep the first fraction and multiply by the reciprocal of the second fraction.",
+    "must_notice": [
+      "Only the divisor becomes its reciprocal.",
+      "Equivalent partitions can show the group count.",
+      "A divisor below one increases the result relative to the dividend.",
+      "A divisor above one decreases the result relative to the dividend.",
+      "A correct-looking final value cannot justify invalid intervening equalities."
+    ],
+    "common_confusions": [
+      "Multiplying by the unchanged divisor",
+      "Reciprocating the first fraction",
+      "Reciprocating both fractions",
+      "Incorrect multiplication or simplification",
+      "Assuming all division makes the result smaller"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "Measure a fractional amount",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Measure a fractional amount",
+          "initial_state": "Measure a fractional amount",
+          "model": {
+            "kind": "fraction_groups",
+            "a": 3,
+            "b": 4,
+            "c": 3,
+            "d": 8,
+            "object": "bars",
+            "target": "Number of fraction-sized groups",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "original"
+          }
+        },
+        "narration": {
+          "script": "The shaded amount is three quarters. We want to count how many groups of three eighths fit inside that amount."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Use equal-sized small parts",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Use equal-sized small parts",
+          "initial_state": "Use equal-sized small parts",
+          "model": {
+            "kind": "fraction_groups",
+            "a": 3,
+            "b": 4,
+            "c": 3,
+            "d": 8,
+            "object": "bars",
+            "target": "Number of fraction-sized groups",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "equivalent"
+          }
+        },
+        "narration": {
+          "script": "Split each quarter into two equal eighths. The shaded width stays the same while the amount is now described as six eighths."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Count complete groups",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Count complete groups",
+          "initial_state": "Count complete groups",
+          "model": {
+            "kind": "fraction_groups",
+            "a": 3,
+            "b": 4,
+            "c": 3,
+            "d": 8,
+            "object": "bars",
+            "target": "Number of fraction-sized groups",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "grouped"
+          }
+        },
+        "narration": {
+          "script": "Put three of the shaded eighths into each group. Two complete groups fit, with none of the shaded amount left over."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Connect the model to the method",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Connect the model to the method",
+          "initial_state": "Connect the model to the method",
+          "model": {
+            "kind": "fraction_groups",
+            "a": 3,
+            "b": 4,
+            "c": 3,
+            "d": 8,
+            "object": "symbolic",
+            "target": "Number of fraction-sized groups",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "reciprocal"
+          }
+        },
+        "narration": {
+          "script": "The first fraction remains the amount being measured. Multiplying by the divisor’s reciprocal gives the same group count."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Explain the grouping",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Explain the grouping",
+          "initial_state": "Explain the grouping",
+          "model": null
+        },
+        "narration": {
+          "script": "Choose the explanation that connects the group size with the unchanged shaded amount."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "MD-13-C01"
+        },
+        "next_step": "T06"
+      },
+      {
+        "id": "T06",
+        "stage": "teaching",
+        "purpose": "Keep the new starting fraction",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Keep the new starting fraction",
+          "initial_state": "Keep the new starting fraction",
+          "model": {
+            "kind": "fraction_groups",
+            "a": 5,
+            "b": 6,
+            "c": 2,
+            "d": 3,
+            "object": "symbolic",
+            "target": "Number of fraction-sized groups",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "keep"
+          }
+        },
+        "narration": {
+          "script": "The new example begins with a different amount. Keep that first fraction unchanged."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T07"
+      },
+      {
+        "id": "T07",
+        "stage": "teaching",
+        "purpose": "Reciprocate only the divisor",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Reciprocate only the divisor",
+          "initial_state": "Reciprocate only the divisor",
+          "model": {
+            "kind": "fraction_groups",
+            "a": 5,
+            "b": 6,
+            "c": 2,
+            "d": 3,
+            "object": "symbolic",
+            "target": "Number of fraction-sized groups",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "reciprocal"
+          }
+        },
+        "narration": {
+          "script": "Change division to multiplication and exchange the divisor’s numerator and denominator. The first fraction stays fixed."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T08"
+      },
+      {
+        "id": "T08",
+        "stage": "teaching",
+        "purpose": "Multiply the fraction parts",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Multiply the fraction parts",
+          "initial_state": "Multiply the fraction parts",
+          "model": {
+            "kind": "fraction_groups",
+            "a": 5,
+            "b": 6,
+            "c": 2,
+            "d": 3,
+            "object": "symbolic",
+            "target": "Number of fraction-sized groups",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "raw"
+          }
+        },
+        "narration": {
+          "script": "Multiply numerator by numerator and denominator by denominator. This gives an exact product before simplification."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T09"
+      },
+      {
+        "id": "T09",
+        "stage": "teaching",
+        "purpose": "Simplify without changing the value",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Simplify without changing the value",
+          "initial_state": "Simplify without changing the value",
+          "model": {
+            "kind": "fraction_groups",
+            "a": 5,
+            "b": 6,
+            "c": 2,
+            "d": 3,
+            "object": "symbolic",
+            "target": "Number of fraction-sized groups",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "simplified"
+          }
+        },
+        "narration": {
+          "script": "Both fraction parts share a common factor. Dividing them by that same factor gives the simplest improper fraction."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T10"
+      },
+      {
+        "id": "T10",
+        "stage": "teaching",
+        "purpose": "Read the mixed-number form",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Read the mixed-number form",
+          "initial_state": "Read the mixed-number form",
+          "model": {
+            "kind": "fraction_groups",
+            "a": 5,
+            "b": 6,
+            "c": 2,
+            "d": 3,
+            "object": "symbolic",
+            "target": "Number of fraction-sized groups",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "mixed"
+          }
+        },
+        "narration": {
+          "script": "The same count contains one complete group and a quarter of another. The mixed number and improper fraction are equivalent."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T11"
+      },
+      {
+        "id": "T11",
+        "stage": "teaching",
+        "purpose": "Check the entire method",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Check the entire method",
+          "initial_state": "Check the entire method",
+          "model": null
+        },
+        "narration": {
+          "script": "Check each step, even when the last number looks correct. This method choice is unscored."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "MD-13-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "MD-13-G01",
+        "support_level": "high",
+        "pre_question_script": "Keep the starting amount and find the reciprocal of the divisor.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "MD-13-G02",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "guided",
+        "question_ref": "MD-13-G03",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "guided",
+        "question_ref": "MD-13-G04",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G05"
+      },
+      "G05": {
+        "stage": "guided",
+        "question_ref": "MD-13-G05",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "F01"
+      },
+      "F01": {
+        "stage": "faded",
+        "question_ref": "MD-13-P01",
+        "support_level": "reduced",
+        "pre_question_script": "Choose a valid exact method. Support is optional.",
+        "correct_next": "I01"
+      },
+      "I01": {
+        "stage": "independent_transfer",
+        "question_ref": "MD-13-P02",
+        "support_level": "none",
+        "pre_question_script": "Work independently and give the requested simplest form.",
+        "correct_next": "P03"
+      }
+    },
+    "practice": {
+      "intro_script": "Keep each result exact and check the divisor’s size relative to one. In the applications, identify which quantity is the size of one group and which is the available amount.",
+      "question_order": [
+        "MD-13-P03",
+        "MD-13-P04",
+        "MD-13-P05",
+        "MD-13-P06",
+        "MD-13-X01",
+        "MD-13-X02",
+        "MD-13-X03",
+        "MD-13-X04"
+      ]
+    },
+    "exit": {
+      "intro_script": "Complete two new divisions and a method check without hints. Give simplest exact answers. Each response locks after submission.",
+      "primary_question_refs": [
+        "MD-13-E01",
+        "MD-13-E02",
+        "MD-13-E03"
+      ],
+      "confirmation_question_refs": [],
+      "mastery_policy": {
+        "profile": "all_primary_unsupported",
+        "require_all": true,
+        "source_page": 12,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "You independently divided fractions, simplified the exact answers and identified the valid reciprocal method for both smaller and larger divisors.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Keep building fraction-by-fraction division",
+      "ryan_script": "One or more final checks need practice. Keep the first fraction, check the divisor’s reciprocal and finish simplifying the exact result.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "MD-13-C01",
+      "source_ref": {
+        "page": 3
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "The calculation is 3/4 ÷ 3/8 = 2. Why is this correct?",
+      "target": "Number of fraction-sized groups",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Two groups of 3/8 fit exactly into 3/4.",
+          "The two denominators are added.",
+          "The first fraction is always reversed.",
+          "Division by a fraction always gives 1."
+        ]
+      },
+      "answer": {
+        "value": "Two groups of 3/8 fit exactly into 3/4."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The group size fits twice into the unchanged shaded amount.",
+        "correct_after_support": "The group size fits twice into the unchanged shaded amount.",
+        "on_correct_math": "Split every quarter into two eighths: 3/4 = 6/8. → Six eighths contain two complete groups of three eighths.",
+        "on_incorrect_attempt_1": "Connect the size of one group with the shaded amount.",
+        "on_incorrect_attempt_2": "Compare the repartitioned amount with the size of one complete group.",
+        "worked_explanation": "Split every quarter into two eighths: 3/4 = 6/8. → Six eighths contain two complete groups of three eighths."
+      },
+      "mathematical_support": {
+        "hint_1": "Connect the size of one group with the shaded amount.",
+        "hint_2": "The quotient counts copies of the divisor inside the starting fraction.",
+        "worked_solution": "Split every quarter into two eighths: 3/4 = 6/8. → Six eighths contain two complete groups of three eighths."
+      },
+      "working": [
+        "Split every quarter into two eighths: 3/4 = 6/8.",
+        "Six eighths contain two complete groups of three eighths."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_groups",
+          "a": 3,
+          "b": 4,
+          "c": 3,
+          "d": 8,
+          "object": "symbolic",
+          "target": "Number of fraction-sized groups",
+          "math_text": true,
+          "compact_captions": true,
+          "phase": "stated_result",
+          "working_phases": [
+            "equivalent",
+            "grouped"
+          ]
+        }
+      },
+      "response_feedback": {
+        "The two denominators are added.": "Adding denominator numbers does not count groups in the original amount.",
+        "The first fraction is always reversed.": "The first fraction is the amount being measured and stays unchanged.",
+        "Division by a fraction always gives 1.": "A quotient of one occurs only when the two positive values are equal."
+      }
+    },
+    {
+      "id": "MD-13-C02",
+      "source_ref": {
+        "page": 4
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "For 5/6 ÷ 2/3, which complete method is correct?",
+      "target": "Number of fraction-sized groups",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "5/6 ÷ 2/3 = 5/6 × 3/2 = 15/12 = 5/4",
+          "5/6 ÷ 2/3 = 5/6 × 2/3 = 10/18 = 5/9",
+          "5/6 ÷ 2/3 = 6/5 × 3/2 = 18/10 = 9/5",
+          "5/6 ÷ 2/3 = 6/5 × 3/2 = 18/10 = 5/4"
+        ]
+      },
+      "answer": {
+        "value": "5/6 ÷ 2/3 = 5/6 × 3/2 = 15/12 = 5/4"
+      },
+      "policy": {
+        "scored": false,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true,
+        "engagementOnly": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Every step preserves the value, including the reciprocal choice and simplification.",
+        "correct_after_support": "Every step preserves the value, including the reciprocal choice and simplification.",
+        "on_correct_math": "Keep the starting fraction: 5/6. → Reciprocate only the divisor: 5/6 ÷ 2/3 = 5/6 × 3/2. → Multiply: 5 × 3 = 15 and 6 × 2 = 12, giving 15/12. → 15/12 = 5/4. Simplification preserves the exact value.",
+        "on_incorrect_attempt_1": "Check every equality, not only the number at the end.",
+        "on_incorrect_attempt_2": "Compare the unchanged first fraction and each equality in the method.",
+        "worked_explanation": "Keep the starting fraction: 5/6. → Reciprocate only the divisor: 5/6 ÷ 2/3 = 5/6 × 3/2. → Multiply: 5 × 3 = 15 and 6 × 2 = 12, giving 15/12. → 15/12 = 5/4. Simplification preserves the exact value."
+      },
+      "mathematical_support": {
+        "hint_1": "Check every equality, not only the number at the end.",
+        "hint_2": "The first fraction must keep its value; only the divisor becomes its reciprocal.",
+        "worked_solution": "Keep the starting fraction: 5/6. → Reciprocate only the divisor: 5/6 ÷ 2/3 = 5/6 × 3/2. → Multiply: 5 × 3 = 15 and 6 × 2 = 12, giving 15/12. → 15/12 = 5/4. Simplification preserves the exact value."
+      },
+      "working": [
+        "Keep the starting fraction: 5/6.",
+        "Reciprocate only the divisor: 5/6 ÷ 2/3 = 5/6 × 3/2.",
+        "Multiply: 5 × 3 = 15 and 6 × 2 = 12, giving 15/12.",
+        "15/12 = 5/4. Simplification preserves the exact value."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_groups",
+          "a": 5,
+          "b": 6,
+          "c": 2,
+          "d": 3,
+          "object": "symbolic",
+          "target": "Number of fraction-sized groups",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "keep",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "5/6 ÷ 2/3 = 5/6 × 2/3 = 10/18 = 5/9": "That multiplies by the divisor without taking its reciprocal.",
+        "5/6 ÷ 2/3 = 6/5 × 3/2 = 18/10 = 9/5": "The first fraction has been reversed, changing the starting amount.",
+        "5/6 ÷ 2/3 = 6/5 × 3/2 = 18/10 = 5/4": "The final value alone does not make this method valid. The first fraction was reversed and the final equality changes the value."
+      }
+    },
+    {
+      "id": "MD-13-G01",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "For 7/8 ÷ 1/4, keep 7/8 unchanged. What is the reciprocal of the divisor?",
+      "target": "Number of fraction-sized groups",
+      "response": {
+        "type": "integer",
+        "accept_exact_equivalents": true,
+        "require_simplest_form": false,
+        "input_label": "Reciprocal of the divisor"
+      },
+      "answer": {
+        "value": 4
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The divisor’s reciprocal has been found without changing the original amount.",
+        "correct_after_support": "The divisor’s reciprocal has been found without changing the original amount.",
+        "on_correct_math": "Exchange the divisor’s positions: the reciprocal of 1/4 is 4/1.",
+        "on_incorrect_attempt_1": "Find the divisor, not the starting fraction.",
+        "on_incorrect_attempt_2": "Compare the divisor with its reciprocal.",
+        "worked_explanation": "Exchange the divisor’s positions: the reciprocal of 1/4 is 4/1."
+      },
+      "mathematical_support": {
+        "hint_1": "Find the divisor, not the starting fraction.",
+        "hint_2": "The reciprocal exchanges the two positions in that fraction.",
+        "worked_solution": "Exchange the divisor’s positions: the reciprocal of 1/4 is 4/1."
+      },
+      "working": [
+        "Exchange the divisor’s positions: the reciprocal of 1/4 is 4/1."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_groups",
+          "a": 7,
+          "b": 8,
+          "c": 1,
+          "d": 4,
+          "object": "symbolic",
+          "target": "Number of fraction-sized groups",
+          "math_text": true,
+          "compact_captions": true,
+          "phase": "divisor_given",
+          "previous": "Starting amount: 7/8",
+          "resultScope": "reciprocal_only",
+          "support_phases": [
+            "reciprocal_only"
+          ],
+          "working_phases": [
+            "keep",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "1/4": "That repeats the divisor rather than using its reciprocal.",
+        "8/7": "That reverses the starting fraction instead of the divisor."
+      }
+    },
+    {
+      "id": "MD-13-G02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "Complete the equivalent multiplication: 7/8 ÷ 1/4 = 7/8 × ?",
+      "target": "Number of fraction-sized groups",
+      "response": {
+        "type": "integer",
+        "accept_exact_equivalents": true,
+        "require_simplest_form": false,
+        "input_label": "Missing multiplier"
+      },
+      "answer": {
+        "value": 4
+      },
+      "policy": {
+        "scored": false,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true,
+        "engagementOnly": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That multiplier makes the new calculation equivalent to the division.",
+        "correct_after_support": "That multiplier makes the new calculation equivalent to the division.",
+        "on_correct_math": "The divisor’s reciprocal is four. → 7/8 ÷ 1/4 = 7/8 × 4/1.",
+        "on_incorrect_attempt_1": "Use the reciprocal you just found.",
+        "on_incorrect_attempt_2": "Compare the proposed multiplier with the divisor’s reciprocal.",
+        "worked_explanation": "The divisor’s reciprocal is four. → 7/8 ÷ 1/4 = 7/8 × 4/1."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the reciprocal you just found.",
+        "hint_2": "Keep the first fraction in its original position and value.",
+        "worked_solution": "The divisor’s reciprocal is four. → 7/8 ÷ 1/4 = 7/8 × 4/1."
+      },
+      "working": [
+        "The divisor’s reciprocal is four.",
+        "7/8 ÷ 1/4 = 7/8 × 4/1."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_groups",
+          "a": 7,
+          "b": 8,
+          "c": 1,
+          "d": 4,
+          "object": "symbolic",
+          "target": "Number of fraction-sized groups",
+          "math_text": true,
+          "compact_captions": true,
+          "phase": "missing_multiplier",
+          "resultScope": "reciprocal",
+          "support_phases": [
+            "reciprocal_only",
+            "reciprocal"
+          ],
+          "working_phases": [
+            "keep",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "1/4": "That would multiply by the original group size instead of using its reciprocal.",
+        "8/7": "That is the reciprocal of the first fraction, not the divisor."
+      }
+    },
+    {
+      "id": "MD-13-G03",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "Multiply 7/8 × 4/1. Enter the numerator and denominator products without simplifying yet.",
+      "target": "Number of fraction-sized groups",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": false,
+        "require_simplest_form": false,
+        "allow_mixed_number": false,
+        "allow_signed_parts": true,
+        "show_authored_label": true,
+        "input_label": "Product before simplifying"
+      },
+      "answer": {
+        "value": "28/8"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The raw product is ready to be simplified.",
+        "correct_after_support": "The raw product is ready to be simplified.",
+        "on_correct_math": "Multiply the numerators together and the denominators together. → 7 × 4 = 28 and 8 × 1 = 8, giving 28/8.",
+        "on_incorrect_attempt_1": "Keep the two products separate.",
+        "on_incorrect_attempt_2": "Compare each fraction part with its corresponding multiplication.",
+        "worked_explanation": "Multiply the numerators together and the denominators together. → 7 × 4 = 28 and 8 × 1 = 8, giving 28/8.",
+        "on_equivalent_wrong_form": "That has the correct value. This box asks for the two products before simplifying."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the two products separate.",
+        "hint_2": "This box asks for the raw fraction, before its final simplification.",
+        "worked_solution": "Multiply the numerators together and the denominators together. → 7 × 4 = 28 and 8 × 1 = 8, giving 28/8."
+      },
+      "working": [
+        "Multiply the numerators together and the denominators together.",
+        "7 × 4 = 28 and 8 × 1 = 8, giving 28/8."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_groups",
+          "a": 7,
+          "b": 8,
+          "c": 1,
+          "d": 4,
+          "object": "symbolic",
+          "target": "Number of fraction-sized groups",
+          "math_text": true,
+          "compact_captions": true,
+          "phase": "multiply",
+          "resultScope": "raw",
+          "support_phases": [
+            "multiply",
+            "raw"
+          ],
+          "working_phases": [
+            "keep",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "7/2": "That has the correct value. This box asks for the two products before simplifying.",
+        "7/32": "That multiplies by the original divisor rather than its reciprocal."
+      }
+    },
+    {
+      "id": "MD-13-G04",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "Finish the calculation by simplifying 28/8. Give your answer in simplest exact form.",
+      "target": "Number of fraction-sized groups",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "require_simplest_form": true,
+        "allow_mixed_number": true,
+        "allow_signed_parts": true,
+        "show_authored_label": true,
+        "input_label": "Your answer in simplest exact form"
+      },
+      "answer": {
+        "value": "7/2"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The final count is exact and fully simplified.",
+        "correct_after_support": "The final count is exact and fully simplified.",
+        "on_correct_math": "The product is 28/8. → Divide both parts by four: 28/8 = 7/2, which is also 3 1/2.",
+        "on_incorrect_attempt_1": "Both fraction parts must be divided by the same common factor.",
+        "on_incorrect_attempt_2": "Check that the common factor changes both parts equally.",
+        "worked_explanation": "The product is 28/8. → Divide both parts by four: 28/8 = 7/2, which is also 3 1/2.",
+        "on_equivalent_unfinished": "Your answer has the correct value, but it is not yet in simplest form. Simplify both fraction parts by a common factor."
+      },
+      "mathematical_support": {
+        "hint_1": "Both fraction parts must be divided by the same common factor.",
+        "hint_2": "A simplest improper fraction or an equivalent simplest mixed number is accepted.",
+        "worked_solution": "The product is 28/8. → Divide both parts by four: 28/8 = 7/2, which is also 3 1/2."
+      },
+      "working": [
+        "The product is 28/8.",
+        "Divide both parts by four: 28/8 = 7/2, which is also 3 1/2."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_groups",
+          "a": 7,
+          "b": 8,
+          "c": 1,
+          "d": 4,
+          "object": "symbolic",
+          "target": "Number of fraction-sized groups",
+          "math_text": true,
+          "compact_captions": true,
+          "phase": "raw_unknown",
+          "resultScope": "simplified",
+          "support_phases": [
+            "raw",
+            "simplified"
+          ],
+          "working_phases": [
+            "keep",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "2/7": "That reverses the value instead of simplifying it.",
+        "7/8": "That changes only the numerator, so the value is no longer the same."
+      }
+    },
+    {
+      "id": "MD-13-G05",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "Which statement correctly explains 7/8 ÷ 1/4?",
+      "target": "Number of fraction-sized groups",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "It asks how many quarter-sized groups fit into 7/8.",
+          "Both fractions must be reversed before multiplying.",
+          "The answer must be smaller than 7/8 because division always makes numbers smaller.",
+          "The numerators and denominators should be subtracted."
+        ]
+      },
+      "answer": {
+        "value": "It asks how many quarter-sized groups fit into 7/8."
+      },
+      "policy": {
+        "scored": false,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true,
+        "engagementOnly": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That statement interprets the quotient as a count of the given group size.",
+        "correct_after_support": "That statement interprets the quotient as a count of the given group size.",
+        "on_correct_math": "A quarter is two eighths, so compare 7/8 with groups of 2/8. → Seven eighths contain three complete quarter-sized groups and half of one more group.",
+        "on_incorrect_attempt_1": "The divisor gives the size of each group.",
+        "on_incorrect_attempt_2": "Connect the group size to the original fractional amount.",
+        "worked_explanation": "A quarter is two eighths, so compare 7/8 with groups of 2/8. → Seven eighths contain three complete quarter-sized groups and half of one more group."
+      },
+      "mathematical_support": {
+        "hint_1": "The divisor gives the size of each group.",
+        "hint_2": "Consider whether that group size is smaller or larger than one whole.",
+        "worked_solution": "A quarter is two eighths, so compare 7/8 with groups of 2/8. → Seven eighths contain three complete quarter-sized groups and half of one more group."
+      },
+      "working": [
+        "A quarter is two eighths, so compare 7/8 with groups of 2/8.",
+        "Seven eighths contain three complete quarter-sized groups and half of one more group."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_groups",
+          "a": 7,
+          "b": 8,
+          "c": 1,
+          "d": 4,
+          "object": "symbolic",
+          "target": "Number of fraction-sized groups",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "equivalent",
+            "grouped"
+          ]
+        }
+      },
+      "response_feedback": {
+        "Both fractions must be reversed before multiplying.": "Reversing the first fraction would change the original amount.",
+        "The answer must be smaller than 7/8 because division always makes numbers smaller.": "Dividing by a positive value below one gives a larger result, not a smaller one.",
+        "The numerators and denominators should be subtracted.": "Subtracting the fraction parts does not count copies of the divisor."
+      }
+    },
+    {
+      "id": "MD-13-P01",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "faded",
+      "prompt": "Work out 3/5 ÷ 1/2. Give your answer in simplest exact form.",
+      "target": "Number of fraction-sized groups",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "require_simplest_form": true,
+        "allow_mixed_number": true,
+        "allow_signed_parts": true,
+        "show_authored_label": true,
+        "input_label": "Your answer in simplest exact form"
+      },
+      "answer": {
+        "value": "6/5"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That exact result counts halves within the starting amount.",
+        "correct_after_support": "That exact result counts halves within the starting amount.",
+        "on_correct_math": "Keep the starting fraction: 3/5. → Reciprocate only the divisor: 3/5 ÷ 1/2 = 3/5 × 2/1. → Multiply: 3 × 2 = 6 and 5 × 1 = 5, giving 6/5. → 6/5 is already in simplest form.",
+        "on_incorrect_attempt_1": "Keep the original amount and identify the divisor.",
+        "on_incorrect_attempt_2": "Compare the starting fraction with the reciprocal of the half-sized group.",
+        "worked_explanation": "Keep the starting fraction: 3/5. → Reciprocate only the divisor: 3/5 ÷ 1/2 = 3/5 × 2/1. → Multiply: 3 × 2 = 6 and 5 × 1 = 5, giving 6/5. → 6/5 is already in simplest form.",
+        "on_equivalent_unfinished": "Your answer has the correct value, but it is not yet in simplest form. Simplify both fraction parts by a common factor."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the original amount and identify the divisor.",
+        "hint_2": "Use a valid exact method. If you use the reciprocal method, only the second fraction changes; cancellation is optional.",
+        "worked_solution": "Keep the starting fraction: 3/5. → Reciprocate only the divisor: 3/5 ÷ 1/2 = 3/5 × 2/1. → Multiply: 3 × 2 = 6 and 5 × 1 = 5, giving 6/5. → 6/5 is already in simplest form."
+      },
+      "working": [
+        "Keep the starting fraction: 3/5.",
+        "Reciprocate only the divisor: 3/5 ÷ 1/2 = 3/5 × 2/1.",
+        "Multiply: 3 × 2 = 6 and 5 × 1 = 5, giving 6/5.",
+        "6/5 is already in simplest form."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_groups",
+          "a": 3,
+          "b": 5,
+          "c": 1,
+          "d": 2,
+          "object": "symbolic",
+          "target": "Number of fraction-sized groups",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "keep",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "3/10": "That value comes from multiplying by the original divisor without taking its reciprocal.",
+        "5/6": "That reverses the first fraction instead of the second, giving the reciprocal of the required result.",
+        "10/3": "That reverses both fractions. The original amount must stay unchanged.",
+        "3/5": "That repeats the starting amount instead of finding the number of groups."
+      }
+    },
+    {
+      "id": "MD-13-P02",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "independent_transfer",
+      "prompt": "Work out 7/9 ÷ 2/3. Give your answer in simplest exact form.",
+      "target": "Number of fraction-sized groups",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "require_simplest_form": true,
+        "allow_mixed_number": true,
+        "allow_signed_parts": true,
+        "show_authored_label": true,
+        "input_label": "Your answer in simplest exact form"
+      },
+      "answer": {
+        "value": "7/6"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The quotient is exact and the first fraction has kept its value.",
+        "correct_after_support": "The quotient is exact and the first fraction has kept its value.",
+        "on_correct_math": "Keep the starting fraction: 7/9. → Reciprocate only the divisor: 7/9 ÷ 2/3 = 7/9 × 3/2. → Multiply: 7 × 3 = 21 and 9 × 2 = 18, giving 21/18. → 21/18 = 7/6. Simplification preserves the exact value.",
+        "on_incorrect_attempt_1": "Keep the original amount and identify the divisor.",
+        "on_incorrect_attempt_2": "Check the reciprocal setup and the final common factor.",
+        "worked_explanation": "Keep the starting fraction: 7/9. → Reciprocate only the divisor: 7/9 ÷ 2/3 = 7/9 × 3/2. → Multiply: 7 × 3 = 21 and 9 × 2 = 18, giving 21/18. → 21/18 = 7/6. Simplification preserves the exact value.",
+        "on_equivalent_unfinished": "Your answer has the correct value, but it is not yet in simplest form. Simplify both fraction parts by a common factor."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the original amount and identify the divisor.",
+        "hint_2": "Use a valid exact method. If you use the reciprocal method, only the second fraction changes; cancellation is optional.",
+        "worked_solution": "Keep the starting fraction: 7/9. → Reciprocate only the divisor: 7/9 ÷ 2/3 = 7/9 × 3/2. → Multiply: 7 × 3 = 21 and 9 × 2 = 18, giving 21/18. → 21/18 = 7/6. Simplification preserves the exact value."
+      },
+      "working": [
+        "Keep the starting fraction: 7/9.",
+        "Reciprocate only the divisor: 7/9 ÷ 2/3 = 7/9 × 3/2.",
+        "Multiply: 7 × 3 = 21 and 9 × 2 = 18, giving 21/18.",
+        "21/18 = 7/6. Simplification preserves the exact value."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_groups",
+          "a": 7,
+          "b": 9,
+          "c": 2,
+          "d": 3,
+          "object": "symbolic",
+          "target": "Number of fraction-sized groups",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "keep",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "14/27": "That value comes from multiplying by the original divisor without taking its reciprocal.",
+        "18/21": "That reverses the first fraction instead of the second, giving the reciprocal of the required result.",
+        "27/14": "That reverses both fractions. The original amount must stay unchanged.",
+        "7/9": "That repeats the starting amount instead of finding the number of groups."
+      }
+    },
+    {
+      "id": "MD-13-P03",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Work out 5/8 ÷ 15/16. Give your answer in simplest exact form.",
+      "target": "Number of fraction-sized groups",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "require_simplest_form": true,
+        "allow_mixed_number": true,
+        "allow_signed_parts": true,
+        "show_authored_label": true,
+        "input_label": "Your answer in simplest exact form"
+      },
+      "answer": {
+        "value": "2/3"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The result is still a proper fraction, but it is larger than the original amount.",
+        "correct_after_support": "The result is still a proper fraction, but it is larger than the original amount.",
+        "on_correct_math": "Keep the starting fraction: 5/8. → Reciprocate only the divisor: 5/8 ÷ 15/16 = 5/8 × 16/15. → Multiply: 5 × 16 = 80 and 8 × 15 = 120, giving 80/120. → 80/120 = 2/3. Simplification preserves the exact value.",
+        "on_incorrect_attempt_1": "Keep the original amount and identify the divisor.",
+        "on_incorrect_attempt_2": "Compare the divisor with one, then check the exact multiplication.",
+        "worked_explanation": "Keep the starting fraction: 5/8. → Reciprocate only the divisor: 5/8 ÷ 15/16 = 5/8 × 16/15. → Multiply: 5 × 16 = 80 and 8 × 15 = 120, giving 80/120. → 80/120 = 2/3. Simplification preserves the exact value.",
+        "on_equivalent_unfinished": "Your answer has the correct value, but it is not yet in simplest form. Simplify both fraction parts by a common factor."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the original amount and identify the divisor.",
+        "hint_2": "Use a valid exact method. If you use the reciprocal method, only the second fraction changes; cancellation is optional.",
+        "worked_solution": "Keep the starting fraction: 5/8. → Reciprocate only the divisor: 5/8 ÷ 15/16 = 5/8 × 16/15. → Multiply: 5 × 16 = 80 and 8 × 15 = 120, giving 80/120. → 80/120 = 2/3. Simplification preserves the exact value."
+      },
+      "working": [
+        "Keep the starting fraction: 5/8.",
+        "Reciprocate only the divisor: 5/8 ÷ 15/16 = 5/8 × 16/15.",
+        "Multiply: 5 × 16 = 80 and 8 × 15 = 120, giving 80/120.",
+        "80/120 = 2/3. Simplification preserves the exact value."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_groups",
+          "a": 5,
+          "b": 8,
+          "c": 15,
+          "d": 16,
+          "object": "symbolic",
+          "target": "Number of fraction-sized groups",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "keep",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "75/128": "That value comes from multiplying by the original divisor without taking its reciprocal.",
+        "120/80": "That reverses the first fraction instead of the second, giving the reciprocal of the required result.",
+        "128/75": "That reverses both fractions. The original amount must stay unchanged.",
+        "5/8": "That repeats the starting amount instead of finding the number of groups."
+      }
+    },
+    {
+      "id": "MD-13-P04",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Work out 4/7 ÷ 2/21. Give your answer in simplest exact form.",
+      "target": "Number of fraction-sized groups",
+      "response": {
+        "type": "integer",
+        "accept_exact_equivalents": true,
+        "require_simplest_form": true,
+        "input_label": "Your exact answer"
+      },
+      "answer": {
+        "value": 6
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That whole-number result counts the small fraction-sized groups exactly.",
+        "correct_after_support": "That whole-number result counts the small fraction-sized groups exactly.",
+        "on_correct_math": "Keep the starting fraction: 4/7. → Reciprocate only the divisor: 4/7 ÷ 2/21 = 4/7 × 21/2. → Multiply: 4 × 21 = 84 and 7 × 2 = 14, giving 84/14. → 84/14 = 6. Simplification preserves the exact value.",
+        "on_incorrect_attempt_1": "Keep the original amount and identify the divisor.",
+        "on_incorrect_attempt_2": "Check both numerator and denominator products before simplifying.",
+        "worked_explanation": "Keep the starting fraction: 4/7. → Reciprocate only the divisor: 4/7 ÷ 2/21 = 4/7 × 21/2. → Multiply: 4 × 21 = 84 and 7 × 2 = 14, giving 84/14. → 84/14 = 6. Simplification preserves the exact value.",
+        "on_equivalent_unfinished": "Your answer has the correct value, but it is not yet in simplest form. Simplify both fraction parts by a common factor."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the original amount and identify the divisor.",
+        "hint_2": "Use a valid exact method. If you use the reciprocal method, only the second fraction changes; cancellation is optional.",
+        "worked_solution": "Keep the starting fraction: 4/7. → Reciprocate only the divisor: 4/7 ÷ 2/21 = 4/7 × 21/2. → Multiply: 4 × 21 = 84 and 7 × 2 = 14, giving 84/14. → 84/14 = 6. Simplification preserves the exact value."
+      },
+      "working": [
+        "Keep the starting fraction: 4/7.",
+        "Reciprocate only the divisor: 4/7 ÷ 2/21 = 4/7 × 21/2.",
+        "Multiply: 4 × 21 = 84 and 7 × 2 = 14, giving 84/14.",
+        "84/14 = 6. Simplification preserves the exact value."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_groups",
+          "a": 4,
+          "b": 7,
+          "c": 2,
+          "d": 21,
+          "object": "symbolic",
+          "target": "Number of fraction-sized groups",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "keep",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "8/147": "That value comes from multiplying by the original divisor without taking its reciprocal.",
+        "14/84": "That reverses the first fraction instead of the second, giving the reciprocal of the required result.",
+        "147/8": "That reverses both fractions. The original amount must stay unchanged.",
+        "4/7": "That repeats the starting amount instead of finding the number of groups."
+      }
+    },
+    {
+      "id": "MD-13-P05",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Work out 5/6 ÷ 10/9. Give your answer in simplest exact form.",
+      "target": "Number of fraction-sized groups",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "require_simplest_form": true,
+        "allow_mixed_number": true,
+        "allow_signed_parts": true,
+        "show_authored_label": true,
+        "input_label": "Your answer in simplest exact form"
+      },
+      "answer": {
+        "value": "3/4"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Here the divisor is above one, so the exact result is smaller than the starting fraction.",
+        "correct_after_support": "Here the divisor is above one, so the exact result is smaller than the starting fraction.",
+        "on_correct_math": "Keep the starting fraction: 5/6. → Reciprocate only the divisor: 5/6 ÷ 10/9 = 5/6 × 9/10. → Multiply: 5 × 9 = 45 and 6 × 10 = 60, giving 45/60. → 45/60 = 3/4. Simplification preserves the exact value.",
+        "on_incorrect_attempt_1": "Keep the original amount and identify the divisor.",
+        "on_incorrect_attempt_2": "Compare the improper divisor with one and use its reciprocal accurately.",
+        "worked_explanation": "Keep the starting fraction: 5/6. → Reciprocate only the divisor: 5/6 ÷ 10/9 = 5/6 × 9/10. → Multiply: 5 × 9 = 45 and 6 × 10 = 60, giving 45/60. → 45/60 = 3/4. Simplification preserves the exact value.",
+        "on_equivalent_unfinished": "Your answer has the correct value, but it is not yet in simplest form. Simplify both fraction parts by a common factor."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the original amount and identify the divisor.",
+        "hint_2": "Use a valid exact method. If you use the reciprocal method, only the second fraction changes; cancellation is optional.",
+        "worked_solution": "Keep the starting fraction: 5/6. → Reciprocate only the divisor: 5/6 ÷ 10/9 = 5/6 × 9/10. → Multiply: 5 × 9 = 45 and 6 × 10 = 60, giving 45/60. → 45/60 = 3/4. Simplification preserves the exact value."
+      },
+      "working": [
+        "Keep the starting fraction: 5/6.",
+        "Reciprocate only the divisor: 5/6 ÷ 10/9 = 5/6 × 9/10.",
+        "Multiply: 5 × 9 = 45 and 6 × 10 = 60, giving 45/60.",
+        "45/60 = 3/4. Simplification preserves the exact value."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_groups",
+          "a": 5,
+          "b": 6,
+          "c": 10,
+          "d": 9,
+          "object": "symbolic",
+          "target": "Number of fraction-sized groups",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "keep",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "50/54": "That value comes from multiplying by the original divisor without taking its reciprocal.",
+        "60/45": "That reverses the first fraction instead of the second, giving the reciprocal of the required result.",
+        "54/50": "That reverses both fractions. The original amount must stay unchanged.",
+        "5/6": "That repeats the starting amount instead of finding the number of groups."
+      }
+    },
+    {
+      "id": "MD-13-P06",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "A student calculates 9/10 ÷ 3/4. Which answer is correct?",
+      "target": "Number of fraction-sized groups",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "6/5",
+          "27/40",
+          "5/6",
+          "10/9"
+        ]
+      },
+      "answer": {
+        "value": "6/5"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That value follows the correct reciprocal multiplication.",
+        "correct_after_support": "That value follows the correct reciprocal multiplication.",
+        "on_correct_math": "Keep the starting fraction: 9/10. → Reciprocate only the divisor: 9/10 ÷ 3/4 = 9/10 × 4/3. → Multiply: 9 × 4 = 36 and 10 × 3 = 30, giving 36/30. → 36/30 = 6/5. Simplification preserves the exact value.",
+        "on_incorrect_attempt_1": "The first fraction is the amount being measured and stays unchanged.",
+        "on_incorrect_attempt_2": "Compare each proposed value with the unchanged amount and the divisor.",
+        "worked_explanation": "Keep the starting fraction: 9/10. → Reciprocate only the divisor: 9/10 ÷ 3/4 = 9/10 × 4/3. → Multiply: 9 × 4 = 36 and 10 × 3 = 30, giving 36/30. → 36/30 = 6/5. Simplification preserves the exact value."
+      },
+      "mathematical_support": {
+        "hint_1": "The first fraction is the amount being measured and stays unchanged.",
+        "hint_2": "Check the divisor’s reciprocal and simplify the product.",
+        "worked_solution": "Keep the starting fraction: 9/10. → Reciprocate only the divisor: 9/10 ÷ 3/4 = 9/10 × 4/3. → Multiply: 9 × 4 = 36 and 10 × 3 = 30, giving 36/30. → 36/30 = 6/5. Simplification preserves the exact value."
+      },
+      "working": [
+        "Keep the starting fraction: 9/10.",
+        "Reciprocate only the divisor: 9/10 ÷ 3/4 = 9/10 × 4/3.",
+        "Multiply: 9 × 4 = 36 and 10 × 3 = 30, giving 36/30.",
+        "36/30 = 6/5. Simplification preserves the exact value."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_groups",
+          "a": 9,
+          "b": 10,
+          "c": 3,
+          "d": 4,
+          "object": "symbolic",
+          "target": "Number of fraction-sized groups",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "keep",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "27/40": "That multiplies by the original divisor.",
+        "5/6": "That is the reciprocal of the required quotient.",
+        "10/9": "That reverses the first fraction and does not complete the division."
+      }
+    },
+    {
+      "id": "MD-13-X01",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "practice",
+      "prompt": "A jug contains 3/4 litre of juice. The juice is poured into cups that each hold 1/8 litre. Work out the number of cups that can be filled.",
+      "target": "Number of fraction-sized groups",
+      "response": {
+        "type": "integer",
+        "accept_exact_equivalents": true,
+        "require_simplest_form": false,
+        "input_label": "Number of full cups"
+      },
+      "answer": {
+        "value": 6
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That count fills the cups from the available juice.",
+        "correct_after_support": "That count fills the cups from the available juice.",
+        "on_correct_math": "Keep the starting fraction: 3/4. → Reciprocate only the divisor: 3/4 ÷ 1/8 = 3/4 × 8/1. → Multiply: 3 × 8 = 24 and 4 × 1 = 4, giving 24/4. → 24/4 = 6. Simplification preserves the exact value.",
+        "on_incorrect_attempt_1": "Keep the original amount and identify the divisor.",
+        "on_incorrect_attempt_2": "Keep the amount in one cup separate from the number of cups.",
+        "worked_explanation": "Keep the starting fraction: 3/4. → Reciprocate only the divisor: 3/4 ÷ 1/8 = 3/4 × 8/1. → Multiply: 3 × 8 = 24 and 4 × 1 = 4, giving 24/4. → 24/4 = 6. Simplification preserves the exact value."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the original amount and identify the divisor.",
+        "hint_2": "Use a valid exact method. If you use the reciprocal method, only the second fraction changes; cancellation is optional.",
+        "worked_solution": "Keep the starting fraction: 3/4. → Reciprocate only the divisor: 3/4 ÷ 1/8 = 3/4 × 8/1. → Multiply: 3 × 8 = 24 and 4 × 1 = 4, giving 24/4. → 24/4 = 6. Simplification preserves the exact value."
+      },
+      "working": [
+        "Keep the starting fraction: 3/4.",
+        "Reciprocate only the divisor: 3/4 ÷ 1/8 = 3/4 × 8/1.",
+        "Multiply: 3 × 8 = 24 and 4 × 1 = 4, giving 24/4.",
+        "24/4 = 6. Simplification preserves the exact value."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_groups",
+          "a": 3,
+          "b": 4,
+          "c": 1,
+          "d": 8,
+          "object": "juice",
+          "target": "Number of fraction-sized groups",
+          "math_text": true,
+          "compact_captions": true,
+          "unit": "litre",
+          "working_phases": [
+            "keep",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "3/32": "That value comes from multiplying by the original divisor without taking its reciprocal.",
+        "4/24": "That reverses the first fraction instead of the second, giving the reciprocal of the required result.",
+        "32/3": "That reverses both fractions. The original amount must stay unchanged.",
+        "3/4": "That repeats the starting amount instead of finding the number of groups."
+      }
+    },
+    {
+      "id": "MD-13-X02",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "practice",
+      "prompt": "A bag contains 5/6 kg of rice. The rice is divided into portions that each have a mass of 5/24 kg. Work out the number of portions.",
+      "target": "Number of fraction-sized groups",
+      "response": {
+        "type": "integer",
+        "accept_exact_equivalents": true,
+        "require_simplest_form": false,
+        "input_label": "Number of portions"
+      },
+      "answer": {
+        "value": 4
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That is the number of equal-mass portions made from the rice.",
+        "correct_after_support": "That is the number of equal-mass portions made from the rice.",
+        "on_correct_math": "Keep the starting fraction: 5/6. → Reciprocate only the divisor: 5/6 ÷ 5/24 = 5/6 × 24/5. → Multiply: 5 × 24 = 120 and 6 × 5 = 30, giving 120/30. → 120/30 = 4. Simplification preserves the exact value.",
+        "on_incorrect_attempt_1": "Keep the original amount and identify the divisor.",
+        "on_incorrect_attempt_2": "Compare the mass of one portion with the full mass available.",
+        "worked_explanation": "Keep the starting fraction: 5/6. → Reciprocate only the divisor: 5/6 ÷ 5/24 = 5/6 × 24/5. → Multiply: 5 × 24 = 120 and 6 × 5 = 30, giving 120/30. → 120/30 = 4. Simplification preserves the exact value."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the original amount and identify the divisor.",
+        "hint_2": "Use a valid exact method. If you use the reciprocal method, only the second fraction changes; cancellation is optional.",
+        "worked_solution": "Keep the starting fraction: 5/6. → Reciprocate only the divisor: 5/6 ÷ 5/24 = 5/6 × 24/5. → Multiply: 5 × 24 = 120 and 6 × 5 = 30, giving 120/30. → 120/30 = 4. Simplification preserves the exact value."
+      },
+      "working": [
+        "Keep the starting fraction: 5/6.",
+        "Reciprocate only the divisor: 5/6 ÷ 5/24 = 5/6 × 24/5.",
+        "Multiply: 5 × 24 = 120 and 6 × 5 = 30, giving 120/30.",
+        "120/30 = 4. Simplification preserves the exact value."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_groups",
+          "a": 5,
+          "b": 6,
+          "c": 5,
+          "d": 24,
+          "object": "rice",
+          "target": "Number of fraction-sized groups",
+          "math_text": true,
+          "compact_captions": true,
+          "unit": "kg",
+          "working_phases": [
+            "keep",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "25/144": "That value comes from multiplying by the original divisor without taking its reciprocal.",
+        "30/120": "That reverses the first fraction instead of the second, giving the reciprocal of the required result.",
+        "144/25": "That reverses both fractions. The original amount must stay unchanged.",
+        "5/6": "That repeats the starting amount instead of finding the number of groups."
+      }
+    },
+    {
+      "id": "MD-13-X03",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "practice",
+      "prompt": "A piece of wire is 7/8 metre long. It is cut into equal pieces that are each 7/32 metre long. Work out the number of pieces.",
+      "target": "Number of fraction-sized groups",
+      "response": {
+        "type": "integer",
+        "accept_exact_equivalents": true,
+        "require_simplest_form": false,
+        "input_label": "Number of pieces"
+      },
+      "answer": {
+        "value": 4
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That count uses the full wire in equal-length pieces.",
+        "correct_after_support": "That count uses the full wire in equal-length pieces.",
+        "on_correct_math": "Keep the starting fraction: 7/8. → Reciprocate only the divisor: 7/8 ÷ 7/32 = 7/8 × 32/7. → Multiply: 7 × 32 = 224 and 8 × 7 = 56, giving 224/56. → 224/56 = 4. Simplification preserves the exact value.",
+        "on_incorrect_attempt_1": "Keep the original amount and identify the divisor.",
+        "on_incorrect_attempt_2": "Compare one piece length with the original wire length.",
+        "worked_explanation": "Keep the starting fraction: 7/8. → Reciprocate only the divisor: 7/8 ÷ 7/32 = 7/8 × 32/7. → Multiply: 7 × 32 = 224 and 8 × 7 = 56, giving 224/56. → 224/56 = 4. Simplification preserves the exact value."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the original amount and identify the divisor.",
+        "hint_2": "Use a valid exact method. If you use the reciprocal method, only the second fraction changes; cancellation is optional.",
+        "worked_solution": "Keep the starting fraction: 7/8. → Reciprocate only the divisor: 7/8 ÷ 7/32 = 7/8 × 32/7. → Multiply: 7 × 32 = 224 and 8 × 7 = 56, giving 224/56. → 224/56 = 4. Simplification preserves the exact value."
+      },
+      "working": [
+        "Keep the starting fraction: 7/8.",
+        "Reciprocate only the divisor: 7/8 ÷ 7/32 = 7/8 × 32/7.",
+        "Multiply: 7 × 32 = 224 and 8 × 7 = 56, giving 224/56.",
+        "224/56 = 4. Simplification preserves the exact value."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_groups",
+          "a": 7,
+          "b": 8,
+          "c": 7,
+          "d": 32,
+          "object": "wire",
+          "target": "Number of fraction-sized groups",
+          "math_text": true,
+          "compact_captions": true,
+          "unit": "m",
+          "working_phases": [
+            "keep",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "49/256": "That value comes from multiplying by the original divisor without taking its reciprocal.",
+        "56/224": "That reverses the first fraction instead of the second, giving the reciprocal of the required result.",
+        "256/49": "That reverses both fractions. The original amount must stay unchanged.",
+        "7/8": "That repeats the starting amount instead of finding the number of groups."
+      }
+    },
+    {
+      "id": "MD-13-X04",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "practice",
+      "prompt": "A container holds 5/6 litre of paint. Each small bottle holds 1/12 litre. Which calculation finds the number of bottles that can be filled?",
+      "target": "Number of fraction-sized groups",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "5/6 ÷ 1/12",
+          "5/6 × 1/12",
+          "1/12 ÷ 5/6",
+          "5/6 − 1/12"
+        ]
+      },
+      "answer": {
+        "value": "5/6 ÷ 1/12"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That calculation finds how many full bottle capacities fit into the paint.",
+        "correct_after_support": "That calculation finds how many full bottle capacities fit into the paint.",
+        "on_correct_math": "The total paint and the capacity of one bottle are known; the bottle count is unknown. → The required calculation is 5/6 ÷ 1/12.",
+        "on_incorrect_attempt_1": "Distinguish the number of bottles from the volume in one bottle.",
+        "on_incorrect_attempt_2": "Match the known volumes to the unknown count.",
+        "worked_explanation": "The total paint and the capacity of one bottle are known; the bottle count is unknown. → The required calculation is 5/6 ÷ 1/12."
+      },
+      "mathematical_support": {
+        "hint_1": "Distinguish the number of bottles from the volume in one bottle.",
+        "hint_2": "Choose the calculation that counts bottle-sized amounts within the available paint.",
+        "worked_solution": "The total paint and the capacity of one bottle are known; the bottle count is unknown. → The required calculation is 5/6 ÷ 1/12."
+      },
+      "working": [
+        "The total paint and the capacity of one bottle are known; the bottle count is unknown.",
+        "The required calculation is 5/6 ÷ 1/12."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_groups",
+          "a": 5,
+          "b": 6,
+          "c": 1,
+          "d": 12,
+          "object": "paint",
+          "target": "Number of fraction-sized groups",
+          "math_text": true,
+          "compact_captions": true,
+          "unit": "litre",
+          "working_phases": [
+            "given",
+            "division"
+          ]
+        }
+      },
+      "response_feedback": {
+        "5/6 × 1/12": "That finds a fraction of the paint rather than the number of bottles.",
+        "1/12 ÷ 5/6": "That reverses the total and the size of one group.",
+        "5/6 − 1/12": "That removes one bottle’s volume but does not find the complete bottle count."
+      }
+    },
+    {
+      "id": "MD-13-E01",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "Work out 3/5 ÷ 2/7. Give your answer in simplest exact form.",
+      "target": "Number of fraction-sized groups",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "require_simplest_form": true,
+        "allow_mixed_number": true,
+        "allow_signed_parts": true,
+        "show_authored_label": true,
+        "input_label": "Your answer in simplest exact form"
+      },
+      "answer": {
+        "value": "21/10"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The exact quotient is in simplest form and larger than the starting fraction.",
+        "correct_after_support": "The exact quotient is in simplest form and larger than the starting fraction.",
+        "on_correct_math": "Keep the starting fraction: 3/5. → Reciprocate only the divisor: 3/5 ÷ 2/7 = 3/5 × 7/2. → Multiply: 3 × 7 = 21 and 5 × 2 = 10, giving 21/10. → 21/10 is already in simplest form.",
+        "on_incorrect_attempt_1": "Keep the original amount and identify the divisor.",
+        "on_incorrect_attempt_2": "Check that the first fraction stays unchanged and the final value is simplified.",
+        "worked_explanation": "Keep the starting fraction: 3/5. → Reciprocate only the divisor: 3/5 ÷ 2/7 = 3/5 × 7/2. → Multiply: 3 × 7 = 21 and 5 × 2 = 10, giving 21/10. → 21/10 is already in simplest form.",
+        "on_equivalent_unfinished": "Your answer has the correct value, but it is not yet in simplest form. Simplify both fraction parts by a common factor.",
+        "on_locked_incorrect": "Check that the first fraction stays unchanged and the final value is simplified."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the original amount and identify the divisor.",
+        "hint_2": "Use a valid exact method. If you use the reciprocal method, only the second fraction changes; cancellation is optional.",
+        "worked_solution": "Keep the starting fraction: 3/5. → Reciprocate only the divisor: 3/5 ÷ 2/7 = 3/5 × 7/2. → Multiply: 3 × 7 = 21 and 5 × 2 = 10, giving 21/10. → 21/10 is already in simplest form."
+      },
+      "working": [
+        "Keep the starting fraction: 3/5.",
+        "Reciprocate only the divisor: 3/5 ÷ 2/7 = 3/5 × 7/2.",
+        "Multiply: 3 × 7 = 21 and 5 × 2 = 10, giving 21/10.",
+        "21/10 is already in simplest form."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_groups",
+          "a": 3,
+          "b": 5,
+          "c": 2,
+          "d": 7,
+          "object": "symbolic",
+          "target": "Number of fraction-sized groups",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "keep",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "6/35": "That value comes from multiplying by the original divisor without taking its reciprocal.",
+        "10/21": "That reverses the first fraction instead of the second, giving the reciprocal of the required result.",
+        "35/6": "That reverses both fractions. The original amount must stay unchanged.",
+        "3/5": "That repeats the starting amount instead of finding the number of groups."
+      },
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "MD-13-E02",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "Work out 7/8 ÷ 14/9. Give your answer in simplest exact form.",
+      "target": "Number of fraction-sized groups",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "require_simplest_form": true,
+        "allow_mixed_number": true,
+        "allow_signed_parts": true,
+        "show_authored_label": true,
+        "input_label": "Your answer in simplest exact form"
+      },
+      "answer": {
+        "value": "9/16"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The simplified result correctly reflects division by a value above one.",
+        "correct_after_support": "The simplified result correctly reflects division by a value above one.",
+        "on_correct_math": "Keep the starting fraction: 7/8. → Reciprocate only the divisor: 7/8 ÷ 14/9 = 7/8 × 9/14. → Multiply: 7 × 9 = 63 and 8 × 14 = 112, giving 63/112. → 63/112 = 9/16. Simplification preserves the exact value.",
+        "on_incorrect_attempt_1": "Keep the original amount and identify the divisor.",
+        "on_incorrect_attempt_2": "Compare the divisor’s size with one and preserve the starting fraction.",
+        "worked_explanation": "Keep the starting fraction: 7/8. → Reciprocate only the divisor: 7/8 ÷ 14/9 = 7/8 × 9/14. → Multiply: 7 × 9 = 63 and 8 × 14 = 112, giving 63/112. → 63/112 = 9/16. Simplification preserves the exact value.",
+        "on_equivalent_unfinished": "Your answer has the correct value, but it is not yet in simplest form. Simplify both fraction parts by a common factor.",
+        "on_locked_incorrect": "Compare the divisor’s size with one and preserve the starting fraction."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the original amount and identify the divisor.",
+        "hint_2": "Use a valid exact method. If you use the reciprocal method, only the second fraction changes; cancellation is optional.",
+        "worked_solution": "Keep the starting fraction: 7/8. → Reciprocate only the divisor: 7/8 ÷ 14/9 = 7/8 × 9/14. → Multiply: 7 × 9 = 63 and 8 × 14 = 112, giving 63/112. → 63/112 = 9/16. Simplification preserves the exact value."
+      },
+      "working": [
+        "Keep the starting fraction: 7/8.",
+        "Reciprocate only the divisor: 7/8 ÷ 14/9 = 7/8 × 9/14.",
+        "Multiply: 7 × 9 = 63 and 8 × 14 = 112, giving 63/112.",
+        "63/112 = 9/16. Simplification preserves the exact value."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_groups",
+          "a": 7,
+          "b": 8,
+          "c": 14,
+          "d": 9,
+          "object": "symbolic",
+          "target": "Number of fraction-sized groups",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "keep",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "98/72": "That value comes from multiplying by the original divisor without taking its reciprocal.",
+        "112/63": "That reverses the first fraction instead of the second, giving the reciprocal of the required result.",
+        "72/98": "That reverses both fractions. The original amount must stay unchanged.",
+        "7/8": "That repeats the starting amount instead of finding the number of groups."
+      },
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "MD-13-E03",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "Which statement correctly describes dividing one fraction by another?",
+      "target": "The valid fraction-division method",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Keep the first fraction, change division to multiplication and reciprocate only the second fraction.",
+          "Reverse both fractions, then multiply.",
+          "Keep both fractions unchanged and multiply.",
+          "Reverse only the first fraction."
+        ]
+      },
+      "answer": {
+        "value": "Keep the first fraction, change division to multiplication and reciprocate only the second fraction."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That method keeps the original amount and changes only the divisor.",
+        "correct_after_support": "That method keeps the original amount and changes only the divisor.",
+        "on_correct_math": "The first fraction is the starting amount and remains unchanged. → Replace division by multiplication using the second fraction’s reciprocal. → Multiply accurately and simplify the exact result.",
+        "on_incorrect_attempt_1": "Identify the fraction that is the divisor.",
+        "on_incorrect_attempt_2": "Compare each method with the roles of the first and second fractions.",
+        "worked_explanation": "The first fraction is the starting amount and remains unchanged. → Replace division by multiplication using the second fraction’s reciprocal. → Multiply accurately and simplify the exact result.",
+        "on_locked_incorrect": "Compare each method with the roles of the first and second fractions."
+      },
+      "mathematical_support": {
+        "hint_1": "Identify the fraction that is the divisor.",
+        "hint_2": "The new calculation must have the same value as the original division.",
+        "worked_solution": "The first fraction is the starting amount and remains unchanged. → Replace division by multiplication using the second fraction’s reciprocal. → Multiply accurately and simplify the exact result."
+      },
+      "working": [
+        "The first fraction is the starting amount and remains unchanged.",
+        "Replace division by multiplication using the second fraction’s reciprocal.",
+        "Multiply accurately and simplify the exact result."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_groups_rule",
+          "object": "relationship",
+          "target": "The valid fraction-division method",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "Reverse both fractions, then multiply.": "That changes the starting amount as well as the divisor.",
+        "Keep both fractions unchanged and multiply.": "That changes the operation without taking the divisor’s reciprocal.",
+        "Reverse only the first fraction.": "That reverses the wrong fraction; the first fraction is the starting amount."
+      },
+      "final_error_feedback": "answer_specific"
+    }
+  ],
+  "canonical_lesson": {
+    "version": "MD13-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

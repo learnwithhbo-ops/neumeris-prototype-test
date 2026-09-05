@@ -1,0 +1,1584 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "MD-01 - Find a unit fraction of a whole-number amount",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-15",
+      "sha256": "f178f1e55d54ae7ab5379b7aa2b682098bf7f92c11616f25cd41f4a89fa43596"
+    },
+    "authored_scope": "Find a unit fraction of a whole-number amount by dividing into equal parts.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "MD01-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "preview_checked_2026-09-03",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        3,
+        4,
+        5,
+        6,
+        11,
+        13,
+        14,
+        15
+      ],
+      "source_repairs_consulted": [
+        8,
+        9,
+        10
+      ],
+      "note": "PDF is the supplied approved specification and storyboard; no separate MD01 storyboard exists. Entry, separate diagnostic and delayed retrieval remain inactive. The p13 ribbon item is not shown before mastery because it repeats the p11 final calculation."
+    }
+  },
+  "identity": {
+    "id": "MD-01",
+    "slug": "find-a-unit-fraction-of-a-whole-number-amount",
+    "title": "Find a unit fraction of a whole-number amount",
+    "strand": "Number",
+    "cluster": "Multiplying and Dividing Fractions",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Find a unit fraction of a whole-number amount by dividing into equal parts.",
+    "success_criteria": [
+      "One nth of an amount is the value of one of n equal groups, so divide the whole by n.",
+      "The denominator gives the number of equal groups; a unit fraction selects exactly one group.",
+      "Use the sequence: Identify the whole amount; Read the denominator as the number of equal groups; Divide the whole by the denominator; Keep the unit.",
+      "Complete a context question with the requested form and unit."
+    ],
+    "boundaries": {
+      "includes": [
+        "Find a unit fraction of a whole-number amount by dividing into equal parts.",
+        "Direct calculation",
+        "Concept and method checks",
+        "Short GCSE-style transfer"
+      ],
+      "excludes": [
+        "Diagnostic route",
+        "Delayed retrieval route",
+        "Algebraic generalisation beyond the approved packet"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [],
+    "entry_assumptions": [
+      "The learner can read the quantities and use the required whole-number arithmetic."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "single_choice",
+      "integer"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    }
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Explicit unit-fraction model: known whole, equal groups, then one group. No inferred quantities or unrelated fallback bars."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "One nth of an amount is the value of one of n equal groups, so divide the whole by n.",
+    "invariant": "The denominator gives the number of equal groups; a unit fraction selects exactly one group.",
+    "mathematical_rule": "Identify the whole amount; Read the denominator as the number of equal groups; Divide the whole by the denominator; Keep the unit",
+    "must_notice": [
+      "Identify the whole amount",
+      "Read the denominator as the number of equal groups",
+      "Divide the whole by the denominator",
+      "Keep the unit"
+    ],
+    "common_confusions": [
+      "multiplying by the denominator",
+      "dividing by the numerator 1",
+      "treating the denominator as the answer"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "One share of a whole",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "One share of a whole",
+          "initial_state": "One share of a whole",
+          "model": {
+            "kind": "unit_fraction_amount",
+            "total": 24,
+            "n": 1,
+            "d": 6,
+            "object": "counters",
+            "target": "Value of one equal share",
+            "phase": "whole"
+          }
+        },
+        "narration": {
+          "script": "A unit fraction has one on top. It asks for one equal share of the whole amount."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Make six equal groups",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Make six equal groups",
+          "initial_state": "Make six equal groups",
+          "model": {
+            "kind": "unit_fraction_amount",
+            "total": 24,
+            "n": 1,
+            "d": 6,
+            "object": "counters",
+            "target": "Value of one equal share",
+            "phase": "grouped"
+          }
+        },
+        "narration": {
+          "script": "The denominator tells us to share these counters between six equal groups. The total stays the same."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Find the value of one group",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Find the value of one group",
+          "initial_state": "Find the value of one group",
+          "model": {
+            "kind": "unit_fraction_amount",
+            "total": 24,
+            "n": 1,
+            "d": 6,
+            "object": "counters",
+            "target": "Value of one equal share",
+            "phase": "selected",
+            "solved": true,
+            "annotation": "24 ÷ 6 = 4; one sixth is 4."
+          }
+        },
+        "narration": {
+          "script": "One sixth selects a single group. Count what is inside that group, not how many groups there are."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Explain the grouping",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Explain the grouping",
+          "initial_state": "Explain the grouping",
+          "model": null
+        },
+        "narration": {
+          "script": "Why does division match this fraction?"
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "MD-01-C01"
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "A new whole: fifty-six",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "A new whole: fifty-six",
+          "initial_state": "A new whole: fifty-six",
+          "model": {
+            "kind": "unit_fraction_amount",
+            "total": 56,
+            "n": 1,
+            "d": 8,
+            "object": "quantity",
+            "target": "Value of one equal share",
+            "phase": "grouped"
+          }
+        },
+        "narration": {
+          "script": "Now find one eighth of fifty-six. The bottom number names eight equal shares."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T06"
+      },
+      {
+        "id": "T06",
+        "stage": "teaching",
+        "purpose": "One of eight shares",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "One of eight shares",
+          "initial_state": "One of eight shares",
+          "model": {
+            "kind": "unit_fraction_amount",
+            "total": 56,
+            "n": 1,
+            "d": 8,
+            "object": "quantity",
+            "target": "Value of one equal share",
+            "phase": "selected",
+            "solved": true,
+            "annotation": "56 ÷ 8 = 7; one eighth is 7."
+          }
+        },
+        "narration": {
+          "script": "Divide the whole by eight. The result gives the value in one share."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T07"
+      },
+      {
+        "id": "T07",
+        "stage": "teaching",
+        "purpose": "Choose the calculation",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Choose the calculation",
+          "initial_state": "Choose the calculation",
+          "model": null
+        },
+        "narration": {
+          "script": "Use the meaning of one equal share to choose a calculation for this new amount."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "MD-01-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "MD-01-G01",
+        "support_level": "high",
+        "pre_question_script": "Let’s work through one sixth of forty-two together.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "MD-01-G02",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "guided",
+        "question_ref": "MD-01-G03",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "guided",
+        "question_ref": "MD-01-G04",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "F01"
+      },
+      "F01": {
+        "stage": "faded",
+        "question_ref": "MD-01-P01",
+        "support_level": "reduced",
+        "pre_question_script": "Find one share yourself. Ask for a clue if you need one.",
+        "correct_next": "I01"
+      },
+      "I01": {
+        "stage": "independent_transfer",
+        "question_ref": "MD-01-P02",
+        "support_level": "none",
+        "pre_question_script": "Choose your own method. You can work on paper before entering your answer.",
+        "correct_next": "P03"
+      }
+    },
+    "practice": {
+      "intro_script": "Use the same idea with these new amounts. Later questions put the fractions into everyday situations.",
+      "question_order": [
+        "MD-01-P03",
+        "MD-01-P04",
+        "MD-01-P05",
+        "MD-01-P06",
+        "MD-01-X01",
+        "MD-01-X02",
+        "MD-01-X04"
+      ]
+    },
+    "exit": {
+      "intro_script": "Answer these three final checks independently. There are no hints while you answer.",
+      "primary_question_refs": [
+        "MD-01-E01",
+        "MD-01-E02",
+        "MD-01-E03"
+      ],
+      "confirmation_question_refs": [],
+      "mastery_policy": {
+        "profile": "all_primary_unsupported",
+        "require_all": true,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING",
+        "source_page": 11
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "You found both unit fractions independently and chose the correct rule. Each answer describes one equal share.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Keep building equal shares",
+      "ryan_script": "One or more final checks need more practice. Compare the worked answers before trying again.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "MD-01-C01",
+      "stage": "teaching_checkpoint",
+      "source_ref": {
+        "page": 3
+      },
+      "target": "Value of one equal share",
+      "prompt": "Why do we divide 24 by 6 to find 1/6 of 24?",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "The denominator tells us to split 24 into six equal groups.",
+          "The numerator and denominator are added.",
+          "The denominator is always the final answer.",
+          "The amount becomes six times larger."
+        ]
+      },
+      "answer": {
+        "value": "The denominator tells us to split 24 into six equal groups."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Exactly—the denominator counts the equal groups.",
+        "on_correct_math": "Six equal groups share the 24 counters. → 24 ÷ 6 = 4 in each group. → One sixth is one of those groups.",
+        "on_incorrect_attempt_1": "What does the bottom number of the fraction describe?",
+        "on_incorrect_attempt_2": "Compare how the whole is shared in the working. Then enter your correction.",
+        "correct_after_support": "Exactly—the denominator counts the equal groups.",
+        "worked_explanation": "Six equal groups share the 24 counters. → 24 ÷ 6 = 4 in each group. → One sixth is one of those groups."
+      },
+      "mathematical_support": {
+        "hint_1": "What does the bottom number of the fraction describe?",
+        "hint_2": "It describes how many equal groups share the whole, not how many counters go in one group.",
+        "worked_solution": "Six equal groups share the 24 counters. → 24 ÷ 6 = 4 in each group. → One sixth is one of those groups."
+      },
+      "working": [
+        "Six equal groups share the 24 counters.",
+        "24 ÷ 6 = 4 in each group.",
+        "One sixth is one of those groups."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "unit_fraction_amount",
+          "total": 24,
+          "n": 1,
+          "d": 6,
+          "object": "counters",
+          "target": "Value of one equal share"
+        }
+      },
+      "response_feedback": {
+        "The numerator and denominator are added.": "The two numbers have different roles. Which one describes the equal groups?",
+        "The denominator is always the final answer.": "The group count is given. We still need the amount in one group.",
+        "The amount becomes six times larger.": "One sixth is a share of the original amount. The whole does not grow."
+      }
+    },
+    {
+      "id": "MD-01-C02",
+      "stage": "teaching_checkpoint",
+      "source_ref": {
+        "page": 4
+      },
+      "target": "Value of one equal share",
+      "prompt": "Which calculation correctly finds 1/7 of 42?",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "42 ÷ 7 = 6",
+          "42 × 7 = 294",
+          "42 − 7 = 35",
+          "7 ÷ 42 = 1/6"
+        ]
+      },
+      "answer": {
+        "value": "42 ÷ 7 = 6"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That division finds the size of one share.",
+        "on_correct_math": "Share the whole into seven equal groups. → 42 ÷ 7 = 6. → One seventh of 42 is 6.",
+        "on_incorrect_attempt_1": "Which calculation finds the amount in one equal group?",
+        "on_incorrect_attempt_2": "Compare how the whole is shared in the working. Then enter your correction.",
+        "correct_after_support": "That division finds the size of one share.",
+        "worked_explanation": "Share the whole into seven equal groups. → 42 ÷ 7 = 6. → One seventh of 42 is 6."
+      },
+      "mathematical_support": {
+        "hint_1": "Which calculation finds the amount in one equal group?",
+        "hint_2": "The whole amount comes first; the number of equal groups comes second.",
+        "worked_solution": "Share the whole into seven equal groups. → 42 ÷ 7 = 6. → One seventh of 42 is 6."
+      },
+      "working": [
+        "Share the whole into seven equal groups.",
+        "42 ÷ 7 = 6.",
+        "One seventh of 42 is 6."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "unit_fraction_amount",
+          "total": 42,
+          "n": 1,
+          "d": 7,
+          "object": "quantity",
+          "target": "Value of one equal share"
+        }
+      },
+      "response_feedback": {
+        "42 × 7 = 294": "That makes seven copies of the whole amount. We need just one equal share.",
+        "42 − 7 = 35": "The seven counts equal groups, not an amount to take away.",
+        "7 ÷ 42 = 1/6": "Keep the whole amount first. We are sharing 42, not sharing seven."
+      }
+    },
+    {
+      "id": "MD-01-G01",
+      "stage": "guided",
+      "source_ref": {
+        "page": 5
+      },
+      "target": "Denominator",
+      "prompt": "We want 1/6 of 42. What is the denominator?",
+      "response": {
+        "type": "integer",
+        "input_label": "Denominator",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 6
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The six tells us how many equal groups to make.",
+        "on_correct_math": "The denominator is the bottom number: 6.",
+        "on_incorrect_attempt_1": "Locate the bottom number in the fraction.",
+        "on_incorrect_attempt_2": "Compare how the whole is shared in the working. Then enter your correction.",
+        "correct_after_support": "The six tells us how many equal groups to make.",
+        "worked_explanation": "The denominator is the bottom number: 6."
+      },
+      "mathematical_support": {
+        "hint_1": "Locate the bottom number in the fraction.",
+        "hint_2": "The numerator tells us how many shares to choose; the denominator names the equal parts.",
+        "worked_solution": "The denominator is the bottom number: 6."
+      },
+      "working": [
+        "The denominator is the bottom number: 6."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "unit_fraction_amount",
+          "total": 42,
+          "n": 1,
+          "d": 6,
+          "object": "quantity",
+          "target": "Denominator",
+          "hidePartition": true
+        }
+      },
+      "reveal_model_on_submit": false
+    },
+    {
+      "id": "MD-01-G02",
+      "stage": "guided",
+      "source_ref": {
+        "page": 5
+      },
+      "target": "Amount in one group",
+      "prompt": "Share 42 into six equal groups. What is 42 ÷ 6?",
+      "response": {
+        "type": "integer",
+        "input_label": "Amount in one group",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 7
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Each of the six groups has seven.",
+        "on_correct_math": "Whole amount: 42. → 42 ÷ 6 = 7 in each group.",
+        "on_incorrect_attempt_1": "Which multiplication fact joins six equal groups to 42?",
+        "on_incorrect_attempt_2": "Compare how the whole is shared in the working. Then enter your correction.",
+        "correct_after_support": "Each of the six groups has seven.",
+        "worked_explanation": "Whole amount: 42. → 42 ÷ 6 = 7 in each group."
+      },
+      "mathematical_support": {
+        "hint_1": "Which multiplication fact joins six equal groups to 42?",
+        "hint_2": "Find the number which, multiplied by six, gives the whole amount.",
+        "worked_solution": "Whole amount: 42. → 42 ÷ 6 = 7 in each group."
+      },
+      "working": [
+        "Whole amount: 42.",
+        "42 ÷ 6 = 7 in each group."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "unit_fraction_amount",
+          "total": 42,
+          "n": 1,
+          "d": 6,
+          "object": "quantity",
+          "target": "Amount in one group",
+          "previous": "Six equal groups"
+        }
+      }
+    },
+    {
+      "id": "MD-01-G03",
+      "stage": "guided",
+      "source_ref": {
+        "page": 5
+      },
+      "target": "One sixth of 42",
+      "prompt": "Complete the conclusion: 1/6 of 42 = ?",
+      "response": {
+        "type": "integer",
+        "input_label": "One sixth of 42",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 7
+      },
+      "policy": {
+        "scored": false,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true,
+        "engagementOnly": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "One sixth is the value in that single group.",
+        "on_correct_math": "1/6 of 42 = 7.",
+        "on_incorrect_attempt_1": "The previous result gives seven in each group. One sixth selects one of those groups.",
+        "on_incorrect_attempt_2": "Use the completed group to check the conclusion.",
+        "worked_explanation": "1/6 of 42 = 7."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the value of one group we just found.",
+        "hint_2": "A unit fraction chooses one equal group.",
+        "worked_solution": "One sixth selects one of the six equal groups. → That group contains 7."
+      },
+      "working": [
+        "One sixth selects one of the six equal groups.",
+        "That group contains 7."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "unit_fraction_amount",
+          "total": 42,
+          "n": 1,
+          "d": 6,
+          "object": "quantity",
+          "target": "One sixth of 42",
+          "previous": "42 ÷ 6 = 7"
+        }
+      }
+    },
+    {
+      "id": "MD-01-G04",
+      "stage": "guided",
+      "source_ref": {
+        "page": 5
+      },
+      "target": "Value of one equal share",
+      "prompt": "Which statement explains why 1/6 of 42 is 7?",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "One sixth of 42 is the value in one of six equal groups.",
+          "We subtract 6 from 42.",
+          "We multiply 42 by 6.",
+          "One sixth of every amount is 6."
+        ]
+      },
+      "answer": {
+        "value": "One sixth of 42 is the value in one of six equal groups."
+      },
+      "policy": {
+        "scored": false,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true,
+        "engagementOnly": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That explains both the equal groups and the single share.",
+        "on_correct_math": "42 shared into six equal groups gives 7 in each. → One sixth selects one group, not all six.",
+        "on_incorrect_attempt_1": "Explain what the fraction means, not just an operation.",
+        "on_incorrect_attempt_2": "Compare how the whole is shared in the working. Then enter your correction.",
+        "correct_after_support": "That explains both the equal groups and the single share.",
+        "worked_explanation": "42 shared into six equal groups gives 7 in each. → One sixth selects one group, not all six."
+      },
+      "mathematical_support": {
+        "hint_1": "Explain what the fraction means, not just an operation.",
+        "hint_2": "Link one sixth to a single equal group.",
+        "worked_solution": "42 shared into six equal groups gives 7 in each. → One sixth selects one group, not all six."
+      },
+      "working": [
+        "42 shared into six equal groups gives 7 in each.",
+        "One sixth selects one group, not all six."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "unit_fraction_amount",
+          "total": 42,
+          "n": 1,
+          "d": 6,
+          "object": "quantity",
+          "target": "Value of one equal share"
+        }
+      },
+      "response_feedback": {
+        "We subtract 6 from 42.": "Six is the number of equal groups, not an amount removed from 42.",
+        "We multiply 42 by 6.": "That would make six copies of 42. The picture shares just one whole amount.",
+        "One sixth of every amount is 6.": "The share size depends on the whole amount. Here six equal groups share 42."
+      }
+    },
+    {
+      "id": "MD-01-P01",
+      "stage": "faded",
+      "source_ref": {
+        "page": 6
+      },
+      "target": "Value of one equal share",
+      "prompt": "Find 1/3 of 24.",
+      "response": {
+        "type": "integer",
+        "input_label": "Value of one equal share",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 8
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Each third contains eight; three such shares make the whole.",
+        "on_correct_math": "24 ÷ 3 = 8. → 1/3 of 24 = 8.",
+        "on_incorrect_attempt_1": "Think about the value in one of the equal shares.",
+        "on_incorrect_attempt_2": "Compare how the whole is shared in the working. Then enter your correction.",
+        "correct_after_support": "Each third contains eight; three such shares make the whole.",
+        "worked_explanation": "24 ÷ 3 = 8. → 1/3 of 24 = 8."
+      },
+      "mathematical_support": {
+        "hint_1": "Think about the value in one of the equal shares.",
+        "hint_2": "Share the whole amount, 24, equally between 3 groups.",
+        "worked_solution": "24 ÷ 3 = 8. → 1/3 of 24 = 8."
+      },
+      "working": [
+        "24 ÷ 3 = 8.",
+        "1/3 of 24 = 8."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "unit_fraction_amount",
+          "total": 24,
+          "n": 1,
+          "d": 3,
+          "object": "quantity",
+          "target": "Value of one equal share",
+          "stage": "faded",
+          "reaction": "Each third contains eight; three such shares make the whole."
+        }
+      }
+    },
+    {
+      "id": "MD-01-P02",
+      "stage": "independent_transfer",
+      "source_ref": {
+        "page": 6
+      },
+      "target": "Value of one equal share",
+      "prompt": "Find 1/4 of 28.",
+      "response": {
+        "type": "integer",
+        "input_label": "Value of one equal share",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 7
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Seven in each quarter accounts for all twenty-eight.",
+        "on_correct_math": "28 ÷ 4 = 7. → 1/4 of 28 = 7.",
+        "on_incorrect_attempt_1": "Think about the value in one of the equal shares.",
+        "on_incorrect_attempt_2": "Compare how the whole is shared in the working. Then enter your correction.",
+        "correct_after_support": "Seven in each quarter accounts for all twenty-eight.",
+        "worked_explanation": "28 ÷ 4 = 7. → 1/4 of 28 = 7."
+      },
+      "mathematical_support": {
+        "hint_1": "Think about the value in one of the equal shares.",
+        "hint_2": "Share the whole amount, 28, equally between 4 groups.",
+        "worked_solution": "28 ÷ 4 = 7. → 1/4 of 28 = 7."
+      },
+      "working": [
+        "28 ÷ 4 = 7.",
+        "1/4 of 28 = 7."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "unit_fraction_amount",
+          "total": 28,
+          "n": 1,
+          "d": 4,
+          "object": "quantity",
+          "target": "Value of one equal share",
+          "stage": "independent_transfer",
+          "reaction": "Seven in each quarter accounts for all twenty-eight."
+        }
+      }
+    },
+    {
+      "id": "MD-01-P03",
+      "stage": "practice",
+      "source_ref": {
+        "page": 6
+      },
+      "target": "Value of one equal share",
+      "prompt": "Find 1/6 of 54.",
+      "response": {
+        "type": "integer",
+        "input_label": "Value of one equal share",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 9
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The six equal shares fit the original amount exactly.",
+        "on_correct_math": "54 ÷ 6 = 9. → 1/6 of 54 = 9.",
+        "on_incorrect_attempt_1": "Think about the value in one of the equal shares.",
+        "on_incorrect_attempt_2": "Compare how the whole is shared in the working. Then enter your correction.",
+        "correct_after_support": "The six equal shares fit the original amount exactly.",
+        "worked_explanation": "54 ÷ 6 = 9. → 1/6 of 54 = 9."
+      },
+      "mathematical_support": {
+        "hint_1": "Think about the value in one of the equal shares.",
+        "hint_2": "Share the whole amount, 54, equally between 6 groups.",
+        "worked_solution": "54 ÷ 6 = 9. → 1/6 of 54 = 9."
+      },
+      "working": [
+        "54 ÷ 6 = 9.",
+        "1/6 of 54 = 9."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "unit_fraction_amount",
+          "total": 54,
+          "n": 1,
+          "d": 6,
+          "object": "quantity",
+          "target": "Value of one equal share",
+          "reaction": "The six equal shares fit the original amount exactly."
+        }
+      }
+    },
+    {
+      "id": "MD-01-P04",
+      "stage": "practice",
+      "source_ref": {
+        "page": 6
+      },
+      "target": "Value of one equal share",
+      "prompt": "Find 1/8 of 80.",
+      "response": {
+        "type": "integer",
+        "input_label": "Value of one equal share",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 10
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "One eighth is the value of a single share, not the number of shares.",
+        "on_correct_math": "80 ÷ 8 = 10. → 1/8 of 80 = 10.",
+        "on_incorrect_attempt_1": "Think about the value in one of the equal shares.",
+        "on_incorrect_attempt_2": "Compare how the whole is shared in the working. Then enter your correction.",
+        "correct_after_support": "One eighth is the value of a single share, not the number of shares.",
+        "worked_explanation": "80 ÷ 8 = 10. → 1/8 of 80 = 10."
+      },
+      "mathematical_support": {
+        "hint_1": "Think about the value in one of the equal shares.",
+        "hint_2": "Share the whole amount, 80, equally between 8 groups.",
+        "worked_solution": "80 ÷ 8 = 10. → 1/8 of 80 = 10."
+      },
+      "working": [
+        "80 ÷ 8 = 10.",
+        "1/8 of 80 = 10."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "unit_fraction_amount",
+          "total": 80,
+          "n": 1,
+          "d": 8,
+          "object": "quantity",
+          "target": "Value of one equal share",
+          "reaction": "One eighth is the value of a single share, not the number of shares."
+        }
+      }
+    },
+    {
+      "id": "MD-01-P05",
+      "stage": "practice",
+      "source_ref": {
+        "page": 6
+      },
+      "target": "Value of one equal share",
+      "prompt": "Find 1/12 of 132.",
+      "response": {
+        "type": "integer",
+        "input_label": "Value of one equal share",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 11
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Twelve shares of that size rebuild the whole.",
+        "on_correct_math": "132 ÷ 12 = 11. → 1/12 of 132 = 11.",
+        "on_incorrect_attempt_1": "Think about the value in one of the equal shares.",
+        "on_incorrect_attempt_2": "Compare how the whole is shared in the working. Then enter your correction.",
+        "correct_after_support": "Twelve shares of that size rebuild the whole.",
+        "worked_explanation": "132 ÷ 12 = 11. → 1/12 of 132 = 11."
+      },
+      "mathematical_support": {
+        "hint_1": "Think about the value in one of the equal shares.",
+        "hint_2": "Share the whole amount, 132, equally between 12 groups.",
+        "worked_solution": "132 ÷ 12 = 11. → 1/12 of 132 = 11."
+      },
+      "working": [
+        "132 ÷ 12 = 11.",
+        "1/12 of 132 = 11."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "unit_fraction_amount",
+          "total": 132,
+          "n": 1,
+          "d": 12,
+          "object": "quantity",
+          "target": "Value of one equal share",
+          "reaction": "Twelve shares of that size rebuild the whole."
+        }
+      }
+    },
+    {
+      "id": "MD-01-P06",
+      "stage": "practice",
+      "source_ref": {
+        "page": 6
+      },
+      "target": "Value of one equal share",
+      "prompt": "What is 1/9 of 63?",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "7",
+          "9",
+          "54",
+          "567"
+        ]
+      },
+      "answer": {
+        "value": "7"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Seven is the size of one group; nine is the number of groups.",
+        "on_correct_math": "63 ÷ 9 = 7. → One ninth of 63 is 7.",
+        "on_incorrect_attempt_1": "Decide what the nine represents.",
+        "on_incorrect_attempt_2": "Compare how the whole is shared in the working. Then enter your correction.",
+        "correct_after_support": "Seven is the size of one group; nine is the number of groups.",
+        "worked_explanation": "63 ÷ 9 = 7. → One ninth of 63 is 7."
+      },
+      "mathematical_support": {
+        "hint_1": "Decide what the nine represents.",
+        "hint_2": "The whole is shared equally between nine groups.",
+        "worked_solution": "63 ÷ 9 = 7. → One ninth of 63 is 7."
+      },
+      "working": [
+        "63 ÷ 9 = 7.",
+        "One ninth of 63 is 7."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "unit_fraction_amount",
+          "total": 63,
+          "n": 1,
+          "d": 9,
+          "object": "quantity",
+          "target": "Value of one equal share"
+        }
+      },
+      "response_feedback": {
+        "9": "Nine counts the groups. Find how much goes in each group.",
+        "54": "Subtracting nine does not share the whole equally.",
+        "567": "That makes nine copies of the whole rather than one ninth."
+      }
+    },
+    {
+      "id": "MD-01-X01",
+      "stage": "practice",
+      "source_ref": {
+        "page": 13
+      },
+      "target": "Red counters",
+      "prompt": "There are 48 counters in a box. One sixth are red. How many counters are red?",
+      "response": {
+        "type": "integer",
+        "input_label": "Red counters",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 8
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The red counters form one sixth of the complete collection.",
+        "on_correct_math": "48 ÷ 6 = 8. → 1/6 of 48 = 8.",
+        "on_incorrect_attempt_1": "Think about the value in one of the equal shares.",
+        "on_incorrect_attempt_2": "Compare how the whole is shared in the working. Then enter your correction.",
+        "correct_after_support": "The red counters form one sixth of the complete collection.",
+        "worked_explanation": "48 ÷ 6 = 8. → 1/6 of 48 = 8."
+      },
+      "mathematical_support": {
+        "hint_1": "Think about the value in one of the equal shares.",
+        "hint_2": "Share the whole amount, 48, equally between 6 groups.",
+        "worked_solution": "48 ÷ 6 = 8. → 1/6 of 48 = 8."
+      },
+      "working": [
+        "48 ÷ 6 = 8.",
+        "1/6 of 48 = 8."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "unit_fraction_amount",
+          "total": 48,
+          "n": 1,
+          "d": 6,
+          "object": "counters",
+          "target": "Red counters",
+          "selectionColor": "red",
+          "prompt": "There are 48 counters in a box. One sixth are red. How many counters are red?",
+          "reaction": "The red counters form one sixth of the complete collection."
+        }
+      }
+    },
+    {
+      "id": "MD-01-X02",
+      "stage": "practice",
+      "source_ref": {
+        "page": 13
+      },
+      "target": "Book cost in pounds",
+      "prompt": "Aisha has £65. She spends one fifth on a book. How much does the book cost?",
+      "response": {
+        "type": "integer",
+        "input_label": "Book cost in pounds",
+        "prefix": "£"
+      },
+      "answer": {
+        "value": 13
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The cost is one equal share of Aisha’s money.",
+        "on_correct_math": "65 ÷ 5 = 13. → 1/5 of £65 = £13.",
+        "on_incorrect_attempt_1": "Think about the value in one of the equal shares.",
+        "on_incorrect_attempt_2": "Compare how the whole is shared in the working. Then enter your correction.",
+        "correct_after_support": "The cost is one equal share of Aisha’s money.",
+        "worked_explanation": "65 ÷ 5 = 13. → 1/5 of £65 = £13."
+      },
+      "mathematical_support": {
+        "hint_1": "Think about the value in one of the equal shares.",
+        "hint_2": "Share the whole amount, 65, equally between 5 groups.",
+        "worked_solution": "65 ÷ 5 = 13. → 1/5 of £65 = £13."
+      },
+      "working": [
+        "65 ÷ 5 = 13.",
+        "1/5 of £65 = £13."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "unit_fraction_amount",
+          "total": 65,
+          "n": 1,
+          "d": 5,
+          "object": "money",
+          "target": "Book cost in pounds",
+          "unit": "£",
+          "prompt": "Aisha has £65. She spends one fifth on a book. How much does the book cost?",
+          "reaction": "The cost is one equal share of Aisha’s money."
+        }
+      }
+    },
+    {
+      "id": "MD-01-X04",
+      "stage": "practice",
+      "source_ref": {
+        "page": 13
+      },
+      "target": "Calculation for absent students",
+      "prompt": "There are 84 students in a year group. One seventh are absent. Which calculation finds how many are absent?",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "84 × 7",
+          "84 − 7",
+          "84 ÷ 7",
+          "7 ÷ 84"
+        ]
+      },
+      "answer": {
+        "value": "84 ÷ 7"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That calculation finds the number of students in the absent share.",
+        "on_correct_math": "One seventh selects one of seven equal groups. → 84 ÷ 7 = 12 students.",
+        "on_incorrect_attempt_1": "Relate the absent group to the whole year group.",
+        "on_incorrect_attempt_2": "Compare how the whole is shared in the working. Then enter your correction.",
+        "correct_after_support": "That calculation finds the number of students in the absent share.",
+        "worked_explanation": "One seventh selects one of seven equal groups. → 84 ÷ 7 = 12 students."
+      },
+      "mathematical_support": {
+        "hint_1": "Relate the absent group to the whole year group.",
+        "hint_2": "Find the value in a single equal share of the student total.",
+        "worked_solution": "One seventh selects one of seven equal groups. → 84 ÷ 7 = 12 students."
+      },
+      "working": [
+        "One seventh selects one of seven equal groups.",
+        "84 ÷ 7 = 12 students."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "unit_fraction_amount",
+          "total": 84,
+          "n": 1,
+          "d": 7,
+          "object": "students",
+          "target": "Calculation for absent students"
+        }
+      }
+    },
+    {
+      "id": "MD-01-E01",
+      "stage": "exit",
+      "source_ref": {
+        "page": 11
+      },
+      "target": "Value of one equal share",
+      "prompt": "Find 1/8 of 72.",
+      "response": {
+        "type": "integer",
+        "input_label": "Value of one equal share",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 9
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That value is one of the eight equal shares.",
+        "on_correct_math": "72 ÷ 8 = 9. → 1/8 of 72 = 9.",
+        "on_incorrect_attempt_1": "Think about the value in one of the equal shares.",
+        "on_incorrect_attempt_2": "Compare how the whole is shared in the working. Then enter your correction.",
+        "correct_after_support": "That value is one of the eight equal shares.",
+        "worked_explanation": "72 ÷ 8 = 9. → 1/8 of 72 = 9.",
+        "on_locked_incorrect": "Use the worked division to compare the whole amount with one equal share."
+      },
+      "mathematical_support": {
+        "hint_1": "Think about the value in one of the equal shares.",
+        "hint_2": "Share the whole amount, 72, equally between 8 groups.",
+        "worked_solution": "72 ÷ 8 = 9. → 1/8 of 72 = 9."
+      },
+      "working": [
+        "72 ÷ 8 = 9.",
+        "1/8 of 72 = 9."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "unit_fraction_amount",
+          "total": 72,
+          "n": 1,
+          "d": 8,
+          "object": "quantity",
+          "target": "Value of one equal share",
+          "stage": "exit",
+          "reaction": "That value is one of the eight equal shares."
+        }
+      }
+    },
+    {
+      "id": "MD-01-E02",
+      "stage": "exit",
+      "source_ref": {
+        "page": 11
+      },
+      "target": "Value of one equal share",
+      "prompt": "Find 1/11 of 88.",
+      "response": {
+        "type": "integer",
+        "input_label": "Value of one equal share",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 8
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Eleven shares of that size make eighty-eight.",
+        "on_correct_math": "88 ÷ 11 = 8. → 1/11 of 88 = 8.",
+        "on_incorrect_attempt_1": "Think about the value in one of the equal shares.",
+        "on_incorrect_attempt_2": "Compare how the whole is shared in the working. Then enter your correction.",
+        "correct_after_support": "Eleven shares of that size make eighty-eight.",
+        "worked_explanation": "88 ÷ 11 = 8. → 1/11 of 88 = 8.",
+        "on_locked_incorrect": "Use the worked division to compare the whole amount with one equal share."
+      },
+      "mathematical_support": {
+        "hint_1": "Think about the value in one of the equal shares.",
+        "hint_2": "Share the whole amount, 88, equally between 11 groups.",
+        "worked_solution": "88 ÷ 11 = 8. → 1/11 of 88 = 8."
+      },
+      "working": [
+        "88 ÷ 11 = 8.",
+        "1/11 of 88 = 8."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "unit_fraction_amount",
+          "total": 88,
+          "n": 1,
+          "d": 11,
+          "object": "quantity",
+          "target": "Value of one equal share",
+          "stage": "exit",
+          "reaction": "Eleven shares of that size make eighty-eight."
+        }
+      }
+    },
+    {
+      "id": "MD-01-E03",
+      "stage": "exit",
+      "source_ref": {
+        "page": 11
+      },
+      "target": "Choose the rule",
+      "prompt": "Which statement correctly describes how to find a unit fraction of an amount?",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Divide the whole amount by the denominator.",
+          "Multiply the whole amount by the denominator.",
+          "Subtract the denominator from the whole amount.",
+          "The denominator is the answer."
+        ]
+      },
+      "answer": {
+        "value": "Divide the whole amount by the denominator."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That rule finds the value of one equal share.",
+        "on_correct_math": "The denominator gives the number of equal groups. → Divide the whole amount by that number. → The quotient is the value of one group.",
+        "on_incorrect_attempt_1": "Connect the denominator to the equal groups.",
+        "on_incorrect_attempt_2": "Compare how the whole is shared in the working. Then enter your correction.",
+        "correct_after_support": "That rule finds the value of one equal share.",
+        "worked_explanation": "The denominator gives the number of equal groups. → Divide the whole amount by that number. → The quotient is the value of one group.",
+        "on_locked_incorrect": "Compare the role of the denominator with the value of one share."
+      },
+      "mathematical_support": {
+        "hint_1": "Connect the denominator to the equal groups.",
+        "hint_2": "The result is the value of one group, not how many groups there are.",
+        "worked_solution": "The denominator gives the number of equal groups. → Divide the whole amount by that number. → The quotient is the value of one group."
+      },
+      "working": [
+        "The denominator gives the number of equal groups.",
+        "Divide the whole amount by that number.",
+        "The quotient is the value of one group."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "unit_fraction_rule",
+          "object": "relationship",
+          "target": "Choose the rule"
+        }
+      }
+    }
+  ],
+  "canonical_lesson": {
+    "version": "MD01-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

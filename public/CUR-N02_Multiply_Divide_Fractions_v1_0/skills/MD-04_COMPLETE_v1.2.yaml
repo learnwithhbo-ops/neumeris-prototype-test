@@ -1,0 +1,1896 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "MD-04 - Multiply a proper fraction by a whole number",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-18",
+      "sha256": "0344c51be6f51755180efcc5c49689d2486c5b00f1a86b0f40cc63e318f89238"
+    },
+    "authored_scope": "Multiply a positive proper fraction by a positive whole number in either order; accept exact equivalent fractions and optional mixed numbers without requiring simplification.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "MD04-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "preview_checked_2026-09-03",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        4,
+        5,
+        6,
+        7,
+        13,
+        15,
+        16,
+        17,
+        18
+      ],
+      "source_repairs_consulted": [
+        10,
+        11,
+        12
+      ],
+      "note": "All 18 approved pages read and p4–6 diagrams inspected. The source repeats demonstrated products in practice and contexts; these are not described as fresh mastery evidence. Final calculations use the source’s unseen products. No entry, Diagnostic or delayed-Retrieval layers added."
+    }
+  },
+  "identity": {
+    "id": "MD-04",
+    "slug": "multiply-a-proper-fraction-by-a-whole-number",
+    "title": "Multiply a proper fraction by a whole number",
+    "strand": "Number",
+    "cluster": "Multiplying and Dividing Fractions",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Multiply a proper fraction by a whole number and give an exact result.",
+    "success_criteria": [
+      "Interpret multiplication as equal fractional groups.",
+      "Represent a whole-number factor over one when useful.",
+      "Combine numerator counts while preserving fractional part size.",
+      "Accept an exact improper fraction when the product exceeds one.",
+      "Apply the operation to a short context."
+    ],
+    "boundaries": {
+      "includes": [
+        "One proper fraction and one whole-number factor in either order.",
+        "Exact fractional products below or above one; no required simplification or mixed-number conversion.",
+        "Valid repeated-addition, grouping, bar-model and whole-number-over-one methods."
+      ],
+      "excludes": [
+        "Two non-whole fraction factors",
+        "Cancellation before multiplication",
+        "Mixed-number factors",
+        "Decimal approximations",
+        "Required simplification",
+        "Multi-step contexts",
+        "Diagnostic and delayed Retrieval layers"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "MD-02"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for MD-02 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "single_choice",
+      "fraction",
+      "integer"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    }
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "Write the whole number over 1 when useful, then multiply numerator by numerator and denominator by denominator.",
+    "invariant": "Multiplication scales the fraction by the number of equal copies; the denominator keeps the same part size before simplification.",
+    "mathematical_rule": "Write the whole number as a fraction over 1; Multiply numerators; Multiply denominators; Simplify or convert only as requested",
+    "must_notice": [
+      "Write the whole number as a fraction over 1",
+      "Multiply numerators",
+      "Multiply denominators",
+      "Simplify or convert only as requested"
+    ],
+    "common_confusions": [
+      "Multiplying only the denominator",
+      "Multiplying both fraction numbers and preserving the original value",
+      "Adding the whole number to the numerator",
+      "Rejecting an exact fraction because division first is not exact"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "Three equal fractional groups",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Three equal fractional groups",
+          "initial_state": "Three equal fractional groups",
+          "model": {
+            "kind": "whole_multiple",
+            "n": 2,
+            "d": 7,
+            "copies": 3,
+            "object": "quantity",
+            "target": "Exact product",
+            "phase": "groups",
+            "math_text": true
+          }
+        },
+        "narration": {
+          "script": "Each group contains two sevenths. The full bars all represent the same whole, so the pieces have the same size."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Combine the seventh-sized pieces",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Combine the seventh-sized pieces",
+          "initial_state": "Combine the seventh-sized pieces",
+          "model": {
+            "kind": "whole_multiple",
+            "n": 2,
+            "d": 7,
+            "copies": 3,
+            "object": "quantity",
+            "target": "Exact product",
+            "solved": true,
+            "annotation": "3 × 2/7 = 2/7 + 2/7 + 2/7 = 6/7",
+            "math_text": true
+          }
+        },
+        "narration": {
+          "script": "Combine the selected pieces. Multiplication changes how many pieces we have; it does not resize them."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Explain the denominator",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Explain the denominator",
+          "initial_state": "Explain the denominator",
+          "model": null
+        },
+        "narration": {
+          "script": "Think about the role of the denominator in this calculation."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "MD-04-C01"
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Write the whole-number factor",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Write the whole-number factor",
+          "initial_state": "Write the whole-number factor",
+          "model": {
+            "kind": "whole_factor",
+            "copies": 4,
+            "object": "whole units",
+            "solved": true,
+            "annotation": "2/9 × 4 = 2/9 × 4/1",
+            "math_text": true
+          }
+        },
+        "narration": {
+          "script": "To multiply two ninths by four, we can write the whole-number factor over one. This changes its notation, not its value."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Count the numerator pieces",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Count the numerator pieces",
+          "initial_state": "Count the numerator pieces",
+          "model": {
+            "kind": "whole_multiple",
+            "n": 2,
+            "d": 9,
+            "copies": 4,
+            "object": "quantity",
+            "target": "Exact product",
+            "phase": "numerator",
+            "annotation": "2 × 4 = 8 pieces.",
+            "math_text": true
+          }
+        },
+        "narration": {
+          "script": "Multiply the numerators to count the pieces in all four equal groups."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T06"
+      },
+      {
+        "id": "T06",
+        "stage": "teaching",
+        "purpose": "Preserve the part size",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Preserve the part size",
+          "initial_state": "Preserve the part size",
+          "model": {
+            "kind": "whole_multiple",
+            "n": 2,
+            "d": 9,
+            "copies": 4,
+            "object": "quantity",
+            "target": "Exact product",
+            "phase": "denominator",
+            "previous": "Numerator product: 8",
+            "annotation": "9 × 1 = 9.",
+            "math_text": true
+          }
+        },
+        "narration": {
+          "script": "The denominator of the whole-number factor is one. The pieces remain ninths."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T07"
+      },
+      {
+        "id": "T07",
+        "stage": "teaching",
+        "purpose": "Write the exact product",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Write the exact product",
+          "initial_state": "Write the exact product",
+          "model": {
+            "kind": "whole_multiple",
+            "n": 2,
+            "d": 9,
+            "copies": 4,
+            "object": "quantity",
+            "target": "Exact product",
+            "solved": true,
+            "annotation": "2/9 × 4 = 8/9",
+            "math_text": true
+          }
+        },
+        "narration": {
+          "script": "Combine the numerator and denominator products. The exact fraction describes the combined amount."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T08"
+      },
+      {
+        "id": "T08",
+        "stage": "teaching",
+        "purpose": "Recognise the complete method",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Recognise the complete method",
+          "initial_state": "Recognise the complete method",
+          "model": null
+        },
+        "narration": {
+          "script": "Which method preserves the values of both factors?"
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "MD-04-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "MD-04-G01",
+        "support_level": "high",
+        "pre_question_script": "Use the whole-number factor without changing its value.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "MD-04-G02",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "guided",
+        "question_ref": "MD-04-G03",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "guided",
+        "question_ref": "MD-04-G04",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G05"
+      },
+      "G05": {
+        "stage": "guided",
+        "question_ref": "MD-04-G05",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "F01"
+      },
+      "F01": {
+        "stage": "faded",
+        "question_ref": "MD-04-P01",
+        "support_level": "reduced",
+        "pre_question_script": "Try the complete product. You can ask for support if you need it.",
+        "correct_next": "I01"
+      },
+      "I01": {
+        "stage": "independent_transfer",
+        "question_ref": "MD-04-P02",
+        "support_level": "none",
+        "pre_question_script": "Use any valid exact method. You do not need to convert an improper fraction to a mixed number.",
+        "correct_next": "P03"
+      }
+    },
+    "practice": {
+      "intro_script": "Combine equal fractional amounts as the numbers and contexts change. Keep answers exact; a product greater than one is valid.",
+      "question_order": [
+        "MD-04-P03",
+        "MD-04-P04",
+        "MD-04-P05",
+        "MD-04-P06",
+        "MD-04-X01",
+        "MD-04-X02",
+        "MD-04-X03",
+        "MD-04-X04"
+      ]
+    },
+    "exit": {
+      "intro_script": "Complete two new products and a method check independently. No hints are available during these final checks.",
+      "primary_question_refs": [
+        "MD-04-E01",
+        "MD-04-E02",
+        "MD-04-E03"
+      ],
+      "confirmation_question_refs": [],
+      "mastery_policy": {
+        "profile": "all_primary_unsupported",
+        "require_all": true,
+        "source_page": 13,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "You independently combined fractional groups and preserved their part size, including an exact product greater than one.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Keep building fractional groups",
+      "ryan_script": "One or more final checks need more practice. Compare the number of combined pieces with the size of each original piece.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "MD-04-C01",
+      "source_ref": {
+        "page": 4
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "Why does the denominator remain 7 when 3 × 2/7 is calculated?",
+      "target": "Exact product",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Every part is still one seventh of the same whole.",
+          "The denominator is ignored in every multiplication.",
+          "The whole number must be smaller than the denominator.",
+          "The numerator and denominator must always be equal."
+        ]
+      },
+      "answer": {
+        "value": "Every part is still one seventh of the same whole."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Combining copies changes the number of pieces, not their size.",
+        "correct_after_support": "Combining copies changes the number of pieces, not their size.",
+        "on_correct_math": "Each original part is one seventh. → Three groups of two seventh-sized parts make six seventh-sized parts. → The denominator remains 7 because the part size has not changed.",
+        "on_incorrect_attempt_1": "Think about what the denominator names, not just which calculation sign appears.",
+        "on_incorrect_attempt_2": "Compare the original pieces with the combined pieces. They are still sevenths.",
+        "worked_explanation": "Each original part is one seventh. → Three groups of two seventh-sized parts make six seventh-sized parts. → The denominator remains 7 because the part size has not changed."
+      },
+      "mathematical_support": {
+        "hint_1": "Think about what the denominator names, not just which calculation sign appears.",
+        "hint_2": "Do the original fractional pieces change size when more copies are combined?",
+        "worked_solution": "Each original part is one seventh. → Three groups of two seventh-sized parts make six seventh-sized parts. → The denominator remains 7 because the part size has not changed."
+      },
+      "working": [
+        "Each original part is one seventh.",
+        "Three groups of two seventh-sized parts make six seventh-sized parts.",
+        "The denominator remains 7 because the part size has not changed."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "whole_multiple",
+          "n": 2,
+          "d": 7,
+          "copies": 3,
+          "object": "quantity",
+          "target": "Exact product",
+          "assessment": true,
+          "math_text": true
+        }
+      },
+      "response_feedback": {
+        "The denominator is ignored in every multiplication.": "The denominator still matters: it names the size of the fractional pieces.",
+        "The whole number must be smaller than the denominator.": "The relative sizes of those two numbers do not explain the part size.",
+        "The numerator and denominator must always be equal.": "The two fraction numbers have different jobs; they do not need to match."
+      }
+    },
+    {
+      "id": "MD-04-C02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "Which method correctly multiplies 2/9 by 4?",
+      "target": "Exact product",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "2/9 × 4/1 = (2 × 4)/(9 × 1) = 8/9",
+          "2/9 × 4 = 2/(9 × 4) = 2/36",
+          "2/9 × 4 = (2 × 4)/(9 × 4) = 8/36",
+          "2/9 × 4 = (2 + 4)/9 = 6/9"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "2/9 × 4/1 = (2 × 4)/(9 × 1) = 8/9"
+      },
+      "policy": {
+        "scored": false,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true,
+        "engagementOnly": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That method combines four copies while preserving ninth-sized parts.",
+        "correct_after_support": "That method combines four copies while preserving ninth-sized parts.",
+        "on_correct_math": "4 = 4/1. → Multiply the numerators: 2 × 4 = 8. → Multiply the denominators: 9 × 1 = 9. → The product is 8/9.",
+        "on_incorrect_attempt_1": "Check how the whole-number factor is represented.",
+        "on_incorrect_attempt_2": "Compare the whole-number fraction and the two multiplication lines.",
+        "worked_explanation": "4 = 4/1. → Multiply the numerators: 2 × 4 = 8. → Multiply the denominators: 9 × 1 = 9. → The product is 8/9."
+      },
+      "mathematical_support": {
+        "hint_1": "Check how the whole-number factor is represented.",
+        "hint_2": "The denominator of a whole number written as a fraction is one.",
+        "worked_solution": "4 = 4/1. → Multiply the numerators: 2 × 4 = 8. → Multiply the denominators: 9 × 1 = 9. → The product is 8/9."
+      },
+      "working": [
+        "4 = 4/1.",
+        "Multiply the numerators: 2 × 4 = 8.",
+        "Multiply the denominators: 9 × 1 = 9.",
+        "The product is 8/9."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "whole_multiple",
+          "n": 2,
+          "d": 9,
+          "copies": 4,
+          "object": "quantity",
+          "target": "Exact product",
+          "math_text": true
+        }
+      },
+      "response_feedback": {
+        "2/9 × 4 = 2/(9 × 4) = 2/36": "That makes each part smaller without combining four copies.",
+        "2/9 × 4 = (2 × 4)/(9 × 4) = 8/36": "Multiplying both fraction numbers by four leaves the original value unchanged.",
+        "2/9 × 4 = (2 + 4)/9 = 6/9": "Adding four to the numerator is not the same as taking four equal groups."
+      }
+    },
+    {
+      "id": "MD-04-G01",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "We want 5 × 3/11. Write 5 as a fraction with denominator 1.",
+      "target": "Whole-number factor as a fraction",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": false,
+        "partLabel": "Whole-number numerator",
+        "wholeLabel": "Whole-number denominator"
+      },
+      "answer": {
+        "value": "5/1"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The whole-number factor has been represented without changing its value.",
+        "correct_after_support": "The whole-number factor has been represented without changing its value.",
+        "on_correct_math": "5 = 5/1. → Five wholes are five one-sized units.",
+        "on_incorrect_attempt_1": "Your fraction must still have the value of five whole units.",
+        "on_incorrect_attempt_2": "The five whole units are counted in units of one. Use that to correct the fraction.",
+        "worked_explanation": "5 = 5/1. → Five wholes are five one-sized units."
+      },
+      "mathematical_support": {
+        "hint_1": "Your fraction must still have the value of five whole units.",
+        "hint_2": "Check that you have not written a fraction whose value is only one.",
+        "worked_solution": "5 = 5/1. → Five wholes are five one-sized units."
+      },
+      "working": [
+        "5 = 5/1.",
+        "Five wholes are five one-sized units."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "whole_factor",
+          "copies": 5,
+          "object": "whole units",
+          "target": "Whole-number factor as a fraction",
+          "math_text": true
+        }
+      },
+      "response_feedback": {
+        "5/5": "Five fifths is one whole, not five wholes.",
+        "1/5": "One fifth is only part of a whole, not five wholes."
+      }
+    },
+    {
+      "id": "MD-04-G02",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "Multiply the numerators for 5/1 × 3/11: 5 × 3 = ?",
+      "target": "Numerator product",
+      "response": {
+        "type": "integer",
+        "input_label": "Numerator product",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 15
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The numerator now counts the pieces in all five groups.",
+        "correct_after_support": "The numerator now counts the pieces in all five groups.",
+        "on_correct_math": "5 × 3 = 15. → There are fifteen eleventh-sized pieces.",
+        "on_incorrect_attempt_1": "Each group contains three fractional pieces. How many pieces are in five equal groups?",
+        "on_incorrect_attempt_2": "Use the equal-group count to correct the numerator product.",
+        "worked_explanation": "5 × 3 = 15. → There are fifteen eleventh-sized pieces."
+      },
+      "mathematical_support": {
+        "hint_1": "Each group contains three fractional pieces. How many pieces are in five equal groups?",
+        "hint_2": "Use multiplication or add three five times.",
+        "worked_solution": "5 × 3 = 15. → There are fifteen eleventh-sized pieces."
+      },
+      "working": [
+        "5 × 3 = 15.",
+        "There are fifteen eleventh-sized pieces."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "whole_multiple",
+          "n": 3,
+          "d": 11,
+          "copies": 5,
+          "object": "quantity",
+          "target": "Numerator product",
+          "resultScope": "numerator",
+          "math_text": true
+        }
+      }
+    },
+    {
+      "id": "MD-04-G03",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "Multiply the denominators for 5/1 × 3/11: 1 × 11 = ?",
+      "target": "Denominator product",
+      "response": {
+        "type": "integer",
+        "input_label": "Denominator product",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 11
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The denominator continues to name eleventh-sized pieces.",
+        "correct_after_support": "The denominator continues to name eleventh-sized pieces.",
+        "on_correct_math": "1 × 11 = 11. → The product is measured in elevenths.",
+        "on_incorrect_attempt_1": "Use the denominator of each factor, not both numerators.",
+        "on_incorrect_attempt_2": "The denominator multiplication uses one and eleven. Correct that product.",
+        "worked_explanation": "1 × 11 = 11. → The product is measured in elevenths."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the denominator of each factor, not both numerators.",
+        "hint_2": "The whole-number factor was written over one.",
+        "worked_solution": "1 × 11 = 11. → The product is measured in elevenths."
+      },
+      "working": [
+        "1 × 11 = 11.",
+        "The product is measured in elevenths."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "whole_multiple",
+          "n": 3,
+          "d": 11,
+          "copies": 5,
+          "object": "quantity",
+          "target": "Denominator product",
+          "resultScope": "denominator",
+          "previous": "Numerator product: 5 × 3 = 15",
+          "math_text": true
+        }
+      },
+      "response_feedback": {
+        "55": "Five is the numerator of the whole-number factor. Its denominator is one."
+      }
+    },
+    {
+      "id": "MD-04-G04",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "Complete the product: 5 × 3/11 = ?",
+      "target": "Exact product",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "allow_mixed_number": true,
+        "input_label": "Your exact fraction",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "15/11"
+      },
+      "policy": {
+        "scored": false,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true,
+        "engagementOnly": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Your exact answer describes more than one whole without rounding.",
+        "correct_after_support": "Your exact answer describes more than one whole without rounding.",
+        "on_correct_math": "Numerator product: 15. → Denominator product: 11. → The exact fraction is 15/11; an improper fraction is valid.",
+        "on_incorrect_attempt_1": "Use the numerator and denominator products you have just found.",
+        "on_incorrect_attempt_2": "Combine the two products without changing the part size.",
+        "worked_explanation": "Numerator product: 15. → Denominator product: 11. → The exact fraction is 15/11; an improper fraction is valid."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the numerator and denominator products you have just found.",
+        "hint_2": "An exact fraction may be greater than one; no rounding is needed.",
+        "worked_solution": "Numerator product: 15. → Denominator product: 11. → The exact fraction is 15/11; an improper fraction is valid."
+      },
+      "working": [
+        "Numerator product: 15.",
+        "Denominator product: 11.",
+        "The exact fraction is 15/11; an improper fraction is valid."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "whole_multiple",
+          "n": 3,
+          "d": 11,
+          "copies": 5,
+          "object": "quantity",
+          "target": "Exact product",
+          "previous": "Numerator: 15. Denominator: 11.",
+          "math_text": true
+        }
+      },
+      "response_feedback": {
+        "15/55": "The denominator used five instead of the whole-number fraction’s denominator, one.",
+        "8/11": "That numerator adds the two factors instead of counting equal groups."
+      }
+    },
+    {
+      "id": "MD-04-G05",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "Which statement explains the calculation 5 × 3/11 correctly?",
+      "target": "Exact product",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Five groups of three elevenths make fifteen elevenths.",
+          "Five groups of three elevenths make fifteen fifty-fifths.",
+          "Five groups of three elevenths make eight elevenths.",
+          "The multiplication cannot be completed because the product is greater than one."
+        ]
+      },
+      "answer": {
+        "value": "Five groups of three elevenths make fifteen elevenths."
+      },
+      "policy": {
+        "scored": false,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true,
+        "engagementOnly": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The explanation names both the number of pieces and their unchanged size.",
+        "correct_after_support": "The explanation names both the number of pieces and their unchanged size.",
+        "on_correct_math": "Five groups each contain three elevenths. → 5 × 3 = 15 eleventh-sized pieces. → The exact product is 15/11, which is greater than one.",
+        "on_incorrect_attempt_1": "Count equal groups while keeping the original part size.",
+        "on_incorrect_attempt_2": "Compare the count of pieces with the size of each piece.",
+        "worked_explanation": "Five groups each contain three elevenths. → 5 × 3 = 15 eleventh-sized pieces. → The exact product is 15/11, which is greater than one."
+      },
+      "mathematical_support": {
+        "hint_1": "Count equal groups while keeping the original part size.",
+        "hint_2": "A fraction can describe a quantity larger than one whole.",
+        "worked_solution": "Five groups each contain three elevenths. → 5 × 3 = 15 eleventh-sized pieces. → The exact product is 15/11, which is greater than one."
+      },
+      "working": [
+        "Five groups each contain three elevenths.",
+        "5 × 3 = 15 eleventh-sized pieces.",
+        "The exact product is 15/11, which is greater than one."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "whole_multiple",
+          "n": 3,
+          "d": 11,
+          "copies": 5,
+          "object": "quantity",
+          "target": "Exact product",
+          "math_text": true
+        }
+      },
+      "response_feedback": {
+        "Five groups of three elevenths make fifteen fifty-fifths.": "That changes the part size. The original pieces are elevenths.",
+        "Five groups of three elevenths make eight elevenths.": "Eight adds the two numbers. Five equal groups require a multiplication.",
+        "The multiplication cannot be completed because the product is greater than one.": "An improper fraction is an exact value. Being greater than one does not make the multiplication impossible."
+      }
+    },
+    {
+      "id": "MD-04-P01",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "faded",
+      "prompt": "Work out 2/7 × 3.",
+      "target": "Exact product",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "allow_mixed_number": true,
+        "input_label": "Your exact fraction",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "6/7"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Three groups have been combined, still using seventh-sized parts.",
+        "correct_after_support": "Three groups have been combined, still using seventh-sized parts.",
+        "on_correct_math": "3 = 3/1. → 2 × 3 = 6; 7 × 1 = 7. → Exact product: 6/7.",
+        "on_incorrect_attempt_1": "Does your fraction count more copies, or has it only changed the size of each part?",
+        "on_incorrect_attempt_2": "Compare the number of seventh-sized pieces before and after combining the groups.",
+        "worked_explanation": "3 = 3/1. → 2 × 3 = 6; 7 × 1 = 7. → Exact product: 6/7."
+      },
+      "mathematical_support": {
+        "hint_1": "Does your fraction count more copies, or has it only changed the size of each part?",
+        "hint_2": "Count 3 groups of 2 parts. Keep the original fractional part size.",
+        "worked_solution": "3 = 3/1. → 2 × 3 = 6; 7 × 1 = 7. → Exact product: 6/7."
+      },
+      "working": [
+        "3 = 3/1.",
+        "2 × 3 = 6; 7 × 1 = 7.",
+        "Exact product: 6/7."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "whole_multiple",
+          "n": 2,
+          "d": 7,
+          "copies": 3,
+          "object": "quantity",
+          "target": "Exact product",
+          "stage": "faded",
+          "reaction": "Three groups have been combined, still using seventh-sized parts.",
+          "correction": "Compare the number of seventh-sized pieces before and after combining the groups.",
+          "math_text": true
+        }
+      },
+      "response_feedback": {
+        "2/21": "That denominator makes the fractional parts smaller. Multiplication here combines more copies.",
+        "6/21": "That is equivalent to the original fraction. The requested product needs more than one copy.",
+        "5/7": "That adds the whole number to the numerator. Count equal groups instead."
+      }
+    },
+    {
+      "id": "MD-04-P02",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "independent_transfer",
+      "prompt": "Work out 4 × 2/9.",
+      "target": "Exact product",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "allow_mixed_number": true,
+        "input_label": "Your exact fraction",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "8/9"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Changing the factor order still gives four copies of the same fraction.",
+        "correct_after_support": "Changing the factor order still gives four copies of the same fraction.",
+        "on_correct_math": "4 = 4/1. → 2 × 4 = 8; 9 × 1 = 9. → Exact product: 8/9.",
+        "on_incorrect_attempt_1": "Does your fraction count more copies, or has it only changed the size of each part?",
+        "on_incorrect_attempt_2": "Track four groups of ninth-sized pieces, whichever factor is written first.",
+        "worked_explanation": "4 = 4/1. → 2 × 4 = 8; 9 × 1 = 9. → Exact product: 8/9."
+      },
+      "mathematical_support": {
+        "hint_1": "Does your fraction count more copies, or has it only changed the size of each part?",
+        "hint_2": "Count 4 groups of 2 parts. Keep the original fractional part size.",
+        "worked_solution": "4 = 4/1. → 2 × 4 = 8; 9 × 1 = 9. → Exact product: 8/9."
+      },
+      "working": [
+        "4 = 4/1.",
+        "2 × 4 = 8; 9 × 1 = 9.",
+        "Exact product: 8/9."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "whole_multiple",
+          "n": 2,
+          "d": 9,
+          "copies": 4,
+          "object": "quantity",
+          "target": "Exact product",
+          "stage": "independent_transfer",
+          "wholeFirst": true,
+          "reaction": "Changing the factor order still gives four copies of the same fraction.",
+          "correction": "Track four groups of ninth-sized pieces, whichever factor is written first.",
+          "math_text": true
+        }
+      },
+      "response_feedback": {
+        "2/36": "That denominator makes the fractional parts smaller. Multiplication here combines more copies.",
+        "8/36": "That is equivalent to the original fraction. The requested product needs more than one copy.",
+        "6/9": "That adds the whole number to the numerator. Count equal groups instead."
+      }
+    },
+    {
+      "id": "MD-04-P03",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Work out 3/10 × 3.",
+      "target": "Exact product",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "allow_mixed_number": true,
+        "input_label": "Your exact fraction",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "9/10"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The product counts nine tenth-sized pieces.",
+        "correct_after_support": "The product counts nine tenth-sized pieces.",
+        "on_correct_math": "3 = 3/1. → 3 × 3 = 9; 10 × 1 = 10. → Exact product: 9/10.",
+        "on_incorrect_attempt_1": "Does your fraction count more copies, or has it only changed the size of each part?",
+        "on_incorrect_attempt_2": "Use three groups of three tenths to check the piece count.",
+        "worked_explanation": "3 = 3/1. → 3 × 3 = 9; 10 × 1 = 10. → Exact product: 9/10."
+      },
+      "mathematical_support": {
+        "hint_1": "Does your fraction count more copies, or has it only changed the size of each part?",
+        "hint_2": "Count 3 groups of 3 parts. Keep the original fractional part size.",
+        "worked_solution": "3 = 3/1. → 3 × 3 = 9; 10 × 1 = 10. → Exact product: 9/10."
+      },
+      "working": [
+        "3 = 3/1.",
+        "3 × 3 = 9; 10 × 1 = 10.",
+        "Exact product: 9/10."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "whole_multiple",
+          "n": 3,
+          "d": 10,
+          "copies": 3,
+          "object": "quantity",
+          "target": "Exact product",
+          "reaction": "The product counts nine tenth-sized pieces.",
+          "correction": "Use three groups of three tenths to check the piece count.",
+          "math_text": true
+        }
+      },
+      "response_feedback": {
+        "3/30": "That denominator makes the fractional parts smaller. Multiplication here combines more copies.",
+        "9/30": "That is equivalent to the original fraction. The requested product needs more than one copy.",
+        "6/10": "That adds the whole number to the numerator. Count equal groups instead."
+      }
+    },
+    {
+      "id": "MD-04-P04",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Work out 5 × 4/13.",
+      "target": "Exact product",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "allow_mixed_number": true,
+        "input_label": "Your exact fraction",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "20/13"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Your exact fraction extends beyond one whole without changing the part size.",
+        "correct_after_support": "Your exact fraction extends beyond one whole without changing the part size.",
+        "on_correct_math": "5 = 5/1. → 4 × 5 = 20; 13 × 1 = 13. → Exact product: 20/13.",
+        "on_incorrect_attempt_1": "Does your fraction count more copies, or has it only changed the size of each part?",
+        "on_incorrect_attempt_2": "Compare five groups of thirteenth-sized pieces with the combined amount.",
+        "worked_explanation": "5 = 5/1. → 4 × 5 = 20; 13 × 1 = 13. → Exact product: 20/13."
+      },
+      "mathematical_support": {
+        "hint_1": "Does your fraction count more copies, or has it only changed the size of each part?",
+        "hint_2": "Count 5 groups of 4 parts. Keep the original fractional part size.",
+        "worked_solution": "5 = 5/1. → 4 × 5 = 20; 13 × 1 = 13. → Exact product: 20/13."
+      },
+      "working": [
+        "5 = 5/1.",
+        "4 × 5 = 20; 13 × 1 = 13.",
+        "Exact product: 20/13."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "whole_multiple",
+          "n": 4,
+          "d": 13,
+          "copies": 5,
+          "object": "quantity",
+          "target": "Exact product",
+          "wholeFirst": true,
+          "reaction": "Your exact fraction extends beyond one whole without changing the part size.",
+          "correction": "Compare five groups of thirteenth-sized pieces with the combined amount.",
+          "math_text": true
+        }
+      },
+      "response_feedback": {
+        "4/65": "That denominator makes the fractional parts smaller. Multiplication here combines more copies.",
+        "20/65": "That is equivalent to the original fraction. The requested product needs more than one copy.",
+        "9/13": "That adds the whole number to the numerator. Count equal groups instead."
+      }
+    },
+    {
+      "id": "MD-04-P05",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Work out 7/12 × 5.",
+      "target": "Exact product",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "allow_mixed_number": true,
+        "input_label": "Your exact fraction",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "35/12"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The exact product can cover more than two wholes.",
+        "correct_after_support": "The exact product can cover more than two wholes.",
+        "on_correct_math": "5 = 5/1. → 7 × 5 = 35; 12 × 1 = 12. → Exact product: 35/12.",
+        "on_incorrect_attempt_1": "Does your fraction count more copies, or has it only changed the size of each part?",
+        "on_incorrect_attempt_2": "Keep all five groups of twelfth-sized pieces; do not round the resulting fraction.",
+        "worked_explanation": "5 = 5/1. → 7 × 5 = 35; 12 × 1 = 12. → Exact product: 35/12."
+      },
+      "mathematical_support": {
+        "hint_1": "Does your fraction count more copies, or has it only changed the size of each part?",
+        "hint_2": "Count 5 groups of 7 parts. Keep the original fractional part size.",
+        "worked_solution": "5 = 5/1. → 7 × 5 = 35; 12 × 1 = 12. → Exact product: 35/12."
+      },
+      "working": [
+        "5 = 5/1.",
+        "7 × 5 = 35; 12 × 1 = 12.",
+        "Exact product: 35/12."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "whole_multiple",
+          "n": 7,
+          "d": 12,
+          "copies": 5,
+          "object": "quantity",
+          "target": "Exact product",
+          "reaction": "The exact product can cover more than two wholes.",
+          "correction": "Keep all five groups of twelfth-sized pieces; do not round the resulting fraction.",
+          "math_text": true
+        }
+      },
+      "response_feedback": {
+        "7/60": "That denominator makes the fractional parts smaller. Multiplication here combines more copies.",
+        "35/60": "That is equivalent to the original fraction. The requested product needs more than one copy.",
+        "12/12": "That adds the whole number to the numerator. Count equal groups instead."
+      }
+    },
+    {
+      "id": "MD-04-P06",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "A student calculates 2/5 × 4. Which answer is correct?",
+      "target": "Exact product",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "8/5",
+          "2/20",
+          "8/20",
+          "6/5"
+        ]
+      },
+      "answer": {
+        "value": "8/5"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That fraction combines four copies of two fifths.",
+        "correct_after_support": "That fraction combines four copies of two fifths.",
+        "on_correct_math": "4 = 4/1. → 2 × 4 = 8; 5 × 1 = 5. → The product is 8/5.",
+        "on_incorrect_attempt_1": "Does the option represent four copies of the given fraction?",
+        "on_incorrect_attempt_2": "Compare the original fifth-sized pieces with the combined eight pieces.",
+        "worked_explanation": "4 = 4/1. → 2 × 4 = 8; 5 × 1 = 5. → The product is 8/5."
+      },
+      "mathematical_support": {
+        "hint_1": "Does the option represent four copies of the given fraction?",
+        "hint_2": "Keep the fifth-sized pieces and combine the four groups.",
+        "worked_solution": "4 = 4/1. → 2 × 4 = 8; 5 × 1 = 5. → The product is 8/5."
+      },
+      "working": [
+        "4 = 4/1.",
+        "2 × 4 = 8; 5 × 1 = 5.",
+        "The product is 8/5."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "whole_multiple",
+          "n": 2,
+          "d": 5,
+          "copies": 4,
+          "object": "quantity",
+          "target": "Exact product",
+          "math_text": true
+        }
+      },
+      "response_feedback": {
+        "2/20": "That makes the pieces smaller without increasing their number.",
+        "8/20": "That leaves the value equal to the original two fifths.",
+        "6/5": "That adds four to the numerator instead of multiplying it."
+      }
+    },
+    {
+      "id": "MD-04-X01",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "One lap of a running route is 2/7 km. Maya completes 3 laps. What total distance does she run?",
+      "target": "Total running distance",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "allow_mixed_number": true,
+        "input_label": "Your exact fraction",
+        "suffix": "km"
+      },
+      "answer": {
+        "value": "6/7"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The total distance includes all three equal laps.",
+        "correct_after_support": "The total distance includes all three equal laps.",
+        "on_correct_math": "3 = 3/1. → 2 × 3 = 6; 7 × 1 = 7. → Exact product: 6/7 km.",
+        "on_incorrect_attempt_1": "The distance is for all three laps, not just one lap.",
+        "on_incorrect_attempt_2": "Combine the fractional length of each lap, keeping kilometres as the reference unit.",
+        "worked_explanation": "3 = 3/1. → 2 × 3 = 6; 7 × 1 = 7. → Exact product: 6/7 km."
+      },
+      "mathematical_support": {
+        "hint_1": "The distance is for all three laps, not just one lap.",
+        "hint_2": "Count 3 groups of 2 parts. Keep the original fractional part size.",
+        "worked_solution": "3 = 3/1. → 2 × 3 = 6; 7 × 1 = 7. → Exact product: 6/7 km."
+      },
+      "working": [
+        "3 = 3/1.",
+        "2 × 3 = 6; 7 × 1 = 7.",
+        "Exact product: 6/7 km."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "whole_multiple",
+          "n": 2,
+          "d": 7,
+          "copies": 3,
+          "object": "running",
+          "target": "Total running distance",
+          "unit": "km",
+          "prompt": "One lap of a running route is 2/7 km. Maya completes 3 laps. What total distance does she run?",
+          "clue": "The distance is for all three laps, not just one lap.",
+          "reaction": "The total distance includes all three equal laps.",
+          "correction": "Combine the fractional length of each lap, keeping kilometres as the reference unit.",
+          "math_text": true
+        }
+      },
+      "response_feedback": {
+        "2/21": "That denominator makes the fractional parts smaller. Multiplication here combines more copies.",
+        "6/21": "That is equivalent to the original fraction. The requested product needs more than one copy.",
+        "5/7": "That adds the whole number to the numerator. Count equal groups instead."
+      }
+    },
+    {
+      "id": "MD-04-X02",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "One batch of bread uses 2/9 kg of flour. A baker makes 4 identical batches. What total mass of flour is used?",
+      "target": "Total flour mass",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "allow_mixed_number": true,
+        "input_label": "Your exact fraction",
+        "suffix": "kg"
+      },
+      "answer": {
+        "value": "8/9"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Your total includes the flour for each of the four batches.",
+        "correct_after_support": "Your total includes the flour for each of the four batches.",
+        "on_correct_math": "4 = 4/1. → 2 × 4 = 8; 9 × 1 = 9. → Exact product: 8/9 kg.",
+        "on_incorrect_attempt_1": "Each batch needs the same amount. Does your answer include every batch?",
+        "on_incorrect_attempt_2": "Compare the flour for one batch with the combined mass for four batches.",
+        "worked_explanation": "4 = 4/1. → 2 × 4 = 8; 9 × 1 = 9. → Exact product: 8/9 kg."
+      },
+      "mathematical_support": {
+        "hint_1": "Each batch needs the same amount. Does your answer include every batch?",
+        "hint_2": "Count 4 groups of 2 parts. Keep the original fractional part size.",
+        "worked_solution": "4 = 4/1. → 2 × 4 = 8; 9 × 1 = 9. → Exact product: 8/9 kg."
+      },
+      "working": [
+        "4 = 4/1.",
+        "2 × 4 = 8; 9 × 1 = 9.",
+        "Exact product: 8/9 kg."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "whole_multiple",
+          "n": 2,
+          "d": 9,
+          "copies": 4,
+          "object": "flour",
+          "target": "Total flour mass",
+          "unit": "kg",
+          "prompt": "One batch of bread uses 2/9 kg of flour. A baker makes 4 identical batches. What total mass of flour is used?",
+          "clue": "Each batch needs the same amount. Does your answer include every batch?",
+          "reaction": "Your total includes the flour for each of the four batches.",
+          "correction": "Compare the flour for one batch with the combined mass for four batches.",
+          "math_text": true
+        }
+      },
+      "response_feedback": {
+        "2/36": "That denominator makes the fractional parts smaller. Multiplication here combines more copies.",
+        "8/36": "That is equivalent to the original fraction. The requested product needs more than one copy.",
+        "6/9": "That adds the whole number to the numerator. Count equal groups instead."
+      }
+    },
+    {
+      "id": "MD-04-X03",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "Each metal rod is 5/12 m long. Seven rods are placed end to end. What is their total length?",
+      "target": "Total rod length",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "allow_mixed_number": true,
+        "input_label": "Your exact fraction",
+        "suffix": "m"
+      },
+      "answer": {
+        "value": "35/12"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The total includes all seven rods and is valid as an improper fraction.",
+        "correct_after_support": "The total includes all seven rods and is valid as an improper fraction.",
+        "on_correct_math": "7 = 7/1. → 5 × 7 = 35; 12 × 1 = 12. → Exact product: 35/12 m.",
+        "on_incorrect_attempt_1": "The total length combines seven equal rods; it is not a smaller piece of one rod.",
+        "on_incorrect_attempt_2": "Count all the twelfth-metre pieces in seven rods, then write their exact total.",
+        "worked_explanation": "7 = 7/1. → 5 × 7 = 35; 12 × 1 = 12. → Exact product: 35/12 m."
+      },
+      "mathematical_support": {
+        "hint_1": "The total length combines seven equal rods; it is not a smaller piece of one rod.",
+        "hint_2": "Count 7 groups of 5 parts. Keep the original fractional part size.",
+        "worked_solution": "7 = 7/1. → 5 × 7 = 35; 12 × 1 = 12. → Exact product: 35/12 m."
+      },
+      "working": [
+        "7 = 7/1.",
+        "5 × 7 = 35; 12 × 1 = 12.",
+        "Exact product: 35/12 m."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "whole_multiple",
+          "n": 5,
+          "d": 12,
+          "copies": 7,
+          "object": "rods",
+          "target": "Total rod length",
+          "unit": "m",
+          "prompt": "Each metal rod is 5/12 m long. Seven rods are placed end to end. What is their total length?",
+          "clue": "The total length combines seven equal rods; it is not a smaller piece of one rod.",
+          "reaction": "The total includes all seven rods and is valid as an improper fraction.",
+          "correction": "Count all the twelfth-metre pieces in seven rods, then write their exact total.",
+          "math_text": true
+        }
+      },
+      "response_feedback": {
+        "5/84": "That denominator makes the fractional parts smaller. Multiplication here combines more copies.",
+        "35/84": "That is equivalent to the original fraction. The requested product needs more than one copy.",
+        "12/12": "That adds the whole number to the numerator. Count equal groups instead."
+      }
+    },
+    {
+      "id": "MD-04-X04",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "One packet contains 2/9 kg of rice. There are 4 identical packets. Which calculation finds the total mass?",
+      "target": "Calculation for the total rice mass",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "2/9 × 4",
+          "2/9 ÷ 4",
+          "2/9 + 4",
+          "4 ÷ 2/9"
+        ]
+      },
+      "answer": {
+        "value": "2/9 × 4"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Multiplication combines the four equal packet masses.",
+        "correct_after_support": "Multiplication combines the four equal packet masses.",
+        "on_correct_math": "Each of four packets has mass 2/9 kg. → 2/9 × 4 = 8/9 kg altogether.",
+        "on_incorrect_attempt_1": "The mass of one packet is repeated across all the packets.",
+        "on_incorrect_attempt_2": "Use the four identical packet masses to check the operation.",
+        "worked_explanation": "Each of four packets has mass 2/9 kg. → 2/9 × 4 = 8/9 kg altogether."
+      },
+      "mathematical_support": {
+        "hint_1": "The mass of one packet is repeated across all the packets.",
+        "hint_2": "The whole number counts packets; it is not an extra mass in kilograms.",
+        "worked_solution": "Each of four packets has mass 2/9 kg. → 2/9 × 4 = 8/9 kg altogether."
+      },
+      "working": [
+        "Each of four packets has mass 2/9 kg.",
+        "2/9 × 4 = 8/9 kg altogether."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "whole_multiple",
+          "n": 2,
+          "d": 9,
+          "copies": 4,
+          "object": "rice",
+          "target": "Calculation for the total rice mass",
+          "unit": "kg",
+          "math_text": true
+        }
+      },
+      "response_feedback": {
+        "2/9 ÷ 4": "That shares one packet’s mass into smaller portions.",
+        "2/9 + 4": "Four counts packets; adding four kilograms changes the meaning.",
+        "4 ÷ 2/9": "That counts how many packet-sized portions fit into four kilograms, which is a different question."
+      }
+    },
+    {
+      "id": "MD-04-E01",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "exit",
+      "prompt": "Work out 3/11 × 4.",
+      "target": "Exact product",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "allow_mixed_number": true,
+        "input_label": "Your exact fraction",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "12/11"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The exact product combines four groups of elevenths.",
+        "correct_after_support": "The exact product combines four groups of elevenths.",
+        "on_correct_math": "4 = 4/1. → 3 × 4 = 12; 11 × 1 = 11. → Exact product: 12/11.",
+        "on_incorrect_attempt_1": "Does your fraction count more copies, or has it only changed the size of each part?",
+        "on_incorrect_attempt_2": "Compare the number of original pieces with the number in all four groups.",
+        "worked_explanation": "4 = 4/1. → 3 × 4 = 12; 11 × 1 = 11. → Exact product: 12/11.",
+        "on_locked_incorrect": "Compare the combined piece count with the unchanged part size in the working."
+      },
+      "mathematical_support": {
+        "hint_1": "Does your fraction count more copies, or has it only changed the size of each part?",
+        "hint_2": "Count 4 groups of 3 parts. Keep the original fractional part size.",
+        "worked_solution": "4 = 4/1. → 3 × 4 = 12; 11 × 1 = 11. → Exact product: 12/11."
+      },
+      "working": [
+        "4 = 4/1.",
+        "3 × 4 = 12; 11 × 1 = 11.",
+        "Exact product: 12/11."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "whole_multiple",
+          "n": 3,
+          "d": 11,
+          "copies": 4,
+          "object": "quantity",
+          "target": "Exact product",
+          "stage": "exit",
+          "reaction": "The exact product combines four groups of elevenths.",
+          "correction": "Compare the number of original pieces with the number in all four groups.",
+          "math_text": true
+        }
+      },
+      "response_feedback": {
+        "3/44": "That denominator makes the fractional parts smaller. Multiplication here combines more copies.",
+        "12/44": "That is equivalent to the original fraction. The requested product needs more than one copy.",
+        "7/11": "That adds the whole number to the numerator. Count equal groups instead."
+      }
+    },
+    {
+      "id": "MD-04-E02",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "exit",
+      "prompt": "Work out 5 × 2/13.",
+      "target": "Exact product",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "allow_mixed_number": true,
+        "input_label": "Your exact fraction",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "10/13"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The result preserves the size of each thirteenth.",
+        "correct_after_support": "The result preserves the size of each thirteenth.",
+        "on_correct_math": "5 = 5/1. → 2 × 5 = 10; 13 × 1 = 13. → Exact product: 10/13.",
+        "on_incorrect_attempt_1": "Does your fraction count more copies, or has it only changed the size of each part?",
+        "on_incorrect_attempt_2": "Check the number of thirteenth-sized pieces in all five groups.",
+        "worked_explanation": "5 = 5/1. → 2 × 5 = 10; 13 × 1 = 13. → Exact product: 10/13.",
+        "on_locked_incorrect": "Compare the combined piece count with the unchanged part size in the working."
+      },
+      "mathematical_support": {
+        "hint_1": "Does your fraction count more copies, or has it only changed the size of each part?",
+        "hint_2": "Count 5 groups of 2 parts. Keep the original fractional part size.",
+        "worked_solution": "5 = 5/1. → 2 × 5 = 10; 13 × 1 = 13. → Exact product: 10/13."
+      },
+      "working": [
+        "5 = 5/1.",
+        "2 × 5 = 10; 13 × 1 = 13.",
+        "Exact product: 10/13."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "whole_multiple",
+          "n": 2,
+          "d": 13,
+          "copies": 5,
+          "object": "quantity",
+          "target": "Exact product",
+          "stage": "exit",
+          "wholeFirst": true,
+          "reaction": "The result preserves the size of each thirteenth.",
+          "correction": "Check the number of thirteenth-sized pieces in all five groups.",
+          "math_text": true
+        }
+      },
+      "response_feedback": {
+        "2/65": "That denominator makes the fractional parts smaller. Multiplication here combines more copies.",
+        "10/65": "That is equivalent to the original fraction. The requested product needs more than one copy.",
+        "7/13": "That adds the whole number to the numerator. Count equal groups instead."
+      }
+    },
+    {
+      "id": "MD-04-E03",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "exit",
+      "prompt": "Which statement correctly describes multiplying a proper fraction by a whole number?",
+      "target": "Multiplication method",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Write the whole number over 1, then multiply numerator by numerator and denominator by denominator.",
+          "Multiply the whole number into the denominator only.",
+          "Multiply both the numerator and denominator by the whole number.",
+          "The product exists only when the whole number is divisible by the denominator."
+        ]
+      },
+      "answer": {
+        "value": "Write the whole number over 1, then multiply numerator by numerator and denominator by denominator."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That method preserves the whole-number factor and combines equal fractional parts.",
+        "correct_after_support": "That method preserves the whole-number factor and combines equal fractional parts.",
+        "on_correct_math": "A whole number n can be written as n/1. → Multiply the two numerators and the two denominators. → Repeated addition, grouping and other exact valid methods are also accepted.",
+        "on_incorrect_attempt_1": "Represent the whole number without changing its value.",
+        "on_incorrect_attempt_2": "Compare the value of the whole-number factor with its fraction representation.",
+        "worked_explanation": "A whole number n can be written as n/1. → Multiply the two numerators and the two denominators. → Repeated addition, grouping and other exact valid methods are also accepted.",
+        "on_locked_incorrect": "Compare how the whole-number factor is represented and used."
+      },
+      "mathematical_support": {
+        "hint_1": "Represent the whole number without changing its value.",
+        "hint_2": "A fractional exact answer is allowed even when dividing first would not give an integer.",
+        "worked_solution": "A whole number n can be written as n/1. → Multiply the two numerators and the two denominators. → Repeated addition, grouping and other exact valid methods are also accepted."
+      },
+      "working": [
+        "A whole number n can be written as n/1.",
+        "Multiply the two numerators and the two denominators.",
+        "Repeated addition, grouping and other exact valid methods are also accepted."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "whole_multiple_rule",
+          "object": "relationship",
+          "target": "Multiplication method",
+          "math_text": true
+        }
+      }
+    }
+  ],
+  "canonical_lesson": {
+    "version": "MD04-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

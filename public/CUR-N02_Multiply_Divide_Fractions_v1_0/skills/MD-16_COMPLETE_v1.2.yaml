@@ -1,0 +1,2343 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "MD-16 - Solve multi-step problems involving fraction multiplication and division",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-20",
+      "sha256": "0c2527136af119d4fa68a8c65b32df2cd72826661ee676e40d94de82ff92fcb9"
+    },
+    "authored_scope": "The approved intermediate-quantity model, worked and guided sequence, four multi-step structures, immediate source mastery check, and GCSE Foundation transfer.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "MD16-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "verified_full_secure_path_incorrect_repairs_narration_320_390_and_console",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        4,
+        5,
+        6,
+        7,
+        10,
+        11,
+        12,
+        14,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "source_repairs_consulted": [
+        10,
+        11,
+        12
+      ],
+      "note": "All 20 authoritative source pages were read and visually reviewed. Entry, Diagnostic and delayed Retrieval remain excluded. The page 10-12 repair library and page 18 misconception map inform answer-specific feedback without adding those routes. The active practice varies fraction-then-group, reconstruction, repeated fractional quantities and fraction-then-fraction structures exactly as required by the source. The two source ribbon prompts omit the joining assumption needed for their supplied whole-length answers; the active wording explicitly joins the lengths end to end without overlap, preserving the source quantities, methods and answers."
+    }
+  },
+  "identity": {
+    "id": "MD-16",
+    "slug": "solve-multi-step-problems-involving-fraction-multiplication-and-division",
+    "title": "Solve multi-step problems involving fraction multiplication and division",
+    "strand": "Number",
+    "cluster": "Multiplying and Dividing Fractions",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Solve problems containing two connected fraction multiplication or division relationships, using the exact result of the first relationship correctly in the second.",
+    "success_criteria": [
+      "Identify the final required quantity and the intermediate quantity needed first.",
+      "Choose the operation separately for each relationship.",
+      "Label the result of the first relationship and carry that exact value forward.",
+      "Write fraction group-count division in the correct order: available amount divided by one group size.",
+      "Solve fraction-of then grouping, whole reconstruction then fraction-of, repeated fractional quantities then grouping, and multiplication followed by multiplication."
+    ],
+    "boundaries": {
+      "includes": [
+        "Two connected fraction multiplication or division relationships",
+        "Fraction of an amount followed by equal grouping",
+        "Whole reconstruction followed by a new fraction or group count",
+        "Repeated fractional quantities followed by equal grouping",
+        "A fraction of a selected subset",
+        "Exact whole-number outcomes in direct and GCSE Foundation contexts"
+      ],
+      "excludes": [
+        "Broad mixed-topic fraction selection reserved for MD-17",
+        "Percentage, ratio, negative-number or algebraic-fraction methods",
+        "Extended proof or typed explanations",
+        "Diagnostic and delayed Retrieval routes"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "MD-01",
+      "MD-03",
+      "MD-04",
+      "MD-08",
+      "MD-09",
+      "MD-14",
+      "MD-15"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for MD-01, MD-03, MD-04, MD-08, MD-09, MD-14, MD-15 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "integer",
+      "single_choice"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    }
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "A multi-step problem contains a necessary intermediate quantity. Find it, label it, and use that exact result in the next relationship.",
+    "invariant": "The output of one relationship becomes the input quantity for the relationship that follows.",
+    "mathematical_rule": "Identify the final requirement; find and label the necessary intermediate quantity; interpret the next relationship; calculate from the intermediate value; check the requested unit.",
+    "must_notice": [
+      "The first numerical result may not answer the final question.",
+      "The reference quantity can change after the first relationship.",
+      "The operation can change from one relationship to the next.",
+      "A group count places the available amount before the group size.",
+      "Exact intermediate fractions should not be rounded."
+    ],
+    "common_confusions": [
+      "Stopping after the first relationship",
+      "Reusing the original quantity",
+      "Choosing one operation for every fraction",
+      "Reversing amount divided by group size",
+      "Rounding an exact intermediate value"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "Find the hidden middle quantity",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Find the hidden middle quantity",
+          "initial_state": "Find the hidden middle quantity",
+          "model": {
+            "kind": "multi_step",
+            "structure": "fraction_then_group",
+            "context": "tank_bottles",
+            "object": "tank_bottles",
+            "target": "Required quantity",
+            "math_text": true,
+            "compact_captions": true,
+            "working_phases": [
+              "intermediate",
+              "second_relation",
+              "result"
+            ],
+            "given": 48,
+            "first_fraction": {
+              "n": 3,
+              "d": 4
+            },
+            "group_size": {
+              "n": 2,
+              "d": 3
+            },
+            "unit": "litres",
+            "result_unit": "bottles",
+            "given_label": "water in the tank",
+            "first_label": "is used",
+            "intermediate_label": "water used",
+            "group_label": "in each bottle",
+            "result_label": "bottles filled",
+            "solved": true,
+            "phase": "given",
+            "heading": "Given quantity → intermediate quantity → required quantity",
+            "accessible_context": "Tank water used to fill bottles"
+          }
+        },
+        "narration": {
+          "script": "A multi-step problem asks for a final quantity, but another quantity must be found first. That middle result links the two relationships."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Interpret the first relationship",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Interpret the first relationship",
+          "initial_state": "Interpret the first relationship",
+          "model": {
+            "kind": "multi_step",
+            "structure": "fraction_then_group",
+            "context": "tank_bottles",
+            "object": "tank_bottles",
+            "target": "Required quantity",
+            "math_text": true,
+            "compact_captions": true,
+            "working_phases": [
+              "intermediate",
+              "second_relation",
+              "result"
+            ],
+            "given": 48,
+            "first_fraction": {
+              "n": 3,
+              "d": 4
+            },
+            "group_size": {
+              "n": 2,
+              "d": 3
+            },
+            "unit": "litres",
+            "result_unit": "bottles",
+            "given_label": "water in the tank",
+            "first_label": "is used",
+            "intermediate_label": "water used",
+            "group_label": "in each bottle",
+            "result_label": "bottles filled",
+            "solved": true,
+            "phase": "first_relation",
+            "heading": "Interpret one arrow at a time",
+            "accessible_context": "Tank water used to fill bottles"
+          }
+        },
+        "narration": {
+          "script": "Three quarters describes the part of the 48 litres that is used. At this point, the bottle size has not yet been applied."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Label the intermediate amount",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Label the intermediate amount",
+          "initial_state": "Label the intermediate amount",
+          "model": {
+            "kind": "multi_step",
+            "structure": "fraction_then_group",
+            "context": "tank_bottles",
+            "object": "tank_bottles",
+            "target": "Required quantity",
+            "math_text": true,
+            "compact_captions": true,
+            "working_phases": [
+              "intermediate",
+              "second_relation",
+              "result"
+            ],
+            "given": 48,
+            "first_fraction": {
+              "n": 3,
+              "d": 4
+            },
+            "group_size": {
+              "n": 2,
+              "d": 3
+            },
+            "unit": "litres",
+            "result_unit": "bottles",
+            "given_label": "water in the tank",
+            "first_label": "is used",
+            "intermediate_label": "water used",
+            "group_label": "in each bottle",
+            "result_label": "bottles filled",
+            "solved": true,
+            "phase": "intermediate",
+            "heading": "The first result now has a name",
+            "accessible_context": "Tank water used to fill bottles"
+          }
+        },
+        "narration": {
+          "script": "Three quarters of 48 litres is 36 litres. Label that result as water used, because that is what moves into the next relationship."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Use the new amount",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Use the new amount",
+          "initial_state": "Use the new amount",
+          "model": {
+            "kind": "multi_step",
+            "structure": "fraction_then_group",
+            "context": "tank_bottles",
+            "object": "tank_bottles",
+            "target": "Required quantity",
+            "math_text": true,
+            "compact_captions": true,
+            "working_phases": [
+              "intermediate",
+              "second_relation",
+              "result"
+            ],
+            "given": 48,
+            "first_fraction": {
+              "n": 3,
+              "d": 4
+            },
+            "group_size": {
+              "n": 2,
+              "d": 3
+            },
+            "unit": "litres",
+            "result_unit": "bottles",
+            "given_label": "water in the tank",
+            "first_label": "is used",
+            "intermediate_label": "water used",
+            "group_label": "in each bottle",
+            "result_label": "bottles filled",
+            "solved": true,
+            "phase": "second_relation",
+            "heading": "The intermediate result becomes the new available amount",
+            "accessible_context": "Tank water used to fill bottles"
+          }
+        },
+        "narration": {
+          "script": "The bottles are filled from the 36 litres used, not from the original tank amount. Each bottle holds two thirds of a litre."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Reach the required quantity",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Reach the required quantity",
+          "initial_state": "Reach the required quantity",
+          "model": {
+            "kind": "multi_step",
+            "structure": "fraction_then_group",
+            "context": "tank_bottles",
+            "object": "tank_bottles",
+            "target": "Required quantity",
+            "math_text": true,
+            "compact_captions": true,
+            "working_phases": [
+              "intermediate",
+              "second_relation",
+              "result"
+            ],
+            "given": 48,
+            "first_fraction": {
+              "n": 3,
+              "d": 4
+            },
+            "group_size": {
+              "n": 2,
+              "d": 3
+            },
+            "unit": "litres",
+            "result_unit": "bottles",
+            "given_label": "water in the tank",
+            "first_label": "is used",
+            "intermediate_label": "water used",
+            "group_label": "in each bottle",
+            "result_label": "bottles filled",
+            "solved": true,
+            "phase": "result",
+            "heading": "The final card answers the question",
+            "accessible_context": "Tank water used to fill bottles"
+          }
+        },
+        "narration": {
+          "script": "Thirty-six divided by two thirds counts 54 equal bottlefuls. The labels show why the second step begins with 36."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T06"
+      },
+      {
+        "id": "T06",
+        "stage": "teaching",
+        "purpose": "Protect the intermediate quantity",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Protect the intermediate quantity",
+          "initial_state": "Protect the intermediate quantity",
+          "model": {
+            "kind": "multi_step_rule",
+            "context": "tank_bottles",
+            "object": "tank_bottles",
+            "target": "Valid multi-step method",
+            "heading": "Which quantity feeds the second relationship?",
+            "rule_context": "Only the water used is poured into the bottles.",
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Choose why the middle value must be found before the final bottle count."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "MD-16-C01"
+        },
+        "next_step": "T07"
+      },
+      {
+        "id": "T07",
+        "stage": "teaching",
+        "purpose": "Represent both relationships",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Represent both relationships",
+          "initial_state": "Represent both relationships",
+          "model": {
+            "kind": "multi_step_rule",
+            "context": "tank_bottles",
+            "object": "tank_bottles",
+            "target": "Valid multi-step method",
+            "heading": "Preserve both relationships in one calculation",
+            "rule_context": "Find the used water, then divide by one bottle capacity.",
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Choose the expression that keeps the used-water calculation together before counting bottlefuls."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "MD-16-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "MD-16-G01",
+        "support_level": "high",
+        "pre_question_script": "First find and label the packed feed. This is the quantity that will be used next.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "MD-16-G02",
+        "support_level": "high",
+        "pre_question_script": "Carry the 24 kilograms forward and count equal three-quarter-kilogram bags.",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "guided",
+        "question_ref": "MD-16-G03",
+        "support_level": "high",
+        "pre_question_script": "Check the complete plan and the role of each fraction.",
+        "correct_next": "F01"
+      },
+      "F01": {
+        "stage": "faded",
+        "question_ref": "MD-16-P01",
+        "support_level": "reduced",
+        "pre_question_script": "Find the attending students, then form teams from that group.",
+        "correct_next": "I01"
+      },
+      "I01": {
+        "stage": "independent_transfer",
+        "question_ref": "MD-16-P02",
+        "support_level": "none",
+        "pre_question_script": "Work independently and keep the packed dough exact.",
+        "correct_next": "P03"
+      }
+    },
+    "practice": {
+      "intro_script": "Now the structures change. Reconstruct a whole, combine repeated fractional amounts, take a fraction of a selected group, and decide each operation from its relationship.",
+      "question_order": [
+        "MD-16-P03",
+        "MD-16-P04",
+        "MD-16-P05",
+        "MD-16-P06",
+        "MD-16-P07",
+        "MD-16-X01",
+        "MD-16-X02",
+        "MD-16-X03",
+        "MD-16-X04",
+        "MD-16-X05"
+      ],
+      "question_count": 10,
+      "feedback_policy": "First errors receive misconception-specific feedback; locked working is revealed sequentially and the learner must then submit a corrected response."
+    },
+    "exit": {
+      "intro_script": "Complete three new calculations and one method statement without hints. Each answer locks after one submission.",
+      "primary_question_refs": [
+        "MD-16-E01",
+        "MD-16-E02",
+        "MD-16-E03",
+        "MD-16-E04"
+      ],
+      "confirmation_question_refs": [],
+      "submission_policy": "One unsupported locked submission for each source mastery item.",
+      "mastery_policy": {
+        "profile": "all_primary_unsupported",
+        "require_all": true,
+        "source_page": 14,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "You found and labelled each intermediate quantity, then used it in the relationship that followed. The different operation sequences stayed secure.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Keep following the middle quantity",
+      "ryan_script": "One or more final checks need another pass. Name the result of the first relationship before deciding what the next relationship does.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "MD-16-C01",
+      "source_ref": {
+        "page": 4
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "Why must the 36 litres be found before the number of bottles?",
+      "target": "Valid multi-step method",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Only the water used is poured into the 2/3-litre bottles.",
+          "Multiplication must always be completed before division.",
+          "The original 48 litres must be used in every step.",
+          "A multi-step question always has an answer larger than the starting quantity."
+        ]
+      },
+      "answer": {
+        "value": "Only the water used is poured into the 2/3-litre bottles."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Exactly. You tracked the water that actually reaches the bottles.",
+        "correct_after_support": "Exactly. You tracked the water that actually reaches the bottles.",
+        "on_correct_math": "The tank begins with 48 litres, but only three quarters of it is used. → That used amount is 36 litres, so 36 becomes the amount available for filling bottles. → The bottle count must therefore be built from 36 litres, not from the original 48 litres.",
+        "on_incorrect_attempt_1": "Ask which water actually reaches the bottles.",
+        "on_incorrect_attempt_2": "Separate the water in the tank from the smaller amount that is actually poured.",
+        "worked_explanation": "The tank begins with 48 litres, but only three quarters of it is used. → That used amount is 36 litres, so 36 becomes the amount available for filling bottles. → The bottle count must therefore be built from 36 litres, not from the original 48 litres."
+      },
+      "mathematical_support": {
+        "hint_1": "Ask which water actually reaches the bottles.",
+        "hint_2": "The second relationship must use the result of the first relationship.",
+        "worked_solution": "The tank begins with 48 litres, but only three quarters of it is used. → That used amount is 36 litres, so 36 becomes the amount available for filling bottles. → The bottle count must therefore be built from 36 litres, not from the original 48 litres."
+      },
+      "working": [
+        "The tank begins with 48 litres, but only three quarters of it is used.",
+        "That used amount is 36 litres, so 36 becomes the amount available for filling bottles.",
+        "The bottle count must therefore be built from 36 litres, not from the original 48 litres."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "multi_step_rule",
+          "context": "tank_bottles",
+          "object": "tank_bottles",
+          "target": "Valid multi-step method",
+          "heading": "Which quantity feeds the second relationship?",
+          "rule_context": "Only the water used is poured into the two-thirds-litre bottles.",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "Multiplication must always be completed before division.": "Operation order comes from the relationships, not from a rule that multiplication is always first.",
+        "The original 48 litres must be used in every step.": "The bottles receive only the water used, so the original tank amount cannot feed the second step.",
+        "A multi-step question always has an answer larger than the starting quantity.": "The size of an answer depends on the units and relationships; it is not always larger."
+      }
+    },
+    {
+      "id": "MD-16-C02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "Which complete calculation represents the tank example?",
+      "target": "Valid multi-step method",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "(48 × 3/4) ÷ 2/3",
+          "(48 ÷ 3/4) × 2/3",
+          "48 × 3/4 × 2/3",
+          "48 ÷ (3/4 × 2/3)"
+        ]
+      },
+      "answer": {
+        "value": "(48 × 3/4) ÷ 2/3"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That expression keeps the two relationships in their required order.",
+        "correct_after_support": "That expression keeps the two relationships in their required order.",
+        "on_correct_math": "Three quarters of a known 48 litres is represented by 48 × 3/4. → The result of that multiplication is the water available for the bottles. → Counting two-thirds-litre bottles means dividing the available amount by 2/3.",
+        "on_incorrect_attempt_1": "Build the first relationship before deciding what quantity is divided.",
+        "on_incorrect_attempt_2": "Follow the nouns: first find the water used, then count equal bottlefuls from that result.",
+        "worked_explanation": "Three quarters of a known 48 litres is represented by 48 × 3/4. → The result of that multiplication is the water available for the bottles. → Counting two-thirds-litre bottles means dividing the available amount by 2/3."
+      },
+      "mathematical_support": {
+        "hint_1": "Build the first relationship before deciding what quantity is divided.",
+        "hint_2": "Counting equal bottlefuls uses available water divided by one bottle size.",
+        "worked_solution": "Three quarters of a known 48 litres is represented by 48 × 3/4. → The result of that multiplication is the water available for the bottles. → Counting two-thirds-litre bottles means dividing the available amount by 2/3."
+      },
+      "working": [
+        "Three quarters of a known 48 litres is represented by 48 × 3/4.",
+        "The result of that multiplication is the water available for the bottles.",
+        "Counting two-thirds-litre bottles means dividing the available amount by 2/3."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "multi_step_rule",
+          "context": "tank_bottles",
+          "object": "tank_bottles",
+          "target": "Valid multi-step method",
+          "heading": "Preserve both relationships in one calculation",
+          "rule_context": "Take three quarters of 48, then divide that used amount by the two-thirds-litre bottle size.",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "(48 ÷ 3/4) × 2/3": "This reverses the fraction-of relationship and then multiplies by a bottle size.",
+        "48 × 3/4 × 2/3": "The second fraction is a group size, so multiplying by it does not count bottles.",
+        "48 ÷ (3/4 × 2/3)": "This combines two fractions with different roles and loses the necessary intermediate amount."
+      }
+    },
+    {
+      "id": "MD-16-G01",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "A farm produces 30 kg of feed and packs 4/5 of it. How many kilograms are packed?",
+      "target": "Packed feed",
+      "response": {
+        "type": "integer",
+        "input_label": "Packed feed",
+        "suffix": "kg"
+      },
+      "answer": {
+        "value": 24
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "You found the packed feed and labelled the quantity that moves into the next step.",
+        "correct_after_support": "You found the packed feed and labelled the quantity that moves into the next step.",
+        "on_correct_math": "One fifth of 30 kg is 6 kg. → Four fifths is 4 × 6 kg = 24 kg.",
+        "on_incorrect_attempt_1": "Find one fifth of 30 before collecting four equal parts.",
+        "on_incorrect_attempt_2": "Build four fifths from equal fifths of the full 30 kg.",
+        "worked_explanation": "One fifth of 30 kg is 6 kg. → Four fifths is 4 × 6 kg = 24 kg."
+      },
+      "mathematical_support": {
+        "hint_1": "Find one fifth of 30 before collecting four equal parts.",
+        "hint_2": "This response is the intermediate amount, not yet the number of bags.",
+        "worked_solution": "One fifth of 30 kg is 6 kg. → Four fifths is 4 × 6 kg = 24 kg."
+      },
+      "working": [
+        "One fifth of 30 kg is 6 kg.",
+        "Four fifths is 4 × 6 kg = 24 kg."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "multi_step",
+          "structure": "fraction_then_group",
+          "context": "feed_bags",
+          "object": "feed_bags",
+          "target": "Packed feed",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "first_relation",
+            "intermediate"
+          ],
+          "given": 30,
+          "first_fraction": {
+            "n": 4,
+            "d": 5
+          },
+          "group_size": {
+            "n": 3,
+            "d": 4
+          },
+          "unit": "kg",
+          "result_unit": "bags",
+          "given_label": "feed produced",
+          "first_label": "is packed",
+          "intermediate_label": "feed packed",
+          "group_label": "in each bag",
+          "result_label": "bags filled",
+          "answer_scope": "intermediate",
+          "accessible_context": "Animal feed packed into bags"
+        }
+      },
+      "response_feedback": {
+        "6": "That is one fifth of the feed; the farm packs four such parts.",
+        "30": "That is the full production amount, but only four fifths is packed."
+      }
+    },
+    {
+      "id": "MD-16-G02",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "The farm has packed 24 kg of feed into bags holding 3/4 kg each. How many bags are filled?",
+      "target": "Number of bags",
+      "response": {
+        "type": "integer",
+        "input_label": "Number of bags",
+        "suffix": "bags"
+      },
+      "answer": {
+        "value": 32
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "You used the packed amount, rather than restarting from the original 30 kg.",
+        "correct_after_support": "You used the packed amount, rather than restarting from the original 30 kg.",
+        "on_correct_math": "Carry forward the 24 kg packed in Step 1. → 24 ÷ 3/4 = 24 × 4/3. → The quotient is 32, so 32 bags are filled.",
+        "on_incorrect_attempt_1": "Count how many three-quarter-kilogram groups fit into 24 kg.",
+        "on_incorrect_attempt_2": "Put the available 24 kg first and divide it by the size of one bag.",
+        "worked_explanation": "Carry forward the 24 kg packed in Step 1. → 24 ÷ 3/4 = 24 × 4/3. → The quotient is 32, so 32 bags are filled."
+      },
+      "mathematical_support": {
+        "hint_1": "Count how many three-quarter-kilogram groups fit into 24 kg.",
+        "hint_2": "The group size is the divisor, so use its reciprocal after writing the division in the correct order.",
+        "worked_solution": "Carry forward the 24 kg packed in Step 1. → 24 ÷ 3/4 = 24 × 4/3. → The quotient is 32, so 32 bags are filled."
+      },
+      "working": [
+        "Carry forward the 24 kg packed in Step 1.",
+        "24 ÷ 3/4 = 24 × 4/3.",
+        "The quotient is 32, so 32 bags are filled."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "multi_step",
+          "structure": "fraction_then_group",
+          "context": "feed_bags",
+          "object": "feed_bags",
+          "target": "Number of bags",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "intermediate",
+            "second_relation",
+            "result"
+          ],
+          "given": 30,
+          "first_fraction": {
+            "n": 4,
+            "d": 5
+          },
+          "group_size": {
+            "n": 3,
+            "d": 4
+          },
+          "unit": "kg",
+          "result_unit": "bags",
+          "given_label": "feed produced",
+          "first_label": "is packed",
+          "intermediate_label": "feed packed",
+          "group_label": "in each bag",
+          "result_label": "bags filled",
+          "phase": "intermediate",
+          "accessible_context": "Animal feed packed into bags"
+        }
+      },
+      "response_feedback": {
+        "18": "Multiplying 24 by three quarters finds a fraction of the packed feed, not a count of bags.",
+        "24": "That stops at the intermediate amount; the question asks for a number of bags.",
+        "40": "That reuses the original 30 kg instead of carrying forward the packed 24 kg."
+      }
+    },
+    {
+      "id": "MD-16-G03",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "Which statement correctly describes the complete farm method?",
+      "target": "Valid multi-step method",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "First find 4/5 of 30, then divide that result by 3/4.",
+          "Divide 30 by 3/4 first because the bags are mentioned last.",
+          "Multiply by both fractions because every fraction in a word problem is a multiplier.",
+          "Use 30 again in the second step because it is the largest quantity."
+        ]
+      },
+      "answer": {
+        "value": "First find 4/5 of 30, then divide that result by 3/4."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Your plan names the intermediate amount and gives each fraction its correct role.",
+        "correct_after_support": "Your plan names the intermediate amount and gives each fraction its correct role.",
+        "on_correct_math": "Four fifths describes the fraction of the 30 kg that is packed. → The resulting 24 kg becomes the amount available. → The number of bags is the available amount divided by the size of one bag.",
+        "on_incorrect_attempt_1": "Name the intermediate amount before checking the second operation.",
+        "on_incorrect_attempt_2": "Match each fraction to its noun before choosing the operation.",
+        "worked_explanation": "Four fifths describes the fraction of the 30 kg that is packed. → The resulting 24 kg becomes the amount available. → The number of bags is the available amount divided by the size of one bag."
+      },
+      "mathematical_support": {
+        "hint_1": "Name the intermediate amount before checking the second operation.",
+        "hint_2": "A number being largest does not decide its role in the next relationship.",
+        "worked_solution": "Four fifths describes the fraction of the 30 kg that is packed. → The resulting 24 kg becomes the amount available. → The number of bags is the available amount divided by the size of one bag."
+      },
+      "working": [
+        "Four fifths describes the fraction of the 30 kg that is packed.",
+        "The resulting 24 kg becomes the amount available.",
+        "The number of bags is the available amount divided by the size of one bag."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "multi_step_rule",
+          "context": "feed_bags",
+          "object": "feed_bags",
+          "target": "Valid multi-step method",
+          "heading": "Choose the quantity passed from Step 1 to Step 2",
+          "rule_context": "First find four fifths of 30 kg, then divide that packed amount by three quarters of a kilogram.",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "Divide 30 by 3/4 first because the bags are mentioned last.": "The bag size cannot be used until the packed amount has been found.",
+        "Multiply by both fractions because every fraction in a word problem is a multiplier.": "Three quarters describes one bag size, so this relationship asks how many groups fit.",
+        "Use 30 again in the second step because it is the largest quantity.": "The bags are filled from the packed 24 kg, not from all 30 kg produced."
+      }
+    },
+    {
+      "id": "MD-16-P01",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "A year group has 54 students. Two thirds attend a sports event and are placed into teams of 6. How many teams are formed?",
+      "target": "Number of teams",
+      "response": {
+        "type": "integer",
+        "input_label": "Number of teams",
+        "suffix": "teams"
+      },
+      "answer": {
+        "value": 6
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "You formed teams from the attending students only.",
+        "correct_after_support": "You formed teams from the attending students only.",
+        "on_correct_math": "54 × 2/3 = 36 students attend. → Use the 36 attending students in the next relationship. → 36 ÷ 6 = 6 teams.",
+        "on_incorrect_attempt_1": "Find the number who attend before forming teams.",
+        "on_incorrect_attempt_2": "Carry the attendance result forward before dividing by the team size.",
+        "worked_explanation": "54 × 2/3 = 36 students attend. → Use the 36 attending students in the next relationship. → 36 ÷ 6 = 6 teams."
+      },
+      "mathematical_support": {
+        "hint_1": "Find the number who attend before forming teams.",
+        "hint_2": "Do not form teams from students who are not at the event.",
+        "worked_solution": "54 × 2/3 = 36 students attend. → Use the 36 attending students in the next relationship. → 36 ÷ 6 = 6 teams."
+      },
+      "working": [
+        "54 × 2/3 = 36 students attend.",
+        "Use the 36 attending students in the next relationship.",
+        "36 ÷ 6 = 6 teams."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "multi_step",
+          "structure": "fraction_then_group",
+          "context": "students_teams",
+          "object": "students_teams",
+          "target": "Number of teams",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "intermediate",
+            "second_relation",
+            "result"
+          ],
+          "given": 54,
+          "first_fraction": {
+            "n": 2,
+            "d": 3
+          },
+          "group_size": 6,
+          "unit": "students",
+          "result_unit": "teams",
+          "given_label": "students in year group",
+          "first_label": "attend",
+          "intermediate_label": "students attending",
+          "group_label": "in each team",
+          "result_label": "teams formed",
+          "accessible_context": "Students attending a sports event and forming teams"
+        }
+      },
+      "response_feedback": {
+        "9": "That divides all 54 students into teams and ignores that only two thirds attend.",
+        "36": "That is the intermediate attendance, not the requested number of teams."
+      }
+    },
+    {
+      "id": "MD-16-P02",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "A factory makes 42 kg of dough. Five sixths is packed into portions of 7/8 kg. How many portions are made?",
+      "target": "Number of portions",
+      "response": {
+        "type": "integer",
+        "input_label": "Number of portions",
+        "suffix": "portions"
+      },
+      "answer": {
+        "value": 40
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "You kept the exact packed mass and counted equal portions from it.",
+        "correct_after_support": "You kept the exact packed mass and counted equal portions from it.",
+        "on_correct_math": "42 × 5/6 = 35 kg of dough is packed. → The portion count is 35 ÷ 7/8. → 35 × 8/7 = 40 portions.",
+        "on_incorrect_attempt_1": "Keep the packed mass exact before using the portion size.",
+        "on_incorrect_attempt_2": "Use 35 kg as the dividend and seven eighths of a kilogram as the divisor.",
+        "worked_explanation": "42 × 5/6 = 35 kg of dough is packed. → The portion count is 35 ÷ 7/8. → 35 × 8/7 = 40 portions."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the packed mass exact before using the portion size.",
+        "hint_2": "Counting portions means packed dough divided by one portion mass.",
+        "worked_solution": "42 × 5/6 = 35 kg of dough is packed. → The portion count is 35 ÷ 7/8. → 35 × 8/7 = 40 portions."
+      },
+      "working": [
+        "42 × 5/6 = 35 kg of dough is packed.",
+        "The portion count is 35 ÷ 7/8.",
+        "35 × 8/7 = 40 portions."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "multi_step",
+          "structure": "fraction_then_group",
+          "context": "dough_portions",
+          "object": "dough_portions",
+          "target": "Number of portions",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "intermediate",
+            "second_relation",
+            "result"
+          ],
+          "given": 42,
+          "first_fraction": {
+            "n": 5,
+            "d": 6
+          },
+          "group_size": {
+            "n": 7,
+            "d": 8
+          },
+          "unit": "kg",
+          "result_unit": "portions",
+          "given_label": "dough made",
+          "first_label": "is packed",
+          "intermediate_label": "dough packed",
+          "group_label": "in each portion",
+          "result_label": "portions made",
+          "accessible_context": "Dough packed into equal portions"
+        }
+      },
+      "response_feedback": {
+        "35": "That is the packed dough, but the question asks how many portions it fills.",
+        "48": "That counts portions from all 42 kg and ignores that only five sixths is packed."
+      }
+    },
+    {
+      "id": "MD-16-P03",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Three quarters of a number is 27. What is two thirds of the whole number?",
+      "target": "Two thirds of the whole",
+      "response": {
+        "type": "integer",
+        "input_label": "Two thirds of the whole",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 24
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "You rebuilt the whole before taking the new fraction.",
+        "correct_after_support": "You rebuilt the whole before taking the new fraction.",
+        "on_correct_math": "If three equal parts total 27, one part is 27 ÷ 3 = 9. → Four equal parts make the whole: 4 × 9 = 36. → Two thirds of 36 is 24.",
+        "on_incorrect_attempt_1": "The given 27 is a fractional part, not the whole.",
+        "on_incorrect_attempt_2": "Use the three known quarter-parts to find one quarter, then rebuild four quarters.",
+        "worked_explanation": "If three equal parts total 27, one part is 27 ÷ 3 = 9. → Four equal parts make the whole: 4 × 9 = 36. → Two thirds of 36 is 24."
+      },
+      "mathematical_support": {
+        "hint_1": "The given 27 is a fractional part, not the whole.",
+        "hint_2": "Reconstruct all four quarters before taking two thirds.",
+        "worked_solution": "If three equal parts total 27, one part is 27 ÷ 3 = 9. → Four equal parts make the whole: 4 × 9 = 36. → Two thirds of 36 is 24."
+      },
+      "working": [
+        "If three equal parts total 27, one part is 27 ÷ 3 = 9.",
+        "Four equal parts make the whole: 4 × 9 = 36.",
+        "Two thirds of 36 is 24."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "multi_step",
+          "structure": "reconstruct_then_fraction",
+          "context": "number_reconstruct",
+          "object": "number_reconstruct",
+          "target": "Two thirds of the whole",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "first_relation",
+            "intermediate",
+            "result"
+          ],
+          "given": 27,
+          "known_fraction": {
+            "n": 3,
+            "d": 4
+          },
+          "target_fraction": {
+            "n": 2,
+            "d": 3
+          },
+          "unit": "",
+          "given_label": "known three-quarter part",
+          "first_label": "of the whole",
+          "intermediate_label": "whole number",
+          "second_label": "of that whole",
+          "result_label": "required value",
+          "accessible_context": "A number reconstructed from a known fractional part"
+        }
+      },
+      "response_feedback": {
+        "18": "That takes two thirds of the known part 27 instead of two thirds of the whole.",
+        "36": "That is the reconstructed whole; one more relationship is still required."
+      }
+    },
+    {
+      "id": "MD-16-P04",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Eight containers each hold 3/4 litre. The liquid is poured into bottles holding 2/5 litre each. How many bottles are filled?",
+      "target": "Number of bottles",
+      "response": {
+        "type": "integer",
+        "input_label": "Number of bottles",
+        "suffix": "bottles"
+      },
+      "answer": {
+        "value": 15
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "You combined the source containers before counting the smaller bottles.",
+        "correct_after_support": "You combined the source containers before counting the smaller bottles.",
+        "on_correct_math": "8 × 3/4 = 6 litres altogether. → Use the combined 6 litres as the available amount. → 6 ÷ 2/5 = 6 × 5/2 = 15 bottles.",
+        "on_incorrect_attempt_1": "Combine the liquid in all eight containers first.",
+        "on_incorrect_attempt_2": "Find the total liquid first; the bottle size is used only after that total is known.",
+        "worked_explanation": "8 × 3/4 = 6 litres altogether. → Use the combined 6 litres as the available amount. → 6 ÷ 2/5 = 6 × 5/2 = 15 bottles."
+      },
+      "mathematical_support": {
+        "hint_1": "Combine the liquid in all eight containers first.",
+        "hint_2": "Then divide the combined amount by one bottle capacity.",
+        "worked_solution": "8 × 3/4 = 6 litres altogether. → Use the combined 6 litres as the available amount. → 6 ÷ 2/5 = 6 × 5/2 = 15 bottles."
+      },
+      "working": [
+        "8 × 3/4 = 6 litres altogether.",
+        "Use the combined 6 litres as the available amount.",
+        "6 ÷ 2/5 = 6 × 5/2 = 15 bottles."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "multi_step",
+          "structure": "repeat_then_group",
+          "context": "liquid_repack",
+          "object": "liquid_repack",
+          "target": "Number of bottles",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "intermediate",
+            "second_relation",
+            "result"
+          ],
+          "copies": 8,
+          "item_size": {
+            "n": 3,
+            "d": 4
+          },
+          "group_size": {
+            "n": 2,
+            "d": 5
+          },
+          "unit": "litres",
+          "result_unit": "bottles",
+          "item_label": "containers",
+          "given_label": "eight equal containers",
+          "first_label": "combine their liquid",
+          "intermediate_label": "liquid altogether",
+          "group_label": "in each bottle",
+          "result_label": "bottles filled",
+          "accessible_context": "Liquid combined from containers and repacked into bottles"
+        }
+      },
+      "response_feedback": {
+        "6": "That is the total liquid in litres, not the number of bottles.",
+        "20": "That treats the eight containers as litres and loses the three-quarter-litre size."
+      }
+    },
+    {
+      "id": "MD-16-P05",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "A recipe uses 2/3 of a 3/4-kg bag of flour. The flour used is divided into 1/8-kg portions. How many portions are made?",
+      "target": "Number of portions",
+      "response": {
+        "type": "integer",
+        "input_label": "Number of portions",
+        "suffix": "portions"
+      },
+      "answer": {
+        "value": 4
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "You preserved the exact flour amount between the two fraction relationships.",
+        "correct_after_support": "You preserved the exact flour amount between the two fraction relationships.",
+        "on_correct_math": "2/3 of 3/4 kg is 2/3 × 3/4 = 1/2 kg. → Carry the exact one-half kilogram into the portion step. → 1/2 ÷ 1/8 = 4 portions.",
+        "on_incorrect_attempt_1": "First find the fraction of the bag that the recipe actually uses.",
+        "on_incorrect_attempt_2": "Multiply to find the flour used, then divide that result by one portion size.",
+        "worked_explanation": "2/3 of 3/4 kg is 2/3 × 3/4 = 1/2 kg. → Carry the exact one-half kilogram into the portion step. → 1/2 ÷ 1/8 = 4 portions."
+      },
+      "mathematical_support": {
+        "hint_1": "First find the fraction of the bag that the recipe actually uses.",
+        "hint_2": "Keep one half exact before counting eighth-kilogram portions.",
+        "worked_solution": "2/3 of 3/4 kg is 2/3 × 3/4 = 1/2 kg. → Carry the exact one-half kilogram into the portion step. → 1/2 ÷ 1/8 = 4 portions."
+      },
+      "working": [
+        "2/3 of 3/4 kg is 2/3 × 3/4 = 1/2 kg.",
+        "Carry the exact one-half kilogram into the portion step.",
+        "1/2 ÷ 1/8 = 4 portions."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "multi_step",
+          "structure": "fraction_then_group",
+          "context": "flour_portions",
+          "object": "flour_portions",
+          "target": "Number of portions",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "intermediate",
+            "second_relation",
+            "result"
+          ],
+          "given": {
+            "n": 3,
+            "d": 4
+          },
+          "first_fraction": {
+            "n": 2,
+            "d": 3
+          },
+          "group_size": {
+            "n": 1,
+            "d": 8
+          },
+          "unit": "kg",
+          "result_unit": "portions",
+          "given_label": "flour in the bag",
+          "first_label": "is used",
+          "intermediate_label": "flour used",
+          "group_label": "in each portion",
+          "result_label": "portions made",
+          "accessible_context": "A fraction of a flour bag divided into portions"
+        }
+      },
+      "response_feedback": {
+        "6": "That uses two thirds as a whole-number count and does not preserve the bag size.",
+        "1/2": "That is the intermediate flour mass; the final answer must count portions."
+      }
+    },
+    {
+      "id": "MD-16-P06",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Five ribbon pieces are each 3/4 metre long. They are joined end to end without overlap, then cut into 5/8-metre lengths. How many complete lengths are made?",
+      "target": "Number of complete lengths",
+      "response": {
+        "type": "integer",
+        "input_label": "Number of complete lengths",
+        "suffix": "lengths"
+      },
+      "answer": {
+        "value": 6
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "You combined the ribbon exactly and then counted complete cut lengths.",
+        "correct_after_support": "You combined the ribbon exactly and then counted complete cut lengths.",
+        "on_correct_math": "5 × 3/4 = 15/4 metres of ribbon altogether. → Use the exact total in the grouping step. → 15/4 ÷ 5/8 = 15/4 × 8/5 = 6 complete lengths.",
+        "on_incorrect_attempt_1": "Combine the five equal ribbon lengths before cutting.",
+        "on_incorrect_attempt_2": "The five pieces create one total length; use that total as the dividend.",
+        "worked_explanation": "5 × 3/4 = 15/4 metres of ribbon altogether. → Use the exact total in the grouping step. → 15/4 ÷ 5/8 = 15/4 × 8/5 = 6 complete lengths."
+      },
+      "mathematical_support": {
+        "hint_1": "Combine the five equal ribbon lengths before cutting.",
+        "hint_2": "Divide the total ribbon by five eighths of a metre.",
+        "worked_solution": "5 × 3/4 = 15/4 metres of ribbon altogether. → Use the exact total in the grouping step. → 15/4 ÷ 5/8 = 15/4 × 8/5 = 6 complete lengths."
+      },
+      "working": [
+        "5 × 3/4 = 15/4 metres of ribbon altogether.",
+        "Use the exact total in the grouping step.",
+        "15/4 ÷ 5/8 = 15/4 × 8/5 = 6 complete lengths."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "multi_step",
+          "structure": "repeat_then_group",
+          "context": "ribbon_lengths",
+          "object": "ribbon_lengths",
+          "target": "Number of complete lengths",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "intermediate",
+            "second_relation",
+            "result"
+          ],
+          "copies": 5,
+          "item_size": {
+            "n": 3,
+            "d": 4
+          },
+          "group_size": {
+            "n": 5,
+            "d": 8
+          },
+          "unit": "metres",
+          "result_unit": "lengths",
+          "item_label": "pieces",
+          "given_label": "five ribbon pieces",
+          "first_label": "join end to end",
+          "intermediate_label": "ribbon altogether",
+          "group_label": "in each cut length",
+          "result_label": "complete lengths",
+          "accessible_context": "Ribbon pieces combined and cut into equal lengths"
+        }
+      },
+      "response_feedback": {
+        "8": "That uses the number of eighths in one metre and ignores the total ribbon length.",
+        "15/4": "That is the exact total ribbon length, but the question asks for a count of cuts."
+      }
+    },
+    {
+      "id": "MD-16-P07",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "A tank has 24 litres. Seven eighths is poured into 3/4-litre containers. Which calculation finds the number of containers?",
+      "target": "Valid multi-step method",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "(24 × 7/8) ÷ 3/4",
+          "24 × 7/8 × 3/4",
+          "(24 ÷ 7/8) × 3/4",
+          "24 ÷ (7/8 ÷ 3/4)"
+        ]
+      },
+      "answer": {
+        "value": "(24 × 7/8) ÷ 3/4"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That sequence follows the liquid from the tank into equal containers.",
+        "correct_after_support": "That sequence follows the liquid from the tank into equal containers.",
+        "on_correct_math": "Seven eighths of the known tank amount is 24 × 7/8. → That result is the liquid poured. → The container count is the poured liquid divided by 3/4 litre.",
+        "on_incorrect_attempt_1": "Decide what is poured before deciding how containers are counted.",
+        "on_incorrect_attempt_2": "Find the poured amount first and place it before the container size in the division.",
+        "worked_explanation": "Seven eighths of the known tank amount is 24 × 7/8. → That result is the liquid poured. → The container count is the poured liquid divided by 3/4 litre."
+      },
+      "mathematical_support": {
+        "hint_1": "Decide what is poured before deciding how containers are counted.",
+        "hint_2": "A container capacity is the size of one equal group.",
+        "worked_solution": "Seven eighths of the known tank amount is 24 × 7/8. → That result is the liquid poured. → The container count is the poured liquid divided by 3/4 litre."
+      },
+      "working": [
+        "Seven eighths of the known tank amount is 24 × 7/8.",
+        "That result is the liquid poured.",
+        "The container count is the poured liquid divided by 3/4 litre."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "multi_step_rule",
+          "context": "tank_containers",
+          "object": "tank_containers",
+          "target": "Valid multi-step method",
+          "heading": "Choose the complete operation sequence",
+          "rule_context": "Find seven eighths of 24 litres, then divide that poured amount by the three-quarter-litre container size.",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "24 × 7/8 × 3/4": "Multiplying by the container size finds another fraction of the liquid, not a container count.",
+        "(24 ÷ 7/8) × 3/4": "Seven eighths of a known tank amount is a multiplication relationship, not a whole reconstruction.",
+        "24 ÷ (7/8 ÷ 3/4)": "This combines the two fractions without preserving the poured amount as an intermediate quantity."
+      }
+    },
+    {
+      "id": "MD-16-X01",
+      "source_ref": {
+        "page": 16
+      },
+      "stage": "practice",
+      "prompt": "A school orders 80 exercise books. Three fifths are for Year 10 and are packed equally into boxes of 6. How many boxes are used?",
+      "target": "Number of boxes",
+      "response": {
+        "type": "integer",
+        "input_label": "Number of boxes",
+        "suffix": "boxes"
+      },
+      "answer": {
+        "value": 8
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "You packed only the Year 10 books into the boxes.",
+        "correct_after_support": "You packed only the Year 10 books into the boxes.",
+        "on_correct_math": "80 × 3/5 = 48 Year 10 books. → Only those 48 books are packed into the boxes. → 48 ÷ 6 = 8 boxes.",
+        "on_incorrect_attempt_1": "Find the Year 10 subset before packing.",
+        "on_incorrect_attempt_2": "Label the three-fifths subset, then divide that subset by six.",
+        "worked_explanation": "80 × 3/5 = 48 Year 10 books. → Only those 48 books are packed into the boxes. → 48 ÷ 6 = 8 boxes."
+      },
+      "mathematical_support": {
+        "hint_1": "Find the Year 10 subset before packing.",
+        "hint_2": "Use the selected books, not the full order, in the box calculation.",
+        "worked_solution": "80 × 3/5 = 48 Year 10 books. → Only those 48 books are packed into the boxes. → 48 ÷ 6 = 8 boxes."
+      },
+      "working": [
+        "80 × 3/5 = 48 Year 10 books.",
+        "Only those 48 books are packed into the boxes.",
+        "48 ÷ 6 = 8 boxes."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "multi_step",
+          "structure": "fraction_then_group",
+          "context": "books_boxes",
+          "object": "books_boxes",
+          "target": "Number of boxes",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "intermediate",
+            "second_relation",
+            "result"
+          ],
+          "given": 80,
+          "first_fraction": {
+            "n": 3,
+            "d": 5
+          },
+          "group_size": 6,
+          "unit": "books",
+          "result_unit": "boxes",
+          "given_label": "exercise books ordered",
+          "first_label": "are for Year 10",
+          "intermediate_label": "Year 10 books",
+          "group_label": "in each box",
+          "result_label": "boxes used",
+          "accessible_context": "Exercise books selected for Year 10 and packed into boxes"
+        }
+      },
+      "response_feedback": {
+        "13": "That starts packing all 80 books instead of the selected 48 books.",
+        "48": "That is the Year 10 book count, not the number of boxes."
+      }
+    },
+    {
+      "id": "MD-16-X02",
+      "source_ref": {
+        "page": 16
+      },
+      "stage": "practice",
+      "prompt": "Four sevenths of a tank capacity is 28 litres. The full tank is emptied into 7/8-litre containers. How many containers are filled?",
+      "target": "Number of containers",
+      "response": {
+        "type": "integer",
+        "input_label": "Number of containers",
+        "suffix": "containers"
+      },
+      "answer": {
+        "value": 56
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "You rebuilt the full capacity before counting containers.",
+        "correct_after_support": "You rebuilt the full capacity before counting containers.",
+        "on_correct_math": "If four equal parts total 28 litres, one part is 7 litres. → Seven parts rebuild the full 49-litre tank. → 49 ÷ 7/8 = 49 × 8/7 = 56 containers.",
+        "on_incorrect_attempt_1": "Reconstruct the full tank from the known four-sevenths part.",
+        "on_incorrect_attempt_2": "Find one seventh, rebuild seven sevenths, then divide by one container capacity.",
+        "worked_explanation": "If four equal parts total 28 litres, one part is 7 litres. → Seven parts rebuild the full 49-litre tank. → 49 ÷ 7/8 = 49 × 8/7 = 56 containers."
+      },
+      "mathematical_support": {
+        "hint_1": "Reconstruct the full tank from the known four-sevenths part.",
+        "hint_2": "The full capacity, not 28 litres, is emptied into the containers.",
+        "worked_solution": "If four equal parts total 28 litres, one part is 7 litres. → Seven parts rebuild the full 49-litre tank. → 49 ÷ 7/8 = 49 × 8/7 = 56 containers."
+      },
+      "working": [
+        "If four equal parts total 28 litres, one part is 7 litres.",
+        "Seven parts rebuild the full 49-litre tank.",
+        "49 ÷ 7/8 = 49 × 8/7 = 56 containers."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "multi_step",
+          "structure": "reconstruct_then_group",
+          "context": "capacity_containers",
+          "object": "capacity_containers",
+          "target": "Number of containers",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "first_relation",
+            "intermediate",
+            "result"
+          ],
+          "given": 28,
+          "known_fraction": {
+            "n": 4,
+            "d": 7
+          },
+          "unit": "litres",
+          "result_unit": "containers",
+          "given_label": "known four-sevenths part",
+          "first_label": "of full capacity",
+          "intermediate_label": "full tank capacity",
+          "group_label": "in each container",
+          "result_label": "containers filled",
+          "group_size": {
+            "n": 7,
+            "d": 8
+          },
+          "accessible_context": "Tank capacity reconstructed and divided into containers"
+        }
+      },
+      "response_feedback": {
+        "32": "That divides the known 28-litre part into containers instead of using the full tank.",
+        "49": "That is the reconstructed tank capacity; the container count still needs to be found."
+      }
+    },
+    {
+      "id": "MD-16-X03",
+      "source_ref": {
+        "page": 16
+      },
+      "stage": "practice",
+      "prompt": "A shop has 8 rolls of ribbon, each 3/4 metre long. The ribbon is joined end to end without overlap, then cut into 2/5-metre lengths. How many complete lengths are cut?",
+      "target": "Number of complete lengths",
+      "response": {
+        "type": "integer",
+        "input_label": "Number of complete lengths",
+        "suffix": "lengths"
+      },
+      "answer": {
+        "value": 15
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "You carried the combined ribbon length into the cutting step.",
+        "correct_after_support": "You carried the combined ribbon length into the cutting step.",
+        "on_correct_math": "8 × 3/4 = 6 metres of ribbon altogether. → The six-metre total becomes the available ribbon. → 6 ÷ 2/5 = 15 complete lengths.",
+        "on_incorrect_attempt_1": "Find the total ribbon across all eight rolls.",
+        "on_incorrect_attempt_2": "Combine the rolls before using the size of one cut length.",
+        "worked_explanation": "8 × 3/4 = 6 metres of ribbon altogether. → The six-metre total becomes the available ribbon. → 6 ÷ 2/5 = 15 complete lengths."
+      },
+      "mathematical_support": {
+        "hint_1": "Find the total ribbon across all eight rolls.",
+        "hint_2": "Then count how many two-fifths-metre lengths fit.",
+        "worked_solution": "8 × 3/4 = 6 metres of ribbon altogether. → The six-metre total becomes the available ribbon. → 6 ÷ 2/5 = 15 complete lengths."
+      },
+      "working": [
+        "8 × 3/4 = 6 metres of ribbon altogether.",
+        "The six-metre total becomes the available ribbon.",
+        "6 ÷ 2/5 = 15 complete lengths."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "multi_step",
+          "structure": "repeat_then_group",
+          "context": "rolls_ribbon",
+          "object": "rolls_ribbon",
+          "target": "Number of complete lengths",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "intermediate",
+            "second_relation",
+            "result"
+          ],
+          "copies": 8,
+          "item_size": {
+            "n": 3,
+            "d": 4
+          },
+          "group_size": {
+            "n": 2,
+            "d": 5
+          },
+          "unit": "metres",
+          "result_unit": "lengths",
+          "item_label": "rolls",
+          "given_label": "eight ribbon rolls",
+          "first_label": "join end to end",
+          "intermediate_label": "ribbon altogether",
+          "group_label": "in each cut length",
+          "result_label": "complete lengths",
+          "accessible_context": "Ribbon rolls combined and cut into equal lengths"
+        }
+      },
+      "response_feedback": {
+        "6": "That is the combined ribbon length in metres, not the number of cuts.",
+        "20": "That counts fifths without accounting for the two-fifths size of each cut."
+      }
+    },
+    {
+      "id": "MD-16-X04",
+      "source_ref": {
+        "page": 16
+      },
+      "stage": "practice",
+      "prompt": "Two thirds of 54 students join a revision session. Three quarters of those students complete every task. How many complete every task?",
+      "target": "Students completing every task",
+      "response": {
+        "type": "integer",
+        "input_label": "Students completing every task",
+        "suffix": "students"
+      },
+      "answer": {
+        "value": 27
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "You changed the reference amount when the context changed to those students.",
+        "correct_after_support": "You changed the reference amount when the context changed to those students.",
+        "on_correct_math": "54 × 2/3 = 36 students join the session. → The phrase those students makes 36 the new reference amount. → 36 × 3/4 = 27 students complete every task.",
+        "on_incorrect_attempt_1": "Find the session group before taking the second fraction.",
+        "on_incorrect_attempt_2": "Use the first selected group as the whole for the second fraction.",
+        "worked_explanation": "54 × 2/3 = 36 students join the session. → The phrase those students makes 36 the new reference amount. → 36 × 3/4 = 27 students complete every task."
+      },
+      "mathematical_support": {
+        "hint_1": "Find the session group before taking the second fraction.",
+        "hint_2": "The second fraction is of those who join, not of the original 54.",
+        "worked_solution": "54 × 2/3 = 36 students join the session. → The phrase those students makes 36 the new reference amount. → 36 × 3/4 = 27 students complete every task."
+      },
+      "working": [
+        "54 × 2/3 = 36 students join the session.",
+        "The phrase those students makes 36 the new reference amount.",
+        "36 × 3/4 = 27 students complete every task."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "multi_step",
+          "structure": "fraction_then_fraction",
+          "context": "students_tasks",
+          "object": "students_tasks",
+          "target": "Students completing every task",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "intermediate",
+            "second_relation",
+            "result"
+          ],
+          "given": 54,
+          "first_fraction": {
+            "n": 2,
+            "d": 3
+          },
+          "second_fraction": {
+            "n": 3,
+            "d": 4
+          },
+          "unit": "students",
+          "given_label": "students in the year group",
+          "first_label": "join the session",
+          "intermediate_label": "students who join",
+          "second_label": "of those complete every task",
+          "result_label": "students completing every task",
+          "accessible_context": "Students selected for a session and then for task completion"
+        }
+      },
+      "response_feedback": {
+        "36": "That is the number who join, but only three quarters of that group complete every task.",
+        "40": "Adding separate fractions of the original group does not model the phrase those students."
+      }
+    },
+    {
+      "id": "MD-16-X05",
+      "source_ref": {
+        "page": 16
+      },
+      "stage": "practice",
+      "prompt": "A factory makes 60 kg of material. Seven tenths is used and packed into 3/5-kg bags. Which calculation gives the number of bags?",
+      "target": "Valid multi-step method",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "(60 × 7/10) ÷ 3/5",
+          "60 × 7/10 × 3/5",
+          "(60 ÷ 7/10) × 3/5",
+          "3/5 ÷ (60 × 7/10)"
+        ]
+      },
+      "answer": {
+        "value": "(60 × 7/10) ÷ 3/5"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The expression preserves the used material and the direction of the bag division.",
+        "correct_after_support": "The expression preserves the used material and the direction of the bag division.",
+        "on_correct_math": "Seven tenths of the known 60 kg is found by multiplication. → That used mass becomes the quantity available for packing. → A bag count uses the available mass divided by one bag mass.",
+        "on_incorrect_attempt_1": "Track the material that is actually used.",
+        "on_incorrect_attempt_2": "Place the used mass before the one-bag mass in the second relationship.",
+        "worked_explanation": "Seven tenths of the known 60 kg is found by multiplication. → That used mass becomes the quantity available for packing. → A bag count uses the available mass divided by one bag mass."
+      },
+      "mathematical_support": {
+        "hint_1": "Track the material that is actually used.",
+        "hint_2": "In a group count, the available amount comes before the size of one group.",
+        "worked_solution": "Seven tenths of the known 60 kg is found by multiplication. → That used mass becomes the quantity available for packing. → A bag count uses the available mass divided by one bag mass."
+      },
+      "working": [
+        "Seven tenths of the known 60 kg is found by multiplication.",
+        "That used mass becomes the quantity available for packing.",
+        "A bag count uses the available mass divided by one bag mass."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "multi_step_rule",
+          "context": "material_bags",
+          "object": "material_bags",
+          "target": "Valid multi-step method",
+          "heading": "Keep the material used as the intermediate amount",
+          "rule_context": "Take seven tenths of 60 kg, then divide that used material by the three-fifths-kilogram bag size.",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "60 × 7/10 × 3/5": "The bag size is not another fraction of the material; it is the size of one group.",
+        "(60 ÷ 7/10) × 3/5": "Seven tenths is a stated fraction of a known 60 kg, so the first relationship is not whole reconstruction.",
+        "3/5 ÷ (60 × 7/10)": "This reverses the group-count division: one bag size is not divided by all available material."
+      }
+    },
+    {
+      "id": "MD-16-E01",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "exit",
+      "prompt": "A tank contains 72 litres. Five eighths is packed into bottles holding 3/4 litre each. How many bottles are filled?",
+      "target": "Number of bottles",
+      "response": {
+        "type": "integer",
+        "input_label": "Number of bottles",
+        "suffix": "bottles"
+      },
+      "answer": {
+        "value": 60
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "You tracked the selected water through to the bottle count.",
+        "correct_after_support": "You tracked the selected water through to the bottle count.",
+        "on_correct_math": "72 × 5/8 = 45 litres is packed. → Use 45 litres as the available amount. → 45 ÷ 3/4 = 60 bottles.",
+        "on_incorrect_attempt_1": "Exit questions do not provide hints.",
+        "on_incorrect_attempt_2": "Find the packed litres, then divide that exact result by one bottle capacity.",
+        "worked_explanation": "72 × 5/8 = 45 litres is packed. → Use 45 litres as the available amount. → 45 ÷ 3/4 = 60 bottles.",
+        "on_locked_incorrect": "Find the packed litres, then divide that exact result by one bottle capacity."
+      },
+      "mathematical_support": {
+        "hint_1": "Exit questions do not provide hints.",
+        "hint_2": "Use each result as the quantity for the next relationship.",
+        "worked_solution": "72 × 5/8 = 45 litres is packed. → Use 45 litres as the available amount. → 45 ÷ 3/4 = 60 bottles."
+      },
+      "working": [
+        "72 × 5/8 = 45 litres is packed.",
+        "Use 45 litres as the available amount.",
+        "45 ÷ 3/4 = 60 bottles."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "multi_step",
+          "structure": "fraction_then_group",
+          "context": "tank_bottles_final",
+          "object": "tank_bottles_final",
+          "target": "Number of bottles",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "intermediate",
+            "second_relation",
+            "result"
+          ],
+          "given": 72,
+          "first_fraction": {
+            "n": 5,
+            "d": 8
+          },
+          "group_size": {
+            "n": 3,
+            "d": 4
+          },
+          "unit": "litres",
+          "result_unit": "bottles",
+          "given_label": "water in tank",
+          "first_label": "is packed",
+          "intermediate_label": "water packed",
+          "group_label": "in each bottle",
+          "result_label": "bottles filled",
+          "accessible_context": "Water selected from a tank and packed into bottles"
+        }
+      },
+      "response_feedback": {
+        "45": "That stops at the intermediate volume instead of finding the bottle count.",
+        "96": "That counts bottles from all 72 litres instead of the selected five eighths."
+      },
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "MD-16-E02",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "exit",
+      "prompt": "Seven ninths of a number is 35. What is two fifths of the whole number?",
+      "target": "Two fifths of the whole",
+      "response": {
+        "type": "integer",
+        "input_label": "Two fifths of the whole",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 18
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "You reconstructed the whole before taking the requested fraction.",
+        "correct_after_support": "You reconstructed the whole before taking the requested fraction.",
+        "on_correct_math": "35 ÷ 7 = 5 is one ninth. → Nine ninths is 9 × 5 = 45. → Two fifths of 45 is 18.",
+        "on_incorrect_attempt_1": "Exit questions do not provide hints.",
+        "on_incorrect_attempt_2": "Use the known seven parts to find one part, then rebuild all nine parts.",
+        "worked_explanation": "35 ÷ 7 = 5 is one ninth. → Nine ninths is 9 × 5 = 45. → Two fifths of 45 is 18.",
+        "on_locked_incorrect": "Use the known seven parts to find one part, then rebuild all nine parts."
+      },
+      "mathematical_support": {
+        "hint_1": "Exit questions do not provide hints.",
+        "hint_2": "The known 35 is not the whole.",
+        "worked_solution": "35 ÷ 7 = 5 is one ninth. → Nine ninths is 9 × 5 = 45. → Two fifths of 45 is 18."
+      },
+      "working": [
+        "35 ÷ 7 = 5 is one ninth.",
+        "Nine ninths is 9 × 5 = 45.",
+        "Two fifths of 45 is 18."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "multi_step",
+          "structure": "reconstruct_then_fraction",
+          "context": "number_reconstruct_final",
+          "object": "number_reconstruct_final",
+          "target": "Two fifths of the whole",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "first_relation",
+            "intermediate",
+            "result"
+          ],
+          "given": 35,
+          "known_fraction": {
+            "n": 7,
+            "d": 9
+          },
+          "target_fraction": {
+            "n": 2,
+            "d": 5
+          },
+          "given_label": "known seven-ninths part",
+          "first_label": "of the whole",
+          "intermediate_label": "whole number",
+          "second_label": "of that whole",
+          "result_label": "required value",
+          "accessible_context": "A whole number reconstructed before a new fraction is found"
+        }
+      },
+      "response_feedback": {
+        "14": "That takes two fifths of the known part instead of the reconstructed whole.",
+        "45": "That is the reconstructed whole; the question asks for two fifths of it."
+      },
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "MD-16-E03",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "exit",
+      "prompt": "Nine containers each hold 2/3 litre. The liquid is poured into cups holding 3/8 litre each. How many cups are filled?",
+      "target": "Number of cups",
+      "response": {
+        "type": "integer",
+        "input_label": "Number of cups",
+        "suffix": "cups"
+      },
+      "answer": {
+        "value": 16
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "You combined the liquid before changing to the smaller cup size.",
+        "correct_after_support": "You combined the liquid before changing to the smaller cup size.",
+        "on_correct_math": "9 × 2/3 = 6 litres altogether. → Use the combined 6 litres as the amount available. → 6 ÷ 3/8 = 16 cups.",
+        "on_incorrect_attempt_1": "Exit questions do not provide hints.",
+        "on_incorrect_attempt_2": "Find the total liquid, then place it before the cup size in the division.",
+        "worked_explanation": "9 × 2/3 = 6 litres altogether. → Use the combined 6 litres as the amount available. → 6 ÷ 3/8 = 16 cups.",
+        "on_locked_incorrect": "Find the total liquid, then place it before the cup size in the division."
+      },
+      "mathematical_support": {
+        "hint_1": "Exit questions do not provide hints.",
+        "hint_2": "Combine the source containers before counting cups.",
+        "worked_solution": "9 × 2/3 = 6 litres altogether. → Use the combined 6 litres as the amount available. → 6 ÷ 3/8 = 16 cups."
+      },
+      "working": [
+        "9 × 2/3 = 6 litres altogether.",
+        "Use the combined 6 litres as the amount available.",
+        "6 ÷ 3/8 = 16 cups."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "multi_step",
+          "structure": "repeat_then_group",
+          "context": "cups_liquid_final",
+          "object": "cups_liquid_final",
+          "target": "Number of cups",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "intermediate",
+            "second_relation",
+            "result"
+          ],
+          "copies": 9,
+          "item_size": {
+            "n": 2,
+            "d": 3
+          },
+          "group_size": {
+            "n": 3,
+            "d": 8
+          },
+          "unit": "litres",
+          "result_unit": "cups",
+          "item_label": "containers",
+          "given_label": "nine equal containers",
+          "first_label": "combine their liquid",
+          "intermediate_label": "liquid altogether",
+          "group_label": "in each cup",
+          "result_label": "cups filled",
+          "accessible_context": "Liquid combined from containers and poured into cups"
+        }
+      },
+      "response_feedback": {
+        "6": "That is the intermediate liquid volume, not the cup count.",
+        "24": "That counts eighths but does not group them three at a time for each cup."
+      },
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "MD-16-E04",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "exit",
+      "prompt": "Which statement describes a secure multi-step method?",
+      "target": "Valid multi-step method",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Find and label the intermediate quantity, then choose the next operation from the remaining relationship.",
+          "Use the original quantity in every step.",
+          "Use the same operation for all fractions in the question.",
+          "Round the first answer before starting the second step."
+        ]
+      },
+      "answer": {
+        "value": "Find and label the intermediate quantity, then choose the next operation from the remaining relationship."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That method protects the intermediate quantity without assuming one operation pattern.",
+        "correct_after_support": "That method protects the intermediate quantity without assuming one operation pattern.",
+        "on_correct_math": "Identify what the final question asks for. → Find and label any quantity that must be known first. → Use that exact result in the next relationship, choosing its operation from the meaning.",
+        "on_incorrect_attempt_1": "Exit questions do not provide hints.",
+        "on_incorrect_attempt_2": "A secure method follows the quantities and keeps intermediate values exact.",
+        "worked_explanation": "Identify what the final question asks for. → Find and label any quantity that must be known first. → Use that exact result in the next relationship, choosing its operation from the meaning.",
+        "on_locked_incorrect": "A secure method follows the quantities and keeps intermediate values exact."
+      },
+      "mathematical_support": {
+        "hint_1": "Exit questions do not provide hints.",
+        "hint_2": "Choose the statement that preserves quantities and relationships.",
+        "worked_solution": "Identify what the final question asks for. → Find and label any quantity that must be known first. → Use that exact result in the next relationship, choosing its operation from the meaning."
+      },
+      "working": [
+        "Identify what the final question asks for.",
+        "Find and label any quantity that must be known first.",
+        "Use that exact result in the next relationship, choosing its operation from the meaning."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "multi_step_rule",
+          "context": "method_final",
+          "object": "method_final",
+          "target": "Valid multi-step method",
+          "heading": "Identify the dependable method",
+          "rule_context": "Find and label the intermediate quantity, then choose the next operation from the remaining relationship.",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "Use the original quantity in every step.": "Later relationships may concern only the intermediate subset or total.",
+        "Use the same operation for all fractions in the question.": "Each relationship must be interpreted separately, so the operation can change.",
+        "Round the first answer before starting the second step.": "Premature rounding can change the final result; carry exact intermediate values."
+      },
+      "final_error_feedback": "answer_specific"
+    }
+  ],
+  "canonical_lesson": {
+    "version": "MD16-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

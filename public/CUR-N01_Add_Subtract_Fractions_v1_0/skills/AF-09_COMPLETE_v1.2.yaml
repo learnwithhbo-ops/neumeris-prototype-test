@@ -1,0 +1,2018 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "AF-09 - Subtract fractions when both fractions must be changed",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-16",
+      "sha256": "2f80adf2a8718afb5af7ae9415f9486d6411ae4f52b58aeab5786fba5cf0c62e"
+    },
+    "authored_scope": "Subtract the fractions accurately by working with equal-sized parts in the order shown.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "AF09-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "verified_desktop_secure_mobile_reversed_order_paths_progressive_removal_exact_equivalence_resume_narration_and_320_390_layouts",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        3,
+        4,
+        5,
+        6,
+        12,
+        14
+      ],
+      "source_repairs_consulted": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        15,
+        16
+      ],
+      "note": "All 16 pages read. Active pages 3–6, 12 and 14 mapped, with all six guided blanks and four exact source contexts preserved. Source repeats are retained without claims of fresh evidence. Mastery captures both conversions and the ordered difference; any valid shared denominator is accepted. Entry, Diagnostic and delayed Retrieval remain excluded."
+    }
+  },
+  "identity": {
+    "id": "AF-09",
+    "slug": "subtract-fractions-when-both-fractions-must-be-changed",
+    "title": "Subtract fractions when both fractions must be changed",
+    "strand": "Number",
+    "cluster": "Adding and Subtracting Fractions",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Subtract one proper fraction from another when neither denominator is a multiple of the other, rewriting both fractions with a common denominator.",
+    "success_criteria": [
+      "Find a valid common denominator.",
+      "Use each fraction’s own equal numerator and denominator scale factor.",
+      "Subtract the second renamed numerator from the first.",
+      "Keep the common denominator and apply the method in context."
+    ],
+    "boundaries": {
+      "includes": [
+        "Two positive proper fractions",
+        "Neither denominator a multiple of the other",
+        "Positive proper differences",
+        "Valid non-lowest common denominators and exact equivalent answers"
+      ],
+      "excludes": [
+        "Addition",
+        "Mixed numbers",
+        "Negative expected answers",
+        "Deliberate simplification practice",
+        "Multistep operation selection",
+        "Entry, Diagnostic and delayed Retrieval routes"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "AF-02",
+      "AF-04",
+      "AF-07"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for AF-02, AF-04, AF-07 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "integer",
+      "fraction",
+      "single_choice",
+      "conversion_product"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    }
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "Both fractions need equal-sized parts before subtraction.",
+    "invariant": "Each renaming preserves value, and subtraction keeps the original order.",
+    "mathematical_rule": "Find a common denominator; rename both fractions; subtract only the numerators in the order shown.",
+    "must_notice": [
+      "Both conversions need their own scale factors.",
+      "The first amount is the starting amount.",
+      "The common denominator stays fixed."
+    ],
+    "common_confusions": [
+      "Renaming only one numerator",
+      "Changing denominators alone",
+      "Using incorrect scale factors",
+      "Subtracting original denominators",
+      "Subtracting the common denominators",
+      "Reversing the subtraction order"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "Compare the part sizes",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Compare the part sizes",
+          "initial_state": "Compare the part sizes",
+          "model": {
+            "kind": "both_denominators_subtract",
+            "a": 5,
+            "b": 6,
+            "c": 1,
+            "d": 4,
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Five sixths and one quarter use different-sized parts. Neither denominator is a multiple of the other."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Rename, then take away",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Rename, then take away",
+          "initial_state": "Rename, then take away",
+          "model": {
+            "kind": "both_denominators_subtract",
+            "a": 5,
+            "b": 6,
+            "c": 1,
+            "d": 4,
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true
+          }
+        },
+        "narration": {
+          "script": "Split each sixth into two twelfths and the quarter into three twelfths. The two amounts stay fixed. Take the second amount from the first, keeping the parts in twelfths."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Why both fractions?",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Why both fractions?",
+          "initial_state": "Why both fractions?",
+          "model": {
+            "kind": "both_denominators_subtract",
+            "a": 5,
+            "b": 6,
+            "c": 1,
+            "d": 4,
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Choose why both fractions need to be rewritten for this subtraction."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "AF-09-C01"
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Preserve both values and the order",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Preserve both values and the order",
+          "initial_state": "Preserve both values and the order",
+          "model": {
+            "kind": "both_denominators_subtract",
+            "a": 3,
+            "b": 4,
+            "c": 1,
+            "d": 6,
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true
+          }
+        },
+        "narration": {
+          "script": "Three quarters uses a factor of three to become twelfths. One sixth uses a factor of two. Follow both conversion lines, then remove the second amount from the first."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Check the complete method",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Check the complete method",
+          "initial_state": "Check the complete method",
+          "model": {
+            "kind": "both_denominators_subtract",
+            "a": 4,
+            "b": 5,
+            "c": 1,
+            "d": 6,
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Check both conversions, the subtraction order and the denominator in the final line."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "AF-09-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "AF-09-G01",
+        "support_level": "high",
+        "pre_question_script": "Work through five eighths minus one sixth, one missing value at a time.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "AF-09-G02",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "guided",
+        "question_ref": "AF-09-G03",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "faded",
+        "question_ref": "AF-09-G04",
+        "support_level": "reduced",
+        "pre_question_script": "",
+        "correct_next": "G05"
+      },
+      "G05": {
+        "stage": "faded",
+        "question_ref": "AF-09-G05",
+        "support_level": "reduced",
+        "pre_question_script": "",
+        "correct_next": "G06"
+      },
+      "G06": {
+        "stage": "faded",
+        "question_ref": "AF-09-G06",
+        "support_level": "reduced",
+        "pre_question_script": "",
+        "correct_next": "G07"
+      },
+      "G07": {
+        "stage": "independent_transfer",
+        "question_ref": "AF-09-G07",
+        "support_level": "none",
+        "pre_question_script": "",
+        "correct_next": "P01"
+      }
+    },
+    "practice": {
+      "intro_script": "Complete the five calculations and the answer check, then use the method for ribbon, tank water, a walking route and paint.",
+      "question_order": [
+        "AF-09-P01",
+        "AF-09-P02",
+        "AF-09-P03",
+        "AF-09-P04",
+        "AF-09-P05",
+        "AF-09-P06",
+        "AF-09-X01",
+        "AF-09-X02",
+        "AF-09-X03",
+        "AF-09-X04"
+      ],
+      "question_count": 10
+    },
+    "exit": {
+      "intro_script": "Show both equivalent fractions and the difference for each calculation, then select the valid method. No hints are available and each response locks after submission.",
+      "primary_question_refs": [
+        "AF-09-E01",
+        "AF-09-E02",
+        "AF-09-E03"
+      ],
+      "confirmation_question_refs": [],
+      "mastery_policy": {
+        "profile": "all_primary_unsupported",
+        "require_all": true,
+        "source_page": 12,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "You preserved both fraction values and subtracted in the original order, keeping their common denominator.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Check conversions and subtraction order",
+      "ryan_script": "One or more final checks need another pass. Check both conversions, then take the second numerator from the first and keep their shared denominator.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "AF-09-C01",
+      "source_ref": {
+        "page": 3
+      },
+      "stage": "practice",
+      "prompt": "For 5/6 − 1/4, why must both fractions be rewritten?",
+      "target": "Rename both fractions and subtract in the original order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Neither denominator is a multiple of the other.",
+          "The numerators are different.",
+          "Every subtraction question requires both fractions to be changed.",
+          "The denominators must be subtracted before the numerators."
+        ],
+        "math_layout": "signed_compound_fraction"
+      },
+      "answer": {
+        "value": "Neither denominator is a multiple of the other."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Exactly. Neither original denominator can represent both fractions.",
+        "correct_after_support": "Exactly. Neither original denominator can represent both fractions.",
+        "on_correct_math": "Neither 6 nor 4 is a multiple of the other. → Choose a multiple of both denominators. → Both fractions need renaming.",
+        "on_incorrect_attempt_1": "Compare the relationship between the denominators.",
+        "on_incorrect_attempt_2": "Neither six nor four is a multiple of the other. Choose that explanation.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion and subtraction working after the final set.",
+        "worked_explanation": "Neither 6 nor 4 is a multiple of the other. → Choose a multiple of both denominators. → Both fractions need renaming."
+      },
+      "mathematical_support": {
+        "hint_1": "Compare the relationship between the denominators.",
+        "hint_2": "Give both fractions the same denominator without changing their values. Take the second numerator from the first and retain the common denominator.",
+        "worked_solution": "Neither 6 nor 4 is a multiple of the other. → Choose a multiple of both denominators. → Both fractions need renaming."
+      },
+      "working": [
+        "Neither 6 nor 4 is a multiple of the other.",
+        "Choose a multiple of both denominators.",
+        "Both fractions need renaming."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "both_denominators_subtract",
+          "a": 5,
+          "b": 6,
+          "c": 1,
+          "d": 4,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "The numerators are different.": "Different numerators can already share the same denominator. It is the part size that matters.",
+        "Every subtraction question requires both fractions to be changed.": "Some subtractions already have matching denominators or need only one conversion. This pair needs both.",
+        "The denominators must be subtracted before the numerators.": "Denominators name the part size; find a common multiple rather than subtracting them."
+      }
+    },
+    {
+      "id": "AF-09-C02",
+      "source_ref": {
+        "page": 4
+      },
+      "stage": "practice",
+      "prompt": "For 4/5 − 1/6, which method is correct?",
+      "target": "Rename both fractions and subtract in the original order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "4/5 − 1/6 = 24/30 − 5/30 = 19/30",
+          "4/5 − 1/6 = (4 − 1)/(5 − 6) = 3/−1",
+          "4/5 − 1/6 = 4/30 − 1/30 = 3/30",
+          "4/5 − 1/6 = 24/30 − 5/30 = 19/0"
+        ],
+        "math_layout": "signed_compound_fraction"
+      },
+      "answer": {
+        "value": "4/5 − 1/6 = 24/30 − 5/30 = 19/30"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both conversions are valid and the numerator subtraction keeps the original order.",
+        "correct_after_support": "Correct. Both conversions are valid and the numerator subtraction keeps the original order.",
+        "on_correct_math": "Use common denominator 30. → 4/5 = 24/30. → 1/6 = 5/30. → 24/30 − 5/30 = 19/30.",
+        "on_incorrect_attempt_1": "Both equivalent fractions must keep their values, and the common denominator must stay fixed.",
+        "on_incorrect_attempt_2": "Four fifths becomes twenty-four thirtieths and one sixth becomes five thirtieths. Choose the method that keeps the denominator thirty.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion and subtraction working after the final set.",
+        "worked_explanation": "Use common denominator 30. → 4/5 = 24/30. → 1/6 = 5/30. → 24/30 − 5/30 = 19/30."
+      },
+      "mathematical_support": {
+        "hint_1": "Both equivalent fractions must keep their values, and the common denominator must stay fixed.",
+        "hint_2": "Give both fractions the same denominator without changing their values. Take the second numerator from the first and retain the common denominator.",
+        "worked_solution": "Use common denominator 30. → 4/5 = 24/30. → 1/6 = 5/30. → 24/30 − 5/30 = 19/30."
+      },
+      "working": [
+        "Use common denominator 30.",
+        "4/5 = 24/30.",
+        "1/6 = 5/30.",
+        "24/30 − 5/30 = 19/30."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "both_denominators_subtract",
+          "a": 4,
+          "b": 5,
+          "c": 1,
+          "d": 6,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "4/5 − 1/6 = (4 − 1)/(5 − 6) = 3/−1": "Subtracting the original denominators does not make matching parts. Rename both fractions first.",
+        "4/5 − 1/6 = 4/30 − 1/30 = 3/30": "Changing only the denominators changes both fraction values. Scale each numerator too.",
+        "4/5 − 1/6 = 24/30 − 5/30 = 19/0": "The conversions are valid, but the denominator cannot be zero. Keep the common denominator instead of subtracting it."
+      }
+    },
+    {
+      "id": "AF-09-G01",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "For 5/8 − 1/6, enter the lowest common denominator.",
+      "target": "Rename both fractions and subtract in the original order",
+      "response": {
+        "type": "integer",
+        "input_label": "Lowest common denominator"
+      },
+      "answer": {
+        "value": 24
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both fractions can be written in twenty-fourths.",
+        "correct_after_support": "Correct. Both fractions can be written in twenty-fourths.",
+        "on_correct_math": "List multiples of 8 and 6. → 24 is the first shared positive multiple.",
+        "on_incorrect_attempt_1": "Find the first positive value in both multiple lists.",
+        "on_incorrect_attempt_2": "The first common multiple is twenty-four. Enter twenty-four.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion and subtraction working after the final set.",
+        "worked_explanation": "List multiples of 8 and 6. → 24 is the first shared positive multiple."
+      },
+      "mathematical_support": {
+        "hint_1": "Find the first positive value in both multiple lists.",
+        "hint_2": "Give both fractions the same denominator without changing their values. Take the second numerator from the first and retain the common denominator.",
+        "worked_solution": "List multiples of 8 and 6. → 24 is the first shared positive multiple."
+      },
+      "working": [
+        "List multiples of 8 and 6.",
+        "24 is the first shared positive multiple."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "both_denominator_subtract_steps",
+          "label": "Find the shared part size",
+          "expression": "Lowest common denominator: ?",
+          "completed": "Lowest common denominator: 24",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-09-G02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "Complete the missing numerator: 5/8 = ?/24.",
+      "target": "Rename both fractions and subtract in the original order",
+      "response": {
+        "type": "integer",
+        "input_label": "First equivalent numerator"
+      },
+      "answer": {
+        "value": 15
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Five eighths keeps its value as fifteen twenty-fourths.",
+        "correct_after_support": "Correct. Five eighths keeps its value as fifteen twenty-fourths.",
+        "on_correct_math": "8 × 3 = 24. → 5 × 3 = 15. → 5/8 = 15/24.",
+        "on_incorrect_attempt_1": "Eight is multiplied by three; use that factor for five too.",
+        "on_incorrect_attempt_2": "Five multiplied by three is fifteen. Enter fifteen.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion and subtraction working after the final set.",
+        "worked_explanation": "8 × 3 = 24. → 5 × 3 = 15. → 5/8 = 15/24."
+      },
+      "mathematical_support": {
+        "hint_1": "Eight is multiplied by three; use that factor for five too.",
+        "hint_2": "Give both fractions the same denominator without changing their values. Take the second numerator from the first and retain the common denominator.",
+        "worked_solution": "8 × 3 = 24. → 5 × 3 = 15. → 5/8 = 15/24."
+      },
+      "working": [
+        "8 × 3 = 24.",
+        "5 × 3 = 15.",
+        "5/8 = 15/24."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "both_denominator_subtract_steps",
+          "label": "Rename five eighths",
+          "expression": "5/8 = ?/24",
+          "completed": "5/8 = 15/24",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-09-G03",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "Complete the missing numerator: 1/6 = ?/24.",
+      "target": "Rename both fractions and subtract in the original order",
+      "response": {
+        "type": "integer",
+        "input_label": "Second equivalent numerator"
+      },
+      "answer": {
+        "value": 4
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. One sixth is four twenty-fourths.",
+        "correct_after_support": "Correct. One sixth is four twenty-fourths.",
+        "on_correct_math": "6 × 4 = 24. → 1 × 4 = 4. → 1/6 = 4/24.",
+        "on_incorrect_attempt_1": "Six uses a factor of four, not the factor from the first fraction.",
+        "on_incorrect_attempt_2": "One multiplied by four is four. Enter four.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion and subtraction working after the final set.",
+        "worked_explanation": "6 × 4 = 24. → 1 × 4 = 4. → 1/6 = 4/24."
+      },
+      "mathematical_support": {
+        "hint_1": "Six uses a factor of four, not the factor from the first fraction.",
+        "hint_2": "Give both fractions the same denominator without changing their values. Take the second numerator from the first and retain the common denominator.",
+        "worked_solution": "6 × 4 = 24. → 1 × 4 = 4. → 1/6 = 4/24."
+      },
+      "working": [
+        "6 × 4 = 24.",
+        "1 × 4 = 4.",
+        "1/6 = 4/24."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "both_denominator_subtract_steps",
+          "label": "Rename one sixth",
+          "expression": "1/6 = ?/24",
+          "completed": "1/6 = 4/24",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-09-G04",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "faded",
+      "prompt": "Write the first converted numerator in ?/24 − 4/24.",
+      "target": "Rename both fractions and subtract in the original order",
+      "response": {
+        "type": "integer",
+        "input_label": "First converted numerator"
+      },
+      "answer": {
+        "value": 15
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Fifteen twenty-fourths is the amount you start with.",
+        "correct_after_support": "Correct. Fifteen twenty-fourths is the amount you start with.",
+        "on_correct_math": "5/8 = 15/24. → The starting amount is 15/24.",
+        "on_incorrect_attempt_1": "Use the numerator found when renaming five eighths.",
+        "on_incorrect_attempt_2": "The first fraction became fifteen twenty-fourths. Enter fifteen.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion and subtraction working after the final set.",
+        "worked_explanation": "5/8 = 15/24. → The starting amount is 15/24."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the numerator found when renaming five eighths.",
+        "hint_2": "Give both fractions the same denominator without changing their values. Take the second numerator from the first and retain the common denominator.",
+        "worked_solution": "5/8 = 15/24. → The starting amount is 15/24."
+      },
+      "working": [
+        "5/8 = 15/24.",
+        "The starting amount is 15/24."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "both_denominator_subtract_steps",
+          "label": "Carry forward the starting amount",
+          "expression": "?/24 − 4/24",
+          "completed": "15/24 − 4/24",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-09-G05",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "faded",
+      "prompt": "Write the second converted numerator in 15/24 − ?/24.",
+      "target": "Rename both fractions and subtract in the original order",
+      "response": {
+        "type": "integer",
+        "input_label": "Second converted numerator"
+      },
+      "answer": {
+        "value": 4
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Four twenty-fourths is the amount being removed.",
+        "correct_after_support": "Correct. Four twenty-fourths is the amount being removed.",
+        "on_correct_math": "1/6 = 4/24. → The amount removed is 4/24.",
+        "on_incorrect_attempt_1": "Use the numerator found when renaming one sixth.",
+        "on_incorrect_attempt_2": "The second fraction became four twenty-fourths. Enter four.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion and subtraction working after the final set.",
+        "worked_explanation": "1/6 = 4/24. → The amount removed is 4/24."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the numerator found when renaming one sixth.",
+        "hint_2": "Give both fractions the same denominator without changing their values. Take the second numerator from the first and retain the common denominator.",
+        "worked_solution": "1/6 = 4/24. → The amount removed is 4/24."
+      },
+      "working": [
+        "1/6 = 4/24.",
+        "The amount removed is 4/24."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "both_denominator_subtract_steps",
+          "label": "Carry forward the amount removed",
+          "expression": "15/24 − ?/24",
+          "completed": "15/24 − 4/24",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-09-G06",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "faded",
+      "prompt": "Complete the difference numerator: 15/24 − 4/24 = ?/24.",
+      "target": "Rename both fractions and subtract in the original order",
+      "response": {
+        "type": "integer",
+        "input_label": "Difference numerator"
+      },
+      "answer": {
+        "value": 11
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Eleven twenty-fourths remains.",
+        "correct_after_support": "Correct. Eleven twenty-fourths remains.",
+        "on_correct_math": "15 − 4 = 11. → The denominator stays 24. → 15/24 − 4/24 = 11/24.",
+        "on_incorrect_attempt_1": "Take four from fifteen, keeping the original order.",
+        "on_incorrect_attempt_2": "Fifteen minus four is eleven. Enter eleven.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion and subtraction working after the final set.",
+        "worked_explanation": "15 − 4 = 11. → The denominator stays 24. → 15/24 − 4/24 = 11/24."
+      },
+      "mathematical_support": {
+        "hint_1": "Take four from fifteen, keeping the original order.",
+        "hint_2": "Give both fractions the same denominator without changing their values. Take the second numerator from the first and retain the common denominator.",
+        "worked_solution": "15 − 4 = 11. → The denominator stays 24. → 15/24 − 4/24 = 11/24."
+      },
+      "working": [
+        "15 − 4 = 11.",
+        "The denominator stays 24.",
+        "15/24 − 4/24 = 11/24."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "both_denominator_subtract_steps",
+          "label": "Keep the subtraction order",
+          "expression": "15/24 − 4/24 = ?/24",
+          "completed": "15/24 − 4/24 = 11/24",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "19": "That adds the numerators. Four parts are being taken away.",
+        "-11": "The subtraction has been reversed. Follow fifteen minus four."
+      }
+    },
+    {
+      "id": "AF-09-G07",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "independent_transfer",
+      "prompt": "For 5/8 − 1/6 using denominator 24, which statement is correct?",
+      "target": "Rename both fractions and subtract in the original order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Only the fraction with denominator 8 must be rewritten.",
+          "Only the fraction with denominator 6 must be rewritten.",
+          "Both fractions must be rewritten with denominator 24.",
+          "The denominators can be subtracted directly."
+        ],
+        "math_layout": "signed_compound_fraction"
+      },
+      "answer": {
+        "value": "Both fractions must be rewritten with denominator 24."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both fractions must be renamed to represent the same-sized parts.",
+        "correct_after_support": "Correct. Both fractions must be renamed to represent the same-sized parts.",
+        "on_correct_math": "Neither fraction starts with denominator 24. → 5/8 = 15/24 and 1/6 = 4/24. → Both fractions need rewriting.",
+        "on_incorrect_attempt_1": "Check each original denominator against twenty-four.",
+        "on_incorrect_attempt_2": "Both denominators change to twenty-four, and both numerators must scale with them. Select both fractions.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion and subtraction working after the final set.",
+        "worked_explanation": "Neither fraction starts with denominator 24. → 5/8 = 15/24 and 1/6 = 4/24. → Both fractions need rewriting."
+      },
+      "mathematical_support": {
+        "hint_1": "Check each original denominator against twenty-four.",
+        "hint_2": "Give both fractions the same denominator without changing their values. Take the second numerator from the first and retain the common denominator.",
+        "worked_solution": "Neither fraction starts with denominator 24. → 5/8 = 15/24 and 1/6 = 4/24. → Both fractions need rewriting."
+      },
+      "working": [
+        "Neither fraction starts with denominator 24.",
+        "5/8 = 15/24 and 1/6 = 4/24.",
+        "Both fractions need rewriting."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "both_denominators_subtract",
+          "a": 5,
+          "b": 8,
+          "c": 1,
+          "d": 6,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-09-P01",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "Work out 5/8 − 1/6. Give an exact fraction.",
+      "target": "Rename both fractions and subtract in the original order",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "show_authored_label": true,
+        "input_label": "Exact difference"
+      },
+      "answer": {
+        "value": "11/24"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Removing the second amount leaves 11 parts out of 24.",
+        "correct_after_support": "Correct. Removing the second amount leaves 11 parts out of 24.",
+        "on_correct_math": "Use common denominator 24. → 5/8 = 15/24, scaling numerator and denominator by 3. → 1/6 = 4/24, scaling numerator and denominator by 4. → 15/24 − 4/24 = 11/24.",
+        "on_incorrect_attempt_1": "Check both equivalent fractions. With denominator 24, use a factor of 3 for the first and 4 for the second.",
+        "on_incorrect_attempt_2": "Follow the two conversion lines, then take the second numerator from the first. Keep the common denominator and submit the corrected difference.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion and subtraction working after the final set.",
+        "worked_explanation": "Use common denominator 24. → 5/8 = 15/24, scaling numerator and denominator by 3. → 1/6 = 4/24, scaling numerator and denominator by 4. → 15/24 − 4/24 = 11/24."
+      },
+      "mathematical_support": {
+        "hint_1": "Check both equivalent fractions. With denominator 24, use a factor of 3 for the first and 4 for the second.",
+        "hint_2": "Give both fractions the same denominator without changing their values. Take the second numerator from the first and retain the common denominator.",
+        "worked_solution": "Use common denominator 24. → 5/8 = 15/24, scaling numerator and denominator by 3. → 1/6 = 4/24, scaling numerator and denominator by 4. → 15/24 − 4/24 = 11/24."
+      },
+      "working": [
+        "Use common denominator 24.",
+        "5/8 = 15/24, scaling numerator and denominator by 3.",
+        "1/6 = 4/24, scaling numerator and denominator by 4.",
+        "15/24 − 4/24 = 11/24."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "both_denominators_subtract",
+          "a": 5,
+          "b": 8,
+          "c": 1,
+          "d": 6,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "4/2": "Subtracting the original numerator and denominator pairs does not create equal-sized parts.",
+        "4/24": "The denominators changed without the numerators. Each numerator must use its own denominator scale factor.",
+        "-11/24": "The subtraction order has been reversed. Take the second amount from the first, in the order shown.",
+        "19/24": "Those numerators have been added. This question takes the second amount away.",
+        "14/24": "The second fraction still needs its numerator scaled to preserve its value.",
+        "1/24": "The first fraction still needs its numerator scaled to preserve its value."
+      }
+    },
+    {
+      "id": "AF-09-P02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "Work out 7/10 − 1/4. Give an exact fraction.",
+      "target": "Rename both fractions and subtract in the original order",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "show_authored_label": true,
+        "input_label": "Exact difference"
+      },
+      "answer": {
+        "value": "9/20"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Removing the second amount leaves 9 parts out of 20.",
+        "correct_after_support": "Correct. Removing the second amount leaves 9 parts out of 20.",
+        "on_correct_math": "Use common denominator 20. → 7/10 = 14/20, scaling numerator and denominator by 2. → 1/4 = 5/20, scaling numerator and denominator by 5. → 14/20 − 5/20 = 9/20.",
+        "on_incorrect_attempt_1": "Check both equivalent fractions. With denominator 20, use a factor of 2 for the first and 5 for the second.",
+        "on_incorrect_attempt_2": "Follow the two conversion lines, then take the second numerator from the first. Keep the common denominator and submit the corrected difference.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion and subtraction working after the final set.",
+        "worked_explanation": "Use common denominator 20. → 7/10 = 14/20, scaling numerator and denominator by 2. → 1/4 = 5/20, scaling numerator and denominator by 5. → 14/20 − 5/20 = 9/20."
+      },
+      "mathematical_support": {
+        "hint_1": "Check both equivalent fractions. With denominator 20, use a factor of 2 for the first and 5 for the second.",
+        "hint_2": "Give both fractions the same denominator without changing their values. Take the second numerator from the first and retain the common denominator.",
+        "worked_solution": "Use common denominator 20. → 7/10 = 14/20, scaling numerator and denominator by 2. → 1/4 = 5/20, scaling numerator and denominator by 5. → 14/20 − 5/20 = 9/20."
+      },
+      "working": [
+        "Use common denominator 20.",
+        "7/10 = 14/20, scaling numerator and denominator by 2.",
+        "1/4 = 5/20, scaling numerator and denominator by 5.",
+        "14/20 − 5/20 = 9/20."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "both_denominators_subtract",
+          "a": 7,
+          "b": 10,
+          "c": 1,
+          "d": 4,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "6/6": "Subtracting the original numerator and denominator pairs does not create equal-sized parts.",
+        "6/20": "The denominators changed without the numerators. Each numerator must use its own denominator scale factor.",
+        "-9/20": "The subtraction order has been reversed. Take the second amount from the first, in the order shown.",
+        "19/20": "Those numerators have been added. This question takes the second amount away.",
+        "13/20": "The second fraction still needs its numerator scaled to preserve its value.",
+        "2/20": "The first fraction still needs its numerator scaled to preserve its value."
+      }
+    },
+    {
+      "id": "AF-09-P03",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "Work out 5/6 − 2/9. Give an exact fraction.",
+      "target": "Rename both fractions and subtract in the original order",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "show_authored_label": true,
+        "input_label": "Exact difference"
+      },
+      "answer": {
+        "value": "11/18"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Removing the second amount leaves 11 parts out of 18.",
+        "correct_after_support": "Correct. Removing the second amount leaves 11 parts out of 18.",
+        "on_correct_math": "Use common denominator 18. → 5/6 = 15/18, scaling numerator and denominator by 3. → 2/9 = 4/18, scaling numerator and denominator by 2. → 15/18 − 4/18 = 11/18.",
+        "on_incorrect_attempt_1": "Check both equivalent fractions. With denominator 18, use a factor of 3 for the first and 2 for the second.",
+        "on_incorrect_attempt_2": "Follow the two conversion lines, then take the second numerator from the first. Keep the common denominator and submit the corrected difference.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion and subtraction working after the final set.",
+        "worked_explanation": "Use common denominator 18. → 5/6 = 15/18, scaling numerator and denominator by 3. → 2/9 = 4/18, scaling numerator and denominator by 2. → 15/18 − 4/18 = 11/18."
+      },
+      "mathematical_support": {
+        "hint_1": "Check both equivalent fractions. With denominator 18, use a factor of 3 for the first and 2 for the second.",
+        "hint_2": "Give both fractions the same denominator without changing their values. Take the second numerator from the first and retain the common denominator.",
+        "worked_solution": "Use common denominator 18. → 5/6 = 15/18, scaling numerator and denominator by 3. → 2/9 = 4/18, scaling numerator and denominator by 2. → 15/18 − 4/18 = 11/18."
+      },
+      "working": [
+        "Use common denominator 18.",
+        "5/6 = 15/18, scaling numerator and denominator by 3.",
+        "2/9 = 4/18, scaling numerator and denominator by 2.",
+        "15/18 − 4/18 = 11/18."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "both_denominators_subtract",
+          "a": 5,
+          "b": 6,
+          "c": 2,
+          "d": 9,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "3/-3": "Subtracting the original numerator and denominator pairs does not create equal-sized parts.",
+        "3/18": "The denominators changed without the numerators. Each numerator must use its own denominator scale factor.",
+        "-11/18": "The subtraction order has been reversed. Take the second amount from the first, in the order shown.",
+        "19/18": "Those numerators have been added. This question takes the second amount away.",
+        "13/18": "The second fraction still needs its numerator scaled to preserve its value.",
+        "1/18": "The first fraction still needs its numerator scaled to preserve its value."
+      }
+    },
+    {
+      "id": "AF-09-P04",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "Work out 7/12 − 1/8. Give an exact fraction.",
+      "target": "Rename both fractions and subtract in the original order",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "show_authored_label": true,
+        "input_label": "Exact difference"
+      },
+      "answer": {
+        "value": "11/24"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Removing the second amount leaves 11 parts out of 24.",
+        "correct_after_support": "Correct. Removing the second amount leaves 11 parts out of 24.",
+        "on_correct_math": "Use common denominator 24. → 7/12 = 14/24, scaling numerator and denominator by 2. → 1/8 = 3/24, scaling numerator and denominator by 3. → 14/24 − 3/24 = 11/24.",
+        "on_incorrect_attempt_1": "Check both equivalent fractions. With denominator 24, use a factor of 2 for the first and 3 for the second.",
+        "on_incorrect_attempt_2": "Follow the two conversion lines, then take the second numerator from the first. Keep the common denominator and submit the corrected difference.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion and subtraction working after the final set.",
+        "worked_explanation": "Use common denominator 24. → 7/12 = 14/24, scaling numerator and denominator by 2. → 1/8 = 3/24, scaling numerator and denominator by 3. → 14/24 − 3/24 = 11/24."
+      },
+      "mathematical_support": {
+        "hint_1": "Check both equivalent fractions. With denominator 24, use a factor of 2 for the first and 3 for the second.",
+        "hint_2": "Give both fractions the same denominator without changing their values. Take the second numerator from the first and retain the common denominator.",
+        "worked_solution": "Use common denominator 24. → 7/12 = 14/24, scaling numerator and denominator by 2. → 1/8 = 3/24, scaling numerator and denominator by 3. → 14/24 − 3/24 = 11/24."
+      },
+      "working": [
+        "Use common denominator 24.",
+        "7/12 = 14/24, scaling numerator and denominator by 2.",
+        "1/8 = 3/24, scaling numerator and denominator by 3.",
+        "14/24 − 3/24 = 11/24."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "both_denominators_subtract",
+          "a": 7,
+          "b": 12,
+          "c": 1,
+          "d": 8,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "6/4": "Subtracting the original numerator and denominator pairs does not create equal-sized parts.",
+        "6/24": "The denominators changed without the numerators. Each numerator must use its own denominator scale factor.",
+        "-11/24": "The subtraction order has been reversed. Take the second amount from the first, in the order shown.",
+        "17/24": "Those numerators have been added. This question takes the second amount away.",
+        "13/24": "The second fraction still needs its numerator scaled to preserve its value.",
+        "4/24": "The first fraction still needs its numerator scaled to preserve its value."
+      }
+    },
+    {
+      "id": "AF-09-P05",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "Work out 4/5 − 1/3. Give an exact fraction.",
+      "target": "Rename both fractions and subtract in the original order",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "show_authored_label": true,
+        "input_label": "Exact difference"
+      },
+      "answer": {
+        "value": "7/15"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Removing the second amount leaves 7 parts out of 15.",
+        "correct_after_support": "Correct. Removing the second amount leaves 7 parts out of 15.",
+        "on_correct_math": "Use common denominator 15. → 4/5 = 12/15, scaling numerator and denominator by 3. → 1/3 = 5/15, scaling numerator and denominator by 5. → 12/15 − 5/15 = 7/15.",
+        "on_incorrect_attempt_1": "Check both equivalent fractions. With denominator 15, use a factor of 3 for the first and 5 for the second.",
+        "on_incorrect_attempt_2": "Follow the two conversion lines, then take the second numerator from the first. Keep the common denominator and submit the corrected difference.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion and subtraction working after the final set.",
+        "worked_explanation": "Use common denominator 15. → 4/5 = 12/15, scaling numerator and denominator by 3. → 1/3 = 5/15, scaling numerator and denominator by 5. → 12/15 − 5/15 = 7/15."
+      },
+      "mathematical_support": {
+        "hint_1": "Check both equivalent fractions. With denominator 15, use a factor of 3 for the first and 5 for the second.",
+        "hint_2": "Give both fractions the same denominator without changing their values. Take the second numerator from the first and retain the common denominator.",
+        "worked_solution": "Use common denominator 15. → 4/5 = 12/15, scaling numerator and denominator by 3. → 1/3 = 5/15, scaling numerator and denominator by 5. → 12/15 − 5/15 = 7/15."
+      },
+      "working": [
+        "Use common denominator 15.",
+        "4/5 = 12/15, scaling numerator and denominator by 3.",
+        "1/3 = 5/15, scaling numerator and denominator by 5.",
+        "12/15 − 5/15 = 7/15."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "both_denominators_subtract",
+          "a": 4,
+          "b": 5,
+          "c": 1,
+          "d": 3,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "3/2": "Subtracting the original numerator and denominator pairs does not create equal-sized parts.",
+        "3/15": "The denominators changed without the numerators. Each numerator must use its own denominator scale factor.",
+        "-7/15": "The subtraction order has been reversed. Take the second amount from the first, in the order shown.",
+        "17/15": "Those numerators have been added. This question takes the second amount away.",
+        "11/15": "The second fraction still needs its numerator scaled to preserve its value.",
+        "-1/15": "The first fraction still needs its numerator scaled to preserve its value."
+      }
+    },
+    {
+      "id": "AF-09-P06",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "For 3/4 − 2/5, which answer is correct?",
+      "target": "Rename both fractions and subtract in the original order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "1/1",
+          "7/20",
+          "1/20",
+          "5/9"
+        ],
+        "math_layout": "signed_compound_fraction"
+      },
+      "answer": {
+        "value": "7/20"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Subtracting eight twentieths from fifteen twentieths leaves seven twentieths.",
+        "correct_after_support": "Correct. Subtracting eight twentieths from fifteen twentieths leaves seven twentieths.",
+        "on_correct_math": "Use common denominator 20. → 3/4 = 15/20. → 2/5 = 8/20. → 15/20 − 8/20 = 7/20.",
+        "on_incorrect_attempt_1": "Both numerators must be renamed in twentieths before subtraction.",
+        "on_incorrect_attempt_2": "Three quarters is fifteen twentieths and two fifths is eight twentieths. Seven twentieths remains.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion and subtraction working after the final set.",
+        "worked_explanation": "Use common denominator 20. → 3/4 = 15/20. → 2/5 = 8/20. → 15/20 − 8/20 = 7/20."
+      },
+      "mathematical_support": {
+        "hint_1": "Both numerators must be renamed in twentieths before subtraction.",
+        "hint_2": "Give both fractions the same denominator without changing their values. Take the second numerator from the first and retain the common denominator.",
+        "worked_solution": "Use common denominator 20. → 3/4 = 15/20. → 2/5 = 8/20. → 15/20 − 8/20 = 7/20."
+      },
+      "working": [
+        "Use common denominator 20.",
+        "3/4 = 15/20.",
+        "2/5 = 8/20.",
+        "15/20 − 8/20 = 7/20."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "both_denominators_subtract",
+          "a": 3,
+          "b": 4,
+          "c": 2,
+          "d": 5,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "1/1": "A difference between these proper fractions is less than one. Recheck both conversions.",
+        "1/20": "The denominator has changed, but the original numerators were used. Scale each numerator first.",
+        "5/9": "That adds the original numerator and denominator pairs. This is a subtraction of matching-sized parts."
+      }
+    },
+    {
+      "id": "AF-09-X01",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "practice",
+      "prompt": "A piece of ribbon is 5/6 metre long. A length of 1/4 metre is cut from it. What length of ribbon remains?",
+      "target": "Rename both fractions and subtract in the original order",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "show_authored_label": true,
+        "input_label": "Exact amount",
+        "suffix": "m"
+      },
+      "answer": {
+        "value": "7/12"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Seven twelfths of a metre of ribbon remains.",
+        "correct_after_support": "Correct. Seven twelfths of a metre of ribbon remains.",
+        "on_correct_math": "Use common denominator 12. → 5/6 = 10/12, scaling numerator and denominator by 2. → 1/4 = 3/12, scaling numerator and denominator by 3. → 10/12 − 3/12 = 7/12.",
+        "on_incorrect_attempt_1": "Check both equivalent fractions. With denominator 12, use a factor of 2 for the first and 3 for the second.",
+        "on_incorrect_attempt_2": "Follow the two conversion lines, then take the second numerator from the first. Keep the common denominator and submit the corrected difference.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion and subtraction working after the final set.",
+        "worked_explanation": "Use common denominator 12. → 5/6 = 10/12, scaling numerator and denominator by 2. → 1/4 = 3/12, scaling numerator and denominator by 3. → 10/12 − 3/12 = 7/12."
+      },
+      "mathematical_support": {
+        "hint_1": "Check both equivalent fractions. With denominator 12, use a factor of 2 for the first and 3 for the second.",
+        "hint_2": "Give both fractions the same denominator without changing their values. Take the second numerator from the first and retain the common denominator.",
+        "worked_solution": "Use common denominator 12. → 5/6 = 10/12, scaling numerator and denominator by 2. → 1/4 = 3/12, scaling numerator and denominator by 3. → 10/12 − 3/12 = 7/12."
+      },
+      "working": [
+        "Use common denominator 12.",
+        "5/6 = 10/12, scaling numerator and denominator by 2.",
+        "1/4 = 3/12, scaling numerator and denominator by 3.",
+        "10/12 − 3/12 = 7/12."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "both_denominators_subtract",
+          "a": 5,
+          "b": 6,
+          "c": 1,
+          "d": 4,
+          "object": "ribbon",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "4/2": "Subtracting the original numerator and denominator pairs does not create equal-sized parts.",
+        "4/12": "The denominators changed without the numerators. Each numerator must use its own denominator scale factor.",
+        "-7/12": "The subtraction order has been reversed. Take the second amount from the first, in the order shown.",
+        "13/12": "Those numerators have been added. This question takes the second amount away.",
+        "9/12": "The second fraction still needs its numerator scaled to preserve its value.",
+        "2/12": "The first fraction still needs its numerator scaled to preserve its value."
+      }
+    },
+    {
+      "id": "AF-09-X02",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "practice",
+      "prompt": "A water tank is 7/10 full. Water equal to 1/4 of the tank’s capacity is removed. What fraction of the tank remains full?",
+      "target": "Rename both fractions and subtract in the original order",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "show_authored_label": true,
+        "input_label": "Exact amount"
+      },
+      "answer": {
+        "value": "9/20"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The remaining water fills nine twentieths of the tank’s capacity.",
+        "correct_after_support": "Correct. The remaining water fills nine twentieths of the tank’s capacity.",
+        "on_correct_math": "Use common denominator 20. → 7/10 = 14/20, scaling numerator and denominator by 2. → 1/4 = 5/20, scaling numerator and denominator by 5. → 14/20 − 5/20 = 9/20.",
+        "on_incorrect_attempt_1": "Check both equivalent fractions. With denominator 20, use a factor of 2 for the first and 5 for the second.",
+        "on_incorrect_attempt_2": "Follow the two conversion lines, then take the second numerator from the first. Keep the common denominator and submit the corrected difference.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion and subtraction working after the final set.",
+        "worked_explanation": "Use common denominator 20. → 7/10 = 14/20, scaling numerator and denominator by 2. → 1/4 = 5/20, scaling numerator and denominator by 5. → 14/20 − 5/20 = 9/20."
+      },
+      "mathematical_support": {
+        "hint_1": "Check both equivalent fractions. With denominator 20, use a factor of 2 for the first and 5 for the second.",
+        "hint_2": "Give both fractions the same denominator without changing their values. Take the second numerator from the first and retain the common denominator.",
+        "worked_solution": "Use common denominator 20. → 7/10 = 14/20, scaling numerator and denominator by 2. → 1/4 = 5/20, scaling numerator and denominator by 5. → 14/20 − 5/20 = 9/20."
+      },
+      "working": [
+        "Use common denominator 20.",
+        "7/10 = 14/20, scaling numerator and denominator by 2.",
+        "1/4 = 5/20, scaling numerator and denominator by 5.",
+        "14/20 − 5/20 = 9/20."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "both_denominators_subtract",
+          "a": 7,
+          "b": 10,
+          "c": 1,
+          "d": 4,
+          "object": "tank",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "6/6": "Subtracting the original numerator and denominator pairs does not create equal-sized parts.",
+        "6/20": "The denominators changed without the numerators. Each numerator must use its own denominator scale factor.",
+        "-9/20": "The subtraction order has been reversed. Take the second amount from the first, in the order shown.",
+        "19/20": "Those numerators have been added. This question takes the second amount away.",
+        "13/20": "The second fraction still needs its numerator scaled to preserve its value.",
+        "2/20": "The first fraction still needs its numerator scaled to preserve its value."
+      }
+    },
+    {
+      "id": "AF-09-X03",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "practice",
+      "prompt": "A walking route is 5/8 km long. Hassan has already walked 1/6 km of the route. How far does he still have to walk?",
+      "target": "Rename both fractions and subtract in the original order",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "show_authored_label": true,
+        "input_label": "Exact amount",
+        "suffix": "km"
+      },
+      "answer": {
+        "value": "11/24"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Hassan still has eleven twenty-fourths of a kilometre to walk.",
+        "correct_after_support": "Correct. Hassan still has eleven twenty-fourths of a kilometre to walk.",
+        "on_correct_math": "Use common denominator 24. → 5/8 = 15/24, scaling numerator and denominator by 3. → 1/6 = 4/24, scaling numerator and denominator by 4. → 15/24 − 4/24 = 11/24.",
+        "on_incorrect_attempt_1": "Check both equivalent fractions. With denominator 24, use a factor of 3 for the first and 4 for the second.",
+        "on_incorrect_attempt_2": "Follow the two conversion lines, then take the second numerator from the first. Keep the common denominator and submit the corrected difference.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion and subtraction working after the final set.",
+        "worked_explanation": "Use common denominator 24. → 5/8 = 15/24, scaling numerator and denominator by 3. → 1/6 = 4/24, scaling numerator and denominator by 4. → 15/24 − 4/24 = 11/24."
+      },
+      "mathematical_support": {
+        "hint_1": "Check both equivalent fractions. With denominator 24, use a factor of 3 for the first and 4 for the second.",
+        "hint_2": "Give both fractions the same denominator without changing their values. Take the second numerator from the first and retain the common denominator.",
+        "worked_solution": "Use common denominator 24. → 5/8 = 15/24, scaling numerator and denominator by 3. → 1/6 = 4/24, scaling numerator and denominator by 4. → 15/24 − 4/24 = 11/24."
+      },
+      "working": [
+        "Use common denominator 24.",
+        "5/8 = 15/24, scaling numerator and denominator by 3.",
+        "1/6 = 4/24, scaling numerator and denominator by 4.",
+        "15/24 − 4/24 = 11/24."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "both_denominators_subtract",
+          "a": 5,
+          "b": 8,
+          "c": 1,
+          "d": 6,
+          "object": "walk",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "4/2": "Subtracting the original numerator and denominator pairs does not create equal-sized parts.",
+        "4/24": "The denominators changed without the numerators. Each numerator must use its own denominator scale factor.",
+        "-11/24": "The subtraction order has been reversed. Take the second amount from the first, in the order shown.",
+        "19/24": "Those numerators have been added. This question takes the second amount away.",
+        "14/24": "The second fraction still needs its numerator scaled to preserve its value.",
+        "1/24": "The first fraction still needs its numerator scaled to preserve its value."
+      }
+    },
+    {
+      "id": "AF-09-X04",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "practice",
+      "prompt": "A container holds 4/5 litre of paint. A decorator uses 1/3 litre. Which calculation finds the volume of paint remaining?",
+      "target": "Rename both fractions and subtract in the original order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "4/5 + 1/3",
+          "4/5 − 1/3",
+          "4/5 × 1/3",
+          "4/5 ÷ 1/3"
+        ],
+        "math_layout": "signed_compound_fraction"
+      },
+      "answer": {
+        "value": "4/5 − 1/3"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The used paint is taken away from the starting volume.",
+        "correct_after_support": "Correct. The used paint is taken away from the starting volume.",
+        "on_correct_math": "The used paint is taken from the starting volume. → Finding the volume left uses subtraction. → Calculate 4/5 − 1/3.",
+        "on_incorrect_attempt_1": "Consider what happens to the starting volume when the decorator uses some.",
+        "on_incorrect_attempt_2": "Take the used volume away from the starting volume. Select subtraction in that order.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion and subtraction working after the final set.",
+        "worked_explanation": "The used paint is taken from the starting volume. → Finding the volume left uses subtraction. → Calculate 4/5 − 1/3."
+      },
+      "mathematical_support": {
+        "hint_1": "Consider what happens to the starting volume when the decorator uses some.",
+        "hint_2": "Give both fractions the same denominator without changing their values. Take the second numerator from the first and retain the common denominator.",
+        "worked_solution": "The used paint is taken from the starting volume. → Finding the volume left uses subtraction. → Calculate 4/5 − 1/3."
+      },
+      "working": [
+        "The used paint is taken from the starting volume.",
+        "Finding the volume left uses subtraction.",
+        "Calculate 4/5 − 1/3."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "both_denominators_subtract",
+          "a": 4,
+          "b": 5,
+          "c": 1,
+          "d": 3,
+          "object": "paint",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "4/5 + 1/3": "No extra paint is added. The used volume must be taken from the starting volume.",
+        "4/5 × 1/3": "One third is a measured litre amount, not a fraction of the paint already in the container.",
+        "4/5 ÷ 1/3": "The question asks for the paint left, not how many equal-sized portions fit."
+      }
+    },
+    {
+      "id": "AF-09-E01",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "Work out 7/8 − 1/6. Give an exact fraction. Show both equivalent fractions with the same denominator, then enter the difference.",
+      "target": "Rename both fractions and subtract in the original order",
+      "response": {
+        "type": "conversion_product",
+        "conversion_kind": "common_denominator",
+        "common_denominator_operation": "subtract",
+        "factors": [
+          {
+            "whole": 0,
+            "n": 7,
+            "d": 8
+          },
+          {
+            "whole": 0,
+            "n": 1,
+            "d": 6
+          }
+        ],
+        "final_response": {
+          "type": "fraction",
+          "accept_equivalent_notation": true,
+          "show_authored_label": true,
+          "input_label": "Exact difference"
+        }
+      },
+      "answer": {
+        "value": {
+          "conversions": [
+            {
+              "n": "21",
+              "d": "24"
+            },
+            {
+              "n": "4",
+              "d": "24"
+            }
+          ],
+          "result": "17/24"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Removing the second amount leaves 17 parts out of 24.",
+        "correct_after_support": "Correct. Removing the second amount leaves 17 parts out of 24.",
+        "on_correct_math": "Use common denominator 24. → 7/8 = 21/24, scaling numerator and denominator by 3. → 1/6 = 4/24, scaling numerator and denominator by 4. → 21/24 − 4/24 = 17/24.",
+        "on_incorrect_attempt_1": "Check both equivalent fractions. With denominator 24, use a factor of 3 for the first and 4 for the second.",
+        "on_incorrect_attempt_2": "Follow the two conversion lines, then take the second numerator from the first. Keep the common denominator and submit the corrected difference.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion and subtraction working after the final set.",
+        "worked_explanation": "Use common denominator 24. → 7/8 = 21/24, scaling numerator and denominator by 3. → 1/6 = 4/24, scaling numerator and denominator by 4. → 21/24 − 4/24 = 17/24."
+      },
+      "mathematical_support": {
+        "hint_1": "Check both equivalent fractions. With denominator 24, use a factor of 3 for the first and 4 for the second.",
+        "hint_2": "Give both fractions the same denominator without changing their values. Take the second numerator from the first and retain the common denominator.",
+        "worked_solution": "Use common denominator 24. → 7/8 = 21/24, scaling numerator and denominator by 3. → 1/6 = 4/24, scaling numerator and denominator by 4. → 21/24 − 4/24 = 17/24."
+      },
+      "working": [
+        "Use common denominator 24.",
+        "7/8 = 21/24, scaling numerator and denominator by 3.",
+        "1/6 = 4/24, scaling numerator and denominator by 4.",
+        "21/24 − 4/24 = 17/24."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "both_denominators_subtract",
+          "a": 7,
+          "b": 8,
+          "c": 1,
+          "d": 6,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "missing_conversion": "Both equivalent fractions are needed as evidence.",
+        "incorrect_conversion": "At least one conversion has changed the fraction’s value. Compare each pair of scale factors.",
+        "denominators_differ": "Both values are preserved, but the entered denominators do not match.",
+        "reversed_order": "The conversions are valid, but the subtraction has been reversed. Take the second numerator from the first.",
+        "incorrect_product": "The conversions are valid. Recheck the subtraction in the original order and keep the common denominator."
+      }
+    },
+    {
+      "id": "AF-09-E02",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "Work out 5/6 − 2/5. Give an exact fraction. Show both equivalent fractions with the same denominator, then enter the difference.",
+      "target": "Rename both fractions and subtract in the original order",
+      "response": {
+        "type": "conversion_product",
+        "conversion_kind": "common_denominator",
+        "common_denominator_operation": "subtract",
+        "factors": [
+          {
+            "whole": 0,
+            "n": 5,
+            "d": 6
+          },
+          {
+            "whole": 0,
+            "n": 2,
+            "d": 5
+          }
+        ],
+        "final_response": {
+          "type": "fraction",
+          "accept_equivalent_notation": true,
+          "show_authored_label": true,
+          "input_label": "Exact difference"
+        }
+      },
+      "answer": {
+        "value": {
+          "conversions": [
+            {
+              "n": "25",
+              "d": "30"
+            },
+            {
+              "n": "12",
+              "d": "30"
+            }
+          ],
+          "result": "13/30"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Removing the second amount leaves 13 parts out of 30.",
+        "correct_after_support": "Correct. Removing the second amount leaves 13 parts out of 30.",
+        "on_correct_math": "Use common denominator 30. → 5/6 = 25/30, scaling numerator and denominator by 5. → 2/5 = 12/30, scaling numerator and denominator by 6. → 25/30 − 12/30 = 13/30.",
+        "on_incorrect_attempt_1": "Check both equivalent fractions. With denominator 30, use a factor of 5 for the first and 6 for the second.",
+        "on_incorrect_attempt_2": "Follow the two conversion lines, then take the second numerator from the first. Keep the common denominator and submit the corrected difference.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion and subtraction working after the final set.",
+        "worked_explanation": "Use common denominator 30. → 5/6 = 25/30, scaling numerator and denominator by 5. → 2/5 = 12/30, scaling numerator and denominator by 6. → 25/30 − 12/30 = 13/30."
+      },
+      "mathematical_support": {
+        "hint_1": "Check both equivalent fractions. With denominator 30, use a factor of 5 for the first and 6 for the second.",
+        "hint_2": "Give both fractions the same denominator without changing their values. Take the second numerator from the first and retain the common denominator.",
+        "worked_solution": "Use common denominator 30. → 5/6 = 25/30, scaling numerator and denominator by 5. → 2/5 = 12/30, scaling numerator and denominator by 6. → 25/30 − 12/30 = 13/30."
+      },
+      "working": [
+        "Use common denominator 30.",
+        "5/6 = 25/30, scaling numerator and denominator by 5.",
+        "2/5 = 12/30, scaling numerator and denominator by 6.",
+        "25/30 − 12/30 = 13/30."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "both_denominators_subtract",
+          "a": 5,
+          "b": 6,
+          "c": 2,
+          "d": 5,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "missing_conversion": "Both equivalent fractions are needed as evidence.",
+        "incorrect_conversion": "At least one conversion has changed the fraction’s value. Compare each pair of scale factors.",
+        "denominators_differ": "Both values are preserved, but the entered denominators do not match.",
+        "reversed_order": "The conversions are valid, but the subtraction has been reversed. Take the second numerator from the first.",
+        "incorrect_product": "The conversions are valid. Recheck the subtraction in the original order and keep the common denominator."
+      }
+    },
+    {
+      "id": "AF-09-E03",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "For 3/4 − 2/5, which method is correct?",
+      "target": "Rename both fractions and subtract in the original order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "3/4 − 2/5 = 15/20 − 8/20 = 7/20",
+          "3/4 − 2/5 = 1/−1",
+          "3/4 − 2/5 = 3/20 − 2/20 = 1/20",
+          "3/4 − 2/5 = 15/20 − 8/20 = 7/0"
+        ],
+        "math_layout": "signed_compound_fraction"
+      },
+      "answer": {
+        "value": "3/4 − 2/5 = 15/20 − 8/20 = 7/20"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Recorded. Both conversions are valid and the subtraction order is preserved.",
+        "correct_after_support": "Recorded. Both conversions are valid and the subtraction order is preserved.",
+        "on_correct_math": "Use common denominator 20. → 3/4 = 15/20. → 2/5 = 8/20. → 15/20 − 8/20 = 7/20.",
+        "on_incorrect_attempt_1": "No hints are available in the final check.",
+        "on_incorrect_attempt_2": "The response is locked for this final check.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion and subtraction working after the final set.",
+        "worked_explanation": "Use common denominator 20. → 3/4 = 15/20. → 2/5 = 8/20. → 15/20 − 8/20 = 7/20."
+      },
+      "mathematical_support": {
+        "hint_1": "No hints are available in the final check.",
+        "hint_2": "Give both fractions the same denominator without changing their values. Take the second numerator from the first and retain the common denominator.",
+        "worked_solution": "Use common denominator 20. → 3/4 = 15/20. → 2/5 = 8/20. → 15/20 − 8/20 = 7/20."
+      },
+      "working": [
+        "Use common denominator 20.",
+        "3/4 = 15/20.",
+        "2/5 = 8/20.",
+        "15/20 − 8/20 = 7/20."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "both_denominators_subtract",
+          "a": 3,
+          "b": 4,
+          "c": 2,
+          "d": 5,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    }
+  ],
+  "canonical_lesson": {
+    "version": "AF09-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

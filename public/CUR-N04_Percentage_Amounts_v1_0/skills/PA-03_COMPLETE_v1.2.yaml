@@ -1,0 +1,463 @@
+schema_version: '1.2'
+spec_intent:
+  source_of_truth: true
+  implementation_status: production_batch_1
+  source_material:
+    title: PA 03 — Find 1% of an Amount
+    path: authoring-source-redacted.pdf
+    authoritative_pages: 1-19
+  authored_scope: Teach 1% as one of one hundred equal shares and calculate it by dividing the whole by 100 with correct place value, zero placeholders and units.
+  excluded_from_active_route: [Diagnostic questions, Delayed retrieval questions, Scaling 1% to another percentage]
+
+identity:
+  id: PA-03
+  slug: find-one-percent-of-an-amount
+  title: Find 1% of an Amount
+  strand: Number
+  cluster: Percentage Amounts
+  tier: GCSE Foundation
+  status: production_batch_1
+  estimated_minutes: { min: 17, max: 23 }
+
+curriculum:
+  learning_objective: Find 1% of a stated amount by recognising that 1% = 1/100 and dividing the whole by 100 with correct place value and units.
+  success_criteria:
+    - Identify the complete amount representing 100%.
+    - Explain that one hundred equal 1% shares make the whole.
+    - Divide the whole by 100 using two place-value changes and required zero placeholders.
+    - Preserve contextual units and judge whether the result is reasonable.
+  boundaries:
+    includes: [Exactly 1% of positive whole-number amounts, Whole-number results, Results with up to two decimal places, Counts and simple measured quantities]
+    excludes: [Finding 5% or other percentages, Scaling the 1% result, Money-specific conventions, Percentage change and reverse percentages]
+
+dependencies:
+  required_skill_refs: [PA-01, PA-02]
+  entry_assumptions: [The learner identifies the whole, The learner distinguishes ten equal shares from one hundred equal shares]
+  downstream_rule: Later unitary percentage methods may depend on PA-03; this lesson finds exactly 1% only.
+
+engine_capability_requirements:
+  input_types: [single_choice, decimal]
+  visual_primitives: [percentage_strip, caption_layer, progress_indicator]
+  animation_actions: [fade_in, highlight, reveal_equation, crossfade_phase]
+  audio_capabilities: [browser_speech, caption_sync, pause_for_input, cancel_on_navigation]
+  state_capabilities: [attempt_count, step_resume, exit_score, confirmation_branch]
+
+experience_contract:
+  authored_feedback_only: true
+  ordered_phases: [teaching, guided, faded, independent_transfer, practice, exit, completion]
+  navigation: { default: linear_forward, refresh_resume: Resume at the latest committed step., start_again: Reset only this lesson attempt and preserve historical completion records. }
+  interaction_rules: [Never auto-submit or auto-fill an answer., Keep input available while Ryan speaks., Reveal zero placement and the result only after the appropriate feedback stage.]
+
+voice_and_script:
+  performer_name: Ryan
+  dialogue_profile_ref: RYAN_DIALOGUE_PROFILE_v1.yaml
+  script_ownership: All mathematical narration and feedback is authored in this specification.
+  caption_policy: Every spoken line is captioned verbatim; empty narration leaves no visible caption container.
+  narration_playback: { mode: browser_speech_ryan, require_ryan_voice: true, browser_voice_name: Microsoft Ryan Online (Natural) - English (United Kingdom), opening_delay_ms: 0 }
+  production_audio_note: Provider audio and word boundaries require separate owner permission.
+
+visual_language:
+  primary_visual_contract: { primitive: percentage_strip, rule: Show one selected cell from a ten-by-ten grid and connect it to one hundredth of the same whole. }
+  scene_rules: [Use a 10 by 10 grid when percentage meaning is taught., Explain two place-value changes explicitly., Do not reveal a scored result before submission.]
+  reduced_motion: Show the same complete hundred-grid and method state immediately.
+
+diagnostic: { enabled: false, question_refs: [], reason: Diagnostic is outside the current implementation scope. }
+
+concept_model:
+  core_idea: One hundred equal 1% shares make the complete whole, so one selected share is one hundredth of the whole.
+  invariant: The whole remains fixed while every digit becomes one hundredth as valuable.
+  mathematical_rule: 1% of A = A ÷ 100.
+  must_notice: [1% = 1/100., Division by 100 changes every digit by two place-value positions., Answers below one need a leading zero., The contextual unit is unchanged.]
+  common_confusions: [Dividing by 10 instead of 100., Multiplying by 100., Omitting a zero placeholder., Dropping or changing the unit.]
+
+lesson:
+  teaching_steps:
+    - id: T01
+      stage: teaching
+      purpose: Establish one hundred equal shares.
+      estimated_seconds: 35
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: One selected cell out of one hundred
+        objects: [A ten-by-ten grid representing the complete whole.]
+        initial_state: Show all one hundred equal cells and select one.
+        model: { heading: '100% split into 100 equal shares', percent: 1, wholeAmount: 100, unit: equal cells, layout: hundred_grid, selectedGroups: 1, showRoles: true, showResult: false }
+      narration: { script: Split the whole into ten rows, then split every row into ten equal cells. That makes one hundred equal shares. One selected cell is one percent. }
+      animation_timeline: [{ id: A01, trigger: narration_sync, action: fade_in, target: percentage_strip, duration_ms: 750 }]
+      learner_interaction: { question_ref: null }
+      next_step: T02
+
+    - id: T02
+      stage: teaching
+      purpose: Connect one hundredth to division by 100.
+      estimated_seconds: 35
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: One percent means one hundredth
+        objects: [One selected cell from the hundred-grid.]
+        initial_state: Reveal the fraction and division relationship.
+        model: { heading: '1% = one hundredth', percent: 1, wholeAmount: 100, unit: equal cells, layout: hundred_grid, selectedGroups: 1, partAmount: 1, showRoles: true, showResult: true, showMethod: true, methodSteps: ['1% = 1/100', 'Find one share: whole ÷ 100'] }
+      narration: { script: One percent is one share out of one hundred. To find that share from an amount, divide the whole by one hundred. }
+      animation_timeline: [{ id: A02, trigger: narration_sync, action: reveal_equation, target: percentage_strip, duration_ms: 800 }]
+      learner_interaction: { question_ref: null }
+      next_step: T03
+
+    - id: T03
+      stage: teaching
+      purpose: Explain the two-place value change.
+      estimated_seconds: 50
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: Every digit becomes one hundredth as valuable
+        objects: [The place-value change from 212 to 2.12.]
+        initial_state: Reveal hundreds to units, tens to tenths and units to hundredths.
+        model: { heading: 'Find 1% of 212', percent: 1, wholeAmount: 212, partAmount: 2.12, layout: hundred_grid, selectedGroups: 1, showRoles: true, showResult: true, showMethod: true, methodSteps: ['2 hundreds → 2 units', '1 ten → 1 tenth', '2 units → 2 hundredths', '212 ÷ 100 = 2.12'] }
+      narration: { script: Dividing by one hundred changes every digit by two place-value positions. Two hundreds become two units, one ten becomes one tenth, and two units become two hundredths. }
+      animation_timeline: [{ id: A03, trigger: narration_sync, action: highlight, target: percentage_strip, duration_ms: 900 }]
+      learner_interaction: { question_ref: null }
+      next_step: T04
+
+    - id: T04
+      stage: teaching
+      purpose: Model the method on 630.
+      estimated_seconds: 40
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: Identify, divide, place the decimal
+        objects: [A worked example finding 1% of 630.]
+        initial_state: Reveal only the current step and final result in sequence.
+        model: { heading: 'Find 1% of 630', percent: 1, wholeAmount: 630, partAmount: 6.3, layout: hundred_grid, selectedGroups: 1, showRoles: true, showResult: true, showMethod: true, methodSteps: ['Whole = 630', '1% = 1/100', '630 ÷ 100 = 6.3'] }
+      narration: { script: The whole is six hundred and thirty. One percent is one hundredth, so divide by one hundred. The required part is six point three. }
+      animation_timeline: [{ id: A04, trigger: narration_sync, action: reveal_equation, target: percentage_strip, duration_ms: 850 }]
+      learner_interaction: { question_ref: null }
+      next_step: T05
+
+    - id: T05
+      stage: teaching
+      purpose: Check the hundred-share meaning.
+      estimated_seconds: 70
+      scene: { layout: single_central_teaching_canvas, display_title: Why divide by one hundred?, objects: [A hundred-grid with one selected cell.], initial_state: Keep the explanation hidden before submission. }
+      narration: { script: Choose the statement that connects one percent to the hundred equal shares. }
+      animation_timeline: [{ id: A05, trigger: narration_sync, action: highlight, target: percentage_strip, duration_ms: 650 }]
+      learner_interaction: { question_ref: PA-03-C01, auto_focus: true }
+      next_step: T06
+
+    - id: T06
+      stage: teaching
+      purpose: Guide a two-decimal-place result.
+      estimated_seconds: 45
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: Use both decimal places
+        objects: [A guided example finding 1% of 475.]
+        initial_state: Reveal the division and place-value result.
+        model: { heading: 'Find 1% of 475', percent: 1, wholeAmount: 475, partAmount: 4.75, layout: hundred_grid, selectedGroups: 1, showRoles: true, showResult: true, showMethod: true, methodSteps: ['475 ÷ 100', '4 units, 7 tenths, 5 hundredths', 'Answer = 4.75'] }
+      narration: { script: Divide four hundred and seventy-five by one hundred. The answer needs tenths and hundredths, giving four point seven five. }
+      animation_timeline: [{ id: A06, trigger: narration_sync, action: highlight, target: percentage_strip, duration_ms: 850 }]
+      learner_interaction: { question_ref: null }
+      next_step: T07
+
+    - id: T07
+      stage: teaching
+      purpose: Check operation selection.
+      estimated_seconds: 70
+      scene: { layout: single_central_teaching_canvas, display_title: Select the hundredth operation, objects: [One selected cell from a whole of 700.], initial_state: Keep the calculation hidden before submission. }
+      narration: { script: Choose the operation that selects one of one hundred equal shares. }
+      animation_timeline: [{ id: A07, trigger: narration_sync, action: highlight, target: percentage_strip, duration_ms: 650 }]
+      learner_interaction: { question_ref: PA-03-C02, auto_focus: true }
+      next_step: T08
+
+    - id: T08
+      stage: teaching
+      purpose: Model a leading-zero result.
+      estimated_seconds: 45
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: Zero placeholders keep the value clear
+        objects: [A worked example finding 1% of 7.]
+        initial_state: Show zero units, zero tenths and seven hundredths.
+        model: { heading: 'Find 1% of 7', percent: 1, wholeAmount: 7, partAmount: 0.07, layout: hundred_grid, selectedGroups: 1, showRoles: true, showResult: true, showMethod: true, methodSteps: ['7 ÷ 100', '0 units', '0 tenths', '7 hundredths = 0.07'] }
+      narration: { script: Seven divided by one hundred is seven hundredths. The two zeros hold the empty units and tenths places, so the number is zero point zero seven. }
+      animation_timeline: [{ id: A08, trigger: narration_sync, action: highlight, target: percentage_strip, duration_ms: 900 }]
+      learner_interaction: { question_ref: null }
+      next_step: T09
+
+    - id: T09
+      stage: teaching
+      purpose: Check a leading-zero result independently.
+      estimated_seconds: 75
+      scene: { layout: single_central_teaching_canvas, display_title: Place every digit accurately, objects: [One percent of 64 with no result visible.], initial_state: Show the hundred-grid only. }
+      narration: { script: Find one percent of sixty-four. Enter the complete decimal, including its leading zero. }
+      animation_timeline: [{ id: A09, trigger: narration_sync, action: highlight, target: percentage_strip, duration_ms: 650 }]
+      learner_interaction: { question_ref: PA-03-C03, auto_focus: true }
+      next_step: T10
+
+    - id: T10
+      stage: teaching
+      purpose: Hand control to the learner.
+      estimated_seconds: 25
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: One whole, one hundredth, same unit
+        objects: [A compact unsolved hundred-grid.]
+        initial_state: Keep only the one selected cell as a cue.
+        model: { heading: 'Your turn', percent: 1, wholeAmount: 900, layout: hundred_grid, selectedGroups: 1, showRoles: false, showResult: false }
+      narration: { script: Now use the structure yourself. Identify the whole, divide by one hundred, and check every place-value position. }
+      animation_timeline: [{ id: A10, trigger: narration_sync, action: crossfade_phase, target: percentage_strip, duration_ms: 700 }]
+      learner_interaction: { question_ref: null }
+      next_step: G01
+
+  transfer_steps:
+    G01: { stage: guided, question_ref: PA-03-G01, support_level: high, estimated_seconds: 80, pre_question_script: One selected cell is one of one hundred equal shares., visual_before_answer: Show the hundred-grid without the result., correct_next: F01, recovery_ref: PA-03-R01 }
+    F01: { stage: faded, question_ref: PA-03-F01, support_level: reduced, estimated_seconds: 85, pre_question_script: Check the leading zero and both decimal places., visual_before_answer: Show only the whole and one selected cell., correct_next: I01, recovery_ref: PA-03-R03 }
+    I01: { stage: independent_transfer, question_ref: PA-03-I01, support_level: none, estimated_seconds: 90, pre_question_script: Work independently and retain the measurement unit., visual_before_answer: No result or method is visible., correct_next: P01, recovery_ref: PA-03-R02 }
+
+  practice:
+    intro_script: Five questions now. Divide the correct whole by one hundred and keep every decimal place accurate.
+    question_order: [PA-03-P01, PA-03-P02, PA-03-P03, PA-03-P04, PA-03-P05]
+    question_count: 5
+    feedback_policy: First errors receive an authored clue; second errors reveal the method and a focused repair where configured.
+
+  exit:
+    intro_script: Final check. Two questions, one submission each, with no hints while you answer.
+    primary_question_refs: [PA-03-E01, PA-03-E02]
+    confirmation_question_refs: [PA-03-CFM01, PA-03-CFM02]
+    submission_policy: One submission per primary exit item; reveal the outcome only after both are complete.
+    mastery_logic: { 2_correct_of_2: SECURE, 1_correct_of_2: Ask one unused confirmation item; correct is SECURE and incorrect is NEEDS_WORK., 0_correct_of_2: NEEDS_WORK }
+    confirmation_selection: Use the first unseen confirmation item.
+
+completion:
+  secure: { title: Skill complete, ryan_script: 'You selected one hundredth of the correct whole and kept every decimal place accurate. One percent is ready for later methods.', state_write: SECURE, buttons: [Finish for today, Continue learning] }
+  needs_work: { title: One more pass will help, ryan_script: 'The hundred equal shares are in place. We will revisit the two place-value changes before moving on.', state_write: NEEDS_WORK, buttons: [Try this skill again, Finish for today] }
+
+question_bank:
+  - id: PA-03-C01
+    stage: teaching_checkpoint
+    target: Explain why finding 1% uses division by 100.
+    prompt: Why does finding 1% of an amount involve division by 100?
+    response: { type: single_choice, options: [Because 1% means one hundred times the whole., Because the whole is split into one hundred equal shares and one share is selected., Because every percentage calculation uses division by 100., Because two digits must always be removed.] }
+    answer: { value: Because the whole is split into one hundred equal shares and one share is selected. }
+    attempt_policy: &supported { policy: two_attempt_then_targeted_repair, max_attempts_before_resolution: 2, feedback_timing: immediate, submit_label: Check answer, allow_change_before_submit: true, lock_after_final_submit: true }
+    scripts:
+      on_correct_reaction: You connected one percent to one selected hundredth.
+      on_correct_math: One hundred equal 1% shares make the whole, so one share is found by dividing by 100.
+      on_incorrect_attempt_1: Count how many equal 1% cells make the complete hundred-grid.
+      on_incorrect_attempt_2: One percent selects one cell from one hundred equal cells.
+      worked_explanation: The whole is divided into one hundred equal shares. One share is 1/100, which is 1%.
+    mathematical_support: { hint_1: How many copies of 1% make 100%?, hint_2: One selected cell out of one hundred is one hundredth., worked_solution: '1% = 1/100, so divide the whole by 100.' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 1, wholeAmount: 100, layout: hundred_grid, selectedGroups: 1, partAmount: 1, showRoles: false, showResult: false, showMethod: false, methodSteps: ['1% = 1/100', '100 ÷ 100 = 1'], solutionLabel: '1% = one of one hundred equal shares' } }
+    recovery_item_ref: PA-03-R01
+
+  - id: PA-03-C02
+    stage: teaching_checkpoint
+    target: Select division by 100.
+    prompt: Which calculation finds 1% of 700?
+    response: { type: single_choice, options: ['700 ÷ 10', '700 ÷ 100', '700 × 100', '700 − 1'] }
+    answer: { value: '700 ÷ 100' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You selected the operation for one hundredth., on_correct_math: '700 ÷ 100 = 7.', on_incorrect_attempt_1: One percent is one hundredth, not one tenth., on_incorrect_attempt_2: Divide the whole by 100., worked_explanation: '1% = 1/100, so 700 ÷ 100 = 7.' }
+    mathematical_support: { hint_1: Use the denominator in 1/100., hint_2: The operation must make the positive whole much smaller., worked_solution: '700 ÷ 100 = 7.' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 1, wholeAmount: 700, partAmount: 7, layout: hundred_grid, selectedGroups: 1, methodSteps: ['700 ÷ 100 = 7'], solutionLabel: '1% of 700 = 7' } }
+    recovery_item_ref: PA-03-R01
+
+  - id: PA-03-C03
+    stage: teaching_checkpoint
+    target: Calculate a two-decimal-place result.
+    prompt: Find 1% of 64.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '0.64' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You placed both digits below one correctly., on_correct_math: '64 ÷ 100 = 0.64.', on_incorrect_attempt_1: Divide by one hundred and include the leading zero., on_incorrect_attempt_2: Sixty-four hundredths is 0.64., worked_explanation: '64 ÷ 100 = 0.64 because 6 tens become 6 tenths and 4 units become 4 hundredths.' }
+    mathematical_support: { hint_1: The result is less than one., hint_2: Write 64 hundredths as a decimal., worked_solution: '0.64' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 1, wholeAmount: 64, partAmount: 0.64, layout: hundred_grid, selectedGroups: 1, showMethod: false, methodSteps: ['64 ÷ 100 = 0.64'], solutionLabel: '1% of 64 = 0.64' } }
+    recovery_item_ref: PA-03-R03
+
+  - id: PA-03-G01
+    stage: guided
+    target: Find a whole-number one percent.
+    prompt: Find 1% of 900.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '9' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You selected one of one hundred shares., on_correct_math: '900 ÷ 100 = 9.', on_incorrect_attempt_1: Divide the whole by one hundred., on_incorrect_attempt_2: One hundredth of 900 is 9., worked_explanation: '1% of 900 = 900 ÷ 100 = 9.' }
+    mathematical_support: { hint_1: Use whole ÷ 100., hint_2: Check that the result is smaller than 10%., worked_solution: '9' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 1, wholeAmount: 900, partAmount: 9, layout: hundred_grid, selectedGroups: 1, methodSteps: ['900 ÷ 100 = 9'], solutionLabel: '1% of 900 = 9' } }
+    recovery_item_ref: PA-03-R01
+
+  - id: PA-03-F01
+    stage: faded
+    target: Preserve a leading zero.
+    prompt: Find 1% of 7.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '0.07' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You used both zero placeholders., on_correct_math: '7 ÷ 100 = 0.07.', on_incorrect_attempt_1: The answer is seven hundredths., on_incorrect_attempt_2: Write zero units, zero tenths and seven hundredths., worked_explanation: '1% of 7 = 7 ÷ 100 = 0.07.' }
+    mathematical_support: { hint_1: Read 7/100 as a decimal., hint_2: The 7 belongs in the hundredths place., worked_solution: '0.07' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 1, wholeAmount: 7, partAmount: 0.07, layout: hundred_grid, selectedGroups: 1, methodSteps: ['7 ÷ 100 = 0.07'], solutionLabel: '1% of 7 = 0.07' } }
+    recovery_item_ref: PA-03-R03
+
+  - id: PA-03-I01
+    stage: independent_transfer
+    target: Retain a measurement unit.
+    prompt: A cable is 840 cm long. Find 1% of its length.
+    response: { type: decimal, input_label: Answer in centimetres }
+    answer: { value: '8.4' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You kept the centimetre unit with the selected part., on_correct_math: '840 ÷ 100 = 8.4 cm.', on_incorrect_attempt_1: Use all 840 cm as the whole and divide by 100., on_incorrect_attempt_2: One percent of 840 cm is 8.4 cm., worked_explanation: 'Whole = 840 cm; 840 ÷ 100 = 8.4 cm.' }
+    mathematical_support: { hint_1: Divide the whole length by one hundred., hint_2: Keep the same measurement unit., worked_solution: '8.4 cm' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 1, wholeAmount: 840, unit: cm, partAmount: 8.4, layout: hundred_grid, selectedGroups: 1, methodSteps: ['840 ÷ 100 = 8.4'], solutionLabel: '1% of 840 cm = 8.4 cm' } }
+    recovery_item_ref: PA-03-R02
+
+  - id: PA-03-P01
+    stage: practice
+    target: Calculate a one-decimal result.
+    prompt: Find 1% of 1,250.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '12.5' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You kept the tenths place accurate., on_correct_math: '1,250 ÷ 100 = 12.5.', on_incorrect_attempt_1: Divide by one hundred, not ten., on_incorrect_attempt_2: Moving two place-value positions gives 12.5., worked_explanation: '1% of 1,250 = 12.5.' }
+    mathematical_support: { hint_1: Make every digit one hundredth as valuable., hint_2: The result is between 12 and 13., worked_solution: '12.5' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 1, wholeAmount: 1250, partAmount: 12.5, layout: hundred_grid, selectedGroups: 1, solutionLabel: '1% of 1,250 = 12.5' } }
+
+  - id: PA-03-P02
+    stage: practice
+    target: Select the correct operation.
+    prompt: Which calculation finds 1% of 3,600?
+    response: { type: single_choice, options: ['3,600 ÷ 10', '3,600 ÷ 100', '3,600 × 100', '3,600 − 1'] }
+    answer: { value: '3,600 ÷ 100' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You chose the hundredth operation., on_correct_math: Finding 1% means dividing the whole by 100., on_incorrect_attempt_1: Match 1% to 1/100., on_incorrect_attempt_2: Select 3,600 ÷ 100., worked_explanation: '3,600 ÷ 100 = 36.' }
+    mathematical_support: { hint_1: Use the denominator of 1/100., hint_2: Do not use the earlier 10% operation., worked_solution: '36' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 1, wholeAmount: 3600, partAmount: 36, layout: hundred_grid, selectedGroups: 1, solutionLabel: '1% of 3,600 = 36' } }
+
+  - id: PA-03-P03
+    stage: practice
+    target: Recognise one hundredth.
+    prompt: Which statement is correct?
+    response: { type: single_choice, options: ['1% is one of ten equal shares.', '1% is one of one hundred equal shares.', '1% is the whole multiplied by 100.', '1% is always a whole number.'] }
+    answer: { value: '1% is one of one hundred equal shares.' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You matched one percent to one hundred equal shares., on_correct_math: '1% = 1/100.', on_incorrect_attempt_1: Think about how many one-percent cells fill the grid., on_incorrect_attempt_2: One hundred copies of 1% make 100%., worked_explanation: 'One selected cell out of 100 equal cells represents 1%.' }
+    mathematical_support: { hint_1: Count the equal cells in a ten-by-ten grid., hint_2: Ten times ten equals one hundred., worked_solution: '1% = 1/100.' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 1, wholeAmount: 100, layout: hundred_grid, selectedGroups: 1, solutionLabel: '1% is one of one hundred equal shares' } }
+
+  - id: PA-03-P04
+    stage: practice
+    target: Calculate a contextual count.
+    prompt: A sports centre has 2,700 members. 1% receive a free pass. How many members receive one?
+    response: { type: decimal, input_label: Number of members }
+    answer: { value: '27' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You used the complete membership as the whole., on_correct_math: '2,700 ÷ 100 = 27 members.', on_incorrect_attempt_1: Divide all 2,700 members into one hundred equal shares., on_incorrect_attempt_2: One share contains 27 members., worked_explanation: '1% of 2,700 = 27 members.' }
+    mathematical_support: { hint_1: The whole is 2,700., hint_2: Divide by one hundred., worked_solution: '27 members' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 1, wholeAmount: 2700, unit: members, partAmount: 27, layout: hundred_grid, selectedGroups: 1, solutionLabel: '1% of 2,700 = 27 members' } }
+
+  - id: PA-03-P05
+    stage: practice
+    target: Judge the size of 1%.
+    prompt: Which statement must be true for a positive whole?
+    response: { type: single_choice, options: ['1% is greater than the whole.', '1% is equal to the whole.', '1% is one of one hundred equal shares and is smaller than 10%.', '1% is always a whole number.'] }
+    answer: { value: '1% is one of one hundred equal shares and is smaller than 10%.' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You used percentage size to check the result., on_correct_math: One percent is smaller than ten percent of the same positive whole., on_incorrect_attempt_1: Compare one selected share with ten selected shares from the same hundred-grid., on_incorrect_attempt_2: One share is smaller than ten equal shares., worked_explanation: 'For the same positive whole, 1% < 10% < 100%.' }
+    mathematical_support: { hint_1: Keep the whole fixed while you compare., hint_2: Compare 1 cell with 10 cells., worked_solution: '1% is smaller than 10%.' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 1, wholeAmount: 100, layout: hundred_grid, selectedGroups: 1, solutionLabel: '1% is smaller than 10% of the same whole' } }
+
+  - id: PA-03-E01
+    stage: exit
+    target: Calculate a decimal 1% result.
+    prompt: Find 1% of 740.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '7.4' }
+    attempt_policy: &exit { policy: single_submit_locked, max_attempts_before_resolution: 1, feedback_timing: after_exit_set, submit_label: Check answer, allow_change_before_submit: true, lock_after_final_submit: true }
+    scripts: { on_correct_math: '740 ÷ 100 = 7.4.', on_incorrect_attempt_1: Record the answer for the final result., on_incorrect_attempt_2: Not applicable., worked_explanation: '1% of 740 = 7.4.' }
+    mathematical_support: { hint_1: null, hint_2: null, worked_solution: '7.4' }
+    success_reaction: { mode: silent }
+    visual: { primitive: percentage_strip, model: { percent: 1, wholeAmount: 740, partAmount: 7.4, layout: hundred_grid, selectedGroups: 1, solutionLabel: '1% of 740 = 7.4' } }
+
+  - id: PA-03-E02
+    stage: exit
+    target: Calculate a whole-number 1% result.
+    prompt: Find 1% of 5,600.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '56' }
+    attempt_policy: *exit
+    scripts: { on_correct_math: '5,600 ÷ 100 = 56.', on_incorrect_attempt_1: Record the answer for the final result., on_incorrect_attempt_2: Not applicable., worked_explanation: '1% of 5,600 = 56.' }
+    mathematical_support: { hint_1: null, hint_2: null, worked_solution: '56' }
+    success_reaction: { mode: silent }
+    visual: { primitive: percentage_strip, model: { percent: 1, wholeAmount: 5600, partAmount: 56, layout: hundred_grid, selectedGroups: 1, solutionLabel: '1% of 5,600 = 56' } }
+
+  - id: PA-03-CFM01
+    stage: confirmation
+    target: Confirm a measured result below one.
+    prompt: A ribbon is 92 cm long. Find 1% of its length.
+    response: { type: decimal, input_label: Answer in centimetres }
+    answer: { value: '0.92' }
+    attempt_policy: *exit
+    scripts: { on_correct_math: '92 ÷ 100 = 0.92 cm.', on_incorrect_attempt_1: Record the answer for the final result., on_incorrect_attempt_2: Not applicable., worked_explanation: '1% of 92 cm = 0.92 cm.' }
+    mathematical_support: { hint_1: null, hint_2: null, worked_solution: '0.92 cm' }
+    success_reaction: { mode: silent }
+    visual: { primitive: percentage_strip, model: { percent: 1, wholeAmount: 92, unit: cm, partAmount: 0.92, layout: hundred_grid, selectedGroups: 1, solutionLabel: '1% of 92 cm = 0.92 cm' } }
+
+  - id: PA-03-CFM02
+    stage: confirmation
+    target: Confirm a measured two-decimal result.
+    prompt: A roll of material is 385 metres long. Find 1% of its length.
+    response: { type: decimal, input_label: Answer in metres }
+    answer: { value: '3.85' }
+    attempt_policy: *exit
+    scripts: { on_correct_math: '385 ÷ 100 = 3.85 m.', on_incorrect_attempt_1: Record the answer for the final result., on_incorrect_attempt_2: Not applicable., worked_explanation: '1% of 385 m = 3.85 m.' }
+    mathematical_support: { hint_1: null, hint_2: null, worked_solution: '3.85 m' }
+    success_reaction: { mode: silent }
+    visual: { primitive: percentage_strip, model: { percent: 1, wholeAmount: 385, unit: metres, partAmount: 3.85, layout: hundred_grid, selectedGroups: 1, solutionLabel: '1% of 385 metres = 3.85 metres' } }
+
+  - id: PA-03-R01
+    stage: repair
+    target: Repair confusion between 1% and 10%.
+    prompt: Complete the comparison. What are 10% and 1% of 1,000?
+    response: { type: single_choice, options: ['100 and 10', '10 and 100', '100 and 1', '10 and 1'] }
+    answer: { value: '100 and 10' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You separated tenths from hundredths., on_correct_math: '10% of 1,000 is 100; 1% is 10.', on_incorrect_attempt_1: Divide by 10 for 10% and by 100 for 1%., on_incorrect_attempt_2: One hundred equal shares are smaller than ten equal shares., worked_explanation: '1,000 ÷ 10 = 100 and 1,000 ÷ 100 = 10.' }
+    mathematical_support: { hint_1: Use a different divisor for each percentage., hint_2: One percent is smaller than ten percent., worked_solution: '100 and 10' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { heading: 'Compare tenths and hundredths', percent: 1, wholeAmount: 1000, partAmount: 10, layout: hundred_grid, selectedGroups: 1, showRoles: false, showResult: false, showMethod: false, methodSteps: ['10%: 1,000 ÷ 10 = 100', '1%: 1,000 ÷ 100 = 10'], solutionLabel: '10% of 1,000 = 100; 1% of 1,000 = 10' } }
+
+  - id: PA-03-R02
+    stage: repair
+    target: Repair whole identification.
+    prompt: A warehouse stores 2,400 boxes and 75 are damaged. Which number is divided by 100 to find 1% of all boxes?
+    response: { type: single_choice, options: ['1', '75', '100', '2,400'] }
+    answer: { value: '2,400' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You returned to the complete warehouse total., on_correct_math: All 2,400 boxes form the whole., on_incorrect_attempt_1: Find the number representing every stored box., on_incorrect_attempt_2: Divide the complete 2,400-box total by 100., worked_explanation: 'Whole = 2,400 boxes; 1% = 24 boxes.' }
+    mathematical_support: { hint_1: Which number is 100% of the boxes?, hint_2: The 75 damaged boxes are only a part., worked_solution: 'Divide 2,400 by 100.' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 1, wholeAmount: 2400, unit: boxes, partAmount: 24, layout: hundred_grid, selectedGroups: 1, solutionLabel: 'Whole = 2,400 boxes' } }
+
+  - id: PA-03-R03
+    stage: repair
+    target: Repair a missing zero placeholder.
+    prompt: Complete the calculation 8 ÷ 100.
+    response: { type: decimal, input_label: Your answer }
+    answer: { value: '0.08' }
+    attempt_policy: *supported
+    scripts: { on_correct_reaction: You placed the 8 in the hundredths position., on_correct_math: '8 ÷ 100 = 0.08.', on_incorrect_attempt_1: The answer is eight hundredths., on_incorrect_attempt_2: Write zero units, zero tenths and eight hundredths., worked_explanation: 'The leading zeros keep the 8 in the hundredths place.' }
+    mathematical_support: { hint_1: Read 8/100 as a decimal., hint_2: The 8 belongs two places to the right of the decimal point., worked_solution: '0.08' }
+    success_reaction: { mode: authored }
+    visual: { primitive: percentage_strip, model: { percent: 1, wholeAmount: 8, partAmount: 0.08, layout: hundred_grid, selectedGroups: 1, methodSteps: ['8 ÷ 100 = 0.08'], solutionLabel: '8 ÷ 100 = 0.08' } }
+
+qa_acceptance:
+  source_alignment: [The lesson teaches exactly 1% through one of one hundred equal shares., Two place-value changes and leading zeros are explicit., Diagnostic and delayed retrieval banks remain outside the active route.]
+  learner_facing: [Supported items have distinct authored feedback., Exit items are one-shot and hint-free., Results and methods remain hidden until the correct feedback state.]

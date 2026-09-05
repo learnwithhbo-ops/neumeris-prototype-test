@@ -1,0 +1,2468 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "MD-14 - Divide involving mixed numbers",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-18",
+      "sha256": "3b6cc779507e5a8e78bb569836e430c37c47d5a01d9c1d6b6c7baa54ee49ac0d"
+    },
+    "authored_scope": "The approved mixed-quantity grouping model, conversion-first worked sequence, graduated exact practice and length or capacity applications.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "MD14-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "pending",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        3,
+        4,
+        5,
+        6,
+        13,
+        15,
+        16,
+        17,
+        18
+      ],
+      "source_repairs_consulted": [
+        10,
+        11,
+        12
+      ],
+      "note": "All 18 source pages and p3–5 storyboard reviewed. The inactive source entry key incorrectly labels its answer and remains excluded. The second source final intentionally repeats the page-four worked pair, so it is preserved as approved evidence but is not described as fresh or unseen. Both final calculations require explicit mixed-number conversion evidence. No Diagnostic or Retrieval routes were added."
+    }
+  },
+  "identity": {
+    "id": "MD-14",
+    "slug": "divide-involving-mixed-numbers",
+    "title": "Divide involving mixed numbers",
+    "strand": "Number",
+    "cluster": "Multiplying and Dividing Fractions",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Divide positive values involving mixed numbers by converting every mixed number to an equivalent improper fraction before applying an exact fraction-division method.",
+    "success_criteria": [
+      "Convert each mixed number without losing its whole-number contribution.",
+      "Keep the first converted fraction unchanged.",
+      "Change division to multiplication and reciprocate only the converted divisor.",
+      "Multiply and simplify to the requested exact form.",
+      "Interpret the quotient as a group count in length and capacity contexts."
+    ],
+    "boundaries": {
+      "includes": [
+        "Positive mixed numbers, proper fractions and improper fractions",
+        "One or two mixed numbers in a division",
+        "Exact whole-number, proper-fraction, improper-fraction and mixed-number results",
+        "Equivalent improper-fraction conversions",
+        "Direct calculations and short length or capacity contexts"
+      ],
+      "excludes": [
+        "Zero divisors",
+        "Negative values",
+        "Decimals",
+        "Algebraic fractions",
+        "Multi-step operation selection",
+        "Diagnostic and delayed Retrieval routes"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "AF-11",
+      "MD-09",
+      "MD-13",
+      "MD-05",
+      "MD-06",
+      "MD-07"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for AF-11, MD-09, MD-13, MD-05, MD-06, MD-07 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "integer",
+      "fraction",
+      "single_choice",
+      "conversion_product"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    }
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "A mixed number must first become one equivalent improper fraction; then fraction division keeps the first value and uses the divisor’s reciprocal.",
+    "invariant": "Conversion preserves each quantity, and only the divisor is reciprocated in the division step.",
+    "mathematical_rule": "Convert every mixed number, keep the first fraction, change division to multiplication, reciprocate the second fraction, then multiply and simplify.",
+    "must_notice": [
+      "The whole-number contribution belongs in the improper numerator.",
+      "Both mixed numbers are converted before the operation changes.",
+      "The first converted fraction remains the starting amount.",
+      "Only the divisor is reciprocated.",
+      "Equivalent simplest improper and mixed forms represent the same exact value unless a form is specified."
+    ],
+    "common_confusions": [
+      "Omitting the whole-number contribution",
+      "Changing the denominator during conversion",
+      "Reciprocating the dividend",
+      "Multiplying by the unreciprocated divisor",
+      "Simplifying to a non-equivalent value"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "See the mixed amount and group size",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "See the mixed amount and group size",
+          "initial_state": "See the mixed amount and group size",
+          "model": {
+            "kind": "mixed_division",
+            "left": {
+              "whole": 1,
+              "n": 1,
+              "d": 2
+            },
+            "right": {
+              "n": 3,
+              "d": 4
+            },
+            "object": "symbolic",
+            "target": "Exact quotient",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "reference_mixed"
+          }
+        },
+        "narration": {
+          "script": "The starting amount is one and a half wholes. We are measuring it in groups of three quarters."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Rename the amount in matching small parts",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Rename the amount in matching small parts",
+          "initial_state": "Rename the amount in matching small parts",
+          "model": {
+            "kind": "mixed_division",
+            "left": {
+              "whole": 1,
+              "n": 1,
+              "d": 2
+            },
+            "right": {
+              "n": 3,
+              "d": 4
+            },
+            "object": "symbolic",
+            "target": "Exact quotient",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "small_parts"
+          }
+        },
+        "narration": {
+          "script": "Split each half into two quarters. The same one and a half wholes is now six quarters."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Count complete groups",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Count complete groups",
+          "initial_state": "Count complete groups",
+          "model": {
+            "kind": "mixed_division",
+            "left": {
+              "whole": 1,
+              "n": 1,
+              "d": 2
+            },
+            "right": {
+              "n": 3,
+              "d": 4
+            },
+            "object": "symbolic",
+            "target": "Exact quotient",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "grouped"
+          }
+        },
+        "narration": {
+          "script": "Place three quarters in each group. The six quarters make two complete groups."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Connect the model to fraction division",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Connect the model to fraction division",
+          "initial_state": "Connect the model to fraction division",
+          "model": {
+            "kind": "mixed_division",
+            "left": {
+              "whole": 1,
+              "n": 1,
+              "d": 2
+            },
+            "right": {
+              "n": 3,
+              "d": 4
+            },
+            "object": "symbolic",
+            "target": "Exact quotient",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "reciprocal"
+          }
+        },
+        "narration": {
+          "script": "Convert the mixed amount to three halves, keep it fixed, and multiply by the reciprocal of three quarters."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Explain the conversion",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Explain the conversion",
+          "initial_state": "Explain the conversion",
+          "model": null
+        },
+        "narration": {
+          "script": "Choose the explanation that preserves the complete whole and the extra half."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "MD-14-C01"
+        },
+        "next_step": "T06"
+      },
+      {
+        "id": "T06",
+        "stage": "teaching",
+        "purpose": "Start a two-mixed-number example",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Start a two-mixed-number example",
+          "initial_state": "Start a two-mixed-number example",
+          "model": {
+            "kind": "mixed_division",
+            "left": {
+              "whole": 2,
+              "n": 1,
+              "d": 4
+            },
+            "right": {
+              "whole": 1,
+              "n": 1,
+              "d": 2
+            },
+            "object": "symbolic",
+            "target": "Exact quotient",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "given"
+          }
+        },
+        "narration": {
+          "script": "This calculation contains a mixed number in both positions. Convert both before changing the operation."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T07"
+      },
+      {
+        "id": "T07",
+        "stage": "teaching",
+        "purpose": "Convert the starting amount",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Convert the starting amount",
+          "initial_state": "Convert the starting amount",
+          "model": {
+            "kind": "mixed_division",
+            "left": {
+              "whole": 2,
+              "n": 1,
+              "d": 4
+            },
+            "right": {
+              "whole": 1,
+              "n": 1,
+              "d": 2
+            },
+            "object": "symbolic",
+            "target": "Exact quotient",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "left_converted"
+          }
+        },
+        "narration": {
+          "script": "Two complete wholes contain eight quarters. One more quarter makes nine quarters."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T08"
+      },
+      {
+        "id": "T08",
+        "stage": "teaching",
+        "purpose": "Convert the divisor",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Convert the divisor",
+          "initial_state": "Convert the divisor",
+          "model": {
+            "kind": "mixed_division",
+            "left": {
+              "whole": 2,
+              "n": 1,
+              "d": 4
+            },
+            "right": {
+              "whole": 1,
+              "n": 1,
+              "d": 2
+            },
+            "object": "symbolic",
+            "target": "Exact quotient",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "right_converted"
+          }
+        },
+        "narration": {
+          "script": "One complete whole contains two halves. One more half makes three halves."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T09"
+      },
+      {
+        "id": "T09",
+        "stage": "teaching",
+        "purpose": "Reciprocate only the divisor",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Reciprocate only the divisor",
+          "initial_state": "Reciprocate only the divisor",
+          "model": {
+            "kind": "mixed_division",
+            "left": {
+              "whole": 2,
+              "n": 1,
+              "d": 4
+            },
+            "right": {
+              "whole": 1,
+              "n": 1,
+              "d": 2
+            },
+            "object": "symbolic",
+            "target": "Exact quotient",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "reciprocal"
+          }
+        },
+        "narration": {
+          "script": "Keep nine quarters and replace division by three halves with multiplication by two thirds."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T10"
+      },
+      {
+        "id": "T10",
+        "stage": "teaching",
+        "purpose": "Multiply the fraction parts",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Multiply the fraction parts",
+          "initial_state": "Multiply the fraction parts",
+          "model": {
+            "kind": "mixed_division",
+            "left": {
+              "whole": 2,
+              "n": 1,
+              "d": 4
+            },
+            "right": {
+              "whole": 1,
+              "n": 1,
+              "d": 2
+            },
+            "object": "symbolic",
+            "target": "Exact quotient",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "raw"
+          }
+        },
+        "narration": {
+          "script": "Multiply the numerators and denominators to make the raw exact quotient."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T11"
+      },
+      {
+        "id": "T11",
+        "stage": "teaching",
+        "purpose": "Simplify the quotient",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Simplify the quotient",
+          "initial_state": "Simplify the quotient",
+          "model": {
+            "kind": "mixed_division",
+            "left": {
+              "whole": 2,
+              "n": 1,
+              "d": 4
+            },
+            "right": {
+              "whole": 1,
+              "n": 1,
+              "d": 2
+            },
+            "object": "symbolic",
+            "target": "Exact quotient",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "simplified"
+          }
+        },
+        "narration": {
+          "script": "Divide both fraction parts by their common factor. The result is three halves."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T12"
+      },
+      {
+        "id": "T12",
+        "stage": "teaching",
+        "purpose": "Check the complete method",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Check the complete method",
+          "initial_state": "Check the complete method",
+          "model": {
+            "kind": "mixed_division",
+            "left": {
+              "whole": 2,
+              "n": 1,
+              "d": 4
+            },
+            "right": {
+              "whole": 1,
+              "n": 1,
+              "d": 2
+            },
+            "object": "symbolic",
+            "target": "Exact quotient",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "mixed_result"
+          }
+        },
+        "narration": {
+          "script": "The same result can be written as one and a half. Check every equality in the worked method."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "MD-14-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "MD-14-G01",
+        "support_level": "high",
+        "pre_question_script": "Convert the mixed number before doing anything with the divisor.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "MD-14-G02",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "guided",
+        "question_ref": "MD-14-G03",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "guided",
+        "question_ref": "MD-14-G04",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G05"
+      },
+      "G05": {
+        "stage": "guided",
+        "question_ref": "MD-14-G05",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "F01"
+      },
+      "F01": {
+        "stage": "faded",
+        "question_ref": "MD-14-P01",
+        "support_level": "reduced",
+        "pre_question_script": "Use the conversion and reciprocal sequence with less support.",
+        "correct_next": "I01"
+      },
+      "I01": {
+        "stage": "independent_transfer",
+        "question_ref": "MD-14-P02",
+        "support_level": "none",
+        "pre_question_script": "Convert both mixed numbers independently before calculating.",
+        "correct_next": "P03"
+      }
+    },
+    "practice": {
+      "intro_script": "Keep every quantity exact. Convert mixed numbers first, then protect the first fraction while you reciprocate only the divisor. In the applications, distinguish the available amount from one group size.",
+      "question_order": [
+        "MD-14-P03",
+        "MD-14-P04",
+        "MD-14-P05",
+        "MD-14-P06",
+        "MD-14-X01",
+        "MD-14-X02",
+        "MD-14-X03",
+        "MD-14-X04"
+      ]
+    },
+    "exit": {
+      "intro_script": "Complete two calculations and one method check without hints. Record the required conversions before each final answer. Each response locks after submission.",
+      "primary_question_refs": [
+        "MD-14-E01",
+        "MD-14-E02",
+        "MD-14-E03"
+      ],
+      "confirmation_question_refs": [],
+      "mastery_policy": {
+        "profile": "all_primary_unsupported",
+        "require_all": true,
+        "source_page": 13,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "You converted mixed numbers accurately, protected the starting value and used the divisor’s reciprocal to finish the exact divisions.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Keep building mixed-number division",
+      "ryan_script": "One or more final checks need another pass. Rebuild every mixed number as an improper fraction before deciding which fraction becomes a reciprocal.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "MD-14-C01",
+      "source_ref": {
+        "page": 3
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "Why can 1 1/2 be written as 3/2?",
+      "target": "Exact quotient",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "One whole is two halves, and one more half makes three halves.",
+          "The whole number and numerator are added.",
+          "The denominator is added to the whole number.",
+          "Every mixed number keeps the same numerator."
+        ]
+      },
+      "answer": {
+        "value": "One whole is two halves, and one more half makes three halves."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The conversion counts every half without changing the amount.",
+        "correct_after_support": "The conversion counts every half without changing the amount.",
+        "on_correct_math": "One whole contains two halves. → Two halves plus one half make three halves, so 1 1/2 = 3/2.",
+        "on_incorrect_attempt_1": "Count the number of halves in the complete whole before adding the extra half.",
+        "on_incorrect_attempt_2": "Rebuild the complete whole using halves, then include the fractional part.",
+        "worked_explanation": "One whole contains two halves. → Two halves plus one half make three halves, so 1 1/2 = 3/2."
+      },
+      "mathematical_support": {
+        "hint_1": "Count the number of halves in the complete whole before adding the extra half.",
+        "hint_2": "A conversion must keep exactly the same quantity.",
+        "worked_solution": "One whole contains two halves. → Two halves plus one half make three halves, so 1 1/2 = 3/2."
+      },
+      "working": [
+        "One whole contains two halves.",
+        "Two halves plus one half make three halves, so 1 1/2 = 3/2."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_division",
+          "left": {
+            "whole": 1,
+            "n": 1,
+            "d": 2
+          },
+          "right": {
+            "n": 3,
+            "d": 4
+          },
+          "object": "symbolic",
+          "target": "Exact quotient",
+          "math_text": true,
+          "compact_captions": true,
+          "phase": "left_converted",
+          "working_phases": [
+            "left_converted"
+          ]
+        }
+      },
+      "response_feedback": {
+        "The whole number and numerator are added.": "That ignores how many halves make the complete whole.",
+        "The denominator is added to the whole number.": "The denominator names the size of each part; it is not added as a separate amount.",
+        "Every mixed number keeps the same numerator.": "The whole-number contribution must be included in the improper numerator."
+      }
+    },
+    {
+      "id": "MD-14-C02",
+      "source_ref": {
+        "page": 4
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "Which complete method correctly works out 2 1/4 ÷ 1 1/2?",
+      "target": "Exact quotient",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "2 1/4 ÷ 1 1/2 = 9/4 ÷ 3/2 = 9/4 × 2/3 = 18/12 = 3/2",
+          "2 1/4 ÷ 1 1/2 = 3/4 ÷ 2/2 = 3/4 × 2/2 = 3/4",
+          "2 1/4 ÷ 1 1/2 = 9/4 × 3/2 = 27/8",
+          "2 1/4 ÷ 1 1/2 = 4/9 × 2/3 = 8/27"
+        ]
+      },
+      "answer": {
+        "value": "2 1/4 ÷ 1 1/2 = 9/4 ÷ 3/2 = 9/4 × 2/3 = 18/12 = 3/2"
+      },
+      "policy": {
+        "scored": false,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true,
+        "engagementOnly": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Every equality preserves the two original quantities and reciprocates only the divisor.",
+        "correct_after_support": "Every equality preserves the two original quantities and reciprocates only the divisor.",
+        "on_correct_math": "Convert the first mixed number: 2 1/4 = 9/4. → Convert the divisor: 1 1/2 = 3/2. → Keep the first fraction and reciprocate only the divisor: 9/4 ÷ 3/2 = 9/4 × 2/3. → Multiply: 9 × 2 = 18 and 4 × 3 = 12, giving 18/12. → 18/12 = 3/2. Simplification preserves the exact value.",
+        "on_incorrect_attempt_1": "Check both mixed-number conversions before checking the reciprocal.",
+        "on_incorrect_attempt_2": "Trace the whole-number contribution, then the role of the divisor, through every line.",
+        "worked_explanation": "Convert the first mixed number: 2 1/4 = 9/4. → Convert the divisor: 1 1/2 = 3/2. → Keep the first fraction and reciprocate only the divisor: 9/4 ÷ 3/2 = 9/4 × 2/3. → Multiply: 9 × 2 = 18 and 4 × 3 = 12, giving 18/12. → 18/12 = 3/2. Simplification preserves the exact value."
+      },
+      "mathematical_support": {
+        "hint_1": "Check both mixed-number conversions before checking the reciprocal.",
+        "hint_2": "The first converted fraction must stay unchanged when the operation changes.",
+        "worked_solution": "Convert the first mixed number: 2 1/4 = 9/4. → Convert the divisor: 1 1/2 = 3/2. → Keep the first fraction and reciprocate only the divisor: 9/4 ÷ 3/2 = 9/4 × 2/3. → Multiply: 9 × 2 = 18 and 4 × 3 = 12, giving 18/12. → 18/12 = 3/2. Simplification preserves the exact value."
+      },
+      "working": [
+        "Convert the first mixed number: 2 1/4 = 9/4.",
+        "Convert the divisor: 1 1/2 = 3/2.",
+        "Keep the first fraction and reciprocate only the divisor: 9/4 ÷ 3/2 = 9/4 × 2/3.",
+        "Multiply: 9 × 2 = 18 and 4 × 3 = 12, giving 18/12.",
+        "18/12 = 3/2. Simplification preserves the exact value."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_division",
+          "left": {
+            "whole": 2,
+            "n": 1,
+            "d": 4
+          },
+          "right": {
+            "whole": 1,
+            "n": 1,
+            "d": 2
+          },
+          "object": "symbolic",
+          "target": "Exact quotient",
+          "math_text": true,
+          "compact_captions": true,
+          "phase": "stated_result",
+          "working_phases": [
+            "left_converted",
+            "right_converted",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "2 1/4 ÷ 1 1/2 = 3/4 ÷ 2/2 = 3/4 × 2/2 = 3/4": "Both conversions lose the complete wholes.",
+        "2 1/4 ÷ 1 1/2 = 9/4 × 3/2 = 27/8": "That multiplies by the converted divisor without taking its reciprocal.",
+        "2 1/4 ÷ 1 1/2 = 4/9 × 2/3 = 8/27": "The starting amount has been reversed; only the divisor should be reciprocated."
+      }
+    },
+    {
+      "id": "MD-14-G01",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "Convert 1 2/3 to an improper fraction. What is its numerator?",
+      "target": "Exact quotient",
+      "response": {
+        "type": "integer",
+        "accept_exact_equivalents": true,
+        "require_simplest_form": false,
+        "input_label": "Improper numerator"
+      },
+      "answer": {
+        "value": 5
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The numerator counts all five thirds in the mixed number.",
+        "correct_after_support": "The numerator counts all five thirds in the mixed number.",
+        "on_correct_math": "Three thirds make the whole. Add those three thirds to the two extra thirds.",
+        "on_incorrect_attempt_1": "Multiply the whole number by the denominator.",
+        "on_incorrect_attempt_2": "Include the complete whole before adding the fractional part.",
+        "worked_explanation": "Three thirds make the whole. Add those three thirds to the two extra thirds."
+      },
+      "mathematical_support": {
+        "hint_1": "Multiply the whole number by the denominator.",
+        "hint_2": "Then add the original numerator while keeping the denominator.",
+        "worked_solution": "Three thirds make the whole. Add those three thirds to the two extra thirds."
+      },
+      "working": [
+        "Three thirds make the whole. Add those three thirds to the two extra thirds."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_division",
+          "left": {
+            "whole": 1,
+            "n": 2,
+            "d": 3
+          },
+          "right": {
+            "n": 5,
+            "d": 6
+          },
+          "object": "symbolic",
+          "target": "Exact quotient",
+          "math_text": true,
+          "compact_captions": true,
+          "phase": "left_conversion_unknown",
+          "resultScope": "left_converted",
+          "support_phases": [
+            "left_conversion_unknown",
+            "left_converted"
+          ],
+          "working_phases": [
+            "left_converted",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "2": "That counts only the fractional part and omits the whole.",
+        "3": "That counts the thirds in the whole but omits the extra two thirds.",
+        "6": "The denominator stays three; it is not multiplied into the numerator twice."
+      }
+    },
+    {
+      "id": "MD-14-G02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "The converted divisor is 5/6. What reciprocal is used for the division step?",
+      "target": "Exact quotient",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "require_simplest_form": true,
+        "allow_mixed_number": false,
+        "allow_signed_parts": true,
+        "show_authored_label": true,
+        "input_label": "Reciprocal of the divisor"
+      },
+      "answer": {
+        "value": "6/5"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The divisor has been reciprocated without changing the starting amount.",
+        "correct_after_support": "The divisor has been reciprocated without changing the starting amount.",
+        "on_correct_math": "Exchange the numerator and denominator of the divisor: 5/6 becomes 6/5.",
+        "on_incorrect_attempt_1": "Find the second quantity, which is the divisor.",
+        "on_incorrect_attempt_2": "Compare the proposed reciprocal with the converted divisor.",
+        "worked_explanation": "Exchange the numerator and denominator of the divisor: 5/6 becomes 6/5.",
+        "on_equivalent_unfinished": "Your answer has the correct value, but it is not yet in simplest form. Simplify without changing the exact value."
+      },
+      "mathematical_support": {
+        "hint_1": "Find the second quantity, which is the divisor.",
+        "hint_2": "Only that fraction changes positions.",
+        "worked_solution": "Exchange the numerator and denominator of the divisor: 5/6 becomes 6/5."
+      },
+      "working": [
+        "Exchange the numerator and denominator of the divisor: 5/6 becomes 6/5."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_division",
+          "left": {
+            "whole": 1,
+            "n": 2,
+            "d": 3
+          },
+          "right": {
+            "n": 5,
+            "d": 6
+          },
+          "object": "symbolic",
+          "target": "Exact quotient",
+          "math_text": true,
+          "compact_captions": true,
+          "phase": "right_reciprocal_unknown",
+          "resultScope": "reciprocal",
+          "support_phases": [
+            "right_reciprocal_unknown",
+            "reciprocal"
+          ],
+          "working_phases": [
+            "left_converted",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "5/6": "That repeats the divisor rather than using its reciprocal.",
+        "3/5": "That uses the starting mixed number’s denominator instead of the divisor."
+      }
+    },
+    {
+      "id": "MD-14-G03",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "Multiply 5/3 × 6/5. Enter the numerator and denominator products before simplifying.",
+      "target": "Exact quotient",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": false,
+        "require_simplest_form": false,
+        "allow_mixed_number": false,
+        "allow_signed_parts": true,
+        "show_authored_label": true,
+        "input_label": "Product before simplifying"
+      },
+      "answer": {
+        "value": "30/15"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The two products give the requested unsimplified fraction.",
+        "correct_after_support": "The two products give the requested unsimplified fraction.",
+        "on_correct_math": "Multiply the numerators: 5 × 6 = 30. → Multiply the denominators: 3 × 5 = 15. → The raw product is 30/15.",
+        "on_incorrect_attempt_1": "Multiply the numerators and denominators without cancelling yet.",
+        "on_incorrect_attempt_2": "Keep the numerator product and denominator product in their original positions.",
+        "worked_explanation": "Multiply the numerators: 5 × 6 = 30. → Multiply the denominators: 3 × 5 = 15. → The raw product is 30/15.",
+        "on_equivalent_wrong_form": "That value is correct after simplification, but this box asks for the raw product."
+      },
+      "mathematical_support": {
+        "hint_1": "Multiply the numerators and denominators without cancelling yet.",
+        "hint_2": "This box asks for the raw fraction, before simplification.",
+        "worked_solution": "Multiply the numerators: 5 × 6 = 30. → Multiply the denominators: 3 × 5 = 15. → The raw product is 30/15."
+      },
+      "working": [
+        "Multiply the numerators: 5 × 6 = 30.",
+        "Multiply the denominators: 3 × 5 = 15.",
+        "The raw product is 30/15."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_division",
+          "left": {
+            "whole": 1,
+            "n": 2,
+            "d": 3
+          },
+          "right": {
+            "n": 5,
+            "d": 6
+          },
+          "object": "symbolic",
+          "target": "Exact quotient",
+          "math_text": true,
+          "compact_captions": true,
+          "phase": "raw_unknown",
+          "resultScope": "raw",
+          "support_phases": [
+            "raw_unknown",
+            "raw"
+          ],
+          "working_phases": [
+            "left_converted",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "2": "That value is correct after simplification, but this box asks for the raw product.",
+        "25/18": "That multiplies by five sixths rather than its reciprocal.",
+        "15/30": "That reverses the raw product."
+      }
+    },
+    {
+      "id": "MD-14-G04",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "Simplify 30/15 to finish the division. Give the simplest exact answer.",
+      "target": "Exact quotient",
+      "response": {
+        "type": "integer",
+        "accept_exact_equivalents": true,
+        "require_simplest_form": true,
+        "input_label": "Simplest exact answer"
+      },
+      "answer": {
+        "value": 2
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The simplified quotient is exactly two.",
+        "correct_after_support": "The simplified quotient is exactly two.",
+        "on_correct_math": "The numerator and denominator share a factor of fifteen. → Divide both by the same factor.",
+        "on_incorrect_attempt_1": "Simplification must keep the value unchanged.",
+        "on_incorrect_attempt_2": "Use the same common factor on both parts of the fraction.",
+        "worked_explanation": "The numerator and denominator share a factor of fifteen. → Divide both by the same factor.",
+        "on_equivalent_unfinished": "Your answer has the correct value, but it is not yet in simplest form. Simplify without changing the exact value."
+      },
+      "mathematical_support": {
+        "hint_1": "Simplification must keep the value unchanged.",
+        "hint_2": "A whole-number answer is accepted directly or as an exact equivalent fraction.",
+        "worked_solution": "The numerator and denominator share a factor of fifteen. → Divide both by the same factor."
+      },
+      "working": [
+        "The numerator and denominator share a factor of fifteen.",
+        "Divide both by the same factor."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_division",
+          "left": {
+            "whole": 1,
+            "n": 2,
+            "d": 3
+          },
+          "right": {
+            "n": 5,
+            "d": 6
+          },
+          "object": "symbolic",
+          "target": "Exact quotient",
+          "math_text": true,
+          "compact_captions": true,
+          "phase": "raw",
+          "resultScope": "simplified",
+          "support_phases": [
+            "raw",
+            "simplified"
+          ],
+          "working_phases": [
+            "left_converted",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "15": "That divides only the numerator and does not preserve the fraction’s value.",
+        "1/2": "That is the reciprocal of the quotient."
+      }
+    },
+    {
+      "id": "MD-14-G05",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "What does 1 2/3 ÷ 5/6 ask us to find?",
+      "target": "Exact quotient",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "The number of 5/6-sized groups that fit in 1 2/3.",
+          "Five sixths of 1 2/3.",
+          "The difference between the two quantities.",
+          "A new value made by reversing both quantities."
+        ]
+      },
+      "answer": {
+        "value": "The number of 5/6-sized groups that fit in 1 2/3."
+      },
+      "policy": {
+        "scored": false,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true,
+        "engagementOnly": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That interpretation connects the quotient with a count of the divisor-sized groups.",
+        "correct_after_support": "That interpretation connects the quotient with a count of the divisor-sized groups.",
+        "on_correct_math": "The first quantity is the amount being measured. → The divisor gives the size of one group. → The quotient counts how many of those groups fit.",
+        "on_incorrect_attempt_1": "Name the role of the divisor before calculating.",
+        "on_incorrect_attempt_2": "Keep the available amount and one-group size as different roles.",
+        "worked_explanation": "The first quantity is the amount being measured. → The divisor gives the size of one group. → The quotient counts how many of those groups fit."
+      },
+      "mathematical_support": {
+        "hint_1": "Name the role of the divisor before calculating.",
+        "hint_2": "Division here measures the amount in equal groups of the stated size.",
+        "worked_solution": "The first quantity is the amount being measured. → The divisor gives the size of one group. → The quotient counts how many of those groups fit."
+      },
+      "working": [
+        "The first quantity is the amount being measured.",
+        "The divisor gives the size of one group.",
+        "The quotient counts how many of those groups fit."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_division",
+          "left": {
+            "whole": 1,
+            "n": 2,
+            "d": 3
+          },
+          "right": {
+            "n": 5,
+            "d": 6
+          },
+          "object": "symbolic",
+          "target": "Exact quotient",
+          "math_text": true,
+          "compact_captions": true,
+          "phase": "stated_result",
+          "working_phases": [
+            "left_converted",
+            "reciprocal",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "Five sixths of 1 2/3.": "That describes multiplication by five sixths, not division into groups of that size.",
+        "The difference between the two quantities.": "Subtraction compares by difference; this quotient counts equal groups.",
+        "A new value made by reversing both quantities.": "The original amount stays unchanged, and only the divisor is reciprocated in the method."
+      }
+    },
+    {
+      "id": "MD-14-P01",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "faded",
+      "prompt": "Work out 1 1/4 ÷ 1/2. Give your answer in simplest exact form.",
+      "target": "Exact quotient",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "require_simplest_form": true,
+        "allow_mixed_number": true,
+        "allow_signed_parts": true,
+        "show_authored_label": true,
+        "input_label": "Your answer in simplest exact form"
+      },
+      "answer": {
+        "value": "5/2"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The converted amount and the half-sized divisor give an exact quotient of five halves.",
+        "correct_after_support": "The converted amount and the half-sized divisor give an exact quotient of five halves.",
+        "on_correct_math": "Convert the first mixed number: 1 1/4 = 5/4. → Keep the first fraction and reciprocate only the divisor: 5/4 ÷ 1/2 = 5/4 × 2/1. → Multiply: 5 × 2 = 10 and 4 × 1 = 4, giving 10/4. → 10/4 = 5/2. Simplification preserves the exact value.",
+        "on_incorrect_attempt_1": "Convert every mixed number before changing the operation.",
+        "on_incorrect_attempt_2": "Check that the whole contributes four quarters before using the reciprocal.",
+        "worked_explanation": "Convert the first mixed number: 1 1/4 = 5/4. → Keep the first fraction and reciprocate only the divisor: 5/4 ÷ 1/2 = 5/4 × 2/1. → Multiply: 5 × 2 = 10 and 4 × 1 = 4, giving 10/4. → 10/4 = 5/2. Simplification preserves the exact value.",
+        "on_equivalent_unfinished": "Your answer has the correct value, but it is not yet in simplest form. Simplify without changing the exact value."
+      },
+      "mathematical_support": {
+        "hint_1": "Convert every mixed number before changing the operation.",
+        "hint_2": "Keep the first converted fraction, reciprocate only the divisor, then simplify exactly.",
+        "worked_solution": "Convert the first mixed number: 1 1/4 = 5/4. → Keep the first fraction and reciprocate only the divisor: 5/4 ÷ 1/2 = 5/4 × 2/1. → Multiply: 5 × 2 = 10 and 4 × 1 = 4, giving 10/4. → 10/4 = 5/2. Simplification preserves the exact value."
+      },
+      "working": [
+        "Convert the first mixed number: 1 1/4 = 5/4.",
+        "Keep the first fraction and reciprocate only the divisor: 5/4 ÷ 1/2 = 5/4 × 2/1.",
+        "Multiply: 5 × 2 = 10 and 4 × 1 = 4, giving 10/4.",
+        "10/4 = 5/2. Simplification preserves the exact value."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_division",
+          "left": {
+            "whole": 1,
+            "n": 1,
+            "d": 4
+          },
+          "right": {
+            "n": 1,
+            "d": 2
+          },
+          "object": "symbolic",
+          "target": "Exact quotient",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "left_converted",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "5/8": "That multiplies by the divisor without taking its reciprocal.",
+        "1/2": "That result loses the whole-number contribution from the starting mixed number.",
+        "8/5": "That reverses both quantities instead of reciprocating only the divisor."
+      }
+    },
+    {
+      "id": "MD-14-P02",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "independent_transfer",
+      "prompt": "Work out 2 2/3 ÷ 1 1/3. Give your answer in simplest exact form.",
+      "target": "Exact quotient",
+      "response": {
+        "type": "integer",
+        "accept_exact_equivalents": true,
+        "require_simplest_form": true,
+        "input_label": "Your simplest exact answer"
+      },
+      "answer": {
+        "value": 2
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Both mixed numbers were converted before the exact division.",
+        "correct_after_support": "Both mixed numbers were converted before the exact division.",
+        "on_correct_math": "Convert the first mixed number: 2 2/3 = 8/3. → Convert the divisor: 1 1/3 = 4/3. → Keep the first fraction and reciprocate only the divisor: 8/3 ÷ 4/3 = 8/3 × 3/4. → Multiply: 8 × 3 = 24 and 3 × 4 = 12, giving 24/12. → 24/12 = 2. Simplification preserves the exact value.",
+        "on_incorrect_attempt_1": "Convert every mixed number before changing the operation.",
+        "on_incorrect_attempt_2": "Track the thirds in each complete whole before simplifying the quotient.",
+        "worked_explanation": "Convert the first mixed number: 2 2/3 = 8/3. → Convert the divisor: 1 1/3 = 4/3. → Keep the first fraction and reciprocate only the divisor: 8/3 ÷ 4/3 = 8/3 × 3/4. → Multiply: 8 × 3 = 24 and 3 × 4 = 12, giving 24/12. → 24/12 = 2. Simplification preserves the exact value.",
+        "on_equivalent_unfinished": "Your answer has the correct value, but it is not yet in simplest form. Simplify without changing the exact value."
+      },
+      "mathematical_support": {
+        "hint_1": "Convert every mixed number before changing the operation.",
+        "hint_2": "Keep the first converted fraction, reciprocate only the divisor, then simplify exactly.",
+        "worked_solution": "Convert the first mixed number: 2 2/3 = 8/3. → Convert the divisor: 1 1/3 = 4/3. → Keep the first fraction and reciprocate only the divisor: 8/3 ÷ 4/3 = 8/3 × 3/4. → Multiply: 8 × 3 = 24 and 3 × 4 = 12, giving 24/12. → 24/12 = 2. Simplification preserves the exact value."
+      },
+      "working": [
+        "Convert the first mixed number: 2 2/3 = 8/3.",
+        "Convert the divisor: 1 1/3 = 4/3.",
+        "Keep the first fraction and reciprocate only the divisor: 8/3 ÷ 4/3 = 8/3 × 3/4.",
+        "Multiply: 8 × 3 = 24 and 3 × 4 = 12, giving 24/12.",
+        "24/12 = 2. Simplification preserves the exact value."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_division",
+          "left": {
+            "whole": 2,
+            "n": 2,
+            "d": 3
+          },
+          "right": {
+            "whole": 1,
+            "n": 1,
+            "d": 3
+          },
+          "object": "symbolic",
+          "target": "Exact quotient",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "left_converted",
+            "right_converted",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "32/9": "That multiplies by the divisor without taking its reciprocal.",
+        "1/2": "That result loses the whole-number contribution from the starting mixed number.",
+        "9/32": "That reverses both quantities instead of reciprocating only the divisor."
+      }
+    },
+    {
+      "id": "MD-14-P03",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Work out 1 1/2 ÷ 2 2/3. Give your answer in simplest exact form.",
+      "target": "Exact quotient",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "require_simplest_form": true,
+        "allow_mixed_number": true,
+        "allow_signed_parts": true,
+        "show_authored_label": true,
+        "input_label": "Your answer in simplest exact form"
+      },
+      "answer": {
+        "value": "9/14"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The divisor is larger than the starting amount, so this proper-fraction quotient is reasonable.",
+        "correct_after_support": "The divisor is larger than the starting amount, so this proper-fraction quotient is reasonable.",
+        "on_correct_math": "Convert the first mixed number: 1 1/2 = 3/2. → Convert the divisor: 2 2/3 = 8/3. → Keep the first fraction and reciprocate only the divisor: 3/2 ÷ 8/3 = 3/2 × 3/8. → Multiply: 3 × 3 = 9 and 2 × 8 = 16, giving 9/16. → 9/16 = 9/14. Simplification preserves the exact value.",
+        "on_incorrect_attempt_1": "Convert every mixed number before changing the operation.",
+        "on_incorrect_attempt_2": "Convert both values, then compare the divisor with the starting amount.",
+        "worked_explanation": "Convert the first mixed number: 1 1/2 = 3/2. → Convert the divisor: 2 2/3 = 8/3. → Keep the first fraction and reciprocate only the divisor: 3/2 ÷ 8/3 = 3/2 × 3/8. → Multiply: 3 × 3 = 9 and 2 × 8 = 16, giving 9/16. → 9/16 = 9/14. Simplification preserves the exact value.",
+        "on_equivalent_unfinished": "Your answer has the correct value, but it is not yet in simplest form. Simplify without changing the exact value."
+      },
+      "mathematical_support": {
+        "hint_1": "Convert every mixed number before changing the operation.",
+        "hint_2": "Keep the first converted fraction, reciprocate only the divisor, then simplify exactly.",
+        "worked_solution": "Convert the first mixed number: 1 1/2 = 3/2. → Convert the divisor: 2 2/3 = 8/3. → Keep the first fraction and reciprocate only the divisor: 3/2 ÷ 8/3 = 3/2 × 3/8. → Multiply: 3 × 3 = 9 and 2 × 8 = 16, giving 9/16. → 9/16 = 9/14. Simplification preserves the exact value."
+      },
+      "working": [
+        "Convert the first mixed number: 1 1/2 = 3/2.",
+        "Convert the divisor: 2 2/3 = 8/3.",
+        "Keep the first fraction and reciprocate only the divisor: 3/2 ÷ 8/3 = 3/2 × 3/8.",
+        "Multiply: 3 × 3 = 9 and 2 × 8 = 16, giving 9/16.",
+        "9/16 = 9/14. Simplification preserves the exact value."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_division",
+          "left": {
+            "whole": 1,
+            "n": 1,
+            "d": 2
+          },
+          "right": {
+            "whole": 2,
+            "n": 2,
+            "d": 3
+          },
+          "object": "symbolic",
+          "target": "Exact quotient",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "left_converted",
+            "right_converted",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "4": "That multiplies by the divisor without taking its reciprocal.",
+        "3/16": "That result loses the whole-number contribution from the starting mixed number.",
+        "1/4": "That reverses both quantities instead of reciprocating only the divisor."
+      }
+    },
+    {
+      "id": "MD-14-P04",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Work out 3 3/4 ÷ 1 1/2. Give your answer in simplest exact form.",
+      "target": "Exact quotient",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "require_simplest_form": true,
+        "allow_mixed_number": true,
+        "allow_signed_parts": true,
+        "show_authored_label": true,
+        "input_label": "Your answer in simplest exact form"
+      },
+      "answer": {
+        "value": "5/2"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The final improper fraction is exact and fully simplified.",
+        "correct_after_support": "The final improper fraction is exact and fully simplified.",
+        "on_correct_math": "Convert the first mixed number: 3 3/4 = 15/4. → Convert the divisor: 1 1/2 = 3/2. → Keep the first fraction and reciprocate only the divisor: 15/4 ÷ 3/2 = 15/4 × 2/3. → Multiply: 15 × 2 = 30 and 4 × 3 = 12, giving 30/12. → 30/12 = 5/2. Simplification preserves the exact value.",
+        "on_incorrect_attempt_1": "Convert every mixed number before changing the operation.",
+        "on_incorrect_attempt_2": "Include every quarter and half before using the divisor’s reciprocal.",
+        "worked_explanation": "Convert the first mixed number: 3 3/4 = 15/4. → Convert the divisor: 1 1/2 = 3/2. → Keep the first fraction and reciprocate only the divisor: 15/4 ÷ 3/2 = 15/4 × 2/3. → Multiply: 15 × 2 = 30 and 4 × 3 = 12, giving 30/12. → 30/12 = 5/2. Simplification preserves the exact value.",
+        "on_equivalent_unfinished": "Your answer has the correct value, but it is not yet in simplest form. Simplify without changing the exact value."
+      },
+      "mathematical_support": {
+        "hint_1": "Convert every mixed number before changing the operation.",
+        "hint_2": "Keep the first converted fraction, reciprocate only the divisor, then simplify exactly.",
+        "worked_solution": "Convert the first mixed number: 3 3/4 = 15/4. → Convert the divisor: 1 1/2 = 3/2. → Keep the first fraction and reciprocate only the divisor: 15/4 ÷ 3/2 = 15/4 × 2/3. → Multiply: 15 × 2 = 30 and 4 × 3 = 12, giving 30/12. → 30/12 = 5/2. Simplification preserves the exact value."
+      },
+      "working": [
+        "Convert the first mixed number: 3 3/4 = 15/4.",
+        "Convert the divisor: 1 1/2 = 3/2.",
+        "Keep the first fraction and reciprocate only the divisor: 15/4 ÷ 3/2 = 15/4 × 2/3.",
+        "Multiply: 15 × 2 = 30 and 4 × 3 = 12, giving 30/12.",
+        "30/12 = 5/2. Simplification preserves the exact value."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_division",
+          "left": {
+            "whole": 3,
+            "n": 3,
+            "d": 4
+          },
+          "right": {
+            "whole": 1,
+            "n": 1,
+            "d": 2
+          },
+          "object": "symbolic",
+          "target": "Exact quotient",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "left_converted",
+            "right_converted",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "45/8": "That multiplies by the divisor without taking its reciprocal.",
+        "1/2": "That result loses the whole-number contribution from the starting mixed number.",
+        "8/45": "That reverses both quantities instead of reciprocating only the divisor."
+      }
+    },
+    {
+      "id": "MD-14-P05",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Work out 1 4/5 ÷ 3/5. Give your answer in simplest exact form.",
+      "target": "Exact quotient",
+      "response": {
+        "type": "integer",
+        "accept_exact_equivalents": true,
+        "require_simplest_form": true,
+        "input_label": "Your simplest exact answer"
+      },
+      "answer": {
+        "value": 3
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The quotient counts three groups of three fifths in the original amount.",
+        "correct_after_support": "The quotient counts three groups of three fifths in the original amount.",
+        "on_correct_math": "Convert the first mixed number: 1 4/5 = 9/5. → Keep the first fraction and reciprocate only the divisor: 9/5 ÷ 3/5 = 9/5 × 5/3. → Multiply: 9 × 5 = 45 and 5 × 3 = 15, giving 45/15. → 45/15 = 3. Simplification preserves the exact value.",
+        "on_incorrect_attempt_1": "Convert every mixed number before changing the operation.",
+        "on_incorrect_attempt_2": "Convert the whole to fifths, then keep the first fraction unchanged.",
+        "worked_explanation": "Convert the first mixed number: 1 4/5 = 9/5. → Keep the first fraction and reciprocate only the divisor: 9/5 ÷ 3/5 = 9/5 × 5/3. → Multiply: 9 × 5 = 45 and 5 × 3 = 15, giving 45/15. → 45/15 = 3. Simplification preserves the exact value.",
+        "on_equivalent_unfinished": "Your answer has the correct value, but it is not yet in simplest form. Simplify without changing the exact value."
+      },
+      "mathematical_support": {
+        "hint_1": "Convert every mixed number before changing the operation.",
+        "hint_2": "Keep the first converted fraction, reciprocate only the divisor, then simplify exactly.",
+        "worked_solution": "Convert the first mixed number: 1 4/5 = 9/5. → Keep the first fraction and reciprocate only the divisor: 9/5 ÷ 3/5 = 9/5 × 5/3. → Multiply: 9 × 5 = 45 and 5 × 3 = 15, giving 45/15. → 45/15 = 3. Simplification preserves the exact value."
+      },
+      "working": [
+        "Convert the first mixed number: 1 4/5 = 9/5.",
+        "Keep the first fraction and reciprocate only the divisor: 9/5 ÷ 3/5 = 9/5 × 5/3.",
+        "Multiply: 9 × 5 = 45 and 5 × 3 = 15, giving 45/15.",
+        "45/15 = 3. Simplification preserves the exact value."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_division",
+          "left": {
+            "whole": 1,
+            "n": 4,
+            "d": 5
+          },
+          "right": {
+            "n": 3,
+            "d": 5
+          },
+          "object": "symbolic",
+          "target": "Exact quotient",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "left_converted",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "27/25": "That multiplies by the divisor without taking its reciprocal.",
+        "4/3": "That result loses the whole-number contribution from the starting mixed number.",
+        "25/27": "That reverses both quantities instead of reciprocating only the divisor."
+      }
+    },
+    {
+      "id": "MD-14-P06",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Which multiplication is equivalent to 2 1/2 ÷ 1 2/3?",
+      "target": "Exact quotient",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "5/2 × 3/5",
+          "5/2 × 5/3",
+          "2/5 × 3/5",
+          "2/5 × 5/3"
+        ]
+      },
+      "answer": {
+        "value": "5/2 × 3/5"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That multiplication keeps the converted dividend and reciprocates only the converted divisor.",
+        "correct_after_support": "That multiplication keeps the converted dividend and reciprocates only the converted divisor.",
+        "on_correct_math": "2 1/2 = 5/2 and 1 2/3 = 5/3. → Keep 5/2 and use the reciprocal 3/5 for the divisor. → The equivalent multiplication is 5/2 × 3/5.",
+        "on_incorrect_attempt_1": "Convert both mixed numbers before choosing the reciprocal.",
+        "on_incorrect_attempt_2": "Compare the role of each converted fraction before choosing the multiplication.",
+        "worked_explanation": "2 1/2 = 5/2 and 1 2/3 = 5/3. → Keep 5/2 and use the reciprocal 3/5 for the divisor. → The equivalent multiplication is 5/2 × 3/5."
+      },
+      "mathematical_support": {
+        "hint_1": "Convert both mixed numbers before choosing the reciprocal.",
+        "hint_2": "Only the second converted fraction changes positions.",
+        "worked_solution": "2 1/2 = 5/2 and 1 2/3 = 5/3. → Keep 5/2 and use the reciprocal 3/5 for the divisor. → The equivalent multiplication is 5/2 × 3/5."
+      },
+      "working": [
+        "2 1/2 = 5/2 and 1 2/3 = 5/3.",
+        "Keep 5/2 and use the reciprocal 3/5 for the divisor.",
+        "The equivalent multiplication is 5/2 × 3/5."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_division",
+          "left": {
+            "whole": 2,
+            "n": 1,
+            "d": 2
+          },
+          "right": {
+            "whole": 1,
+            "n": 2,
+            "d": 3
+          },
+          "object": "symbolic",
+          "target": "Exact quotient",
+          "math_text": true,
+          "compact_captions": true,
+          "phase": "given",
+          "working_phases": [
+            "left_converted",
+            "right_converted",
+            "reciprocal"
+          ]
+        }
+      },
+      "response_feedback": {
+        "5/2 × 5/3": "That multiplies by the divisor without taking its reciprocal.",
+        "2/5 × 3/5": "That reverses the dividend as well as the divisor.",
+        "2/5 × 5/3": "That reverses the dividend and leaves the divisor unchanged."
+      }
+    },
+    {
+      "id": "MD-14-X01",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A ribbon is 2 1/4 metres long. It is cut into lengths of 3/4 metre. How many complete lengths are made?",
+      "target": "Exact quotient",
+      "response": {
+        "type": "integer",
+        "accept_exact_equivalents": true,
+        "require_simplest_form": true,
+        "input_label": "Number of complete lengths"
+      },
+      "answer": {
+        "value": 3
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The ribbon makes three equal lengths with no material left over.",
+        "correct_after_support": "The ribbon makes three equal lengths with no material left over.",
+        "on_correct_math": "Convert the first mixed number: 2 1/4 = 9/4. → Keep the first fraction and reciprocate only the divisor: 9/4 ÷ 3/4 = 9/4 × 4/3. → Multiply: 9 × 4 = 36 and 4 × 3 = 12, giving 36/12. → 36/12 = 3. Simplification preserves the exact value.",
+        "on_incorrect_attempt_1": "Convert every mixed number before changing the operation.",
+        "on_incorrect_attempt_2": "Compare the total ribbon with the length of one piece.",
+        "worked_explanation": "Convert the first mixed number: 2 1/4 = 9/4. → Keep the first fraction and reciprocate only the divisor: 9/4 ÷ 3/4 = 9/4 × 4/3. → Multiply: 9 × 4 = 36 and 4 × 3 = 12, giving 36/12. → 36/12 = 3. Simplification preserves the exact value.",
+        "on_equivalent_unfinished": "Your answer has the correct value, but it is not yet in simplest form. Simplify without changing the exact value."
+      },
+      "mathematical_support": {
+        "hint_1": "Convert every mixed number before changing the operation.",
+        "hint_2": "Keep the first converted fraction, reciprocate only the divisor, then simplify exactly.",
+        "worked_solution": "Convert the first mixed number: 2 1/4 = 9/4. → Keep the first fraction and reciprocate only the divisor: 9/4 ÷ 3/4 = 9/4 × 4/3. → Multiply: 9 × 4 = 36 and 4 × 3 = 12, giving 36/12. → 36/12 = 3. Simplification preserves the exact value."
+      },
+      "working": [
+        "Convert the first mixed number: 2 1/4 = 9/4.",
+        "Keep the first fraction and reciprocate only the divisor: 9/4 ÷ 3/4 = 9/4 × 4/3.",
+        "Multiply: 9 × 4 = 36 and 4 × 3 = 12, giving 36/12.",
+        "36/12 = 3. Simplification preserves the exact value."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_division",
+          "left": {
+            "whole": 2,
+            "n": 1,
+            "d": 4
+          },
+          "right": {
+            "n": 3,
+            "d": 4
+          },
+          "object": "ribbon",
+          "target": "Exact quotient",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "left_converted",
+            "reciprocal",
+            "raw",
+            "context_result"
+          ],
+          "unit": "m"
+        }
+      },
+      "response_feedback": {
+        "27/16": "That multiplies by the divisor without taking its reciprocal.",
+        "1/3": "That result loses the whole-number contribution from the starting mixed number.",
+        "16/27": "That reverses both quantities instead of reciprocating only the divisor."
+      }
+    },
+    {
+      "id": "MD-14-X02",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A container holds 1 2/3 litres of juice. Each jar holds 5/12 litre. How many jars can be filled?",
+      "target": "Exact quotient",
+      "response": {
+        "type": "integer",
+        "accept_exact_equivalents": true,
+        "require_simplest_form": true,
+        "input_label": "Number of jars"
+      },
+      "answer": {
+        "value": 4
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Four equal jar capacities use the available juice exactly.",
+        "correct_after_support": "Four equal jar capacities use the available juice exactly.",
+        "on_correct_math": "Convert the first mixed number: 1 2/3 = 5/3. → Keep the first fraction and reciprocate only the divisor: 5/3 ÷ 5/12 = 5/3 × 12/5. → Multiply: 5 × 12 = 60 and 3 × 5 = 15, giving 60/15. → 60/15 = 4. Simplification preserves the exact value.",
+        "on_incorrect_attempt_1": "Convert every mixed number before changing the operation.",
+        "on_incorrect_attempt_2": "Keep the total juice separate from the capacity of one jar.",
+        "worked_explanation": "Convert the first mixed number: 1 2/3 = 5/3. → Keep the first fraction and reciprocate only the divisor: 5/3 ÷ 5/12 = 5/3 × 12/5. → Multiply: 5 × 12 = 60 and 3 × 5 = 15, giving 60/15. → 60/15 = 4. Simplification preserves the exact value.",
+        "on_equivalent_unfinished": "Your answer has the correct value, but it is not yet in simplest form. Simplify without changing the exact value."
+      },
+      "mathematical_support": {
+        "hint_1": "Convert every mixed number before changing the operation.",
+        "hint_2": "Keep the first converted fraction, reciprocate only the divisor, then simplify exactly.",
+        "worked_solution": "Convert the first mixed number: 1 2/3 = 5/3. → Keep the first fraction and reciprocate only the divisor: 5/3 ÷ 5/12 = 5/3 × 12/5. → Multiply: 5 × 12 = 60 and 3 × 5 = 15, giving 60/15. → 60/15 = 4. Simplification preserves the exact value."
+      },
+      "working": [
+        "Convert the first mixed number: 1 2/3 = 5/3.",
+        "Keep the first fraction and reciprocate only the divisor: 5/3 ÷ 5/12 = 5/3 × 12/5.",
+        "Multiply: 5 × 12 = 60 and 3 × 5 = 15, giving 60/15.",
+        "60/15 = 4. Simplification preserves the exact value."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_division",
+          "left": {
+            "whole": 1,
+            "n": 2,
+            "d": 3
+          },
+          "right": {
+            "n": 5,
+            "d": 12
+          },
+          "object": "juice",
+          "target": "Exact quotient",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "left_converted",
+            "reciprocal",
+            "raw",
+            "context_result"
+          ],
+          "unit": "litres"
+        }
+      },
+      "response_feedback": {
+        "25/36": "That multiplies by the divisor without taking its reciprocal.",
+        "8/5": "That result loses the whole-number contribution from the starting mixed number.",
+        "36/25": "That reverses both quantities instead of reciprocating only the divisor."
+      }
+    },
+    {
+      "id": "MD-14-X03",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A plank is 3 1/2 metres long. It is cut into pieces of 7/8 metre. How many pieces are made?",
+      "target": "Exact quotient",
+      "response": {
+        "type": "integer",
+        "accept_exact_equivalents": true,
+        "require_simplest_form": true,
+        "input_label": "Number of pieces"
+      },
+      "answer": {
+        "value": 4
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Four pieces of the stated length use the full plank.",
+        "correct_after_support": "Four pieces of the stated length use the full plank.",
+        "on_correct_math": "Convert the first mixed number: 3 1/2 = 7/2. → Keep the first fraction and reciprocate only the divisor: 7/2 ÷ 7/8 = 7/2 × 8/7. → Multiply: 7 × 8 = 56 and 2 × 7 = 14, giving 56/14. → 56/14 = 4. Simplification preserves the exact value.",
+        "on_incorrect_attempt_1": "Convert every mixed number before changing the operation.",
+        "on_incorrect_attempt_2": "Compare one piece length with the total converted plank length.",
+        "worked_explanation": "Convert the first mixed number: 3 1/2 = 7/2. → Keep the first fraction and reciprocate only the divisor: 7/2 ÷ 7/8 = 7/2 × 8/7. → Multiply: 7 × 8 = 56 and 2 × 7 = 14, giving 56/14. → 56/14 = 4. Simplification preserves the exact value.",
+        "on_equivalent_unfinished": "Your answer has the correct value, but it is not yet in simplest form. Simplify without changing the exact value."
+      },
+      "mathematical_support": {
+        "hint_1": "Convert every mixed number before changing the operation.",
+        "hint_2": "Keep the first converted fraction, reciprocate only the divisor, then simplify exactly.",
+        "worked_solution": "Convert the first mixed number: 3 1/2 = 7/2. → Keep the first fraction and reciprocate only the divisor: 7/2 ÷ 7/8 = 7/2 × 8/7. → Multiply: 7 × 8 = 56 and 2 × 7 = 14, giving 56/14. → 56/14 = 4. Simplification preserves the exact value."
+      },
+      "working": [
+        "Convert the first mixed number: 3 1/2 = 7/2.",
+        "Keep the first fraction and reciprocate only the divisor: 7/2 ÷ 7/8 = 7/2 × 8/7.",
+        "Multiply: 7 × 8 = 56 and 2 × 7 = 14, giving 56/14.",
+        "56/14 = 4. Simplification preserves the exact value."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_division",
+          "left": {
+            "whole": 3,
+            "n": 1,
+            "d": 2
+          },
+          "right": {
+            "n": 7,
+            "d": 8
+          },
+          "object": "plank",
+          "target": "Exact quotient",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "left_converted",
+            "reciprocal",
+            "raw",
+            "context_result"
+          ],
+          "unit": "m"
+        }
+      },
+      "response_feedback": {
+        "49/16": "That multiplies by the divisor without taking its reciprocal.",
+        "4/7": "That result loses the whole-number contribution from the starting mixed number.",
+        "16/49": "That reverses both quantities instead of reciprocating only the divisor."
+      }
+    },
+    {
+      "id": "MD-14-X04",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "There are 2 1/2 litres of paint. Each tin holds 5/8 litre. Which calculation finds the number of tins that can be filled?",
+      "target": "Exact quotient",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "2 1/2 ÷ 5/8",
+          "2 1/2 × 5/8",
+          "5/8 ÷ 2 1/2",
+          "2 1/2 − 5/8"
+        ]
+      },
+      "answer": {
+        "value": "2 1/2 ÷ 5/8"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That division counts tin-sized amounts within the available paint.",
+        "correct_after_support": "That division counts tin-sized amounts within the available paint.",
+        "on_correct_math": "The available paint is the total amount, and five eighths of a litre is one tin capacity. → The calculation is 2 1/2 ÷ 5/8.",
+        "on_incorrect_attempt_1": "Identify the unknown: it is a number of tins, not a paint volume.",
+        "on_incorrect_attempt_2": "Match the total paint and one-tin capacity to their roles.",
+        "worked_explanation": "The available paint is the total amount, and five eighths of a litre is one tin capacity. → The calculation is 2 1/2 ÷ 5/8."
+      },
+      "mathematical_support": {
+        "hint_1": "Identify the unknown: it is a number of tins, not a paint volume.",
+        "hint_2": "Use total amount divided by the size of one equal group.",
+        "worked_solution": "The available paint is the total amount, and five eighths of a litre is one tin capacity. → The calculation is 2 1/2 ÷ 5/8."
+      },
+      "working": [
+        "The available paint is the total amount, and five eighths of a litre is one tin capacity.",
+        "The calculation is 2 1/2 ÷ 5/8."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_division",
+          "left": {
+            "whole": 2,
+            "n": 1,
+            "d": 2
+          },
+          "right": {
+            "n": 5,
+            "d": 8
+          },
+          "object": "paint",
+          "target": "Exact quotient",
+          "math_text": true,
+          "compact_captions": true,
+          "unit": "litres",
+          "phase": "given",
+          "working_phases": [
+            "division",
+            "division"
+          ]
+        }
+      },
+      "response_feedback": {
+        "2 1/2 × 5/8": "That finds a fraction of the paint rather than the number of tins.",
+        "5/8 ÷ 2 1/2": "That reverses the total and one-tin capacity.",
+        "2 1/2 − 5/8": "That removes one tin capacity but does not count all complete tins."
+      }
+    },
+    {
+      "id": "MD-14-E01",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "exit",
+      "prompt": "Work out 1 3/5 ÷ 4/5. Show the mixed-number conversion, then give the simplest exact answer.",
+      "target": "Exact quotient",
+      "response": {
+        "type": "conversion_product",
+        "factors": [
+          {
+            "whole": 1,
+            "n": 3,
+            "d": 5,
+            "position": "Dividend"
+          }
+        ],
+        "allow_equivalent_conversions": true,
+        "final_response": {
+          "type": "integer",
+          "accept_exact_equivalents": true,
+          "require_simplest_form": true,
+          "input_label": "Final answer in simplest exact form"
+        }
+      },
+      "answer": {
+        "value": {
+          "conversions": [
+            {
+              "n": 8,
+              "d": 5
+            }
+          ],
+          "result": "2"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The conversion and final quotient are both exact.",
+        "correct_after_support": "The conversion and final quotient are both exact.",
+        "on_correct_math": "Convert the first mixed number: 1 3/5 = 8/5. → Keep the first fraction and reciprocate only the divisor: 8/5 ÷ 4/5 = 8/5 × 5/4. → Multiply: 8 × 5 = 40 and 5 × 4 = 20, giving 40/20. → 40/20 = 2. Simplification preserves the exact value.",
+        "on_incorrect_attempt_1": "Exit questions do not provide hints.",
+        "on_incorrect_attempt_2": "Check the mixed-number conversion and the role of the divisor.",
+        "worked_explanation": "Convert the first mixed number: 1 3/5 = 8/5. → Keep the first fraction and reciprocate only the divisor: 8/5 ÷ 4/5 = 8/5 × 5/4. → Multiply: 8 × 5 = 40 and 5 × 4 = 20, giving 40/20. → 40/20 = 2. Simplification preserves the exact value.",
+        "on_locked_incorrect": "Check the mixed-number conversion and the role of the divisor."
+      },
+      "mathematical_support": {
+        "hint_1": "Exit questions do not provide hints.",
+        "hint_2": "Complete every required field before submitting.",
+        "worked_solution": "Convert the first mixed number: 1 3/5 = 8/5. → Keep the first fraction and reciprocate only the divisor: 8/5 ÷ 4/5 = 8/5 × 5/4. → Multiply: 8 × 5 = 40 and 5 × 4 = 20, giving 40/20. → 40/20 = 2. Simplification preserves the exact value."
+      },
+      "working": [
+        "Convert the first mixed number: 1 3/5 = 8/5.",
+        "Keep the first fraction and reciprocate only the divisor: 8/5 ÷ 4/5 = 8/5 × 5/4.",
+        "Multiply: 8 × 5 = 40 and 5 × 4 = 20, giving 40/20.",
+        "40/20 = 2. Simplification preserves the exact value."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_division",
+          "left": {
+            "whole": 1,
+            "n": 3,
+            "d": 5
+          },
+          "right": {
+            "n": 4,
+            "d": 5
+          },
+          "object": "symbolic",
+          "target": "Exact quotient",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "left_converted",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "missing_conversion": "Enter the improper-fraction conversion before the final answer.",
+        "omitted_whole": "That conversion omits the complete whole.",
+        "incorrect_conversion": "The conversion does not preserve the mixed number.",
+        "wrong_form": "The value is equivalent, but the final answer is not in the requested simplest form.",
+        "incorrect_product": "The conversion is recorded, but the final quotient is not correct."
+      },
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "MD-14-E02",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "exit",
+      "prompt": "Work out 2 1/4 ÷ 1 1/2. Show both mixed-number conversions, then give the simplest exact answer.",
+      "target": "Exact quotient",
+      "response": {
+        "type": "conversion_product",
+        "factors": [
+          {
+            "whole": 2,
+            "n": 1,
+            "d": 4,
+            "position": "Dividend"
+          },
+          {
+            "whole": 1,
+            "n": 1,
+            "d": 2,
+            "position": "Divisor"
+          }
+        ],
+        "allow_equivalent_conversions": true,
+        "final_response": {
+          "type": "fraction",
+          "accept_equivalent_notation": true,
+          "require_simplest_form": true,
+          "allow_mixed_number": true,
+          "allow_signed_parts": true,
+          "show_authored_label": true,
+          "input_label": "Final answer in simplest exact form"
+        }
+      },
+      "answer": {
+        "value": {
+          "conversions": [
+            {
+              "n": 9,
+              "d": 4
+            },
+            {
+              "n": 3,
+              "d": 2
+            }
+          ],
+          "result": "3/2"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Both conversions preserve their quantities, and the quotient is in simplest exact form.",
+        "correct_after_support": "Both conversions preserve their quantities, and the quotient is in simplest exact form.",
+        "on_correct_math": "Convert the first mixed number: 2 1/4 = 9/4. → Convert the divisor: 1 1/2 = 3/2. → Keep the first fraction and reciprocate only the divisor: 9/4 ÷ 3/2 = 9/4 × 2/3. → Multiply: 9 × 2 = 18 and 4 × 3 = 12, giving 18/12. → 18/12 = 3/2. Simplification preserves the exact value.",
+        "on_incorrect_attempt_1": "Exit questions do not provide hints.",
+        "on_incorrect_attempt_2": "Check each whole-number contribution before reciprocating only the divisor.",
+        "worked_explanation": "Convert the first mixed number: 2 1/4 = 9/4. → Convert the divisor: 1 1/2 = 3/2. → Keep the first fraction and reciprocate only the divisor: 9/4 ÷ 3/2 = 9/4 × 2/3. → Multiply: 9 × 2 = 18 and 4 × 3 = 12, giving 18/12. → 18/12 = 3/2. Simplification preserves the exact value.",
+        "on_locked_incorrect": "Check each whole-number contribution before reciprocating only the divisor."
+      },
+      "mathematical_support": {
+        "hint_1": "Exit questions do not provide hints.",
+        "hint_2": "Complete every required field before submitting.",
+        "worked_solution": "Convert the first mixed number: 2 1/4 = 9/4. → Convert the divisor: 1 1/2 = 3/2. → Keep the first fraction and reciprocate only the divisor: 9/4 ÷ 3/2 = 9/4 × 2/3. → Multiply: 9 × 2 = 18 and 4 × 3 = 12, giving 18/12. → 18/12 = 3/2. Simplification preserves the exact value."
+      },
+      "working": [
+        "Convert the first mixed number: 2 1/4 = 9/4.",
+        "Convert the divisor: 1 1/2 = 3/2.",
+        "Keep the first fraction and reciprocate only the divisor: 9/4 ÷ 3/2 = 9/4 × 2/3.",
+        "Multiply: 9 × 2 = 18 and 4 × 3 = 12, giving 18/12.",
+        "18/12 = 3/2. Simplification preserves the exact value."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_division",
+          "left": {
+            "whole": 2,
+            "n": 1,
+            "d": 4
+          },
+          "right": {
+            "whole": 1,
+            "n": 1,
+            "d": 2
+          },
+          "object": "symbolic",
+          "target": "Exact quotient",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "left_converted",
+            "right_converted",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "missing_conversion": "Enter both improper-fraction conversions before the final answer.",
+        "omitted_whole": "One conversion omits the complete whole.",
+        "incorrect_conversion": "At least one conversion does not preserve its mixed number.",
+        "wrong_form": "The quotient has the correct value, but the final form is not simplest.",
+        "incorrect_product": "The conversions are recorded, but the final quotient is not correct."
+      },
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "MD-14-E03",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "exit",
+      "prompt": "Which method is valid for division involving mixed numbers?",
+      "target": "The valid mixed-number division method",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Convert every mixed number, keep the first fraction, multiply by the reciprocal of the second fraction, then simplify.",
+          "Reciprocate each mixed number before converting it.",
+          "Convert only the first mixed number and multiply by the second value unchanged.",
+          "Convert both mixed numbers and reciprocate both fractions."
+        ]
+      },
+      "answer": {
+        "value": "Convert every mixed number, keep the first fraction, multiply by the reciprocal of the second fraction, then simplify."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That sequence protects both conversions and the role of the divisor.",
+        "correct_after_support": "That sequence protects both conversions and the role of the divisor.",
+        "on_correct_math": "Convert each mixed number without changing its value. → Keep the first converted fraction and reciprocate only the divisor. → Multiply, simplify and use the requested exact form.",
+        "on_incorrect_attempt_1": "Exit questions do not provide hints.",
+        "on_incorrect_attempt_2": "Separate conversion from reciprocation and identify which quantity is the divisor.",
+        "worked_explanation": "Convert each mixed number without changing its value. → Keep the first converted fraction and reciprocate only the divisor. → Multiply, simplify and use the requested exact form.",
+        "on_locked_incorrect": "Separate conversion from reciprocation and identify which quantity is the divisor."
+      },
+      "mathematical_support": {
+        "hint_1": "Exit questions do not provide hints.",
+        "hint_2": "Choose the sequence that preserves the original quantities.",
+        "worked_solution": "Convert each mixed number without changing its value. → Keep the first converted fraction and reciprocate only the divisor. → Multiply, simplify and use the requested exact form."
+      },
+      "working": [
+        "Convert each mixed number without changing its value.",
+        "Keep the first converted fraction and reciprocate only the divisor.",
+        "Multiply, simplify and use the requested exact form."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_division_rule",
+          "left": {
+            "whole": 1,
+            "n": 1,
+            "d": 2
+          },
+          "right": {
+            "n": 3,
+            "d": 4
+          },
+          "object": "relationship",
+          "target": "The valid mixed-number division method",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "Reciprocate each mixed number before converting it.": "A mixed number must first be written as one improper fraction.",
+        "Convert only the first mixed number and multiply by the second value unchanged.": "Every mixed number must be converted, and the divisor needs its reciprocal.",
+        "Convert both mixed numbers and reciprocate both fractions.": "The first converted fraction is the starting amount and must stay unchanged."
+      },
+      "final_error_feedback": "answer_specific"
+    }
+  ],
+  "canonical_lesson": {
+    "version": "MD14-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

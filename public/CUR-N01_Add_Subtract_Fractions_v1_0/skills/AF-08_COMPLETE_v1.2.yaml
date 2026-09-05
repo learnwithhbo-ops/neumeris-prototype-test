@@ -1,0 +1,2002 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "AF-08 - Add fractions when both fractions must be changed",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-17",
+      "sha256": "45cc13a5643b4f1e20676648d9fc1da970bebaa60849cba3680ae66428bf56ca"
+    },
+    "authored_scope": "Add the fractions accurately by working with equal-sized parts.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "AF08-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "verified_desktop_secure_and_mobile_invalid_conversion_paths_exact_equivalence_resume_narration_and_320_390_layouts",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        4,
+        5,
+        6,
+        7,
+        13,
+        15
+      ],
+      "source_repairs_consulted": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        16,
+        17
+      ],
+      "note": "All 17 pages read. Active pages 4–7, 13 and 15 mapped exactly. All six guided numeric blanks are preserved separately. Final calculations capture both equivalent fractions, accept any valid common denominator, and require exact sums. Source repetitions are retained without claiming fresh evidence. Entry, Diagnostic and delayed Retrieval remain excluded."
+    }
+  },
+  "identity": {
+    "id": "AF-08",
+    "slug": "add-fractions-when-both-fractions-must-be-changed",
+    "title": "Add fractions when both fractions must be changed",
+    "strand": "Number",
+    "cluster": "Adding and Subtracting Fractions",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Add two proper fractions when neither denominator is a multiple of the other by rewriting both fractions with a common denominator.",
+    "success_criteria": [
+      "Find a common denominator for both fractions.",
+      "Preserve each fraction using its own equal numerator and denominator scale factor.",
+      "Add the renamed numerators and retain their shared denominator.",
+      "Apply the method in unlabelled contexts and show valid conversion evidence."
+    ],
+    "boundaries": {
+      "includes": [
+        "Two positive proper fractions",
+        "Neither denominator a multiple of the other",
+        "Sums less than one",
+        "Any valid common denominator and exact equivalent answer"
+      ],
+      "excludes": [
+        "Subtraction",
+        "Mixed numbers",
+        "Sums at least one",
+        "Deliberate simplification practice",
+        "Multistep operation selection",
+        "Entry, Diagnostic and delayed Retrieval routes"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "AF-01",
+      "AF-04",
+      "AF-07"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for AF-01, AF-04, AF-07 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "integer",
+      "fraction",
+      "single_choice",
+      "conversion_product"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    }
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "Both fractions must name equal-sized parts before adding.",
+    "invariant": "Each fraction keeps its value when its numerator and denominator are scaled equally.",
+    "mathematical_rule": "Find a common denominator; rewrite both fractions; add only the numerators.",
+    "must_notice": [
+      "Both fractions need renaming.",
+      "The two fractions can use different scale factors.",
+      "Keep the common denominator when adding."
+    ],
+    "common_confusions": [
+      "Renaming only one fraction",
+      "Changing only the denominators",
+      "Using the same scale factor for different denominators",
+      "Adding the original numerator and denominator pairs",
+      "Adding denominators after conversion"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "Different-sized parts",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Different-sized parts",
+          "initial_state": "Different-sized parts",
+          "model": {
+            "kind": "both_denominators_add",
+            "a": 2,
+            "b": 3,
+            "c": 1,
+            "d": 4,
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Two thirds and one quarter name different-sized parts. Neither denominator is a multiple of the other."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Rename both fractions",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Rename both fractions",
+          "initial_state": "Rename both fractions",
+          "model": {
+            "kind": "both_denominators_add",
+            "a": 2,
+            "b": 3,
+            "c": 1,
+            "d": 4,
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true
+          }
+        },
+        "narration": {
+          "script": "Split each third into four twelfths, and each quarter into three twelfths. Both amounts stay fixed. Now their equal-sized parts can be combined."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Why both fractions?",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Why both fractions?",
+          "initial_state": "Why both fractions?",
+          "model": {
+            "kind": "both_denominators_add",
+            "a": 2,
+            "b": 3,
+            "c": 1,
+            "d": 4,
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Decide why both fractions need to be rewritten."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "AF-08-C01"
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Two different scale factors",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Two different scale factors",
+          "initial_state": "Two different scale factors",
+          "model": {
+            "kind": "both_denominators_add",
+            "a": 2,
+            "b": 5,
+            "c": 1,
+            "d": 3,
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true
+          }
+        },
+        "narration": {
+          "script": "For two fifths plus one third, use fifteenths. The first fraction scales by three and the second by five. The working shows both conversions before the numerators are combined."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Check both conversions",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Check both conversions",
+          "initial_state": "Check both conversions",
+          "model": {
+            "kind": "both_denominators_add",
+            "a": 1,
+            "b": 4,
+            "c": 2,
+            "d": 3,
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Choose the method that preserves both fractions and then combines equal-sized parts."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "AF-08-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "AF-08-G01",
+        "support_level": "high",
+        "pre_question_script": "Work through one sixth plus two fifths, one missing value at a time.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "AF-08-G02",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "guided",
+        "question_ref": "AF-08-G03",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "faded",
+        "question_ref": "AF-08-G04",
+        "support_level": "reduced",
+        "pre_question_script": "",
+        "correct_next": "G05"
+      },
+      "G05": {
+        "stage": "faded",
+        "question_ref": "AF-08-G05",
+        "support_level": "reduced",
+        "pre_question_script": "",
+        "correct_next": "G06"
+      },
+      "G06": {
+        "stage": "faded",
+        "question_ref": "AF-08-G06",
+        "support_level": "reduced",
+        "pre_question_script": "",
+        "correct_next": "G07"
+      },
+      "G07": {
+        "stage": "independent_transfer",
+        "question_ref": "AF-08-G07",
+        "support_level": "none",
+        "pre_question_script": "",
+        "correct_next": "P01"
+      }
+    },
+    "practice": {
+      "intro_script": "Complete the five calculations and the answer check, then apply the method to water, a journey, ribbon and paint.",
+      "question_order": [
+        "AF-08-P01",
+        "AF-08-P02",
+        "AF-08-P03",
+        "AF-08-P04",
+        "AF-08-P05",
+        "AF-08-P06",
+        "AF-08-X01",
+        "AF-08-X02",
+        "AF-08-X03",
+        "AF-08-X04"
+      ],
+      "question_count": 10
+    },
+    "exit": {
+      "intro_script": "Show both equivalent fractions and the sum for each calculation, then select the valid method. Each answer locks once submitted; no hints are available.",
+      "primary_question_refs": [
+        "AF-08-E01",
+        "AF-08-E02",
+        "AF-08-E03"
+      ],
+      "confirmation_question_refs": [],
+      "mastery_policy": {
+        "profile": "all_primary_unsupported",
+        "require_all": true,
+        "source_page": 13,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "You preserved both fractions while giving them a common denominator, then added equal-sized parts.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Check both conversions",
+      "ryan_script": "One or more final checks need another pass. Give each fraction its own equal scale factor, then combine the numerators without changing their shared denominator.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "AF-08-C01",
+      "source_ref": {
+        "page": 4
+      },
+      "stage": "practice",
+      "prompt": "For 2/3 + 1/4, why must both fractions be rewritten?",
+      "target": "Rename both fractions with equal-sized parts before adding",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Neither denominator is a multiple of the other.",
+          "Both numerators are even.",
+          "Every fraction addition must use denominator 12.",
+          "The numerators must be made equal before adding."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "Neither denominator is a multiple of the other."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Exactly. Neither original denominator can name both fractions.",
+        "correct_after_support": "Exactly. Neither original denominator can name both fractions.",
+        "on_correct_math": "Neither 3 nor 4 is a multiple of the other. → Use a denominator that is a multiple of both. → Both fractions must be renamed.",
+        "on_incorrect_attempt_1": "Compare the two denominators, not the numerators.",
+        "on_incorrect_attempt_2": "Neither three nor four is a multiple of the other. Choose that explanation.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion working after the final set.",
+        "worked_explanation": "Neither 3 nor 4 is a multiple of the other. → Use a denominator that is a multiple of both. → Both fractions must be renamed."
+      },
+      "mathematical_support": {
+        "hint_1": "Compare the two denominators, not the numerators.",
+        "hint_2": "Use a common denominator. Each fraction keeps its value by scaling its own numerator and denominator equally.",
+        "worked_solution": "Neither 3 nor 4 is a multiple of the other. → Use a denominator that is a multiple of both. → Both fractions must be renamed."
+      },
+      "working": [
+        "Neither 3 nor 4 is a multiple of the other.",
+        "Use a denominator that is a multiple of both.",
+        "Both fractions must be renamed."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "both_denominators_add",
+          "a": 2,
+          "b": 3,
+          "c": 1,
+          "d": 4,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "Both numerators are even.": "One is not even, and numerator parity does not decide the common denominator.",
+        "Every fraction addition must use denominator 12.": "Twelve works for this pair, but different denominator pairs can need different common multiples.",
+        "The numerators must be made equal before adding.": "The part sizes must match. The numerators do not need to be equal."
+      }
+    },
+    {
+      "id": "AF-08-C02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "For 1/4 + 2/3, which method is correct?",
+      "target": "Rename both fractions with equal-sized parts before adding",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "1/4 + 2/3 = 3/12 + 8/12 = 11/12",
+          "1/4 + 2/3 = 1/12 + 2/12 = 3/12",
+          "1/4 + 2/3 = 3/7",
+          "1/4 + 2/3 = 3/12 + 8/12 = 11/24"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "1/4 + 2/3 = 3/12 + 8/12 = 11/12"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both conversions preserve value, and the part size remains twelfths.",
+        "correct_after_support": "Correct. Both conversions preserve value, and the part size remains twelfths.",
+        "on_correct_math": "Use common denominator 12. → 1/4 = 3/12. → 2/3 = 8/12. → 3/12 + 8/12 = 11/12.",
+        "on_incorrect_attempt_1": "Check that both conversions preserve value, then keep the common denominator when adding.",
+        "on_incorrect_attempt_2": "One quarter is three twelfths and two thirds is eight twelfths. Choose the method with both conversions and a sum in twelfths.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion working after the final set.",
+        "worked_explanation": "Use common denominator 12. → 1/4 = 3/12. → 2/3 = 8/12. → 3/12 + 8/12 = 11/12."
+      },
+      "mathematical_support": {
+        "hint_1": "Check that both conversions preserve value, then keep the common denominator when adding.",
+        "hint_2": "Use a common denominator. Each fraction keeps its value by scaling its own numerator and denominator equally.",
+        "worked_solution": "Use common denominator 12. → 1/4 = 3/12. → 2/3 = 8/12. → 3/12 + 8/12 = 11/12."
+      },
+      "working": [
+        "Use common denominator 12.",
+        "1/4 = 3/12.",
+        "2/3 = 8/12.",
+        "3/12 + 8/12 = 11/12."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "both_denominators_add",
+          "a": 1,
+          "b": 4,
+          "c": 2,
+          "d": 3,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "1/4 + 2/3 = 1/12 + 2/12 = 3/12": "Only the denominators changed. Each numerator must use the same factor as its own denominator.",
+        "1/4 + 2/3 = 3/7": "Adding the original numerator and denominator pairs does not preserve the fractions.",
+        "1/4 + 2/3 = 3/12 + 8/12 = 11/24": "The conversions are valid, but the denominators must not be added."
+      }
+    },
+    {
+      "id": "AF-08-G01",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "For 1/6 + 2/5, enter the lowest common denominator.",
+      "target": "Rename both fractions with equal-sized parts before adding",
+      "response": {
+        "type": "integer",
+        "input_label": "Lowest common denominator"
+      },
+      "answer": {
+        "value": 30
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Thirty is the lowest denominator that can name both fractions.",
+        "correct_after_support": "Correct. Thirty is the lowest denominator that can name both fractions.",
+        "on_correct_math": "List positive multiples of 6 and 5. → 30 is the first value in both lists.",
+        "on_incorrect_attempt_1": "Look for the first positive multiple shared by six and five.",
+        "on_incorrect_attempt_2": "The first shared multiple is thirty. Enter thirty.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion working after the final set.",
+        "worked_explanation": "List positive multiples of 6 and 5. → 30 is the first value in both lists."
+      },
+      "mathematical_support": {
+        "hint_1": "Look for the first positive multiple shared by six and five.",
+        "hint_2": "Use a common denominator. Each fraction keeps its value by scaling its own numerator and denominator equally.",
+        "worked_solution": "List positive multiples of 6 and 5. → 30 is the first value in both lists."
+      },
+      "working": [
+        "List positive multiples of 6 and 5.",
+        "30 is the first value in both lists."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "both_denominator_steps",
+          "label": "Choose a common denominator",
+          "expression": "Lowest common denominator: ?",
+          "completed": "Lowest common denominator: 30",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-08-G02",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "Complete the missing numerator: 1/6 = ?/30.",
+      "target": "Rename both fractions with equal-sized parts before adding",
+      "response": {
+        "type": "integer",
+        "input_label": "First equivalent numerator"
+      },
+      "answer": {
+        "value": 5
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. One sixth is five thirtieths.",
+        "correct_after_support": "Correct. One sixth is five thirtieths.",
+        "on_correct_math": "6 × 5 = 30. → 1 × 5 = 5. → 1/6 = 5/30.",
+        "on_incorrect_attempt_1": "Six is multiplied by five, so multiply its numerator by five too.",
+        "on_incorrect_attempt_2": "One multiplied by five is five. Enter five.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion working after the final set.",
+        "worked_explanation": "6 × 5 = 30. → 1 × 5 = 5. → 1/6 = 5/30."
+      },
+      "mathematical_support": {
+        "hint_1": "Six is multiplied by five, so multiply its numerator by five too.",
+        "hint_2": "Use a common denominator. Each fraction keeps its value by scaling its own numerator and denominator equally.",
+        "worked_solution": "6 × 5 = 30. → 1 × 5 = 5. → 1/6 = 5/30."
+      },
+      "working": [
+        "6 × 5 = 30.",
+        "1 × 5 = 5.",
+        "1/6 = 5/30."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "both_denominator_steps",
+          "label": "Rename one sixth",
+          "expression": "1/6 = ?/30",
+          "completed": "1/6 = 5/30",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-08-G03",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "Complete the missing numerator: 2/5 = ?/30.",
+      "target": "Rename both fractions with equal-sized parts before adding",
+      "response": {
+        "type": "integer",
+        "input_label": "Second equivalent numerator"
+      },
+      "answer": {
+        "value": 12
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Two fifths is twelve thirtieths.",
+        "correct_after_support": "Correct. Two fifths is twelve thirtieths.",
+        "on_correct_math": "5 × 6 = 30. → 2 × 6 = 12. → 2/5 = 12/30.",
+        "on_incorrect_attempt_1": "This denominator uses a factor of six, not the factor used for one sixth.",
+        "on_incorrect_attempt_2": "Two multiplied by six is twelve. Enter twelve.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion working after the final set.",
+        "worked_explanation": "5 × 6 = 30. → 2 × 6 = 12. → 2/5 = 12/30."
+      },
+      "mathematical_support": {
+        "hint_1": "This denominator uses a factor of six, not the factor used for one sixth.",
+        "hint_2": "Use a common denominator. Each fraction keeps its value by scaling its own numerator and denominator equally.",
+        "worked_solution": "5 × 6 = 30. → 2 × 6 = 12. → 2/5 = 12/30."
+      },
+      "working": [
+        "5 × 6 = 30.",
+        "2 × 6 = 12.",
+        "2/5 = 12/30."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "both_denominator_steps",
+          "label": "Rename two fifths",
+          "expression": "2/5 = ?/30",
+          "completed": "2/5 = 12/30",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-08-G04",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "faded",
+      "prompt": "Write the converted first addend in ?/30 + 12/30.",
+      "target": "Rename both fractions with equal-sized parts before adding",
+      "response": {
+        "type": "integer",
+        "input_label": "First converted addend"
+      },
+      "answer": {
+        "value": 5
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The first addend is now written in thirtieths.",
+        "correct_after_support": "Correct. The first addend is now written in thirtieths.",
+        "on_correct_math": "1/6 = 5/30. → The first addend is 5/30.",
+        "on_incorrect_attempt_1": "Carry forward the numerator you found when renaming one sixth.",
+        "on_incorrect_attempt_2": "One sixth became five thirtieths. Enter five.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion working after the final set.",
+        "worked_explanation": "1/6 = 5/30. → The first addend is 5/30."
+      },
+      "mathematical_support": {
+        "hint_1": "Carry forward the numerator you found when renaming one sixth.",
+        "hint_2": "Use a common denominator. Each fraction keeps its value by scaling its own numerator and denominator equally.",
+        "worked_solution": "1/6 = 5/30. → The first addend is 5/30."
+      },
+      "working": [
+        "1/6 = 5/30.",
+        "The first addend is 5/30."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "both_denominator_steps",
+          "label": "Carry forward the first conversion",
+          "expression": "?/30 + 12/30",
+          "completed": "5/30 + 12/30",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-08-G05",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "faded",
+      "prompt": "Write the converted second addend in 5/30 + ?/30.",
+      "target": "Rename both fractions with equal-sized parts before adding",
+      "response": {
+        "type": "integer",
+        "input_label": "Second converted addend"
+      },
+      "answer": {
+        "value": 12
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both addends now use the same-sized parts.",
+        "correct_after_support": "Correct. Both addends now use the same-sized parts.",
+        "on_correct_math": "2/5 = 12/30. → The second addend is 12/30.",
+        "on_incorrect_attempt_1": "Carry forward the numerator you found when renaming two fifths.",
+        "on_incorrect_attempt_2": "Two fifths became twelve thirtieths. Enter twelve.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion working after the final set.",
+        "worked_explanation": "2/5 = 12/30. → The second addend is 12/30."
+      },
+      "mathematical_support": {
+        "hint_1": "Carry forward the numerator you found when renaming two fifths.",
+        "hint_2": "Use a common denominator. Each fraction keeps its value by scaling its own numerator and denominator equally.",
+        "worked_solution": "2/5 = 12/30. → The second addend is 12/30."
+      },
+      "working": [
+        "2/5 = 12/30.",
+        "The second addend is 12/30."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "both_denominator_steps",
+          "label": "Carry forward the second conversion",
+          "expression": "5/30 + ?/30",
+          "completed": "5/30 + 12/30",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-08-G06",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "faded",
+      "prompt": "Complete the sum numerator: 5/30 + 12/30 = ?/30.",
+      "target": "Rename both fractions with equal-sized parts before adding",
+      "response": {
+        "type": "integer",
+        "input_label": "Sum numerator"
+      },
+      "answer": {
+        "value": 17
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The combined amount is seventeen thirtieths.",
+        "correct_after_support": "Correct. The combined amount is seventeen thirtieths.",
+        "on_correct_math": "The denominator stays 30. → 5 + 12 = 17. → 5/30 + 12/30 = 17/30.",
+        "on_incorrect_attempt_1": "Add only the two numerators now that the parts match.",
+        "on_incorrect_attempt_2": "Five plus twelve is seventeen. Enter seventeen.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion working after the final set.",
+        "worked_explanation": "The denominator stays 30. → 5 + 12 = 17. → 5/30 + 12/30 = 17/30."
+      },
+      "mathematical_support": {
+        "hint_1": "Add only the two numerators now that the parts match.",
+        "hint_2": "Use a common denominator. Each fraction keeps its value by scaling its own numerator and denominator equally.",
+        "worked_solution": "The denominator stays 30. → 5 + 12 = 17. → 5/30 + 12/30 = 17/30."
+      },
+      "working": [
+        "The denominator stays 30.",
+        "5 + 12 = 17.",
+        "5/30 + 12/30 = 17/30."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "both_denominator_steps",
+          "label": "Combine the equal-sized parts",
+          "expression": "5/30 + 12/30 = ?/30",
+          "completed": "5/30 + 12/30 = 17/30",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-08-G07",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "independent_transfer",
+      "prompt": "Which statement is correct for 1/6 + 2/5 using denominator 30?",
+      "target": "Rename both fractions with equal-sized parts before adding",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Only the fraction with denominator 6 must be rewritten.",
+          "Only the fraction with denominator 5 must be rewritten.",
+          "Both fractions must be rewritten with denominator 30.",
+          "The fractions can be added without changing either fraction."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "Both fractions must be rewritten with denominator 30."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Exactly. Both original fractions need renaming in thirtieths.",
+        "correct_after_support": "Exactly. Both original fractions need renaming in thirtieths.",
+        "on_correct_math": "Neither denominator is a multiple of the other. → 1/6 = 5/30 and 2/5 = 12/30. → Both fractions need rewriting.",
+        "on_incorrect_attempt_1": "Compare each original denominator with thirty.",
+        "on_incorrect_attempt_2": "Neither fraction starts in thirtieths. Select the statement that rewrites both.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion working after the final set.",
+        "worked_explanation": "Neither denominator is a multiple of the other. → 1/6 = 5/30 and 2/5 = 12/30. → Both fractions need rewriting."
+      },
+      "mathematical_support": {
+        "hint_1": "Compare each original denominator with thirty.",
+        "hint_2": "Use a common denominator. Each fraction keeps its value by scaling its own numerator and denominator equally.",
+        "worked_solution": "Neither denominator is a multiple of the other. → 1/6 = 5/30 and 2/5 = 12/30. → Both fractions need rewriting."
+      },
+      "working": [
+        "Neither denominator is a multiple of the other.",
+        "1/6 = 5/30 and 2/5 = 12/30.",
+        "Both fractions need rewriting."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "both_denominators_add",
+          "a": 1,
+          "b": 6,
+          "c": 2,
+          "d": 5,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-08-P01",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Work out 3/5 + 1/4. Give an exact fraction.",
+      "target": "Rename both fractions with equal-sized parts before adding",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "show_authored_label": true,
+        "input_label": "Exact sum"
+      },
+      "answer": {
+        "value": "17/20"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both fractions kept their values, and the sum is 17 parts out of 20.",
+        "correct_after_support": "Correct. Both fractions kept their values, and the sum is 17 parts out of 20.",
+        "on_correct_math": "A common denominator is 20. → 3/5 = (3 × 4)/(5 × 4) = 12/20. → 1/4 = (1 × 5)/(4 × 5) = 5/20. → 12/20 + 5/20 = 17/20.",
+        "on_incorrect_attempt_1": "Check both conversions. The first fraction scales by 4, while the second scales by 5, when using denominator 20.",
+        "on_incorrect_attempt_2": "Compare each conversion, then combine the renamed numerators and keep the common denominator. Enter the corrected exact fraction.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion working after the final set.",
+        "worked_explanation": "A common denominator is 20. → 3/5 = (3 × 4)/(5 × 4) = 12/20. → 1/4 = (1 × 5)/(4 × 5) = 5/20. → 12/20 + 5/20 = 17/20."
+      },
+      "mathematical_support": {
+        "hint_1": "Check both conversions. The first fraction scales by 4, while the second scales by 5, when using denominator 20.",
+        "hint_2": "Use a common denominator. Each fraction keeps its value by scaling its own numerator and denominator equally.",
+        "worked_solution": "A common denominator is 20. → 3/5 = (3 × 4)/(5 × 4) = 12/20. → 1/4 = (1 × 5)/(4 × 5) = 5/20. → 12/20 + 5/20 = 17/20."
+      },
+      "working": [
+        "A common denominator is 20.",
+        "3/5 = (3 × 4)/(5 × 4) = 12/20.",
+        "1/4 = (1 × 5)/(4 × 5) = 5/20.",
+        "12/20 + 5/20 = 17/20."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "both_denominators_add",
+          "a": 3,
+          "b": 5,
+          "c": 1,
+          "d": 4,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "4/9": "Adding the original numerators and denominators does not make equal-sized parts.",
+        "4/20": "Both denominators have changed, but the numerators have not. Scale each numerator by its own denominator factor.",
+        "17/40": "The renamed fractions already share a part size. Add only their numerators, not their denominators.",
+        "13/20": "The first conversion is included, but the second numerator still needs its own scale factor.",
+        "8/20": "The second conversion is included, but the first numerator still needs its own scale factor."
+      }
+    },
+    {
+      "id": "AF-08-P02",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Work out 1/3 + 2/7. Give an exact fraction.",
+      "target": "Rename both fractions with equal-sized parts before adding",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "show_authored_label": true,
+        "input_label": "Exact sum"
+      },
+      "answer": {
+        "value": "13/21"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both fractions kept their values, and the sum is 13 parts out of 21.",
+        "correct_after_support": "Correct. Both fractions kept their values, and the sum is 13 parts out of 21.",
+        "on_correct_math": "A common denominator is 21. → 1/3 = (1 × 7)/(3 × 7) = 7/21. → 2/7 = (2 × 3)/(7 × 3) = 6/21. → 7/21 + 6/21 = 13/21.",
+        "on_incorrect_attempt_1": "Check both conversions. The first fraction scales by 7, while the second scales by 3, when using denominator 21.",
+        "on_incorrect_attempt_2": "Compare each conversion, then combine the renamed numerators and keep the common denominator. Enter the corrected exact fraction.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion working after the final set.",
+        "worked_explanation": "A common denominator is 21. → 1/3 = (1 × 7)/(3 × 7) = 7/21. → 2/7 = (2 × 3)/(7 × 3) = 6/21. → 7/21 + 6/21 = 13/21."
+      },
+      "mathematical_support": {
+        "hint_1": "Check both conversions. The first fraction scales by 7, while the second scales by 3, when using denominator 21.",
+        "hint_2": "Use a common denominator. Each fraction keeps its value by scaling its own numerator and denominator equally.",
+        "worked_solution": "A common denominator is 21. → 1/3 = (1 × 7)/(3 × 7) = 7/21. → 2/7 = (2 × 3)/(7 × 3) = 6/21. → 7/21 + 6/21 = 13/21."
+      },
+      "working": [
+        "A common denominator is 21.",
+        "1/3 = (1 × 7)/(3 × 7) = 7/21.",
+        "2/7 = (2 × 3)/(7 × 3) = 6/21.",
+        "7/21 + 6/21 = 13/21."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "both_denominators_add",
+          "a": 1,
+          "b": 3,
+          "c": 2,
+          "d": 7,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "3/10": "Adding the original numerators and denominators does not make equal-sized parts.",
+        "3/21": "Both denominators have changed, but the numerators have not. Scale each numerator by its own denominator factor.",
+        "13/42": "The renamed fractions already share a part size. Add only their numerators, not their denominators.",
+        "9/21": "The first conversion is included, but the second numerator still needs its own scale factor.",
+        "7/21": "The second conversion is included, but the first numerator still needs its own scale factor."
+      }
+    },
+    {
+      "id": "AF-08-P03",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Work out 2/9 + 1/4. Give an exact fraction.",
+      "target": "Rename both fractions with equal-sized parts before adding",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "show_authored_label": true,
+        "input_label": "Exact sum"
+      },
+      "answer": {
+        "value": "17/36"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both fractions kept their values, and the sum is 17 parts out of 36.",
+        "correct_after_support": "Correct. Both fractions kept their values, and the sum is 17 parts out of 36.",
+        "on_correct_math": "A common denominator is 36. → 2/9 = (2 × 4)/(9 × 4) = 8/36. → 1/4 = (1 × 9)/(4 × 9) = 9/36. → 8/36 + 9/36 = 17/36.",
+        "on_incorrect_attempt_1": "Check both conversions. The first fraction scales by 4, while the second scales by 9, when using denominator 36.",
+        "on_incorrect_attempt_2": "Compare each conversion, then combine the renamed numerators and keep the common denominator. Enter the corrected exact fraction.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion working after the final set.",
+        "worked_explanation": "A common denominator is 36. → 2/9 = (2 × 4)/(9 × 4) = 8/36. → 1/4 = (1 × 9)/(4 × 9) = 9/36. → 8/36 + 9/36 = 17/36."
+      },
+      "mathematical_support": {
+        "hint_1": "Check both conversions. The first fraction scales by 4, while the second scales by 9, when using denominator 36.",
+        "hint_2": "Use a common denominator. Each fraction keeps its value by scaling its own numerator and denominator equally.",
+        "worked_solution": "A common denominator is 36. → 2/9 = (2 × 4)/(9 × 4) = 8/36. → 1/4 = (1 × 9)/(4 × 9) = 9/36. → 8/36 + 9/36 = 17/36."
+      },
+      "working": [
+        "A common denominator is 36.",
+        "2/9 = (2 × 4)/(9 × 4) = 8/36.",
+        "1/4 = (1 × 9)/(4 × 9) = 9/36.",
+        "8/36 + 9/36 = 17/36."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "both_denominators_add",
+          "a": 2,
+          "b": 9,
+          "c": 1,
+          "d": 4,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "3/13": "Adding the original numerators and denominators does not make equal-sized parts.",
+        "3/36": "Both denominators have changed, but the numerators have not. Scale each numerator by its own denominator factor.",
+        "17/72": "The renamed fractions already share a part size. Add only their numerators, not their denominators.",
+        "9/36": "The first conversion is included, but the second numerator still needs its own scale factor.",
+        "11/36": "The second conversion is included, but the first numerator still needs its own scale factor."
+      }
+    },
+    {
+      "id": "AF-08-P04",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Work out 3/8 + 1/6. Give an exact fraction.",
+      "target": "Rename both fractions with equal-sized parts before adding",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "show_authored_label": true,
+        "input_label": "Exact sum"
+      },
+      "answer": {
+        "value": "13/24"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both fractions kept their values, and the sum is 13 parts out of 24.",
+        "correct_after_support": "Correct. Both fractions kept their values, and the sum is 13 parts out of 24.",
+        "on_correct_math": "A common denominator is 24. → 3/8 = (3 × 3)/(8 × 3) = 9/24. → 1/6 = (1 × 4)/(6 × 4) = 4/24. → 9/24 + 4/24 = 13/24.",
+        "on_incorrect_attempt_1": "Check both conversions. The first fraction scales by 3, while the second scales by 4, when using denominator 24.",
+        "on_incorrect_attempt_2": "Compare each conversion, then combine the renamed numerators and keep the common denominator. Enter the corrected exact fraction.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion working after the final set.",
+        "worked_explanation": "A common denominator is 24. → 3/8 = (3 × 3)/(8 × 3) = 9/24. → 1/6 = (1 × 4)/(6 × 4) = 4/24. → 9/24 + 4/24 = 13/24."
+      },
+      "mathematical_support": {
+        "hint_1": "Check both conversions. The first fraction scales by 3, while the second scales by 4, when using denominator 24.",
+        "hint_2": "Use a common denominator. Each fraction keeps its value by scaling its own numerator and denominator equally.",
+        "worked_solution": "A common denominator is 24. → 3/8 = (3 × 3)/(8 × 3) = 9/24. → 1/6 = (1 × 4)/(6 × 4) = 4/24. → 9/24 + 4/24 = 13/24."
+      },
+      "working": [
+        "A common denominator is 24.",
+        "3/8 = (3 × 3)/(8 × 3) = 9/24.",
+        "1/6 = (1 × 4)/(6 × 4) = 4/24.",
+        "9/24 + 4/24 = 13/24."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "both_denominators_add",
+          "a": 3,
+          "b": 8,
+          "c": 1,
+          "d": 6,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "4/14": "Adding the original numerators and denominators does not make equal-sized parts.",
+        "4/24": "Both denominators have changed, but the numerators have not. Scale each numerator by its own denominator factor.",
+        "13/48": "The renamed fractions already share a part size. Add only their numerators, not their denominators.",
+        "10/24": "The first conversion is included, but the second numerator still needs its own scale factor.",
+        "7/24": "The second conversion is included, but the first numerator still needs its own scale factor."
+      }
+    },
+    {
+      "id": "AF-08-P05",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Work out 2/5 + 1/6. Give an exact fraction.",
+      "target": "Rename both fractions with equal-sized parts before adding",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "show_authored_label": true,
+        "input_label": "Exact sum"
+      },
+      "answer": {
+        "value": "17/30"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both fractions kept their values, and the sum is 17 parts out of 30.",
+        "correct_after_support": "Correct. Both fractions kept their values, and the sum is 17 parts out of 30.",
+        "on_correct_math": "A common denominator is 30. → 2/5 = (2 × 6)/(5 × 6) = 12/30. → 1/6 = (1 × 5)/(6 × 5) = 5/30. → 12/30 + 5/30 = 17/30.",
+        "on_incorrect_attempt_1": "Check both conversions. The first fraction scales by 6, while the second scales by 5, when using denominator 30.",
+        "on_incorrect_attempt_2": "Compare each conversion, then combine the renamed numerators and keep the common denominator. Enter the corrected exact fraction.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion working after the final set.",
+        "worked_explanation": "A common denominator is 30. → 2/5 = (2 × 6)/(5 × 6) = 12/30. → 1/6 = (1 × 5)/(6 × 5) = 5/30. → 12/30 + 5/30 = 17/30."
+      },
+      "mathematical_support": {
+        "hint_1": "Check both conversions. The first fraction scales by 6, while the second scales by 5, when using denominator 30.",
+        "hint_2": "Use a common denominator. Each fraction keeps its value by scaling its own numerator and denominator equally.",
+        "worked_solution": "A common denominator is 30. → 2/5 = (2 × 6)/(5 × 6) = 12/30. → 1/6 = (1 × 5)/(6 × 5) = 5/30. → 12/30 + 5/30 = 17/30."
+      },
+      "working": [
+        "A common denominator is 30.",
+        "2/5 = (2 × 6)/(5 × 6) = 12/30.",
+        "1/6 = (1 × 5)/(6 × 5) = 5/30.",
+        "12/30 + 5/30 = 17/30."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "both_denominators_add",
+          "a": 2,
+          "b": 5,
+          "c": 1,
+          "d": 6,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "3/11": "Adding the original numerators and denominators does not make equal-sized parts.",
+        "3/30": "Both denominators have changed, but the numerators have not. Scale each numerator by its own denominator factor.",
+        "17/60": "The renamed fractions already share a part size. Add only their numerators, not their denominators.",
+        "13/30": "The first conversion is included, but the second numerator still needs its own scale factor.",
+        "7/30": "The second conversion is included, but the first numerator still needs its own scale factor."
+      }
+    },
+    {
+      "id": "AF-08-P06",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "For 2/7 + 1/3, which answer is correct?",
+      "target": "Rename both fractions with equal-sized parts before adding",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "3/10",
+          "13/21",
+          "3/21",
+          "13/42"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "13/21"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both fractions become twenty-firsts before their parts are combined.",
+        "correct_after_support": "Correct. Both fractions become twenty-firsts before their parts are combined.",
+        "on_correct_math": "Use common denominator 21. → 2/7 = 6/21. → 1/3 = 7/21. → 6/21 + 7/21 = 13/21.",
+        "on_incorrect_attempt_1": "Rename both fractions in twenty-firsts before adding.",
+        "on_incorrect_attempt_2": "The renamed numerators are six and seven. Their sum is thirteen, with denominator twenty-one.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion working after the final set.",
+        "worked_explanation": "Use common denominator 21. → 2/7 = 6/21. → 1/3 = 7/21. → 6/21 + 7/21 = 13/21."
+      },
+      "mathematical_support": {
+        "hint_1": "Rename both fractions in twenty-firsts before adding.",
+        "hint_2": "Use a common denominator. Each fraction keeps its value by scaling its own numerator and denominator equally.",
+        "worked_solution": "Use common denominator 21. → 2/7 = 6/21. → 1/3 = 7/21. → 6/21 + 7/21 = 13/21."
+      },
+      "working": [
+        "Use common denominator 21.",
+        "2/7 = 6/21.",
+        "1/3 = 7/21.",
+        "6/21 + 7/21 = 13/21."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "both_denominators_add",
+          "a": 2,
+          "b": 7,
+          "c": 1,
+          "d": 3,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "3/10": "Adding the original numerators and denominators does not make matching parts.",
+        "3/21": "Both numerators must change when the fractions are renamed in twenty-firsts.",
+        "13/42": "The numerators were combined correctly, but the common denominator must stay twenty-one."
+      }
+    },
+    {
+      "id": "AF-08-X01",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A jug contains 2/3 litre of water. A further 1/4 litre of water is added. What is the total volume of water in the jug?",
+      "target": "Rename both fractions with equal-sized parts before adding",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "show_authored_label": true,
+        "input_label": "Exact amount",
+        "suffix": "L"
+      },
+      "answer": {
+        "value": "11/12"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The jug now contains eleven twelfths of a litre.",
+        "correct_after_support": "Correct. The jug now contains eleven twelfths of a litre.",
+        "on_correct_math": "A common denominator is 12. → 2/3 = (2 × 4)/(3 × 4) = 8/12. → 1/4 = (1 × 3)/(4 × 3) = 3/12. → 8/12 + 3/12 = 11/12.",
+        "on_incorrect_attempt_1": "Check both conversions. The first fraction scales by 4, while the second scales by 3, when using denominator 12.",
+        "on_incorrect_attempt_2": "Compare each conversion, then combine the renamed numerators and keep the common denominator. Enter the corrected exact fraction.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion working after the final set.",
+        "worked_explanation": "A common denominator is 12. → 2/3 = (2 × 4)/(3 × 4) = 8/12. → 1/4 = (1 × 3)/(4 × 3) = 3/12. → 8/12 + 3/12 = 11/12."
+      },
+      "mathematical_support": {
+        "hint_1": "Check both conversions. The first fraction scales by 4, while the second scales by 3, when using denominator 12.",
+        "hint_2": "Use a common denominator. Each fraction keeps its value by scaling its own numerator and denominator equally.",
+        "worked_solution": "A common denominator is 12. → 2/3 = (2 × 4)/(3 × 4) = 8/12. → 1/4 = (1 × 3)/(4 × 3) = 3/12. → 8/12 + 3/12 = 11/12."
+      },
+      "working": [
+        "A common denominator is 12.",
+        "2/3 = (2 × 4)/(3 × 4) = 8/12.",
+        "1/4 = (1 × 3)/(4 × 3) = 3/12.",
+        "8/12 + 3/12 = 11/12."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "both_denominators_add",
+          "a": 2,
+          "b": 3,
+          "c": 1,
+          "d": 4,
+          "object": "jug",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "3/7": "Adding the original numerators and denominators does not make equal-sized parts.",
+        "3/12": "Both denominators have changed, but the numerators have not. Scale each numerator by its own denominator factor.",
+        "11/24": "The renamed fractions already share a part size. Add only their numerators, not their denominators.",
+        "9/12": "The first conversion is included, but the second numerator still needs its own scale factor.",
+        "5/12": "The second conversion is included, but the first numerator still needs its own scale factor."
+      }
+    },
+    {
+      "id": "AF-08-X02",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "Aisha completes 1/6 of a journey before lunch and 2/5 after lunch. What fraction of the journey does she complete altogether?",
+      "target": "Rename both fractions with equal-sized parts before adding",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "show_authored_label": true,
+        "input_label": "Exact amount"
+      },
+      "answer": {
+        "value": "17/30"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Aisha completes seventeen thirtieths of the journey.",
+        "correct_after_support": "Correct. Aisha completes seventeen thirtieths of the journey.",
+        "on_correct_math": "A common denominator is 30. → 1/6 = (1 × 5)/(6 × 5) = 5/30. → 2/5 = (2 × 6)/(5 × 6) = 12/30. → 5/30 + 12/30 = 17/30.",
+        "on_incorrect_attempt_1": "Check both conversions. The first fraction scales by 5, while the second scales by 6, when using denominator 30.",
+        "on_incorrect_attempt_2": "Compare each conversion, then combine the renamed numerators and keep the common denominator. Enter the corrected exact fraction.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion working after the final set.",
+        "worked_explanation": "A common denominator is 30. → 1/6 = (1 × 5)/(6 × 5) = 5/30. → 2/5 = (2 × 6)/(5 × 6) = 12/30. → 5/30 + 12/30 = 17/30."
+      },
+      "mathematical_support": {
+        "hint_1": "Check both conversions. The first fraction scales by 5, while the second scales by 6, when using denominator 30.",
+        "hint_2": "Use a common denominator. Each fraction keeps its value by scaling its own numerator and denominator equally.",
+        "worked_solution": "A common denominator is 30. → 1/6 = (1 × 5)/(6 × 5) = 5/30. → 2/5 = (2 × 6)/(5 × 6) = 12/30. → 5/30 + 12/30 = 17/30."
+      },
+      "working": [
+        "A common denominator is 30.",
+        "1/6 = (1 × 5)/(6 × 5) = 5/30.",
+        "2/5 = (2 × 6)/(5 × 6) = 12/30.",
+        "5/30 + 12/30 = 17/30."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "both_denominators_add",
+          "a": 1,
+          "b": 6,
+          "c": 2,
+          "d": 5,
+          "object": "journey",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "3/11": "Adding the original numerators and denominators does not make equal-sized parts.",
+        "3/30": "Both denominators have changed, but the numerators have not. Scale each numerator by its own denominator factor.",
+        "17/60": "The renamed fractions already share a part size. Add only their numerators, not their denominators.",
+        "7/30": "The first conversion is included, but the second numerator still needs its own scale factor.",
+        "13/30": "The second conversion is included, but the first numerator still needs its own scale factor."
+      }
+    },
+    {
+      "id": "AF-08-X03",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A piece of red ribbon is 3/10 metre long. A piece of blue ribbon is 1/4 metre long. What is the total length of the two pieces?",
+      "target": "Rename both fractions with equal-sized parts before adding",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "show_authored_label": true,
+        "input_label": "Exact amount",
+        "suffix": "m"
+      },
+      "answer": {
+        "value": "11/20"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The two ribbon lengths total eleven twentieths of a metre.",
+        "correct_after_support": "Correct. The two ribbon lengths total eleven twentieths of a metre.",
+        "on_correct_math": "A common denominator is 20. → 3/10 = (3 × 2)/(10 × 2) = 6/20. → 1/4 = (1 × 5)/(4 × 5) = 5/20. → 6/20 + 5/20 = 11/20.",
+        "on_incorrect_attempt_1": "Check both conversions. The first fraction scales by 2, while the second scales by 5, when using denominator 20.",
+        "on_incorrect_attempt_2": "Compare each conversion, then combine the renamed numerators and keep the common denominator. Enter the corrected exact fraction.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion working after the final set.",
+        "worked_explanation": "A common denominator is 20. → 3/10 = (3 × 2)/(10 × 2) = 6/20. → 1/4 = (1 × 5)/(4 × 5) = 5/20. → 6/20 + 5/20 = 11/20."
+      },
+      "mathematical_support": {
+        "hint_1": "Check both conversions. The first fraction scales by 2, while the second scales by 5, when using denominator 20.",
+        "hint_2": "Use a common denominator. Each fraction keeps its value by scaling its own numerator and denominator equally.",
+        "worked_solution": "A common denominator is 20. → 3/10 = (3 × 2)/(10 × 2) = 6/20. → 1/4 = (1 × 5)/(4 × 5) = 5/20. → 6/20 + 5/20 = 11/20."
+      },
+      "working": [
+        "A common denominator is 20.",
+        "3/10 = (3 × 2)/(10 × 2) = 6/20.",
+        "1/4 = (1 × 5)/(4 × 5) = 5/20.",
+        "6/20 + 5/20 = 11/20."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "both_denominators_add",
+          "a": 3,
+          "b": 10,
+          "c": 1,
+          "d": 4,
+          "object": "ribbon",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "4/14": "Adding the original numerators and denominators does not make equal-sized parts.",
+        "4/20": "Both denominators have changed, but the numerators have not. Scale each numerator by its own denominator factor.",
+        "11/40": "The renamed fractions already share a part size. Add only their numerators, not their denominators.",
+        "7/20": "The first conversion is included, but the second numerator still needs its own scale factor.",
+        "8/20": "The second conversion is included, but the first numerator still needs its own scale factor."
+      }
+    },
+    {
+      "id": "AF-08-X04",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A container is filled using 2/7 litre of red paint and 1/3 litre of white paint. Which calculation finds the total volume of paint?",
+      "target": "Rename both fractions with equal-sized parts before adding",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "2/7 + 1/3",
+          "2/7 − 1/3",
+          "2/7 × 1/3",
+          "2/7 ÷ 1/3"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "2/7 + 1/3"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Addition combines the two volumes.",
+        "correct_after_support": "Correct. Addition combines the two volumes.",
+        "on_correct_math": "The two paint volumes are combined. → A combined total uses addition. → Calculate 2/7 + 1/3.",
+        "on_incorrect_attempt_1": "Both measured volumes go into the container.",
+        "on_incorrect_attempt_2": "The total combines the red and white paint volumes. Select addition.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion working after the final set.",
+        "worked_explanation": "The two paint volumes are combined. → A combined total uses addition. → Calculate 2/7 + 1/3."
+      },
+      "mathematical_support": {
+        "hint_1": "Both measured volumes go into the container.",
+        "hint_2": "Use a common denominator. Each fraction keeps its value by scaling its own numerator and denominator equally.",
+        "worked_solution": "The two paint volumes are combined. → A combined total uses addition. → Calculate 2/7 + 1/3."
+      },
+      "working": [
+        "The two paint volumes are combined.",
+        "A combined total uses addition.",
+        "Calculate 2/7 + 1/3."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "both_denominators_add",
+          "a": 2,
+          "b": 7,
+          "c": 1,
+          "d": 3,
+          "object": "paint",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "2/7 − 1/3": "Subtraction would find a difference, not the combined volume.",
+        "2/7 × 1/3": "Neither amount is a fraction of the other; they are two separate measured volumes.",
+        "2/7 ÷ 1/3": "The question is not asking how many paint-sized groups fit into a volume."
+      }
+    },
+    {
+      "id": "AF-08-E01",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "exit",
+      "prompt": "Work out 2/7 + 1/3. Give an exact fraction. Show both equivalent fractions using the same denominator, then enter your sum.",
+      "target": "Rename both fractions with equal-sized parts before adding",
+      "response": {
+        "type": "conversion_product",
+        "conversion_kind": "common_denominator",
+        "factors": [
+          {
+            "whole": 0,
+            "n": 2,
+            "d": 7
+          },
+          {
+            "whole": 0,
+            "n": 1,
+            "d": 3
+          }
+        ],
+        "final_response": {
+          "type": "fraction",
+          "accept_equivalent_notation": true,
+          "show_authored_label": true,
+          "input_label": "Exact sum"
+        }
+      },
+      "answer": {
+        "value": {
+          "conversions": [
+            {
+              "n": "6",
+              "d": "21"
+            },
+            {
+              "n": "7",
+              "d": "21"
+            }
+          ],
+          "result": "13/21"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both fractions kept their values, and the sum is 13 parts out of 21.",
+        "correct_after_support": "Correct. Both fractions kept their values, and the sum is 13 parts out of 21.",
+        "on_correct_math": "A common denominator is 21. → 2/7 = (2 × 3)/(7 × 3) = 6/21. → 1/3 = (1 × 7)/(3 × 7) = 7/21. → 6/21 + 7/21 = 13/21.",
+        "on_incorrect_attempt_1": "Check both conversions. The first fraction scales by 3, while the second scales by 7, when using denominator 21.",
+        "on_incorrect_attempt_2": "Compare each conversion, then combine the renamed numerators and keep the common denominator. Enter the corrected exact fraction.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion working after the final set.",
+        "worked_explanation": "A common denominator is 21. → 2/7 = (2 × 3)/(7 × 3) = 6/21. → 1/3 = (1 × 7)/(3 × 7) = 7/21. → 6/21 + 7/21 = 13/21."
+      },
+      "mathematical_support": {
+        "hint_1": "Check both conversions. The first fraction scales by 3, while the second scales by 7, when using denominator 21.",
+        "hint_2": "Use a common denominator. Each fraction keeps its value by scaling its own numerator and denominator equally.",
+        "worked_solution": "A common denominator is 21. → 2/7 = (2 × 3)/(7 × 3) = 6/21. → 1/3 = (1 × 7)/(3 × 7) = 7/21. → 6/21 + 7/21 = 13/21."
+      },
+      "working": [
+        "A common denominator is 21.",
+        "2/7 = (2 × 3)/(7 × 3) = 6/21.",
+        "1/3 = (1 × 7)/(3 × 7) = 7/21.",
+        "6/21 + 7/21 = 13/21."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "both_denominators_add",
+          "a": 2,
+          "b": 7,
+          "c": 1,
+          "d": 3,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "missing_conversion": "Both equivalent fractions are needed as evidence.",
+        "incorrect_conversion": "At least one rewritten fraction has changed value. Compare each numerator and denominator scale factor.",
+        "denominators_differ": "The fractions keep their values, but their denominators do not yet match.",
+        "incorrect_product": "Both conversions are valid. Recheck the sum of the renamed numerators while keeping the common denominator."
+      }
+    },
+    {
+      "id": "AF-08-E02",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "exit",
+      "prompt": "Work out 3/10 + 1/4. Give an exact fraction. Show both equivalent fractions using the same denominator, then enter your sum.",
+      "target": "Rename both fractions with equal-sized parts before adding",
+      "response": {
+        "type": "conversion_product",
+        "conversion_kind": "common_denominator",
+        "factors": [
+          {
+            "whole": 0,
+            "n": 3,
+            "d": 10
+          },
+          {
+            "whole": 0,
+            "n": 1,
+            "d": 4
+          }
+        ],
+        "final_response": {
+          "type": "fraction",
+          "accept_equivalent_notation": true,
+          "show_authored_label": true,
+          "input_label": "Exact sum"
+        }
+      },
+      "answer": {
+        "value": {
+          "conversions": [
+            {
+              "n": "6",
+              "d": "20"
+            },
+            {
+              "n": "5",
+              "d": "20"
+            }
+          ],
+          "result": "11/20"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both fractions kept their values, and the sum is 11 parts out of 20.",
+        "correct_after_support": "Correct. Both fractions kept their values, and the sum is 11 parts out of 20.",
+        "on_correct_math": "A common denominator is 20. → 3/10 = (3 × 2)/(10 × 2) = 6/20. → 1/4 = (1 × 5)/(4 × 5) = 5/20. → 6/20 + 5/20 = 11/20.",
+        "on_incorrect_attempt_1": "Check both conversions. The first fraction scales by 2, while the second scales by 5, when using denominator 20.",
+        "on_incorrect_attempt_2": "Compare each conversion, then combine the renamed numerators and keep the common denominator. Enter the corrected exact fraction.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion working after the final set.",
+        "worked_explanation": "A common denominator is 20. → 3/10 = (3 × 2)/(10 × 2) = 6/20. → 1/4 = (1 × 5)/(4 × 5) = 5/20. → 6/20 + 5/20 = 11/20."
+      },
+      "mathematical_support": {
+        "hint_1": "Check both conversions. The first fraction scales by 2, while the second scales by 5, when using denominator 20.",
+        "hint_2": "Use a common denominator. Each fraction keeps its value by scaling its own numerator and denominator equally.",
+        "worked_solution": "A common denominator is 20. → 3/10 = (3 × 2)/(10 × 2) = 6/20. → 1/4 = (1 × 5)/(4 × 5) = 5/20. → 6/20 + 5/20 = 11/20."
+      },
+      "working": [
+        "A common denominator is 20.",
+        "3/10 = (3 × 2)/(10 × 2) = 6/20.",
+        "1/4 = (1 × 5)/(4 × 5) = 5/20.",
+        "6/20 + 5/20 = 11/20."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "both_denominators_add",
+          "a": 3,
+          "b": 10,
+          "c": 1,
+          "d": 4,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "missing_conversion": "Both equivalent fractions are needed as evidence.",
+        "incorrect_conversion": "At least one rewritten fraction has changed value. Compare each numerator and denominator scale factor.",
+        "denominators_differ": "The fractions keep their values, but their denominators do not yet match.",
+        "incorrect_product": "Both conversions are valid. Recheck the sum of the renamed numerators while keeping the common denominator."
+      }
+    },
+    {
+      "id": "AF-08-E03",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "exit",
+      "prompt": "For 2/9 + 1/4, which method is correct?",
+      "target": "Rename both fractions with equal-sized parts before adding",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "2/9 + 1/4 = 8/36 + 9/36 = 17/36",
+          "2/9 + 1/4 = 3/13",
+          "2/9 + 1/4 = 8/36 + 9/36 = 17/72",
+          "2/9 + 1/4 = 2/36 + 1/36 = 3/36"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "2/9 + 1/4 = 8/36 + 9/36 = 17/36"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Recorded. Both fractions are renamed correctly before the numerators are added.",
+        "correct_after_support": "Recorded. Both fractions are renamed correctly before the numerators are added.",
+        "on_correct_math": "Use common denominator 36. → 2/9 = 8/36. → 1/4 = 9/36. → 8/36 + 9/36 = 17/36.",
+        "on_incorrect_attempt_1": "No hints are available in the final check.",
+        "on_incorrect_attempt_2": "The response is locked for this final check.",
+        "on_locked_incorrect": "Answer recorded. Review the conversion working after the final set.",
+        "worked_explanation": "Use common denominator 36. → 2/9 = 8/36. → 1/4 = 9/36. → 8/36 + 9/36 = 17/36."
+      },
+      "mathematical_support": {
+        "hint_1": "No hints are available in the final check.",
+        "hint_2": "Use a common denominator. Each fraction keeps its value by scaling its own numerator and denominator equally.",
+        "worked_solution": "Use common denominator 36. → 2/9 = 8/36. → 1/4 = 9/36. → 8/36 + 9/36 = 17/36."
+      },
+      "working": [
+        "Use common denominator 36.",
+        "2/9 = 8/36.",
+        "1/4 = 9/36.",
+        "8/36 + 9/36 = 17/36."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "both_denominators_add",
+          "a": 2,
+          "b": 9,
+          "c": 1,
+          "d": 4,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    }
+  ],
+  "canonical_lesson": {
+    "version": "AF08-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

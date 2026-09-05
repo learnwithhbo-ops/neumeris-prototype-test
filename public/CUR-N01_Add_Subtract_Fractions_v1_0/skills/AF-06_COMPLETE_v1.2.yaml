@@ -1,0 +1,1794 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "AF-06 - Subtract fractions when one denominator is a multiple of the other",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-15",
+      "sha256": "90a90c0a59067714483abad31a5fc8f664bf0ab21776d3049c9b68ab3fe3491b"
+    },
+    "authored_scope": "Subtract the fractions accurately by working with equal-sized parts in the order shown.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "AF06-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "verified_full_secure_desktop_mobile_paths_denominator_only_and_reversed_order_repairs_exact_equivalence_keyboard_narration_captions_sound_console_and_320_390_layouts",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        3,
+        4,
+        5,
+        6,
+        11,
+        13
+      ],
+      "source_repairs_consulted": [
+        7,
+        8,
+        9,
+        10,
+        14,
+        15
+      ],
+      "note": "All 15 source pages were read. Active pages 3 to 6, 11 and 13 were mapped; pages 7 to 10, 14 and 15 informed misconception feedback, exact-equivalence acceptance and model constraints. The source deliberately repeats the eleven-twelfths calculation and eight-ninths method in mastery; these are preserved without claiming freshness. Entry, Diagnostic and delayed Retrieval remain excluded."
+    }
+  },
+  "identity": {
+    "id": "AF-06",
+    "slug": "subtract-fractions-when-one-denominator-is-a-multiple-of-the-other",
+    "title": "Subtract fractions when one denominator is a multiple of the other",
+    "strand": "Number",
+    "cluster": "Adding and Subtracting Fractions",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Subtract one proper fraction from another by rewriting one fraction so that both fractions have the same denominator.",
+    "success_criteria": [
+      "Use the larger denominator when it is an exact multiple of the smaller one.",
+      "Rewrite only the smaller-denominator fraction using one equal scale factor.",
+      "Subtract the converted numerators in the given order and retain the denominator.",
+      "Apply the method in exact fraction and contextual questions."
+    ],
+    "boundaries": {
+      "includes": [
+        "Two positive proper fractions",
+        "One denominator an exact multiple of the other",
+        "Positive differences less than one",
+        "Only one fraction needs rewriting",
+        "Any valid exact equivalent answer"
+      ],
+      "excludes": [
+        "Addition",
+        "Cases where both fractions must be rewritten",
+        "Mixed numbers",
+        "Negative results as target answers",
+        "Multi-step operation selection",
+        "Diagnostic and delayed Retrieval routes"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "AF-02",
+      "AF-04"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for AF-02, AF-04 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "integer",
+      "fraction",
+      "single_choice"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    }
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "Match the size of the parts before removing one fractional amount from another.",
+    "invariant": "Equivalent renaming preserves each amount; subtraction keeps the same reference whole, common denominator and original order.",
+    "mathematical_rule": "Use the larger denominator; rename the smaller-denominator fraction; subtract the second numerator from the first; keep the common denominator.",
+    "must_notice": [
+      "Only one fraction needs rewriting.",
+      "Both parts of that fraction use the same factor.",
+      "The denominator is not subtracted.",
+      "Subtraction order must not be reversed."
+    ],
+    "common_confusions": [
+      "Changing the denominator without the numerator",
+      "Using unequal scale factors",
+      "Subtracting denominators after conversion",
+      "Reversing the subtraction order"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "Equal-sized parts before removal",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Equal-sized parts before removal",
+          "initial_state": "Equal-sized parts before removal",
+          "model": {
+            "kind": "one_multiple_subtract",
+            "a": 5,
+            "b": 8,
+            "c": 1,
+            "d": 4,
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Five eighths and one quarter use different-sized parts. First connect the quarter to the same whole measured in eighths."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Rename, then remove",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Rename, then remove",
+          "initial_state": "Rename, then remove",
+          "model": {
+            "kind": "one_multiple_subtract",
+            "a": 5,
+            "b": 8,
+            "c": 1,
+            "d": 4,
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true
+          }
+        },
+        "narration": {
+          "script": "The quarter splits into two eighths without changing its amount. Removing those two parts from the original five leaves three eighths."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Explain the common denominator",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Explain the common denominator",
+          "initial_state": "Explain the common denominator",
+          "model": {
+            "kind": "one_multiple_subtract",
+            "a": 5,
+            "b": 8,
+            "c": 1,
+            "d": 4,
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Decide why eighths can name both amounts in this subtraction."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "AF-06-C01"
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Build the worked example",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Build the worked example",
+          "initial_state": "Build the worked example",
+          "model": {
+            "kind": "one_multiple_subtract",
+            "a": 7,
+            "b": 10,
+            "c": 2,
+            "d": 5,
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true
+          }
+        },
+        "narration": {
+          "script": "Use tenths for this pair. Rename only the fraction in fifths; then remove its equivalent amount while keeping the part size unchanged."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Check the conversion and order",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Check the conversion and order",
+          "initial_state": "Check the conversion and order",
+          "model": {
+            "kind": "one_multiple_subtract",
+            "a": 8,
+            "b": 9,
+            "c": 1,
+            "d": 3,
+            "object": "bars",
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Select the method that keeps one third unchanged in value and follows the original subtraction order."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "AF-06-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "AF-06-G01",
+        "support_level": "high",
+        "pre_question_script": "Start with the denominator that can already name both fractions.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "AF-06-G02",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "faded",
+        "question_ref": "AF-06-G03",
+        "support_level": "reduced",
+        "pre_question_script": "",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "faded",
+        "question_ref": "AF-06-G04",
+        "support_level": "reduced",
+        "pre_question_script": "",
+        "correct_next": "G05"
+      },
+      "G05": {
+        "stage": "independent_transfer",
+        "question_ref": "AF-06-G05",
+        "support_level": "none",
+        "pre_question_script": "",
+        "correct_next": "P01"
+      }
+    },
+    "practice": {
+      "intro_script": "Complete the five source calculations and recognition check, then apply the same relationship to water, ribbon and rice.",
+      "question_order": [
+        "AF-06-P01",
+        "AF-06-P02",
+        "AF-06-P03",
+        "AF-06-P04",
+        "AF-06-P05",
+        "AF-06-P06",
+        "AF-06-X01",
+        "AF-06-X02",
+        "AF-06-X03",
+        "AF-06-X04"
+      ],
+      "question_count": 10
+    },
+    "exit": {
+      "intro_script": "Complete both calculations and select the valid method. There are no hints, and every response locks after submission.",
+      "primary_question_refs": [
+        "AF-06-E01",
+        "AF-06-E02",
+        "AF-06-E03"
+      ],
+      "confirmation_question_refs": [],
+      "mastery_policy": {
+        "profile": "all_primary_unsupported",
+        "require_all": true,
+        "source_page": 11,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "You matched the part sizes, preserved the subtraction order, and kept the common denominator fixed.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Match the parts and preserve the order",
+      "ryan_script": "One or more final checks need another pass. Rename without changing value, then take the second amount from the first.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "AF-06-C01",
+      "source_ref": {
+        "page": 3
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "Why can 8 be used as the common denominator in 5/8 − 1/4?",
+      "target": "Subtract after matching part size, preserving the given order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Eight is a multiple of 4.",
+          "Eight is the larger numerator.",
+          "Four and 8 must be subtracted to make 4.",
+          "Every fraction subtraction must use denominator 8."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "Eight is a multiple of 4."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The multiple relationship lets quarters be renamed in eighths.",
+        "correct_after_support": "Correct. The multiple relationship lets quarters be renamed in eighths.",
+        "on_correct_math": "8 is 4 × 2. → Each quarter can split into two eighths. → Both fractions can then be named in eighths.",
+        "on_incorrect_attempt_1": "Look for the exact multiplicative relationship between the two denominators.",
+        "on_incorrect_attempt_2": "Eight is two groups of four. Choose the statement saying eight is a multiple of four.",
+        "on_locked_incorrect": "Answer recorded. The conversion and subtraction working will be available after the final set.",
+        "worked_explanation": "8 is 4 × 2. → Each quarter can split into two eighths. → Both fractions can then be named in eighths."
+      },
+      "mathematical_support": {
+        "hint_1": "Look for the exact multiplicative relationship between the two denominators.",
+        "hint_2": "Only the smaller-denominator fraction needs renaming. Subtract the converted numerators in the order shown and keep the common denominator.",
+        "worked_solution": "8 is 4 × 2. → Each quarter can split into two eighths. → Both fractions can then be named in eighths."
+      },
+      "working": [
+        "8 is 4 × 2.",
+        "Each quarter can split into two eighths.",
+        "Both fractions can then be named in eighths."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "one_multiple_subtract",
+          "a": 5,
+          "b": 8,
+          "c": 1,
+          "d": 4,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "Eight is the larger numerator.": "Eight is a denominator here. Compare the denominators four and eight.",
+        "Four and 8 must be subtracted to make 4.": "Subtracting denominators does not give equal-sized parts. Look for a common multiple.",
+        "Every fraction subtraction must use denominator 8.": "Eight works for this pair because it is a multiple of four, not because every subtraction uses eighths."
+      }
+    },
+    {
+      "id": "AF-06-C02",
+      "source_ref": {
+        "page": 4
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "Which method correctly works out 8/9 − 1/3?",
+      "target": "Subtract after matching part size, preserving the given order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "8/9 − 1/3 = 8/9 − 3/9 = 5/9",
+          "8/9 − 1/3 = 7/6",
+          "8/9 − 1/3 = 8/9 − 1/9 = 7/9",
+          "8/9 − 1/3 = 3/27"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "8/9 − 1/3 = 8/9 − 3/9 = 5/9"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The method renames one third, then subtracts in the original order.",
+        "correct_after_support": "Correct. The method renames one third, then subtracts in the original order.",
+        "on_correct_math": "1/3 = 3/9. → 8/9 − 3/9 = 5/9. → The denominator stays 9.",
+        "on_incorrect_attempt_1": "One third must keep its value when it is rewritten in ninths.",
+        "on_incorrect_attempt_2": "One third is three ninths. Choose the method that subtracts three ninths from eight ninths.",
+        "on_locked_incorrect": "Answer recorded. The conversion and subtraction working will be available after the final set.",
+        "worked_explanation": "1/3 = 3/9. → 8/9 − 3/9 = 5/9. → The denominator stays 9."
+      },
+      "mathematical_support": {
+        "hint_1": "One third must keep its value when it is rewritten in ninths.",
+        "hint_2": "Only the smaller-denominator fraction needs renaming. Subtract the converted numerators in the order shown and keep the common denominator.",
+        "worked_solution": "1/3 = 3/9. → 8/9 − 3/9 = 5/9. → The denominator stays 9."
+      },
+      "working": [
+        "1/3 = 3/9.",
+        "8/9 − 3/9 = 5/9.",
+        "The denominator stays 9."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "one_multiple_subtract",
+          "a": 8,
+          "b": 9,
+          "c": 1,
+          "d": 3,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "8/9 − 1/3 = 7/6": "That subtracts both original fraction parts. Denominators must match first and then stay unchanged.",
+        "8/9 − 1/3 = 8/9 − 1/9 = 7/9": "One third is not one ninth. Multiplying its denominator by three requires multiplying its numerator by three.",
+        "8/9 − 1/3 = 3/27": "Check the equivalent fraction and the numerator subtraction separately; both must preserve the original quantities."
+      }
+    },
+    {
+      "id": "AF-06-G01",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "For 7/9 − 1/3, which denominator should be used?",
+      "target": "Subtract after matching part size, preserving the given order",
+      "response": {
+        "type": "integer",
+        "input_label": "Common denominator"
+      },
+      "answer": {
+        "value": 9
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Ninths can represent both amounts.",
+        "correct_after_support": "Correct. Ninths can represent both amounts.",
+        "on_correct_math": "9 is a multiple of 3. → Use denominator 9.",
+        "on_incorrect_attempt_1": "Choose the denominator already able to name both fractions.",
+        "on_incorrect_attempt_2": "Nine is three times three. Enter nine.",
+        "on_locked_incorrect": "Answer recorded. The conversion and subtraction working will be available after the final set.",
+        "worked_explanation": "9 is a multiple of 3. → Use denominator 9."
+      },
+      "mathematical_support": {
+        "hint_1": "Choose the denominator already able to name both fractions.",
+        "hint_2": "Only the smaller-denominator fraction needs renaming. Subtract the converted numerators in the order shown and keep the common denominator.",
+        "worked_solution": "9 is a multiple of 3. → Use denominator 9."
+      },
+      "working": [
+        "9 is a multiple of 3.",
+        "Use denominator 9."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "one_multiple_subtract_steps",
+          "label": "Choose the common denominator",
+          "expression": "Use denominator ?",
+          "completed": "Use denominator 9",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-06-G02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "Complete the missing numerator: 1/3 = ?/9.",
+      "target": "Subtract after matching part size, preserving the given order",
+      "response": {
+        "type": "integer",
+        "input_label": "Equivalent numerator"
+      },
+      "answer": {
+        "value": 3
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. One third has the same value as three ninths.",
+        "correct_after_support": "Correct. One third has the same value as three ninths.",
+        "on_correct_math": "3 × 3 = 9. → 1 × 3 = 3. → 1/3 = 3/9.",
+        "on_incorrect_attempt_1": "Apply the denominator scale factor to the numerator too.",
+        "on_incorrect_attempt_2": "The denominator uses a factor of three, so one becomes three. Enter three.",
+        "on_locked_incorrect": "Answer recorded. The conversion and subtraction working will be available after the final set.",
+        "worked_explanation": "3 × 3 = 9. → 1 × 3 = 3. → 1/3 = 3/9."
+      },
+      "mathematical_support": {
+        "hint_1": "Apply the denominator scale factor to the numerator too.",
+        "hint_2": "Only the smaller-denominator fraction needs renaming. Subtract the converted numerators in the order shown and keep the common denominator.",
+        "worked_solution": "3 × 3 = 9. → 1 × 3 = 3. → 1/3 = 3/9."
+      },
+      "working": [
+        "3 × 3 = 9.",
+        "1 × 3 = 3.",
+        "1/3 = 3/9."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "one_multiple_subtract_steps",
+          "label": "Rename one third",
+          "expression": "1/3 = ?/9",
+          "completed": "1/3 = 3/9",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-06-G03",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "faded",
+      "prompt": "Complete the converted amount to remove: 7/9 − ?/9.",
+      "target": "Subtract after matching part size, preserving the given order",
+      "response": {
+        "type": "integer",
+        "input_label": "Converted numerator"
+      },
+      "answer": {
+        "value": 3
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Three ninths is the amount being taken away.",
+        "correct_after_support": "Correct. Three ninths is the amount being taken away.",
+        "on_correct_math": "1/3 = 3/9. → The second amount is 3/9.",
+        "on_incorrect_attempt_1": "Use the equivalent numerator from the preceding step.",
+        "on_incorrect_attempt_2": "One third was renamed as three ninths. Enter three in the second fraction.",
+        "on_locked_incorrect": "Answer recorded. The conversion and subtraction working will be available after the final set.",
+        "worked_explanation": "1/3 = 3/9. → The second amount is 3/9."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the equivalent numerator from the preceding step.",
+        "hint_2": "Only the smaller-denominator fraction needs renaming. Subtract the converted numerators in the order shown and keep the common denominator.",
+        "worked_solution": "1/3 = 3/9. → The second amount is 3/9."
+      },
+      "working": [
+        "1/3 = 3/9.",
+        "The second amount is 3/9."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "one_multiple_subtract_steps",
+          "label": "Carry forward the converted amount",
+          "expression": "7/9 − ?/9",
+          "completed": "7/9 − 3/9",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-06-G04",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "faded",
+      "prompt": "Complete the difference numerator: 7/9 − 3/9 = ?/9.",
+      "target": "Subtract after matching part size, preserving the given order",
+      "response": {
+        "type": "integer",
+        "input_label": "Difference numerator"
+      },
+      "answer": {
+        "value": 4
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Removing three ninths from seven ninths leaves four ninths.",
+        "correct_after_support": "Correct. Removing three ninths from seven ninths leaves four ninths.",
+        "on_correct_math": "7 − 3 = 4. → The denominator remains 9. → 7/9 − 3/9 = 4/9.",
+        "on_incorrect_attempt_1": "Subtract the second numerator from the first; the parts remain ninths.",
+        "on_incorrect_attempt_2": "Seven minus three is four. Enter four, keeping the denominator fixed.",
+        "on_locked_incorrect": "Answer recorded. The conversion and subtraction working will be available after the final set.",
+        "worked_explanation": "7 − 3 = 4. → The denominator remains 9. → 7/9 − 3/9 = 4/9."
+      },
+      "mathematical_support": {
+        "hint_1": "Subtract the second numerator from the first; the parts remain ninths.",
+        "hint_2": "Only the smaller-denominator fraction needs renaming. Subtract the converted numerators in the order shown and keep the common denominator.",
+        "worked_solution": "7 − 3 = 4. → The denominator remains 9. → 7/9 − 3/9 = 4/9."
+      },
+      "working": [
+        "7 − 3 = 4.",
+        "The denominator remains 9.",
+        "7/9 − 3/9 = 4/9."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "guided_equation",
+          "object": "one_multiple_subtract_steps",
+          "label": "Keep the subtraction order",
+          "expression": "7/9 − 3/9 = ?/9",
+          "completed": "7/9 − 3/9 = 4/9",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "10": "That adds the numerators. The second amount is being taken away.",
+        "-4": "The numerator subtraction has been reversed. Follow seven minus three."
+      }
+    },
+    {
+      "id": "AF-06-G05",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "independent_transfer",
+      "prompt": "Which fraction needs to be rewritten in 7/9 − 1/3?",
+      "target": "Subtract after matching part size, preserving the given order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "7/9 only",
+          "1/3 only",
+          "Both fractions",
+          "Neither fraction"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "1/3 only"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Exactly. The first fraction is ready; only one third needs renaming.",
+        "correct_after_support": "Exactly. The first fraction is ready; only one third needs renaming.",
+        "on_correct_math": "7/9 already uses denominator 9. → 1/3 becomes 3/9. → Only 1/3 needs rewriting.",
+        "on_incorrect_attempt_1": "One fraction is already expressed in ninths.",
+        "on_incorrect_attempt_2": "Keep seven ninths unchanged. Only one third needs rewriting, so choose one third only.",
+        "on_locked_incorrect": "Answer recorded. The conversion and subtraction working will be available after the final set.",
+        "worked_explanation": "7/9 already uses denominator 9. → 1/3 becomes 3/9. → Only 1/3 needs rewriting."
+      },
+      "mathematical_support": {
+        "hint_1": "One fraction is already expressed in ninths.",
+        "hint_2": "Only the smaller-denominator fraction needs renaming. Subtract the converted numerators in the order shown and keep the common denominator.",
+        "worked_solution": "7/9 already uses denominator 9. → 1/3 becomes 3/9. → Only 1/3 needs rewriting."
+      },
+      "working": [
+        "7/9 already uses denominator 9.",
+        "1/3 becomes 3/9.",
+        "Only 1/3 needs rewriting."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "one_multiple_subtract",
+          "a": 7,
+          "b": 9,
+          "c": 1,
+          "d": 3,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    },
+    {
+      "id": "AF-06-P01",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "Work out 7/8 − 1/4. Give an exact fraction.",
+      "target": "Subtract after matching part size, preserving the given order",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "show_authored_label": true,
+        "input_label": "Exact fraction"
+      },
+      "answer": {
+        "value": "5/8"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The quarter removes two of the seven eighths.",
+        "correct_after_support": "Correct. The quarter removes two of the seven eighths.",
+        "on_correct_math": "8 is a multiple of 4, so use denominator 8. → 7/8 = 7/8 and 1/4 = 2/8. → 7/8 − 2/8 = 5/8.",
+        "on_incorrect_attempt_1": "Rename the second fraction using denominator 8, without changing its value.",
+        "on_incorrect_attempt_2": "Use 7 minus 2, in that order, and keep denominator 8. Submit the corrected exact fraction.",
+        "on_locked_incorrect": "Answer recorded. The conversion and subtraction working will be available after the final set.",
+        "worked_explanation": "8 is a multiple of 4, so use denominator 8. → 7/8 = 7/8 and 1/4 = 2/8. → 7/8 − 2/8 = 5/8."
+      },
+      "mathematical_support": {
+        "hint_1": "Rename the second fraction using denominator 8, without changing its value.",
+        "hint_2": "Only the smaller-denominator fraction needs renaming. Subtract the converted numerators in the order shown and keep the common denominator.",
+        "worked_solution": "8 is a multiple of 4, so use denominator 8. → 7/8 = 7/8 and 1/4 = 2/8. → 7/8 − 2/8 = 5/8."
+      },
+      "working": [
+        "8 is a multiple of 4, so use denominator 8.",
+        "7/8 = 7/8 and 1/4 = 2/8.",
+        "7/8 − 2/8 = 5/8."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "one_multiple_subtract",
+          "a": 7,
+          "b": 8,
+          "c": 1,
+          "d": 4,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "6/4": "Subtracting the original numerator and denominator pairs does not preserve the part size. Match the denominators before subtracting.",
+        "6/8": "Changing a denominator alone changes the fraction. Its numerator must use the same scale factor.",
+        "-5/8": "The subtraction has been reversed. Take the second amount away from the first amount, in the order shown.",
+        "9/8": "Those numerators have been added. This question removes the second amount from the first."
+      }
+    },
+    {
+      "id": "AF-06-P02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "Work out 8/9 − 1/3. Give an exact fraction.",
+      "target": "Subtract after matching part size, preserving the given order",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "show_authored_label": true,
+        "input_label": "Exact fraction"
+      },
+      "answer": {
+        "value": "5/9"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. One third removes three ninths, leaving five ninths.",
+        "correct_after_support": "Correct. One third removes three ninths, leaving five ninths.",
+        "on_correct_math": "9 is a multiple of 3, so use denominator 9. → 8/9 = 8/9 and 1/3 = 3/9. → 8/9 − 3/9 = 5/9.",
+        "on_incorrect_attempt_1": "Rename the second fraction using denominator 9, without changing its value.",
+        "on_incorrect_attempt_2": "Use 8 minus 3, in that order, and keep denominator 9. Submit the corrected exact fraction.",
+        "on_locked_incorrect": "Answer recorded. The conversion and subtraction working will be available after the final set.",
+        "worked_explanation": "9 is a multiple of 3, so use denominator 9. → 8/9 = 8/9 and 1/3 = 3/9. → 8/9 − 3/9 = 5/9."
+      },
+      "mathematical_support": {
+        "hint_1": "Rename the second fraction using denominator 9, without changing its value.",
+        "hint_2": "Only the smaller-denominator fraction needs renaming. Subtract the converted numerators in the order shown and keep the common denominator.",
+        "worked_solution": "9 is a multiple of 3, so use denominator 9. → 8/9 = 8/9 and 1/3 = 3/9. → 8/9 − 3/9 = 5/9."
+      },
+      "working": [
+        "9 is a multiple of 3, so use denominator 9.",
+        "8/9 = 8/9 and 1/3 = 3/9.",
+        "8/9 − 3/9 = 5/9."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "one_multiple_subtract",
+          "a": 8,
+          "b": 9,
+          "c": 1,
+          "d": 3,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "7/6": "Subtracting the original numerator and denominator pairs does not preserve the part size. Match the denominators before subtracting.",
+        "7/9": "Changing a denominator alone changes the fraction. Its numerator must use the same scale factor.",
+        "-5/9": "The subtraction has been reversed. Take the second amount away from the first amount, in the order shown.",
+        "11/9": "Those numerators have been added. This question removes the second amount from the first."
+      }
+    },
+    {
+      "id": "AF-06-P03",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "Work out 9/10 − 1/5. Give an exact fraction.",
+      "target": "Subtract after matching part size, preserving the given order",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "show_authored_label": true,
+        "input_label": "Exact fraction"
+      },
+      "answer": {
+        "value": "7/10"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. One fifth becomes two tenths before it is removed.",
+        "correct_after_support": "Correct. One fifth becomes two tenths before it is removed.",
+        "on_correct_math": "10 is a multiple of 5, so use denominator 10. → 9/10 = 9/10 and 1/5 = 2/10. → 9/10 − 2/10 = 7/10.",
+        "on_incorrect_attempt_1": "Rename the second fraction using denominator 10, without changing its value.",
+        "on_incorrect_attempt_2": "Use 9 minus 2, in that order, and keep denominator 10. Submit the corrected exact fraction.",
+        "on_locked_incorrect": "Answer recorded. The conversion and subtraction working will be available after the final set.",
+        "worked_explanation": "10 is a multiple of 5, so use denominator 10. → 9/10 = 9/10 and 1/5 = 2/10. → 9/10 − 2/10 = 7/10."
+      },
+      "mathematical_support": {
+        "hint_1": "Rename the second fraction using denominator 10, without changing its value.",
+        "hint_2": "Only the smaller-denominator fraction needs renaming. Subtract the converted numerators in the order shown and keep the common denominator.",
+        "worked_solution": "10 is a multiple of 5, so use denominator 10. → 9/10 = 9/10 and 1/5 = 2/10. → 9/10 − 2/10 = 7/10."
+      },
+      "working": [
+        "10 is a multiple of 5, so use denominator 10.",
+        "9/10 = 9/10 and 1/5 = 2/10.",
+        "9/10 − 2/10 = 7/10."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "one_multiple_subtract",
+          "a": 9,
+          "b": 10,
+          "c": 1,
+          "d": 5,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "8/5": "Subtracting the original numerator and denominator pairs does not preserve the part size. Match the denominators before subtracting.",
+        "8/10": "Changing a denominator alone changes the fraction. Its numerator must use the same scale factor.",
+        "-7/10": "The subtraction has been reversed. Take the second amount away from the first amount, in the order shown.",
+        "11/10": "Those numerators have been added. This question removes the second amount from the first."
+      }
+    },
+    {
+      "id": "AF-06-P04",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "Work out 11/12 − 1/3. Give an exact fraction.",
+      "target": "Subtract after matching part size, preserving the given order",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "show_authored_label": true,
+        "input_label": "Exact fraction"
+      },
+      "answer": {
+        "value": "7/12"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The third is four twelfths, and the part size stays twelfths.",
+        "correct_after_support": "Correct. The third is four twelfths, and the part size stays twelfths.",
+        "on_correct_math": "12 is a multiple of 3, so use denominator 12. → 11/12 = 11/12 and 1/3 = 4/12. → 11/12 − 4/12 = 7/12.",
+        "on_incorrect_attempt_1": "Rename the second fraction using denominator 12, without changing its value.",
+        "on_incorrect_attempt_2": "Use 11 minus 4, in that order, and keep denominator 12. Submit the corrected exact fraction.",
+        "on_locked_incorrect": "Answer recorded. The conversion and subtraction working will be available after the final set.",
+        "worked_explanation": "12 is a multiple of 3, so use denominator 12. → 11/12 = 11/12 and 1/3 = 4/12. → 11/12 − 4/12 = 7/12."
+      },
+      "mathematical_support": {
+        "hint_1": "Rename the second fraction using denominator 12, without changing its value.",
+        "hint_2": "Only the smaller-denominator fraction needs renaming. Subtract the converted numerators in the order shown and keep the common denominator.",
+        "worked_solution": "12 is a multiple of 3, so use denominator 12. → 11/12 = 11/12 and 1/3 = 4/12. → 11/12 − 4/12 = 7/12."
+      },
+      "working": [
+        "12 is a multiple of 3, so use denominator 12.",
+        "11/12 = 11/12 and 1/3 = 4/12.",
+        "11/12 − 4/12 = 7/12."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "one_multiple_subtract",
+          "a": 11,
+          "b": 12,
+          "c": 1,
+          "d": 3,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "10/9": "Subtracting the original numerator and denominator pairs does not preserve the part size. Match the denominators before subtracting.",
+        "10/12": "Changing a denominator alone changes the fraction. Its numerator must use the same scale factor.",
+        "-7/12": "The subtraction has been reversed. Take the second amount away from the first amount, in the order shown.",
+        "15/12": "Those numerators have been added. This question removes the second amount from the first."
+      }
+    },
+    {
+      "id": "AF-06-P05",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "Work out 13/14 − 2/7. Give an exact fraction.",
+      "target": "Subtract after matching part size, preserving the given order",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "show_authored_label": true,
+        "input_label": "Exact fraction"
+      },
+      "answer": {
+        "value": "9/14"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Two sevenths becomes four fourteenths, leaving nine fourteenths.",
+        "correct_after_support": "Correct. Two sevenths becomes four fourteenths, leaving nine fourteenths.",
+        "on_correct_math": "14 is a multiple of 7, so use denominator 14. → 13/14 = 13/14 and 2/7 = 4/14. → 13/14 − 4/14 = 9/14.",
+        "on_incorrect_attempt_1": "Rename the second fraction using denominator 14, without changing its value.",
+        "on_incorrect_attempt_2": "Use 13 minus 4, in that order, and keep denominator 14. Submit the corrected exact fraction.",
+        "on_locked_incorrect": "Answer recorded. The conversion and subtraction working will be available after the final set.",
+        "worked_explanation": "14 is a multiple of 7, so use denominator 14. → 13/14 = 13/14 and 2/7 = 4/14. → 13/14 − 4/14 = 9/14."
+      },
+      "mathematical_support": {
+        "hint_1": "Rename the second fraction using denominator 14, without changing its value.",
+        "hint_2": "Only the smaller-denominator fraction needs renaming. Subtract the converted numerators in the order shown and keep the common denominator.",
+        "worked_solution": "14 is a multiple of 7, so use denominator 14. → 13/14 = 13/14 and 2/7 = 4/14. → 13/14 − 4/14 = 9/14."
+      },
+      "working": [
+        "14 is a multiple of 7, so use denominator 14.",
+        "13/14 = 13/14 and 2/7 = 4/14.",
+        "13/14 − 4/14 = 9/14."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "one_multiple_subtract",
+          "a": 13,
+          "b": 14,
+          "c": 2,
+          "d": 7,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "11/7": "Subtracting the original numerator and denominator pairs does not preserve the part size. Match the denominators before subtracting.",
+        "11/14": "Changing a denominator alone changes the fraction. Its numerator must use the same scale factor.",
+        "-9/14": "The subtraction has been reversed. Take the second amount away from the first amount, in the order shown.",
+        "17/14": "Those numerators have been added. This question removes the second amount from the first."
+      }
+    },
+    {
+      "id": "AF-06-P06",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Which answer is correct for 11/12 − 1/3?",
+      "target": "Subtract after matching part size, preserving the given order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "10/9",
+          "7/12",
+          "10/12",
+          "7/24"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "7/12"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The numerator changes during conversion, but the common denominator stays fixed.",
+        "correct_after_support": "Correct. The numerator changes during conversion, but the common denominator stays fixed.",
+        "on_correct_math": "1/3 = 4/12. → 11/12 − 4/12 = 7/12.",
+        "on_incorrect_attempt_1": "Rename the third in twelfths before subtracting.",
+        "on_incorrect_attempt_2": "One third is four twelfths. Eleven minus four is seven; choose seven twelfths.",
+        "on_locked_incorrect": "Answer recorded. The conversion and subtraction working will be available after the final set.",
+        "worked_explanation": "1/3 = 4/12. → 11/12 − 4/12 = 7/12."
+      },
+      "mathematical_support": {
+        "hint_1": "Rename the third in twelfths before subtracting.",
+        "hint_2": "Only the smaller-denominator fraction needs renaming. Subtract the converted numerators in the order shown and keep the common denominator.",
+        "worked_solution": "1/3 = 4/12. → 11/12 − 4/12 = 7/12."
+      },
+      "working": [
+        "1/3 = 4/12.",
+        "11/12 − 4/12 = 7/12."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "one_multiple_subtract",
+          "a": 11,
+          "b": 12,
+          "c": 1,
+          "d": 3,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "10/9": "That subtracts the original numerator and denominator pairs. Match the parts first.",
+        "10/12": "One third cannot become one twelfth. Its numerator needs the same factor of four.",
+        "7/24": "The numerators were handled correctly, but the denominator must remain twelve."
+      }
+    },
+    {
+      "id": "AF-06-X01",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "practice",
+      "prompt": "A bottle contains 7/8 litre of water. Hana pours out 1/4 litre. How much water remains in the bottle?",
+      "target": "Subtract after matching part size, preserving the given order",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "show_authored_label": true,
+        "input_label": "Exact fraction",
+        "suffix": "L",
+        "suffix_label": "litres"
+      },
+      "answer": {
+        "value": "5/8"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Five eighths of a litre remains after Hana pours out the water.",
+        "correct_after_support": "Correct. Five eighths of a litre remains after Hana pours out the water.",
+        "on_correct_math": "8 is a multiple of 4, so use denominator 8. → 7/8 = 7/8 and 1/4 = 2/8. → 7/8 − 2/8 = 5/8.",
+        "on_incorrect_attempt_1": "Rename the second fraction using denominator 8, without changing its value.",
+        "on_incorrect_attempt_2": "Use 7 minus 2, in that order, and keep denominator 8. Submit the corrected exact fraction.",
+        "on_locked_incorrect": "Answer recorded. The conversion and subtraction working will be available after the final set.",
+        "worked_explanation": "8 is a multiple of 4, so use denominator 8. → 7/8 = 7/8 and 1/4 = 2/8. → 7/8 − 2/8 = 5/8."
+      },
+      "mathematical_support": {
+        "hint_1": "Rename the second fraction using denominator 8, without changing its value.",
+        "hint_2": "Only the smaller-denominator fraction needs renaming. Subtract the converted numerators in the order shown and keep the common denominator.",
+        "worked_solution": "8 is a multiple of 4, so use denominator 8. → 7/8 = 7/8 and 1/4 = 2/8. → 7/8 − 2/8 = 5/8."
+      },
+      "working": [
+        "8 is a multiple of 4, so use denominator 8.",
+        "7/8 = 7/8 and 1/4 = 2/8.",
+        "7/8 − 2/8 = 5/8."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "one_multiple_subtract",
+          "a": 7,
+          "b": 8,
+          "c": 1,
+          "d": 4,
+          "object": "bottle",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "6/4": "Subtracting the original numerator and denominator pairs does not preserve the part size. Match the denominators before subtracting.",
+        "6/8": "Changing a denominator alone changes the fraction. Its numerator must use the same scale factor.",
+        "-5/8": "The subtraction has been reversed. Take the second amount away from the first amount, in the order shown.",
+        "9/8": "Those numerators have been added. This question removes the second amount from the first."
+      }
+    },
+    {
+      "id": "AF-06-X02",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "practice",
+      "prompt": "A piece of ribbon is 11/12 metre long. A length of 1/3 metre is cut from it. What length of ribbon remains?",
+      "target": "Subtract after matching part size, preserving the given order",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "show_authored_label": true,
+        "input_label": "Exact fraction",
+        "suffix": "m",
+        "suffix_label": "metres"
+      },
+      "answer": {
+        "value": "7/12"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The remaining ribbon is seven twelfths of a metre long.",
+        "correct_after_support": "Correct. The remaining ribbon is seven twelfths of a metre long.",
+        "on_correct_math": "12 is a multiple of 3, so use denominator 12. → 11/12 = 11/12 and 1/3 = 4/12. → 11/12 − 4/12 = 7/12.",
+        "on_incorrect_attempt_1": "Rename the second fraction using denominator 12, without changing its value.",
+        "on_incorrect_attempt_2": "Use 11 minus 4, in that order, and keep denominator 12. Submit the corrected exact fraction.",
+        "on_locked_incorrect": "Answer recorded. The conversion and subtraction working will be available after the final set.",
+        "worked_explanation": "12 is a multiple of 3, so use denominator 12. → 11/12 = 11/12 and 1/3 = 4/12. → 11/12 − 4/12 = 7/12."
+      },
+      "mathematical_support": {
+        "hint_1": "Rename the second fraction using denominator 12, without changing its value.",
+        "hint_2": "Only the smaller-denominator fraction needs renaming. Subtract the converted numerators in the order shown and keep the common denominator.",
+        "worked_solution": "12 is a multiple of 3, so use denominator 12. → 11/12 = 11/12 and 1/3 = 4/12. → 11/12 − 4/12 = 7/12."
+      },
+      "working": [
+        "12 is a multiple of 3, so use denominator 12.",
+        "11/12 = 11/12 and 1/3 = 4/12.",
+        "11/12 − 4/12 = 7/12."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "one_multiple_subtract",
+          "a": 11,
+          "b": 12,
+          "c": 1,
+          "d": 3,
+          "object": "ribbon",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "10/9": "Subtracting the original numerator and denominator pairs does not preserve the part size. Match the denominators before subtracting.",
+        "10/12": "Changing a denominator alone changes the fraction. Its numerator must use the same scale factor.",
+        "-7/12": "The subtraction has been reversed. Take the second amount away from the first amount, in the order shown.",
+        "15/12": "Those numerators have been added. This question removes the second amount from the first."
+      }
+    },
+    {
+      "id": "AF-06-X03",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "practice",
+      "prompt": "A water tank is 8/9 full. Water equal to 2/3 of its capacity is removed. What fraction of the tank remains full?",
+      "target": "Subtract after matching part size, preserving the given order",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "show_authored_label": true,
+        "input_label": "Exact fraction"
+      },
+      "answer": {
+        "value": "2/9"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The removed water is six ninths of full capacity, so two ninths remains.",
+        "correct_after_support": "Correct. The removed water is six ninths of full capacity, so two ninths remains.",
+        "on_correct_math": "9 is a multiple of 3, so use denominator 9. → 8/9 = 8/9 and 2/3 = 6/9. → 8/9 − 6/9 = 2/9.",
+        "on_incorrect_attempt_1": "Rename the second fraction using denominator 9, without changing its value.",
+        "on_incorrect_attempt_2": "Use 8 minus 6, in that order, and keep denominator 9. Submit the corrected exact fraction.",
+        "on_locked_incorrect": "Answer recorded. The conversion and subtraction working will be available after the final set.",
+        "worked_explanation": "9 is a multiple of 3, so use denominator 9. → 8/9 = 8/9 and 2/3 = 6/9. → 8/9 − 6/9 = 2/9."
+      },
+      "mathematical_support": {
+        "hint_1": "Rename the second fraction using denominator 9, without changing its value.",
+        "hint_2": "Only the smaller-denominator fraction needs renaming. Subtract the converted numerators in the order shown and keep the common denominator.",
+        "worked_solution": "9 is a multiple of 3, so use denominator 9. → 8/9 = 8/9 and 2/3 = 6/9. → 8/9 − 6/9 = 2/9."
+      },
+      "working": [
+        "9 is a multiple of 3, so use denominator 9.",
+        "8/9 = 8/9 and 2/3 = 6/9.",
+        "8/9 − 6/9 = 2/9."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "one_multiple_subtract",
+          "a": 8,
+          "b": 9,
+          "c": 2,
+          "d": 3,
+          "object": "tank",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "6/6": "Subtracting the original numerator and denominator pairs does not preserve the part size. Match the denominators before subtracting.",
+        "6/9": "Changing a denominator alone changes the fraction. Its numerator must use the same scale factor.",
+        "-2/9": "The subtraction has been reversed. Take the second amount away from the first amount, in the order shown.",
+        "14/9": "Those numerators have been added. This question removes the second amount from the first."
+      }
+    },
+    {
+      "id": "AF-06-X04",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "practice",
+      "prompt": "A bag contains 9/10 kg of rice. A chef uses 1/5 kg. Which calculation finds the mass of rice remaining?",
+      "target": "Subtract after matching part size, preserving the given order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "9/10 + 1/5",
+          "9/10 − 1/5",
+          "9/10 × 1/5",
+          "9/10 ÷ 1/5"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "9/10 − 1/5"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Subtraction finds the mass left after the chef uses some rice.",
+        "correct_after_support": "Correct. Subtraction finds the mass left after the chef uses some rice.",
+        "on_correct_math": "The chef uses some of the rice already in the bag. → Find what remains by taking the used mass from the starting mass. → Calculate 9/10 − 1/5.",
+        "on_incorrect_attempt_1": "Compare the mass before the chef uses any rice with the mass left afterwards.",
+        "on_incorrect_attempt_2": "The used rice is taken from the starting mass. Select the subtraction calculation.",
+        "on_locked_incorrect": "Answer recorded. The conversion and subtraction working will be available after the final set.",
+        "worked_explanation": "The chef uses some of the rice already in the bag. → Find what remains by taking the used mass from the starting mass. → Calculate 9/10 − 1/5."
+      },
+      "mathematical_support": {
+        "hint_1": "Compare the mass before the chef uses any rice with the mass left afterwards.",
+        "hint_2": "Only the smaller-denominator fraction needs renaming. Subtract the converted numerators in the order shown and keep the common denominator.",
+        "worked_solution": "The chef uses some of the rice already in the bag. → Find what remains by taking the used mass from the starting mass. → Calculate 9/10 − 1/5."
+      },
+      "working": [
+        "The chef uses some of the rice already in the bag.",
+        "Find what remains by taking the used mass from the starting mass.",
+        "Calculate 9/10 − 1/5."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "one_multiple_subtract",
+          "a": 9,
+          "b": 10,
+          "c": 1,
+          "d": 5,
+          "object": "rice",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "9/10 + 1/5": "No rice is being added to the bag. The chef uses part of the starting amount.",
+        "9/10 × 1/5": "One fifth of a kilogram is a stated mass, not a fraction of the rice in the bag.",
+        "9/10 ÷ 1/5": "The question asks how much remains, not how many portions can be made."
+      }
+    },
+    {
+      "id": "AF-06-E01",
+      "source_ref": {
+        "page": 11
+      },
+      "stage": "exit",
+      "prompt": "Final check: work out 11/12 − 1/3. Give an exact fraction.",
+      "target": "Subtract after matching part size, preserving the given order",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "show_authored_label": true,
+        "input_label": "Exact fraction"
+      },
+      "answer": {
+        "value": "7/12"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Recorded. The exact difference is seven twelfths.",
+        "correct_after_support": "Recorded. The exact difference is seven twelfths.",
+        "on_correct_math": "12 is a multiple of 3, so use denominator 12. → 11/12 = 11/12 and 1/3 = 4/12. → 11/12 − 4/12 = 7/12.",
+        "on_incorrect_attempt_1": "Rename the second fraction using denominator 12, without changing its value.",
+        "on_incorrect_attempt_2": "Use 11 minus 4, in that order, and keep denominator 12. Submit the corrected exact fraction.",
+        "on_locked_incorrect": "Answer recorded. The conversion and subtraction working will be available after the final set.",
+        "worked_explanation": "12 is a multiple of 3, so use denominator 12. → 11/12 = 11/12 and 1/3 = 4/12. → 11/12 − 4/12 = 7/12."
+      },
+      "mathematical_support": {
+        "hint_1": "Rename the second fraction using denominator 12, without changing its value.",
+        "hint_2": "Only the smaller-denominator fraction needs renaming. Subtract the converted numerators in the order shown and keep the common denominator.",
+        "worked_solution": "12 is a multiple of 3, so use denominator 12. → 11/12 = 11/12 and 1/3 = 4/12. → 11/12 − 4/12 = 7/12."
+      },
+      "working": [
+        "12 is a multiple of 3, so use denominator 12.",
+        "11/12 = 11/12 and 1/3 = 4/12.",
+        "11/12 − 4/12 = 7/12."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "one_multiple_subtract",
+          "a": 11,
+          "b": 12,
+          "c": 1,
+          "d": 3,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "10/9": "Subtracting the original numerator and denominator pairs does not preserve the part size. Match the denominators before subtracting.",
+        "10/12": "Changing a denominator alone changes the fraction. Its numerator must use the same scale factor.",
+        "-7/12": "The subtraction has been reversed. Take the second amount away from the first amount, in the order shown.",
+        "15/12": "Those numerators have been added. This question removes the second amount from the first."
+      }
+    },
+    {
+      "id": "AF-06-E02",
+      "source_ref": {
+        "page": 11
+      },
+      "stage": "exit",
+      "prompt": "Final check: work out 15/16 − 1/4. Give an exact fraction.",
+      "target": "Subtract after matching part size, preserving the given order",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "show_authored_label": true,
+        "input_label": "Exact fraction"
+      },
+      "answer": {
+        "value": "11/16"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Recorded. The quarter is four sixteenths, leaving eleven sixteenths.",
+        "correct_after_support": "Recorded. The quarter is four sixteenths, leaving eleven sixteenths.",
+        "on_correct_math": "16 is a multiple of 4, so use denominator 16. → 15/16 = 15/16 and 1/4 = 4/16. → 15/16 − 4/16 = 11/16.",
+        "on_incorrect_attempt_1": "Rename the second fraction using denominator 16, without changing its value.",
+        "on_incorrect_attempt_2": "Use 15 minus 4, in that order, and keep denominator 16. Submit the corrected exact fraction.",
+        "on_locked_incorrect": "Answer recorded. The conversion and subtraction working will be available after the final set.",
+        "worked_explanation": "16 is a multiple of 4, so use denominator 16. → 15/16 = 15/16 and 1/4 = 4/16. → 15/16 − 4/16 = 11/16."
+      },
+      "mathematical_support": {
+        "hint_1": "Rename the second fraction using denominator 16, without changing its value.",
+        "hint_2": "Only the smaller-denominator fraction needs renaming. Subtract the converted numerators in the order shown and keep the common denominator.",
+        "worked_solution": "16 is a multiple of 4, so use denominator 16. → 15/16 = 15/16 and 1/4 = 4/16. → 15/16 − 4/16 = 11/16."
+      },
+      "working": [
+        "16 is a multiple of 4, so use denominator 16.",
+        "15/16 = 15/16 and 1/4 = 4/16.",
+        "15/16 − 4/16 = 11/16."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "one_multiple_subtract",
+          "a": 15,
+          "b": 16,
+          "c": 1,
+          "d": 4,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "14/12": "Subtracting the original numerator and denominator pairs does not preserve the part size. Match the denominators before subtracting.",
+        "14/16": "Changing a denominator alone changes the fraction. Its numerator must use the same scale factor.",
+        "-11/16": "The subtraction has been reversed. Take the second amount away from the first amount, in the order shown.",
+        "19/16": "Those numerators have been added. This question removes the second amount from the first."
+      }
+    },
+    {
+      "id": "AF-06-E03",
+      "source_ref": {
+        "page": 11
+      },
+      "stage": "exit",
+      "prompt": "Which method is correct for 8/9 − 1/3?",
+      "target": "Subtract after matching part size, preserving the given order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "8/9 − 1/3 = 8/9 − 3/9 = 5/9",
+          "8/9 − 1/3 = 7/6",
+          "8/9 − 1/3 = 8/9 − 1/9 = 7/9",
+          "8/9 − 1/3 = 5/18"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "8/9 − 1/3 = 8/9 − 3/9 = 5/9"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Recorded. The valid method preserves the fraction value, subtraction order and common denominator.",
+        "correct_after_support": "Recorded. The valid method preserves the fraction value, subtraction order and common denominator.",
+        "on_correct_math": "1/3 = 3/9. → 8/9 − 3/9 = 5/9. → The conversion is valid and the subtraction order is preserved.",
+        "on_incorrect_attempt_1": "No hints are available in the final check.",
+        "on_incorrect_attempt_2": "The response is locked for this final check.",
+        "on_locked_incorrect": "Answer recorded. The conversion and subtraction working will be available after the final set.",
+        "worked_explanation": "1/3 = 3/9. → 8/9 − 3/9 = 5/9. → The conversion is valid and the subtraction order is preserved."
+      },
+      "mathematical_support": {
+        "hint_1": "No hints are available in the final check.",
+        "hint_2": "Only the smaller-denominator fraction needs renaming. Subtract the converted numerators in the order shown and keep the common denominator.",
+        "worked_solution": "1/3 = 3/9. → 8/9 − 3/9 = 5/9. → The conversion is valid and the subtraction order is preserved."
+      },
+      "working": [
+        "1/3 = 3/9.",
+        "8/9 − 3/9 = 5/9.",
+        "The conversion is valid and the subtraction order is preserved."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "one_multiple_subtract",
+          "a": 8,
+          "b": 9,
+          "c": 1,
+          "d": 3,
+          "object": "bars",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {}
+    }
+  ],
+  "canonical_lesson": {
+    "version": "AF06-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

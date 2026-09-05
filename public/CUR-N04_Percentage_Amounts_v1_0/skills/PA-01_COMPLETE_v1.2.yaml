@@ -1,0 +1,1137 @@
+schema_version: '1.2'
+spec_intent:
+  source_of_truth: true
+  implementation_status: first_production_exemplar
+  source_material:
+    title: PA 01 — Interpret a Percentage of an Amount
+    path: authoring-source-redacted.pdf
+    authoritative_pages: 1-20
+  authored_scope: Teach the learner to identify the whole, the stated percentage and the required part, then represent p% of A as p/100 × A.
+  excluded_from_active_route:
+    - Diagnostic questions
+    - Delayed retrieval questions
+    - Percentage calculations as a separate fluent skill
+
+identity:
+  id: PA-01
+  slug: interpret-a-percentage-of-an-amount
+  title: Interpret a Percentage of an Amount
+  strand: Number
+  cluster: Percentage Amounts
+  tier: GCSE Foundation
+  status: production_exemplar_pending_owner_review
+  estimated_minutes:
+    min: 18
+    max: 24
+
+curriculum:
+  learning_objective: Identify the whole, the stated percentage and the required part, and represent p% of A as p/100 × A.
+  success_criteria:
+    - Identify the whole amount in a percentage statement or context.
+    - Identify the stated percentage and the part that must be found.
+    - Translate p% of A into p/100 × A without changing the whole.
+    - Distinguish statements that have the same result but different wholes and percentages.
+  boundaries:
+    includes:
+      - Whole-number percentages from 1% to 100%.
+      - Positive whole-number amounts.
+      - Role identification and calculation setup.
+      - Whole-and-part percentage strip representations.
+      - Money and familiar school, travel and capacity contexts.
+    excludes:
+      - General percentage calculation fluency.
+      - Percentages below 1% or above 100%.
+      - Percentage change, reverse percentages and compound percentage problems.
+      - Expressing one amount as a percentage of another.
+
+dependencies:
+  required_skill_refs:
+    - P-N18
+  entry_assumptions:
+    - The learner understands that a percentage is a number of parts out of 100.
+    - The learner can recognise multiplication notation.
+  downstream_rule: Later percentage-amount skills may depend on PA-01; PA-01 does not teach their calculation strategies.
+
+engine_capability_requirements:
+  input_types:
+    - single_choice
+  visual_primitives:
+    - percentage_strip
+    - single_choice
+    - caption_layer
+    - progress_indicator
+  animation_actions:
+    - fade_in
+    - highlight
+    - reveal_equation
+    - contrast
+    - crossfade_phase
+  audio_capabilities:
+    - browser_speech
+    - caption_sync
+    - narration_animation_sync
+    - pause_for_input
+    - cancel_on_navigation
+  state_capabilities:
+    - attempt_count
+    - step_resume
+    - skill_state
+    - exit_score
+    - confirmation_branch
+    - used_reaction_history
+
+experience_contract:
+  ordered_phases:
+    - teaching
+    - guided
+    - faded
+    - independent_transfer
+    - practice
+    - exit
+    - completion
+  navigation:
+    default: linear_forward
+    refresh_resume: Resume at the latest committed step.
+    start_again: Reset only this lesson attempt and preserve historical completion records.
+  interaction_rules:
+    - Never auto-submit an answer.
+    - Keep Continue disabled until the current interaction is resolved.
+    - Keep answer choices keyboard and touch accessible.
+    - Never reveal the role or setup being assessed before submission.
+
+voice_and_script:
+  performer_name: Ryan
+  dialogue_profile_ref: RYAN_DIALOGUE_PROFILE_v1.yaml
+  script_ownership: Mathematical narration is authored in this specification. Generic reactions come only from the approved Ryan dialogue profile.
+  caption_policy: Every spoken line is captioned verbatim; an empty line produces no visible caption container.
+  narration_playback:
+    mode: browser_speech_ryan
+    require_ryan_voice: true
+    browser_voice_name: Microsoft Ryan Online (Natural) - English (United Kingdom)
+    opening_delay_ms: 0
+  production_audio_note: Provider-generated audio and word-boundary assets require separate owner permission and are not part of this pilot change.
+
+visual_language:
+  primary_visual_contract:
+    primitive: percentage_strip
+    rule: Keep the percentage strip and amount strip aligned so they show the same proportion of the same whole.
+  scene_rules:
+    - Label the whole, stated percentage and required part only when those labels are being taught or have been revealed.
+    - Do not display a solved setup or role label before a scored response.
+    - Use the same strip width for the percentage scale and its matching amount.
+  reduced_motion: Replace width transitions with the same complete visual state shown immediately.
+
+diagnostic:
+  enabled: false
+  question_refs: []
+  reason: Diagnostic is explicitly outside the current implementation scope.
+
+concept_model:
+  core_idea: A percentage of an amount has three roles — the whole amount, the stated percentage and the required part.
+  invariant: The word “of” links the stated percentage to the whole amount; the whole is not replaced by 100.
+  mathematical_rule: p% of A means p/100 × A.
+  must_notice:
+    - The number after “of” is the whole in a direct statement such as 35% of 80.
+    - The percentage tells how many hundredths of that whole are selected.
+    - The required part is the amount represented by the selected proportion.
+    - Swapping the percentage and the whole changes their roles even when two calculations happen to have the same result.
+  common_confusions:
+    - Treating 100 as the whole amount.
+    - Using the required part as the whole.
+    - Reversing the percentage and amount in a context with several numbers.
+    - Ignoring the word “of” when building the multiplication setup.
+
+lesson:
+  teaching_steps:
+    - id: T01
+      stage: teaching
+      purpose: Establish the three roles in a familiar context.
+      estimated_seconds: 35
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: Three quantities, three jobs
+        objects:
+          - A school has 80 students and 35% travel by bus; the number travelling by bus is not yet known.
+        initial_state: Show 35% aligned with an amount strip for 80 students, leaving the selected number unknown.
+        model:
+          heading: A school has 80 students. 35% travel by bus.
+          percent: 35
+          wholeAmount: 80
+          unit: students
+          showRoles: false
+          showFormula: false
+      narration:
+        script: A percentage-of-an-amount question contains three different jobs. There is a whole amount, a stated percentage, and a part we need to find.
+        sync_cues:
+          - cue: whole amount
+            action: fade_in
+      animation_timeline:
+        - id: A01
+          trigger: narration_sync
+          action: fade_in
+          target: percentage_strip
+          duration_ms: 750
+      learner_interaction:
+        question_ref: null
+      next_step: T02
+
+    - id: T02
+      stage: teaching
+      purpose: Identify the whole and the selected proportion.
+      estimated_seconds: 40
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: Start with the whole
+        objects:
+          - Label 80 as the whole, 35% as the stated percentage and the bus group as the required part.
+        initial_state: Reveal the three roles without calculating the required part.
+        model:
+          heading: The roles in 35% of 80
+          percent: 35
+          wholeAmount: 80
+          unit: students
+          showRoles: true
+          showFormula: false
+      narration:
+        script: The 80 students are the complete group, so 80 is the whole. The 35% selects a proportion of that group. The number travelling by bus is the required part.
+        sync_cues:
+          - cue: 80 is the whole
+            action: highlight
+      animation_timeline:
+        - id: A02
+          trigger: narration_sync
+          action: highlight
+          target: percentage_strip
+          duration_ms: 800
+      learner_interaction:
+        question_ref: null
+      next_step: T03
+
+    - id: T03
+      stage: teaching
+      purpose: Teach the exact percentage setup.
+      estimated_seconds: 40
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: Turn percent into hundredths
+        objects:
+          - Show that 35% means 35/100 and “of 80” means multiply by 80.
+        initial_state: Reveal 35/100 × 80 beneath the aligned strips.
+        model:
+          heading: p% of A means p/100 × A
+          percent: 35
+          wholeAmount: 80
+          unit: students
+          showRoles: true
+          showFormula: true
+      narration:
+        script: Percent means out of one hundred. So 35% becomes 35 over 100, and the word “of” links it to the whole by multiplication. That gives 35 over 100 times 80.
+        sync_cues:
+          - cue: 35 over 100
+            action: reveal_equation
+      animation_timeline:
+        - id: A03
+          trigger: narration_sync
+          action: reveal_equation
+          target: percentage_strip
+          duration_ms: 850
+      learner_interaction:
+        question_ref: null
+      next_step: T04
+
+    - id: T04
+      stage: teaching
+      purpose: Connect the setup to matching whole-and-part strips.
+      estimated_seconds: 45
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: The strips tell the same story
+        objects:
+          - The upper strip shows 35 out of 100 percentage points; the lower strip shows the same proportion of 80 students.
+        initial_state: Show the matching 35% selection and reveal that the selected part is 28 students.
+        model:
+          heading: The same proportion on both strips
+          percent: 35
+          wholeAmount: 80
+          unit: students
+          partAmount: 28
+          showRoles: true
+          showFormula: true
+          showResult: true
+      narration:
+        script: The two strips must stay aligned. The top strip selects 35% of the whole, and the lower strip selects the same proportion of 80 students. Here, that required part is 28 students.
+        sync_cues:
+          - cue: same proportion
+            action: highlight
+      animation_timeline:
+        - id: A04
+          trigger: narration_sync
+          action: highlight
+          target: percentage_strip
+          duration_ms: 850
+      learner_interaction:
+        question_ref: null
+      next_step: T05
+
+    - id: T05
+      stage: teaching
+      purpose: Check that the learner can identify the whole.
+      estimated_seconds: 70
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: Which quantity is the whole?
+        objects:
+          - Keep the roles hidden until the learner submits.
+        initial_state: Show the school context with neutral percentage and amount labels.
+      narration:
+        script: Before we move on, identify the quantity that represents the complete group.
+      animation_timeline:
+        - id: A05
+          trigger: narration_sync
+          action: highlight
+          target: percentage_strip
+          duration_ms: 650
+      learner_interaction:
+        question_ref: PA-01-C01
+        auto_focus: true
+      next_step: T06
+
+    - id: T06
+      stage: teaching
+      purpose: Model role identification and setup in a new context.
+      estimated_seconds: 45
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: Keep the amount as the whole
+        objects:
+          - A library has 240 books and 15% are reference books.
+        initial_state: Identify 240 as the whole, 15% as the stated percentage and the reference books as the required part; show 15/100 × 240.
+        model:
+          heading: A library has 240 books. 15% are reference books.
+          percent: 15
+          wholeAmount: 240
+          unit: books
+          showRoles: true
+          showFormula: true
+      narration:
+        script: In the library, all 240 books make the whole. Fifteen percent is the stated percentage, and the reference books are the required part. The setup is 15 over 100 times 240.
+        sync_cues:
+          - cue: 240 books make the whole
+            action: reveal_equation
+      animation_timeline:
+        - id: A06
+          trigger: narration_sync
+          action: reveal_equation
+          target: percentage_strip
+          duration_ms: 850
+      learner_interaction:
+        question_ref: null
+      next_step: T07
+
+    - id: T07
+      stage: teaching
+      purpose: Check the exact setup without revealing it first.
+      estimated_seconds: 70
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: Build the setup
+        objects:
+          - Use the library context with no formula visible before submission.
+        initial_state: Show 15% and 240 on aligned strips; keep the multiplication setup hidden.
+      narration:
+        script: Now choose the expression that keeps 240 as the whole and turns 15% into hundredths.
+      animation_timeline:
+        - id: A07
+          trigger: narration_sync
+          action: highlight
+          target: percentage_strip
+          duration_ms: 650
+      learner_interaction:
+        question_ref: PA-01-C02
+        auto_focus: true
+      next_step: T08
+
+    - id: T08
+      stage: teaching
+      purpose: Contrast percentage and whole roles when the numbers swap.
+      estimated_seconds: 55
+      scene:
+        layout: paired_comparison
+        display_title: Same result, different roles
+        objects:
+          - Compare 30% of 70 with 70% of 30 using two equal-width percentage strips.
+        initial_state: Show both calculations giving 21 while preserving the different whole amounts and selected proportions.
+        model:
+          comparisons:
+            - heading: 30% of 70
+              percent: 30
+              wholeAmount: 70
+              partAmount: 21
+            - heading: 70% of 30
+              percent: 70
+              wholeAmount: 30
+              partAmount: 21
+      narration:
+        script: These two calculations both give 21, but their roles are different. In 30% of 70, the whole is 70. In 70% of 30, the whole is 30. Equal results do not make the statements identical.
+        sync_cues:
+          - cue: roles are different
+            action: contrast
+      animation_timeline:
+        - id: A08
+          trigger: narration_sync
+          action: contrast
+          target: percentage_strip
+          duration_ms: 900
+      learner_interaction:
+        question_ref: null
+      next_step: T09
+
+    - id: T09
+      stage: teaching
+      purpose: Check that swapped numbers do not swap the whole.
+      estimated_seconds: 70
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: Follow the word “of”
+        objects:
+          - Keep both numbers visible but hide the role labels until submission.
+        initial_state: Show 70% and 30 on aligned strips with neutral labels.
+      narration:
+        script: Use the wording, not the size of the numbers. In a direct statement, the amount after “of” is the whole.
+      animation_timeline:
+        - id: A09
+          trigger: narration_sync
+          action: highlight
+          target: percentage_strip
+          duration_ms: 650
+      learner_interaction:
+        question_ref: PA-01-C03
+        auto_focus: true
+      next_step: T10
+
+    - id: T10
+      stage: teaching
+      purpose: Hand control to the learner with one cue retained.
+      estimated_seconds: 30
+      scene:
+        layout: single_central_teaching_canvas
+        display_title: Your turn to identify the roles
+        objects:
+          - Show the three-question self-check without a solved example.
+        initial_state: Keep a compact reminder that the whole, percentage and required part must each have one job.
+        model:
+          heading: 'Ask: What is the whole? What is the percentage? What part is required?'
+          percent: 40
+          wholeAmount: 90
+          unit: animals
+          showRoles: false
+          showFormula: false
+      narration:
+        script: You now have a reliable check. Name the whole, name the percentage, and name the required part before you build the setup. I will keep that cue for one question, then fade it away.
+      animation_timeline:
+        - id: A10
+          trigger: narration_sync
+          action: crossfade_phase
+          target: percentage_strip
+          duration_ms: 700
+      learner_interaction:
+        question_ref: null
+      next_step: G01
+
+  transfer_steps:
+    G01:
+      stage: guided
+      question_ref: PA-01-G01
+      support_level: high
+      estimated_seconds: 80
+      pre_question_script: Start by finding the complete group. The percentage selects a part of that group.
+      visual_before_answer: Keep the percentage and amount labels visible, but do not identify their roles.
+      correct_next: F01
+      recovery_ref: PA-01-R01
+    F01:
+      stage: faded
+      question_ref: PA-01-F01
+      support_level: reduced
+      estimated_seconds: 90
+      pre_question_script: This time the role cue is hidden. Translate the percentage into hundredths, then connect it to the whole.
+      visual_before_answer: Show only the neutral aligned strips before submission.
+      correct_next: I01
+      recovery_ref: PA-01-R02
+    I01:
+      stage: independent_transfer
+      question_ref: PA-01-I01
+      support_level: none
+      estimated_seconds: 95
+      pre_question_script: Choose the correct setup independently. Check that the amount after “of” remains the whole.
+      visual_before_answer: No solved formula or role label is visible.
+      correct_next: P01
+      recovery_ref: PA-01-R03
+
+  practice:
+    intro_script: Five practice questions now. Identify the three roles before choosing; if an answer is wrong, use the feedback to repair the exact decision.
+    question_order:
+      - PA-01-P01
+      - PA-01-P02
+      - PA-01-P03
+      - PA-01-P04
+      - PA-01-P05
+    question_count: 5
+    feedback_policy: The first incorrect answer gives a targeted hint and another attempt. A second incorrect answer reveals the role or setup and its reasoning.
+
+  exit:
+    intro_script: Final check. Two questions, one submission each, with no hints while you answer.
+    primary_question_refs:
+      - PA-01-E01
+      - PA-01-E02
+    confirmation_question_refs:
+      - PA-01-CFM01
+      - PA-01-CFM02
+    submission_policy: One submission per primary exit item; reveal the outcome only after both are complete.
+    mastery_logic:
+      2_correct_of_2: SECURE
+      1_correct_of_2: Ask one unused confirmation item; correct is SECURE and incorrect is NEEDS_WORK.
+      0_correct_of_2: NEEDS_WORK
+    confirmation_selection: Use the first unseen confirmation item.
+
+completion:
+  secure:
+    title: Skill complete
+    ryan_script: You kept the whole, the percentage and the required part in their correct roles, and you built the setup independently. That foundation is ready for the next percentage skill.
+    state_write: SECURE
+    buttons:
+      - Finish for today
+      - Continue learning
+  needs_work:
+    title: One more pass will help
+    ryan_script: You have the main idea, but one of the three roles is still changing places. We will revisit the whole and the word “of” before moving on.
+    state_write: NEEDS_WORK
+    buttons:
+      - Try this skill again
+      - Finish for today
+
+question_bank:
+  - id: PA-01-C01
+    stage: teaching_checkpoint
+    target: Identify the whole amount in context.
+    prompt: A school has 80 students. 35% travel by bus. What does 80 represent?
+    response:
+      type: single_choice
+      options:
+        - The whole amount
+        - The stated percentage
+        - The required part
+    answer:
+      value: The whole amount
+    attempt_policy: &supported_attempt
+      policy: hint_retry_show_then_recovery
+      max_attempts_before_resolution: 2
+      feedback_timing: immediate
+      submit_label: Check answer
+      allow_change_before_submit: true
+      lock_after_final_submit: true
+    scripts:
+      on_correct_math: Correct. The 80 students are the complete group, so 80 is the whole amount.
+      on_incorrect_attempt_1: Look for the quantity that describes everyone in the group, before any percentage is selected.
+      on_incorrect_attempt_2: The school has 80 students altogether. That makes 80 the whole; 35% is the stated percentage, and the bus group is the required part.
+      worked_explanation: First identify everyone in the group. All 80 students form the whole. Then 35% selects the part who travel by bus.
+    mathematical_support:
+      hint_1: Which number counts the complete group of students?
+      hint_2: The word “has” gives the total group before the percentage is applied.
+      worked_solution: Whole = 80 students; stated percentage = 35%; required part = students who travel by bus.
+    success_reaction: &reaction
+      mode: engine_auto
+      selection_rule: Use one unused authored Ryan reaction appropriate to the attempt and recovery state.
+    visual:
+      primitive: percentage_strip
+      action: highlight
+      model:
+        percent: 35
+        wholeAmount: 80
+        unit: students
+        showRoles: false
+        showFormula: false
+        solutionLabel: Whole = 80 students
+    recovery_item_ref: PA-01-R01
+
+  - id: PA-01-C02
+    stage: teaching_checkpoint
+    target: Represent a percentage of an amount as multiplication by a fraction over 100.
+    prompt: A library has 240 books. 15% are reference books. Which is the correct setup?
+    response:
+      type: single_choice
+      options:
+        - 15/100 × 240
+        - 240/100 × 15
+        - 15 × 240
+        - 100/15 × 240
+    answer:
+      value: 15/100 × 240
+    attempt_policy: *supported_attempt
+    scripts:
+      on_correct_math: Correct. Fifteen percent becomes 15 over 100, and “of 240” means multiply by the whole, 240.
+      on_incorrect_attempt_1: Turn 15% into a fraction out of 100 before you use the whole amount.
+      on_incorrect_attempt_2: Keep 240 as the whole. The setup is 15 over 100 times 240.
+      worked_explanation: Write 15% as 15/100. The word “of” means multiply, and the amount after “of” is 240, so use 15/100 × 240.
+    mathematical_support:
+      hint_1: Replace the percent sign with “over 100”.
+      hint_2: p% of A is p/100 × A.
+      worked_solution: 15% of 240 = 15/100 × 240.
+    success_reaction: *reaction
+    visual:
+      primitive: percentage_strip
+      action: reveal_equation
+      model:
+        percent: 15
+        wholeAmount: 240
+        unit: books
+        showRoles: false
+        showFormula: false
+        solutionLabel: 15/100 × 240
+    recovery_item_ref: PA-01-R02
+
+  - id: PA-01-C03
+    stage: teaching_checkpoint
+    target: Preserve the whole when the percentage and amount swap positions.
+    prompt: In 70% of 30, which number is the whole?
+    response:
+      type: single_choice
+      options:
+        - 70
+        - 30
+        - 100
+    answer:
+      value: '30'
+    attempt_policy: *supported_attempt
+    scripts:
+      on_correct_math: Correct. In 70% of 30, the amount after “of” is 30, so 30 is the whole.
+      on_incorrect_attempt_1: Follow the wording. In p% of A, A is the whole.
+      on_incorrect_attempt_2: Here p is 70 and A is 30. The whole is 30, even though 70 is the larger number.
+      worked_explanation: Match 70% of 30 to p% of A. The amount A is 30, so 30 is the whole.
+    mathematical_support:
+      hint_1: Which number comes after “of”?
+      hint_2: The percentage is 70%; the other number is the whole.
+      worked_solution: 70% is the stated percentage; 30 is the whole.
+    success_reaction: *reaction
+    visual:
+      primitive: percentage_strip
+      action: contrast
+      model:
+        percent: 70
+        wholeAmount: 30
+        showRoles: false
+        showFormula: false
+        solutionLabel: Whole = 30
+    recovery_item_ref: PA-01-R03
+
+  - id: PA-01-G01
+    stage: guided
+    target: Identify the whole with a visible structural cue.
+    prompt: A farm has 90 animals. 40% are lambs. Which quantity is the whole?
+    response:
+      type: single_choice
+      options:
+        - 90 animals
+        - 40 animals
+        - 100 animals
+    answer:
+      value: 90 animals
+    attempt_policy: *supported_attempt
+    scripts:
+      on_correct_math: Correct. The farm has 90 animals altogether, so 90 animals is the whole.
+      on_incorrect_attempt_1: Find the number that counts every animal on the farm.
+      on_incorrect_attempt_2: The 90 animals are the complete group. Forty percent selects the lambs from that whole.
+      worked_explanation: Whole = all 90 animals; stated percentage = 40%; required part = lambs.
+    mathematical_support:
+      hint_1: The whole is the complete group before the percentage is selected.
+      hint_2: The farm “has 90 animals” altogether.
+      worked_solution: The whole is 90 animals.
+    success_reaction: *reaction
+    visual:
+      primitive: percentage_strip
+      model:
+        percent: 40
+        wholeAmount: 90
+        unit: animals
+        showRoles: false
+        showFormula: false
+        solutionLabel: Whole = 90 animals
+    recovery_item_ref: PA-01-R01
+
+  - id: PA-01-F01
+    stage: faded
+    target: Build the percentage setup with reduced support.
+    prompt: A theatre has 360 seats. 45% are filled. Which expression represents the number of filled seats?
+    response:
+      type: single_choice
+      options:
+        - 45/100 × 360
+        - 360/100 × 45
+        - 45/360 × 100
+        - 100/45 × 360
+    answer:
+      value: 45/100 × 360
+    attempt_policy: *supported_attempt
+    scripts:
+      on_correct_math: Correct. Forty-five percent becomes 45 over 100, and it acts on the whole of 360 seats.
+      on_incorrect_attempt_1: Write 45% as a fraction over 100 and keep 360 as the whole.
+      on_incorrect_attempt_2: The expression is 45 over 100 times 360.
+      worked_explanation: 45% = 45/100. The word “of” links that fraction to all 360 seats, giving 45/100 × 360.
+    mathematical_support:
+      hint_1: Use p/100 × A.
+      hint_2: Here p = 45 and A = 360.
+      worked_solution: 45% of 360 = 45/100 × 360.
+    success_reaction: *reaction
+    visual:
+      primitive: percentage_strip
+      model:
+        percent: 45
+        wholeAmount: 360
+        unit: seats
+        showRoles: false
+        showFormula: false
+        solutionLabel: 45/100 × 360
+    recovery_item_ref: PA-01-R02
+
+  - id: PA-01-I01
+    stage: independent_transfer
+    target: Build a percentage setup independently in a money context.
+    prompt: Which expression represents 65% of £320?
+    response:
+      type: single_choice
+      options:
+        - 65/100 × £320
+        - 320/100 × £65
+        - 65/320 × £100
+        - 100/65 × £320
+    answer:
+      value: 65/100 × £320
+    attempt_policy: *supported_attempt
+    scripts:
+      on_correct_math: Correct. The stated percentage is 65%, and £320 remains the whole amount.
+      on_incorrect_attempt_1: Translate 65% into hundredths, then multiply by the amount after “of”.
+      on_incorrect_attempt_2: The setup is 65 over 100 times £320.
+      worked_explanation: 65% = 65/100 and the whole is £320, so the expression is 65/100 × £320.
+    mathematical_support:
+      hint_1: Keep the currency amount as the whole.
+      hint_2: p% of A = p/100 × A.
+      worked_solution: 65% of £320 = 65/100 × £320.
+    success_reaction: *reaction
+    visual:
+      primitive: percentage_strip
+      model:
+        percent: 65
+        wholeAmount: 320
+        unit: £
+        showRoles: false
+        showFormula: false
+        solutionLabel: 65/100 × £320
+    recovery_item_ref: PA-01-R03
+
+  - id: PA-01-P01
+    stage: practice
+    target: Identify the whole in a capacity context.
+    prompt: A container holds 48 litres when full. It is 25% full. What is the whole amount?
+    response:
+      type: single_choice
+      options:
+        - 48 litres
+        - 25 litres
+        - 100 litres
+    answer:
+      value: 48 litres
+    attempt_policy: *supported_attempt
+    scripts:
+      on_correct_math: Correct. The full capacity is 48 litres, so 48 litres is the whole.
+      on_incorrect_attempt_1: The whole is the amount when the container is completely full.
+      on_incorrect_attempt_2: “Holds 48 litres when full” identifies the whole as 48 litres.
+      worked_explanation: Full capacity = whole = 48 litres. The 25% describes the current part.
+    mathematical_support:
+      hint_1: Look for the full capacity.
+      hint_2: A percentage describes part of the complete 48 litres.
+      worked_solution: Whole = 48 litres.
+    success_reaction: *reaction
+    visual:
+      primitive: percentage_strip
+      model:
+        percent: 25
+        wholeAmount: 48
+        unit: litres
+        showRoles: false
+        solutionLabel: Whole = 48 litres
+
+  - id: PA-01-P02
+    stage: practice
+    target: Choose the correct whole when a context contains two group sizes.
+    prompt: A school has 480 Key Stage 3 students and 220 Key Stage 4 students. A survey includes 30% of the Key Stage 4 students. What is the whole for this percentage?
+    response:
+      type: single_choice
+      options:
+        - 220 students
+        - 480 students
+        - 700 students
+        - 30 students
+    answer:
+      value: 220 students
+    attempt_policy: *supported_attempt
+    scripts:
+      on_correct_math: Correct. The percentage is specifically of the Key Stage 4 group, so 220 students is the whole.
+      on_incorrect_attempt_1: Read the noun phrase immediately after “of”. Which group is being selected from?
+      on_incorrect_attempt_2: The statement says 30% of the 220 Key Stage 4 students. The 480 Key Stage 3 students are not part of this whole.
+      worked_explanation: The percentage acts only on the Key Stage 4 group. Therefore whole = 220 students.
+    mathematical_support:
+      hint_1: Do not combine groups unless the percentage is of the combined total.
+      hint_2: Follow “of the Key Stage 4 students”.
+      worked_solution: Whole = 220 Key Stage 4 students.
+    success_reaction: *reaction
+    visual:
+      primitive: percentage_strip
+      model:
+        percent: 30
+        wholeAmount: 220
+        unit: students
+        showRoles: false
+        solutionLabel: Whole = 220 Key Stage 4 students
+
+  - id: PA-01-P03
+    stage: practice
+    target: Identify both stated values in a percentage context.
+    prompt: A concert venue has 900 seats and 40% are occupied. Which statement is correct?
+    response:
+      type: single_choice
+      options:
+        - 900 is the whole; 40% is the stated percentage
+        - 40 is the whole; 900% is the stated percentage
+        - 100 is the whole; 900 is the required part
+    answer:
+      value: 900 is the whole; 40% is the stated percentage
+    attempt_policy: *supported_attempt
+    scripts:
+      on_correct_math: Correct. All 900 seats form the whole, and 40% describes the occupied proportion.
+      on_incorrect_attempt_1: Separate the total number of seats from the percentage that selects occupied seats.
+      on_incorrect_attempt_2: The venue has 900 seats altogether, so 900 is the whole and 40% is the stated percentage.
+      worked_explanation: Whole = 900 seats; stated percentage = 40%; required part = occupied seats.
+    mathematical_support:
+      hint_1: The percent sign identifies the stated percentage.
+      hint_2: The complete number of seats identifies the whole.
+      worked_solution: 900 is the whole; 40% is the stated percentage.
+    success_reaction: *reaction
+    visual:
+      primitive: percentage_strip
+      model:
+        percent: 40
+        wholeAmount: 900
+        unit: seats
+        showRoles: false
+        solutionLabel: Whole = 900 seats; stated percentage = 40%
+
+  - id: PA-01-P04
+    stage: practice
+    target: Represent a percentage of a price.
+    prompt: Which expression represents 15% of a laptop price of £800?
+    response:
+      type: single_choice
+      options:
+        - 15/100 × £800
+        - 800/100 × £15
+        - 15/800 × £100
+        - 100/15 × £800
+    answer:
+      value: 15/100 × £800
+    attempt_policy: *supported_attempt
+    scripts:
+      on_correct_math: Correct. Fifteen percent becomes 15 over 100 and the £800 price remains the whole.
+      on_incorrect_attempt_1: Convert 15% to hundredths and keep £800 unchanged as the whole.
+      on_incorrect_attempt_2: The required expression is 15 over 100 times £800.
+      worked_explanation: 15% of £800 = 15/100 × £800.
+    mathematical_support:
+      hint_1: Percent means out of 100.
+      hint_2: The word “of” means multiply by £800.
+      worked_solution: 15/100 × £800.
+    success_reaction: *reaction
+    visual:
+      primitive: percentage_strip
+      model:
+        percent: 15
+        wholeAmount: 800
+        unit: £
+        showRoles: false
+        solutionLabel: 15/100 × £800
+
+  - id: PA-01-P05
+    stage: practice
+    target: Identify the whole in a production context.
+    prompt: A factory makes 450 parts in a day. 16% need inspection. Which quantity is the whole?
+    response:
+      type: single_choice
+      options:
+        - 450 parts
+        - 16 parts
+        - 100 parts
+    answer:
+      value: 450 parts
+    attempt_policy: *supported_attempt
+    scripts:
+      on_correct_math: Correct. All 450 parts make the whole production group.
+      on_incorrect_attempt_1: Find the total number of parts before the 16% is selected.
+      on_incorrect_attempt_2: The factory makes 450 parts altogether, so 450 parts is the whole.
+      worked_explanation: Whole = 450 parts; stated percentage = 16%; required part = parts needing inspection.
+    mathematical_support:
+      hint_1: The whole is the complete daily production.
+      hint_2: 16% describes part of 450, not part of 100 objects.
+      worked_solution: Whole = 450 parts.
+    success_reaction: *reaction
+    visual:
+      primitive: percentage_strip
+      model:
+        percent: 16
+        wholeAmount: 450
+        unit: parts
+        showRoles: false
+        solutionLabel: Whole = 450 parts
+
+  - id: PA-01-E01
+    stage: exit
+    target: Identify the whole independently.
+    prompt: In the statement “18% of 250”, what does 250 represent?
+    response:
+      type: single_choice
+      options:
+        - The whole amount
+        - The stated percentage
+        - The required part
+    answer:
+      value: The whole amount
+    attempt_policy: &exit_attempt
+      policy: single_submit_locked
+      max_attempts_before_resolution: 1
+      feedback_timing: after_exit_set
+      submit_label: Check answer
+      allow_change_before_submit: true
+      lock_after_final_submit: true
+    scripts:
+      on_correct_math: 250 is the whole amount.
+      on_incorrect_attempt_1: Record the answer for the final result.
+      on_incorrect_attempt_2: Not applicable.
+      worked_explanation: In p% of A, A is the whole. Here A = 250.
+    mathematical_support:
+      hint_1: null
+      hint_2: null
+      worked_solution: Whole = 250.
+    success_reaction:
+      mode: silent
+    visual:
+      primitive: percentage_strip
+      model:
+        percent: 18
+        wholeAmount: 250
+        showRoles: false
+        solutionLabel: Whole = 250
+
+  - id: PA-01-E02
+    stage: exit
+    target: Build the exact percentage setup independently.
+    prompt: Which expression represents 32% of 150?
+    response:
+      type: single_choice
+      options:
+        - 32/100 × 150
+        - 150/100 × 32
+        - 32/150 × 100
+        - 100/32 × 150
+    answer:
+      value: 32/100 × 150
+    attempt_policy: *exit_attempt
+    scripts:
+      on_correct_math: 32% of 150 is represented by 32 over 100 times 150.
+      on_incorrect_attempt_1: Record the answer for the final result.
+      on_incorrect_attempt_2: Not applicable.
+      worked_explanation: p% of A = p/100 × A, so 32% of 150 = 32/100 × 150.
+    mathematical_support:
+      hint_1: null
+      hint_2: null
+      worked_solution: 32/100 × 150.
+    success_reaction:
+      mode: silent
+    visual:
+      primitive: percentage_strip
+      model:
+        percent: 32
+        wholeAmount: 150
+        showRoles: false
+        showFormula: false
+        solutionLabel: 32/100 × 150
+
+  - id: PA-01-CFM01
+    stage: confirmation
+    target: Confirm the percentage setup on an unseen item.
+    prompt: Which expression represents 68% of 750 theatre seats?
+    response:
+      type: single_choice
+      options:
+        - 68/100 × 750
+        - 750/100 × 68
+        - 68/750 × 100
+        - 100/68 × 750
+    answer:
+      value: 68/100 × 750
+    attempt_policy: *exit_attempt
+    scripts:
+      on_correct_math: 68% of 750 is represented by 68 over 100 times 750.
+      on_incorrect_attempt_1: Record the answer for the final result.
+      on_incorrect_attempt_2: Not applicable.
+      worked_explanation: 68% = 68/100 and the whole is 750, so use 68/100 × 750.
+    mathematical_support:
+      hint_1: null
+      hint_2: null
+      worked_solution: 68/100 × 750.
+    success_reaction:
+      mode: silent
+    visual:
+      primitive: percentage_strip
+      model:
+        percent: 68
+        wholeAmount: 750
+        unit: seats
+        showRoles: false
+        solutionLabel: 68/100 × 750
+
+  - id: PA-01-CFM02
+    stage: confirmation
+    target: Confirm both percentage roles on an unseen context.
+    prompt: A water tank holds 1200 litres and 42% is used. Which statement is correct?
+    response:
+      type: single_choice
+      options:
+        - 1200 litres is the whole; 42% is the stated percentage
+        - 42 litres is the whole; 1200% is the stated percentage
+        - 100 litres is the whole; 42 litres is the required part
+    answer:
+      value: 1200 litres is the whole; 42% is the stated percentage
+    attempt_policy: *exit_attempt
+    scripts:
+      on_correct_math: 1200 litres is the whole, and 42% is the stated percentage.
+      on_incorrect_attempt_1: Record the answer for the final result.
+      on_incorrect_attempt_2: Not applicable.
+      worked_explanation: The full tank amount is 1200 litres. The percentage selected from it is 42%.
+    mathematical_support:
+      hint_1: null
+      hint_2: null
+      worked_solution: Whole = 1200 litres; stated percentage = 42%.
+    success_reaction:
+      mode: silent
+    visual:
+      primitive: percentage_strip
+      model:
+        percent: 42
+        wholeAmount: 1200
+        unit: litres
+        showRoles: false
+        solutionLabel: Whole = 1200 litres; stated percentage = 42%
+
+  - id: PA-01-R01
+    stage: repair
+    target: Repair confusion about the whole amount.
+    prompt: A club has 120 members and 25% attend a trip. Which quantity is the whole?
+    response:
+      type: single_choice
+      options:
+        - 120 members
+        - 25 members
+        - 100 members
+    answer:
+      value: 120 members
+    attempt_policy: *supported_attempt
+    scripts:
+      on_correct_math: The club has 120 members altogether, so 120 members is the whole.
+      on_incorrect_attempt_1: Find the complete group before the trip percentage is selected.
+      on_incorrect_attempt_2: “The club has 120 members” gives the whole. The 25% describes the attending part.
+      worked_explanation: Whole = 120 members; stated percentage = 25%; required part = members attending the trip.
+    mathematical_support:
+      hint_1: Which number counts every club member?
+      hint_2: A percentage is out of 100, but 100 is not automatically the number of objects in the whole.
+      worked_solution: Whole = 120 members.
+    success_reaction: *reaction
+    visual:
+      primitive: percentage_strip
+      model:
+        percent: 25
+        wholeAmount: 120
+        unit: members
+        showRoles: false
+        solutionLabel: Whole = 120 members
+
+  - id: PA-01-R02
+    stage: repair
+    target: Repair the meaning of the percent sign.
+    prompt: Which fraction has the same meaning as 25%?
+    response:
+      type: single_choice
+      options:
+        - 25/100
+        - 100/25
+        - 25/1
+        - 1/25
+    answer:
+      value: 25/100
+    attempt_policy: *supported_attempt
+    scripts:
+      on_correct_math: Correct. Twenty-five percent means 25 out of 100, so it is 25 over 100.
+      on_incorrect_attempt_1: Read the percent sign as “out of one hundred”.
+      on_incorrect_attempt_2: 'Keep 25 as the numerator and use 100 as the denominator: 25 over 100.'
+      worked_explanation: 25% literally means 25 per 100, which is 25/100.
+    mathematical_support:
+      hint_1: The denominator comes from the meaning of percent.
+      hint_2: “Per cent” means “for every hundred”.
+      worked_solution: 25% = 25/100.
+    success_reaction: *reaction
+    visual:
+      primitive: percentage_strip
+      model:
+        percent: 25
+        wholeAmount: 100
+        unit: percentage points
+        showRoles: false
+        solutionLabel: 25% = 25/100
+
+  - id: PA-01-R03
+    stage: repair
+    target: Repair the meaning of “of” in a percentage statement.
+    prompt: Which expression represents 12% of 500?
+    response:
+      type: single_choice
+      options:
+        - 12/100 × 500
+        - 500/100 × 12
+        - 12/500 × 100
+        - 100/12 × 500
+    answer:
+      value: 12/100 × 500
+    attempt_policy: *supported_attempt
+    scripts:
+      on_correct_math: Correct. Twelve percent becomes 12 over 100, and “of 500” means multiply by the whole, 500.
+      on_incorrect_attempt_1: First rewrite 12% as 12 over 100. Then translate “of” as multiplication.
+      on_incorrect_attempt_2: The exact setup is 12 over 100 times 500.
+      worked_explanation: 12% = 12/100; “of 500” means × 500; therefore use 12/100 × 500.
+    mathematical_support:
+      hint_1: Translate the percentage before translating “of”.
+      hint_2: p% of A = p/100 × A.
+      worked_solution: 12/100 × 500.
+    success_reaction: *reaction
+    visual:
+      primitive: percentage_strip
+      model:
+        percent: 12
+        wholeAmount: 500
+        showRoles: false
+        solutionLabel: 12/100 × 500
+
+qa_acceptance:
+  source_alignment:
+    - School, library, farm, theatre, container, college, factory, laptop and tank contexts are adapted from the approved PA-01 source.
+    - The lesson stays within role identification and p/100 × A setup; no later percentage strategy is taught.
+    - Diagnostic and delayed retrieval material are retained only as future source content, not placed in the active route.
+  learner_facing:
+    - Every scored item has distinct correct, first-incorrect and second-incorrect mathematical feedback where support is allowed.
+    - Exit and confirmation items are one-shot and provide no hints before completion.
+    - Visual and accessible labels do not identify the assessed role or expression before submission.
+    - Worked solutions reveal the role or setup after resolution without auto-filling or auto-submitting a learner answer.

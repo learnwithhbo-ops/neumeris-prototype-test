@@ -1,0 +1,1849 @@
+schema_version: '1.2'
+spec_intent:
+  source_of_truth: true
+  codex_role: implementation_only
+  codex_must_not_invent:
+  - mathematics
+  - question wording
+  - answers
+  - Ryan dialogue
+  - hints
+  - worked solutions
+  - animation storyboards
+  - branching behaviour
+  - mastery rules
+  - lesson sequence
+  - success reactions
+  - reaction sequencing
+  allowed_engine_interpretation: Codex may implement responsive layout, reusable components, state handling and animation
+    mechanics only where they preserve the authored behaviour in this file. The runtime engine may select among exact approved
+    Ryan reaction lines according to the referenced Ryan dialogue profile; it may not generate or paraphrase dialogue.
+identity:
+  id: FRA-01
+  slug: understand-fractions-as-equal-parts
+  title: Understand Fractions as Equal Parts
+  strand: Number
+  cluster: Fractions
+  tier: GCSE Foundation
+  status: canonical_reference_lesson
+  estimated_minutes:
+    min: 10
+    max: 18
+canonical_lesson:
+  reference_for_future_lessons: true
+  version: '2.0'
+  source_of_truth: Structured question model, assessment intent, response and answer fields.
+  out_of_scope:
+  - Global diagnostic engine
+  - Cross-lesson retrieval practice
+curriculum:
+  basis: England GCSE Mathematics / national curriculum spine; board-neutral Revily Fractions Registry mapping.
+  role: gcse_enabling_prerequisite
+  official_mapping:
+    direct_gcse_refs: []
+    supports_gcse_refs:
+    - source: England GCSE Mathematics / national curriculum spine
+      ref: DfE GCSE Number content foundation
+      relationship: 'Enabling prerequisite for later GCSE fraction work: understand fractions as equal parts.'
+    - source: England GCSE Mathematics / national curriculum spine
+      ref: Supports N1/N2/N12
+      relationship: 'Enabling prerequisite for later GCSE fraction work: understand fractions as equal parts.'
+    registry_compatibility: Revily Fractions Curriculum Registry v0.9 Draft; atomic ID preserved.
+  learning_objective: Interpret a fraction as a number of equal parts of one whole or quantity.
+  success_criteria:
+  - Complete a direct example of understand fractions as equal parts accurately.
+  - Explain or use the mathematical invariant rather than relying on a surface pattern.
+  - Transfer the idea to a fresh representation or GCSE-style context without initial support.
+  boundaries:
+    includes:
+    - Unit and non-unit proper fractions
+    - Equal-sized parts of one whole
+    - Shape, set and simple number-line representations
+    excludes:
+    - Operations
+    - Equivalent-fraction calculations
+    - Decimal or percentage conversion
+dependencies:
+  required_skill_refs: []
+  entry_assumptions:
+  - Everyday equal sharing and whole-number counting.
+  downstream_rule: Do not store leads_to. Derive downstream relationships from other skill prerequisite references and the
+    approved curriculum graph.
+engine_capability_requirements:
+  input_types:
+  - integer
+  - fraction
+  - single_choice
+  - yes_no
+  - comparison_symbol
+  - mixed_number
+  - ordered_sequence
+  visual_primitives:
+  - fraction_area
+  - fraction_input
+  - integer_input
+  - single_choice
+  - comparison_symbol
+  - caption_layer
+  - progress_indicator
+  animation_actions:
+  - fade_in
+  - highlight
+  - subdivide
+  - shade
+  - move
+  - morph
+  - reveal_equation
+  - draw_arrow
+  - group
+  - ungroup
+  - combine
+  - remove
+  - crossfade_label
+  - ghost_non_focus
+  audio_capabilities:
+  - queued_tts_or_audio
+  - caption_sync
+  - narration_animation_sync
+  - pause_for_input
+  - cancel_on_navigation
+  state_capabilities:
+  - attempt_count
+  - step_resume
+  - skill_state
+  - diagnostic_evidence
+  - exit_score
+  - confirmation_branch
+  - used_ryan_reaction_ids
+experience_contract:
+  target_session_minutes:
+    min: 24
+    max: 30
+  ordered_phases:
+  - teaching
+  - guided
+  - faded
+  - independent_transfer
+  - practice
+  - exit
+  - completion
+  navigation:
+    default: linear_forward
+    back_button: May revisit completed explanatory screens but must not reset recorded submitted answers.
+    refresh_resume: Resume the current skill at the latest committed step.
+    start_again: Reset current lesson attempt only; preserve historical completion records.
+  global_ui_copy:
+    submit: Check answer
+    continue: Continue
+    try_again: Try again
+    show_me: Show me
+    finish: Finish
+    continue_learning: Continue learning
+    stop_for_today: Finish for today
+  progress_indicator:
+    show: true
+    student_facing_style: phase_progress_without_raw_internal_ids
+    do_not_show: Do not expose YAML ids, attempt counters or AO labels to the learner.
+  interaction_rules:
+  - Never auto-submit a mathematical answer.
+  - Disable Continue until the current required interaction is resolved.
+  - Do not use success confetti.
+  - Do not shake the entire screen on an error.
+  - Keep keyboard focus predictable after retry.
+voice_and_script:
+  performer_name: Ryan
+  dialogue_profile_ref: RYAN_DIALOGUE_PROFILE_v1.yaml
+  script_ownership: All mathematical narration, prompts, hints, worked explanations and completion scripts in this file are
+    exact authored content. FRA01 uses only its item-specific correct lines and may not generate, prepend or paraphrase generic
+    reactions.
+  delivery_style:
+  - Natural UK English
+  - Warm, conversational and encouraging
+  - Praise should respond to understanding, independence or recovery rather than merely announce correctness
+  - No one-word success reactions
+  - No repeated praise lead-ins anywhere in the same lesson attempt
+  - Do not begin a new slide by repeating praise or a conclusion that was just spoken
+  - Use pauses to let the learner inspect visuals
+  success_reaction_policy:
+    mode: question_specific_only
+    generation_allowed: false
+    selection_state_scope: lesson_attempt
+    persist_selection_history_on_refresh_resume: true
+    derive_context_from:
+    - stage
+    - attempt_count
+    - recovery_status
+    - practice_streak
+    no_repeat:
+    - reaction_id
+    - exact_text
+    - lead_family
+    fallback_when_pool_exhausted: Speak only the item-specific mathematical follow-up. Never repeat or invent praise.
+    diagnostic: silent
+    exit_and_confirmation: silent_until_completion_result
+    selection: Speak only the authored question-specific mathematical line.
+    exhaustion: Not applicable; FRA01 does not use the generic reaction bank.
+  adjacent_speech_policy:
+    after_success: Do not play a second generic acknowledgement before the next scene.
+    next_scene: Begin directly with new mathematical content.
+    semantic_echo: The next scene must not restate the same mathematical conclusion just delivered in success feedback.
+    item_math_feedback: Speak the single authored question-specific line without a generic prefix.
+  caption_policy: Every spoken line must be available verbatim to assistive technology. The visible on-canvas caption builds
+    word by word from Ryan's speech boundary events and never reveals unsaid words.
+  opening_mode: authored_scene_only
+  narration_playback:
+    mode: authored_audio_then_browser_speech
+    voice_id: en-GB-RyanNeural
+    require_ryan_voice: true
+    timing_source: Packaged Ryan audio word-boundary metadata, then Web Speech word boundaries only if an authored asset is unavailable.
+  caption_presentation:
+    mode: on_canvas_progressive
+    accessible_full_text: true
+    max_visual_lines: 2
+visual_language:
+  scene_rules:
+    composition: Single central teaching canvas. The mathematical object is always the largest visual element; controls remain
+      below or beside it without covering the model.
+    labels: Labels sit beside the exact object they describe. Symbolic notation remains close enough to the visual model to
+      make the connection obvious.
+    motion: Motion must reveal mathematical structure only. No decorative bouncing, confetti or unrelated character animation.
+    focus: At each narration beat, de-emphasise non-essential objects and emphasise only the mathematical relationship being
+      discussed.
+  semantic_roles:
+  - whole
+  - selected_quantity
+  - partition_or_unit
+  - current_operation
+  - unchanged_invariant
+  - student_focus
+  - error
+  - success
+  style_direction:
+  - Professional educational vector style
+  - Clean geometry and legible fraction typography
+  - Use multiple semantic colours consistently rather than a single monochrome palette
+  - Maintain high contrast and uncluttered spacing
+  - Animation timing should feel deliberate rather than game-like
+  primary_visual_contract:
+    primitive: fraction_area
+    purpose: A fraction describes equal parts of a defined whole.
+    rules:
+    - The same mathematical role keeps the same semantic colour within the lesson.
+    - A transformation must preserve every quantity declared invariant by the concept model.
+    - Do not animate an operation before Ryan has established what the motion means.
+  animation_blueprint:
+    setup: One fixed whole rectangle at centre; divide it into equal regions with all region widths visibly identical. Keep
+      an outline of the whole visible at all times.
+    transform: Shade the requested count of equal parts one at a time while a numerator counter increments; keep the total
+      equal-part count fixed beside the denominator.
+    contrast: Place an unequal-part version beside the valid model, ghost the unequal regions and mark the equal-parts condition
+      as the deciding feature.
+    error: On error, outline the whole first, then pulse only the equal partition lines; never count unshaded pieces as the
+      numerator.
+    summary: Finish with WHOLE → EQUAL PARTS → SELECTED PARTS, with arrows to denominator and numerator respectively.
+  reduced_motion: Replace long translations or subdivision movement with two-state morphs/crossfades while preserving all
+    mathematical labels, intermediate states and narration meaning.
+diagnostic:
+  purpose: Determine whether this atomic skill needs teaching. Each diagnostic item targets this skill directly; do not infer
+    a misconception label from a distractor in V1.
+  question_refs:
+  - FRA-01-D01
+  - FRA-01-D02
+  presentation: Two separate short items. No hints, worked solutions, correctness reveal or Ryan praise during diagnosis.
+  scoring:
+    2_of_2: DIAGNOSTIC_SECURE
+    0_or_1_of_2: NEEDS_WORK
+  routing: After all diagnostic skills are scored, start at the earliest non-secure skill in prerequisite order.
+concept_model:
+  core_idea: A fraction describes equal parts of a defined whole.
+  invariant: The whole must be fixed and its parts must be equal before a part-whole fraction is meaningful.
+  mathematical_rule: Denominator = number of equal parts in the whole; numerator = number of those parts selected.
+  vocabulary:
+  - whole
+  - equal parts
+  - fraction
+  - selected part
+  must_notice:
+  - A fraction describes equal parts of a defined whole.
+  - The whole must be fixed and its parts must be equal before a part-whole fraction is meaningful.
+  - Denominator = number of equal parts in the whole; numerator = number of those parts selected.
+  common_confusions:
+  - Counts unequal pieces as valid fraction parts.
+  - Counts unselected parts instead of selected parts.
+  - Changes the definition of the whole mid-question.
+lesson:
+  teaching_steps:
+  - id: T01
+    stage: teaching
+    purpose: Establish the core idea before any procedure is introduced.
+    estimated_seconds: 35
+    scene:
+      display_title: How would you share this fairly?
+      variant: fair_turns_hook
+      model:
+        context_label: One shared gaming session
+        whole_label: 60 minutes
+        detail_label: four friends
+        parts: 4
+        turn_labels:
+        - Turn 1
+        - Turn 2
+        - Turn 3
+        - Turn 4
+      layout: Single central teaching canvas with progressive captions inside the canvas.
+      objects:
+      - 'fraction_area: A 60-minute gaming session first appears as one whole. Four unequal turns then become four equal turns,
+        and one equal turn is selected as one quarter of the hour.'
+      initial_state: One unpartitioned 60-minute session bar, ready to reveal an unfair split.
+    narration:
+      script: Four friends are sharing one hour on a games console. At first, one turn is much longer than the others. That
+        is not a fair quarter. When the four turns become equal, each person gets one of four equal parts of the hour.
+      delivery: Curious and conversational; let the unfair split register before correcting it.
+      sync_cues:
+      - cue: one hour
+        action: show_whole
+      - cue: one turn is much longer
+        action: reveal_unequal
+      - cue: four turns become equal
+        action: equalise_turns
+      - cue: one of four equal parts
+        action: select_one_turn
+    animation_timeline:
+    - id: T01-A01
+      trigger: narration cue
+      action: narration_choreography
+      target: 60-minute session bar, four turn boundaries and one selected equal turn
+      from: One unpartitioned 60-minute session.
+      to: Four equal turns with one selected as one quarter.
+      duration_ms: 900
+      easing: ease-in-out
+      semantic_purpose: Establish the core idea before any procedure is introduced.
+    learner_interaction:
+      question_ref: null
+      input_position: directly beneath the mathematical model
+      auto_focus: false
+    branching:
+      continue:
+        ryan_script: null
+        visual_action: Keep the final mathematical state visible until Continue is selected.
+        next_step: T02
+    next_step: T02
+  - id: T02
+    stage: teaching
+    purpose: Make the invariant visible through the primary mathematical model.
+    estimated_seconds: 35
+    scene:
+      display_title: One whole. Four equal turns.
+      variant: quarter_structure
+      model:
+        whole_label: one whole hour
+        parts: 4
+        selected: 1
+      layout: Single central teaching canvas with progressive captions inside the canvas.
+      objects:
+      - 'fraction_story: Start with the full 60-minute bar, split it into four equal turns, select one turn and then reveal 1/4.'
+      initial_state: Show the whole outline before revealing the equal parts, selection and fraction name.
+    narration:
+      script: The full hour is the whole. Split it into four equal turns. Now select one turn. That is one out of four equal
+        parts, which we write as 1/4 and call one quarter.
+      delivery: Short teaching beats, with a clear pause before naming one quarter.
+      sync_cues:
+      - cue: full hour is the whole
+        action: identify_whole
+      - cue: four equal turns
+        action: split_equal
+      - cue: select one turn
+        action: select_part
+      - cue: write as 1/4
+        action: name_fraction
+    animation_timeline:
+    - id: T02-A01
+      trigger: narration cue
+      action: narration_choreography
+      target: hour bar, four equal turns, one selected turn and 1/4 label
+      from: One whole hour with no fraction label.
+      to: One selected turn shown as 1/4 of the whole hour.
+      duration_ms: 850
+      easing: ease-in-out
+      semantic_purpose: Make the invariant visible through the primary mathematical model.
+    learner_interaction:
+      question_ref: null
+      input_position: directly beneath the mathematical model
+      auto_focus: false
+    branching:
+      continue:
+        ryan_script: null
+        visual_action: Keep the final mathematical state visible until Continue is selected.
+        next_step: T03
+    next_step: T03
+  - id: T03
+    stage: teaching
+    purpose: Require the learner to act on the first visible relationship.
+    estimated_seconds: 45
+    scene:
+      display_title: Let us try one together.
+      layout: Single central teaching canvas with progressive captions inside the canvas.
+      objects:
+      - 'fraction_area: Interactive checkpoint. One fixed whole rectangle at centre; divide it into equal regions with all
+        region widths visibly identical. Keep an outline of the whole visible at all times. Render the exact quantities/representation
+        required by this authored prompt: One section is shaded in a bar split into 6 equal sections. What fraction is shaded?
+        Do not pre-fill the learner answer.'
+      initial_state: 'Interactive checkpoint. One fixed whole rectangle at centre; divide it into equal regions with all region
+        widths visibly identical. Keep an outline of the whole visible at all times. Render the exact quantities/representation
+        required by this authored prompt: One section is shaded in a bar split into 6 equal sections. What fraction is shaded?
+        Do not pre-fill the learner answer.'
+    narration:
+      script: Here is a new whole with six equal parts. Look at the partition lines, then count only the shaded parts.
+      delivery: Brief and encouraging; hand the mathematical decision to the learner.
+      sync_cues:
+      - cue: six equal parts
+        action: focus_equal_lines
+      - cue: shaded parts
+        action: focus_selected
+    animation_timeline:
+    - id: T03-A01
+      trigger: narration cue
+      action: highlight
+      target: exact mathematical objects named by the scene narration or linked question prompt
+      from: 'Interactive checkpoint. One fixed whole rectangle at centre; divide it into equal regions with all region widths
+        visibly identical. Keep an outline of the whole visible at all times. Render the exact quantities/representation required
+        by this authored prompt: One section is shaded in a bar split into 6 equal sections. What fraction is shaded? Do not
+        pre-fill the learner answer.'
+      to: 'After resolution, preserve the submitted prompt quantities and apply this authored error/correctness model if needed:
+        On error, outline the whole first, then pulse only the equal partition lines; never count unshaded pieces as the numerator.
+        Keep the concept invariant visible: The whole must be fixed and its parts must be equal before a part-whole fraction
+        is meaningful.'
+      duration_ms: 850
+      easing: ease-in-out
+      semantic_purpose: Require the learner to act on the first visible relationship.
+    learner_interaction:
+      question_ref: FRA-01-C01
+      input_position: directly beneath the mathematical model
+      auto_focus: true
+    branching:
+      correct:
+        ryan_script: Use only the question-specific correct line.
+        visual_action: Apply the question-specific correct visual feedback only.
+        next_step: T04
+      incorrect_attempt_1:
+        ryan_script: Use the exact question-specific first hint.
+        visual_action: Highlight only the mathematical feature named by the hint.
+        next_step: T03
+      incorrect_attempt_2:
+        ryan_script: Use the exact question-specific second hint and worked explanation.
+        visual_action: Reveal the critical relationship and run the authored recovery item when referenced.
+        next_step: FRA-01-R01
+    next_step: T04
+  - id: T04
+    stage: teaching
+    purpose: Connect the visual relationship to precise mathematical language or notation.
+    estimated_seconds: 35
+    scene:
+      display_title: The bottom number
+      variant: denominator_focus
+      model:
+        parts: 6
+        selected: 1
+      layout: Single central teaching canvas with progressive captions inside the canvas.
+      objects:
+      - 'fraction_story: Show six equal parts. Count all six, move 6 to the bottom of the fraction, then reveal the word denominator.'
+      initial_state: Six equal parts are visible; the fraction and vocabulary label are hidden until their narration cues.
+    narration:
+      script: Look at all six equal parts. That total goes on the bottom of the fraction. The bottom number has a name. It is
+        the denominator.
+      delivery: Count the whole first, then introduce the term after its meaning is visible.
+      sync_cues:
+      - cue: all six equal parts
+        action: count_all_parts
+      - cue: goes on the bottom
+        action: show_denominator
+      - cue: the denominator
+        action: name_denominator
+    animation_timeline:
+    - id: T04-A01
+      trigger: narration cue
+      action: narration_choreography
+      target: six equal parts, bottom 6 and denominator label
+      from: Six uncounted equal parts.
+      to: Six counted parts linked to the denominator 6.
+      duration_ms: 900
+      easing: ease-in-out
+      semantic_purpose: Connect the visual relationship to precise mathematical language or notation.
+    learner_interaction:
+      question_ref: null
+      input_position: directly beneath the mathematical model
+      auto_focus: false
+    branching:
+      continue:
+        ryan_script: null
+        visual_action: Keep the final mathematical state visible until Continue is selected.
+        next_step: T05
+    next_step: T05
+  - id: T05
+    stage: teaching
+    purpose: Show a second example that varies surface features while preserving the same structure.
+    estimated_seconds: 35
+    scene:
+      display_title: The top number
+      variant: numerator_focus
+      model:
+        parts: 4
+        selected: 3
+      layout: Single central teaching canvas with progressive captions inside the canvas.
+      objects:
+      - 'fraction_story: Select the first, second and third part one at a time. Move 3 to the top of the fraction, then reveal
+        the word numerator.'
+      initial_state: Four equal unselected parts are visible; the selection, top 3 and vocabulary label are hidden.
+    narration:
+      script: Now count the selected parts. First one. Then two. Then three. The top number is 3, and it is called the numerator.
+      delivery: Match each count to one newly selected part.
+      sync_cues:
+      - cue: First one
+        action: select_first
+      - cue: Then two
+        action: select_second
+      - cue: Then three
+        action: select_third
+      - cue: top number is 3
+        action: show_numerator
+      - cue: called the numerator
+        action: name_numerator
+    animation_timeline:
+    - id: T05-A01
+      trigger: narration cue
+      action: narration_choreography
+      target: first three selected parts, top 3 and numerator label
+      from: Four equal unselected parts.
+      to: Three selected parts linked to the numerator 3.
+      duration_ms: 950
+      easing: ease-in-out
+      semantic_purpose: Show a second example that varies surface features while preserving the same structure.
+    learner_interaction:
+      question_ref: null
+      input_position: directly beneath the mathematical model
+      auto_focus: false
+    branching:
+      continue:
+        ryan_script: null
+        visual_action: Keep the final mathematical state visible until Continue is selected.
+        next_step: T06
+    next_step: T06
+  - id: T06
+    stage: teaching
+    purpose: Require a second learner decision with reduced prompting.
+    estimated_seconds: 45
+    scene:
+      display_title: Same idea, different shape.
+      layout: Single central teaching canvas with progressive captions inside the canvas.
+      objects:
+      - 'fraction_area: Interactive checkpoint. One fixed whole rectangle at centre; divide it into equal regions with all
+        region widths visibly identical. Keep an outline of the whole visible at all times. Render the exact quantities/representation
+        required by this authored prompt: Three parts are highlighted in a circle split into 4 equal parts. What fraction is
+        highlighted? Do not pre-fill the learner answer.'
+      initial_state: 'Interactive checkpoint. One fixed whole rectangle at centre; divide it into equal regions with all region
+        widths visibly identical. Keep an outline of the whole visible at all times. Render the exact quantities/representation
+        required by this authored prompt: Three parts are highlighted in a circle split into 4 equal parts. What fraction is
+        highlighted? Do not pre-fill the learner answer.'
+    narration:
+      script: This time the whole is a circle. Check that the four parts are equal, then count the highlighted parts.
+      delivery: Calm handoff with less support than the first checkpoint.
+      sync_cues:
+      - cue: four parts are equal
+        action: focus_equal_lines
+      - cue: highlighted parts
+        action: focus_selected
+    animation_timeline:
+    - id: T06-A01
+      trigger: narration cue
+      action: highlight
+      target: exact mathematical objects named by the scene narration or linked question prompt
+      from: 'Interactive checkpoint. One fixed whole rectangle at centre; divide it into equal regions with all region widths
+        visibly identical. Keep an outline of the whole visible at all times. Render the exact quantities/representation required
+        by this authored prompt: Three parts are highlighted in a circle split into 4 equal parts. What fraction is highlighted?
+        Do not pre-fill the learner answer.'
+      to: 'After resolution, preserve the submitted prompt quantities and apply this authored error/correctness model if needed:
+        On error, outline the whole first, then pulse only the equal partition lines; never count unshaded pieces as the numerator.
+        Keep the concept invariant visible: The whole must be fixed and its parts must be equal before a part-whole fraction
+        is meaningful.'
+      duration_ms: 1000
+      easing: ease-in-out
+      semantic_purpose: Require a second learner decision with reduced prompting.
+    learner_interaction:
+      question_ref: FRA-01-C02
+      input_position: directly beneath the mathematical model
+      auto_focus: true
+    branching:
+      correct:
+        ryan_script: Use only the question-specific correct line.
+        visual_action: Apply the question-specific correct visual feedback only.
+        next_step: T07
+      incorrect_attempt_1:
+        ryan_script: Use the exact question-specific first hint.
+        visual_action: Highlight only the mathematical feature named by the hint.
+        next_step: T06
+      incorrect_attempt_2:
+        ryan_script: Use the exact question-specific second hint and worked explanation.
+        visual_action: Reveal the critical relationship and run the authored recovery item when referenced.
+        next_step: FRA-01-R02
+    next_step: T07
+  - id: T07
+    stage: teaching
+    purpose: State the general rule only after the learner has seen why it works.
+    estimated_seconds: 35
+    scene:
+      display_title: A quick routine that works
+      variant: fraction_rule
+      model:
+        parts: 4
+        selected: 3
+      layout: Single central teaching canvas with progressive captions inside the canvas.
+      objects:
+      - 'fraction_story: Reveal the routine WHOLE → EQUAL PARTS → SELECTED PARTS one step at a time, then link the bottom number
+        to all equal parts and the top number to selected parts.'
+      initial_state: Keep the routine steps and fraction-role map hidden until their matching narration cues.
+    narration:
+      script: Here is the routine. Find the whole. Check that the parts are equal. Then count the selected parts. The total
+        number of equal parts goes on the bottom. The selected count goes on top.
+      delivery: One short beat per step, with the matching visual appearing each time.
+      sync_cues:
+      - cue: Find the whole
+        action: show_whole_step
+      - cue: parts are equal
+        action: show_equal_step
+      - cue: count the selected parts
+        action: show_selected_step
+      - cue: goes on the bottom
+        action: map_denominator
+      - cue: goes on top
+        action: map_numerator
+    animation_timeline:
+    - id: T07-A01
+      trigger: narration cue
+      action: narration_choreography
+      target: routine steps, part bar and fraction-role map
+      from: An unlabelled whole and hidden routine.
+      to: WHOLE → EQUAL PARTS → SELECTED PARTS linked to the bottom and top numbers.
+      duration_ms: 1050
+      easing: ease-in-out
+      semantic_purpose: State the general rule only after the learner has seen why it works.
+    learner_interaction:
+      question_ref: null
+      input_position: directly beneath the mathematical model
+      auto_focus: false
+    branching:
+      continue:
+        ryan_script: null
+        visual_action: Keep the final mathematical state visible until Continue is selected.
+        next_step: T08
+    next_step: T08
+  - id: T08
+    stage: teaching
+    purpose: Check the common trap or boundary case before support fades.
+    estimated_seconds: 45
+    scene:
+      display_title: Spot the problem.
+      layout: Single central teaching canvas with progressive captions inside the canvas.
+      objects:
+      - 'fraction_area: Interactive checkpoint. One fixed whole rectangle at centre; divide it into equal regions with all
+        region widths visibly identical. Keep an outline of the whole visible at all times. Render the exact quantities/representation
+        required by this authored prompt: This shape has 4 regions, but one is much larger. Do the regions represent quarters?
+        Do not pre-fill the learner answer.'
+      initial_state: 'Interactive checkpoint. One fixed whole rectangle at centre; divide it into equal regions with all region
+        widths visibly identical. Keep an outline of the whole visible at all times. Render the exact quantities/representation
+        required by this authored prompt: This shape has 4 regions, but one is much larger. Do the regions represent quarters?
+        Do not pre-fill the learner answer.'
+    narration:
+      script: Watch out for this trap. Counting four regions is not enough. Compare their sizes before you decide whether they
+        are quarters.
+      delivery: Direct and concise; do not reveal the answer.
+      sync_cues:
+      - cue: Compare their sizes
+        action: compare_sizes
+    animation_timeline:
+    - id: T08-A01
+      trigger: narration cue
+      action: highlight_error_boundary
+      target: exact mathematical objects named by the scene narration or linked question prompt
+      from: 'Interactive checkpoint. One fixed whole rectangle at centre; divide it into equal regions with all region widths
+        visibly identical. Keep an outline of the whole visible at all times. Render the exact quantities/representation required
+        by this authored prompt: This shape has 4 regions, but one is much larger. Do the regions represent quarters? Do not
+        pre-fill the learner answer.'
+      to: 'After resolution, preserve the submitted prompt quantities and apply this authored error/correctness model if needed:
+        On error, outline the whole first, then pulse only the equal partition lines; never count unshaded pieces as the numerator.
+        Keep the concept invariant visible: The whole must be fixed and its parts must be equal before a part-whole fraction
+        is meaningful.'
+      duration_ms: 1100
+      easing: ease-in-out
+      semantic_purpose: Check the common trap or boundary case before support fades.
+    learner_interaction:
+      question_ref: FRA-01-C03
+      input_position: directly beneath the mathematical model
+      auto_focus: true
+    branching:
+      correct:
+        ryan_script: Use only the question-specific correct line.
+        visual_action: Apply the question-specific correct visual feedback only.
+        next_step: T09
+      incorrect_attempt_1:
+        ryan_script: Use the exact question-specific first hint.
+        visual_action: Highlight only the mathematical feature named by the hint.
+        next_step: T08
+      incorrect_attempt_2:
+        ryan_script: Use the exact question-specific second hint and worked explanation.
+        visual_action: Reveal the critical relationship and run the authored recovery item when referenced.
+        next_step: FRA-01-R03
+    next_step: T09
+  - id: T09
+    stage: teaching
+    purpose: Show that the same fraction can represent different amounts when the whole changes.
+    estimated_seconds: 35
+    scene:
+      display_title: The whole changes the amount.
+      layout: Single central teaching canvas with progressive captions inside the canvas.
+      variant: whole_comparison
+      model:
+        denominator: 2
+        selected: 1
+      objects:
+      - 'fraction_story: Put a short bar and a longer bar side by side. Split both into two equal parts and select one part
+        of each. Label both selections 1/2 only when Ryan says both are one half.'
+      initial_state: Show only the two whole outlines. Reveal each partition, label and comparison at its matching narration cue.
+    narration:
+      script: 'One more thing: a fraction belongs to its whole. Half of this short bar and half of this longer bar are both
+        one half. But they are not the same amount, because the wholes are different.'
+      delivery: Warm, conversational, with a short pause before the key mathematical phrase.
+      sync_cues:
+      - cue: short bar
+        action: show_short_whole
+      - cue: longer bar
+        action: show_long_whole
+      - cue: both one half
+        action: show_fraction_labels
+      - cue: not the same amount
+        action: compare_amounts
+    animation_timeline:
+    - id: T09-A01
+      trigger: narration cue
+      action: narration_choreography
+      target: short and long whole bars
+      from: Two unpartitioned whole outlines.
+      to: Two visibly different halves, both correctly labelled 1/2.
+      duration_ms: 1150
+      easing: ease-in-out
+      semantic_purpose: Keep the fraction name and the actual amount visually distinct.
+    learner_interaction:
+      question_ref: null
+      input_position: directly beneath the mathematical model
+      auto_focus: false
+    branching:
+      continue:
+        ryan_script: null
+        visual_action: Keep the final mathematical state visible until Continue is selected.
+        next_step: T10
+    next_step: T10
+  - id: T10
+    stage: teaching
+    purpose: Transition from teaching into guided-to-independent transfer without repeating praise.
+    estimated_seconds: 35
+    scene:
+      display_title: Alright — your turn.
+      layout: Single central teaching canvas with progressive captions inside the canvas.
+      variant: learner_handoff
+      model:
+        denominator: 5
+        selected: 2
+      objects:
+      - 'fraction_story: Show a five-part bar with two selected parts. Begin with WHOLE, EQUAL PARTS and SELECTED PARTS labels,
+        then fade those labels as Ryan hands control to the learner.'
+      initial_state: Show the worked structure and keep the fraction itself unanswered.
+    narration:
+      script: Alright, your turn. We will do the first one together, then I will take the labels away and let you take over.
+      delivery: Warm, conversational, with a short pause before the key mathematical phrase.
+      sync_cues:
+      - cue: first one together
+        action: show_support
+      - cue: take the labels away
+        action: fade_support
+      - cue: take over
+        action: hand_over
+    animation_timeline:
+    - id: T10-A01
+      trigger: narration cue
+      action: narration_choreography
+      target: worked labels and learner handoff label
+      from: Fully labelled support.
+      to: Labels faded and the question left for the learner.
+      duration_ms: 1200
+      easing: ease-in-out
+      semantic_purpose: Transition from teaching into guided-to-independent transfer without repeating praise.
+    learner_interaction:
+      question_ref: null
+      input_position: directly beneath the mathematical model
+      auto_focus: false
+    branching:
+      continue:
+        ryan_script: null
+        visual_action: Keep the final mathematical state visible until Continue is selected.
+        next_step: G01
+    next_step: G01
+  transfer_steps:
+    G01:
+      stage: guided
+      question_ref: FRA-01-G01
+      support_level: high
+      estimated_seconds: 100
+      pre_question_script: Let us do this one together. Use the picture, but you choose both numbers.
+      visual_before_answer: Show the primary fraction_area with the key invariant labelled, but do not fill the answer.
+      correct_next: F01
+      recovery_ref: FRA-01-R01
+    F01:
+      stage: faded
+      question_ref: FRA-01-F01
+      support_level: reduced
+      estimated_seconds: 110
+      pre_question_script: Same idea, with a set of objects. Work out what counts as the whole and what is selected.
+      visual_before_answer: Show only the essential fraction_area with no worked numerical labels.
+      correct_next: I01
+      recovery_ref: FRA-01-R02
+    I01:
+      stage: independent_transfer
+      question_ref: FRA-01-I01
+      support_level: none
+      estimated_seconds: 120
+      pre_question_script: Now you take over. Read the model and write the fraction without any labels from me.
+      visual_before_answer: Show only the exact representation required by the question; no hint arrows, method labels or
+        pre-filled steps.
+      correct_next: P01
+      recovery_ref: FRA-01-R03
+  practice:
+    intro_script: You have got the idea. Here are five quick questions with different-looking wholes. Start each one by finding
+      the whole.
+    question_order:
+    - FRA-01-P01
+    - FRA-01-P02
+    - FRA-01-P03
+    - FRA-01-P04
+    - FRA-01-P05
+    question_count: 5
+    feedback_policy: First wrong attempt gives the authored focused hint; second wrong attempt reveals the critical visual
+      step and exact worked explanation. Supported correctness is learning evidence, not exit mastery.
+    between_question_transition: Speak only the question-specific correct line. Do not add a generic success reaction.
+  exit:
+    intro_script: 'Final check: two new questions, with no hints while you answer.'
+    primary_question_refs:
+    - FRA-01-E01
+    - FRA-01-E02
+    confirmation_question_refs:
+    - FRA-01-E03
+    - FRA-01-E04
+    submission_policy: One submission per exit item. Do not reveal correctness or give mathematical hints until both primary
+      exit items have been completed and the mastery branch has been chosen.
+    mastery_logic:
+      2_correct_of_2: SECURE
+      1_correct_of_2: Ask one unused confirmation item. Correct -> SECURE. Incorrect -> NEEDS_WORK.
+      0_correct_of_2: NEEDS_WORK
+    confirmation_selection: Use E03 first unless it has already appeared in the current lesson attempt; otherwise use E04.
+completion:
+  secure:
+    title: Skill complete
+    ryan_script: You can identify the whole, check that its parts are equal and write the selected fraction on your own.
+    state_write: SECURE
+    buttons:
+    - Finish for today
+    - Continue learning
+  needs_work:
+    title: One more pass will help
+    ryan_script: You are close. One more pass will help you check the whole and the equal parts before writing the fraction.
+    state_write: NEEDS_WORK
+    buttons:
+    - Try this skill again
+    - Finish for today
+question_bank:
+- id: FRA-01-D01
+  stage: diagnostic
+  target: Read a shaded equal-part model
+  ao: AO1
+  difficulty: 1
+  prompt: Three of the 8 equal parts are shaded. What fraction is shaded?
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 3/8
+  attempt_policy:
+    policy: single_submit_silent
+    max_attempts_before_resolution: 1
+    feedback_timing: none_during_diagnostic
+    submit_label: Next
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: null
+    on_incorrect_attempt_1: Record the response silently and move on.
+    on_incorrect_attempt_2: Not applicable.
+    worked_explanation: No worked solution is shown during this assessment item.
+  mathematical_support:
+    hint_1: null
+    hint_2: null
+    worked_solution: No worked solution is shown during this assessment item.
+  branching:
+    on_submit: Record correctness as diagnostic evidence, do not reveal correctness, advance to the next diagnostic item.
+    next: Next diagnostic item or diagnostic routing result.
+  success_reaction:
+    mode: silent
+    context_override: null
+    selection_rule: No generic success reaction is spoken in diagnostic or exit assessment.
+  visual:
+    primitive: fraction_area
+    description: 'Render the exact mathematical objects described in: Three of the 8 equal parts are shaded. What fraction is shaded?'
+    action: highlight
+- id: FRA-01-D02
+  stage: diagnostic
+  target: Check equal-part meaning
+  ao: AO2
+  difficulty: 2
+  prompt: This shape has 5 pieces, but they are different sizes. Can any 2 pieces be called 2/5 of the shape?
+  response:
+    type: yes_no
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 'No'
+  attempt_policy:
+    policy: single_submit_silent
+    max_attempts_before_resolution: 1
+    feedback_timing: none_during_diagnostic
+    submit_label: Next
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: null
+    on_incorrect_attempt_1: Record the response silently and move on.
+    on_incorrect_attempt_2: Not applicable.
+    worked_explanation: No worked solution is shown during this assessment item.
+  mathematical_support:
+    hint_1: null
+    hint_2: null
+    worked_solution: No worked solution is shown during this assessment item.
+  branching:
+    on_submit: Record correctness as diagnostic evidence, do not reveal correctness, advance to the next diagnostic item.
+    next: Next diagnostic item or diagnostic routing result.
+  success_reaction:
+    mode: silent
+    context_override: null
+    selection_rule: No generic success reaction is spoken in diagnostic or exit assessment.
+  visual:
+    primitive: fraction_area
+    description: 'Render the exact mathematical objects described in: This shape has 5 pieces, but they are different sizes.
+      Can any 2 pieces be called 2/5 of the shape?'
+    action: highlight
+- id: FRA-01-C01
+  stage: teaching_checkpoint
+  target: Connect equal parts to a fraction
+  ao: AO1
+  difficulty: 1
+  prompt: One section is shaded in a bar split into 6 equal sections. What fraction is shaded?
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 1/6
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: Yep — 1 shaded part out of 6 equal parts gives 1/6.
+    on_incorrect_attempt_1: Count every equal section in the whole first. That count goes on the bottom.
+    on_incorrect_attempt_2: There are 6 equal sections altogether and 1 is shaded. Put 1 over 6.
+    worked_explanation: The whole has 6 equal sections. One is shaded, so the fraction is 1/6.
+  mathematical_support:
+    hint_1: Count every equal section in the whole first. That count goes on the bottom.
+    hint_2: There are 6 equal sections altogether and 1 is shaded. Put 1 over 6.
+    worked_solution: The whole has 6 equal sections. One is shaded, so the fraction is 1/6.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: question_specific_only
+    context_override: null
+    selection_rule: Speak only scripts.on_correct_math; do not prepend a generic reaction.
+  visual:
+    primitive: fraction_area
+    description: 'Render the exact mathematical objects described in: One section is shaded in a bar split into 6 equal sections.
+      What fraction is shaded?'
+    action: highlight
+  recovery_item_ref: FRA-01-R01
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-01-C02
+  stage: teaching_checkpoint
+  target: Count selected equal parts
+  ao: AO1
+  difficulty: 1
+  prompt: Three parts are highlighted in a circle split into 4 equal parts. What fraction is highlighted?
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 3/4
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: That is it — 3 highlighted parts out of 4 equal parts gives 3/4.
+    on_incorrect_attempt_1: Count all the equal parts for the bottom number. Count only highlighted parts for the top number.
+    on_incorrect_attempt_2: There are 3 highlighted parts out of 4 equal parts. Put 3 over 4.
+    worked_explanation: The circle has 4 equal parts and 3 are highlighted, so the fraction is 3/4.
+  mathematical_support:
+    hint_1: Count all the equal parts for the bottom number. Count only highlighted parts for the top number.
+    hint_2: There are 3 highlighted parts out of 4 equal parts. Put 3 over 4.
+    worked_solution: The circle has 4 equal parts and 3 are highlighted, so the fraction is 3/4.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: question_specific_only
+    context_override: null
+    selection_rule: Speak only scripts.on_correct_math; do not prepend a generic reaction.
+  visual:
+    primitive: fraction_area
+    description: 'Render the exact mathematical objects described in: Three parts are highlighted in a circle split into 4
+      equal parts. What fraction is highlighted?'
+    action: highlight
+  recovery_item_ref: FRA-01-R02
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-01-C03
+  stage: teaching_checkpoint
+  target: Reject unequal parts
+  ao: AO2
+  difficulty: 2
+  prompt: This shape has 4 regions, but one is much larger. Do the regions represent quarters?
+  response:
+    type: yes_no
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 'No'
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: Right — quarters must be equal, so these regions are not quarters.
+    on_incorrect_attempt_1: Compare the widths. Quarters must be the same size.
+    on_incorrect_attempt_2: One region is larger, so the four parts are not equal. They cannot be quarters.
+    worked_explanation: One region is larger, so the 4 regions are not equal and cannot be quarters.
+  mathematical_support:
+    hint_1: Compare the widths. Quarters must be the same size.
+    hint_2: One region is larger, so the four parts are not equal. They cannot be quarters.
+    worked_solution: One region is larger, so the 4 regions are not equal and cannot be quarters.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: question_specific_only
+    context_override: null
+    selection_rule: Speak only scripts.on_correct_math; do not prepend a generic reaction.
+  visual:
+    primitive: fraction_area
+    description: 'Render the exact mathematical objects described in: This shape has 4 regions, but one is much larger. Do
+      the regions represent quarters?'
+    action: highlight
+  recovery_item_ref: FRA-01-R03
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-01-G01
+  stage: guided
+  target: Build a fraction from a model
+  ao: AO1
+  difficulty: 1
+  prompt: Four of the 10 equal boxes are coloured. What fraction is coloured?
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 4/10
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: Yes — 4 coloured boxes out of 10 equal boxes gives 4/10.
+    on_incorrect_attempt_1: Count every box for the bottom number, then count the coloured boxes for the top number.
+    on_incorrect_attempt_2: There are 4 coloured boxes out of 10 equal boxes. Write 4 over 10.
+    worked_explanation: The whole has 10 equal boxes. Four are coloured, so the fraction is 4/10.
+  mathematical_support:
+    hint_1: Count every box for the bottom number, then count the coloured boxes for the top number.
+    hint_2: There are 4 coloured boxes out of 10 equal boxes. Write 4 over 10.
+    worked_solution: The whole has 10 equal boxes. Four are coloured, so the fraction is 4/10.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: question_specific_only
+    context_override: null
+    selection_rule: Speak only scripts.on_correct_math; do not prepend a generic reaction.
+  visual:
+    primitive: fraction_area
+    description: 'Render the exact mathematical objects described in: Four of the 10 equal boxes are coloured. What fraction
+      is coloured?'
+    action: highlight
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-01-F01
+  stage: faded
+  target: Interpret a set as a fraction
+  ao: AO1
+  difficulty: 2
+  prompt: Five of these 12 counters are blue. What fraction of the set is blue?
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 5/12
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: Exactly — 5 blue counters out of 12 counters gives 5/12.
+    on_incorrect_attempt_1: Treat all 12 counters as the whole. Count only the blue counters for the top number.
+    on_incorrect_attempt_2: Five counters are blue out of 12 altogether. Write 5 over 12.
+    worked_explanation: The whole set has 12 counters and 5 are blue, so the fraction is 5/12.
+  mathematical_support:
+    hint_1: Treat all 12 counters as the whole. Count only the blue counters for the top number.
+    hint_2: Five counters are blue out of 12 altogether. Write 5 over 12.
+    worked_solution: The whole set has 12 counters and 5 are blue, so the fraction is 5/12.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: question_specific_only
+    context_override: null
+    selection_rule: Speak only scripts.on_correct_math; do not prepend a generic reaction.
+  visual:
+    primitive: fraction_area
+    description: 'Render the exact mathematical objects described in: Five of these 12 counters are blue. What fraction of
+      the set is blue?'
+    action: highlight
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-01-I01
+  stage: independent_transfer
+  target: Identify the whole and part
+  ao: AO1
+  difficulty: 2
+  prompt: Seven of the 9 cupcakes have icing. What fraction have icing?
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 7/9
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: You have it — 7 iced cupcakes out of 9 gives 7/9.
+    on_incorrect_attempt_1: All 9 cupcakes make the whole. The iced cupcakes give the top number.
+    on_incorrect_attempt_2: Seven of the 9 cupcakes have icing. Write 7 over 9.
+    worked_explanation: There are 9 cupcakes altogether and 7 have icing, so the fraction is 7/9.
+  mathematical_support:
+    hint_1: All 9 cupcakes make the whole. The iced cupcakes give the top number.
+    hint_2: Seven of the 9 cupcakes have icing. Write 7 over 9.
+    worked_solution: There are 9 cupcakes altogether and 7 have icing, so the fraction is 7/9.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: question_specific_only
+    context_override: null
+    selection_rule: Speak only scripts.on_correct_math; do not prepend a generic reaction.
+  visual:
+    primitive: fraction_area
+    description: 'Render the exact mathematical objects described in: Seven of the 9 cupcakes have icing. What fraction have icing?'
+    action: highlight
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-01-P01
+  stage: practice
+  target: Read a simple area model
+  ao: AO1
+  difficulty: 1
+  prompt: Two of the 5 equal strips are shaded. What fraction is shaded?
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 2/5
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: Nice — 2 shaded strips out of 5 equal strips gives 2/5.
+    on_incorrect_attempt_1: Count every strip for the bottom number and only the shaded strips for the top number.
+    on_incorrect_attempt_2: Two of the 5 equal strips are shaded. Write 2 over 5.
+    worked_explanation: The whole has 5 equal strips and 2 are shaded, so the fraction is 2/5.
+  mathematical_support:
+    hint_1: Count every strip for the bottom number and only the shaded strips for the top number.
+    hint_2: Two of the 5 equal strips are shaded. Write 2 over 5.
+    worked_solution: The whole has 5 equal strips and 2 are shaded, so the fraction is 2/5.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: question_specific_only
+    context_override: null
+    selection_rule: Speak only scripts.on_correct_math; do not prepend a generic reaction.
+  visual:
+    primitive: fraction_area
+    description: 'Render the exact mathematical objects described in: Two of the 5 equal strips are shaded. What fraction is shaded?'
+    action: highlight
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-01-P02
+  stage: practice
+  target: Read a set model
+  ao: AO1
+  difficulty: 1
+  prompt: Three of these 8 equal-sized tiles are red. What fraction are red?
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 3/8
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: Correct — 3 red tiles out of 8 tiles gives 3/8.
+    on_incorrect_attempt_1: All 8 tiles make the whole. Count the red tiles for the top number.
+    on_incorrect_attempt_2: There are 3 red tiles out of 8 altogether. Write 3 over 8.
+    worked_explanation: The whole has 8 tiles and 3 are red, so the fraction is 3/8.
+  mathematical_support:
+    hint_1: All 8 tiles make the whole. Count the red tiles for the top number.
+    hint_2: There are 3 red tiles out of 8 altogether. Write 3 over 8.
+    worked_solution: The whole has 8 tiles and 3 are red, so the fraction is 3/8.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: question_specific_only
+    context_override: null
+    selection_rule: Speak only scripts.on_correct_math; do not prepend a generic reaction.
+  visual:
+    primitive: fraction_area
+    description: 'Render the exact mathematical objects described in: Three of these 8 equal-sized tiles are red. What fraction
+      are red?'
+    action: highlight
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-01-P03
+  stage: practice
+  target: Reason about the whole
+  ao: AO2
+  difficulty: 2
+  prompt: A chocolate bar starts with 12 equal pieces. Sam eats 5. What fraction of the original bar remains?
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 7/12
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: That works — 7 of the original 12 pieces remain, so the answer is 7/12.
+    on_incorrect_attempt_1: Keep 12 on the bottom because the original bar is the whole. Now work out how many pieces remain.
+    on_incorrect_attempt_2: Twelve minus 5 leaves 7 pieces. Write 7 over the original 12.
+    worked_explanation: The whole began with 12 equal pieces. After 5 are eaten, 7 remain, so the fraction is 7/12.
+  mathematical_support:
+    hint_1: Keep 12 on the bottom because the original bar is the whole. Now work out how many pieces remain.
+    hint_2: Twelve minus 5 leaves 7 pieces. Write 7 over the original 12.
+    worked_solution: The whole began with 12 equal pieces. After 5 are eaten, 7 remain, so the fraction is 7/12.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: question_specific_only
+    context_override: null
+    selection_rule: Speak only scripts.on_correct_math; do not prepend a generic reaction.
+  visual:
+    primitive: fraction_area
+    description: 'Render the exact mathematical objects described in: A chocolate bar starts with 12 equal pieces. Sam eats
+      5. What fraction of the original bar remains?'
+    action: highlight
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-01-P04
+  stage: practice
+  target: Identify invalid fraction partition
+  ao: AO2
+  difficulty: 2
+  prompt: This pizza is cut into 6 unequal slices. Is every slice one sixth of the pizza?
+  response:
+    type: yes_no
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 'No'
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: Exactly — sixths must be equal, so these unequal slices are not sixths.
+    on_incorrect_attempt_1: Sixths must be the same size. Compare the slices before deciding.
+    on_incorrect_attempt_2: The slices are unequal, so each slice cannot be one sixth.
+    worked_explanation: A sixth is one of 6 equal parts. These slices are unequal, so they are not sixths.
+  mathematical_support:
+    hint_1: Sixths must be the same size. Compare the slices before deciding.
+    hint_2: The slices are unequal, so each slice cannot be one sixth.
+    worked_solution: A sixth is one of 6 equal parts. These slices are unequal, so they are not sixths.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: question_specific_only
+    context_override: null
+    selection_rule: Speak only scripts.on_correct_math; do not prepend a generic reaction.
+  visual:
+    primitive: fraction_area
+    description: 'Render the exact mathematical objects described in: This pizza is cut into 6 unequal slices. Is every slice
+      one sixth of the pizza?'
+    action: highlight
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-01-P05
+  stage: practice
+  target: Apply equal-part meaning in context
+  ao: AO3
+  difficulty: 2
+  prompt: A ribbon is divided into 10 equal lengths. Seven are used. What fraction is unused?
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 3/10
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: Yes — 3 of the 10 lengths are unused, so the answer is 3/10.
+    on_incorrect_attempt_1: The whole still has 10 lengths. Work out how many are left after 7 are used.
+    on_incorrect_attempt_2: Ten minus 7 leaves 3 unused lengths. Write 3 over 10.
+    worked_explanation: The ribbon has 10 equal lengths. Seven are used, leaving 3, so the unused fraction is 3/10.
+  mathematical_support:
+    hint_1: The whole still has 10 lengths. Work out how many are left after 7 are used.
+    hint_2: Ten minus 7 leaves 3 unused lengths. Write 3 over 10.
+    worked_solution: The ribbon has 10 equal lengths. Seven are used, leaving 3, so the unused fraction is 3/10.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: question_specific_only
+    context_override: null
+    selection_rule: Speak only scripts.on_correct_math; do not prepend a generic reaction.
+  visual:
+    primitive: fraction_area
+    description: 'Render the exact mathematical objects described in: A ribbon is divided into 10 equal lengths. Seven are
+      used. What fraction is unused?'
+    action: highlight
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-01-E01
+  stage: exit
+  target: Independent fraction interpretation
+  ao: AO1
+  difficulty: 1
+  prompt: Four of the 9 equal parts are selected. What fraction is selected?
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 4/9
+  attempt_policy:
+    policy: single_submit_silent
+    max_attempts_before_resolution: 1
+    feedback_timing: deferred_until_exit_decision
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: null
+    on_incorrect_attempt_1: null
+    on_incorrect_attempt_2: Not applicable.
+    worked_explanation: No worked solution is shown during this assessment item.
+  mathematical_support:
+    hint_1: null
+    hint_2: null
+    worked_solution: No worked solution is shown during this assessment item.
+  branching:
+    on_submit: Record the response without correctness feedback. The exit controller decides mastery only after the required
+      exit items are complete.
+    next: Next exit item or mastery decision.
+  success_reaction:
+    mode: silent
+    context_override: null
+    selection_rule: No generic success reaction is spoken in diagnostic or exit assessment.
+  visual:
+    primitive: fraction_area
+    description: 'Render the exact mathematical objects described in: Four of the 9 equal parts are selected. What fraction
+      is selected?'
+    action: highlight
+- id: FRA-01-E02
+  stage: exit
+  target: Independent equal-part reasoning
+  ao: AO2
+  difficulty: 2
+  prompt: A whole has 7 unequal regions. Is each region one seventh just because there are 7 of them?
+  response:
+    type: yes_no
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 'No'
+  attempt_policy:
+    policy: single_submit_silent
+    max_attempts_before_resolution: 1
+    feedback_timing: deferred_until_exit_decision
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: null
+    on_incorrect_attempt_1: null
+    on_incorrect_attempt_2: Not applicable.
+    worked_explanation: No worked solution is shown during this assessment item.
+  mathematical_support:
+    hint_1: null
+    hint_2: null
+    worked_solution: No worked solution is shown during this assessment item.
+  branching:
+    on_submit: Record the response without correctness feedback. The exit controller decides mastery only after the required
+      exit items are complete.
+    next: Next exit item or mastery decision.
+  success_reaction:
+    mode: silent
+    context_override: null
+    selection_rule: No generic success reaction is spoken in diagnostic or exit assessment.
+  visual:
+    primitive: fraction_area
+    description: 'Render the exact mathematical objects described in: A whole has 7 unequal regions. Is each region one seventh
+      just because there are 7 of them?'
+    action: highlight
+- id: FRA-01-E03
+  stage: confirmation
+  target: Confirm model reading
+  ao: AO1
+  difficulty: 2
+  prompt: Six of these 11 counters are selected. What fraction is selected?
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 6/11
+  attempt_policy:
+    policy: single_submit_silent
+    max_attempts_before_resolution: 1
+    feedback_timing: deferred_until_exit_decision
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: null
+    on_incorrect_attempt_1: null
+    on_incorrect_attempt_2: Not applicable.
+    worked_explanation: No worked solution is shown during this assessment item.
+  mathematical_support:
+    hint_1: null
+    hint_2: null
+    worked_solution: No worked solution is shown during this assessment item.
+  branching:
+    on_submit: Record the response without correctness feedback. The exit controller decides mastery only after the required
+      exit items are complete.
+    next: Next exit item or mastery decision.
+  success_reaction:
+    mode: silent
+    context_override: null
+    selection_rule: No generic success reaction is spoken in diagnostic or exit assessment.
+  visual:
+    primitive: fraction_area
+    description: 'Render the exact mathematical objects described in: Six of these 11 counters are selected. What fraction
+      is selected?'
+    action: highlight
+- id: FRA-01-E04
+  stage: confirmation
+  target: Confirm part-whole reasoning
+  ao: AO2
+  difficulty: 2
+  prompt: A strip has 8 equal sections. Three are unshaded. What fraction is shaded?
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 5/8
+  attempt_policy:
+    policy: single_submit_silent
+    max_attempts_before_resolution: 1
+    feedback_timing: deferred_until_exit_decision
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: null
+    on_incorrect_attempt_1: null
+    on_incorrect_attempt_2: Not applicable.
+    worked_explanation: No worked solution is shown during this assessment item.
+  mathematical_support:
+    hint_1: null
+    hint_2: null
+    worked_solution: No worked solution is shown during this assessment item.
+  branching:
+    on_submit: Record the response without correctness feedback. The exit controller decides mastery only after the required
+      exit items are complete.
+    next: Next exit item or mastery decision.
+  success_reaction:
+    mode: silent
+    context_override: null
+    selection_rule: No generic success reaction is spoken in diagnostic or exit assessment.
+  visual:
+    primitive: fraction_area
+    description: 'Render the exact mathematical objects described in: A strip has 8 equal sections. Three are unshaded. What
+      fraction is shaded?'
+    action: highlight
+- id: FRA-01-R01
+  stage: recovery
+  target: Recover equal-part meaning
+  ao: AO1
+  difficulty: 1
+  prompt: One of the 4 equal pieces is shaded. What fraction is shaded?
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 1/4
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: Yes — 1 shaded piece out of 4 equal pieces is 1/4.
+    on_incorrect_attempt_1: Count all 4 equal pieces for the bottom number. Count the shaded piece for the top.
+    on_incorrect_attempt_2: One piece is shaded out of 4 equal pieces. Write 1 over 4.
+    worked_explanation: The whole has 4 equal pieces and 1 is shaded, so the fraction is 1/4.
+  mathematical_support:
+    hint_1: Count all 4 equal pieces for the bottom number. Count the shaded piece for the top.
+    hint_2: One piece is shaded out of 4 equal pieces. Write 1 over 4.
+    worked_solution: The whole has 4 equal pieces and 1 is shaded, so the fraction is 1/4.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: question_specific_only
+    context_override: null
+    selection_rule: Speak only scripts.on_correct_math; do not prepend a generic reaction.
+  visual:
+    primitive: fraction_area
+    description: 'Render the exact mathematical objects described in: One of the 4 equal pieces is shaded. What fraction is shaded?'
+    action: highlight
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-01-R02
+  stage: recovery
+  target: Recover selected-part counting
+  ao: AO1
+  difficulty: 1
+  prompt: Two of these 6 counters are blue. What fraction are blue?
+  response:
+    type: fraction
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 2/6
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: Right — 2 blue counters out of 6 gives 2/6.
+    on_incorrect_attempt_1: All 6 counters make the whole. Count the blue counters for the top number.
+    on_incorrect_attempt_2: There are 2 blue counters out of 6. Write 2 over 6.
+    worked_explanation: The set has 6 counters and 2 are blue, so the fraction is 2/6.
+  mathematical_support:
+    hint_1: All 6 counters make the whole. Count the blue counters for the top number.
+    hint_2: There are 2 blue counters out of 6. Write 2 over 6.
+    worked_solution: The set has 6 counters and 2 are blue, so the fraction is 2/6.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: question_specific_only
+    context_override: null
+    selection_rule: Speak only scripts.on_correct_math; do not prepend a generic reaction.
+  visual:
+    primitive: fraction_area
+    description: 'Render the exact mathematical objects described in: Two of these 6 counters are blue. What fraction are blue?'
+    action: highlight
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+- id: FRA-01-R03
+  stage: recovery
+  target: Recover equal partition condition
+  ao: AO1
+  difficulty: 1
+  prompt: This whole has 5 unequal pieces. Are the pieces fifths?
+  response:
+    type: yes_no
+    input_label: null
+    placeholder: null
+    keyboard_submit: true
+  answer:
+    value: 'No'
+  attempt_policy:
+    policy: hint_retry_show_continue
+    max_attempts_before_resolution: 2
+    feedback_timing: immediate
+    submit_label: Check answer
+    allow_change_before_submit: true
+    lock_after_final_submit: true
+  scripts:
+    on_correct_math: Correct — fifths must be equal, so these pieces are not fifths.
+    on_incorrect_attempt_1: Fifths must be the same size. Compare the 5 pieces.
+    on_incorrect_attempt_2: These pieces are unequal, so they do not make fifths.
+    worked_explanation: A fifth is one of 5 equal parts. These pieces are unequal, so they are not fifths.
+  mathematical_support:
+    hint_1: Fifths must be the same size. Compare the 5 pieces.
+    hint_2: These pieces are unequal, so they do not make fifths.
+    worked_solution: A fifth is one of 5 equal parts. These pieces are unequal, so they are not fifths.
+  branching:
+    on_correct: Resolve and speak one unused authored success reaction, then speak scripts.on_correct_math if non-null, apply
+      visual_feedback.correct, then continue.
+    on_incorrect_attempt_1: Speak scripts.on_incorrect_attempt_1, reveal hint_1 and allow one retry.
+    on_incorrect_attempt_2: Speak scripts.on_incorrect_attempt_2, reveal the critical visual step, then speak/show scripts.worked_explanation
+      once; do not paraphrase or echo the same explanation before continuing or routing to recovery_item_ref.
+  success_reaction:
+    mode: question_specific_only
+    context_override: null
+    selection_rule: Speak only scripts.on_correct_math; do not prepend a generic reaction.
+  visual:
+    primitive: fraction_area
+    description: 'Render the exact mathematical objects described in: This whole has 5 unequal pieces. Are the pieces fifths?'
+    action: highlight
+  visual_feedback:
+    correct: Briefly mark the submitted mathematical object as correct, then clear the success state before advancing.
+    incorrect_attempt_1: Mark only the submitted mathematical object as incorrect; highlight the exact object referenced by
+      hint 1 without shaking the whole screen.
+    incorrect_attempt_2: Reveal the critical mathematical relationship visually, then show the authored worked explanation.
+progress_and_persistence:
+  states:
+  - UNSEEN
+  - NEEDS_WORK
+  - LEARNING
+  - SECURE
+  on_lesson_start: Write LEARNING unless already SECURE and learner explicitly chose to review.
+  commit_points:
+  - after each submitted answer
+  - after each completed teaching checkpoint
+  - on phase transition
+  - on exit completion
+  - on completion screen
+  resume_payload:
+  - skill_id
+  - lesson_attempt_id
+  - current_step_id
+  - submitted_answers
+  - attempt_counts
+  - seen_recovery_items
+  - exit_state
+  history_policy: Starting again creates a new lesson attempt and does not delete previous attempts.
+analytics_events:
+  minimum_events:
+  - skill_started
+  - step_viewed
+  - answer_submitted
+  - hint_shown
+  - worked_solution_shown
+  - recovery_item_started
+  - phase_completed
+  - exit_completed
+  - skill_completed
+  privacy_note: Store only data required for learning/progress analytics; this file does not define personal profile fields.
+qa:
+  schema_validated: true
+  maths_answers_verified: true
+  curriculum_human_reviewed: false
+  scripts_human_reviewed: false
+  animation_storyboard_human_reviewed: false
+  branching_reference_validated: true
+  engine_render_tested: false
+  reduced_motion_tested: false
+  keyboard_accessibility_tested: false
+  student_calibration_tested: false
+  acceptance_criteria:
+  - Every learner-facing mathematical line is present in this YAML; Codex adds none.
+  - Every question has a canonical answer and exact response type.
+  - Every interactive non-diagnostic/non-exit item defines correct, first-wrong, second-wrong and worked-resolution behaviour.
+  - Every teaching checkpoint recovery reference points to an existing authored recovery item.
+  - No diagnostic distractor maps to a misconception label in V1.
+  - No exit hint or correctness reveal appears before the mastery decision.
+  - The primary visual preserves the concept-model invariant during every transformation.
+  - Refresh resumes without losing submitted progress or used Ryan reaction history.
+  - No skill-specific route or lesson engine is introduced; this skill renders through the shared engine.

@@ -1,0 +1,2711 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "FDP-07 - Convert fractions with denominator 10, 100 or 1000 to decimals",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-19",
+      "sha256": "ad5acba2bb04328f715c963f4d71eca02d2fe194f5fe1e8c328c7dee15238202"
+    },
+    "authored_scope": "Read fractions with denominator 10, 100 or 1000 directly as decimals.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "FDP07-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "verified_desktop_ready_phone_locked_placeholder_learning_dropdown_pairs_drafts_sequential_charts_hints_audio_320_390",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        14,
+        16,
+        17,
+        18,
+        19
+      ],
+      "source_repairs_consulted": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        17,
+        18
+      ],
+      "note": "All 19 approved pages, rendered active pages and the previous bulk configuration reviewed. Restored denominator/column, count/placeholder and both table-cell blanks, the prescribed 37/1000 worked example, all practice/application items and all five unsupported final items. Valid alternative exact routes accepted without introducing general division instruction. No Diagnostic, prerequisite-state mutation, delayed Retrieval or Strong route."
+    }
+  },
+  "identity": {
+    "id": "FDP-07",
+    "slug": "convert-fractions-with-denominator-10-100-or-1000-to-decimals",
+    "title": "Convert fractions with denominator 10, 100 or 1000 to decimals",
+    "strand": "Number",
+    "cluster": "Fractions, Decimals and Percentages",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Convert fractions with denominator exactly 10, 100 or 1000 to exact decimals by aligning the final numerator digit with the named column.",
+    "success_criteria": [
+      "Use the denominator to select the final digit column.",
+      "Preserve leading and internal placeholder zeros.",
+      "Keep the whole-number part when the numerator exceeds the denominator.",
+      "Give exact decimals, with equivalent leading-point or trailing-zero notation accepted.",
+      "Apply conversions in the prescribed GCSE-style contexts."
+    ],
+    "boundaries": {
+      "includes": [
+        "Positive fractions over 10, 100 or 1000",
+        "Values below and above one",
+        "Denominator-led digit alignment",
+        "Exact decimal representation and stated units"
+      ],
+      "excludes": [
+        "Other denominators and equivalent-denominator conversion",
+        "General division-method instruction",
+        "Recurring or negative decimals",
+        "Rounding",
+        "Direct fraction-percentage conversion",
+        "Entry, Diagnostic, prerequisite routing and delayed Retrieval"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "FDP-01"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for FDP-01 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "single_choice",
+      "power_ten_fields",
+      "decimal"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    },
+    "place_value_profile": true
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "The denominator names the place of the final numerator digit.",
+    "invariant": "Digit positions preserve the same exact value, including zeros and whole-number parts.",
+    "must_notice": [
+      "Denominator, not numerator digit count, determines the fractional columns.",
+      "An empty column still needs a placeholder when it lies before an occupied position.",
+      "An improper fraction keeps its ones digit.",
+      "Trailing zeros may be optional; value-changing placeholders are not."
+    ],
+    "common_confusions": [
+      "Missing or extra decimal places",
+      "Internal zero omitted",
+      "Denominator zeros appended to a whole numerator",
+      "Whole-number digit discarded",
+      "Fraction or percentage given when a decimal is requested"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "Read the denominator first",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Read the denominator first",
+          "initial_state": "Read the denominator first",
+          "model": {
+            "kind": "power_ten_decimal",
+            "title": "The denominator determines the final column",
+            "n": 7,
+            "d": 10,
+            "given": "",
+            "steps": [
+              "Read the denominator, place the numerator digits and fill any necessary empty columns."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "legend",
+            "solved": true,
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "The denominator names the final digit column. Use it to decide how many decimal places are needed."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Compare the named columns",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Compare the named columns",
+          "initial_state": "Compare the named columns",
+          "model": {
+            "kind": "power_ten_decimal",
+            "title": "Tenths, hundredths and thousandths",
+            "n": 42,
+            "d": 1000,
+            "given": "",
+            "steps": [
+              "The final digit follows the denominator, not the number of digits in the numerator."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "examples",
+            "examples": [
+              {
+                "n": 7,
+                "d": 10
+              },
+              {
+                "n": 6,
+                "d": 100
+              },
+              {
+                "n": 42,
+                "d": 1000
+              }
+            ],
+            "solved": true,
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "Compare where each final digit lands. Empty positions before that digit need zeros to preserve its place value."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Locate the final column",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Locate the final column",
+          "initial_state": "Locate the final column",
+          "model": {
+            "kind": "power_ten_decimal",
+            "title": "Keep every empty place",
+            "n": 9,
+            "d": 1000,
+            "given": "9/1000",
+            "steps": [
+              "The denominator 1000 names thousandths, requiring 3 decimal places.",
+              "Align the final numerator digit with thousandths; the fractional columns read 0, 0, 9.",
+              "9/1000 = 0.009; retain the ones digit and every necessary placeholder zero."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "Read the denominator before placing the digit. The final column is thousandths, so no earlier decimal column may be skipped."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Fill the necessary placeholders",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Fill the necessary placeholders",
+          "initial_state": "Fill the necessary placeholders",
+          "model": {
+            "kind": "power_ten_decimal",
+            "title": "Keep every empty place",
+            "n": 9,
+            "d": 1000,
+            "given": "9/1000",
+            "steps": [
+              "The denominator 1000 names thousandths, requiring 3 decimal places.",
+              "Align the final numerator digit with thousandths; the fractional columns read 0, 0, 9.",
+              "9/1000 = 0.009; retain the ones digit and every necessary placeholder zero."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "Put the numerator digit in thousandths. The empty tenths and hundredths positions need zeros before we read the exact decimal."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Explain the zeros",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Explain the zeros",
+          "initial_state": "Explain the zeros",
+          "model": {
+            "kind": "power_ten_decimal",
+            "title": "Explain the placeholder zeros",
+            "n": 8,
+            "d": 1000,
+            "given": "8/1000 = 0.008",
+            "steps": [
+              "The denominator 1000 names thousandths, requiring 3 decimal places.",
+              "Align the final numerator digit with thousandths; the fractional columns read 0, 0, 8.",
+              "8/1000 = 0.008; retain the ones digit and every necessary placeholder zero."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "explanation_question": true
+          }
+        },
+        "narration": {
+          "script": "Choose the explanation that connects the denominator with the final digit position."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "FDP-07-C01"
+        },
+        "next_step": "T06"
+      },
+      {
+        "id": "T06",
+        "stage": "teaching",
+        "purpose": "Begin the worked conversion",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Begin the worked conversion",
+          "initial_state": "Begin the worked conversion",
+          "model": {
+            "kind": "power_ten_decimal",
+            "title": "Convert thirty-seven thousandths",
+            "n": 37,
+            "d": 1000,
+            "given": "37/1000",
+            "steps": [
+              "The denominator 1000 names thousandths, requiring 3 decimal places.",
+              "Align the final numerator digit with thousandths; the fractional columns read 0, 3, 7.",
+              "37/1000 = 0.037; retain the ones digit and every necessary placeholder zero."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "The worked fraction uses thousandths. Establish its final column before inserting any numerator digits."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T07"
+      },
+      {
+        "id": "T07",
+        "stage": "teaching",
+        "purpose": "Align both numerator digits",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Align both numerator digits",
+          "initial_state": "Align both numerator digits",
+          "model": {
+            "kind": "power_ten_decimal",
+            "title": "Convert thirty-seven thousandths",
+            "n": 37,
+            "d": 1000,
+            "given": "37/1000",
+            "steps": [
+              "The denominator 1000 names thousandths, requiring 3 decimal places.",
+              "Align the final numerator digit with thousandths; the fractional columns read 0, 3, 7.",
+              "37/1000 = 0.037; retain the ones digit and every necessary placeholder zero."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "Place the final digit in thousandths and the preceding digit in hundredths. The remaining fractional column needs a zero."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T08"
+      },
+      {
+        "id": "T08",
+        "stage": "teaching",
+        "purpose": "Include the ones place",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Include the ones place",
+          "initial_state": "Include the ones place",
+          "model": {
+            "kind": "power_ten_decimal",
+            "title": "Convert thirty-seven thousandths",
+            "n": 37,
+            "d": 1000,
+            "given": "37/1000",
+            "steps": [
+              "The denominator 1000 names thousandths, requiring 3 decimal places.",
+              "Align the final numerator digit with thousandths; the fractional columns read 0, 3, 7.",
+              "37/1000 = 0.037; retain the ones digit and every necessary placeholder zero."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "The fraction is below one, so include the ones zero and read the complete decimal without skipping a column."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T09"
+      },
+      {
+        "id": "T09",
+        "stage": "teaching",
+        "purpose": "Select a valid conversion method",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Select a valid conversion method",
+          "initial_state": "Select a valid conversion method",
+          "model": {
+            "kind": "power_ten_decimal",
+            "title": "Choose correct digit alignment",
+            "n": 52,
+            "d": 1000,
+            "given": "52/1000",
+            "steps": [
+              "The denominator 1000 names thousandths, requiring 3 decimal places.",
+              "Align the final numerator digit with thousandths; the fractional columns read 0, 5, 2.",
+              "52/1000 = 0.052; retain the ones digit and every necessary placeholder zero."
+            ],
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Check the final column and the positions of every digit in the proposed method."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "FDP-07-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "FDP-07-G01",
+        "support_level": "high",
+        "pre_question_script": "Complete the denominator and column choice.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "FDP-07-G02",
+        "support_level": "high",
+        "pre_question_script": "Complete the decimal-place count and the placeholder digit.",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "faded",
+        "question_ref": "FDP-07-G03",
+        "support_level": "reduced",
+        "pre_question_script": "Enter both place-value table cells yourself.",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "faded",
+        "question_ref": "FDP-07-G04",
+        "support_level": "reduced",
+        "pre_question_script": "Write the exact decimal from the completed places.",
+        "correct_next": "G05"
+      },
+      "G05": {
+        "stage": "independent_transfer",
+        "question_ref": "FDP-07-G05",
+        "support_level": "none",
+        "pre_question_script": "Choose the explanation that preserves the hundredths value.",
+        "correct_next": "P01"
+      }
+    },
+    "practice": {
+      "intro_script": "Write the exact decimal for each fraction. Keep necessary zeros and any whole-number part, then use the same exact values in context.",
+      "question_order": [
+        "FDP-07-P01",
+        "FDP-07-P02",
+        "FDP-07-P03",
+        "FDP-07-P04",
+        "FDP-07-P05",
+        "FDP-07-P06",
+        "FDP-07-P07",
+        "FDP-07-P08",
+        "FDP-07-X01",
+        "FDP-07-X02",
+        "FDP-07-X03",
+        "FDP-07-X04"
+      ],
+      "question_count": 12,
+      "feedback_policy": "Question-specific digit-position, zero, whole-number and representation feedback; require learner correction and preserve correct components."
+    },
+    "exit": {
+      "intro_script": "Complete four decimal conversions and one method check without hints or charts. Each answer locks; feedback follows only after the full set is saved.",
+      "primary_question_refs": [
+        "FDP-07-E01",
+        "FDP-07-E02",
+        "FDP-07-E03",
+        "FDP-07-E04",
+        "FDP-07-E05"
+      ],
+      "confirmation_question_refs": [],
+      "submission_policy": "No correctness, chart or repair until every final response is locked.",
+      "mastery_policy": {
+        "profile": "all_primary_unsupported_deferred",
+        "require_all": true,
+        "source_page": 14,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "All final conversions and the place-value rule are correct. You preserved the necessary zeros and the whole-number part across all three denominators.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Keep every digit in its correct place",
+      "ryan_script": "One or more final responses need another pass. Review the column named by the denominator, retain the empty places and keep any complete whole.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "FDP-07-C01",
+      "source_ref": {
+        "page": 4
+      },
+      "stage": "practice",
+      "prompt": "Why is 8/1000 equal to 0.008?",
+      "target": "Use the denominator to place the final numerator digit and write the exact decimal",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "The denominator 1000 places 8 in the thousandths column, with zeros in tenths and hundredths.",
+          "The numerator has one digit, so the answer must have one decimal place.",
+          "Every fraction below 1 begins with two zeros after the decimal point.",
+          "The three zeros in 1000 are copied directly after the digit 8."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "The denominator 1000 places 8 in the thousandths column, with zeros in tenths and hundredths."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Yes. The zeros keep the final digit in the column named by the denominator.",
+        "correct_after_support": "Yes. The zeros keep the final digit in the column named by the denominator.",
+        "on_correct_math": "The denominator 1000 names thousandths, requiring 3 decimal places. → Align the final numerator digit with thousandths; the fractional columns read 0, 0, 8. → 8/1000 = 0.008; retain the ones digit and every necessary placeholder zero.",
+        "on_incorrect_attempt_1": "Use the denominator to identify the final decimal column; the numerator digit count is not the rule.",
+        "on_incorrect_attempt_2": "Use the denominator to identify the final decimal column; the numerator digit count is not the rule.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The denominator 1000 names thousandths, requiring 3 decimal places. → Align the final numerator digit with thousandths; the fractional columns read 0, 0, 8. → 8/1000 = 0.008; retain the ones digit and every necessary placeholder zero."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the denominator to identify the final decimal column; the numerator digit count is not the rule.",
+        "hint_2": "Locate the final numerator digit using the denominator, then fill empty places without changing the value.",
+        "worked_solution": "The denominator 1000 names thousandths, requiring 3 decimal places. → Align the final numerator digit with thousandths; the fractional columns read 0, 0, 8. → 8/1000 = 0.008; retain the ones digit and every necessary placeholder zero."
+      },
+      "working": [
+        "The denominator 1000 names thousandths, requiring 3 decimal places.",
+        "Align the final numerator digit with thousandths; the fractional columns read 0, 0, 8.",
+        "8/1000 = 0.008; retain the ones digit and every necessary placeholder zero."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "power_ten_decimal",
+          "title": "Explain the placeholder zeros",
+          "n": 8,
+          "d": 1000,
+          "given": "8/1000 = 0.008",
+          "steps": [
+            "The denominator 1000 names thousandths, requiring 3 decimal places.",
+            "Align the final numerator digit with thousandths; the fractional columns read 0, 0, 8.",
+            "8/1000 = 0.008; retain the ones digit and every necessary placeholder zero."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "explanation_question": true
+        }
+      },
+      "response_feedback": {
+        "The numerator has one digit, so the answer must have one decimal place.": "One numerator digit does not mean one decimal place. Its position comes from the denominator.",
+        "Every fraction below 1 begins with two zeros after the decimal point.": "The number of leading zeros depends on the fraction; not every value below one needs two.",
+        "The three zeros in 1000 are copied directly after the digit 8.": "The denominator names a part size. Appending zeros to the numerator does not represent that part size."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-07-C02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "Which method correctly converts 52/1000 to a decimal?",
+      "target": "Use the denominator to place the final numerator digit and write the exact decimal",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "The denominator requires three decimal places, so write the numerator as 052 and obtain 0.052.",
+          "The numerator has two digits, so use two decimal places and obtain 0.52.",
+          "Copy the three denominator zeros after 52 and obtain 52.000.",
+          "Divide the numerator digits by 10 separately and obtain 0.502."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "The denominator requires three decimal places, so write the numerator as 052 and obtain 0.052."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The final digit reaches thousandths and the empty tenths place receives a zero.",
+        "correct_after_support": "Correct. The final digit reaches thousandths and the empty tenths place receives a zero.",
+        "on_correct_math": "The denominator 1000 names thousandths, requiring 3 decimal places. → Align the final numerator digit with thousandths; the fractional columns read 0, 5, 2. → 52/1000 = 0.052; retain the ones digit and every necessary placeholder zero.",
+        "on_incorrect_attempt_1": "Check where the final numerator digit lands, not just how many numerator digits you can see.",
+        "on_incorrect_attempt_2": "Check where the final numerator digit lands, not just how many numerator digits you can see.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The denominator 1000 names thousandths, requiring 3 decimal places. → Align the final numerator digit with thousandths; the fractional columns read 0, 5, 2. → 52/1000 = 0.052; retain the ones digit and every necessary placeholder zero."
+      },
+      "mathematical_support": {
+        "hint_1": "Check where the final numerator digit lands, not just how many numerator digits you can see.",
+        "hint_2": "Locate the final numerator digit using the denominator, then fill empty places without changing the value.",
+        "worked_solution": "The denominator 1000 names thousandths, requiring 3 decimal places. → Align the final numerator digit with thousandths; the fractional columns read 0, 5, 2. → 52/1000 = 0.052; retain the ones digit and every necessary placeholder zero."
+      },
+      "working": [
+        "The denominator 1000 names thousandths, requiring 3 decimal places.",
+        "Align the final numerator digit with thousandths; the fractional columns read 0, 5, 2.",
+        "52/1000 = 0.052; retain the ones digit and every necessary placeholder zero."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "power_ten_decimal",
+          "title": "Choose correct digit alignment",
+          "n": 52,
+          "d": 1000,
+          "given": "52/1000",
+          "steps": [
+            "The denominator 1000 names thousandths, requiring 3 decimal places.",
+            "Align the final numerator digit with thousandths; the fractional columns read 0, 5, 2.",
+            "52/1000 = 0.052; retain the ones digit and every necessary placeholder zero."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "The numerator has two digits, so use two decimal places and obtain 0.52.": "That puts the final digit in hundredths instead of thousandths.",
+        "Copy the three denominator zeros after 52 and obtain 52.000.": "That leaves a whole-number value instead of fifty-two thousandths.",
+        "Divide the numerator digits by 10 separately and obtain 0.502.": "Dividing separate digits does not preserve their positions within the numerator."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-07-G01",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "For 9/100, enter the denominator and choose the column for the final numerator digit.",
+      "target": "Use the denominator to place the final numerator digit and write the exact decimal",
+      "response": {
+        "type": "power_ten_fields",
+        "input_label": "Complete both blanks",
+        "fields": [
+          {
+            "key": "denominator",
+            "label": "Denominator",
+            "type": "integer"
+          },
+          {
+            "key": "column",
+            "label": "Final digit column",
+            "type": "column"
+          }
+        ]
+      },
+      "answer": {
+        "value": {
+          "denominator": 100,
+          "column": "hundredths"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The denominator and named column describe the same fractional parts.",
+        "correct_after_support": "Correct. The denominator and named column describe the same fractional parts.",
+        "on_correct_math": "The denominator is 100. → A denominator of 100 names the hundredths column.",
+        "on_incorrect_attempt_1": "Read the number below the fraction bar, then name the fractional parts it describes.",
+        "on_incorrect_attempt_2": "The denominator names the parts of the whole. Choose the matching place-value column.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The denominator is 100. → A denominator of 100 names the hundredths column."
+      },
+      "mathematical_support": {
+        "hint_1": "Read the number below the fraction bar, then name the fractional parts it describes.",
+        "hint_2": "The denominator names the parts of the whole. Choose the matching place-value column.",
+        "worked_solution": "The denominator is 100. → A denominator of 100 names the hundredths column."
+      },
+      "working": [
+        "The denominator is 100.",
+        "A denominator of 100 names the hundredths column."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "power_ten_decimal",
+          "title": "Read the denominator and name the column",
+          "n": 9,
+          "d": 100,
+          "given": "9/100",
+          "steps": [
+            "The denominator is 100.",
+            "A denominator of 100 names the hundredths column."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "denominator"
+        }
+      },
+      "response_feedback": {
+        "check_denominator": "Your column choice is correct. Read the denominator below the fraction bar again.",
+        "check_column": "Your denominator is correct. Choose the column named by that denominator.",
+        "check_multiple": "Read the denominator first, then match it to tenths, hundredths or thousandths."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-07-G02",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "A denominator of 100 requires how many decimal places? Place 9 in hundredths: which digit fills the empty tenths column?",
+      "target": "Use the denominator to place the final numerator digit and write the exact decimal",
+      "response": {
+        "type": "power_ten_fields",
+        "input_label": "Complete both blanks",
+        "fields": [
+          {
+            "key": "places",
+            "label": "Decimal places",
+            "type": "integer"
+          },
+          {
+            "key": "placeholder",
+            "label": "Empty tenths digit",
+            "type": "integer"
+          }
+        ]
+      },
+      "answer": {
+        "value": {
+          "places": 2,
+          "placeholder": 0
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Your count reaches hundredths and the placeholder keeps that position.",
+        "correct_after_support": "Correct. Your count reaches hundredths and the placeholder keeps that position.",
+        "on_correct_math": "A denominator of 100 requires 2 decimal places. → The empty tenths column needs the placeholder digit 0.",
+        "on_incorrect_attempt_1": "Count the places through hundredths, then decide what belongs in an empty column.",
+        "on_incorrect_attempt_2": "Keep the final digit in hundredths. Empty positions still need a digit to hold their place.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "A denominator of 100 requires 2 decimal places. → The empty tenths column needs the placeholder digit 0."
+      },
+      "mathematical_support": {
+        "hint_1": "Count the places through hundredths, then decide what belongs in an empty column.",
+        "hint_2": "Keep the final digit in hundredths. Empty positions still need a digit to hold their place.",
+        "worked_solution": "A denominator of 100 requires 2 decimal places. → The empty tenths column needs the placeholder digit 0."
+      },
+      "working": [
+        "A denominator of 100 requires 2 decimal places.",
+        "The empty tenths column needs the placeholder digit 0."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "power_ten_decimal",
+          "title": "Count the places and fill the empty one",
+          "n": 9,
+          "d": 100,
+          "given": "9/100",
+          "steps": [
+            "A denominator of 100 requires 2 decimal places.",
+            "The empty tenths column needs the placeholder digit 0."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "place_count"
+        }
+      },
+      "response_feedback": {
+        "check_places": "Your placeholder digit is correct. Count the decimal places through hundredths.",
+        "check_placeholder": "Your decimal-place count is correct. Use the digit that represents an empty tenths column.",
+        "check_multiple": "Check the required number of decimal places and the digit for an empty column separately."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-07-G03",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "faded",
+      "prompt": "Complete the tenths and hundredths entries for 9/100.",
+      "target": "Use the denominator to place the final numerator digit and write the exact decimal",
+      "response": {
+        "type": "power_ten_fields",
+        "input_label": "Complete the place-value row",
+        "fields": [
+          {
+            "key": "tenths",
+            "label": "Tenths digit",
+            "type": "integer"
+          },
+          {
+            "key": "hundredths",
+            "label": "Hundredths digit",
+            "type": "integer"
+          }
+        ]
+      },
+      "answer": {
+        "value": {
+          "tenths": 0,
+          "hundredths": 9
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both digits are in the right columns; the placeholder has not been skipped.",
+        "correct_after_support": "Correct. Both digits are in the right columns; the placeholder has not been skipped.",
+        "on_correct_math": "The tenths column is empty, so write 0. → Place the numerator digit 9 in hundredths.",
+        "on_incorrect_attempt_1": "Place the final numerator digit in the named column and keep the empty column.",
+        "on_incorrect_attempt_2": "Place the final numerator digit in the named column and keep the empty column.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The tenths column is empty, so write 0. → Place the numerator digit 9 in hundredths."
+      },
+      "mathematical_support": {
+        "hint_1": "Place the final numerator digit in the named column and keep the empty column.",
+        "hint_2": "Locate the final numerator digit using the denominator, then fill empty places without changing the value.",
+        "worked_solution": "The tenths column is empty, so write 0. → Place the numerator digit 9 in hundredths."
+      },
+      "working": [
+        "The tenths column is empty, so write 0.",
+        "Place the numerator digit 9 in hundredths."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "power_ten_decimal",
+          "title": "Build both fractional columns",
+          "n": 9,
+          "d": 100,
+          "given": "9/100",
+          "steps": [
+            "The tenths column is empty, so write 0.",
+            "Place the numerator digit 9 in hundredths."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "column_entries"
+        }
+      },
+      "response_feedback": {
+        "check_tenths": "Your hundredths digit is correct. Keep a placeholder in the empty tenths column.",
+        "check_hundredths": "Your tenths placeholder is correct. Put the numerator digit in hundredths.",
+        "check_multiple": "Align the numerator with hundredths, then fill the remaining empty column."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-07-G04",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "faded",
+      "prompt": "Complete the exact decimal: 9/100 = ___.",
+      "target": "Use the denominator to place the final numerator digit and write the exact decimal",
+      "response": {
+        "type": "decimal",
+        "allow_leading_decimal_point": true,
+        "power_ten_fraction": {
+          "n": 9,
+          "d": 100
+        },
+        "suffix": ""
+      },
+      "answer": {
+        "value": "0.09"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decimal keeps the empty tenths place and the nine hundredths.",
+        "correct_after_support": "Correct. The decimal keeps the empty tenths place and the nine hundredths.",
+        "on_correct_math": "The denominator 100 names hundredths, requiring 2 decimal places. → Align the final numerator digit with hundredths; the fractional columns read 0, 9. → 9/100 = 0.09; retain the ones digit and every necessary placeholder zero.",
+        "on_incorrect_attempt_1": "Read the ones, tenths and hundredths positions in order.",
+        "on_incorrect_attempt_2": "Read the ones, tenths and hundredths positions in order.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The denominator 100 names hundredths, requiring 2 decimal places. → Align the final numerator digit with hundredths; the fractional columns read 0, 9. → 9/100 = 0.09; retain the ones digit and every necessary placeholder zero."
+      },
+      "mathematical_support": {
+        "hint_1": "Read the ones, tenths and hundredths positions in order.",
+        "hint_2": "Locate the final numerator digit using the denominator, then fill empty places without changing the value.",
+        "worked_solution": "The denominator 100 names hundredths, requiring 2 decimal places. → Align the final numerator digit with hundredths; the fractional columns read 0, 9. → 9/100 = 0.09; retain the ones digit and every necessary placeholder zero."
+      },
+      "working": [
+        "The denominator 100 names hundredths, requiring 2 decimal places.",
+        "Align the final numerator digit with hundredths; the fractional columns read 0, 9.",
+        "9/100 = 0.09; retain the ones digit and every necessary placeholder zero."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "power_ten_decimal",
+          "title": "Write the decimal from its columns",
+          "n": 9,
+          "d": 100,
+          "given": "9/100",
+          "steps": [
+            "The denominator 100 names hundredths, requiring 2 decimal places.",
+            "Align the final numerator digit with hundredths; the fractional columns read 0, 9.",
+            "9/100 = 0.09; retain the ones digit and every necessary placeholder zero."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_place_value": "Check the final numerator digit against the denominator and retain every occupied or empty place.",
+        "missing_placeholder": "That places nine in tenths. Keep the empty tenths place before the hundredths digit.",
+        "extra_place": "That puts nine in thousandths, one column beyond the denominator.",
+        "unchanged": "That is a whole-number amount, not nine hundredths."
+      },
+      "response_patterns": [
+        {
+          "value": ".9",
+          "classification": "missing_placeholder"
+        },
+        {
+          "value": ".009",
+          "classification": "extra_place"
+        },
+        {
+          "value": "9",
+          "classification": "unchanged"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-07-G05",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "independent_transfer",
+      "prompt": "Which statement correctly explains the decimal for 9/100?",
+      "target": "Use the denominator to place the final numerator digit and write the exact decimal",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "9/100 = 0.9 because the numerator has one digit.",
+          "9/100 = 0.09 because 9 is nine hundredths and the tenths place is empty.",
+          "9/100 = 0.009 because 100 contains two zeros.",
+          "9/100 = 9.00 because the denominator zeros are written after 9."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "9/100 = 0.09 because 9 is nine hundredths and the tenths place is empty."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Yes. The explanation identifies nine hundredths and preserves the empty tenths place.",
+        "correct_after_support": "Yes. The explanation identifies nine hundredths and preserves the empty tenths place.",
+        "on_correct_math": "The denominator 100 names hundredths, requiring 2 decimal places. → Align the final numerator digit with hundredths; the fractional columns read 0, 9. → 9/100 = 0.09; retain the ones digit and every necessary placeholder zero.",
+        "on_incorrect_attempt_1": "Use the size of the fractional parts to check where the final digit belongs.",
+        "on_incorrect_attempt_2": "Use the size of the fractional parts to check where the final digit belongs.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The denominator 100 names hundredths, requiring 2 decimal places. → Align the final numerator digit with hundredths; the fractional columns read 0, 9. → 9/100 = 0.09; retain the ones digit and every necessary placeholder zero."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the size of the fractional parts to check where the final digit belongs.",
+        "hint_2": "Locate the final numerator digit using the denominator, then fill empty places without changing the value.",
+        "worked_solution": "The denominator 100 names hundredths, requiring 2 decimal places. → Align the final numerator digit with hundredths; the fractional columns read 0, 9. → 9/100 = 0.09; retain the ones digit and every necessary placeholder zero."
+      },
+      "working": [
+        "The denominator 100 names hundredths, requiring 2 decimal places.",
+        "Align the final numerator digit with hundredths; the fractional columns read 0, 9.",
+        "9/100 = 0.09; retain the ones digit and every necessary placeholder zero."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "power_ten_decimal",
+          "title": "Explain the hundredths value",
+          "n": 9,
+          "d": 100,
+          "given": "9/100",
+          "steps": [
+            "The denominator 100 names hundredths, requiring 2 decimal places.",
+            "Align the final numerator digit with hundredths; the fractional columns read 0, 9.",
+            "9/100 = 0.09; retain the ones digit and every necessary placeholder zero."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "9/100 = 0.9 because the numerator has one digit.": "The numerator digit count does not determine the decimal places.",
+        "9/100 = 0.009 because 100 contains two zeros.": "Two decimal places reach hundredths, not thousandths.",
+        "9/100 = 9.00 because the denominator zeros are written after 9.": "Adding zeros after a whole-number nine does not make it nine hundredths."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-07-P01",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Write 4/10 as a decimal.",
+      "target": "Use the denominator to place the final numerator digit and write the exact decimal",
+      "response": {
+        "type": "decimal",
+        "allow_leading_decimal_point": true,
+        "power_ten_fraction": {
+          "n": 4,
+          "d": 10
+        },
+        "suffix": ""
+      },
+      "answer": {
+        "value": "0.4"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decimal places the digit in tenths.",
+        "correct_after_support": "Correct. The decimal places the digit in tenths.",
+        "on_correct_math": "The denominator 10 names tenths, requiring 1 decimal place. → Align the final numerator digit with tenths; the fractional columns read 4. → 4/10 = 0.4; retain the ones digit and every necessary placeholder zero.",
+        "on_incorrect_attempt_1": "Read the denominator and locate the final digit using its part size.",
+        "on_incorrect_attempt_2": "Read the denominator and locate the final digit using its part size.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The denominator 10 names tenths, requiring 1 decimal place. → Align the final numerator digit with tenths; the fractional columns read 4. → 4/10 = 0.4; retain the ones digit and every necessary placeholder zero."
+      },
+      "mathematical_support": {
+        "hint_1": "Read the denominator and locate the final digit using its part size.",
+        "hint_2": "Locate the final numerator digit using the denominator, then fill empty places without changing the value.",
+        "worked_solution": "The denominator 10 names tenths, requiring 1 decimal place. → Align the final numerator digit with tenths; the fractional columns read 4. → 4/10 = 0.4; retain the ones digit and every necessary placeholder zero."
+      },
+      "working": [
+        "The denominator 10 names tenths, requiring 1 decimal place.",
+        "Align the final numerator digit with tenths; the fractional columns read 4.",
+        "4/10 = 0.4; retain the ones digit and every necessary placeholder zero."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "power_ten_decimal",
+          "title": "Place the digits for 4/10",
+          "n": 4,
+          "d": 10,
+          "given": "4/10",
+          "steps": [
+            "The denominator 10 names tenths, requiring 1 decimal place.",
+            "Align the final numerator digit with tenths; the fractional columns read 4.",
+            "4/10 = 0.4; retain the ones digit and every necessary placeholder zero."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_place_value": "Check the final numerator digit against the denominator and retain every occupied or empty place.",
+        "extra_place": "That puts four in hundredths. The denominator here names tenths.",
+        "unchanged": "Four whole units are larger than four tenths."
+      },
+      "response_patterns": [
+        {
+          "value": ".04",
+          "classification": "extra_place"
+        },
+        {
+          "value": "4",
+          "classification": "unchanged"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-07-P02",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Write 63/100 as a decimal.",
+      "target": "Use the denominator to place the final numerator digit and write the exact decimal",
+      "response": {
+        "type": "decimal",
+        "allow_leading_decimal_point": true,
+        "power_ten_fraction": {
+          "n": 63,
+          "d": 100
+        },
+        "suffix": ""
+      },
+      "answer": {
+        "value": "0.63"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The two numerator digits occupy tenths and hundredths.",
+        "correct_after_support": "Correct. The two numerator digits occupy tenths and hundredths.",
+        "on_correct_math": "The denominator 100 names hundredths, requiring 2 decimal places. → Align the final numerator digit with hundredths; the fractional columns read 6, 3. → 63/100 = 0.63; retain the ones digit and every necessary placeholder zero.",
+        "on_incorrect_attempt_1": "Keep the final digit in the column named by the denominator.",
+        "on_incorrect_attempt_2": "Keep the final digit in the column named by the denominator.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The denominator 100 names hundredths, requiring 2 decimal places. → Align the final numerator digit with hundredths; the fractional columns read 6, 3. → 63/100 = 0.63; retain the ones digit and every necessary placeholder zero."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the final digit in the column named by the denominator.",
+        "hint_2": "Locate the final numerator digit using the denominator, then fill empty places without changing the value.",
+        "worked_solution": "The denominator 100 names hundredths, requiring 2 decimal places. → Align the final numerator digit with hundredths; the fractional columns read 6, 3. → 63/100 = 0.63; retain the ones digit and every necessary placeholder zero."
+      },
+      "working": [
+        "The denominator 100 names hundredths, requiring 2 decimal places.",
+        "Align the final numerator digit with hundredths; the fractional columns read 6, 3.",
+        "63/100 = 0.63; retain the ones digit and every necessary placeholder zero."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "power_ten_decimal",
+          "title": "Place the digits for 63/100",
+          "n": 63,
+          "d": 100,
+          "given": "63/100",
+          "steps": [
+            "The denominator 100 names hundredths, requiring 2 decimal places.",
+            "Align the final numerator digit with hundredths; the fractional columns read 6, 3.",
+            "63/100 = 0.63; retain the ones digit and every necessary placeholder zero."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_place_value": "Check the final numerator digit against the denominator and retain every occupied or empty place.",
+        "extra_place": "That moves the final digit beyond hundredths and makes the value ten times too small.",
+        "missing_place": "That leaves the final digit in tenths rather than hundredths."
+      },
+      "response_patterns": [
+        {
+          "value": ".063",
+          "classification": "extra_place"
+        },
+        {
+          "value": "6.3",
+          "classification": "missing_place"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-07-P03",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Write 7/100 as a decimal.",
+      "target": "Use the denominator to place the final numerator digit and write the exact decimal",
+      "response": {
+        "type": "decimal",
+        "allow_leading_decimal_point": true,
+        "power_ten_fraction": {
+          "n": 7,
+          "d": 100
+        },
+        "suffix": ""
+      },
+      "answer": {
+        "value": "0.07"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The empty tenths position is retained before seven hundredths.",
+        "correct_after_support": "Correct. The empty tenths position is retained before seven hundredths.",
+        "on_correct_math": "The denominator 100 names hundredths, requiring 2 decimal places. → Align the final numerator digit with hundredths; the fractional columns read 0, 7. → 7/100 = 0.07; retain the ones digit and every necessary placeholder zero.",
+        "on_incorrect_attempt_1": "The numerator has one digit, but its final column is determined by the denominator.",
+        "on_incorrect_attempt_2": "The numerator has one digit, but its final column is determined by the denominator.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The denominator 100 names hundredths, requiring 2 decimal places. → Align the final numerator digit with hundredths; the fractional columns read 0, 7. → 7/100 = 0.07; retain the ones digit and every necessary placeholder zero."
+      },
+      "mathematical_support": {
+        "hint_1": "The numerator has one digit, but its final column is determined by the denominator.",
+        "hint_2": "Locate the final numerator digit using the denominator, then fill empty places without changing the value.",
+        "worked_solution": "The denominator 100 names hundredths, requiring 2 decimal places. → Align the final numerator digit with hundredths; the fractional columns read 0, 7. → 7/100 = 0.07; retain the ones digit and every necessary placeholder zero."
+      },
+      "working": [
+        "The denominator 100 names hundredths, requiring 2 decimal places.",
+        "Align the final numerator digit with hundredths; the fractional columns read 0, 7.",
+        "7/100 = 0.07; retain the ones digit and every necessary placeholder zero."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "power_ten_decimal",
+          "title": "Place the digits for 7/100",
+          "n": 7,
+          "d": 100,
+          "given": "7/100",
+          "steps": [
+            "The denominator 100 names hundredths, requiring 2 decimal places.",
+            "Align the final numerator digit with hundredths; the fractional columns read 0, 7.",
+            "7/100 = 0.07; retain the ones digit and every necessary placeholder zero."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_place_value": "Check the final numerator digit against the denominator and retain every occupied or empty place.",
+        "missing_placeholder": "That is seven tenths, not seven hundredths. Restore the empty tenths place.",
+        "extra_place": "That places seven in thousandths, one column too far."
+      },
+      "response_patterns": [
+        {
+          "value": ".7",
+          "classification": "missing_placeholder"
+        },
+        {
+          "value": ".007",
+          "classification": "extra_place"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-07-P04",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Write 24/1000 as a decimal.",
+      "target": "Use the denominator to place the final numerator digit and write the exact decimal",
+      "response": {
+        "type": "decimal",
+        "allow_leading_decimal_point": true,
+        "power_ten_fraction": {
+          "n": 24,
+          "d": 1000
+        },
+        "suffix": ""
+      },
+      "answer": {
+        "value": "0.024"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The leading fractional placeholder keeps both numerator digits aligned to thousandths.",
+        "correct_after_support": "Correct. The leading fractional placeholder keeps both numerator digits aligned to thousandths.",
+        "on_correct_math": "The denominator 1000 names thousandths, requiring 3 decimal places. → Align the final numerator digit with thousandths; the fractional columns read 0, 2, 4. → 24/1000 = 0.024; retain the ones digit and every necessary placeholder zero.",
+        "on_incorrect_attempt_1": "Use the denominator for the decimal-place count and align the last numerator digit.",
+        "on_incorrect_attempt_2": "Use the denominator for the decimal-place count and align the last numerator digit.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The denominator 1000 names thousandths, requiring 3 decimal places. → Align the final numerator digit with thousandths; the fractional columns read 0, 2, 4. → 24/1000 = 0.024; retain the ones digit and every necessary placeholder zero."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the denominator for the decimal-place count and align the last numerator digit.",
+        "hint_2": "Locate the final numerator digit using the denominator, then fill empty places without changing the value.",
+        "worked_solution": "The denominator 1000 names thousandths, requiring 3 decimal places. → Align the final numerator digit with thousandths; the fractional columns read 0, 2, 4. → 24/1000 = 0.024; retain the ones digit and every necessary placeholder zero."
+      },
+      "working": [
+        "The denominator 1000 names thousandths, requiring 3 decimal places.",
+        "Align the final numerator digit with thousandths; the fractional columns read 0, 2, 4.",
+        "24/1000 = 0.024; retain the ones digit and every necessary placeholder zero."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "power_ten_decimal",
+          "title": "Place the digits for 24/1000",
+          "n": 24,
+          "d": 1000,
+          "given": "24/1000",
+          "steps": [
+            "The denominator 1000 names thousandths, requiring 3 decimal places.",
+            "Align the final numerator digit with thousandths; the fractional columns read 0, 2, 4.",
+            "24/1000 = 0.024; retain the ones digit and every necessary placeholder zero."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_place_value": "Check the final numerator digit against the denominator and retain every occupied or empty place.",
+        "missing_placeholder": "That stops in hundredths. Retain the empty tenths position so the final digit reaches thousandths.",
+        "extra_place": "That pushes the final digit into ten-thousandths, beyond the given denominator."
+      },
+      "response_patterns": [
+        {
+          "value": ".24",
+          "classification": "missing_placeholder"
+        },
+        {
+          "value": ".0024",
+          "classification": "extra_place"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-07-P05",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Write 508/1000 as a decimal.",
+      "target": "Use the denominator to place the final numerator digit and write the exact decimal",
+      "response": {
+        "type": "decimal",
+        "allow_leading_decimal_point": true,
+        "power_ten_fraction": {
+          "n": 508,
+          "d": 1000
+        },
+        "suffix": ""
+      },
+      "answer": {
+        "value": "0.508"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The internal zero holds the empty hundredths position.",
+        "correct_after_support": "Correct. The internal zero holds the empty hundredths position.",
+        "on_correct_math": "The denominator 1000 names thousandths, requiring 3 decimal places. → Align the final numerator digit with thousandths; the fractional columns read 5, 0, 8. → 508/1000 = 0.508; retain the ones digit and every necessary placeholder zero.",
+        "on_incorrect_attempt_1": "Keep every numerator digit, including the internal zero, in its correct position.",
+        "on_incorrect_attempt_2": "Keep every numerator digit, including the internal zero, in its correct position.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The denominator 1000 names thousandths, requiring 3 decimal places. → Align the final numerator digit with thousandths; the fractional columns read 5, 0, 8. → 508/1000 = 0.508; retain the ones digit and every necessary placeholder zero."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep every numerator digit, including the internal zero, in its correct position.",
+        "hint_2": "Locate the final numerator digit using the denominator, then fill empty places without changing the value.",
+        "worked_solution": "The denominator 1000 names thousandths, requiring 3 decimal places. → Align the final numerator digit with thousandths; the fractional columns read 5, 0, 8. → 508/1000 = 0.508; retain the ones digit and every necessary placeholder zero."
+      },
+      "working": [
+        "The denominator 1000 names thousandths, requiring 3 decimal places.",
+        "Align the final numerator digit with thousandths; the fractional columns read 5, 0, 8.",
+        "508/1000 = 0.508; retain the ones digit and every necessary placeholder zero."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "power_ten_decimal",
+          "title": "Place the digits for 508/1000",
+          "n": 508,
+          "d": 1000,
+          "given": "508/1000",
+          "steps": [
+            "The denominator 1000 names thousandths, requiring 3 decimal places.",
+            "Align the final numerator digit with thousandths; the fractional columns read 5, 0, 8.",
+            "508/1000 = 0.508; retain the ones digit and every necessary placeholder zero."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_place_value": "Check the final numerator digit against the denominator and retain every occupied or empty place.",
+        "lost_zero": "Removing the internal zero shifts the final digit out of thousandths.",
+        "extra_place": "That adds an unnecessary leading fractional zero and makes the value ten times too small."
+      },
+      "response_patterns": [
+        {
+          "value": ".58",
+          "classification": "lost_zero"
+        },
+        {
+          "value": ".0508",
+          "classification": "extra_place"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-07-P06",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Write 126/100 as a decimal.",
+      "target": "Use the denominator to place the final numerator digit and write the exact decimal",
+      "response": {
+        "type": "decimal",
+        "allow_leading_decimal_point": true,
+        "power_ten_fraction": {
+          "n": 126,
+          "d": 100
+        },
+        "suffix": ""
+      },
+      "answer": {
+        "value": "1.26"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decimal keeps the complete whole and the additional hundredths.",
+        "correct_after_support": "Correct. The decimal keeps the complete whole and the additional hundredths.",
+        "on_correct_math": "The denominator 100 names hundredths, requiring 2 decimal places. → Align the final numerator digit with hundredths; the fractional columns read 2, 6. → 126/100 = 1.26; retain the ones digit and every necessary placeholder zero.",
+        "on_incorrect_attempt_1": "Check whether the fraction contains a complete whole before writing its decimal.",
+        "on_incorrect_attempt_2": "Check whether the fraction contains a complete whole before writing its decimal.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The denominator 100 names hundredths, requiring 2 decimal places. → Align the final numerator digit with hundredths; the fractional columns read 2, 6. → 126/100 = 1.26; retain the ones digit and every necessary placeholder zero."
+      },
+      "mathematical_support": {
+        "hint_1": "Check whether the fraction contains a complete whole before writing its decimal.",
+        "hint_2": "Locate the final numerator digit using the denominator, then fill empty places without changing the value.",
+        "worked_solution": "The denominator 100 names hundredths, requiring 2 decimal places. → Align the final numerator digit with hundredths; the fractional columns read 2, 6. → 126/100 = 1.26; retain the ones digit and every necessary placeholder zero."
+      },
+      "working": [
+        "The denominator 100 names hundredths, requiring 2 decimal places.",
+        "Align the final numerator digit with hundredths; the fractional columns read 2, 6.",
+        "126/100 = 1.26; retain the ones digit and every necessary placeholder zero."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "power_ten_decimal",
+          "title": "Place the digits for 126/100",
+          "n": 126,
+          "d": 100,
+          "given": "126/100",
+          "steps": [
+            "The denominator 100 names hundredths, requiring 2 decimal places.",
+            "Align the final numerator digit with hundredths; the fractional columns read 2, 6.",
+            "126/100 = 1.26; retain the ones digit and every necessary placeholder zero."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_place_value": "Check the final numerator digit against the denominator and retain every occupied or empty place.",
+        "dropped_whole": "That keeps only the extra hundredths and drops the complete whole.",
+        "extra_place": "That treats the numerator as thousandths instead of hundredths."
+      },
+      "response_patterns": [
+        {
+          "value": ".26",
+          "classification": "dropped_whole"
+        },
+        {
+          "value": ".126",
+          "classification": "extra_place"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-07-P07",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Write 1475/1000 as a decimal.",
+      "target": "Use the denominator to place the final numerator digit and write the exact decimal",
+      "response": {
+        "type": "decimal",
+        "allow_leading_decimal_point": true,
+        "power_ten_fraction": {
+          "n": 1475,
+          "d": 1000
+        },
+        "suffix": ""
+      },
+      "answer": {
+        "value": "1.475"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. All four numerator digits are retained, including the ones digit.",
+        "correct_after_support": "Correct. All four numerator digits are retained, including the ones digit.",
+        "on_correct_math": "The denominator 1000 names thousandths, requiring 3 decimal places. → Align the final numerator digit with thousandths; the fractional columns read 4, 7, 5. → 1475/1000 = 1.475; retain the ones digit and every necessary placeholder zero.",
+        "on_incorrect_attempt_1": "Keep all numerator digits while placing the final one in thousandths.",
+        "on_incorrect_attempt_2": "Keep all numerator digits while placing the final one in thousandths.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The denominator 1000 names thousandths, requiring 3 decimal places. → Align the final numerator digit with thousandths; the fractional columns read 4, 7, 5. → 1475/1000 = 1.475; retain the ones digit and every necessary placeholder zero."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep all numerator digits while placing the final one in thousandths.",
+        "hint_2": "Locate the final numerator digit using the denominator, then fill empty places without changing the value.",
+        "worked_solution": "The denominator 1000 names thousandths, requiring 3 decimal places. → Align the final numerator digit with thousandths; the fractional columns read 4, 7, 5. → 1475/1000 = 1.475; retain the ones digit and every necessary placeholder zero."
+      },
+      "working": [
+        "The denominator 1000 names thousandths, requiring 3 decimal places.",
+        "Align the final numerator digit with thousandths; the fractional columns read 4, 7, 5.",
+        "1475/1000 = 1.475; retain the ones digit and every necessary placeholder zero."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "power_ten_decimal",
+          "title": "Place the digits for 1475/1000",
+          "n": 1475,
+          "d": 1000,
+          "given": "1475/1000",
+          "steps": [
+            "The denominator 1000 names thousandths, requiring 3 decimal places.",
+            "Align the final numerator digit with thousandths; the fractional columns read 4, 7, 5.",
+            "1475/1000 = 1.475; retain the ones digit and every necessary placeholder zero."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_place_value": "Check the final numerator digit against the denominator and retain every occupied or empty place.",
+        "dropped_whole": "That omits the complete whole represented by the first numerator digit.",
+        "extra_place": "That shifts the whole-number digit into tenths and makes the value too small."
+      },
+      "response_patterns": [
+        {
+          "value": ".475",
+          "classification": "dropped_whole"
+        },
+        {
+          "value": ".1475",
+          "classification": "extra_place"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-07-P08",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Which decimal is equivalent to 23/1000?",
+      "target": "Use the denominator to place the final numerator digit and write the exact decimal",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "0.23",
+          "0.023",
+          "0.0023",
+          "23.000"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "0.023"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The selected decimal keeps the required empty place and final digit position.",
+        "correct_after_support": "Correct. The selected decimal keeps the required empty place and final digit position.",
+        "on_correct_math": "The denominator 1000 names thousandths, requiring 3 decimal places. → Align the final numerator digit with thousandths; the fractional columns read 0, 2, 3. → 23/1000 = 0.023; retain the ones digit and every necessary placeholder zero.",
+        "on_incorrect_attempt_1": "Check which option aligns the last numerator digit with thousandths.",
+        "on_incorrect_attempt_2": "Check which option aligns the last numerator digit with thousandths.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The denominator 1000 names thousandths, requiring 3 decimal places. → Align the final numerator digit with thousandths; the fractional columns read 0, 2, 3. → 23/1000 = 0.023; retain the ones digit and every necessary placeholder zero."
+      },
+      "mathematical_support": {
+        "hint_1": "Check which option aligns the last numerator digit with thousandths.",
+        "hint_2": "Locate the final numerator digit using the denominator, then fill empty places without changing the value.",
+        "worked_solution": "The denominator 1000 names thousandths, requiring 3 decimal places. → Align the final numerator digit with thousandths; the fractional columns read 0, 2, 3. → 23/1000 = 0.023; retain the ones digit and every necessary placeholder zero."
+      },
+      "working": [
+        "The denominator 1000 names thousandths, requiring 3 decimal places.",
+        "Align the final numerator digit with thousandths; the fractional columns read 0, 2, 3.",
+        "23/1000 = 0.023; retain the ones digit and every necessary placeholder zero."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "power_ten_decimal",
+          "title": "Recognise the exact thousandths value",
+          "n": 23,
+          "d": 1000,
+          "given": "23/1000",
+          "steps": [
+            "The denominator 1000 names thousandths, requiring 3 decimal places.",
+            "Align the final numerator digit with thousandths; the fractional columns read 0, 2, 3.",
+            "23/1000 = 0.023; retain the ones digit and every necessary placeholder zero."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "0.23": "That is twenty-three hundredths, ten times the given value.",
+        "0.0023": "That places the final digit one column beyond thousandths.",
+        "23.000": "Trailing zeros do not turn a whole-number amount into a fraction of one."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-07-X01",
+      "source_ref": {
+        "page": 16
+      },
+      "stage": "practice",
+      "prompt": "A water tank is 67/100 full. Write this share as a decimal.",
+      "target": "Use the denominator to place the final numerator digit and write the exact decimal",
+      "response": {
+        "type": "decimal",
+        "allow_leading_decimal_point": true,
+        "power_ten_fraction": {
+          "n": 67,
+          "d": 100
+        },
+        "suffix": ""
+      },
+      "answer": {
+        "value": "0.67"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decimal describes the same filled share of the tank.",
+        "correct_after_support": "Correct. The decimal describes the same filled share of the tank.",
+        "on_correct_math": "The denominator 100 names hundredths, requiring 2 decimal places. → Align the final numerator digit with hundredths; the fractional columns read 6, 7. → 67/100 = 0.67; retain the ones digit and every necessary placeholder zero.",
+        "on_incorrect_attempt_1": "Express the filled share using the same complete tank as the reference whole.",
+        "on_incorrect_attempt_2": "Express the filled share using the same complete tank as the reference whole.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The denominator 100 names hundredths, requiring 2 decimal places. → Align the final numerator digit with hundredths; the fractional columns read 6, 7. → 67/100 = 0.67; retain the ones digit and every necessary placeholder zero."
+      },
+      "mathematical_support": {
+        "hint_1": "Express the filled share using the same complete tank as the reference whole.",
+        "hint_2": "Locate the final numerator digit using the denominator, then fill empty places without changing the value.",
+        "worked_solution": "The denominator 100 names hundredths, requiring 2 decimal places. → Align the final numerator digit with hundredths; the fractional columns read 6, 7. → 67/100 = 0.67; retain the ones digit and every necessary placeholder zero."
+      },
+      "working": [
+        "The denominator 100 names hundredths, requiring 2 decimal places.",
+        "Align the final numerator digit with hundredths; the fractional columns read 6, 7.",
+        "67/100 = 0.67; retain the ones digit and every necessary placeholder zero."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "power_ten_decimal",
+          "title": "The filled share of a water tank",
+          "n": 67,
+          "d": 100,
+          "given": "67/100",
+          "steps": [
+            "The denominator 100 names hundredths, requiring 2 decimal places.",
+            "Align the final numerator digit with hundredths; the fractional columns read 6, 7.",
+            "67/100 = 0.67; retain the ones digit and every necessary placeholder zero."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_place_value": "Check the final numerator digit against the denominator and retain every occupied or empty place.",
+        "extra_place": "That represents thousandths of the tank instead of the stated hundredths."
+      },
+      "response_patterns": [
+        {
+          "value": ".067",
+          "classification": "extra_place"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-07-X02",
+      "source_ref": {
+        "page": 16
+      },
+      "stage": "practice",
+      "prompt": "The thickness of a metal sheet is 9/1000 metre. Write this thickness as a decimal number of metres.",
+      "target": "Use the denominator to place the final numerator digit and write the exact decimal",
+      "response": {
+        "type": "decimal",
+        "allow_leading_decimal_point": true,
+        "power_ten_fraction": {
+          "n": 9,
+          "d": 1000
+        },
+        "suffix": "m"
+      },
+      "answer": {
+        "value": "0.009"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decimal retains the exact thickness in metres.",
+        "correct_after_support": "Correct. The decimal retains the exact thickness in metres.",
+        "on_correct_math": "The denominator 1000 names thousandths, requiring 3 decimal places. → Align the final numerator digit with thousandths; the fractional columns read 0, 0, 9. → 9/1000 = 0.009; retain the ones digit and every necessary placeholder zero.",
+        "on_incorrect_attempt_1": "Keep the thickness measured in metres and preserve every necessary empty decimal place.",
+        "on_incorrect_attempt_2": "Keep the thickness measured in metres and preserve every necessary empty decimal place.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The denominator 1000 names thousandths, requiring 3 decimal places. → Align the final numerator digit with thousandths; the fractional columns read 0, 0, 9. → 9/1000 = 0.009; retain the ones digit and every necessary placeholder zero."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the thickness measured in metres and preserve every necessary empty decimal place.",
+        "hint_2": "Locate the final numerator digit using the denominator, then fill empty places without changing the value.",
+        "worked_solution": "The denominator 1000 names thousandths, requiring 3 decimal places. → Align the final numerator digit with thousandths; the fractional columns read 0, 0, 9. → 9/1000 = 0.009; retain the ones digit and every necessary placeholder zero."
+      },
+      "working": [
+        "The denominator 1000 names thousandths, requiring 3 decimal places.",
+        "Align the final numerator digit with thousandths; the fractional columns read 0, 0, 9.",
+        "9/1000 = 0.009; retain the ones digit and every necessary placeholder zero."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "power_ten_decimal",
+          "title": "The thickness of a metal sheet",
+          "n": 9,
+          "d": 1000,
+          "given": "9/1000 m",
+          "steps": [
+            "The denominator 1000 names thousandths, requiring 3 decimal places.",
+            "Align the final numerator digit with thousandths; the fractional columns read 0, 0, 9.",
+            "9/1000 = 0.009; retain the ones digit and every necessary placeholder zero."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_place_value": "Check the final numerator digit against the denominator and retain every occupied or empty place.",
+        "missing_placeholder": "That thickness uses hundredths of a metre, making it ten times too large.",
+        "missing_two_placeholders": "That places nine in tenths of a metre instead of thousandths."
+      },
+      "response_patterns": [
+        {
+          "value": ".09",
+          "classification": "missing_placeholder"
+        },
+        {
+          "value": ".9",
+          "classification": "missing_two_placeholders"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-07-X03",
+      "source_ref": {
+        "page": 16
+      },
+      "stage": "practice",
+      "prompt": "A machine completes 128/100 of one standard cycle during a test. Write this amount as a decimal.",
+      "target": "Use the denominator to place the final numerator digit and write the exact decimal",
+      "response": {
+        "type": "decimal",
+        "allow_leading_decimal_point": true,
+        "power_ten_fraction": {
+          "n": 128,
+          "d": 100
+        },
+        "suffix": "cycles"
+      },
+      "answer": {
+        "value": "1.28"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decimal includes the full standard cycle and the additional hundredths.",
+        "correct_after_support": "Correct. The decimal includes the full standard cycle and the additional hundredths.",
+        "on_correct_math": "The denominator 100 names hundredths, requiring 2 decimal places. → Align the final numerator digit with hundredths; the fractional columns read 2, 8. → 128/100 = 1.28; retain the ones digit and every necessary placeholder zero.",
+        "on_incorrect_attempt_1": "Retain the complete standard cycle as well as the additional part.",
+        "on_incorrect_attempt_2": "Retain the complete standard cycle as well as the additional part.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The denominator 100 names hundredths, requiring 2 decimal places. → Align the final numerator digit with hundredths; the fractional columns read 2, 8. → 128/100 = 1.28; retain the ones digit and every necessary placeholder zero."
+      },
+      "mathematical_support": {
+        "hint_1": "Retain the complete standard cycle as well as the additional part.",
+        "hint_2": "Locate the final numerator digit using the denominator, then fill empty places without changing the value.",
+        "worked_solution": "The denominator 100 names hundredths, requiring 2 decimal places. → Align the final numerator digit with hundredths; the fractional columns read 2, 8. → 128/100 = 1.28; retain the ones digit and every necessary placeholder zero."
+      },
+      "working": [
+        "The denominator 100 names hundredths, requiring 2 decimal places.",
+        "Align the final numerator digit with hundredths; the fractional columns read 2, 8.",
+        "128/100 = 1.28; retain the ones digit and every necessary placeholder zero."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "power_ten_decimal",
+          "title": "More than one standard machine cycle",
+          "n": 128,
+          "d": 100,
+          "given": "128/100 cycles",
+          "steps": [
+            "The denominator 100 names hundredths, requiring 2 decimal places.",
+            "Align the final numerator digit with hundredths; the fractional columns read 2, 8.",
+            "128/100 = 1.28; retain the ones digit and every necessary placeholder zero."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_place_value": "Check the final numerator digit against the denominator and retain every occupied or empty place.",
+        "dropped_whole": "That records only the extra part and loses the complete standard cycle.",
+        "extra_place": "That reads the numerator as thousandths rather than hundredths of a cycle."
+      },
+      "response_patterns": [
+        {
+          "value": ".28",
+          "classification": "dropped_whole"
+        },
+        {
+          "value": ".128",
+          "classification": "extra_place"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-07-X04",
+      "source_ref": {
+        "page": 16
+      },
+      "stage": "practice",
+      "prompt": "A container holds 36/1000 litre of liquid. Which answer gives this amount as a decimal number of litres?",
+      "target": "Use the denominator to place the final numerator digit and write the exact decimal",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "0.36",
+          "0.036",
+          "36%",
+          "9/250"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "0.036"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The selected decimal keeps the same exact liquid volume in litres.",
+        "correct_after_support": "Correct. The selected decimal keeps the same exact liquid volume in litres.",
+        "on_correct_math": "The denominator 1000 names thousandths, requiring 3 decimal places. → Align the final numerator digit with thousandths; the fractional columns read 0, 3, 6. → 36/1000 = 0.036; retain the ones digit and every necessary placeholder zero.",
+        "on_incorrect_attempt_1": "Check both the exact amount and the requested decimal representation.",
+        "on_incorrect_attempt_2": "Check both the exact amount and the requested decimal representation.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The denominator 1000 names thousandths, requiring 3 decimal places. → Align the final numerator digit with thousandths; the fractional columns read 0, 3, 6. → 36/1000 = 0.036; retain the ones digit and every necessary placeholder zero."
+      },
+      "mathematical_support": {
+        "hint_1": "Check both the exact amount and the requested decimal representation.",
+        "hint_2": "Locate the final numerator digit using the denominator, then fill empty places without changing the value.",
+        "worked_solution": "The denominator 1000 names thousandths, requiring 3 decimal places. → Align the final numerator digit with thousandths; the fractional columns read 0, 3, 6. → 36/1000 = 0.036; retain the ones digit and every necessary placeholder zero."
+      },
+      "working": [
+        "The denominator 1000 names thousandths, requiring 3 decimal places.",
+        "Align the final numerator digit with thousandths; the fractional columns read 0, 3, 6.",
+        "36/1000 = 0.036; retain the ones digit and every necessary placeholder zero."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "power_ten_decimal",
+          "title": "Choose the exact decimal volume",
+          "n": 36,
+          "d": 1000,
+          "given": "36/1000 litre",
+          "steps": [
+            "The denominator 1000 names thousandths, requiring 3 decimal places.",
+            "Align the final numerator digit with thousandths; the fractional columns read 0, 3, 6.",
+            "36/1000 = 0.036; retain the ones digit and every necessary placeholder zero."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "0.36": "That is thirty-six hundredths of a litre, ten times the stated volume.",
+        "36%": "That is a percentage, not the requested decimal number of litres, and it does not retain the stated value.",
+        "9/250": "That fraction has the right value, but the question asks for a decimal number of litres."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-07-E01",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "exit",
+      "prompt": "Final check: write 9/10 as a decimal.",
+      "target": "Use the denominator to place the final numerator digit and write the exact decimal",
+      "response": {
+        "type": "decimal",
+        "allow_leading_decimal_point": true,
+        "power_ten_fraction": {
+          "n": 9,
+          "d": 10
+        },
+        "suffix": ""
+      },
+      "answer": {
+        "value": "0.9"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The final decimal retains the tenths value.",
+        "correct_after_support": "Correct. The final decimal retains the tenths value.",
+        "on_correct_math": "The denominator 10 names tenths, requiring 1 decimal place. → Align the final numerator digit with tenths; the fractional columns read 9. → 9/10 = 0.9; retain the ones digit and every necessary placeholder zero.",
+        "on_incorrect_attempt_1": "Review the final digit column named by the denominator.",
+        "on_incorrect_attempt_2": "Review the final digit column named by the denominator.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The denominator 10 names tenths, requiring 1 decimal place. → Align the final numerator digit with tenths; the fractional columns read 9. → 9/10 = 0.9; retain the ones digit and every necessary placeholder zero."
+      },
+      "mathematical_support": {
+        "hint_1": "Review the final digit column named by the denominator.",
+        "hint_2": "Locate the final numerator digit using the denominator, then fill empty places without changing the value.",
+        "worked_solution": "The denominator 10 names tenths, requiring 1 decimal place. → Align the final numerator digit with tenths; the fractional columns read 9. → 9/10 = 0.9; retain the ones digit and every necessary placeholder zero."
+      },
+      "working": [
+        "The denominator 10 names tenths, requiring 1 decimal place.",
+        "Align the final numerator digit with tenths; the fractional columns read 9.",
+        "9/10 = 0.9; retain the ones digit and every necessary placeholder zero."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "power_ten_decimal",
+          "title": "Place the digits for 9/10",
+          "n": 9,
+          "d": 10,
+          "given": "9/10",
+          "steps": [
+            "The denominator 10 names tenths, requiring 1 decimal place.",
+            "Align the final numerator digit with tenths; the fractional columns read 9.",
+            "9/10 = 0.9; retain the ones digit and every necessary placeholder zero."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_place_value": "Check the final numerator digit against the denominator and retain every occupied or empty place.",
+        "extra_place": "That places nine in hundredths, one column beyond the denominator.",
+        "unchanged": "That is nine whole units, not nine tenths."
+      },
+      "response_patterns": [
+        {
+          "value": ".09",
+          "classification": "extra_place"
+        },
+        {
+          "value": "9",
+          "classification": "unchanged"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-07-E02",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "exit",
+      "prompt": "Final check: write 37/100 as a decimal.",
+      "target": "Use the denominator to place the final numerator digit and write the exact decimal",
+      "response": {
+        "type": "decimal",
+        "allow_leading_decimal_point": true,
+        "power_ten_fraction": {
+          "n": 37,
+          "d": 100
+        },
+        "suffix": ""
+      },
+      "answer": {
+        "value": "0.37"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both numerator digits are aligned to the hundredths denominator.",
+        "correct_after_support": "Correct. Both numerator digits are aligned to the hundredths denominator.",
+        "on_correct_math": "The denominator 100 names hundredths, requiring 2 decimal places. → Align the final numerator digit with hundredths; the fractional columns read 3, 7. → 37/100 = 0.37; retain the ones digit and every necessary placeholder zero.",
+        "on_incorrect_attempt_1": "Review where the last numerator digit belongs.",
+        "on_incorrect_attempt_2": "Review where the last numerator digit belongs.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The denominator 100 names hundredths, requiring 2 decimal places. → Align the final numerator digit with hundredths; the fractional columns read 3, 7. → 37/100 = 0.37; retain the ones digit and every necessary placeholder zero."
+      },
+      "mathematical_support": {
+        "hint_1": "Review where the last numerator digit belongs.",
+        "hint_2": "Locate the final numerator digit using the denominator, then fill empty places without changing the value.",
+        "worked_solution": "The denominator 100 names hundredths, requiring 2 decimal places. → Align the final numerator digit with hundredths; the fractional columns read 3, 7. → 37/100 = 0.37; retain the ones digit and every necessary placeholder zero."
+      },
+      "working": [
+        "The denominator 100 names hundredths, requiring 2 decimal places.",
+        "Align the final numerator digit with hundredths; the fractional columns read 3, 7.",
+        "37/100 = 0.37; retain the ones digit and every necessary placeholder zero."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "power_ten_decimal",
+          "title": "Place the digits for 37/100",
+          "n": 37,
+          "d": 100,
+          "given": "37/100",
+          "steps": [
+            "The denominator 100 names hundredths, requiring 2 decimal places.",
+            "Align the final numerator digit with hundredths; the fractional columns read 3, 7.",
+            "37/100 = 0.37; retain the ones digit and every necessary placeholder zero."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_place_value": "Check the final numerator digit against the denominator and retain every occupied or empty place.",
+        "extra_place": "That reads the numerator as thousandths rather than hundredths.",
+        "missing_place": "That stops one column before the required hundredths position."
+      },
+      "response_patterns": [
+        {
+          "value": ".037",
+          "classification": "extra_place"
+        },
+        {
+          "value": "3.7",
+          "classification": "missing_place"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-07-E03",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "exit",
+      "prompt": "Final check: write 4/1000 as a decimal.",
+      "target": "Use the denominator to place the final numerator digit and write the exact decimal",
+      "response": {
+        "type": "decimal",
+        "allow_leading_decimal_point": true,
+        "power_ten_fraction": {
+          "n": 4,
+          "d": 1000
+        },
+        "suffix": ""
+      },
+      "answer": {
+        "value": "0.004"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decimal keeps both leading fractional placeholders.",
+        "correct_after_support": "Correct. The decimal keeps both leading fractional placeholders.",
+        "on_correct_math": "The denominator 1000 names thousandths, requiring 3 decimal places. → Align the final numerator digit with thousandths; the fractional columns read 0, 0, 4. → 4/1000 = 0.004; retain the ones digit and every necessary placeholder zero.",
+        "on_incorrect_attempt_1": "Review the required empty places before the final digit.",
+        "on_incorrect_attempt_2": "Review the required empty places before the final digit.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The denominator 1000 names thousandths, requiring 3 decimal places. → Align the final numerator digit with thousandths; the fractional columns read 0, 0, 4. → 4/1000 = 0.004; retain the ones digit and every necessary placeholder zero."
+      },
+      "mathematical_support": {
+        "hint_1": "Review the required empty places before the final digit.",
+        "hint_2": "Locate the final numerator digit using the denominator, then fill empty places without changing the value.",
+        "worked_solution": "The denominator 1000 names thousandths, requiring 3 decimal places. → Align the final numerator digit with thousandths; the fractional columns read 0, 0, 4. → 4/1000 = 0.004; retain the ones digit and every necessary placeholder zero."
+      },
+      "working": [
+        "The denominator 1000 names thousandths, requiring 3 decimal places.",
+        "Align the final numerator digit with thousandths; the fractional columns read 0, 0, 4.",
+        "4/1000 = 0.004; retain the ones digit and every necessary placeholder zero."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "power_ten_decimal",
+          "title": "Place the digits for 4/1000",
+          "n": 4,
+          "d": 1000,
+          "given": "4/1000",
+          "steps": [
+            "The denominator 1000 names thousandths, requiring 3 decimal places.",
+            "Align the final numerator digit with thousandths; the fractional columns read 0, 0, 4.",
+            "4/1000 = 0.004; retain the ones digit and every necessary placeholder zero."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_place_value": "Check the final numerator digit against the denominator and retain every occupied or empty place.",
+        "missing_placeholder": "That puts four in hundredths. Keep both empty places before the thousandths digit.",
+        "missing_two_placeholders": "That puts four in tenths, two columns before thousandths."
+      },
+      "response_patterns": [
+        {
+          "value": ".04",
+          "classification": "missing_placeholder"
+        },
+        {
+          "value": ".4",
+          "classification": "missing_two_placeholders"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-07-E04",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "exit",
+      "prompt": "Final check: write 146/100 as a decimal.",
+      "target": "Use the denominator to place the final numerator digit and write the exact decimal",
+      "response": {
+        "type": "decimal",
+        "allow_leading_decimal_point": true,
+        "power_ten_fraction": {
+          "n": 146,
+          "d": 100
+        },
+        "suffix": ""
+      },
+      "answer": {
+        "value": "1.46"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decimal retains the whole and its additional hundredths.",
+        "correct_after_support": "Correct. The decimal retains the whole and its additional hundredths.",
+        "on_correct_math": "The denominator 100 names hundredths, requiring 2 decimal places. → Align the final numerator digit with hundredths; the fractional columns read 4, 6. → 146/100 = 1.46; retain the ones digit and every necessary placeholder zero.",
+        "on_incorrect_attempt_1": "Review the whole-number part as well as the final fractional column.",
+        "on_incorrect_attempt_2": "Review the whole-number part as well as the final fractional column.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The denominator 100 names hundredths, requiring 2 decimal places. → Align the final numerator digit with hundredths; the fractional columns read 4, 6. → 146/100 = 1.46; retain the ones digit and every necessary placeholder zero."
+      },
+      "mathematical_support": {
+        "hint_1": "Review the whole-number part as well as the final fractional column.",
+        "hint_2": "Locate the final numerator digit using the denominator, then fill empty places without changing the value.",
+        "worked_solution": "The denominator 100 names hundredths, requiring 2 decimal places. → Align the final numerator digit with hundredths; the fractional columns read 4, 6. → 146/100 = 1.46; retain the ones digit and every necessary placeholder zero."
+      },
+      "working": [
+        "The denominator 100 names hundredths, requiring 2 decimal places.",
+        "Align the final numerator digit with hundredths; the fractional columns read 4, 6.",
+        "146/100 = 1.46; retain the ones digit and every necessary placeholder zero."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "power_ten_decimal",
+          "title": "Place the digits for 146/100",
+          "n": 146,
+          "d": 100,
+          "given": "146/100",
+          "steps": [
+            "The denominator 100 names hundredths, requiring 2 decimal places.",
+            "Align the final numerator digit with hundredths; the fractional columns read 4, 6.",
+            "146/100 = 1.46; retain the ones digit and every necessary placeholder zero."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_place_value": "Check the final numerator digit against the denominator and retain every occupied or empty place.",
+        "dropped_whole": "That keeps the additional hundredths but discards the complete whole.",
+        "extra_place": "That puts the first numerator digit in tenths instead of retaining the ones digit."
+      },
+      "response_patterns": [
+        {
+          "value": ".46",
+          "classification": "dropped_whole"
+        },
+        {
+          "value": ".146",
+          "classification": "extra_place"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-07-E05",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "exit",
+      "prompt": "Final method check: which statement is correct?",
+      "target": "Use the denominator to place the final numerator digit and write the exact decimal",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "The denominator determines whether the final numerator digit is placed in tenths, hundredths or thousandths.",
+          "The number of numerator digits always determines the number of decimal places.",
+          "A zero in an empty place-value column may always be omitted.",
+          "Every fraction with denominator 100 should be written as a percentage rather than a decimal."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "The denominator determines whether the final numerator digit is placed in tenths, hundredths or thousandths."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The denominator fixes the final digit position while the decimal preserves the value.",
+        "correct_after_support": "Correct. The denominator fixes the final digit position while the decimal preserves the value.",
+        "on_correct_math": "Read the denominator to locate the final numerator digit. → Retain all numerator digits, whole-number places and necessary placeholder zeros. → Write the exact decimal in the requested units.",
+        "on_incorrect_attempt_1": "Review what determines digit position and which empty places must be retained.",
+        "on_incorrect_attempt_2": "Review what determines digit position and which empty places must be retained.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Read the denominator to locate the final numerator digit. → Retain all numerator digits, whole-number places and necessary placeholder zeros. → Write the exact decimal in the requested units."
+      },
+      "mathematical_support": {
+        "hint_1": "Review what determines digit position and which empty places must be retained.",
+        "hint_2": "Locate the final numerator digit using the denominator, then fill empty places without changing the value.",
+        "worked_solution": "Read the denominator to locate the final numerator digit. → Retain all numerator digits, whole-number places and necessary placeholder zeros. → Write the exact decimal in the requested units."
+      },
+      "working": [
+        "Read the denominator to locate the final numerator digit.",
+        "Retain all numerator digits, whole-number places and necessary placeholder zeros.",
+        "Write the exact decimal in the requested units."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "power_ten_decimal",
+          "title": "Choose the place-value rule",
+          "n": 9,
+          "d": 10,
+          "given": "Choose the correct statement.",
+          "steps": [
+            "Read the denominator to locate the final numerator digit.",
+            "Retain all numerator digits, whole-number places and necessary placeholder zeros.",
+            "Write the exact decimal in the requested units."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "The number of numerator digits always determines the number of decimal places.": "The numerator digit count does not determine the final decimal column.",
+        "A zero in an empty place-value column may always be omitted.": "Omitting a necessary placeholder changes the value by shifting digits to different columns.",
+        "Every fraction with denominator 100 should be written as a percentage rather than a decimal.": "The question determines the requested representation; a hundredths denominator can be written as a decimal."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    }
+  ],
+  "canonical_lesson": {
+    "version": "FDP07-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

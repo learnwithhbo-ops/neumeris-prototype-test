@@ -1,0 +1,2793 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "FDP-08 - Convert a fraction to a decimal using an equivalent fraction",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-21",
+      "sha256": "fcb4f8a1e8899213a4464627d233b4025d4aa61d6060e66021b93ac433014b4b"
+    },
+    "authored_scope": "Convert a fraction to a decimal by forming an equivalent fraction with denominator 10, 100 or 1000.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "FDP08-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "verified_desktop_ready_phone_locked_invalid_working_learning_alternate_targets_pairs_drafts_hints_audio_320_390",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        15,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "source_repairs_consulted": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        18,
+        19
+      ],
+      "note": "All 21 approved pages and rendered active teaching/check/application pages reviewed. Restored same-length fifths-to-tenths repartitioning, eighth-to-thousandths magnification, staged 7/20 worked conversion, every guided blank, all 24 source questions and the four-item unsupported final check. Optional recorded fraction working is validated alongside the decimal; alternative valid power-of-ten targets accepted. Noninteger scaling is distinguished from mathematically invalid scaling. No Diagnostic, prerequisite-state mutation, delayed Retrieval or Strong route."
+    }
+  },
+  "identity": {
+    "id": "FDP-08",
+    "slug": "convert-a-fraction-to-a-decimal-using-an-equivalent-fraction",
+    "title": "Convert a fraction to a decimal using an equivalent fraction",
+    "strand": "Number",
+    "cluster": "Fractions, Decimals and Percentages",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Convert suitable fractions to exact decimals through equivalent denominators of 10, 100 or 1000 using the same whole-number scale factor on both parts.",
+    "success_criteria": [
+      "Choose any valid reachable power-of-ten target, not necessarily the smallest.",
+      "Preserve value in every recorded fraction equality.",
+      "Read the exact decimal, including necessary zeros and whole-number parts.",
+      "Apply the method in the prescribed contexts."
+    ],
+    "boundaries": {
+      "includes": [
+        "Positive fractions over 2, 4, 5, 8, 20, 25, 40, 50, 125, 200, 250 or 500",
+        "Selected improper fractions",
+        "Exact decimal values and alternative valid equivalent-fraction routes"
+      ],
+      "excludes": [
+        "General division instruction",
+        "Other denominators, recurring decimals, negatives and rounding",
+        "Direct percentage conversion",
+        "Entry, Diagnostic, prerequisite-state mutation and delayed Retrieval"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "AF-04",
+      "FDP-03",
+      "FDP-07"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for AF-04, FDP-03, FDP-07 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "single_choice",
+      "integer",
+      "power_ten_fields",
+      "place_value_pair",
+      "equivalent_decimal",
+      "decimal"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    },
+    "place_value_profile": true
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "Changing both fraction parts by the same factor changes the counting unit, not the value.",
+    "invariant": "The shaded share and every valid equality preserve the original amount.",
+    "must_notice": [
+      "The same length can be partitioned into fifths or tenths.",
+      "Each eighth contains 125 thousandths of the original whole.",
+      "Both numerator and denominator must use the same multiplier.",
+      "The target denominator determines decimal places.",
+      "A correct decimal does not excuse incorrect recorded fraction working."
+    ],
+    "common_confusions": [
+      "Only one fraction part scaled",
+      "Unequal scale factors",
+      "Correct decimal paired with invalid working",
+      "Unnecessary rounding",
+      "Improper fraction whole-number part dropped"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "Choose a useful target denominator",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Choose a useful target denominator",
+          "initial_state": "Choose a useful target denominator",
+          "model": {
+            "kind": "equivalent_decimal_conversion",
+            "title": "Useful equivalent-denominator targets",
+            "n": 1,
+            "d": 2,
+            "target": 10,
+            "given": "",
+            "steps": [
+              "Use the same multiplier on both fraction parts."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "targets",
+            "solved": true,
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "Choose a power-of-ten target reachable with a whole-number multiplier. There may be more than one valid target."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Start with fifths of one length",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Start with fifths of one length",
+          "initial_state": "Start with fifths of one length",
+          "model": {
+            "kind": "equivalent_decimal_conversion",
+            "title": "Same length, smaller equal parts",
+            "n": 3,
+            "d": 5,
+            "target": 10,
+            "given": "3/5",
+            "steps": [
+              "Three of five equal parts are shaded.",
+              "Split each fifth into two tenths: six tenths are shaded.",
+              "The shaded length is unchanged: 3/5 = 6/10 = 0.6."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "repartition",
+            "solved": true,
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "Three equal fifths are shaded. Keep this whole length and shaded endpoint fixed as the parts become smaller."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Repartition without changing the share",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Repartition without changing the share",
+          "initial_state": "Repartition without changing the share",
+          "model": {
+            "kind": "equivalent_decimal_conversion",
+            "title": "Same length, smaller equal parts",
+            "n": 3,
+            "d": 5,
+            "target": 10,
+            "given": "3/5",
+            "steps": [
+              "Three of five equal parts are shaded.",
+              "Split each fifth into two tenths: six tenths are shaded.",
+              "The shaded length is unchanged: 3/5 = 6/10 = 0.6."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "repartition",
+            "solved": true,
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "Each fifth becomes two tenths. More smaller parts are counted, but the shaded length and its number-line position stay the same."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Look inside one eighth",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Look inside one eighth",
+          "initial_state": "Look inside one eighth",
+          "model": {
+            "kind": "equivalent_decimal_conversion",
+            "title": "Magnify an eighth into thousandths",
+            "n": 3,
+            "d": 8,
+            "target": 1000,
+            "given": "3/8",
+            "steps": [
+              "One eighth contains 125 thousandths of the original whole.",
+              "Three eighths contain 125 + 125 + 125 = 375 thousandths.",
+              "3/8 = 375/1000 = 0.375."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "eighths",
+            "solved": true,
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "The enlarged grid represents just one eighth of the original whole. Its cells are thousandths of that original whole, not thousandths of the enlarged picture."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Combine the three shaded eighths",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Combine the three shaded eighths",
+          "initial_state": "Combine the three shaded eighths",
+          "model": {
+            "kind": "equivalent_decimal_conversion",
+            "title": "Magnify an eighth into thousandths",
+            "n": 3,
+            "d": 8,
+            "target": 1000,
+            "given": "3/8",
+            "steps": [
+              "One eighth contains 125 thousandths of the original whole.",
+              "Three eighths contain 125 + 125 + 125 = 375 thousandths.",
+              "3/8 = 375/1000 = 0.375."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "eighths",
+            "solved": true,
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "Combine the thousandths in the three shaded parts. The number line marks the unchanged share, with equally spaced eighths."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T06"
+      },
+      {
+        "id": "T06",
+        "stage": "teaching",
+        "purpose": "Explain the matching multipliers",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Explain the matching multipliers",
+          "initial_state": "Explain the matching multipliers",
+          "model": {
+            "kind": "equivalent_decimal_conversion",
+            "title": "Explain why both parts change",
+            "n": 1,
+            "d": 25,
+            "target": 100,
+            "given": "Denominator: 25 × 4 = 100",
+            "steps": [
+              "The denominator is multiplied by 4.",
+              "Multiply the numerator by the same factor to preserve the original value."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "rule",
+            "explanation_question": true
+          }
+        },
+        "narration": {
+          "script": "Choose why changing the denominator requires the same change to the numerator."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "FDP-08-C01"
+        },
+        "next_step": "T07"
+      },
+      {
+        "id": "T07",
+        "stage": "teaching",
+        "purpose": "Reach a hundredths denominator",
+        "source_ref": {
+          "page": 6
+        },
+        "scene": {
+          "display_title": "Reach a hundredths denominator",
+          "initial_state": "Reach a hundredths denominator",
+          "model": {
+            "kind": "equivalent_decimal_conversion",
+            "title": "Convert seven twentieths",
+            "n": 7,
+            "d": 20,
+            "target": 100,
+            "given": "7/20",
+            "steps": [
+              "20 × 5 = 100.",
+              "7 × 5 = 35; use the same factor on both fraction parts.",
+              "7/20 = 35/100; the value is unchanged.",
+              "35/100 = 0.35."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "Begin the worked conversion by finding the whole-number multiplier for the denominator."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T08"
+      },
+      {
+        "id": "T08",
+        "stage": "teaching",
+        "purpose": "Scale the numerator equally",
+        "source_ref": {
+          "page": 6
+        },
+        "scene": {
+          "display_title": "Scale the numerator equally",
+          "initial_state": "Scale the numerator equally",
+          "model": {
+            "kind": "equivalent_decimal_conversion",
+            "title": "Convert seven twentieths",
+            "n": 7,
+            "d": 20,
+            "target": 100,
+            "given": "7/20",
+            "steps": [
+              "20 × 5 = 100.",
+              "7 × 5 = 35; use the same factor on both fraction parts.",
+              "7/20 = 35/100; the value is unchanged.",
+              "35/100 = 0.35."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "Apply that same multiplier to the numerator. This keeps the share unchanged while the equal parts become smaller."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T09"
+      },
+      {
+        "id": "T09",
+        "stage": "teaching",
+        "purpose": "Check the equivalent fraction",
+        "source_ref": {
+          "page": 6
+        },
+        "scene": {
+          "display_title": "Check the equivalent fraction",
+          "initial_state": "Check the equivalent fraction",
+          "model": {
+            "kind": "equivalent_decimal_conversion",
+            "title": "Convert seven twentieths",
+            "n": 7,
+            "d": 20,
+            "target": 100,
+            "given": "7/20",
+            "steps": [
+              "20 × 5 = 100.",
+              "7 × 5 = 35; use the same factor on both fraction parts.",
+              "7/20 = 35/100; the value is unchanged.",
+              "35/100 = 0.35."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "Follow both multiplication steps in the fraction. Matching scale factors preserve the equality."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T10"
+      },
+      {
+        "id": "T10",
+        "stage": "teaching",
+        "purpose": "Read the exact decimal",
+        "source_ref": {
+          "page": 6
+        },
+        "scene": {
+          "display_title": "Read the exact decimal",
+          "initial_state": "Read the exact decimal",
+          "model": {
+            "kind": "equivalent_decimal_conversion",
+            "title": "Convert seven twentieths",
+            "n": 7,
+            "d": 20,
+            "target": 100,
+            "given": "7/20",
+            "steps": [
+              "20 × 5 = 100.",
+              "7 × 5 = 35; use the same factor on both fraction parts.",
+              "7/20 = 35/100; the value is unchanged.",
+              "35/100 = 0.35."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 4
+          }
+        },
+        "narration": {
+          "script": "Use the new denominator to place the digits. The fraction and decimal now describe exactly the same value."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T11"
+      },
+      {
+        "id": "T11",
+        "stage": "teaching",
+        "purpose": "Check a complete method",
+        "source_ref": {
+          "page": 6
+        },
+        "scene": {
+          "display_title": "Check a complete method",
+          "initial_state": "Check a complete method",
+          "model": {
+            "kind": "equivalent_decimal_conversion",
+            "title": "Check the entire conversion chain",
+            "n": 11,
+            "d": 25,
+            "target": 100,
+            "given": "11/25",
+            "steps": [
+              "25 × 4 = 100.",
+              "11 × 4 = 44; use the same factor on both fraction parts.",
+              "11/25 = 44/100; the value is unchanged.",
+              "44/100 = 0.44."
+            ],
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Check both fraction parts and the final decimal before selecting the valid chain."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "FDP-08-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "FDP-08-G01",
+        "support_level": "high",
+        "pre_question_script": "Find the denominator multiplier.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "FDP-08-G02",
+        "support_level": "high",
+        "pre_question_script": "Enter both the numerator multiplier and its product.",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "faded",
+        "question_ref": "FDP-08-G03",
+        "support_level": "reduced",
+        "pre_question_script": "Complete the fraction numerator and its matching decimal.",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "independent_transfer",
+        "question_ref": "FDP-08-G04",
+        "support_level": "none",
+        "pre_question_script": "Explain why the two fractions have the same value.",
+        "correct_next": "P01"
+      }
+    },
+    "practice": {
+      "intro_script": "Write each exact decimal. You may record an equivalent fraction; any valid power-of-ten route is accepted, and recorded working must preserve the value.",
+      "question_order": [
+        "FDP-08-P01",
+        "FDP-08-P02",
+        "FDP-08-P03",
+        "FDP-08-P04",
+        "FDP-08-P05",
+        "FDP-08-P06",
+        "FDP-08-P07",
+        "FDP-08-P08",
+        "FDP-08-P09",
+        "FDP-08-X01",
+        "FDP-08-X02",
+        "FDP-08-X03",
+        "FDP-08-X04",
+        "FDP-08-X05"
+      ],
+      "question_count": 14,
+      "feedback_policy": "Question-specific scale-factor, fraction-value and decimal feedback; retain correct components and require learner correction. Do not infer unseen working or mutate prerequisite states."
+    },
+    "exit": {
+      "intro_script": "Complete three exact decimal conversions and the method check without hints. Each response locks. Any fraction working you choose to record must also be valid; feedback follows after all four responses are saved.",
+      "primary_question_refs": [
+        "FDP-08-E01",
+        "FDP-08-E02",
+        "FDP-08-E03",
+        "FDP-08-E04"
+      ],
+      "confirmation_question_refs": [],
+      "submission_policy": "Withhold all correctness, working, charts and repairs until every final response is locked.",
+      "mastery_policy": {
+        "profile": "all_primary_unsupported_deferred",
+        "require_all": true,
+        "source_page": 15,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "All final decimals and the method check are correct, and any recorded equivalent fractions preserve the original values.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Keep the whole conversion consistent",
+      "ryan_script": "One or more final responses need another pass. Review the shared scale factor, any recorded fraction working and the exact decimal value.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "FDP-08-C01",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "When changing a denominator from 25 to 100, why must the numerator also be multiplied by 4?",
+      "target": "Preserve the fraction value using an equivalent denominator of 10, 100 or 1000 and give its exact decimal",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Multiplying numerator and denominator by the same number creates an equivalent fraction.",
+          "The numerator must always become larger than the denominator.",
+          "The fraction should look balanced.",
+          "A fraction in hundredths must have equal numerator and denominator."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "Multiplying numerator and denominator by the same number creates an equivalent fraction."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Yes. Applying the same factor to both fraction parts preserves the value.",
+        "correct_after_support": "Yes. Applying the same factor to both fraction parts preserves the value.",
+        "on_correct_math": "The denominator is multiplied by 4. → Multiply the numerator by the same factor to preserve the original value.",
+        "on_incorrect_attempt_1": "Consider what happens to the value if only the part size changes.",
+        "on_incorrect_attempt_2": "Consider what happens to the value if only the part size changes.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The denominator is multiplied by 4. → Multiply the numerator by the same factor to preserve the original value."
+      },
+      "mathematical_support": {
+        "hint_1": "Consider what happens to the value if only the part size changes.",
+        "hint_2": "Choose a whole-number scale factor, apply it to both fraction parts and read the resulting decimal places.",
+        "worked_solution": "The denominator is multiplied by 4. → Multiply the numerator by the same factor to preserve the original value."
+      },
+      "working": [
+        "The denominator is multiplied by 4.",
+        "Multiply the numerator by the same factor to preserve the original value."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_decimal_conversion",
+          "title": "Explain why both parts change",
+          "n": 1,
+          "d": 25,
+          "target": 100,
+          "given": "Denominator: 25 × 4 = 100",
+          "steps": [
+            "The denominator is multiplied by 4.",
+            "Multiply the numerator by the same factor to preserve the original value."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "explanation_question": true
+        }
+      },
+      "response_feedback": {
+        "The numerator must always become larger than the denominator.": "Scaling both parts does not require the numerator to exceed the denominator.",
+        "The fraction should look balanced.": "Visual balance does not establish equivalent value. The scale factors must match.",
+        "A fraction in hundredths must have equal numerator and denominator.": "Equal numerator and denominator would make one whole, not every possible hundredths fraction."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-08-C02",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Which method correctly converts 11/25 to a decimal?",
+      "target": "Preserve the fraction value using an equivalent denominator of 10, 100 or 1000 and give its exact decimal",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "11/25 = 44/100 = 0.44, multiplying both fraction parts by 4.",
+          "11/25 = 11/100 = 0.11, changing only the denominator.",
+          "11/25 = 44/125 = 0.44, multiplying the numerator by 4 and denominator by 5.",
+          "11/25 = 55/100 = 0.55, multiplying the numerator by 5 and denominator by 4."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "11/25 = 44/100 = 0.44, multiplying both fraction parts by 4."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both fraction parts use the same factor, and the hundredths fraction matches its decimal.",
+        "correct_after_support": "Correct. Both fraction parts use the same factor, and the hundredths fraction matches its decimal.",
+        "on_correct_math": "25 × 4 = 100. → 11 × 4 = 44; use the same factor on both fraction parts. → 11/25 = 44/100; the value is unchanged. → 44/100 = 0.44.",
+        "on_incorrect_attempt_1": "Compare the two scale factors and then read the decimal from the new denominator.",
+        "on_incorrect_attempt_2": "Compare the two scale factors and then read the decimal from the new denominator.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "25 × 4 = 100. → 11 × 4 = 44; use the same factor on both fraction parts. → 11/25 = 44/100; the value is unchanged. → 44/100 = 0.44."
+      },
+      "mathematical_support": {
+        "hint_1": "Compare the two scale factors and then read the decimal from the new denominator.",
+        "hint_2": "Choose a whole-number scale factor, apply it to both fraction parts and read the resulting decimal places.",
+        "worked_solution": "25 × 4 = 100. → 11 × 4 = 44; use the same factor on both fraction parts. → 11/25 = 44/100; the value is unchanged. → 44/100 = 0.44."
+      },
+      "working": [
+        "25 × 4 = 100.",
+        "11 × 4 = 44; use the same factor on both fraction parts.",
+        "11/25 = 44/100; the value is unchanged.",
+        "44/100 = 0.44."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_decimal_conversion",
+          "title": "Check the entire conversion chain",
+          "n": 11,
+          "d": 25,
+          "target": 100,
+          "given": "11/25",
+          "steps": [
+            "25 × 4 = 100.",
+            "11 × 4 = 44; use the same factor on both fraction parts.",
+            "11/25 = 44/100; the value is unchanged.",
+            "44/100 = 0.44."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "11/25 = 11/100 = 0.11, changing only the denominator.": "Only the denominator changed, so the proposed fraction is not equivalent.",
+        "11/25 = 44/125 = 0.44, multiplying the numerator by 4 and denominator by 5.": "Different scale factors change the value. The displayed fraction over one hundred twenty-five also does not equal the proposed decimal.",
+        "11/25 = 55/100 = 0.55, multiplying the numerator by 5 and denominator by 4.": "The two scale factors differ, so the proposed hundredths fraction changes the value."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-08-G01",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "guided",
+      "prompt": "For 9/25, complete the denominator step: 25 × ___ = 100.",
+      "target": "Preserve the fraction value using an equivalent denominator of 10, 100 or 1000 and give its exact decimal",
+      "response": {
+        "type": "integer",
+        "input_label": "Scale factor",
+        "equivalent_scale": true
+      },
+      "answer": {
+        "value": 4
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. That factor reaches the target denominator.",
+        "correct_after_support": "Correct. That factor reaches the target denominator.",
+        "on_correct_math": "25 × 4 = 100.",
+        "on_incorrect_attempt_1": "Find the whole-number multiplier that turns the denominator into one hundred.",
+        "on_incorrect_attempt_2": "Find the whole-number multiplier that turns the denominator into one hundred.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "25 × 4 = 100."
+      },
+      "mathematical_support": {
+        "hint_1": "Find the whole-number multiplier that turns the denominator into one hundred.",
+        "hint_2": "Choose a whole-number scale factor, apply it to both fraction parts and read the resulting decimal places.",
+        "worked_solution": "25 × 4 = 100."
+      },
+      "working": [
+        "25 × 4 = 100."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_decimal_conversion",
+          "title": "Find the denominator scale factor",
+          "n": 9,
+          "d": 25,
+          "target": 100,
+          "given": "9/25",
+          "steps": [
+            "25 × 4 = 100."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "denominator"
+        }
+      },
+      "response_feedback": {
+        "check_factor": "Multiply the given denominator by your factor and check whether the result is one hundred."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-08-G02",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "guided",
+      "prompt": "Use the same factor on the numerator. Complete both blanks: 9 × ___ = ___.",
+      "target": "Preserve the fraction value using an equivalent denominator of 10, 100 or 1000 and give its exact decimal",
+      "response": {
+        "type": "power_ten_fields",
+        "input_label": "Complete the factor and product",
+        "fields": [
+          {
+            "key": "factor",
+            "label": "Numerator scale factor",
+            "type": "integer"
+          },
+          {
+            "key": "product",
+            "label": "Numerator product",
+            "type": "integer"
+          }
+        ]
+      },
+      "answer": {
+        "value": {
+          "factor": 4,
+          "product": 36
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The factor matches the denominator step and the numerator product is consistent.",
+        "correct_after_support": "Correct. The factor matches the denominator step and the numerator product is consistent.",
+        "on_correct_math": "Use the same factor, 4, on the numerator. → 9 × 4 = 36.",
+        "on_incorrect_attempt_1": "Use the factor from the denominator step, then calculate the numerator product.",
+        "on_incorrect_attempt_2": "Use the factor from the denominator step, then calculate the numerator product.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Use the same factor, 4, on the numerator. → 9 × 4 = 36."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the factor from the denominator step, then calculate the numerator product.",
+        "hint_2": "Choose a whole-number scale factor, apply it to both fraction parts and read the resulting decimal places.",
+        "worked_solution": "Use the same factor, 4, on the numerator. → 9 × 4 = 36."
+      },
+      "working": [
+        "Use the same factor, 4, on the numerator.",
+        "9 × 4 = 36."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_decimal_conversion",
+          "title": "Apply the factor to the numerator",
+          "n": 9,
+          "d": 25,
+          "target": 100,
+          "given": "9/25",
+          "steps": [
+            "Use the same factor, 4, on the numerator.",
+            "9 × 4 = 36."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "numerator"
+        }
+      },
+      "response_feedback": {
+        "check_factor": "Your product is correct. The numerator must use the same scale factor as the denominator.",
+        "check_product": "Your scale factor is correct. Recalculate the numerator multiplied by that factor.",
+        "check_multiple": "Check the shared scale factor first, then multiply the original numerator by it."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-08-G03",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "faded",
+      "prompt": "Complete both representations: 9/25 = ___/100 = ___ as a decimal.",
+      "target": "Preserve the fraction value using an equivalent denominator of 10, 100 or 1000 and give its exact decimal",
+      "response": {
+        "type": "place_value_pair",
+        "fixedDenominator": 100
+      },
+      "answer": {
+        "value": {
+          "n": 36,
+          "decimal": "0.36"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The hundredths fraction and decimal both preserve the original value.",
+        "correct_after_support": "Correct. The hundredths fraction and decimal both preserve the original value.",
+        "on_correct_math": "9/25 = 36/100. → 36/100 = 0.36.",
+        "on_incorrect_attempt_1": "Use the scaled numerator in hundredths, then write the decimal with the same value.",
+        "on_incorrect_attempt_2": "Use the scaled numerator in hundredths, then write the decimal with the same value.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "9/25 = 36/100. → 36/100 = 0.36."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the scaled numerator in hundredths, then write the decimal with the same value.",
+        "hint_2": "Choose a whole-number scale factor, apply it to both fraction parts and read the resulting decimal places.",
+        "worked_solution": "9/25 = 36/100. → 36/100 = 0.36."
+      },
+      "working": [
+        "9/25 = 36/100.",
+        "36/100 = 0.36."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_decimal_conversion",
+          "title": "Complete the equivalent fraction and decimal",
+          "n": 9,
+          "d": 25,
+          "target": 100,
+          "given": "9/25",
+          "steps": [
+            "9/25 = 36/100.",
+            "36/100 = 0.36."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "fraction_decimal"
+        }
+      },
+      "response_feedback": {
+        "decimal_only": "Your fraction numerator is correct. Read that hundredths value as a decimal.",
+        "numerator_only": "Your decimal is correct. Check the numerator needed above the fixed hundredths denominator.",
+        "check_place_value": "Scale both original fraction parts equally, then read the resulting hundredths as a decimal."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-08-G04",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "independent_transfer",
+      "prompt": "Why does 9/25 equal 36/100?",
+      "target": "Preserve the fraction value using an equivalent denominator of 10, 100 or 1000 and give its exact decimal",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Both numerator and denominator were multiplied by 4, so the value stayed the same.",
+          "The numerator stayed unchanged while the denominator became 100.",
+          "The numerator and denominator were multiplied by different numbers.",
+          "A denominator of 25 cannot become 100 using a whole-number multiplier."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "Both numerator and denominator were multiplied by 4, so the value stayed the same."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Yes. Both parts use the same multiplier, so the share is unchanged.",
+        "correct_after_support": "Yes. Both parts use the same multiplier, so the share is unchanged.",
+        "on_correct_math": "25 × 4 = 100. → 9 × 4 = 36; use the same factor on both fraction parts. → 9/25 = 36/100; the value is unchanged. → 36/100 = 0.36.",
+        "on_incorrect_attempt_1": "Check what happened to both fraction parts and whether their scale factors agree.",
+        "on_incorrect_attempt_2": "Check what happened to both fraction parts and whether their scale factors agree.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "25 × 4 = 100. → 9 × 4 = 36; use the same factor on both fraction parts. → 9/25 = 36/100; the value is unchanged. → 36/100 = 0.36."
+      },
+      "mathematical_support": {
+        "hint_1": "Check what happened to both fraction parts and whether their scale factors agree.",
+        "hint_2": "Choose a whole-number scale factor, apply it to both fraction parts and read the resulting decimal places.",
+        "worked_solution": "25 × 4 = 100. → 9 × 4 = 36; use the same factor on both fraction parts. → 9/25 = 36/100; the value is unchanged. → 36/100 = 0.36."
+      },
+      "working": [
+        "25 × 4 = 100.",
+        "9 × 4 = 36; use the same factor on both fraction parts.",
+        "9/25 = 36/100; the value is unchanged.",
+        "36/100 = 0.36."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_decimal_conversion",
+          "title": "Explain the equivalent fraction",
+          "n": 9,
+          "d": 25,
+          "target": 100,
+          "given": "9/25 = 36/100",
+          "steps": [
+            "25 × 4 = 100.",
+            "9 × 4 = 36; use the same factor on both fraction parts.",
+            "9/25 = 36/100; the value is unchanged.",
+            "36/100 = 0.36."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "explanation_question": true
+        }
+      },
+      "response_feedback": {
+        "The numerator stayed unchanged while the denominator became 100.": "The numerator did change; leaving it unchanged would change the value.",
+        "The numerator and denominator were multiplied by different numbers.": "Different scale factors do not preserve this equivalent fraction.",
+        "A denominator of 25 cannot become 100 using a whole-number multiplier.": "A whole-number scale factor does connect these denominators; check their multiplication relationship."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-08-P01",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Write 1/2 as a decimal.",
+      "target": "Preserve the fraction value using an equivalent denominator of 10, 100 or 1000 and give its exact decimal",
+      "response": {
+        "type": "equivalent_decimal",
+        "original_fraction": {
+          "n": 1,
+          "d": 2
+        },
+        "suffix": ""
+      },
+      "answer": {
+        "value": {
+          "decimal": "0.5"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Your decimal represents the same half of one whole.",
+        "correct_after_support": "Correct. Your decimal represents the same half of one whole.",
+        "on_correct_math": "2 × 5 = 10. → 1 × 5 = 5; use the same factor on both fraction parts. → 1/2 = 5/10; the value is unchanged. → 5/10 = 0.5.",
+        "on_incorrect_attempt_1": "Choose a reachable power-of-ten denominator and keep both scale factors equal.",
+        "on_incorrect_attempt_2": "Choose a reachable power-of-ten denominator and keep both scale factors equal.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "2 × 5 = 10. → 1 × 5 = 5; use the same factor on both fraction parts. → 1/2 = 5/10; the value is unchanged. → 5/10 = 0.5."
+      },
+      "mathematical_support": {
+        "hint_1": "Choose a reachable power-of-ten denominator and keep both scale factors equal.",
+        "hint_2": "Choose a whole-number scale factor, apply it to both fraction parts and read the resulting decimal places.",
+        "worked_solution": "2 × 5 = 10. → 1 × 5 = 5; use the same factor on both fraction parts. → 1/2 = 5/10; the value is unchanged. → 5/10 = 0.5."
+      },
+      "working": [
+        "2 × 5 = 10.",
+        "1 × 5 = 5; use the same factor on both fraction parts.",
+        "1/2 = 5/10; the value is unchanged.",
+        "5/10 = 0.5."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_decimal_conversion",
+          "title": "Convert 1/2 without changing its value",
+          "n": 1,
+          "d": 2,
+          "target": 10,
+          "given": "1/2",
+          "steps": [
+            "2 × 5 = 10.",
+            "1 × 5 = 5; use the same factor on both fraction parts.",
+            "1/2 = 5/10; the value is unchanged.",
+            "5/10 = 0.5."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "Your decimal is correct, but your recorded fraction does not preserve the original value. Check both scale factors.",
+        "check_decimal": "Your recorded fraction is valid. Read its denominator and check the decimal places.",
+        "check_both": "Check that the recorded fraction preserves the original value, then match its decimal.",
+        "check_target": "Your recorded fraction has the right value. Use a denominator of ten, one hundred or one thousand reachable by a whole-number multiplier.",
+        "check_target_and_decimal": "Use an allowed power-of-ten denominator and then check its exact decimal value.",
+        "check_value": "Find an equivalent fraction over ten, one hundred or one thousand and read its exact decimal.",
+        "denominator_only": "That changes the denominator without scaling the numerator, so it represents a smaller share."
+      },
+      "response_patterns": [
+        {
+          "value": ".1",
+          "classification": "denominator_only"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-08-P02",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Write 3/4 as a decimal.",
+      "target": "Preserve the fraction value using an equivalent denominator of 10, 100 or 1000 and give its exact decimal",
+      "response": {
+        "type": "equivalent_decimal",
+        "original_fraction": {
+          "n": 3,
+          "d": 4
+        },
+        "suffix": ""
+      },
+      "answer": {
+        "value": {
+          "decimal": "0.75"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decimal preserves the original three-quarter share.",
+        "correct_after_support": "Correct. The decimal preserves the original three-quarter share.",
+        "on_correct_math": "4 × 25 = 100. → 3 × 25 = 75; use the same factor on both fraction parts. → 3/4 = 75/100; the value is unchanged. → 75/100 = 0.75.",
+        "on_incorrect_attempt_1": "Choose a target denominator that can be reached using a whole-number multiplier.",
+        "on_incorrect_attempt_2": "Choose a target denominator that can be reached using a whole-number multiplier.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "4 × 25 = 100. → 3 × 25 = 75; use the same factor on both fraction parts. → 3/4 = 75/100; the value is unchanged. → 75/100 = 0.75."
+      },
+      "mathematical_support": {
+        "hint_1": "Choose a target denominator that can be reached using a whole-number multiplier.",
+        "hint_2": "Choose a whole-number scale factor, apply it to both fraction parts and read the resulting decimal places.",
+        "worked_solution": "4 × 25 = 100. → 3 × 25 = 75; use the same factor on both fraction parts. → 3/4 = 75/100; the value is unchanged. → 75/100 = 0.75."
+      },
+      "working": [
+        "4 × 25 = 100.",
+        "3 × 25 = 75; use the same factor on both fraction parts.",
+        "3/4 = 75/100; the value is unchanged.",
+        "75/100 = 0.75."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_decimal_conversion",
+          "title": "Convert 3/4 without changing its value",
+          "n": 3,
+          "d": 4,
+          "target": 100,
+          "given": "3/4",
+          "steps": [
+            "4 × 25 = 100.",
+            "3 × 25 = 75; use the same factor on both fraction parts.",
+            "3/4 = 75/100; the value is unchanged.",
+            "75/100 = 0.75."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "Your decimal is correct, but your recorded fraction does not preserve the original value. Check both scale factors.",
+        "check_decimal": "Your recorded fraction is valid. Read its denominator and check the decimal places.",
+        "check_both": "Check that the recorded fraction preserves the original value, then match its decimal.",
+        "check_target": "Your recorded fraction has the right value. Use a denominator of ten, one hundred or one thousand reachable by a whole-number multiplier.",
+        "check_target_and_decimal": "Use an allowed power-of-ten denominator and then check its exact decimal value.",
+        "check_value": "Find an equivalent fraction over ten, one hundred or one thousand and read its exact decimal.",
+        "unchanged_numerator": "That reads the numerator as hundredths without making the equivalent numerator."
+      },
+      "response_patterns": [
+        {
+          "value": ".03",
+          "classification": "unchanged_numerator"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-08-P03",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Write 13/20 as a decimal.",
+      "target": "Preserve the fraction value using an equivalent denominator of 10, 100 or 1000 and give its exact decimal",
+      "response": {
+        "type": "equivalent_decimal",
+        "original_fraction": {
+          "n": 13,
+          "d": 20
+        },
+        "suffix": ""
+      },
+      "answer": {
+        "value": {
+          "decimal": "0.65"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decimal retains the value of thirteen twentieths.",
+        "correct_after_support": "Correct. The decimal retains the value of thirteen twentieths.",
+        "on_correct_math": "20 × 5 = 100. → 13 × 5 = 65; use the same factor on both fraction parts. → 13/20 = 65/100; the value is unchanged. → 65/100 = 0.65.",
+        "on_incorrect_attempt_1": "Use one multiplier on both fraction parts before reading the decimal.",
+        "on_incorrect_attempt_2": "Use one multiplier on both fraction parts before reading the decimal.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "20 × 5 = 100. → 13 × 5 = 65; use the same factor on both fraction parts. → 13/20 = 65/100; the value is unchanged. → 65/100 = 0.65."
+      },
+      "mathematical_support": {
+        "hint_1": "Use one multiplier on both fraction parts before reading the decimal.",
+        "hint_2": "Choose a whole-number scale factor, apply it to both fraction parts and read the resulting decimal places.",
+        "worked_solution": "20 × 5 = 100. → 13 × 5 = 65; use the same factor on both fraction parts. → 13/20 = 65/100; the value is unchanged. → 65/100 = 0.65."
+      },
+      "working": [
+        "20 × 5 = 100.",
+        "13 × 5 = 65; use the same factor on both fraction parts.",
+        "13/20 = 65/100; the value is unchanged.",
+        "65/100 = 0.65."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_decimal_conversion",
+          "title": "Convert 13/20 without changing its value",
+          "n": 13,
+          "d": 20,
+          "target": 100,
+          "given": "13/20",
+          "steps": [
+            "20 × 5 = 100.",
+            "13 × 5 = 65; use the same factor on both fraction parts.",
+            "13/20 = 65/100; the value is unchanged.",
+            "65/100 = 0.65."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "Your decimal is correct, but your recorded fraction does not preserve the original value. Check both scale factors.",
+        "check_decimal": "Your recorded fraction is valid. Read its denominator and check the decimal places.",
+        "check_both": "Check that the recorded fraction preserves the original value, then match its decimal.",
+        "check_target": "Your recorded fraction has the right value. Use a denominator of ten, one hundred or one thousand reachable by a whole-number multiplier.",
+        "check_target_and_decimal": "Use an allowed power-of-ten denominator and then check its exact decimal value.",
+        "check_value": "Find an equivalent fraction over ten, one hundred or one thousand and read its exact decimal.",
+        "unchanged_numerator": "That changes twentieths into hundredths without scaling the numerator."
+      },
+      "response_patterns": [
+        {
+          "value": ".13",
+          "classification": "unchanged_numerator"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-08-P04",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Write 17/25 as a decimal.",
+      "target": "Preserve the fraction value using an equivalent denominator of 10, 100 or 1000 and give its exact decimal",
+      "response": {
+        "type": "equivalent_decimal",
+        "original_fraction": {
+          "n": 17,
+          "d": 25
+        },
+        "suffix": ""
+      },
+      "answer": {
+        "value": {
+          "decimal": "0.68"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Your decimal preserves seventeen twenty-fifths.",
+        "correct_after_support": "Correct. Your decimal preserves seventeen twenty-fifths.",
+        "on_correct_math": "25 × 4 = 100. → 17 × 4 = 68; use the same factor on both fraction parts. → 17/25 = 68/100; the value is unchanged. → 68/100 = 0.68.",
+        "on_incorrect_attempt_1": "Check the multiplier that reaches a power of ten, then apply it to the numerator too.",
+        "on_incorrect_attempt_2": "Check the multiplier that reaches a power of ten, then apply it to the numerator too.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "25 × 4 = 100. → 17 × 4 = 68; use the same factor on both fraction parts. → 17/25 = 68/100; the value is unchanged. → 68/100 = 0.68."
+      },
+      "mathematical_support": {
+        "hint_1": "Check the multiplier that reaches a power of ten, then apply it to the numerator too.",
+        "hint_2": "Choose a whole-number scale factor, apply it to both fraction parts and read the resulting decimal places.",
+        "worked_solution": "25 × 4 = 100. → 17 × 4 = 68; use the same factor on both fraction parts. → 17/25 = 68/100; the value is unchanged. → 68/100 = 0.68."
+      },
+      "working": [
+        "25 × 4 = 100.",
+        "17 × 4 = 68; use the same factor on both fraction parts.",
+        "17/25 = 68/100; the value is unchanged.",
+        "68/100 = 0.68."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_decimal_conversion",
+          "title": "Convert 17/25 without changing its value",
+          "n": 17,
+          "d": 25,
+          "target": 100,
+          "given": "17/25",
+          "steps": [
+            "25 × 4 = 100.",
+            "17 × 4 = 68; use the same factor on both fraction parts.",
+            "17/25 = 68/100; the value is unchanged.",
+            "68/100 = 0.68."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "Your decimal is correct, but your recorded fraction does not preserve the original value. Check both scale factors.",
+        "check_decimal": "Your recorded fraction is valid. Read its denominator and check the decimal places.",
+        "check_both": "Check that the recorded fraction preserves the original value, then match its decimal.",
+        "check_target": "Your recorded fraction has the right value. Use a denominator of ten, one hundred or one thousand reachable by a whole-number multiplier.",
+        "check_target_and_decimal": "Use an allowed power-of-ten denominator and then check its exact decimal value.",
+        "check_value": "Find an equivalent fraction over ten, one hundred or one thousand and read its exact decimal.",
+        "unchanged_numerator": "That treats the original numerator as hundredths before scaling it."
+      },
+      "response_patterns": [
+        {
+          "value": ".17",
+          "classification": "unchanged_numerator"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-08-P05",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Write 9/40 as a decimal.",
+      "target": "Preserve the fraction value using an equivalent denominator of 10, 100 or 1000 and give its exact decimal",
+      "response": {
+        "type": "equivalent_decimal",
+        "original_fraction": {
+          "n": 9,
+          "d": 40
+        },
+        "suffix": ""
+      },
+      "answer": {
+        "value": {
+          "decimal": "0.225"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Your exact decimal keeps the thousandths value of the equivalent fraction.",
+        "correct_after_support": "Correct. Your exact decimal keeps the thousandths value of the equivalent fraction.",
+        "on_correct_math": "40 × 25 = 1000. → 9 × 25 = 225; use the same factor on both fraction parts. → 9/40 = 225/1000; the value is unchanged. → 225/1000 = 0.225.",
+        "on_incorrect_attempt_1": "Choose a whole-number route to a power of ten and preserve every required decimal place.",
+        "on_incorrect_attempt_2": "Choose a whole-number route to a power of ten and preserve every required decimal place.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "40 × 25 = 1000. → 9 × 25 = 225; use the same factor on both fraction parts. → 9/40 = 225/1000; the value is unchanged. → 225/1000 = 0.225."
+      },
+      "mathematical_support": {
+        "hint_1": "Choose a whole-number route to a power of ten and preserve every required decimal place.",
+        "hint_2": "Choose a whole-number scale factor, apply it to both fraction parts and read the resulting decimal places.",
+        "worked_solution": "40 × 25 = 1000. → 9 × 25 = 225; use the same factor on both fraction parts. → 9/40 = 225/1000; the value is unchanged. → 225/1000 = 0.225."
+      },
+      "working": [
+        "40 × 25 = 1000.",
+        "9 × 25 = 225; use the same factor on both fraction parts.",
+        "9/40 = 225/1000; the value is unchanged.",
+        "225/1000 = 0.225."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_decimal_conversion",
+          "title": "Convert 9/40 without changing its value",
+          "n": 9,
+          "d": 40,
+          "target": 1000,
+          "given": "9/40",
+          "steps": [
+            "40 × 25 = 1000.",
+            "9 × 25 = 225; use the same factor on both fraction parts.",
+            "9/40 = 225/1000; the value is unchanged.",
+            "225/1000 = 0.225."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "Your decimal is correct, but your recorded fraction does not preserve the original value. Check both scale factors.",
+        "check_decimal": "Your recorded fraction is valid. Read its denominator and check the decimal places.",
+        "check_both": "Check that the recorded fraction preserves the original value, then match its decimal.",
+        "check_target": "Your recorded fraction has the right value. Use a denominator of ten, one hundred or one thousand reachable by a whole-number multiplier.",
+        "check_target_and_decimal": "Use an allowed power-of-ten denominator and then check its exact decimal value.",
+        "check_value": "Find an equivalent fraction over ten, one hundred or one thousand and read its exact decimal.",
+        "rounding": "That rounds the value. This question requires the exact terminating decimal."
+      },
+      "response_patterns": [
+        {
+          "value": ".23",
+          "classification": "rounding"
+        },
+        {
+          "value": ".22",
+          "classification": "rounding"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-08-P06",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Write 7/8 as a decimal.",
+      "target": "Preserve the fraction value using an equivalent denominator of 10, 100 or 1000 and give its exact decimal",
+      "response": {
+        "type": "equivalent_decimal",
+        "original_fraction": {
+          "n": 7,
+          "d": 8
+        },
+        "suffix": ""
+      },
+      "answer": {
+        "value": {
+          "decimal": "0.875"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decimal is exactly the same seven-eighths share.",
+        "correct_after_support": "Correct. The decimal is exactly the same seven-eighths share.",
+        "on_correct_math": "8 × 125 = 1000. → 7 × 125 = 875; use the same factor on both fraction parts. → 7/8 = 875/1000; the value is unchanged. → 875/1000 = 0.875.",
+        "on_incorrect_attempt_1": "Use a power-of-ten target reachable by multiplying both fraction parts equally.",
+        "on_incorrect_attempt_2": "Use a power-of-ten target reachable by multiplying both fraction parts equally.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "8 × 125 = 1000. → 7 × 125 = 875; use the same factor on both fraction parts. → 7/8 = 875/1000; the value is unchanged. → 875/1000 = 0.875."
+      },
+      "mathematical_support": {
+        "hint_1": "Use a power-of-ten target reachable by multiplying both fraction parts equally.",
+        "hint_2": "Choose a whole-number scale factor, apply it to both fraction parts and read the resulting decimal places.",
+        "worked_solution": "8 × 125 = 1000. → 7 × 125 = 875; use the same factor on both fraction parts. → 7/8 = 875/1000; the value is unchanged. → 875/1000 = 0.875."
+      },
+      "working": [
+        "8 × 125 = 1000.",
+        "7 × 125 = 875; use the same factor on both fraction parts.",
+        "7/8 = 875/1000; the value is unchanged.",
+        "875/1000 = 0.875."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_decimal_conversion",
+          "title": "Convert 7/8 without changing its value",
+          "n": 7,
+          "d": 8,
+          "target": 1000,
+          "given": "7/8",
+          "steps": [
+            "8 × 125 = 1000.",
+            "7 × 125 = 875; use the same factor on both fraction parts.",
+            "7/8 = 875/1000; the value is unchanged.",
+            "875/1000 = 0.875."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "Your decimal is correct, but your recorded fraction does not preserve the original value. Check both scale factors.",
+        "check_decimal": "Your recorded fraction is valid. Read its denominator and check the decimal places.",
+        "check_both": "Check that the recorded fraction preserves the original value, then match its decimal.",
+        "check_target": "Your recorded fraction has the right value. Use a denominator of ten, one hundred or one thousand reachable by a whole-number multiplier.",
+        "check_target_and_decimal": "Use an allowed power-of-ten denominator and then check its exact decimal value.",
+        "check_value": "Find an equivalent fraction over ten, one hundred or one thousand and read its exact decimal.",
+        "rounding": "That is a rounded value. Keep the complete exact decimal."
+      },
+      "response_patterns": [
+        {
+          "value": ".88",
+          "classification": "rounding"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-08-P07",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Write 27/200 as a decimal.",
+      "target": "Preserve the fraction value using an equivalent denominator of 10, 100 or 1000 and give its exact decimal",
+      "response": {
+        "type": "equivalent_decimal",
+        "original_fraction": {
+          "n": 27,
+          "d": 200
+        },
+        "suffix": ""
+      },
+      "answer": {
+        "value": {
+          "decimal": "0.135"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decimal retains the exact fraction of a whole.",
+        "correct_after_support": "Correct. The decimal retains the exact fraction of a whole.",
+        "on_correct_math": "200 × 5 = 1000. → 27 × 5 = 135; use the same factor on both fraction parts. → 27/200 = 135/1000; the value is unchanged. → 135/1000 = 0.135.",
+        "on_incorrect_attempt_1": "Scale the denominator and numerator equally, then read the new part size.",
+        "on_incorrect_attempt_2": "Scale the denominator and numerator equally, then read the new part size.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "200 × 5 = 1000. → 27 × 5 = 135; use the same factor on both fraction parts. → 27/200 = 135/1000; the value is unchanged. → 135/1000 = 0.135."
+      },
+      "mathematical_support": {
+        "hint_1": "Scale the denominator and numerator equally, then read the new part size.",
+        "hint_2": "Choose a whole-number scale factor, apply it to both fraction parts and read the resulting decimal places.",
+        "worked_solution": "200 × 5 = 1000. → 27 × 5 = 135; use the same factor on both fraction parts. → 27/200 = 135/1000; the value is unchanged. → 135/1000 = 0.135."
+      },
+      "working": [
+        "200 × 5 = 1000.",
+        "27 × 5 = 135; use the same factor on both fraction parts.",
+        "27/200 = 135/1000; the value is unchanged.",
+        "135/1000 = 0.135."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_decimal_conversion",
+          "title": "Convert 27/200 without changing its value",
+          "n": 27,
+          "d": 200,
+          "target": 1000,
+          "given": "27/200",
+          "steps": [
+            "200 × 5 = 1000.",
+            "27 × 5 = 135; use the same factor on both fraction parts.",
+            "27/200 = 135/1000; the value is unchanged.",
+            "135/1000 = 0.135."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "Your decimal is correct, but your recorded fraction does not preserve the original value. Check both scale factors.",
+        "check_decimal": "Your recorded fraction is valid. Read its denominator and check the decimal places.",
+        "check_both": "Check that the recorded fraction preserves the original value, then match its decimal.",
+        "check_target": "Your recorded fraction has the right value. Use a denominator of ten, one hundred or one thousand reachable by a whole-number multiplier.",
+        "check_target_and_decimal": "Use an allowed power-of-ten denominator and then check its exact decimal value.",
+        "check_value": "Find an equivalent fraction over ten, one hundred or one thousand and read its exact decimal.",
+        "place_value": "That places the scaled numerator in hundredths rather than thousandths."
+      },
+      "response_patterns": [
+        {
+          "value": "1.35",
+          "classification": "place_value"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-08-P08",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Write 9/4 as a decimal.",
+      "target": "Preserve the fraction value using an equivalent denominator of 10, 100 or 1000 and give its exact decimal",
+      "response": {
+        "type": "equivalent_decimal",
+        "original_fraction": {
+          "n": 9,
+          "d": 4
+        },
+        "suffix": ""
+      },
+      "answer": {
+        "value": {
+          "decimal": "2.25"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decimal includes both complete wholes and the remaining quarter.",
+        "correct_after_support": "Correct. The decimal includes both complete wholes and the remaining quarter.",
+        "on_correct_math": "4 × 25 = 100. → 9 × 25 = 225; use the same factor on both fraction parts. → 9/4 = 225/100; the value is unchanged. → 225/100 = 2.25.",
+        "on_incorrect_attempt_1": "Keep the complete wholes as well as the extra fraction when writing the decimal.",
+        "on_incorrect_attempt_2": "Keep the complete wholes as well as the extra fraction when writing the decimal.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "4 × 25 = 100. → 9 × 25 = 225; use the same factor on both fraction parts. → 9/4 = 225/100; the value is unchanged. → 225/100 = 2.25."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the complete wholes as well as the extra fraction when writing the decimal.",
+        "hint_2": "Choose a whole-number scale factor, apply it to both fraction parts and read the resulting decimal places.",
+        "worked_solution": "4 × 25 = 100. → 9 × 25 = 225; use the same factor on both fraction parts. → 9/4 = 225/100; the value is unchanged. → 225/100 = 2.25."
+      },
+      "working": [
+        "4 × 25 = 100.",
+        "9 × 25 = 225; use the same factor on both fraction parts.",
+        "9/4 = 225/100; the value is unchanged.",
+        "225/100 = 2.25."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_decimal_conversion",
+          "title": "Convert 9/4 without changing its value",
+          "n": 9,
+          "d": 4,
+          "target": 100,
+          "given": "9/4",
+          "steps": [
+            "4 × 25 = 100.",
+            "9 × 25 = 225; use the same factor on both fraction parts.",
+            "9/4 = 225/100; the value is unchanged.",
+            "225/100 = 2.25."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "Your decimal is correct, but your recorded fraction does not preserve the original value. Check both scale factors.",
+        "check_decimal": "Your recorded fraction is valid. Read its denominator and check the decimal places.",
+        "check_both": "Check that the recorded fraction preserves the original value, then match its decimal.",
+        "check_target": "Your recorded fraction has the right value. Use a denominator of ten, one hundred or one thousand reachable by a whole-number multiplier.",
+        "check_target_and_decimal": "Use an allowed power-of-ten denominator and then check its exact decimal value.",
+        "check_value": "Find an equivalent fraction over ten, one hundred or one thousand and read its exact decimal.",
+        "dropped_wholes": "That keeps only the extra quarter and loses the two complete wholes."
+      },
+      "response_patterns": [
+        {
+          "value": ".25",
+          "classification": "dropped_wholes"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-08-P09",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Which conversion chain is correct?",
+      "target": "Preserve the fraction value using an equivalent denominator of 10, 100 or 1000 and give its exact decimal",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "23/50 = 46/100 = 0.46",
+          "23/50 = 23/100 = 0.23",
+          "23/50 = 46/50 = 0.46",
+          "23/50 = 115/100 = 1.15"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "23/50 = 46/100 = 0.46"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both steps preserve the same value throughout the chain.",
+        "correct_after_support": "Correct. Both steps preserve the same value throughout the chain.",
+        "on_correct_math": "50 × 2 = 100. → 23 × 2 = 46; use the same factor on both fraction parts. → 23/50 = 46/100; the value is unchanged. → 46/100 = 0.46.",
+        "on_incorrect_attempt_1": "Check the fraction scaling and the final decimal; every equality must be true.",
+        "on_incorrect_attempt_2": "Check the fraction scaling and the final decimal; every equality must be true.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "50 × 2 = 100. → 23 × 2 = 46; use the same factor on both fraction parts. → 23/50 = 46/100; the value is unchanged. → 46/100 = 0.46."
+      },
+      "mathematical_support": {
+        "hint_1": "Check the fraction scaling and the final decimal; every equality must be true.",
+        "hint_2": "Choose a whole-number scale factor, apply it to both fraction parts and read the resulting decimal places.",
+        "worked_solution": "50 × 2 = 100. → 23 × 2 = 46; use the same factor on both fraction parts. → 23/50 = 46/100; the value is unchanged. → 46/100 = 0.46."
+      },
+      "working": [
+        "50 × 2 = 100.",
+        "23 × 2 = 46; use the same factor on both fraction parts.",
+        "23/50 = 46/100; the value is unchanged.",
+        "46/100 = 0.46."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_decimal_conversion",
+          "title": "Preserve value at every equality",
+          "n": 23,
+          "d": 50,
+          "target": 100,
+          "given": "23/50",
+          "steps": [
+            "50 × 2 = 100.",
+            "23 × 2 = 46; use the same factor on both fraction parts.",
+            "23/50 = 46/100; the value is unchanged.",
+            "46/100 = 0.46."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "23/50 = 23/100 = 0.23": "The denominator doubles but the numerator does not, changing the value.",
+        "23/50 = 46/50 = 0.46": "The numerator doubles while the denominator stays unchanged. The final decimal also does not match that displayed fraction.",
+        "23/50 = 115/100 = 1.15": "The numerator and denominator use different multipliers, so this chain does not preserve the value."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-08-X01",
+      "source_ref": {
+        "page": 17
+      },
+      "stage": "practice",
+      "prompt": "A tank is 17/20 full. Write this share as a decimal.",
+      "target": "Preserve the fraction value using an equivalent denominator of 10, 100 or 1000 and give its exact decimal",
+      "response": {
+        "type": "decimal",
+        "allow_leading_decimal_point": true,
+        "suffix": ""
+      },
+      "answer": {
+        "value": "0.85"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decimal describes the same filled share of the tank.",
+        "correct_after_support": "Correct. The decimal describes the same filled share of the tank.",
+        "on_correct_math": "20 × 5 = 100. → 17 × 5 = 85; use the same factor on both fraction parts. → 17/20 = 85/100; the value is unchanged. → 85/100 = 0.85.",
+        "on_incorrect_attempt_1": "Keep the complete tank as the reference whole and preserve its filled share.",
+        "on_incorrect_attempt_2": "Keep the complete tank as the reference whole and preserve its filled share.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "20 × 5 = 100. → 17 × 5 = 85; use the same factor on both fraction parts. → 17/20 = 85/100; the value is unchanged. → 85/100 = 0.85."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the complete tank as the reference whole and preserve its filled share.",
+        "hint_2": "Choose a whole-number scale factor, apply it to both fraction parts and read the resulting decimal places.",
+        "worked_solution": "20 × 5 = 100. → 17 × 5 = 85; use the same factor on both fraction parts. → 17/20 = 85/100; the value is unchanged. → 85/100 = 0.85."
+      },
+      "working": [
+        "20 × 5 = 100.",
+        "17 × 5 = 85; use the same factor on both fraction parts.",
+        "17/20 = 85/100; the value is unchanged.",
+        "85/100 = 0.85."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_decimal_conversion",
+          "title": "The filled share of a tank",
+          "n": 17,
+          "d": 20,
+          "target": 100,
+          "given": "17/20",
+          "steps": [
+            "20 × 5 = 100.",
+            "17 × 5 = 85; use the same factor on both fraction parts.",
+            "17/20 = 85/100; the value is unchanged.",
+            "85/100 = 0.85."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "Your decimal is correct, but your recorded fraction does not preserve the original value. Check both scale factors.",
+        "check_decimal": "Your recorded fraction is valid. Read its denominator and check the decimal places.",
+        "check_both": "Check that the recorded fraction preserves the original value, then match its decimal.",
+        "check_target": "Your recorded fraction has the right value. Use a denominator of ten, one hundred or one thousand reachable by a whole-number multiplier.",
+        "check_target_and_decimal": "Use an allowed power-of-ten denominator and then check its exact decimal value.",
+        "check_value": "Find an equivalent fraction over ten, one hundred or one thousand and read its exact decimal.",
+        "check_place_value": "Keep the complete tank as the reference whole and preserve its filled share."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-08-X02",
+      "source_ref": {
+        "page": 17
+      },
+      "stage": "practice",
+      "prompt": "A machine completes 23/25 of one cycle. Write this share as a decimal.",
+      "target": "Preserve the fraction value using an equivalent denominator of 10, 100 or 1000 and give its exact decimal",
+      "response": {
+        "type": "decimal",
+        "allow_leading_decimal_point": true,
+        "suffix": ""
+      },
+      "answer": {
+        "value": "0.92"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decimal keeps the same share of a complete cycle.",
+        "correct_after_support": "Correct. The decimal keeps the same share of a complete cycle.",
+        "on_correct_math": "25 × 4 = 100. → 23 × 4 = 92; use the same factor on both fraction parts. → 23/25 = 92/100; the value is unchanged. → 92/100 = 0.92.",
+        "on_incorrect_attempt_1": "Represent the same portion of one complete machine cycle.",
+        "on_incorrect_attempt_2": "Represent the same portion of one complete machine cycle.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "25 × 4 = 100. → 23 × 4 = 92; use the same factor on both fraction parts. → 23/25 = 92/100; the value is unchanged. → 92/100 = 0.92."
+      },
+      "mathematical_support": {
+        "hint_1": "Represent the same portion of one complete machine cycle.",
+        "hint_2": "Choose a whole-number scale factor, apply it to both fraction parts and read the resulting decimal places.",
+        "worked_solution": "25 × 4 = 100. → 23 × 4 = 92; use the same factor on both fraction parts. → 23/25 = 92/100; the value is unchanged. → 92/100 = 0.92."
+      },
+      "working": [
+        "25 × 4 = 100.",
+        "23 × 4 = 92; use the same factor on both fraction parts.",
+        "23/25 = 92/100; the value is unchanged.",
+        "92/100 = 0.92."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_decimal_conversion",
+          "title": "A share of one machine cycle",
+          "n": 23,
+          "d": 25,
+          "target": 100,
+          "given": "23/25",
+          "steps": [
+            "25 × 4 = 100.",
+            "23 × 4 = 92; use the same factor on both fraction parts.",
+            "23/25 = 92/100; the value is unchanged.",
+            "92/100 = 0.92."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "Your decimal is correct, but your recorded fraction does not preserve the original value. Check both scale factors.",
+        "check_decimal": "Your recorded fraction is valid. Read its denominator and check the decimal places.",
+        "check_both": "Check that the recorded fraction preserves the original value, then match its decimal.",
+        "check_target": "Your recorded fraction has the right value. Use a denominator of ten, one hundred or one thousand reachable by a whole-number multiplier.",
+        "check_target_and_decimal": "Use an allowed power-of-ten denominator and then check its exact decimal value.",
+        "check_value": "Find an equivalent fraction over ten, one hundred or one thousand and read its exact decimal.",
+        "check_place_value": "Represent the same portion of one complete machine cycle."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-08-X03",
+      "source_ref": {
+        "page": 17
+      },
+      "stage": "practice",
+      "prompt": "A ribbon is 7/8 metre long. Write this length as a decimal number of metres.",
+      "target": "Preserve the fraction value using an equivalent denominator of 10, 100 or 1000 and give its exact decimal",
+      "response": {
+        "type": "decimal",
+        "allow_leading_decimal_point": true,
+        "suffix": "m"
+      },
+      "answer": {
+        "value": "0.875"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decimal represents exactly the same ribbon length in metres.",
+        "correct_after_support": "Correct. The decimal represents exactly the same ribbon length in metres.",
+        "on_correct_math": "8 × 125 = 1000. → 7 × 125 = 875; use the same factor on both fraction parts. → 7/8 = 875/1000; the value is unchanged. → 875/1000 = 0.875.",
+        "on_incorrect_attempt_1": "Keep the exact ribbon length and the stated unit; do not round.",
+        "on_incorrect_attempt_2": "Keep the exact ribbon length and the stated unit; do not round.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "8 × 125 = 1000. → 7 × 125 = 875; use the same factor on both fraction parts. → 7/8 = 875/1000; the value is unchanged. → 875/1000 = 0.875."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the exact ribbon length and the stated unit; do not round.",
+        "hint_2": "Choose a whole-number scale factor, apply it to both fraction parts and read the resulting decimal places.",
+        "worked_solution": "8 × 125 = 1000. → 7 × 125 = 875; use the same factor on both fraction parts. → 7/8 = 875/1000; the value is unchanged. → 875/1000 = 0.875."
+      },
+      "working": [
+        "8 × 125 = 1000.",
+        "7 × 125 = 875; use the same factor on both fraction parts.",
+        "7/8 = 875/1000; the value is unchanged.",
+        "875/1000 = 0.875."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_decimal_conversion",
+          "title": "An exact ribbon length",
+          "n": 7,
+          "d": 8,
+          "target": 1000,
+          "given": "7/8 m",
+          "steps": [
+            "8 × 125 = 1000.",
+            "7 × 125 = 875; use the same factor on both fraction parts.",
+            "7/8 = 875/1000; the value is unchanged.",
+            "875/1000 = 0.875."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "Your decimal is correct, but your recorded fraction does not preserve the original value. Check both scale factors.",
+        "check_decimal": "Your recorded fraction is valid. Read its denominator and check the decimal places.",
+        "check_both": "Check that the recorded fraction preserves the original value, then match its decimal.",
+        "check_target": "Your recorded fraction has the right value. Use a denominator of ten, one hundred or one thousand reachable by a whole-number multiplier.",
+        "check_target_and_decimal": "Use an allowed power-of-ten denominator and then check its exact decimal value.",
+        "check_value": "Find an equivalent fraction over ten, one hundred or one thousand and read its exact decimal.",
+        "check_place_value": "Keep the exact ribbon length and the stated unit; do not round."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-08-X04",
+      "source_ref": {
+        "page": 17
+      },
+      "stage": "practice",
+      "prompt": "A container holds 9/4 litres of liquid. Write this volume as a decimal number of litres.",
+      "target": "Preserve the fraction value using an equivalent denominator of 10, 100 or 1000 and give its exact decimal",
+      "response": {
+        "type": "decimal",
+        "allow_leading_decimal_point": true,
+        "suffix": "litres"
+      },
+      "answer": {
+        "value": "2.25"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decimal retains the complete litres and the additional quarter.",
+        "correct_after_support": "Correct. The decimal retains the complete litres and the additional quarter.",
+        "on_correct_math": "4 × 25 = 100. → 9 × 25 = 225; use the same factor on both fraction parts. → 9/4 = 225/100; the value is unchanged. → 225/100 = 2.25.",
+        "on_incorrect_attempt_1": "Preserve the complete litres as well as the additional fractional amount.",
+        "on_incorrect_attempt_2": "Preserve the complete litres as well as the additional fractional amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "4 × 25 = 100. → 9 × 25 = 225; use the same factor on both fraction parts. → 9/4 = 225/100; the value is unchanged. → 225/100 = 2.25."
+      },
+      "mathematical_support": {
+        "hint_1": "Preserve the complete litres as well as the additional fractional amount.",
+        "hint_2": "Choose a whole-number scale factor, apply it to both fraction parts and read the resulting decimal places.",
+        "worked_solution": "4 × 25 = 100. → 9 × 25 = 225; use the same factor on both fraction parts. → 9/4 = 225/100; the value is unchanged. → 225/100 = 2.25."
+      },
+      "working": [
+        "4 × 25 = 100.",
+        "9 × 25 = 225; use the same factor on both fraction parts.",
+        "9/4 = 225/100; the value is unchanged.",
+        "225/100 = 2.25."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_decimal_conversion",
+          "title": "A container holding more than two litres",
+          "n": 9,
+          "d": 4,
+          "target": 100,
+          "given": "9/4 litres",
+          "steps": [
+            "4 × 25 = 100.",
+            "9 × 25 = 225; use the same factor on both fraction parts.",
+            "9/4 = 225/100; the value is unchanged.",
+            "225/100 = 2.25."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "Your decimal is correct, but your recorded fraction does not preserve the original value. Check both scale factors.",
+        "check_decimal": "Your recorded fraction is valid. Read its denominator and check the decimal places.",
+        "check_both": "Check that the recorded fraction preserves the original value, then match its decimal.",
+        "check_target": "Your recorded fraction has the right value. Use a denominator of ten, one hundred or one thousand reachable by a whole-number multiplier.",
+        "check_target_and_decimal": "Use an allowed power-of-ten denominator and then check its exact decimal value.",
+        "check_value": "Find an equivalent fraction over ten, one hundred or one thousand and read its exact decimal.",
+        "check_place_value": "Preserve the complete litres as well as the additional fractional amount."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-08-X05",
+      "source_ref": {
+        "page": 17
+      },
+      "stage": "practice",
+      "prompt": "To convert 27/40 without division, which is the most suitable first step using a whole-number multiplier?",
+      "target": "Preserve the fraction value using an equivalent denominator of 10, 100 or 1000 and give its exact decimal",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Multiply numerator and denominator by 25 to make a denominator of 1000.",
+          "Change only the denominator to 1000.",
+          "Multiply the numerator by 10 and the denominator by 100.",
+          "Multiply numerator and denominator by 2.5 to make a denominator of 100."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "Multiply numerator and denominator by 25 to make a denominator of 1000."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The chosen target is reached with the same whole-number multiplier on both fraction parts.",
+        "correct_after_support": "Correct. The chosen target is reached with the same whole-number multiplier on both fraction parts.",
+        "on_correct_math": "40 × 25 = 1000. → 27 × 25 = 675; use the same factor on both fraction parts. → 27/40 = 675/1000; the value is unchanged. → 675/1000 = 0.675.",
+        "on_incorrect_attempt_1": "Select a route that uses the same whole-number multiplier on both parts.",
+        "on_incorrect_attempt_2": "Select a route that uses the same whole-number multiplier on both parts.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "40 × 25 = 1000. → 27 × 25 = 675; use the same factor on both fraction parts. → 27/40 = 675/1000; the value is unchanged. → 675/1000 = 0.675."
+      },
+      "mathematical_support": {
+        "hint_1": "Select a route that uses the same whole-number multiplier on both parts.",
+        "hint_2": "Choose a whole-number scale factor, apply it to both fraction parts and read the resulting decimal places.",
+        "worked_solution": "40 × 25 = 1000. → 27 × 25 = 675; use the same factor on both fraction parts. → 27/40 = 675/1000; the value is unchanged. → 675/1000 = 0.675."
+      },
+      "working": [
+        "40 × 25 = 1000.",
+        "27 × 25 = 675; use the same factor on both fraction parts.",
+        "27/40 = 675/1000; the value is unchanged.",
+        "675/1000 = 0.675."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_decimal_conversion",
+          "title": "Choose a whole-number equivalent-fraction route",
+          "n": 27,
+          "d": 40,
+          "target": 1000,
+          "given": "27/40",
+          "steps": [
+            "40 × 25 = 1000.",
+            "27 × 25 = 675; use the same factor on both fraction parts.",
+            "27/40 = 675/1000; the value is unchanged.",
+            "675/1000 = 0.675."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "Change only the denominator to 1000.": "Changing only the denominator changes the value.",
+        "Multiply the numerator by 10 and the denominator by 100.": "Those different multipliers do not preserve an equivalent fraction.",
+        "Multiply numerator and denominator by 2.5 to make a denominator of 100.": "That scale factor can preserve value when applied to both parts, but it is not a whole number. This question asks for the whole-number route."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-08-E01",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "exit",
+      "prompt": "Final check: write 13/25 as a decimal.",
+      "target": "Preserve the fraction value using an equivalent denominator of 10, 100 or 1000 and give its exact decimal",
+      "response": {
+        "type": "equivalent_decimal",
+        "original_fraction": {
+          "n": 13,
+          "d": 25
+        },
+        "suffix": ""
+      },
+      "answer": {
+        "value": {
+          "decimal": "0.52"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The final decimal preserves thirteen twenty-fifths.",
+        "correct_after_support": "Correct. The final decimal preserves thirteen twenty-fifths.",
+        "on_correct_math": "25 × 4 = 100. → 13 × 4 = 52; use the same factor on both fraction parts. → 13/25 = 52/100; the value is unchanged. → 52/100 = 0.52.",
+        "on_incorrect_attempt_1": "Review the equivalent fraction and its decimal value.",
+        "on_incorrect_attempt_2": "Review the equivalent fraction and its decimal value.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "25 × 4 = 100. → 13 × 4 = 52; use the same factor on both fraction parts. → 13/25 = 52/100; the value is unchanged. → 52/100 = 0.52."
+      },
+      "mathematical_support": {
+        "hint_1": "Review the equivalent fraction and its decimal value.",
+        "hint_2": "Choose a whole-number scale factor, apply it to both fraction parts and read the resulting decimal places.",
+        "worked_solution": "25 × 4 = 100. → 13 × 4 = 52; use the same factor on both fraction parts. → 13/25 = 52/100; the value is unchanged. → 52/100 = 0.52."
+      },
+      "working": [
+        "25 × 4 = 100.",
+        "13 × 4 = 52; use the same factor on both fraction parts.",
+        "13/25 = 52/100; the value is unchanged.",
+        "52/100 = 0.52."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_decimal_conversion",
+          "title": "Convert 13/25 without changing its value",
+          "n": 13,
+          "d": 25,
+          "target": 100,
+          "given": "13/25",
+          "steps": [
+            "25 × 4 = 100.",
+            "13 × 4 = 52; use the same factor on both fraction parts.",
+            "13/25 = 52/100; the value is unchanged.",
+            "52/100 = 0.52."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "Your decimal is correct, but your recorded fraction does not preserve the original value. Check both scale factors.",
+        "check_decimal": "Your recorded fraction is valid. Read its denominator and check the decimal places.",
+        "check_both": "Check that the recorded fraction preserves the original value, then match its decimal.",
+        "check_target": "Your recorded fraction has the right value. Use a denominator of ten, one hundred or one thousand reachable by a whole-number multiplier.",
+        "check_target_and_decimal": "Use an allowed power-of-ten denominator and then check its exact decimal value.",
+        "check_value": "Find an equivalent fraction over ten, one hundred or one thousand and read its exact decimal."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-08-E02",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "exit",
+      "prompt": "Final check: write 17/40 as a decimal.",
+      "target": "Preserve the fraction value using an equivalent denominator of 10, 100 or 1000 and give its exact decimal",
+      "response": {
+        "type": "equivalent_decimal",
+        "original_fraction": {
+          "n": 17,
+          "d": 40
+        },
+        "suffix": ""
+      },
+      "answer": {
+        "value": {
+          "decimal": "0.425"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The final decimal retains the exact thousandths value.",
+        "correct_after_support": "Correct. The final decimal retains the exact thousandths value.",
+        "on_correct_math": "40 × 25 = 1000. → 17 × 25 = 425; use the same factor on both fraction parts. → 17/40 = 425/1000; the value is unchanged. → 425/1000 = 0.425.",
+        "on_incorrect_attempt_1": "Review the scale factor and every exact decimal place.",
+        "on_incorrect_attempt_2": "Review the scale factor and every exact decimal place.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "40 × 25 = 1000. → 17 × 25 = 425; use the same factor on both fraction parts. → 17/40 = 425/1000; the value is unchanged. → 425/1000 = 0.425."
+      },
+      "mathematical_support": {
+        "hint_1": "Review the scale factor and every exact decimal place.",
+        "hint_2": "Choose a whole-number scale factor, apply it to both fraction parts and read the resulting decimal places.",
+        "worked_solution": "40 × 25 = 1000. → 17 × 25 = 425; use the same factor on both fraction parts. → 17/40 = 425/1000; the value is unchanged. → 425/1000 = 0.425."
+      },
+      "working": [
+        "40 × 25 = 1000.",
+        "17 × 25 = 425; use the same factor on both fraction parts.",
+        "17/40 = 425/1000; the value is unchanged.",
+        "425/1000 = 0.425."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_decimal_conversion",
+          "title": "Convert 17/40 without changing its value",
+          "n": 17,
+          "d": 40,
+          "target": 1000,
+          "given": "17/40",
+          "steps": [
+            "40 × 25 = 1000.",
+            "17 × 25 = 425; use the same factor on both fraction parts.",
+            "17/40 = 425/1000; the value is unchanged.",
+            "425/1000 = 0.425."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "Your decimal is correct, but your recorded fraction does not preserve the original value. Check both scale factors.",
+        "check_decimal": "Your recorded fraction is valid. Read its denominator and check the decimal places.",
+        "check_both": "Check that the recorded fraction preserves the original value, then match its decimal.",
+        "check_target": "Your recorded fraction has the right value. Use a denominator of ten, one hundred or one thousand reachable by a whole-number multiplier.",
+        "check_target_and_decimal": "Use an allowed power-of-ten denominator and then check its exact decimal value.",
+        "check_value": "Find an equivalent fraction over ten, one hundred or one thousand and read its exact decimal.",
+        "rounding": "That value is rounded. The final check requires the exact decimal."
+      },
+      "response_patterns": [
+        {
+          "value": ".43",
+          "classification": "rounding"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-08-E03",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "exit",
+      "prompt": "Final check: write 11/8 as a decimal.",
+      "target": "Preserve the fraction value using an equivalent denominator of 10, 100 or 1000 and give its exact decimal",
+      "response": {
+        "type": "equivalent_decimal",
+        "original_fraction": {
+          "n": 11,
+          "d": 8
+        },
+        "suffix": ""
+      },
+      "answer": {
+        "value": {
+          "decimal": "1.375"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The final decimal keeps the complete whole and the remaining fraction.",
+        "correct_after_support": "Correct. The final decimal keeps the complete whole and the remaining fraction.",
+        "on_correct_math": "8 × 125 = 1000. → 11 × 125 = 1375; use the same factor on both fraction parts. → 11/8 = 1375/1000; the value is unchanged. → 1375/1000 = 1.375.",
+        "on_incorrect_attempt_1": "Review the whole-number part as well as the exact fractional value.",
+        "on_incorrect_attempt_2": "Review the whole-number part as well as the exact fractional value.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "8 × 125 = 1000. → 11 × 125 = 1375; use the same factor on both fraction parts. → 11/8 = 1375/1000; the value is unchanged. → 1375/1000 = 1.375."
+      },
+      "mathematical_support": {
+        "hint_1": "Review the whole-number part as well as the exact fractional value.",
+        "hint_2": "Choose a whole-number scale factor, apply it to both fraction parts and read the resulting decimal places.",
+        "worked_solution": "8 × 125 = 1000. → 11 × 125 = 1375; use the same factor on both fraction parts. → 11/8 = 1375/1000; the value is unchanged. → 1375/1000 = 1.375."
+      },
+      "working": [
+        "8 × 125 = 1000.",
+        "11 × 125 = 1375; use the same factor on both fraction parts.",
+        "11/8 = 1375/1000; the value is unchanged.",
+        "1375/1000 = 1.375."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_decimal_conversion",
+          "title": "Convert 11/8 without changing its value",
+          "n": 11,
+          "d": 8,
+          "target": 1000,
+          "given": "11/8",
+          "steps": [
+            "8 × 125 = 1000.",
+            "11 × 125 = 1375; use the same factor on both fraction parts.",
+            "11/8 = 1375/1000; the value is unchanged.",
+            "1375/1000 = 1.375."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_fraction": "Your decimal is correct, but your recorded fraction does not preserve the original value. Check both scale factors.",
+        "check_decimal": "Your recorded fraction is valid. Read its denominator and check the decimal places.",
+        "check_both": "Check that the recorded fraction preserves the original value, then match its decimal.",
+        "check_target": "Your recorded fraction has the right value. Use a denominator of ten, one hundred or one thousand reachable by a whole-number multiplier.",
+        "check_target_and_decimal": "Use an allowed power-of-ten denominator and then check its exact decimal value.",
+        "check_value": "Find an equivalent fraction over ten, one hundred or one thousand and read its exact decimal.",
+        "dropped_whole": "That records only the extra fraction and drops the complete whole."
+      },
+      "response_patterns": [
+        {
+          "value": ".375",
+          "classification": "dropped_whole"
+        }
+      ],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-08-E04",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "exit",
+      "prompt": "Final method check: which statement describes the correct equivalent-fraction method?",
+      "target": "Preserve the fraction value using an equivalent denominator of 10, 100 or 1000 and give its exact decimal",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Multiply numerator and denominator by the same number to make an equivalent fraction with denominator 10, 100 or 1000.",
+          "Change only the denominator to 10, 100 or 1000.",
+          "Multiply the numerator and denominator by different numbers.",
+          "Put the numerator digits after a decimal point without changing the fraction."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "Multiply numerator and denominator by the same number to make an equivalent fraction with denominator 10, 100 or 1000."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The method uses matching scale factors and preserves the exact value.",
+        "correct_after_support": "Correct. The method uses matching scale factors and preserves the exact value.",
+        "on_correct_math": "Choose a reachable denominator of 10, 100 or 1000. → Apply the same scale factor to numerator and denominator. → Read the exact decimal without dropping zeros or complete wholes.",
+        "on_incorrect_attempt_1": "Review how equivalent fraction parts must change together.",
+        "on_incorrect_attempt_2": "Review how equivalent fraction parts must change together.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose a reachable denominator of 10, 100 or 1000. → Apply the same scale factor to numerator and denominator. → Read the exact decimal without dropping zeros or complete wholes."
+      },
+      "mathematical_support": {
+        "hint_1": "Review how equivalent fraction parts must change together.",
+        "hint_2": "Choose a whole-number scale factor, apply it to both fraction parts and read the resulting decimal places.",
+        "worked_solution": "Choose a reachable denominator of 10, 100 or 1000. → Apply the same scale factor to numerator and denominator. → Read the exact decimal without dropping zeros or complete wholes."
+      },
+      "working": [
+        "Choose a reachable denominator of 10, 100 or 1000.",
+        "Apply the same scale factor to numerator and denominator.",
+        "Read the exact decimal without dropping zeros or complete wholes."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "equivalent_decimal_conversion",
+          "title": "Choose the value-preserving method",
+          "n": 1,
+          "d": 2,
+          "target": 10,
+          "given": "Choose the correct statement.",
+          "steps": [
+            "Choose a reachable denominator of 10, 100 or 1000.",
+            "Apply the same scale factor to numerator and denominator.",
+            "Read the exact decimal without dropping zeros or complete wholes."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "Change only the denominator to 10, 100 or 1000.": "Changing only the denominator changes the fraction value.",
+        "Multiply the numerator and denominator by different numbers.": "Different scale factors do not produce the required equivalent fraction.",
+        "Put the numerator digits after a decimal point without changing the fraction.": "The decimal places depend on the equivalent denominator, not simply the original numerator digits."
+      },
+      "response_patterns": [],
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    }
+  ],
+  "canonical_lesson": {
+    "version": "FDP08-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

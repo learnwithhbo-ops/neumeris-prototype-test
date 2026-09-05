@@ -1,0 +1,2069 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "MD-08 - Multiply involving mixed numbers",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-18",
+      "sha256": "8209668f0fe2029ee343e397d980ca7babfe3545d5f1ffe8cdcac890f43f4afa"
+    },
+    "authored_scope": "Positive mixed-number multiplication using complete converted factors, exact simplification and the explicitly requested final form.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "MD08-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "preview_checked_2026-09-03",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        4,
+        5,
+        6,
+        7,
+        13,
+        15,
+        16,
+        17,
+        18
+      ],
+      "source_repairs_consulted": [
+        10,
+        11,
+        12
+      ],
+      "note": "All 18 source pages and p4–6 diagrams reviewed. Practice P04 is held out because its factor pair is the commuted version of mastery E01. The source range of fractional, whole and mixed-number answers is restored. Final checks capture both explicitly required conversions; other questions accept valid methods through their exact final answers. No Diagnostic or delayed Retrieval layers added.",
+      "held_out_source_items": [
+        {
+          "page": 7,
+          "item": "P04",
+          "reason": "The same two factors appear in reverse order in mastery E01."
+        }
+      ]
+    }
+  },
+  "identity": {
+    "id": "MD-08",
+    "slug": "multiply-involving-mixed-numbers",
+    "title": "Multiply involving mixed numbers",
+    "strand": "Number",
+    "cluster": "Multiplying and Dividing Fractions",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Multiply positive values involving mixed numbers by converting every mixed-number factor to an improper fraction.",
+    "success_criteria": [
+      "Regroup whole-number parts using whole times denominator plus numerator.",
+      "Keep the denominator unchanged.",
+      "Convert every mixed-number factor.",
+      "Multiply and simplify exactly.",
+      "Use the requested whole-number or simplest mixed-number form.",
+      "Apply the calculation to the named context and unit."
+    ],
+    "boundaries": {
+      "includes": [
+        "Positive mixed numbers with a fraction, whole number or mixed number",
+        "One or two conversions",
+        "Cancellation before multiplication or simplification afterwards",
+        "Valid alternative methods when displayed conversions are not explicitly required"
+      ],
+      "excludes": [
+        "Fraction division",
+        "Negative mixed numbers",
+        "Decimal approximations",
+        "Algebraic fractions",
+        "Multi-step contextual operation selection",
+        "Diagnostic and delayed Retrieval layers"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "AF-11",
+      "MD-04",
+      "MD-05",
+      "MD-06",
+      "MD-07"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for AF-11, MD-04, MD-05, MD-06, MD-07 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "single_choice",
+      "integer",
+      "fraction",
+      "conversion_product"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    }
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "A mixed number is one complete value.",
+    "invariant": "Regrouping the wholes into fractional parts changes the notation, not the quantity.",
+    "mathematical_rule": "Convert every mixed-number factor, multiply the fractions, simplify and use the requested form.",
+    "must_notice": [
+      "The wholes contribute denominator-sized groups of fractional parts.",
+      "Conversion does not change the denominator.",
+      "Every mixed-number factor needs conversion in the standard method."
+    ],
+    "common_confusions": [
+      "Omitting whole-number contributions",
+      "Multiplying parts separately",
+      "Converting only one factor",
+      "Incorrect fraction multiplication",
+      "A correct value in the wrong requested form"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "Each mixed number is one value",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Each mixed number is one value",
+          "initial_state": "Each mixed number is one value",
+          "model": {
+            "kind": "mixed_product",
+            "object": "symbolic",
+            "left": {
+              "whole": 1,
+              "n": 1,
+              "d": 2
+            },
+            "right": {
+              "whole": 1,
+              "n": 1,
+              "d": 3
+            },
+            "target": "Use the complete mixed-number values",
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Each factor includes its wholes and its fractional part. Keep those parts together as one complete quantity."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Regroup the first whole",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Regroup the first whole",
+          "initial_state": "Regroup the first whole",
+          "model": {
+            "kind": "mixed_product",
+            "object": "symbolic",
+            "left": {
+              "whole": 1,
+              "n": 1,
+              "d": 2
+            },
+            "right": {
+              "whole": 1,
+              "n": 1,
+              "d": 3
+            },
+            "target": "Use the complete mixed-number values",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "left"
+          }
+        },
+        "narration": {
+          "script": "Split the first whole into halves, then include the extra half. The quantity stays fixed while its parts are counted in one way."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Regroup the second whole",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Regroup the second whole",
+          "initial_state": "Regroup the second whole",
+          "model": {
+            "kind": "mixed_product",
+            "object": "symbolic",
+            "left": {
+              "whole": 1,
+              "n": 1,
+              "d": 2
+            },
+            "right": {
+              "whole": 1,
+              "n": 1,
+              "d": 3
+            },
+            "target": "Use the complete mixed-number values",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "right"
+          }
+        },
+        "narration": {
+          "script": "Do the same for the second factor using thirds. Its denominator stays the same because the parts are still thirds."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Multiply the converted values",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Multiply the converted values",
+          "initial_state": "Multiply the converted values",
+          "model": {
+            "kind": "mixed_product",
+            "object": "symbolic",
+            "left": {
+              "whole": 1,
+              "n": 1,
+              "d": 2
+            },
+            "right": {
+              "whole": 1,
+              "n": 1,
+              "d": 3
+            },
+            "target": "Use the complete mixed-number values",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "product"
+          }
+        },
+        "narration": {
+          "script": "Now both complete values are fractions. Multiply the numerator counts and the denominator counts."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Simplify the exact product",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Simplify the exact product",
+          "initial_state": "Simplify the exact product",
+          "model": {
+            "kind": "mixed_product",
+            "object": "symbolic",
+            "left": {
+              "whole": 1,
+              "n": 1,
+              "d": 2
+            },
+            "right": {
+              "whole": 1,
+              "n": 1,
+              "d": 3
+            },
+            "target": "Use the complete mixed-number values",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "result"
+          }
+        },
+        "narration": {
+          "script": "The selected parts fill two whole units. Simplifying the notation does not change that amount."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T06"
+      },
+      {
+        "id": "T06",
+        "stage": "teaching",
+        "purpose": "Explain what the conversion includes",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Explain what the conversion includes",
+          "initial_state": "Explain what the conversion includes",
+          "model": null
+        },
+        "narration": {
+          "script": "Why must the conversion include the whole-number contribution?"
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "MD-08-C01"
+        },
+        "next_step": "T07"
+      },
+      {
+        "id": "T07",
+        "stage": "teaching",
+        "purpose": "Convert the first new factor",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Convert the first new factor",
+          "initial_state": "Convert the first new factor",
+          "model": {
+            "kind": "mixed_product",
+            "object": "symbolic",
+            "left": {
+              "whole": 2,
+              "n": 1,
+              "d": 4
+            },
+            "right": {
+              "whole": 1,
+              "n": 2,
+              "d": 3
+            },
+            "target": "Use the complete mixed-number values",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "left"
+          }
+        },
+        "narration": {
+          "script": "For this new calculation, regroup both wholes into quarters before including the extra quarter."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T08"
+      },
+      {
+        "id": "T08",
+        "stage": "teaching",
+        "purpose": "Convert the other mixed number",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Convert the other mixed number",
+          "initial_state": "Convert the other mixed number",
+          "model": {
+            "kind": "mixed_product",
+            "object": "symbolic",
+            "left": {
+              "whole": 2,
+              "n": 1,
+              "d": 4
+            },
+            "right": {
+              "whole": 1,
+              "n": 2,
+              "d": 3
+            },
+            "target": "Use the complete mixed-number values",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "right"
+          }
+        },
+        "narration": {
+          "script": "The second factor needs its own conversion. Include its whole and its two extra thirds."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T09"
+      },
+      {
+        "id": "T09",
+        "stage": "teaching",
+        "purpose": "Use a helpful common factor",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Use a helpful common factor",
+          "initial_state": "Use a helpful common factor",
+          "model": {
+            "kind": "cancel_product",
+            "object": "symbolic",
+            "a": 9,
+            "b": 4,
+            "c": 5,
+            "d": 3,
+            "cancel_steps": [
+              {
+                "first": "a",
+                "second": "d",
+                "divisor": 3
+              }
+            ],
+            "cancel_step": 1,
+            "show_replacements": true,
+            "show_product": true,
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "A common factor makes the multiplication smaller. The rewritten multiplication has the same product as the original complete values."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T10"
+      },
+      {
+        "id": "T10",
+        "stage": "teaching",
+        "purpose": "Use the requested mixed-number form",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Use the requested mixed-number form",
+          "initial_state": "Use the requested mixed-number form",
+          "model": {
+            "kind": "mixed_product",
+            "object": "symbolic",
+            "left": {
+              "whole": 2,
+              "n": 1,
+              "d": 4
+            },
+            "right": {
+              "whole": 1,
+              "n": 2,
+              "d": 3
+            },
+            "target": "Use the complete mixed-number values",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "mixed_result"
+          }
+        },
+        "narration": {
+          "script": "The question asks for a mixed number. Regroup the quarters into wholes and keep the remaining quarters as the fractional part."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T11"
+      },
+      {
+        "id": "T11",
+        "stage": "teaching",
+        "purpose": "Recognise the complete method",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Recognise the complete method",
+          "initial_state": "Recognise the complete method",
+          "model": null
+        },
+        "narration": {
+          "script": "Compare the conversions and the final form. This response is unscored, but each choice has its own explanation."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "MD-08-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "MD-08-G01",
+        "support_level": "high",
+        "pre_question_script": "First convert the complete first factor. The given denominator stays fixed.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "MD-08-G02",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "guided",
+        "question_ref": "MD-08-G03",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "guided",
+        "question_ref": "MD-08-G04",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "F01"
+      },
+      "F01": {
+        "stage": "faded",
+        "question_ref": "MD-08-P01",
+        "support_level": "reduced",
+        "pre_question_script": "Work through the complete calculation. Ask for support only if you need it.",
+        "correct_next": "I01"
+      },
+      "I01": {
+        "stage": "independent_transfer",
+        "question_ref": "MD-08-P02",
+        "support_level": "none",
+        "pre_question_script": "Choose your own exact method and check the final form.",
+        "correct_next": "P03"
+      }
+    },
+    "practice": {
+      "intro_script": "Use the complete mixed-number values. Simplify the exact answers and keep the requested units in context.",
+      "question_order": [
+        "MD-08-P03",
+        "MD-08-P05",
+        "MD-08-P06",
+        "MD-08-X01",
+        "MD-08-X02",
+        "MD-08-X03",
+        "MD-08-X04"
+      ]
+    },
+    "exit": {
+      "intro_script": "Complete two calculations and a method check independently. Record both improper-fraction conversions, then enter each product in the requested form. No hints are available in this final set.",
+      "primary_question_refs": [
+        "MD-08-E01",
+        "MD-08-E02",
+        "MD-08-E03"
+      ],
+      "confirmation_question_refs": [],
+      "mastery_policy": {
+        "profile": "all_primary_unsupported",
+        "require_all": true,
+        "require_valid_conversions": true,
+        "source_page": 13,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "You independently converted complete mixed-number values, multiplied them accurately and used the required answer forms.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Keep building mixed-number products",
+      "ryan_script": "One or more final checks need practice. Keep every whole in the conversions and check both the exact product and its requested form.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "MD-08-C01",
+      "source_ref": {
+        "page": 4
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "Why is 2 1/4 treated as 9/4 before using the standard fraction multiplication method?",
+      "target": "Mixed-number conversion method",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "The whole-number part and fractional part together make nine quarters.",
+          "The whole-number part may be ignored during multiplication.",
+          "The denominator must be added to the numerator.",
+          "Every mixed number is equal to a proper fraction."
+        ]
+      },
+      "answer": {
+        "value": "The whole-number part and fractional part together make nine quarters."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The conversion includes every quarter in the complete mixed-number value.",
+        "correct_after_support": "The conversion includes every quarter in the complete mixed-number value.",
+        "on_correct_math": "Two wholes contain 2 × 4 = 8 quarters. → One extra quarter makes 9 quarters altogether. → The denominator remains 4 because the parts are still quarters.",
+        "on_incorrect_attempt_1": "A mixed number represents one complete amount.",
+        "on_incorrect_attempt_2": "Compare the quarters in the wholes with the extra fractional part.",
+        "worked_explanation": "Two wholes contain 2 × 4 = 8 quarters. → One extra quarter makes 9 quarters altogether. → The denominator remains 4 because the parts are still quarters."
+      },
+      "mathematical_support": {
+        "hint_1": "A mixed number represents one complete amount.",
+        "hint_2": "Count the quarters in the whole-number part as well as the extra quarter.",
+        "worked_solution": "Two wholes contain 2 × 4 = 8 quarters. → One extra quarter makes 9 quarters altogether. → The denominator remains 4 because the parts are still quarters."
+      },
+      "working": [
+        "Two wholes contain 2 × 4 = 8 quarters.",
+        "One extra quarter makes 9 quarters altogether.",
+        "The denominator remains 4 because the parts are still quarters."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_product_rule",
+          "object": "relationship",
+          "target": "Mixed-number conversion method",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "The whole-number part may be ignored during multiplication.": "Ignoring the wholes changes the quantity being multiplied.",
+        "The denominator must be added to the numerator.": "The denominator names the part size; the whole-number contribution must be regrouped into those parts.",
+        "Every mixed number is equal to a proper fraction.": "A positive mixed number is greater than one, so its corresponding fraction is improper."
+      }
+    },
+    {
+      "id": "MD-08-C02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "Which method correctly calculates 2 1/4 × 1 2/3 as a simplest mixed number?",
+      "target": "Use the complete mixed-number values",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "2 1/4 × 1 2/3 = 9/4 × 5/3 = 15/4 = 3 3/4",
+          "2 1/4 × 1 2/3 = 2 × 1 + (1 × 2)/(4 × 3) = 2 1/6",
+          "2 1/4 × 1 2/3 = (2 + 1)/4 × (1 + 2)/3 = 3/4",
+          "2 1/4 × 1 2/3 = 9/4 × 1 2/3 = 18/12"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "2 1/4 × 1 2/3 = 9/4 × 5/3 = 15/4 = 3 3/4"
+      },
+      "policy": {
+        "scored": false,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true,
+        "engagementOnly": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That method converts both complete values and gives the product in the requested form.",
+        "correct_after_support": "That method converts both complete values and gives the product in the requested form.",
+        "on_correct_math": "2 × 4 + 1 = 9. With denominator 4, 2 1/4 becomes 9/4. → 1 × 3 + 2 = 5. With denominator 3, 1 2/3 becomes 5/3. → 9/4 × 5/3 = 45/12. → Simplify and use the requested form: 3 3/4.",
+        "on_incorrect_attempt_1": "Both complete mixed numbers must be represented correctly.",
+        "on_incorrect_attempt_2": "Follow the two complete conversions before comparing the final product.",
+        "worked_explanation": "2 × 4 + 1 = 9. With denominator 4, 2 1/4 becomes 9/4. → 1 × 3 + 2 = 5. With denominator 3, 1 2/3 becomes 5/3. → 9/4 × 5/3 = 45/12. → Simplify and use the requested form: 3 3/4."
+      },
+      "mathematical_support": {
+        "hint_1": "Both complete mixed numbers must be represented correctly.",
+        "hint_2": "Check the two conversions, the multiplication and the requested final form.",
+        "worked_solution": "2 × 4 + 1 = 9. With denominator 4, 2 1/4 becomes 9/4. → 1 × 3 + 2 = 5. With denominator 3, 1 2/3 becomes 5/3. → 9/4 × 5/3 = 45/12. → Simplify and use the requested form: 3 3/4."
+      },
+      "working": [
+        "2 × 4 + 1 = 9. With denominator 4, 2 1/4 becomes 9/4.",
+        "1 × 3 + 2 = 5. With denominator 3, 1 2/3 becomes 5/3.",
+        "9/4 × 5/3 = 45/12.",
+        "Simplify and use the requested form: 3 3/4."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_product",
+          "object": "symbolic",
+          "left": {
+            "whole": 2,
+            "n": 1,
+            "d": 4
+          },
+          "right": {
+            "whole": 1,
+            "n": 2,
+            "d": 3
+          },
+          "target": "Use the complete mixed-number values",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "2 1/4 × 1 2/3 = 2 × 1 + (1 × 2)/(4 × 3) = 2 1/6": "That multiplies the whole parts and fractional parts separately, omitting contributions from the complete quantities.",
+        "2 1/4 × 1 2/3 = (2 + 1)/4 × (1 + 2)/3 = 3/4": "Those conversions add the whole numbers without first regrouping them into quarters and thirds.",
+        "2 1/4 × 1 2/3 = 9/4 × 1 2/3 = 18/12": "Only the first mixed number was converted before the fraction multiplication was attempted."
+      }
+    },
+    {
+      "id": "MD-08-G01",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "We are working out 1 2/5 × 2 1/7. Convert the first factor, 1 2/5, to an improper fraction. Enter its numerator above the given denominator.",
+      "target": "Use the complete mixed-number values",
+      "response": {
+        "type": "integer",
+        "presentation": "fraction_builder",
+        "editableField": "numerator",
+        "fixedDenominator": 5,
+        "input_label": "First conversion numerator"
+      },
+      "answer": {
+        "value": 7
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That numerator includes the whole and the extra fractional parts.",
+        "correct_after_support": "That numerator includes the whole and the extra fractional parts.",
+        "on_correct_math": "One whole contains 1 × 5 = 5 fifths. → The extra 2 fifths give 5 + 2 = 7 fifths. → The first factor is 7/5.",
+        "on_incorrect_attempt_1": "Include the fifths in the whole as well as the extra fifths.",
+        "on_incorrect_attempt_2": "Compare how the whole was regrouped into fifths, then correct the numerator.",
+        "worked_explanation": "One whole contains 1 × 5 = 5 fifths. → The extra 2 fifths give 5 + 2 = 7 fifths. → The first factor is 7/5."
+      },
+      "mathematical_support": {
+        "hint_1": "Include the fifths in the whole as well as the extra fifths.",
+        "hint_2": "Multiply the whole-number part by the denominator before adding the numerator.",
+        "worked_solution": "One whole contains 1 × 5 = 5 fifths. → The extra 2 fifths give 5 + 2 = 7 fifths. → The first factor is 7/5."
+      },
+      "working": [
+        "One whole contains 1 × 5 = 5 fifths.",
+        "The extra 2 fifths give 5 + 2 = 7 fifths.",
+        "The first factor is 7/5."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_product",
+          "object": "symbolic",
+          "left": {
+            "whole": 1,
+            "n": 2,
+            "d": 5
+          },
+          "right": {
+            "whole": 2,
+            "n": 1,
+            "d": 7
+          },
+          "target": "Use the complete mixed-number values",
+          "math_text": true,
+          "compact_captions": true,
+          "resultScope": "left",
+          "focus": "left"
+        }
+      },
+      "response_feedback": {
+        "2": "That counts only the extra fifths and omits the whole.",
+        "3": "Adding the whole number directly to the numerator misses the fifths inside the whole.",
+        "5": "That counts the whole but omits the two extra fifths."
+      }
+    },
+    {
+      "id": "MD-08-G02",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "Now convert 2 1/7 to an improper fraction. What numerator belongs above the given denominator?",
+      "target": "Use the complete mixed-number values",
+      "response": {
+        "type": "integer",
+        "presentation": "fraction_builder",
+        "editableField": "numerator",
+        "fixedDenominator": 7,
+        "input_label": "Second conversion numerator"
+      },
+      "answer": {
+        "value": 15
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The second conversion includes both wholes and the additional seventh.",
+        "correct_after_support": "The second conversion includes both wholes and the additional seventh.",
+        "on_correct_math": "Two wholes contain 2 × 7 = 14 sevenths. → The extra seventh gives 14 + 1 = 15 sevenths. → The second factor is 15/7.",
+        "on_incorrect_attempt_1": "Both wholes contribute sevenths to the converted numerator.",
+        "on_incorrect_attempt_2": "Compare the sevenths in the whole-number part with the extra numerator part.",
+        "worked_explanation": "Two wholes contain 2 × 7 = 14 sevenths. → The extra seventh gives 14 + 1 = 15 sevenths. → The second factor is 15/7."
+      },
+      "mathematical_support": {
+        "hint_1": "Both wholes contribute sevenths to the converted numerator.",
+        "hint_2": "Regroup the two wholes before including the extra seventh.",
+        "worked_solution": "Two wholes contain 2 × 7 = 14 sevenths. → The extra seventh gives 14 + 1 = 15 sevenths. → The second factor is 15/7."
+      },
+      "working": [
+        "Two wholes contain 2 × 7 = 14 sevenths.",
+        "The extra seventh gives 14 + 1 = 15 sevenths.",
+        "The second factor is 15/7."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_product",
+          "object": "symbolic",
+          "left": {
+            "whole": 1,
+            "n": 2,
+            "d": 5
+          },
+          "right": {
+            "whole": 2,
+            "n": 1,
+            "d": 7
+          },
+          "target": "Use the complete mixed-number values",
+          "math_text": true,
+          "compact_captions": true,
+          "phase": "left",
+          "resultScope": "right",
+          "previous": "The first factor is now 7/5.",
+          "focus": "right"
+        }
+      },
+      "response_feedback": {
+        "1": "That omits all the sevenths contained in the two wholes.",
+        "3": "The whole-number part must first be expressed in sevenths, not added directly.",
+        "14": "That counts the two wholes but leaves out the extra seventh."
+      }
+    },
+    {
+      "id": "MD-08-G03",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "Both factors are converted. Work out 7/5 × 15/7 in simplest form.",
+      "target": "Use the complete mixed-number values",
+      "response": {
+        "type": "integer",
+        "input_label": "Product"
+      },
+      "answer": {
+        "value": 3
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The product uses both complete values and simplifies to a whole number.",
+        "correct_after_support": "The product uses both complete values and simplifies to a whole number.",
+        "on_correct_math": "The converted factors are 7/5 and 15/7. → One valid route cancels the numerator 7 with the denominator 7. → The remaining product is 15/5 = 3.",
+        "on_incorrect_attempt_1": "Use the complete converted values in the multiplication.",
+        "on_incorrect_attempt_2": "Keep the converted factors and compare the remaining multiplication.",
+        "worked_explanation": "The converted factors are 7/5 and 15/7. → One valid route cancels the numerator 7 with the denominator 7. → The remaining product is 15/5 = 3."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the complete converted values in the multiplication.",
+        "hint_2": "Cancellation can make the multiplication smaller without changing its value.",
+        "worked_solution": "The converted factors are 7/5 and 15/7. → One valid route cancels the numerator 7 with the denominator 7. → The remaining product is 15/5 = 3."
+      },
+      "working": [
+        "The converted factors are 7/5 and 15/7.",
+        "One valid route cancels the numerator 7 with the denominator 7.",
+        "The remaining product is 15/5 = 3."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_product",
+          "object": "symbolic",
+          "left": {
+            "whole": 1,
+            "n": 2,
+            "d": 5
+          },
+          "right": {
+            "whole": 2,
+            "n": 1,
+            "d": 7
+          },
+          "target": "Use the complete mixed-number values",
+          "math_text": true,
+          "compact_captions": true,
+          "phase": "converted",
+          "resultScope": "result"
+        }
+      }
+    },
+    {
+      "id": "MD-08-G04",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "Which product is ready to calculate after converting both factors in 1 2/5 × 2 1/7 into improper fractions?",
+      "target": "Mixed-number conversion method",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "7/5 × 15/7",
+          "3/5 × 3/7",
+          "7/5 × 2 1/7",
+          "1/5 × 2/7"
+        ]
+      },
+      "answer": {
+        "value": "7/5 × 15/7"
+      },
+      "policy": {
+        "scored": false,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true,
+        "engagementOnly": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Both complete mixed-number values are correctly represented as improper fractions.",
+        "correct_after_support": "Both complete mixed-number values are correctly represented as improper fractions.",
+        "on_correct_math": "1 2/5 = 7/5. → 2 1/7 = 15/7. → Both factors are now ready for the standard fraction multiplication method.",
+        "on_incorrect_attempt_1": "Check that both whole-number contributions are included.",
+        "on_incorrect_attempt_2": "Compare each proposed factor with its complete mixed-number value.",
+        "worked_explanation": "1 2/5 = 7/5. → 2 1/7 = 15/7. → Both factors are now ready for the standard fraction multiplication method."
+      },
+      "mathematical_support": {
+        "hint_1": "Check that both whole-number contributions are included.",
+        "hint_2": "Both mixed numbers must have been converted, not just one.",
+        "worked_solution": "1 2/5 = 7/5. → 2 1/7 = 15/7. → Both factors are now ready for the standard fraction multiplication method."
+      },
+      "working": [
+        "1 2/5 = 7/5.",
+        "2 1/7 = 15/7.",
+        "Both factors are now ready for the standard fraction multiplication method."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_product_rule",
+          "object": "relationship",
+          "target": "Mixed-number conversion method",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "3/5 × 3/7": "Those numerators come from adding the whole-number parts without regrouping them.",
+        "7/5 × 2 1/7": "The first conversion is correct, but the second mixed number has not yet been converted.",
+        "1/5 × 2/7": "Those fractions omit the full quantities in the original mixed numbers."
+      }
+    },
+    {
+      "id": "MD-08-P01",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "faded",
+      "prompt": "Work out 1 1/2 × 2/5 in simplest form. Give answers greater than 1 as mixed numbers, unless the answer is a whole number.",
+      "target": "Use the complete mixed-number values",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": false,
+        "require_simplest_form": true,
+        "show_authored_label": true,
+        "input_label": "Answer in simplest form",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "3/5"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The exact product includes the whole-number contribution and is fully simplified.",
+        "correct_after_support": "The exact product includes the whole-number contribution and is fully simplified.",
+        "on_correct_math": "1 × 2 + 1 = 3. With denominator 2, 1 1/2 becomes 3/2. → The other factor is already 2/5. → 3/2 × 2/5 = 6/10. → Simplify and use the requested form: 3/5.",
+        "on_incorrect_attempt_1": "Use the complete mixed-number value, including every whole.",
+        "on_incorrect_attempt_2": "Compare the complete first factor with the given fraction, then simplify the product.",
+        "worked_explanation": "1 × 2 + 1 = 3. With denominator 2, 1 1/2 becomes 3/2. → The other factor is already 2/5. → 3/2 × 2/5 = 6/10. → Simplify and use the requested form: 3/5.",
+        "on_equivalent_unfinished": "Your fraction has the right value, but it still has a common factor. Finish simplifying without changing the product."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the complete mixed-number value, including every whole.",
+        "hint_2": "Convert each mixed number before using the fraction multiplication method, then simplify the result.",
+        "worked_solution": "1 × 2 + 1 = 3. With denominator 2, 1 1/2 becomes 3/2. → The other factor is already 2/5. → 3/2 × 2/5 = 6/10. → Simplify and use the requested form: 3/5."
+      },
+      "working": [
+        "1 × 2 + 1 = 3. With denominator 2, 1 1/2 becomes 3/2.",
+        "The other factor is already 2/5.",
+        "3/2 × 2/5 = 6/10.",
+        "Simplify and use the requested form: 3/5."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_product",
+          "object": "symbolic",
+          "left": {
+            "whole": 1,
+            "n": 1,
+            "d": 2
+          },
+          "right": {
+            "whole": 0,
+            "n": 2,
+            "d": 5
+          },
+          "target": "Use the complete mixed-number values",
+          "math_text": true,
+          "compact_captions": true,
+          "stage": "faded",
+          "reaction": "The exact product includes the whole-number contribution and is fully simplified.",
+          "correction": "Compare the complete first factor with the given fraction, then simplify the product."
+        }
+      }
+    },
+    {
+      "id": "MD-08-P02",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "independent_transfer",
+      "prompt": "Work out 2 1/3 × 3/7 in simplest form. Give answers greater than 1 as mixed numbers, unless the answer is a whole number.",
+      "target": "Use the complete mixed-number values",
+      "response": {
+        "type": "integer",
+        "input_label": "Your exact answer",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "1"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The complete factors give a whole-number product.",
+        "correct_after_support": "The complete factors give a whole-number product.",
+        "on_correct_math": "2 × 3 + 1 = 7. With denominator 3, 2 1/3 becomes 7/3. → The other factor is already 3/7. → 7/3 × 3/7 = 21/21. → Simplify and use the requested form: 1.",
+        "on_incorrect_attempt_1": "Use the complete mixed-number value, including every whole.",
+        "on_incorrect_attempt_2": "Keep the converted mixed number intact while checking the multiplication.",
+        "worked_explanation": "2 × 3 + 1 = 7. With denominator 3, 2 1/3 becomes 7/3. → The other factor is already 3/7. → 7/3 × 3/7 = 21/21. → Simplify and use the requested form: 1."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the complete mixed-number value, including every whole.",
+        "hint_2": "Convert each mixed number before using the fraction multiplication method, then simplify the result.",
+        "worked_solution": "2 × 3 + 1 = 7. With denominator 3, 2 1/3 becomes 7/3. → The other factor is already 3/7. → 7/3 × 3/7 = 21/21. → Simplify and use the requested form: 1."
+      },
+      "working": [
+        "2 × 3 + 1 = 7. With denominator 3, 2 1/3 becomes 7/3.",
+        "The other factor is already 3/7.",
+        "7/3 × 3/7 = 21/21.",
+        "Simplify and use the requested form: 1."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_product",
+          "object": "symbolic",
+          "left": {
+            "whole": 2,
+            "n": 1,
+            "d": 3
+          },
+          "right": {
+            "whole": 0,
+            "n": 3,
+            "d": 7
+          },
+          "target": "Use the complete mixed-number values",
+          "math_text": true,
+          "compact_captions": true,
+          "stage": "independent_transfer",
+          "reaction": "The complete factors give a whole-number product.",
+          "correction": "Keep the converted mixed number intact while checking the multiplication."
+        }
+      }
+    },
+    {
+      "id": "MD-08-P03",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Work out 1 3/4 × 1 1/7 in simplest form. Give answers greater than 1 as mixed numbers, unless the answer is a whole number.",
+      "target": "Use the complete mixed-number values",
+      "response": {
+        "type": "integer",
+        "input_label": "Your exact answer",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "2"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Both complete mixed numbers contribute to the exact whole-number answer.",
+        "correct_after_support": "Both complete mixed numbers contribute to the exact whole-number answer.",
+        "on_correct_math": "1 × 4 + 3 = 7. With denominator 4, 1 3/4 becomes 7/4. → 1 × 7 + 1 = 8. With denominator 7, 1 1/7 becomes 8/7. → 7/4 × 8/7 = 56/28. → Simplify and use the requested form: 2.",
+        "on_incorrect_attempt_1": "Use the complete mixed-number value, including every whole.",
+        "on_incorrect_attempt_2": "Check both conversions before simplifying the product.",
+        "worked_explanation": "1 × 4 + 3 = 7. With denominator 4, 1 3/4 becomes 7/4. → 1 × 7 + 1 = 8. With denominator 7, 1 1/7 becomes 8/7. → 7/4 × 8/7 = 56/28. → Simplify and use the requested form: 2."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the complete mixed-number value, including every whole.",
+        "hint_2": "Convert each mixed number before using the fraction multiplication method, then simplify the result.",
+        "worked_solution": "1 × 4 + 3 = 7. With denominator 4, 1 3/4 becomes 7/4. → 1 × 7 + 1 = 8. With denominator 7, 1 1/7 becomes 8/7. → 7/4 × 8/7 = 56/28. → Simplify and use the requested form: 2."
+      },
+      "working": [
+        "1 × 4 + 3 = 7. With denominator 4, 1 3/4 becomes 7/4.",
+        "1 × 7 + 1 = 8. With denominator 7, 1 1/7 becomes 8/7.",
+        "7/4 × 8/7 = 56/28.",
+        "Simplify and use the requested form: 2."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_product",
+          "object": "symbolic",
+          "left": {
+            "whole": 1,
+            "n": 3,
+            "d": 4
+          },
+          "right": {
+            "whole": 1,
+            "n": 1,
+            "d": 7
+          },
+          "target": "Use the complete mixed-number values",
+          "math_text": true,
+          "compact_captions": true,
+          "reaction": "Both complete mixed numbers contribute to the exact whole-number answer.",
+          "correction": "Check both conversions before simplifying the product."
+        }
+      }
+    },
+    {
+      "id": "MD-08-P05",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Work out 3 1/3 × 1 1/2 in simplest form. Give answers greater than 1 as mixed numbers, unless the answer is a whole number.",
+      "target": "Use the complete mixed-number values",
+      "response": {
+        "type": "integer",
+        "input_label": "Your exact answer",
+        "suffix": ""
+      },
+      "answer": {
+        "value": "5"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Your exact result includes all the wholes and fractional parts in both factors.",
+        "correct_after_support": "Your exact result includes all the wholes and fractional parts in both factors.",
+        "on_correct_math": "3 × 3 + 1 = 10. With denominator 3, 3 1/3 becomes 10/3. → 1 × 2 + 1 = 3. With denominator 2, 1 1/2 becomes 3/2. → 10/3 × 3/2 = 30/6. → Simplify and use the requested form: 5.",
+        "on_incorrect_attempt_1": "Use the complete mixed-number value, including every whole.",
+        "on_incorrect_attempt_2": "Regroup every whole into the correct part size before forming the product.",
+        "worked_explanation": "3 × 3 + 1 = 10. With denominator 3, 3 1/3 becomes 10/3. → 1 × 2 + 1 = 3. With denominator 2, 1 1/2 becomes 3/2. → 10/3 × 3/2 = 30/6. → Simplify and use the requested form: 5."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the complete mixed-number value, including every whole.",
+        "hint_2": "Convert each mixed number before using the fraction multiplication method, then simplify the result.",
+        "worked_solution": "3 × 3 + 1 = 10. With denominator 3, 3 1/3 becomes 10/3. → 1 × 2 + 1 = 3. With denominator 2, 1 1/2 becomes 3/2. → 10/3 × 3/2 = 30/6. → Simplify and use the requested form: 5."
+      },
+      "working": [
+        "3 × 3 + 1 = 10. With denominator 3, 3 1/3 becomes 10/3.",
+        "1 × 2 + 1 = 3. With denominator 2, 1 1/2 becomes 3/2.",
+        "10/3 × 3/2 = 30/6.",
+        "Simplify and use the requested form: 5."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_product",
+          "object": "symbolic",
+          "left": {
+            "whole": 3,
+            "n": 1,
+            "d": 3
+          },
+          "right": {
+            "whole": 1,
+            "n": 1,
+            "d": 2
+          },
+          "target": "Use the complete mixed-number values",
+          "math_text": true,
+          "compact_captions": true,
+          "reaction": "Your exact result includes all the wholes and fractional parts in both factors.",
+          "correction": "Regroup every whole into the correct part size before forming the product."
+        }
+      }
+    },
+    {
+      "id": "MD-08-P06",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "A student calculates 1 3/5 × 2 1/4. Which pair of improper fractions should be multiplied?",
+      "target": "Use the complete mixed-number values",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "8/5 × 9/4",
+          "4/5 × 3/4",
+          "3/5 × 1/4",
+          "8/5 × 2 1/4"
+        ]
+      },
+      "answer": {
+        "value": "8/5 × 9/4"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Those two improper fractions preserve both original mixed-number values.",
+        "correct_after_support": "Those two improper fractions preserve both original mixed-number values.",
+        "on_correct_math": "First conversion: 1 × 5 + 3 = 8, giving 8/5. → Second conversion: 2 × 4 + 1 = 9, giving 9/4. → Multiply the complete factors: 8/5 × 9/4.",
+        "on_incorrect_attempt_1": "Each whole-number part contributes several fractional parts.",
+        "on_incorrect_attempt_2": "Compare each conversion with the corresponding complete mixed number.",
+        "worked_explanation": "First conversion: 1 × 5 + 3 = 8, giving 8/5. → Second conversion: 2 × 4 + 1 = 9, giving 9/4. → Multiply the complete factors: 8/5 × 9/4."
+      },
+      "mathematical_support": {
+        "hint_1": "Each whole-number part contributes several fractional parts.",
+        "hint_2": "Check that both mixed-number factors have been converted completely.",
+        "worked_solution": "First conversion: 1 × 5 + 3 = 8, giving 8/5. → Second conversion: 2 × 4 + 1 = 9, giving 9/4. → Multiply the complete factors: 8/5 × 9/4."
+      },
+      "working": [
+        "First conversion: 1 × 5 + 3 = 8, giving 8/5.",
+        "Second conversion: 2 × 4 + 1 = 9, giving 9/4.",
+        "Multiply the complete factors: 8/5 × 9/4."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_product",
+          "object": "symbolic",
+          "left": {
+            "whole": 1,
+            "n": 3,
+            "d": 5
+          },
+          "right": {
+            "whole": 2,
+            "n": 1,
+            "d": 4
+          },
+          "target": "Use the complete mixed-number values",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "left",
+            "right",
+            "converted"
+          ]
+        }
+      },
+      "response_feedback": {
+        "4/5 × 3/4": "Those numerators do not include the wholes regrouped into fifths and quarters.",
+        "3/5 × 1/4": "Those are only the fractional parts; the whole-number contributions are missing.",
+        "8/5 × 2 1/4": "That converts only the first mixed number; the second still needs conversion for this method."
+      }
+    },
+    {
+      "id": "MD-08-X01",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A piece of ribbon is 1 1/2 metres long. Mina uses 2/3 of the ribbon. What length does she use?",
+      "target": "Use the complete mixed-number values",
+      "response": {
+        "type": "integer",
+        "input_label": "Length used in metres",
+        "suffix": "m"
+      },
+      "answer": {
+        "value": "1"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The exact answer describes the used length in metres.",
+        "correct_after_support": "The exact answer describes the used length in metres.",
+        "on_correct_math": "1 × 2 + 1 = 3. With denominator 2, 1 1/2 becomes 3/2. → The other factor is already 2/3. → 3/2 × 2/3 = 6/6. → Simplify and use the requested form: 1 m.",
+        "on_incorrect_attempt_1": "The length includes a whole metre as well as the extra half metre.",
+        "on_incorrect_attempt_2": "Keep the whole metre in the original length when finding the requested part.",
+        "worked_explanation": "1 × 2 + 1 = 3. With denominator 2, 1 1/2 becomes 3/2. → The other factor is already 2/3. → 3/2 × 2/3 = 6/6. → Simplify and use the requested form: 1 m."
+      },
+      "mathematical_support": {
+        "hint_1": "The length includes a whole metre as well as the extra half metre.",
+        "hint_2": "Convert each mixed number before using the fraction multiplication method, then simplify the result.",
+        "worked_solution": "1 × 2 + 1 = 3. With denominator 2, 1 1/2 becomes 3/2. → The other factor is already 2/3. → 3/2 × 2/3 = 6/6. → Simplify and use the requested form: 1 m."
+      },
+      "working": [
+        "1 × 2 + 1 = 3. With denominator 2, 1 1/2 becomes 3/2.",
+        "The other factor is already 2/3.",
+        "3/2 × 2/3 = 6/6.",
+        "Simplify and use the requested form: 1 m."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_product",
+          "object": "ribbon",
+          "left": {
+            "whole": 1,
+            "n": 1,
+            "d": 2
+          },
+          "right": {
+            "whole": 0,
+            "n": 2,
+            "d": 3
+          },
+          "target": "Use the complete mixed-number values",
+          "math_text": true,
+          "compact_captions": true,
+          "unit": "m",
+          "label": "Length used",
+          "prompt": "A piece of ribbon is 1 1/2 metres long. Mina uses 2/3 of the ribbon. What length does she use?",
+          "clue": "The length includes a whole metre as well as the extra half metre.",
+          "reaction": "The exact answer describes the used length in metres.",
+          "correction": "Keep the whole metre in the original length when finding the requested part."
+        }
+      }
+    },
+    {
+      "id": "MD-08-X02",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A rectangular panel is 2 1/4 metres long and 1 1/3 metres wide. What is its area?",
+      "target": "Use the complete mixed-number values",
+      "response": {
+        "type": "integer",
+        "input_label": "Panel area in square metres",
+        "suffix": "m²"
+      },
+      "answer": {
+        "value": "3"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The exact area is expressed in square metres.",
+        "correct_after_support": "The exact area is expressed in square metres.",
+        "on_correct_math": "2 × 4 + 1 = 9. With denominator 4, 2 1/4 becomes 9/4. → 1 × 3 + 1 = 4. With denominator 3, 1 1/3 becomes 4/3. → 9/4 × 4/3 = 36/12. → Simplify and use the requested form: 3 m².",
+        "on_incorrect_attempt_1": "The givens are lengths, but the requested quantity is an area.",
+        "on_incorrect_attempt_2": "Use both complete side lengths and check the resulting area unit.",
+        "worked_explanation": "2 × 4 + 1 = 9. With denominator 4, 2 1/4 becomes 9/4. → 1 × 3 + 1 = 4. With denominator 3, 1 1/3 becomes 4/3. → 9/4 × 4/3 = 36/12. → Simplify and use the requested form: 3 m²."
+      },
+      "mathematical_support": {
+        "hint_1": "The givens are lengths, but the requested quantity is an area.",
+        "hint_2": "Convert each mixed number before using the fraction multiplication method, then simplify the result.",
+        "worked_solution": "2 × 4 + 1 = 9. With denominator 4, 2 1/4 becomes 9/4. → 1 × 3 + 1 = 4. With denominator 3, 1 1/3 becomes 4/3. → 9/4 × 4/3 = 36/12. → Simplify and use the requested form: 3 m²."
+      },
+      "working": [
+        "2 × 4 + 1 = 9. With denominator 4, 2 1/4 becomes 9/4.",
+        "1 × 3 + 1 = 4. With denominator 3, 1 1/3 becomes 4/3.",
+        "9/4 × 4/3 = 36/12.",
+        "Simplify and use the requested form: 3 m²."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_product",
+          "object": "panel",
+          "left": {
+            "whole": 2,
+            "n": 1,
+            "d": 4
+          },
+          "right": {
+            "whole": 1,
+            "n": 1,
+            "d": 3
+          },
+          "target": "Use the complete mixed-number values",
+          "math_text": true,
+          "compact_captions": true,
+          "unit": "m²",
+          "label": "Panel area",
+          "prompt": "A rectangular panel is 2 1/4 metres long and 1 1/3 metres wide. What is its area?",
+          "clue": "The givens are lengths, but the requested quantity is an area.",
+          "reaction": "The exact area is expressed in square metres.",
+          "correction": "Use both complete side lengths and check the resulting area unit."
+        }
+      }
+    },
+    {
+      "id": "MD-08-X03",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "One batch of dough uses 1 1/5 kilograms of flour. A baker makes 2 1/2 batches. What total mass of flour is used?",
+      "target": "Use the complete mixed-number values",
+      "response": {
+        "type": "integer",
+        "input_label": "Total mass of flour in kilograms",
+        "suffix": "kg"
+      },
+      "answer": {
+        "value": "3"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The exact answer gives the total flour mass in kilograms.",
+        "correct_after_support": "The exact answer gives the total flour mass in kilograms.",
+        "on_correct_math": "1 × 5 + 1 = 6. With denominator 5, 1 1/5 becomes 6/5. → 2 × 2 + 1 = 5. With denominator 2, 2 1/2 becomes 5/2. → 6/5 × 5/2 = 30/10. → Simplify and use the requested form: 3 kg.",
+        "on_incorrect_attempt_1": "Include all the flour for a complete batch and the fractional batch count.",
+        "on_incorrect_attempt_2": "Keep the complete per-batch amount and the complete number of batches in the calculation.",
+        "worked_explanation": "1 × 5 + 1 = 6. With denominator 5, 1 1/5 becomes 6/5. → 2 × 2 + 1 = 5. With denominator 2, 2 1/2 becomes 5/2. → 6/5 × 5/2 = 30/10. → Simplify and use the requested form: 3 kg."
+      },
+      "mathematical_support": {
+        "hint_1": "Include all the flour for a complete batch and the fractional batch count.",
+        "hint_2": "Convert each mixed number before using the fraction multiplication method, then simplify the result.",
+        "worked_solution": "1 × 5 + 1 = 6. With denominator 5, 1 1/5 becomes 6/5. → 2 × 2 + 1 = 5. With denominator 2, 2 1/2 becomes 5/2. → 6/5 × 5/2 = 30/10. → Simplify and use the requested form: 3 kg."
+      },
+      "working": [
+        "1 × 5 + 1 = 6. With denominator 5, 1 1/5 becomes 6/5.",
+        "2 × 2 + 1 = 5. With denominator 2, 2 1/2 becomes 5/2.",
+        "6/5 × 5/2 = 30/10.",
+        "Simplify and use the requested form: 3 kg."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_product",
+          "object": "flour",
+          "left": {
+            "whole": 1,
+            "n": 1,
+            "d": 5
+          },
+          "right": {
+            "whole": 2,
+            "n": 1,
+            "d": 2
+          },
+          "target": "Use the complete mixed-number values",
+          "math_text": true,
+          "compact_captions": true,
+          "unit": "kg",
+          "label": "Total mass of flour",
+          "prompt": "One batch of dough uses 1 1/5 kilograms of flour. A baker makes 2 1/2 batches. What total mass of flour is used?",
+          "clue": "Include all the flour for a complete batch and the fractional batch count.",
+          "reaction": "The exact answer gives the total flour mass in kilograms.",
+          "correction": "Keep the complete per-batch amount and the complete number of batches in the calculation."
+        }
+      }
+    },
+    {
+      "id": "MD-08-X04",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A machine fills 1 3/4 litres in one cycle and completes 2 2/7 cycles. Which calculation finds the total amount filled?",
+      "target": "Use the complete mixed-number values",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "1 3/4 × 2 2/7",
+          "1 3/4 + 2 2/7",
+          "2 2/7 ÷ 1 3/4",
+          "1 3/4 − 2 2/7"
+        ]
+      },
+      "answer": {
+        "value": "1 3/4 × 2 2/7"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That calculation relates the per-cycle amount to the complete number of cycles.",
+        "correct_after_support": "That calculation relates the per-cycle amount to the complete number of cycles.",
+        "on_correct_math": "The amount for one cycle is repeated over the complete cycle count. → Multiply the amount per cycle by the number of cycles. → Both mixed numbers represent complete values in that multiplication.",
+        "on_incorrect_attempt_1": "Relate the amount per cycle to the number of cycles.",
+        "on_incorrect_attempt_2": "Compare the role of the per-cycle amount with the role of the cycle count.",
+        "worked_explanation": "The amount for one cycle is repeated over the complete cycle count. → Multiply the amount per cycle by the number of cycles. → Both mixed numbers represent complete values in that multiplication."
+      },
+      "mathematical_support": {
+        "hint_1": "Relate the amount per cycle to the number of cycles.",
+        "hint_2": "The requested quantity is the total amount from that repeated rate.",
+        "worked_solution": "The amount for one cycle is repeated over the complete cycle count. → Multiply the amount per cycle by the number of cycles. → Both mixed numbers represent complete values in that multiplication."
+      },
+      "working": [
+        "The amount for one cycle is repeated over the complete cycle count.",
+        "Multiply the amount per cycle by the number of cycles.",
+        "Both mixed numbers represent complete values in that multiplication."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_product",
+          "object": "machine",
+          "left": {
+            "whole": 1,
+            "n": 3,
+            "d": 4
+          },
+          "right": {
+            "whole": 2,
+            "n": 2,
+            "d": 7
+          },
+          "target": "Use the complete mixed-number values",
+          "math_text": true,
+          "compact_captions": true,
+          "resultScope": "given"
+        }
+      },
+      "response_feedback": {
+        "1 3/4 + 2 2/7": "That adds a volume to a cycle count rather than finding the total volume.",
+        "2 2/7 ÷ 1 3/4": "That does not combine the amount per cycle with the number of cycles to find the total.",
+        "1 3/4 − 2 2/7": "Subtracting a cycle count from a volume does not describe the total amount filled."
+      }
+    },
+    {
+      "id": "MD-08-E01",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "exit",
+      "prompt": "Work out 1 1/4 × 2 2/5. Show both improper-fraction conversions. Give the product as a mixed number in simplest form unless it is a whole number.",
+      "target": "Use the complete mixed-number values",
+      "response": {
+        "type": "conversion_product",
+        "factors": [
+          {
+            "whole": 1,
+            "n": 1,
+            "d": 4
+          },
+          {
+            "whole": 2,
+            "n": 2,
+            "d": 5
+          }
+        ],
+        "result_type": "integer"
+      },
+      "answer": {
+        "value": {
+          "conversions": [
+            {
+              "n": "5",
+              "d": "4"
+            },
+            {
+              "n": "12",
+              "d": "5"
+            }
+          ],
+          "result": "3"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Both conversions preserve the complete values, and the independent product is correct.",
+        "correct_after_support": "Both conversions preserve the complete values, and the independent product is correct.",
+        "on_correct_math": "1 × 4 + 1 = 5. With denominator 4, 1 1/4 becomes 5/4. → 2 × 5 + 2 = 12. With denominator 5, 2 2/5 becomes 12/5. → 5/4 × 12/5 = 60/20. → Simplify and use the requested form: 3.",
+        "on_incorrect_attempt_1": "Both complete mixed numbers must be converted.",
+        "on_incorrect_attempt_2": "Compare both conversions and the product in the requested form.",
+        "worked_explanation": "1 × 4 + 1 = 5. With denominator 4, 1 1/4 becomes 5/4. → 2 × 5 + 2 = 12. With denominator 5, 2 2/5 becomes 12/5. → 5/4 × 12/5 = 60/20. → Simplify and use the requested form: 3.",
+        "on_locked_incorrect": "Compare the complete conversions and the requested answer form in the working."
+      },
+      "mathematical_support": {
+        "hint_1": "Both complete mixed numbers must be converted.",
+        "hint_2": "Check each conversion and the requested final answer form.",
+        "worked_solution": "1 × 4 + 1 = 5. With denominator 4, 1 1/4 becomes 5/4. → 2 × 5 + 2 = 12. With denominator 5, 2 2/5 becomes 12/5. → 5/4 × 12/5 = 60/20. → Simplify and use the requested form: 3."
+      },
+      "working": [
+        "1 × 4 + 1 = 5. With denominator 4, 1 1/4 becomes 5/4.",
+        "2 × 5 + 2 = 12. With denominator 5, 2 2/5 becomes 12/5.",
+        "5/4 × 12/5 = 60/20.",
+        "Simplify and use the requested form: 3."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_product",
+          "object": "symbolic",
+          "left": {
+            "whole": 1,
+            "n": 1,
+            "d": 4
+          },
+          "right": {
+            "whole": 2,
+            "n": 2,
+            "d": 5
+          },
+          "target": "Use the complete mixed-number values",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "missing_conversion": "Complete both improper-fraction conversions before submitting the final product.",
+        "changed_denominator": "Check the denominator in each conversion. Regrouping the wholes does not change the size of the fractional parts.",
+        "omitted_whole": "One conversion includes only the fractional part. Include the complete whole-number contribution too.",
+        "incorrect_conversion": "Check how many fractional parts are in the wholes, then include the extra numerator parts.",
+        "wrong_form": "Your final value is correct, but its form is not the requested simplest mixed number.",
+        "incorrect_product": "The conversions are valid. Check the multiplication and final answer without changing those converted values."
+      }
+    },
+    {
+      "id": "MD-08-E02",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "exit",
+      "prompt": "Work out 2 1/3 × 1 1/2. Show both improper-fraction conversions. Give the product as a mixed number in simplest form unless it is a whole number.",
+      "target": "Use the complete mixed-number values",
+      "response": {
+        "type": "conversion_product",
+        "factors": [
+          {
+            "whole": 2,
+            "n": 1,
+            "d": 3
+          },
+          {
+            "whole": 1,
+            "n": 1,
+            "d": 2
+          }
+        ],
+        "result_type": "mixed_number"
+      },
+      "answer": {
+        "value": {
+          "conversions": [
+            {
+              "n": "7",
+              "d": "3"
+            },
+            {
+              "n": "3",
+              "d": "2"
+            }
+          ],
+          "result": "3 1/2"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Both independent conversions and the simplest mixed-number product are correct.",
+        "correct_after_support": "Both independent conversions and the simplest mixed-number product are correct.",
+        "on_correct_math": "2 × 3 + 1 = 7. With denominator 3, 2 1/3 becomes 7/3. → 1 × 2 + 1 = 3. With denominator 2, 1 1/2 becomes 3/2. → 7/3 × 3/2 = 21/6. → Simplify and use the requested form: 3 1/2.",
+        "on_incorrect_attempt_1": "Both complete mixed numbers must be converted.",
+        "on_incorrect_attempt_2": "Compare both conversions and the product in the requested form.",
+        "worked_explanation": "2 × 3 + 1 = 7. With denominator 3, 2 1/3 becomes 7/3. → 1 × 2 + 1 = 3. With denominator 2, 1 1/2 becomes 3/2. → 7/3 × 3/2 = 21/6. → Simplify and use the requested form: 3 1/2.",
+        "on_locked_incorrect": "Compare the complete conversions and the requested answer form in the working."
+      },
+      "mathematical_support": {
+        "hint_1": "Both complete mixed numbers must be converted.",
+        "hint_2": "Check each conversion and the requested final answer form.",
+        "worked_solution": "2 × 3 + 1 = 7. With denominator 3, 2 1/3 becomes 7/3. → 1 × 2 + 1 = 3. With denominator 2, 1 1/2 becomes 3/2. → 7/3 × 3/2 = 21/6. → Simplify and use the requested form: 3 1/2."
+      },
+      "working": [
+        "2 × 3 + 1 = 7. With denominator 3, 2 1/3 becomes 7/3.",
+        "1 × 2 + 1 = 3. With denominator 2, 1 1/2 becomes 3/2.",
+        "7/3 × 3/2 = 21/6.",
+        "Simplify and use the requested form: 3 1/2."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_product",
+          "object": "symbolic",
+          "left": {
+            "whole": 2,
+            "n": 1,
+            "d": 3
+          },
+          "right": {
+            "whole": 1,
+            "n": 1,
+            "d": 2
+          },
+          "target": "Use the complete mixed-number values",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "missing_conversion": "Complete both improper-fraction conversions before submitting the final product.",
+        "changed_denominator": "Check the denominator in each conversion. Regrouping the wholes does not change the size of the fractional parts.",
+        "omitted_whole": "One conversion includes only the fractional part. Include the complete whole-number contribution too.",
+        "incorrect_conversion": "Check how many fractional parts are in the wholes, then include the extra numerator parts.",
+        "wrong_form": "Your final value is correct, but its form is not the requested simplest mixed number.",
+        "incorrect_product": "The conversions are valid. Check the multiplication and final answer without changing those converted values."
+      }
+    },
+    {
+      "id": "MD-08-E03",
+      "source_ref": {
+        "page": 13
+      },
+      "stage": "exit",
+      "prompt": "Which statement correctly describes the standard fraction method for multiplying mixed numbers?",
+      "target": "Mixed-number conversion method",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Convert every mixed number to an improper fraction before using the fraction multiplication method.",
+          "Multiply the whole-number parts and fractional parts separately.",
+          "Convert only the first mixed number in the calculation.",
+          "Add the denominators after multiplying the numerators."
+        ]
+      },
+      "answer": {
+        "value": "Convert every mixed number to an improper fraction before using the fraction multiplication method."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That statement prepares every complete factor for the standard multiplication method.",
+        "correct_after_support": "That statement prepares every complete factor for the standard multiplication method.",
+        "on_correct_math": "Each mixed number is one complete value. → Convert every mixed number before applying the fraction multiplication method. → Simplify and check the form requested for the final answer.",
+        "on_incorrect_attempt_1": "Each factor must preserve its complete value.",
+        "on_incorrect_attempt_2": "Check whether the method preserves every whole-number and fractional contribution.",
+        "worked_explanation": "Each mixed number is one complete value. → Convert every mixed number before applying the fraction multiplication method. → Simplify and check the form requested for the final answer.",
+        "on_locked_incorrect": "Compare the complete conversions and the requested answer form in the working."
+      },
+      "mathematical_support": {
+        "hint_1": "Each factor must preserve its complete value.",
+        "hint_2": "The method must handle every mixed-number factor, not just one.",
+        "worked_solution": "Each mixed number is one complete value. → Convert every mixed number before applying the fraction multiplication method. → Simplify and check the form requested for the final answer."
+      },
+      "working": [
+        "Each mixed number is one complete value.",
+        "Convert every mixed number before applying the fraction multiplication method.",
+        "Simplify and check the form requested for the final answer."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "mixed_product_rule",
+          "object": "relationship",
+          "target": "Mixed-number conversion method",
+          "math_text": true,
+          "compact_captions": true
+        }
+      }
+    }
+  ],
+  "canonical_lesson": {
+    "version": "MD08-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

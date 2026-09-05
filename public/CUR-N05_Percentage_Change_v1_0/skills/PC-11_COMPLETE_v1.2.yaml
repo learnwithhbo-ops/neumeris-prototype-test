@@ -1,0 +1,3443 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "PC-11 - Reverse a percentage decrease using a multiplier",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-18",
+      "sha256": "e7ce6ee2114e55b39760324875a0d1e06062033fc726385dfebe4b7d4217017f"
+    },
+    "authored_scope": "Reconstruct an original amount after a percentage decrease using reverse division.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "PC11-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "verified_full_desktop_all_six_unsupported_ready_phone_final_reference_and_rounded_multiplier_learning_320_390_restored_equal_cells_real_reload_drafts_locked_answers_audio_captions_source_repetition_flagged",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        12,
+        15,
+        16,
+        17,
+        18
+      ],
+      "source_repairs_consulted": [
+        2,
+        8,
+        9,
+        10,
+        11,
+        13,
+        14,
+        17,
+        18
+      ],
+      "source_concerns": [
+        "The approved independent set has five numerical originals of 800; all four numerical final originals are 800. This weakens resistance to answer-pattern guessing. Values are preserved rather than silently replacing approved questions.",
+        "The source repeats the 18%/656/800 bicycle mathematics in the final route check, and the 32%/544/800 application operation choice in the final numerical set. These are source-prescribed, not new independent variants."
+      ],
+      "note": "All eighteen source pages, rendered 100-cell and 20-cell remaining grids, seven guided blanks, complete old configuration and relevant tests reviewed. Restores 24 source questions. Final values label only the remaining cells; crossed removed cells and restored cells retain identical sizes. Multiplier boxes accept percentage/fraction equivalents and requested decimal boxes preserve decimal form. All-six unsupported mastery is documented interpretation because the source gives no fractional threshold. Repeated source answer patterns are explicitly recorded as a source concern. No new Entry, Diagnostic, prerequisite mutation, delayed Retrieval or Strong."
+    }
+  },
+  "identity": {
+    "id": "PC-11",
+    "slug": "reverse-a-percentage-decrease-using-a-multiplier",
+    "title": "Reverse a percentage decrease using a multiplier",
+    "strand": "Number",
+    "cluster": "Percentage Change",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Reconstruct an original amount from a final amount after a one-step percentage decrease by forming the remaining multiplier and reversing its scaling.",
+    "success_criteria": [
+      "Identify the given amount as final",
+      "Form a remaining multiplier between zero and one",
+      "Use division to reverse forward multiplication",
+      "Keep final divided by multiplier in the correct order",
+      "Report the original with correct units",
+      "Check the original is larger than final",
+      "Verify by reapplying the remaining multiplier where requested",
+      "Accept any valid exact method unless a form is specified"
+    ],
+    "boundaries": {
+      "includes": [
+        "One-step reverse decreases with whole and decimal percentage rates",
+        "Full exact remaining multipliers without early rounding",
+        "Money, population, mass, capacity, pay and quantity contexts",
+        "Operation, multiplier and reasonableness choices",
+        "Exact valid alternative methods on unrestricted items"
+      ],
+      "excludes": [
+        "Reverse increases and repeated changes",
+        "Algebraic unknown-rate percentages and multi-stage reductions",
+        "Unrequested written explanations or verification fields",
+        "Entry, Diagnostic, prerequisite mutation, delayed Retrieval and Strong"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "PC-01",
+      "PC-05",
+      "PC-07",
+      "PC-09",
+      "FDP-05"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for PC-01, PC-05, PC-07, PC-09, FDP-05 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "single_choice",
+      "percentage_change_fields"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    },
+    "place_value_profile": true
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "Reverse the remaining multiplier to reconstruct the complete original.",
+    "invariant": "The known final amount labels the remaining share, not the whole or the removed share.",
+    "mathematical_rule": "Remaining multiplier = 1 − p/100; original = final ÷ multiplier.",
+    "must_notice": [
+      "Match final to remaining share",
+      "Use final divided by remaining multiplier",
+      "Original is larger after a positive decrease",
+      "Keep the exact multiplier until calculation is complete"
+    ],
+    "common_confusions": [
+      "Final as original",
+      "Removed share as multiplier",
+      "Multiplying again",
+      "Adding the percentage of final",
+      "Reversed division",
+      "Early rounding"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "Reverse the remaining scale",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Reverse the remaining scale",
+          "initial_state": "Reverse the remaining scale",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Undo a remaining multiplier",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "symbolic_math": true,
+            "compact_captions": true,
+            "mode": "reverse_decrease_rule",
+            "solved": true
+          }
+        },
+        "narration": {
+          "script": "A decrease multiplies the original by the share that remains. Division by that same multiplier reconstructs the complete original from the final amount."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Identify the hundredths remaining",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Identify the hundredths remaining",
+          "initial_state": "Identify the hundredths remaining",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Reconstruct the whole from eighty-two hundredths",
+            "given": "After an 18% decrease, the final amount is $328.",
+            "math_text": true,
+            "decimal_math": true,
+            "symbolic_math": true,
+            "compact_captions": true,
+            "mode": "reverse_remaining_scale",
+            "layout": "hundredths",
+            "originalParts": 100,
+            "removedParts": 18,
+            "columns": 10,
+            "partPercent": 1,
+            "partDecimal": "0.01",
+            "multiplier": "0.82",
+            "rate": 18,
+            "final": 328,
+            "original": 400,
+            "currency": "$",
+            "cell": 18,
+            "solved": true,
+            "steps": [],
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "The grid marks one complete original whole. Eighteen crossed hundredths were removed. The known final price belongs only to the eighty-two blue hundredths remaining."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Find one original-sized hundredth",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Find one original-sized hundredth",
+          "initial_state": "Find one original-sized hundredth",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Reconstruct the whole from eighty-two hundredths",
+            "given": "After an 18% decrease, the final amount is $328.",
+            "math_text": true,
+            "decimal_math": true,
+            "symbolic_math": true,
+            "compact_captions": true,
+            "mode": "reverse_remaining_scale",
+            "layout": "hundredths",
+            "originalParts": 100,
+            "removedParts": 18,
+            "columns": 10,
+            "partPercent": 1,
+            "partDecimal": "0.01",
+            "multiplier": "0.82",
+            "rate": 18,
+            "final": 328,
+            "original": 400,
+            "currency": "$",
+            "cell": 18,
+            "solved": true,
+            "steps": [],
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "Share the known final price across the blue hundredths that remain. This gives the value of one hundredth of the original."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Restore the complete hundred-square",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Restore the complete hundred-square",
+          "initial_state": "Restore the complete hundred-square",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Reconstruct the whole from eighty-two hundredths",
+            "given": "After an 18% decrease, the final amount is $328.",
+            "math_text": true,
+            "decimal_math": true,
+            "symbolic_math": true,
+            "compact_captions": true,
+            "mode": "reverse_remaining_scale",
+            "layout": "hundredths",
+            "originalParts": 100,
+            "removedParts": 18,
+            "columns": 10,
+            "partPercent": 1,
+            "partDecimal": "0.01",
+            "multiplier": "0.82",
+            "rate": 18,
+            "final": 328,
+            "original": 400,
+            "currency": "$",
+            "cell": 18,
+            "solved": true,
+            "steps": [],
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "Restore all one hundred equally sized hundredths. Their value gives the original, just as division by the remaining multiplier does."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Identify the five-percent parts remaining",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Identify the five-percent parts remaining",
+          "initial_state": "Identify the five-percent parts remaining",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Restore the missing five-percent parts",
+            "given": "After a 15% decrease, the final amount is $510.",
+            "math_text": true,
+            "decimal_math": true,
+            "symbolic_math": true,
+            "compact_captions": true,
+            "mode": "reverse_remaining_scale",
+            "layout": "equal_parts",
+            "originalParts": 20,
+            "removedParts": 3,
+            "columns": 5,
+            "partPercent": 5,
+            "partDecimal": "0.05",
+            "multiplier": "0.85",
+            "rate": 15,
+            "final": 510,
+            "original": 600,
+            "currency": "$",
+            "cell": 36,
+            "solved": true,
+            "steps": [],
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "Twenty equal parts make the original whole. Three were removed, so the given final price belongs only to the seventeen blue parts that remain."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T06"
+      },
+      {
+        "id": "T06",
+        "stage": "teaching",
+        "purpose": "Find one five-percent part",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Find one five-percent part",
+          "initial_state": "Find one five-percent part",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Restore the missing five-percent parts",
+            "given": "After a 15% decrease, the final amount is $510.",
+            "math_text": true,
+            "decimal_math": true,
+            "symbolic_math": true,
+            "compact_captions": true,
+            "mode": "reverse_remaining_scale",
+            "layout": "equal_parts",
+            "originalParts": 20,
+            "removedParts": 3,
+            "columns": 5,
+            "partPercent": 5,
+            "partDecimal": "0.05",
+            "multiplier": "0.85",
+            "rate": 15,
+            "final": 510,
+            "original": 600,
+            "currency": "$",
+            "cell": 36,
+            "solved": true,
+            "steps": [],
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "Divide the given final price among the seventeen remaining parts. Every original part has that same value and size."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T07"
+      },
+      {
+        "id": "T07",
+        "stage": "teaching",
+        "purpose": "Restore the missing original parts",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Restore the missing original parts",
+          "initial_state": "Restore the missing original parts",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Restore the missing five-percent parts",
+            "given": "After a 15% decrease, the final amount is $510.",
+            "math_text": true,
+            "decimal_math": true,
+            "symbolic_math": true,
+            "compact_captions": true,
+            "mode": "reverse_remaining_scale",
+            "layout": "equal_parts",
+            "originalParts": 20,
+            "removedParts": 3,
+            "columns": 5,
+            "partPercent": 5,
+            "partDecimal": "0.05",
+            "multiplier": "0.85",
+            "rate": 15,
+            "final": 510,
+            "original": 600,
+            "currency": "$",
+            "cell": 36,
+            "solved": true,
+            "steps": [],
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "Restore the three missing parts to complete the original twenty. Reconstructing that whole is equivalent to dividing by the remaining multiplier."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T08"
+      },
+      {
+        "id": "T08",
+        "stage": "teaching",
+        "purpose": "Choose the reverse calculation",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Choose the reverse calculation",
+          "initial_state": "Choose the reverse calculation",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Read the situation",
+            "given": "A price is reduced by 17% and becomes $664. Which calculation reconstructs the original price?",
+            "math_text": true,
+            "decimal_math": true,
+            "symbolic_math": true,
+            "compact_captions": true,
+            "mode": "rule",
+            "steps": [
+              "Remaining multiplier = 1 − 0.17 = 0.83.",
+              "Reverse calculation: $664 ÷ 0.83."
+            ]
+          }
+        },
+        "narration": {
+          "script": "Choose the calculation that finds the price before the reduction."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "PC-11-C01"
+        },
+        "next_step": "T09"
+      },
+      {
+        "id": "T09",
+        "stage": "teaching",
+        "purpose": "Form the machine’s remaining multiplier",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Form the machine’s remaining multiplier",
+          "initial_state": "Form the machine’s remaining multiplier",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Reconstruct the machine’s price before reduction",
+            "given": "A machine is reduced in price by 18%. Its sale price is $574.",
+            "math_text": true,
+            "decimal_math": true,
+            "symbolic_math": true,
+            "compact_captions": true,
+            "mode": "role_worked",
+            "solved": true,
+            "stages": [
+              {
+                "title": "Form the remaining multiplier",
+                "lines": [
+                  "18% = 0.18",
+                  "1 − 0.18 = 0.82"
+                ]
+              },
+              {
+                "title": "Reverse the forward reduction",
+                "lines": [
+                  "Forward: original × 0.82 = $574",
+                  "Original = $574 ÷ 0.82 = $700"
+                ]
+              },
+              {
+                "title": "Verify the original price",
+                "lines": [
+                  "$700 × 0.82 = $574",
+                  "$700 > $574: the original is larger than the final."
+                ]
+              }
+            ],
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "The sale price is the share left after the reduction. Convert the decrease accurately, then subtract it from one original whole."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T10"
+      },
+      {
+        "id": "T10",
+        "stage": "teaching",
+        "purpose": "Reconstruct the original machine price",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Reconstruct the original machine price",
+          "initial_state": "Reconstruct the original machine price",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Reconstruct the machine’s price before reduction",
+            "given": "A machine is reduced in price by 18%. Its sale price is $574.",
+            "math_text": true,
+            "decimal_math": true,
+            "symbolic_math": true,
+            "compact_captions": true,
+            "mode": "role_worked",
+            "solved": true,
+            "stages": [
+              {
+                "title": "Form the remaining multiplier",
+                "lines": [
+                  "18% = 0.18",
+                  "1 − 0.18 = 0.82"
+                ]
+              },
+              {
+                "title": "Reverse the forward reduction",
+                "lines": [
+                  "Forward: original × 0.82 = $574",
+                  "Original = $574 ÷ 0.82 = $700"
+                ]
+              },
+              {
+                "title": "Verify the original price",
+                "lines": [
+                  "$700 × 0.82 = $574",
+                  "$700 > $574: the original is larger than the final."
+                ]
+              }
+            ],
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "The forward route multiplied the original by its remaining share. Reverse that multiplication with the known sale price first."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T11"
+      },
+      {
+        "id": "T11",
+        "stage": "teaching",
+        "purpose": "Check the reconstructed price",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Check the reconstructed price",
+          "initial_state": "Check the reconstructed price",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Reconstruct the machine’s price before reduction",
+            "given": "A machine is reduced in price by 18%. Its sale price is $574.",
+            "math_text": true,
+            "decimal_math": true,
+            "symbolic_math": true,
+            "compact_captions": true,
+            "mode": "role_worked",
+            "solved": true,
+            "stages": [
+              {
+                "title": "Form the remaining multiplier",
+                "lines": [
+                  "18% = 0.18",
+                  "1 − 0.18 = 0.82"
+                ]
+              },
+              {
+                "title": "Reverse the forward reduction",
+                "lines": [
+                  "Forward: original × 0.82 = $574",
+                  "Original = $574 ÷ 0.82 = $700"
+                ]
+              },
+              {
+                "title": "Verify the original price",
+                "lines": [
+                  "$700 × 0.82 = $574",
+                  "$700 > $574: the original is larger than the final."
+                ]
+              }
+            ],
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "Reduce the reconstructed original using the remaining multiplier. The result matches the sale price, and the original is larger as expected."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T12"
+      },
+      {
+        "id": "T12",
+        "stage": "teaching",
+        "purpose": "Explain the reverse operation",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Explain the reverse operation",
+          "initial_state": "Explain the reverse operation",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Read the situation",
+            "given": "Why is division used in the reverse calculation?",
+            "math_text": true,
+            "decimal_math": true,
+            "symbolic_math": true,
+            "compact_captions": true,
+            "mode": "rule",
+            "steps": [
+              "Forward: original × remaining multiplier = final.",
+              "Reverse: final ÷ remaining multiplier = original."
+            ]
+          }
+        },
+        "narration": {
+          "script": "Choose why division reverses this reduction."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "PC-11-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "PC-11-G01",
+        "support_level": "high",
+        "pre_question_script": "Complete the decimal conversion and the remaining multiplier.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "PC-11-G02",
+        "support_level": "high",
+        "pre_question_script": "Choose the operation, supply the remaining multiplier and reconstruct the original.",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "faded",
+        "question_ref": "PC-11-G03",
+        "support_level": "reduced",
+        "pre_question_script": "Give the price before the reduction.",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "independent_transfer",
+        "question_ref": "PC-11-G04",
+        "support_level": "none",
+        "pre_question_script": "Choose the comparison that fits the stated reduction.",
+        "correct_next": "P01"
+      }
+    },
+    "practice": {
+      "intro_script": "Reconstruct each original amount before the decrease. Use paper or a calculator; any exact valid reverse method is accepted.",
+      "question_order": [
+        "PC-11-P01",
+        "PC-11-P02",
+        "PC-11-P03",
+        "PC-11-P04",
+        "PC-11-P05",
+        "PC-11-P06",
+        "PC-11-P07",
+        "PC-11-X01",
+        "PC-11-X02",
+        "PC-11-X03",
+        "PC-11-X04",
+        "PC-11-X05"
+      ],
+      "question_count": 12,
+      "feedback_policy": "No pre-submit worked route or optional hints. Answer-specific clues and sequential working follow demonstrated need, with learner correction required. Guided operation/multiplier blanks assess the requested structure. Independent and final calculations accept any exact equivalent valid method. Errors remain unconfirmed evidence without Diagnostic activation or prerequisite mutation."
+    },
+    "exit": {
+      "intro_script": "Answer all six final questions independently. Every response locks before any result or working is revealed.",
+      "primary_question_refs": [
+        "PC-11-E01",
+        "PC-11-E02",
+        "PC-11-E03",
+        "PC-11-E04",
+        "PC-11-E05",
+        "PC-11-E06"
+      ],
+      "confirmation_question_refs": [],
+      "submission_policy": "Lock all six responses before any result or working is revealed.",
+      "mastery_policy": {
+        "profile": "all_primary_unsupported_deferred",
+        "source_page": 18,
+        "implementation_interpretation": "The source requires successful completion but gives no fractional threshold. Preserve the shared all-six unsupported rule. Accept exact alternative methods on unrestricted numerical items; source operation and multiplier choices supply explicit structure evidence.",
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "Your final responses reconstructed original amounts before decreases and identified the remaining multiplier and inverse operation. Later retrieval will check that this remains secure.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Keep building reverse-decrease calculations",
+      "ryan_script": "Review the saved responses. Match the final amount to the share remaining, reconstruct the original and check that it is larger.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "PC-11-C01",
+      "source_ref": {
+        "page": 4
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "A price is reduced by 17% and becomes $664. Which calculation reconstructs the original price?",
+      "target": "Reconstruct an original amount before a percentage decrease",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "664 × 0.83",
+          "664 ÷ 0.83",
+          "664 ÷ 0.17",
+          "664 + 0.83"
+        ],
+        "math_layout": "symbolic_compound_fraction"
+      },
+      "answer": {
+        "value": "664 ÷ 0.83"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Division by the remaining multiplier reconstructs the original.",
+        "correct_after_support": "Division by the remaining multiplier reconstructs the original.",
+        "on_correct_math": "Remaining multiplier = 1 − 0.17 = 0.83. → Reverse calculation: $664 ÷ 0.83.",
+        "on_incorrect_attempt_1": "The stated price has already been reduced. Choose the operation that reverses the remaining scale.",
+        "on_incorrect_attempt_2": "The final price represents the remaining share. Undo multiplication by that share’s multiplier.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Remaining multiplier = 1 − 0.17 = 0.83. → Reverse calculation: $664 ÷ 0.83."
+      },
+      "mathematical_support": {
+        "hint_1": "The stated price has already been reduced. Choose the operation that reverses the remaining scale.",
+        "hint_2": "The final price represents the remaining share. Undo multiplication by that share’s multiplier.",
+        "worked_solution": "Remaining multiplier = 1 − 0.17 = 0.83. → Reverse calculation: $664 ÷ 0.83."
+      },
+      "working": [
+        "Remaining multiplier = 1 − 0.17 = 0.83.",
+        "Reverse calculation: $664 ÷ 0.83."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A price is reduced by 17% and becomes $664. Which calculation reconstructs the original price?",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Remaining multiplier = 1 − 0.17 = 0.83.",
+            "Reverse calculation: $664 ÷ 0.83."
+          ]
+        }
+      },
+      "response_feedback": {
+        "664 × 0.83": "This applies a further reduction instead of undoing the first.",
+        "664 ÷ 0.17": "This uses the removed share to label the amount remaining.",
+        "664 + 0.83": "A multiplier is a scale factor, not a fixed amount to add."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-11-C02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "Why is division used in the reverse calculation?",
+      "target": "Reconstruct an original amount before a percentage decrease",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Division undoes the multiplication that produced the final amount.",
+          "Every percentage question uses division.",
+          "The remaining multiplier is greater than 1.",
+          "The final amount is always divided by the percentage number."
+        ],
+        "math_layout": "symbolic_compound_fraction"
+      },
+      "answer": {
+        "value": "Division undoes the multiplication that produced the final amount."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Division reverses the multiplication that left the final amount.",
+        "correct_after_support": "Division reverses the multiplication that left the final amount.",
+        "on_correct_math": "Forward: original × remaining multiplier = final. → Reverse: final ÷ remaining multiplier = original.",
+        "on_incorrect_attempt_1": "Connect the reverse operation to the forward multiplication that reduced the amount.",
+        "on_incorrect_attempt_2": "The same remaining multiplier is used in opposite directions.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Forward: original × remaining multiplier = final. → Reverse: final ÷ remaining multiplier = original."
+      },
+      "mathematical_support": {
+        "hint_1": "Connect the reverse operation to the forward multiplication that reduced the amount.",
+        "hint_2": "The same remaining multiplier is used in opposite directions.",
+        "worked_solution": "Forward: original × remaining multiplier = final. → Reverse: final ÷ remaining multiplier = original."
+      },
+      "working": [
+        "Forward: original × remaining multiplier = final.",
+        "Reverse: final ÷ remaining multiplier = original."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "Why is division used in the reverse calculation?",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Forward: original × remaining multiplier = final.",
+            "Reverse: final ÷ remaining multiplier = original."
+          ]
+        }
+      },
+      "response_feedback": {
+        "Every percentage question uses division.": "Different percentage questions ask for different quantities and operations.",
+        "The remaining multiplier is greater than 1.": "After a positive decrease below one hundred percent, the remaining multiplier is between zero and one.",
+        "The final amount is always divided by the percentage number.": "Use the remaining multiplier, not the decrease percentage number alone."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-11-G01",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "After a 32% decrease, the price of a table is $510. Work out the original price. Write the percentage as a decimal, then complete: remaining multiplier = 1 − decimal decrease.",
+      "target": "Reconstruct an original amount before a percentage decrease",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "decimal",
+            "label": "Percentage as a decimal",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true,
+            "grouped_numbers": true,
+            "decimal_result_only": true
+          },
+          {
+            "key": "removed",
+            "label": "Decimal subtracted from one",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true,
+            "grouped_numbers": true,
+            "decimal_result_only": true
+          },
+          {
+            "key": "multiplier",
+            "label": "Remaining multiplier",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true,
+            "grouped_numbers": true,
+            "percent_as_ratio": true
+          }
+        ],
+        "error_values": [],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Exact numerical calculations and equivalent valid methods are accepted unless a particular form is requested. Units are printed beside number boxes. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "decimal": "0.32",
+          "removed": "0.32",
+          "multiplier": "0.68"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The multiplier describes the share remaining, not the share removed.",
+        "correct_after_support": "The multiplier describes the share remaining, not the share removed.",
+        "on_correct_math": "32% = 0.32. → Remaining multiplier = 1 − 0.32 = 0.68.",
+        "on_incorrect_attempt_1": "Separate the removed decimal share from the multiplier for the part remaining.",
+        "on_incorrect_attempt_2": "Subtract the decimal decrease from one original whole to find the remaining multiplier.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "32% = 0.32. → Remaining multiplier = 1 − 0.32 = 0.68."
+      },
+      "mathematical_support": {
+        "hint_1": "Separate the removed decimal share from the multiplier for the part remaining.",
+        "hint_2": "Subtract the decimal decrease from one original whole to find the remaining multiplier.",
+        "worked_solution": "32% = 0.32. → Remaining multiplier = 1 − 0.32 = 0.68."
+      },
+      "working": [
+        "32% = 0.32.",
+        "Remaining multiplier = 1 − 0.32 = 0.68."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "After a 32% decrease, the price of a table is $510. Work out the original price. Write the percentage as a decimal, then complete: remaining multiplier = 1 − decimal decrease.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "32% = 0.32.",
+            "Remaining multiplier = 1 − 0.32 = 0.68."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_decimal": "Your remaining-multiplier setup is right. Convert the stated decrease to its decimal value.",
+        "check_removed": "Your conversion and remaining multiplier are right. Subtract the decimal decrease from one whole.",
+        "check_multiplier": "Your decimal entries are right. Find the share remaining after that decrease.",
+        "check_multiple": "Keep the decimal decrease separate from the remaining multiplier.",
+        "check_decimal_form": "Give the requested decimal form in each decimal box.",
+        "check_unit": "Use the printed units. An amount, a decimal multiplier and a percentage describe different quantities.",
+        "check_number_format": "Check the comma grouping. Separate groups of three digits, or leave commas out. Use a decimal point for decimal values."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-11-G02",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "After a 32% decrease, the price of a table is $510. Work out the original price. Complete: original price = $510 [operation] [multiplier] = [result].",
+      "target": "Reconstruct an original amount before a percentage decrease",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "operation",
+            "label": "Operation",
+            "kind": "choice",
+            "options": [
+              "÷",
+              "×"
+            ]
+          },
+          {
+            "key": "multiplier",
+            "label": "Multiplier",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true,
+            "grouped_numbers": true,
+            "percent_as_ratio": true
+          },
+          {
+            "key": "result",
+            "label": "Calculation result",
+            "kind": "number",
+            "unit": "$",
+            "allow_expression": true,
+            "grouped_numbers": true,
+            "money_display": true
+          }
+        ],
+        "error_values": [],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Exact numerical calculations and equivalent valid methods are accepted unless a particular form is requested. Units are printed beside number boxes. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "operation": "÷",
+          "multiplier": "0.68",
+          "result": "750"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The remaining price has been scaled back to its complete original.",
+        "correct_after_support": "The remaining price has been scaled back to its complete original.",
+        "on_correct_math": "Forward: original price × 0.68 = $510. → Reverse: $510 ÷ 0.68 = $750.",
+        "on_incorrect_attempt_1": "Choose the inverse operation, keep the final price first and use the remaining multiplier.",
+        "on_incorrect_attempt_2": "The forward reduction is reversed with the same remaining multiplier. The last line gives the complete original price.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Forward: original price × 0.68 = $510. → Reverse: $510 ÷ 0.68 = $750."
+      },
+      "mathematical_support": {
+        "hint_1": "Choose the inverse operation, keep the final price first and use the remaining multiplier.",
+        "hint_2": "The forward reduction is reversed with the same remaining multiplier. The last line gives the complete original price.",
+        "worked_solution": "Forward: original price × 0.68 = $510. → Reverse: $510 ÷ 0.68 = $750."
+      },
+      "working": [
+        "Forward: original price × 0.68 = $510.",
+        "Reverse: $510 ÷ 0.68 = $750."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "After a 32% decrease, the price of a table is $510. Work out the original price. Complete: original price = $510 [operation] [multiplier] = [result].",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Forward: original price × 0.68 = $510.",
+            "Reverse: $510 ÷ 0.68 = $750."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_operation": "Your remaining multiplier and result are right. Select the operation that undoes the forward multiplication.",
+        "check_multiplier": "Your operation and result are right. Use the multiplier for the share remaining.",
+        "check_result": "Your reverse operation and remaining multiplier are right. Check the division result.",
+        "check_multiple": "Check the inverse operation, remaining multiplier and original result separately.",
+        "check_unit": "Use the printed units. An amount, a decimal multiplier and a percentage describe different quantities.",
+        "check_number_format": "Check the comma grouping. Separate groups of three digits, or leave commas out. Use a decimal point for decimal values."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-11-G03",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "faded",
+      "prompt": "After a 32% decrease, the price of a table is $510. Work out the original price. Give the original price.",
+      "target": "Reconstruct an original amount before a percentage decrease",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "original",
+            "label": "Original price",
+            "kind": "number",
+            "unit": "$",
+            "allow_expression": true,
+            "grouped_numbers": true,
+            "money_display": true
+          }
+        ],
+        "error_values": [],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Exact numerical calculations and equivalent valid methods are accepted unless a particular form is requested. Units are printed beside number boxes. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "original": "750"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Reapplying the decrease confirms the original price.",
+        "correct_after_support": "Reapplying the decrease confirms the original price.",
+        "on_correct_math": "Original price = $750. → Check: $750 × 0.68 = $510.",
+        "on_incorrect_attempt_1": "Report the reconstructed price before the decrease, not the sale price.",
+        "on_incorrect_attempt_2": "The check reduces the reconstructed original to the given final price.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Original price = $750. → Check: $750 × 0.68 = $510."
+      },
+      "mathematical_support": {
+        "hint_1": "Report the reconstructed price before the decrease, not the sale price.",
+        "hint_2": "The check reduces the reconstructed original to the given final price.",
+        "worked_solution": "Original price = $750. → Check: $750 × 0.68 = $510."
+      },
+      "working": [
+        "Original price = $750.",
+        "Check: $750 × 0.68 = $510."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "After a 32% decrease, the price of a table is $510. Work out the original price. Give the original price.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Original price = $750.",
+            "Check: $750 × 0.68 = $510."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_original": "Give the price before the decrease. It must reduce to the stated final price.",
+        "check_unit": "Use the printed units. An amount, a decimal multiplier and a percentage describe different quantities.",
+        "check_number_format": "Check the comma grouping. Separate groups of three digits, or leave commas out. Use a decimal point for decimal values."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-11-G04",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "independent_transfer",
+      "prompt": "After a 32% decrease, the price of a table is $510. Work out the original price. Which statement must be true?",
+      "target": "Reconstruct an original amount before a percentage decrease",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "The original price is greater than $510.",
+          "The original price is equal to $510.",
+          "The original price is less than $510.",
+          "The original price must be 32% of $510."
+        ],
+        "math_layout": "symbolic_compound_fraction"
+      },
+      "answer": {
+        "value": "The original price is greater than $510."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The original is larger because the stated final price is after a decrease.",
+        "correct_after_support": "The original is larger because the stated final price is after a decrease.",
+        "on_correct_math": "A positive decrease makes the final price smaller. → The original price must be greater than $510.",
+        "on_incorrect_attempt_1": "Compare the amount before a reduction with the amount after it.",
+        "on_incorrect_attempt_2": "The final price is only part of the original after a positive reduction.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "A positive decrease makes the final price smaller. → The original price must be greater than $510."
+      },
+      "mathematical_support": {
+        "hint_1": "Compare the amount before a reduction with the amount after it.",
+        "hint_2": "The final price is only part of the original after a positive reduction.",
+        "worked_solution": "A positive decrease makes the final price smaller. → The original price must be greater than $510."
+      },
+      "working": [
+        "A positive decrease makes the final price smaller.",
+        "The original price must be greater than $510."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "After a 32% decrease, the price of a table is $510. Work out the original price. Which statement must be true?",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "A positive decrease makes the final price smaller.",
+            "The original price must be greater than $510."
+          ]
+        }
+      },
+      "response_feedback": {
+        "The original price is equal to $510.": "This would mean no reduction occurred.",
+        "The original price is less than $510.": "This would make the stated change an increase.",
+        "The original price must be 32% of $510.": "The removed percentage is based on the original, not on the final price."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-11-P01",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "After a 15% decrease, the final amount is $680. Work out the original amount.",
+      "target": "Reconstruct an original amount before a percentage decrease",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "original",
+            "label": "Original amount",
+            "kind": "number",
+            "unit": "$",
+            "allow_expression": true,
+            "grouped_numbers": true,
+            "money_display": true,
+            "signed_evidence": true
+          }
+        ],
+        "error_values": [
+          {
+            "field": "original",
+            "value": "680",
+            "classification": "final_as_original"
+          },
+          {
+            "field": "original",
+            "value": "680*0.85",
+            "classification": "forward_again"
+          },
+          {
+            "field": "original",
+            "value": "680*(1+15/100)",
+            "classification": "add_to_final"
+          },
+          {
+            "field": "original",
+            "value": "680/(15/100)",
+            "classification": "divide_by_rate"
+          },
+          {
+            "field": "original",
+            "value": "0.85/680",
+            "classification": "reversed_division"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Exact numerical calculations and equivalent valid methods are accepted unless a particular form is requested. Units are printed beside number boxes. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "original": "800"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The reconstructed original reduces to the stated final price.",
+        "correct_after_support": "The reconstructed original reduces to the stated final price.",
+        "on_correct_math": "Remaining multiplier = 1 − 15/100 = 0.85. → Original = $680 ÷ 0.85 = $800. → Check: $800 × 0.85 = $680. → Original $800 is larger than final $680.",
+        "on_incorrect_attempt_1": "The given amount is what remains after the decrease. Identify its remaining share before reconstructing the complete original.",
+        "on_incorrect_attempt_2": "The working undoes the remaining multiplier, then checks that reducing the reconstructed original returns to the final amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Remaining multiplier = 1 − 15/100 = 0.85. → Original = $680 ÷ 0.85 = $800. → Check: $800 × 0.85 = $680. → Original $800 is larger than final $680."
+      },
+      "mathematical_support": {
+        "hint_1": "The given amount is what remains after the decrease. Identify its remaining share before reconstructing the complete original.",
+        "hint_2": "The working undoes the remaining multiplier, then checks that reducing the reconstructed original returns to the final amount.",
+        "worked_solution": "Remaining multiplier = 1 − 15/100 = 0.85. → Original = $680 ÷ 0.85 = $800. → Check: $800 × 0.85 = $680. → Original $800 is larger than final $680."
+      },
+      "working": [
+        "Remaining multiplier = 1 − 15/100 = 0.85.",
+        "Original = $680 ÷ 0.85 = $800.",
+        "Check: $800 × 0.85 = $680.",
+        "Original $800 is larger than final $680."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "After a 15% decrease, the final amount is $680. Work out the original amount.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Remaining multiplier = 1 − 15/100 = 0.85.",
+            "Original = $680 ÷ 0.85 = $800.",
+            "Check: $800 × 0.85 = $680.",
+            "Original $800 is larger than final $680."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_original": "Reconstruct the amount before the decrease. Check the remaining multiplier and the order of the reverse calculation.",
+        "final_as_original": "That is the given final amount, not the amount before the decrease.",
+        "forward_again": "That result is below the final amount. The original before this decrease must be larger.",
+        "add_to_final": "That value does not undo this decrease. The stated percentage uses the original as its base, not the final amount.",
+        "divide_by_rate": "This result does not reconstruct the original whole. The final amount belongs to the remaining share, not the removed share.",
+        "reversed_division": "Check the division order. The given final amount is the quantity being scaled back; the multiplier is the scale factor.",
+        "check_unit": "Give the original money amount in dollars.",
+        "check_number_format": "Check the comma grouping. Separate groups of three digits, or leave commas out. Use a decimal point for decimal values."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-11-P02",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "After a 12% decrease, the final amount is 704. Work out the original amount.",
+      "target": "Reconstruct an original amount before a percentage decrease",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "original",
+            "label": "Original amount",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true,
+            "grouped_numbers": true,
+            "signed_evidence": true
+          }
+        ],
+        "error_values": [
+          {
+            "field": "original",
+            "value": "704",
+            "classification": "final_as_original"
+          },
+          {
+            "field": "original",
+            "value": "704*0.88",
+            "classification": "forward_again"
+          },
+          {
+            "field": "original",
+            "value": "704*(1+12/100)",
+            "classification": "add_to_final"
+          },
+          {
+            "field": "original",
+            "value": "704/(12/100)",
+            "classification": "divide_by_rate"
+          },
+          {
+            "field": "original",
+            "value": "0.88/704",
+            "classification": "reversed_division"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Exact numerical calculations and equivalent valid methods are accepted unless a particular form is requested. Units are printed beside number boxes. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "original": "800"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The original is larger than the final amount and passes the forward check.",
+        "correct_after_support": "The original is larger than the final amount and passes the forward check.",
+        "on_correct_math": "Remaining multiplier = 1 − 12/100 = 0.88. → Original = 704 ÷ 0.88 = 800. → Check: 800 × 0.88 = 704. → Original 800 is larger than final 704.",
+        "on_incorrect_attempt_1": "The given amount is what remains after the decrease. Identify its remaining share before reconstructing the complete original.",
+        "on_incorrect_attempt_2": "The working undoes the remaining multiplier, then checks that reducing the reconstructed original returns to the final amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Remaining multiplier = 1 − 12/100 = 0.88. → Original = 704 ÷ 0.88 = 800. → Check: 800 × 0.88 = 704. → Original 800 is larger than final 704."
+      },
+      "mathematical_support": {
+        "hint_1": "The given amount is what remains after the decrease. Identify its remaining share before reconstructing the complete original.",
+        "hint_2": "The working undoes the remaining multiplier, then checks that reducing the reconstructed original returns to the final amount.",
+        "worked_solution": "Remaining multiplier = 1 − 12/100 = 0.88. → Original = 704 ÷ 0.88 = 800. → Check: 800 × 0.88 = 704. → Original 800 is larger than final 704."
+      },
+      "working": [
+        "Remaining multiplier = 1 − 12/100 = 0.88.",
+        "Original = 704 ÷ 0.88 = 800.",
+        "Check: 800 × 0.88 = 704.",
+        "Original 800 is larger than final 704."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "After a 12% decrease, the final amount is 704. Work out the original amount.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Remaining multiplier = 1 − 12/100 = 0.88.",
+            "Original = 704 ÷ 0.88 = 800.",
+            "Check: 800 × 0.88 = 704.",
+            "Original 800 is larger than final 704."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_original": "Reconstruct the amount before the decrease. Check the remaining multiplier and the order of the reverse calculation.",
+        "final_as_original": "That is the given final amount, not the amount before the decrease.",
+        "forward_again": "That result is below the final amount. The original before this decrease must be larger.",
+        "add_to_final": "That value does not undo this decrease. The stated percentage uses the original as its base, not the final amount.",
+        "divide_by_rate": "This result does not reconstruct the original whole. The final amount belongs to the remaining share, not the removed share.",
+        "reversed_division": "Check the division order. The given final amount is the quantity being scaled back; the multiplier is the scale factor.",
+        "check_unit": "Give the original quantity, not a percentage.",
+        "check_number_format": "Check the comma grouping. Separate groups of three digits, or leave commas out. Use a decimal point for decimal values."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-11-P03",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "After a 28% decrease, the final mass is 576 kg. Work out the original mass.",
+      "target": "Reconstruct an original amount before a percentage decrease",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "original",
+            "label": "Original mass",
+            "kind": "number",
+            "unit": "kg",
+            "allow_expression": true,
+            "grouped_numbers": true,
+            "unit_aliases": [
+              "kg",
+              "kilogram",
+              "kilograms"
+            ],
+            "signed_evidence": true
+          }
+        ],
+        "error_values": [
+          {
+            "field": "original",
+            "value": "576",
+            "classification": "final_as_original"
+          },
+          {
+            "field": "original",
+            "value": "576*0.72",
+            "classification": "forward_again"
+          },
+          {
+            "field": "original",
+            "value": "576*(1+28/100)",
+            "classification": "add_to_final"
+          },
+          {
+            "field": "original",
+            "value": "576/(28/100)",
+            "classification": "divide_by_rate"
+          },
+          {
+            "field": "original",
+            "value": "0.72/576",
+            "classification": "reversed_division"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Exact numerical calculations and equivalent valid methods are accepted unless a particular form is requested. Units are printed beside number boxes. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "original": "800"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The mass before the loss has been reconstructed.",
+        "correct_after_support": "The mass before the loss has been reconstructed.",
+        "on_correct_math": "Remaining multiplier = 1 − 28/100 = 0.72. → Original = 576 kg ÷ 0.72 = 800 kg. → Check: 800 kg × 0.72 = 576 kg. → Original 800 kg is larger than final 576 kg.",
+        "on_incorrect_attempt_1": "The given amount is what remains after the decrease. Identify its remaining share before reconstructing the complete original.",
+        "on_incorrect_attempt_2": "The working undoes the remaining multiplier, then checks that reducing the reconstructed original returns to the final amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Remaining multiplier = 1 − 28/100 = 0.72. → Original = 576 kg ÷ 0.72 = 800 kg. → Check: 800 kg × 0.72 = 576 kg. → Original 800 kg is larger than final 576 kg."
+      },
+      "mathematical_support": {
+        "hint_1": "The given amount is what remains after the decrease. Identify its remaining share before reconstructing the complete original.",
+        "hint_2": "The working undoes the remaining multiplier, then checks that reducing the reconstructed original returns to the final amount.",
+        "worked_solution": "Remaining multiplier = 1 − 28/100 = 0.72. → Original = 576 kg ÷ 0.72 = 800 kg. → Check: 800 kg × 0.72 = 576 kg. → Original 800 kg is larger than final 576 kg."
+      },
+      "working": [
+        "Remaining multiplier = 1 − 28/100 = 0.72.",
+        "Original = 576 kg ÷ 0.72 = 800 kg.",
+        "Check: 800 kg × 0.72 = 576 kg.",
+        "Original 800 kg is larger than final 576 kg."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "After a 28% decrease, the final mass is 576 kg. Work out the original mass.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Remaining multiplier = 1 − 28/100 = 0.72.",
+            "Original = 576 kg ÷ 0.72 = 800 kg.",
+            "Check: 800 kg × 0.72 = 576 kg.",
+            "Original 800 kg is larger than final 576 kg."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_original": "Reconstruct the amount before the decrease. Check the remaining multiplier and the order of the reverse calculation.",
+        "final_as_original": "That is the given final amount, not the amount before the decrease.",
+        "forward_again": "That result is below the final amount. The original before this decrease must be larger.",
+        "add_to_final": "That value does not undo this decrease. The stated percentage uses the original as its base, not the final amount.",
+        "divide_by_rate": "This result does not reconstruct the original whole. The final amount belongs to the remaining share, not the removed share.",
+        "reversed_division": "Check the division order. The given final amount is the quantity being scaled back; the multiplier is the scale factor.",
+        "check_unit": "Give the original mass in kilograms.",
+        "check_number_format": "Check the comma grouping. Separate groups of three digits, or leave commas out. Use a decimal point for decimal values."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-11-P04",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "After a 6% decrease, the final amount is $470. Work out the original amount.",
+      "target": "Reconstruct an original amount before a percentage decrease",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "original",
+            "label": "Original amount",
+            "kind": "number",
+            "unit": "$",
+            "allow_expression": true,
+            "grouped_numbers": true,
+            "money_display": true,
+            "signed_evidence": true
+          }
+        ],
+        "error_values": [
+          {
+            "field": "original",
+            "value": "470",
+            "classification": "final_as_original"
+          },
+          {
+            "field": "original",
+            "value": "470*0.94",
+            "classification": "forward_again"
+          },
+          {
+            "field": "original",
+            "value": "470*(1+6/100)",
+            "classification": "add_to_final"
+          },
+          {
+            "field": "original",
+            "value": "470/(6/100)",
+            "classification": "divide_by_rate"
+          },
+          {
+            "field": "original",
+            "value": "0.94/470",
+            "classification": "reversed_division"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Exact numerical calculations and equivalent valid methods are accepted unless a particular form is requested. Units are printed beside number boxes. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "original": "500"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The multiplier matches the share left after the small reduction.",
+        "correct_after_support": "The multiplier matches the share left after the small reduction.",
+        "on_correct_math": "Remaining multiplier = 1 − 6/100 = 0.94. → Original = $470 ÷ 0.94 = $500. → Check: $500 × 0.94 = $470. → Original $500 is larger than final $470.",
+        "on_incorrect_attempt_1": "The given amount is what remains after the decrease. Identify its remaining share before reconstructing the complete original.",
+        "on_incorrect_attempt_2": "The working undoes the remaining multiplier, then checks that reducing the reconstructed original returns to the final amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Remaining multiplier = 1 − 6/100 = 0.94. → Original = $470 ÷ 0.94 = $500. → Check: $500 × 0.94 = $470. → Original $500 is larger than final $470."
+      },
+      "mathematical_support": {
+        "hint_1": "The given amount is what remains after the decrease. Identify its remaining share before reconstructing the complete original.",
+        "hint_2": "The working undoes the remaining multiplier, then checks that reducing the reconstructed original returns to the final amount.",
+        "worked_solution": "Remaining multiplier = 1 − 6/100 = 0.94. → Original = $470 ÷ 0.94 = $500. → Check: $500 × 0.94 = $470. → Original $500 is larger than final $470."
+      },
+      "working": [
+        "Remaining multiplier = 1 − 6/100 = 0.94.",
+        "Original = $470 ÷ 0.94 = $500.",
+        "Check: $500 × 0.94 = $470.",
+        "Original $500 is larger than final $470."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "After a 6% decrease, the final amount is $470. Work out the original amount.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Remaining multiplier = 1 − 6/100 = 0.94.",
+            "Original = $470 ÷ 0.94 = $500.",
+            "Check: $500 × 0.94 = $470.",
+            "Original $500 is larger than final $470."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_original": "Reconstruct the amount before the decrease. Check the remaining multiplier and the order of the reverse calculation.",
+        "final_as_original": "That is the given final amount, not the amount before the decrease.",
+        "forward_again": "That result is below the final amount. The original before this decrease must be larger.",
+        "add_to_final": "That value does not undo this decrease. The stated percentage uses the original as its base, not the final amount.",
+        "divide_by_rate": "This result does not reconstruct the original whole. The final amount belongs to the remaining share, not the removed share.",
+        "reversed_division": "Check the division order. The given final amount is the quantity being scaled back; the multiplier is the scale factor.",
+        "check_unit": "Give the original money amount in dollars.",
+        "check_number_format": "Check the comma grouping. Separate groups of three digits, or leave commas out. Use a decimal point for decimal values."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-11-P05",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "After a 35% decrease, the final amount is 520. Work out the original amount.",
+      "target": "Reconstruct an original amount before a percentage decrease",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "original",
+            "label": "Original amount",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true,
+            "grouped_numbers": true,
+            "signed_evidence": true
+          }
+        ],
+        "error_values": [
+          {
+            "field": "original",
+            "value": "520",
+            "classification": "final_as_original"
+          },
+          {
+            "field": "original",
+            "value": "520*0.65",
+            "classification": "forward_again"
+          },
+          {
+            "field": "original",
+            "value": "520*(1+35/100)",
+            "classification": "add_to_final"
+          },
+          {
+            "field": "original",
+            "value": "520/(35/100)",
+            "classification": "divide_by_rate"
+          },
+          {
+            "field": "original",
+            "value": "0.65/520",
+            "classification": "reversed_division"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Exact numerical calculations and equivalent valid methods are accepted unless a particular form is requested. Units are printed beside number boxes. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "original": "800"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The forward decrease confirms this larger original amount.",
+        "correct_after_support": "The forward decrease confirms this larger original amount.",
+        "on_correct_math": "Remaining multiplier = 1 − 35/100 = 0.65. → Original = 520 ÷ 0.65 = 800. → Check: 800 × 0.65 = 520. → Original 800 is larger than final 520.",
+        "on_incorrect_attempt_1": "The given amount is what remains after the decrease. Identify its remaining share before reconstructing the complete original.",
+        "on_incorrect_attempt_2": "The working undoes the remaining multiplier, then checks that reducing the reconstructed original returns to the final amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Remaining multiplier = 1 − 35/100 = 0.65. → Original = 520 ÷ 0.65 = 800. → Check: 800 × 0.65 = 520. → Original 800 is larger than final 520."
+      },
+      "mathematical_support": {
+        "hint_1": "The given amount is what remains after the decrease. Identify its remaining share before reconstructing the complete original.",
+        "hint_2": "The working undoes the remaining multiplier, then checks that reducing the reconstructed original returns to the final amount.",
+        "worked_solution": "Remaining multiplier = 1 − 35/100 = 0.65. → Original = 520 ÷ 0.65 = 800. → Check: 800 × 0.65 = 520. → Original 800 is larger than final 520."
+      },
+      "working": [
+        "Remaining multiplier = 1 − 35/100 = 0.65.",
+        "Original = 520 ÷ 0.65 = 800.",
+        "Check: 800 × 0.65 = 520.",
+        "Original 800 is larger than final 520."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "After a 35% decrease, the final amount is 520. Work out the original amount.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Remaining multiplier = 1 − 35/100 = 0.65.",
+            "Original = 520 ÷ 0.65 = 800.",
+            "Check: 800 × 0.65 = 520.",
+            "Original 800 is larger than final 520."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_original": "Reconstruct the amount before the decrease. Check the remaining multiplier and the order of the reverse calculation.",
+        "final_as_original": "That is the given final amount, not the amount before the decrease.",
+        "forward_again": "That result is below the final amount. The original before this decrease must be larger.",
+        "add_to_final": "That value does not undo this decrease. The stated percentage uses the original as its base, not the final amount.",
+        "divide_by_rate": "This result does not reconstruct the original whole. The final amount belongs to the remaining share, not the removed share.",
+        "reversed_division": "Check the division order. The given final amount is the quantity being scaled back; the multiplier is the scale factor.",
+        "check_unit": "Give the original quantity, not a percentage.",
+        "check_number_format": "Check the comma grouping. Separate groups of three digits, or leave commas out. Use a decimal point for decimal values."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-11-P06",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "After a 17.5% decrease, the final amount is $660. Work out the original amount.",
+      "target": "Reconstruct an original amount before a percentage decrease",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "original",
+            "label": "Original amount",
+            "kind": "number",
+            "unit": "$",
+            "allow_expression": true,
+            "grouped_numbers": true,
+            "money_display": true,
+            "signed_evidence": true
+          }
+        ],
+        "error_values": [
+          {
+            "field": "original",
+            "value": "660",
+            "classification": "final_as_original"
+          },
+          {
+            "field": "original",
+            "value": "660*0.825",
+            "classification": "forward_again"
+          },
+          {
+            "field": "original",
+            "value": "660*(1+17.5/100)",
+            "classification": "add_to_final"
+          },
+          {
+            "field": "original",
+            "value": "660/(17.5/100)",
+            "classification": "divide_by_rate"
+          },
+          {
+            "field": "original",
+            "value": "0.825/660",
+            "classification": "reversed_division"
+          },
+          {
+            "field": "original",
+            "value": "660/0.83",
+            "classification": "rounded_multiplier"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Exact numerical calculations and equivalent valid methods are accepted unless a particular form is requested. Units are printed beside number boxes. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "original": "800"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The exact decimal rate is retained when reconstructing the original.",
+        "correct_after_support": "The exact decimal rate is retained when reconstructing the original.",
+        "on_correct_math": "Remaining multiplier = 1 − 17.5/100 = 0.825. → Original = $660 ÷ 0.825 = $800. → Check: $800 × 0.825 = $660. → Original $800 is larger than final $660.",
+        "on_incorrect_attempt_1": "The given amount is what remains after the decrease. Identify its remaining share before reconstructing the complete original.",
+        "on_incorrect_attempt_2": "The working undoes the remaining multiplier, then checks that reducing the reconstructed original returns to the final amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Remaining multiplier = 1 − 17.5/100 = 0.825. → Original = $660 ÷ 0.825 = $800. → Check: $800 × 0.825 = $660. → Original $800 is larger than final $660."
+      },
+      "mathematical_support": {
+        "hint_1": "The given amount is what remains after the decrease. Identify its remaining share before reconstructing the complete original.",
+        "hint_2": "The working undoes the remaining multiplier, then checks that reducing the reconstructed original returns to the final amount.",
+        "worked_solution": "Remaining multiplier = 1 − 17.5/100 = 0.825. → Original = $660 ÷ 0.825 = $800. → Check: $800 × 0.825 = $660. → Original $800 is larger than final $660."
+      },
+      "working": [
+        "Remaining multiplier = 1 − 17.5/100 = 0.825.",
+        "Original = $660 ÷ 0.825 = $800.",
+        "Check: $800 × 0.825 = $660.",
+        "Original $800 is larger than final $660."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "After a 17.5% decrease, the final amount is $660. Work out the original amount.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Remaining multiplier = 1 − 17.5/100 = 0.825.",
+            "Original = $660 ÷ 0.825 = $800.",
+            "Check: $800 × 0.825 = $660.",
+            "Original $800 is larger than final $660."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_original": "Reconstruct the amount before the decrease. Check the remaining multiplier and the order of the reverse calculation.",
+        "final_as_original": "That is the given final amount, not the amount before the decrease.",
+        "forward_again": "That result is below the final amount. The original before this decrease must be larger.",
+        "add_to_final": "That value does not undo this decrease. The stated percentage uses the original as its base, not the final amount.",
+        "divide_by_rate": "This result does not reconstruct the original whole. The final amount belongs to the remaining share, not the removed share.",
+        "reversed_division": "Check the division order. The given final amount is the quantity being scaled back; the multiplier is the scale factor.",
+        "check_unit": "Give the original money amount in dollars.",
+        "check_number_format": "Check the comma grouping. Separate groups of three digits, or leave commas out. Use a decimal point for decimal values.",
+        "rounded_multiplier": "This value does not match the exact stated rate. Keep every digit of the multiplier until the original amount has been calculated."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-11-P07",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Which multiplier represents a decrease of 9%?",
+      "target": "Reconstruct an original amount before a percentage decrease",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "0.09",
+          "0.91",
+          "1.09",
+          "1.90"
+        ],
+        "math_layout": "symbolic_compound_fraction"
+      },
+      "answer": {
+        "value": "0.91"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The remaining multiplier excludes the nine hundredths removed.",
+        "correct_after_support": "The remaining multiplier excludes the nine hundredths removed.",
+        "on_correct_math": "9% = 0.09. → Remaining multiplier = 1 − 0.09 = 0.91.",
+        "on_incorrect_attempt_1": "Use the share that remains of the original whole.",
+        "on_incorrect_attempt_2": "Subtract the decimal decrease from one whole.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "9% = 0.09. → Remaining multiplier = 1 − 0.09 = 0.91."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the share that remains of the original whole.",
+        "hint_2": "Subtract the decimal decrease from one whole.",
+        "worked_solution": "9% = 0.09. → Remaining multiplier = 1 − 0.09 = 0.91."
+      },
+      "working": [
+        "9% = 0.09.",
+        "Remaining multiplier = 1 − 0.09 = 0.91."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "Which multiplier represents a decrease of 9%?",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "9% = 0.09.",
+            "Remaining multiplier = 1 − 0.09 = 0.91."
+          ]
+        }
+      },
+      "response_feedback": {
+        "0.09": "This is the share removed, not the share remaining.",
+        "1.09": "This represents an increase, not a decrease.",
+        "1.90": "This represents a much larger increase instead of the stated decrease."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-11-X01",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A bicycle is reduced in price by 18%. The sale price is $656. Work out the price before the reduction.",
+      "target": "Reconstruct an original amount before a percentage decrease",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "original",
+            "label": "Original price",
+            "kind": "number",
+            "unit": "$",
+            "allow_expression": true,
+            "grouped_numbers": true,
+            "money_display": true,
+            "signed_evidence": true
+          }
+        ],
+        "error_values": [
+          {
+            "field": "original",
+            "value": "656",
+            "classification": "final_as_original"
+          },
+          {
+            "field": "original",
+            "value": "656*0.82",
+            "classification": "forward_again"
+          },
+          {
+            "field": "original",
+            "value": "656*(1+18/100)",
+            "classification": "add_to_final"
+          },
+          {
+            "field": "original",
+            "value": "656/(18/100)",
+            "classification": "divide_by_rate"
+          },
+          {
+            "field": "original",
+            "value": "0.82/656",
+            "classification": "reversed_division"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Exact numerical calculations and equivalent valid methods are accepted unless a particular form is requested. Units are printed beside number boxes. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "original": "800"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The original bicycle price includes the part removed by the discount.",
+        "correct_after_support": "The original bicycle price includes the part removed by the discount.",
+        "on_correct_math": "Remaining multiplier = 1 − 18/100 = 0.82. → Original = $656 ÷ 0.82 = $800. → Check: $800 × 0.82 = $656. → Original $800 is larger than final $656.",
+        "on_incorrect_attempt_1": "The given amount is what remains after the decrease. Identify its remaining share before reconstructing the complete original.",
+        "on_incorrect_attempt_2": "The working undoes the remaining multiplier, then checks that reducing the reconstructed original returns to the final amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Remaining multiplier = 1 − 18/100 = 0.82. → Original = $656 ÷ 0.82 = $800. → Check: $800 × 0.82 = $656. → Original $800 is larger than final $656."
+      },
+      "mathematical_support": {
+        "hint_1": "The given amount is what remains after the decrease. Identify its remaining share before reconstructing the complete original.",
+        "hint_2": "The working undoes the remaining multiplier, then checks that reducing the reconstructed original returns to the final amount.",
+        "worked_solution": "Remaining multiplier = 1 − 18/100 = 0.82. → Original = $656 ÷ 0.82 = $800. → Check: $800 × 0.82 = $656. → Original $800 is larger than final $656."
+      },
+      "working": [
+        "Remaining multiplier = 1 − 18/100 = 0.82.",
+        "Original = $656 ÷ 0.82 = $800.",
+        "Check: $800 × 0.82 = $656.",
+        "Original $800 is larger than final $656."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A bicycle is reduced in price by 18%. The sale price is $656. Work out the price before the reduction.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Remaining multiplier = 1 − 18/100 = 0.82.",
+            "Original = $656 ÷ 0.82 = $800.",
+            "Check: $800 × 0.82 = $656.",
+            "Original $800 is larger than final $656."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_original": "Reconstruct the amount before the decrease. Check the remaining multiplier and the order of the reverse calculation.",
+        "final_as_original": "That is the given final amount, not the amount before the decrease.",
+        "forward_again": "That result is below the final amount. The original before this decrease must be larger.",
+        "add_to_final": "That value does not undo this decrease. The stated percentage uses the original as its base, not the final amount.",
+        "divide_by_rate": "This result does not reconstruct the original whole. The final amount belongs to the remaining share, not the removed share.",
+        "reversed_division": "Check the division order. The given final amount is the quantity being scaled back; the multiplier is the scale factor.",
+        "check_unit": "Give the original money amount in dollars.",
+        "check_number_format": "Check the comma grouping. Separate groups of three digits, or leave commas out. Use a decimal point for decimal values."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-11-X02",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "The population of a town decreases by 12.5%. The new population is 28,000. Work out the population before the decrease.",
+      "target": "Reconstruct an original amount before a percentage decrease",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "original",
+            "label": "Original population",
+            "kind": "number",
+            "unit": "people",
+            "allow_expression": true,
+            "grouped_numbers": true,
+            "unit_aliases": [
+              "people",
+              "person",
+              "persons"
+            ],
+            "signed_evidence": true
+          }
+        ],
+        "error_values": [
+          {
+            "field": "original",
+            "value": "28000",
+            "classification": "final_as_original"
+          },
+          {
+            "field": "original",
+            "value": "28000*0.875",
+            "classification": "forward_again"
+          },
+          {
+            "field": "original",
+            "value": "28000*(1+12.5/100)",
+            "classification": "add_to_final"
+          },
+          {
+            "field": "original",
+            "value": "28000/(12.5/100)",
+            "classification": "divide_by_rate"
+          },
+          {
+            "field": "original",
+            "value": "0.875/28000",
+            "classification": "reversed_division"
+          },
+          {
+            "field": "original",
+            "value": "28000/0.88",
+            "classification": "rounded_multiplier"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Exact numerical calculations and equivalent valid methods are accepted unless a particular form is requested. Units are printed beside number boxes. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "original": "32000"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The population before the decrease is larger than the population remaining.",
+        "correct_after_support": "The population before the decrease is larger than the population remaining.",
+        "on_correct_math": "Remaining multiplier = 1 − 12.5/100 = 0.875. → Original = 28000 people ÷ 0.875 = 32000 people. → Check: 32000 people × 0.875 = 28000 people. → Original 32000 people is larger than final 28000 people.",
+        "on_incorrect_attempt_1": "The given amount is what remains after the decrease. Identify its remaining share before reconstructing the complete original.",
+        "on_incorrect_attempt_2": "The working undoes the remaining multiplier, then checks that reducing the reconstructed original returns to the final amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Remaining multiplier = 1 − 12.5/100 = 0.875. → Original = 28000 people ÷ 0.875 = 32000 people. → Check: 32000 people × 0.875 = 28000 people. → Original 32000 people is larger than final 28000 people."
+      },
+      "mathematical_support": {
+        "hint_1": "The given amount is what remains after the decrease. Identify its remaining share before reconstructing the complete original.",
+        "hint_2": "The working undoes the remaining multiplier, then checks that reducing the reconstructed original returns to the final amount.",
+        "worked_solution": "Remaining multiplier = 1 − 12.5/100 = 0.875. → Original = 28000 people ÷ 0.875 = 32000 people. → Check: 32000 people × 0.875 = 28000 people. → Original 32000 people is larger than final 28000 people."
+      },
+      "working": [
+        "Remaining multiplier = 1 − 12.5/100 = 0.875.",
+        "Original = 28000 people ÷ 0.875 = 32000 people.",
+        "Check: 32000 people × 0.875 = 28000 people.",
+        "Original 32000 people is larger than final 28000 people."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "The population of a town decreases by 12.5%. The new population is 28,000. Work out the population before the decrease.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Remaining multiplier = 1 − 12.5/100 = 0.875.",
+            "Original = 28000 people ÷ 0.875 = 32000 people.",
+            "Check: 32000 people × 0.875 = 28000 people.",
+            "Original 32000 people is larger than final 28000 people."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_original": "Reconstruct the amount before the decrease. Check the remaining multiplier and the order of the reverse calculation.",
+        "final_as_original": "That is the given final amount, not the amount before the decrease.",
+        "forward_again": "That result is below the final amount. The original before this decrease must be larger.",
+        "add_to_final": "That value does not undo this decrease. The stated percentage uses the original as its base, not the final amount.",
+        "divide_by_rate": "This result does not reconstruct the original whole. The final amount belongs to the remaining share, not the removed share.",
+        "reversed_division": "Check the division order. The given final amount is the quantity being scaled back; the multiplier is the scale factor.",
+        "check_unit": "Give the original population as a count of people.",
+        "check_number_format": "Check the comma grouping. Separate groups of three digits, or leave commas out. Use a decimal point for decimal values.",
+        "rounded_multiplier": "This value does not match the exact stated rate. Keep every digit of the multiplier until the original amount has been calculated."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-11-X03",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "After a 6% pay reduction, a worker earns $2256 per month. Work out the worker’s monthly pay before the reduction.",
+      "target": "Reconstruct an original amount before a percentage decrease",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "original",
+            "label": "Original monthly pay",
+            "kind": "number",
+            "unit": "$",
+            "allow_expression": true,
+            "grouped_numbers": true,
+            "money_display": true,
+            "signed_evidence": true
+          }
+        ],
+        "error_values": [
+          {
+            "field": "original",
+            "value": "2256",
+            "classification": "final_as_original"
+          },
+          {
+            "field": "original",
+            "value": "2256*0.94",
+            "classification": "forward_again"
+          },
+          {
+            "field": "original",
+            "value": "2256*(1+6/100)",
+            "classification": "add_to_final"
+          },
+          {
+            "field": "original",
+            "value": "2256/(6/100)",
+            "classification": "divide_by_rate"
+          },
+          {
+            "field": "original",
+            "value": "0.94/2256",
+            "classification": "reversed_division"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Exact numerical calculations and equivalent valid methods are accepted unless a particular form is requested. Units are printed beside number boxes. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "original": "2400"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The reconstructed monthly pay is the amount before the reduction.",
+        "correct_after_support": "The reconstructed monthly pay is the amount before the reduction.",
+        "on_correct_math": "Remaining multiplier = 1 − 6/100 = 0.94. → Original = $2256 ÷ 0.94 = $2400. → Check: $2400 × 0.94 = $2256. → Original $2400 is larger than final $2256.",
+        "on_incorrect_attempt_1": "The given amount is what remains after the decrease. Identify its remaining share before reconstructing the complete original.",
+        "on_incorrect_attempt_2": "The working undoes the remaining multiplier, then checks that reducing the reconstructed original returns to the final amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Remaining multiplier = 1 − 6/100 = 0.94. → Original = $2256 ÷ 0.94 = $2400. → Check: $2400 × 0.94 = $2256. → Original $2400 is larger than final $2256."
+      },
+      "mathematical_support": {
+        "hint_1": "The given amount is what remains after the decrease. Identify its remaining share before reconstructing the complete original.",
+        "hint_2": "The working undoes the remaining multiplier, then checks that reducing the reconstructed original returns to the final amount.",
+        "worked_solution": "Remaining multiplier = 1 − 6/100 = 0.94. → Original = $2256 ÷ 0.94 = $2400. → Check: $2400 × 0.94 = $2256. → Original $2400 is larger than final $2256."
+      },
+      "working": [
+        "Remaining multiplier = 1 − 6/100 = 0.94.",
+        "Original = $2256 ÷ 0.94 = $2400.",
+        "Check: $2400 × 0.94 = $2256.",
+        "Original $2400 is larger than final $2256."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "After a 6% pay reduction, a worker earns $2256 per month. Work out the worker’s monthly pay before the reduction.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Remaining multiplier = 1 − 6/100 = 0.94.",
+            "Original = $2256 ÷ 0.94 = $2400.",
+            "Check: $2400 × 0.94 = $2256.",
+            "Original $2400 is larger than final $2256."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_original": "Reconstruct the amount before the decrease. Check the remaining multiplier and the order of the reverse calculation.",
+        "final_as_original": "That is the given final amount, not the amount before the decrease.",
+        "forward_again": "That result is below the final amount. The original before this decrease must be larger.",
+        "add_to_final": "That value does not undo this decrease. The stated percentage uses the original as its base, not the final amount.",
+        "divide_by_rate": "This result does not reconstruct the original whole. The final amount belongs to the remaining share, not the removed share.",
+        "reversed_division": "Check the division order. The given final amount is the quantity being scaled back; the multiplier is the scale factor.",
+        "check_unit": "Give the original money amount in dollars.",
+        "check_number_format": "Check the comma grouping. Separate groups of three digits, or leave commas out. Use a decimal point for decimal values."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-11-X04",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A container holds 17.6% less water than before. It now holds 412 litres. Work out the amount of water it held before the decrease.",
+      "target": "Reconstruct an original amount before a percentage decrease",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "original",
+            "label": "Original amount",
+            "kind": "number",
+            "unit": "litres",
+            "allow_expression": true,
+            "grouped_numbers": true,
+            "unit_aliases": [
+              "l",
+              "litre",
+              "litres",
+              "liter",
+              "liters"
+            ],
+            "signed_evidence": true
+          }
+        ],
+        "error_values": [
+          {
+            "field": "original",
+            "value": "412",
+            "classification": "final_as_original"
+          },
+          {
+            "field": "original",
+            "value": "412*0.824",
+            "classification": "forward_again"
+          },
+          {
+            "field": "original",
+            "value": "412*(1+17.6/100)",
+            "classification": "add_to_final"
+          },
+          {
+            "field": "original",
+            "value": "412/(17.6/100)",
+            "classification": "divide_by_rate"
+          },
+          {
+            "field": "original",
+            "value": "0.824/412",
+            "classification": "reversed_division"
+          },
+          {
+            "field": "original",
+            "value": "412/0.82",
+            "classification": "rounded_multiplier"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Exact numerical calculations and equivalent valid methods are accepted unless a particular form is requested. Units are printed beside number boxes. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "original": "500"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The exact remaining multiplier reconstructs the earlier water amount.",
+        "correct_after_support": "The exact remaining multiplier reconstructs the earlier water amount.",
+        "on_correct_math": "Remaining multiplier = 1 − 17.6/100 = 0.824. → Original = 412 litres ÷ 0.824 = 500 litres. → Check: 500 litres × 0.824 = 412 litres. → Original 500 litres is larger than final 412 litres.",
+        "on_incorrect_attempt_1": "The given amount is what remains after the decrease. Identify its remaining share before reconstructing the complete original.",
+        "on_incorrect_attempt_2": "The working undoes the remaining multiplier, then checks that reducing the reconstructed original returns to the final amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Remaining multiplier = 1 − 17.6/100 = 0.824. → Original = 412 litres ÷ 0.824 = 500 litres. → Check: 500 litres × 0.824 = 412 litres. → Original 500 litres is larger than final 412 litres."
+      },
+      "mathematical_support": {
+        "hint_1": "The given amount is what remains after the decrease. Identify its remaining share before reconstructing the complete original.",
+        "hint_2": "The working undoes the remaining multiplier, then checks that reducing the reconstructed original returns to the final amount.",
+        "worked_solution": "Remaining multiplier = 1 − 17.6/100 = 0.824. → Original = 412 litres ÷ 0.824 = 500 litres. → Check: 500 litres × 0.824 = 412 litres. → Original 500 litres is larger than final 412 litres."
+      },
+      "working": [
+        "Remaining multiplier = 1 − 17.6/100 = 0.824.",
+        "Original = 412 litres ÷ 0.824 = 500 litres.",
+        "Check: 500 litres × 0.824 = 412 litres.",
+        "Original 500 litres is larger than final 412 litres."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A container holds 17.6% less water than before. It now holds 412 litres. Work out the amount of water it held before the decrease.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Remaining multiplier = 1 − 17.6/100 = 0.824.",
+            "Original = 412 litres ÷ 0.824 = 500 litres.",
+            "Check: 500 litres × 0.824 = 412 litres.",
+            "Original 500 litres is larger than final 412 litres."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_original": "Reconstruct the amount before the decrease. Check the remaining multiplier and the order of the reverse calculation.",
+        "final_as_original": "That is the given final amount, not the amount before the decrease.",
+        "forward_again": "That result is below the final amount. The original before this decrease must be larger.",
+        "add_to_final": "That value does not undo this decrease. The stated percentage uses the original as its base, not the final amount.",
+        "divide_by_rate": "This result does not reconstruct the original whole. The final amount belongs to the remaining share, not the removed share.",
+        "reversed_division": "Check the division order. The given final amount is the quantity being scaled back; the multiplier is the scale factor.",
+        "check_unit": "Give the original capacity in litres.",
+        "check_number_format": "Check the comma grouping. Separate groups of three digits, or leave commas out. Use a decimal point for decimal values.",
+        "rounded_multiplier": "This value does not match the exact stated rate. Keep every digit of the multiplier until the original amount has been calculated."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-11-X05",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A value becomes 0.68 times its original value. The final value is 544. Which calculation finds the original value?",
+      "target": "Reconstruct an original amount before a percentage decrease",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "544 × 0.68",
+          "544 ÷ 0.68",
+          "544 ÷ 0.32",
+          "544 + 32"
+        ],
+        "math_layout": "symbolic_compound_fraction"
+      },
+      "answer": {
+        "value": "544 ÷ 0.68"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The inverse operation returns from the remaining value to the original.",
+        "correct_after_support": "The inverse operation returns from the remaining value to the original.",
+        "on_correct_math": "Forward: original × 0.68 = 544. → Reverse: 544 ÷ 0.68.",
+        "on_incorrect_attempt_1": "Undo the scale factor already applied to the original.",
+        "on_incorrect_attempt_2": "The final value represents the remaining share, and division reverses its scaling.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Forward: original × 0.68 = 544. → Reverse: 544 ÷ 0.68."
+      },
+      "mathematical_support": {
+        "hint_1": "Undo the scale factor already applied to the original.",
+        "hint_2": "The final value represents the remaining share, and division reverses its scaling.",
+        "worked_solution": "Forward: original × 0.68 = 544. → Reverse: 544 ÷ 0.68."
+      },
+      "working": [
+        "Forward: original × 0.68 = 544.",
+        "Reverse: 544 ÷ 0.68."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A value becomes 0.68 times its original value. The final value is 544. Which calculation finds the original value?",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Forward: original × 0.68 = 544.",
+            "Reverse: 544 ÷ 0.68."
+          ]
+        }
+      },
+      "response_feedback": {
+        "544 × 0.68": "This scales the final value down again.",
+        "544 ÷ 0.32": "This divides by the removed share instead of the remaining share.",
+        "544 + 32": "The reduction was multiplicative, not a fixed subtraction of thirty-two."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-11-E01",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "After a 21% decrease, the final amount is $632. Work out the original amount.",
+      "target": "Reconstruct an original amount before a percentage decrease",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "original",
+            "label": "Original amount",
+            "kind": "number",
+            "unit": "$",
+            "allow_expression": true,
+            "grouped_numbers": true,
+            "money_display": true,
+            "signed_evidence": true
+          }
+        ],
+        "error_values": [
+          {
+            "field": "original",
+            "value": "632",
+            "classification": "final_as_original"
+          },
+          {
+            "field": "original",
+            "value": "632*0.79",
+            "classification": "forward_again"
+          },
+          {
+            "field": "original",
+            "value": "632*(1+21/100)",
+            "classification": "add_to_final"
+          },
+          {
+            "field": "original",
+            "value": "632/(21/100)",
+            "classification": "divide_by_rate"
+          },
+          {
+            "field": "original",
+            "value": "0.79/632",
+            "classification": "reversed_division"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Exact numerical calculations and equivalent valid methods are accepted unless a particular form is requested. Units are printed beside number boxes. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "original": "800"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The original is reconstructed and reduces back to the given final price.",
+        "correct_after_support": "The original is reconstructed and reduces back to the given final price.",
+        "on_correct_math": "Remaining multiplier = 1 − 21/100 = 0.79. → Original = $632 ÷ 0.79 = $800. → Check: $800 × 0.79 = $632. → Original $800 is larger than final $632.",
+        "on_incorrect_attempt_1": "The given amount is what remains after the decrease. Identify its remaining share before reconstructing the complete original.",
+        "on_incorrect_attempt_2": "The working undoes the remaining multiplier, then checks that reducing the reconstructed original returns to the final amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Remaining multiplier = 1 − 21/100 = 0.79. → Original = $632 ÷ 0.79 = $800. → Check: $800 × 0.79 = $632. → Original $800 is larger than final $632."
+      },
+      "mathematical_support": {
+        "hint_1": "The given amount is what remains after the decrease. Identify its remaining share before reconstructing the complete original.",
+        "hint_2": "The working undoes the remaining multiplier, then checks that reducing the reconstructed original returns to the final amount.",
+        "worked_solution": "Remaining multiplier = 1 − 21/100 = 0.79. → Original = $632 ÷ 0.79 = $800. → Check: $800 × 0.79 = $632. → Original $800 is larger than final $632."
+      },
+      "working": [
+        "Remaining multiplier = 1 − 21/100 = 0.79.",
+        "Original = $632 ÷ 0.79 = $800.",
+        "Check: $800 × 0.79 = $632.",
+        "Original $800 is larger than final $632."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "After a 21% decrease, the final amount is $632. Work out the original amount.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Remaining multiplier = 1 − 21/100 = 0.79.",
+            "Original = $632 ÷ 0.79 = $800.",
+            "Check: $800 × 0.79 = $632.",
+            "Original $800 is larger than final $632."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_original": "Reconstruct the amount before the decrease. Check the remaining multiplier and the order of the reverse calculation.",
+        "final_as_original": "That is the given final amount, not the amount before the decrease.",
+        "forward_again": "That result is below the final amount. The original before this decrease must be larger.",
+        "add_to_final": "That value does not undo this decrease. The stated percentage uses the original as its base, not the final amount.",
+        "divide_by_rate": "This result does not reconstruct the original whole. The final amount belongs to the remaining share, not the removed share.",
+        "reversed_division": "Check the division order. The given final amount is the quantity being scaled back; the multiplier is the scale factor.",
+        "check_unit": "Give the original money amount in dollars.",
+        "check_number_format": "Check the comma grouping. Separate groups of three digits, or leave commas out. Use a decimal point for decimal values."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-11-E02",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "After a 14% decrease, the final amount is 688. Work out the original amount.",
+      "target": "Reconstruct an original amount before a percentage decrease",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "original",
+            "label": "Original amount",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true,
+            "grouped_numbers": true,
+            "signed_evidence": true
+          }
+        ],
+        "error_values": [
+          {
+            "field": "original",
+            "value": "688",
+            "classification": "final_as_original"
+          },
+          {
+            "field": "original",
+            "value": "688*0.86",
+            "classification": "forward_again"
+          },
+          {
+            "field": "original",
+            "value": "688*(1+14/100)",
+            "classification": "add_to_final"
+          },
+          {
+            "field": "original",
+            "value": "688/(14/100)",
+            "classification": "divide_by_rate"
+          },
+          {
+            "field": "original",
+            "value": "0.86/688",
+            "classification": "reversed_division"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Exact numerical calculations and equivalent valid methods are accepted unless a particular form is requested. Units are printed beside number boxes. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "original": "800"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The remaining share has been scaled back to its original whole.",
+        "correct_after_support": "The remaining share has been scaled back to its original whole.",
+        "on_correct_math": "Remaining multiplier = 1 − 14/100 = 0.86. → Original = 688 ÷ 0.86 = 800. → Check: 800 × 0.86 = 688. → Original 800 is larger than final 688.",
+        "on_incorrect_attempt_1": "The given amount is what remains after the decrease. Identify its remaining share before reconstructing the complete original.",
+        "on_incorrect_attempt_2": "The working undoes the remaining multiplier, then checks that reducing the reconstructed original returns to the final amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Remaining multiplier = 1 − 14/100 = 0.86. → Original = 688 ÷ 0.86 = 800. → Check: 800 × 0.86 = 688. → Original 800 is larger than final 688."
+      },
+      "mathematical_support": {
+        "hint_1": "The given amount is what remains after the decrease. Identify its remaining share before reconstructing the complete original.",
+        "hint_2": "The working undoes the remaining multiplier, then checks that reducing the reconstructed original returns to the final amount.",
+        "worked_solution": "Remaining multiplier = 1 − 14/100 = 0.86. → Original = 688 ÷ 0.86 = 800. → Check: 800 × 0.86 = 688. → Original 800 is larger than final 688."
+      },
+      "working": [
+        "Remaining multiplier = 1 − 14/100 = 0.86.",
+        "Original = 688 ÷ 0.86 = 800.",
+        "Check: 800 × 0.86 = 688.",
+        "Original 800 is larger than final 688."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "After a 14% decrease, the final amount is 688. Work out the original amount.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Remaining multiplier = 1 − 14/100 = 0.86.",
+            "Original = 688 ÷ 0.86 = 800.",
+            "Check: 800 × 0.86 = 688.",
+            "Original 800 is larger than final 688."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_original": "Reconstruct the amount before the decrease. Check the remaining multiplier and the order of the reverse calculation.",
+        "final_as_original": "That is the given final amount, not the amount before the decrease.",
+        "forward_again": "That result is below the final amount. The original before this decrease must be larger.",
+        "add_to_final": "That value does not undo this decrease. The stated percentage uses the original as its base, not the final amount.",
+        "divide_by_rate": "This result does not reconstruct the original whole. The final amount belongs to the remaining share, not the removed share.",
+        "reversed_division": "Check the division order. The given final amount is the quantity being scaled back; the multiplier is the scale factor.",
+        "check_unit": "Give the original quantity, not a percentage.",
+        "check_number_format": "Check the comma grouping. Separate groups of three digits, or leave commas out. Use a decimal point for decimal values."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-11-E03",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "After a 7.5% decrease, the final mass is 740 kg. Work out the original mass.",
+      "target": "Reconstruct an original amount before a percentage decrease",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "original",
+            "label": "Original mass",
+            "kind": "number",
+            "unit": "kg",
+            "allow_expression": true,
+            "grouped_numbers": true,
+            "unit_aliases": [
+              "kg",
+              "kilogram",
+              "kilograms"
+            ],
+            "signed_evidence": true
+          }
+        ],
+        "error_values": [
+          {
+            "field": "original",
+            "value": "740",
+            "classification": "final_as_original"
+          },
+          {
+            "field": "original",
+            "value": "740*0.925",
+            "classification": "forward_again"
+          },
+          {
+            "field": "original",
+            "value": "740*(1+7.5/100)",
+            "classification": "add_to_final"
+          },
+          {
+            "field": "original",
+            "value": "740/(7.5/100)",
+            "classification": "divide_by_rate"
+          },
+          {
+            "field": "original",
+            "value": "0.925/740",
+            "classification": "reversed_division"
+          },
+          {
+            "field": "original",
+            "value": "740/0.93",
+            "classification": "rounded_multiplier"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Exact numerical calculations and equivalent valid methods are accepted unless a particular form is requested. Units are printed beside number boxes. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "original": "800"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The exact remaining multiplier recovers the mass before the decrease.",
+        "correct_after_support": "The exact remaining multiplier recovers the mass before the decrease.",
+        "on_correct_math": "Remaining multiplier = 1 − 7.5/100 = 0.925. → Original = 740 kg ÷ 0.925 = 800 kg. → Check: 800 kg × 0.925 = 740 kg. → Original 800 kg is larger than final 740 kg.",
+        "on_incorrect_attempt_1": "The given amount is what remains after the decrease. Identify its remaining share before reconstructing the complete original.",
+        "on_incorrect_attempt_2": "The working undoes the remaining multiplier, then checks that reducing the reconstructed original returns to the final amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Remaining multiplier = 1 − 7.5/100 = 0.925. → Original = 740 kg ÷ 0.925 = 800 kg. → Check: 800 kg × 0.925 = 740 kg. → Original 800 kg is larger than final 740 kg."
+      },
+      "mathematical_support": {
+        "hint_1": "The given amount is what remains after the decrease. Identify its remaining share before reconstructing the complete original.",
+        "hint_2": "The working undoes the remaining multiplier, then checks that reducing the reconstructed original returns to the final amount.",
+        "worked_solution": "Remaining multiplier = 1 − 7.5/100 = 0.925. → Original = 740 kg ÷ 0.925 = 800 kg. → Check: 800 kg × 0.925 = 740 kg. → Original 800 kg is larger than final 740 kg."
+      },
+      "working": [
+        "Remaining multiplier = 1 − 7.5/100 = 0.925.",
+        "Original = 740 kg ÷ 0.925 = 800 kg.",
+        "Check: 800 kg × 0.925 = 740 kg.",
+        "Original 800 kg is larger than final 740 kg."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "After a 7.5% decrease, the final mass is 740 kg. Work out the original mass.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Remaining multiplier = 1 − 7.5/100 = 0.925.",
+            "Original = 740 kg ÷ 0.925 = 800 kg.",
+            "Check: 800 kg × 0.925 = 740 kg.",
+            "Original 800 kg is larger than final 740 kg."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_original": "Reconstruct the amount before the decrease. Check the remaining multiplier and the order of the reverse calculation.",
+        "final_as_original": "That is the given final amount, not the amount before the decrease.",
+        "forward_again": "That result is below the final amount. The original before this decrease must be larger.",
+        "add_to_final": "That value does not undo this decrease. The stated percentage uses the original as its base, not the final amount.",
+        "divide_by_rate": "This result does not reconstruct the original whole. The final amount belongs to the remaining share, not the removed share.",
+        "reversed_division": "Check the division order. The given final amount is the quantity being scaled back; the multiplier is the scale factor.",
+        "check_unit": "Give the original mass in kilograms.",
+        "check_number_format": "Check the comma grouping. Separate groups of three digits, or leave commas out. Use a decimal point for decimal values.",
+        "rounded_multiplier": "This value does not match the exact stated rate. Keep every digit of the multiplier until the original amount has been calculated."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-11-E04",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "After a 32% decrease, the final amount is 544. Work out the original amount.",
+      "target": "Reconstruct an original amount before a percentage decrease",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "original",
+            "label": "Original amount",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true,
+            "grouped_numbers": true,
+            "signed_evidence": true
+          }
+        ],
+        "error_values": [
+          {
+            "field": "original",
+            "value": "544",
+            "classification": "final_as_original"
+          },
+          {
+            "field": "original",
+            "value": "544*0.68",
+            "classification": "forward_again"
+          },
+          {
+            "field": "original",
+            "value": "544*(1+32/100)",
+            "classification": "add_to_final"
+          },
+          {
+            "field": "original",
+            "value": "544/(32/100)",
+            "classification": "divide_by_rate"
+          },
+          {
+            "field": "original",
+            "value": "0.68/544",
+            "classification": "reversed_division"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Exact numerical calculations and equivalent valid methods are accepted unless a particular form is requested. Units are printed beside number boxes. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "original": "800"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The original is larger than the final and passes the forward check.",
+        "correct_after_support": "The original is larger than the final and passes the forward check.",
+        "on_correct_math": "Remaining multiplier = 1 − 32/100 = 0.68. → Original = 544 ÷ 0.68 = 800. → Check: 800 × 0.68 = 544. → Original 800 is larger than final 544.",
+        "on_incorrect_attempt_1": "The given amount is what remains after the decrease. Identify its remaining share before reconstructing the complete original.",
+        "on_incorrect_attempt_2": "The working undoes the remaining multiplier, then checks that reducing the reconstructed original returns to the final amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Remaining multiplier = 1 − 32/100 = 0.68. → Original = 544 ÷ 0.68 = 800. → Check: 800 × 0.68 = 544. → Original 800 is larger than final 544."
+      },
+      "mathematical_support": {
+        "hint_1": "The given amount is what remains after the decrease. Identify its remaining share before reconstructing the complete original.",
+        "hint_2": "The working undoes the remaining multiplier, then checks that reducing the reconstructed original returns to the final amount.",
+        "worked_solution": "Remaining multiplier = 1 − 32/100 = 0.68. → Original = 544 ÷ 0.68 = 800. → Check: 800 × 0.68 = 544. → Original 800 is larger than final 544."
+      },
+      "working": [
+        "Remaining multiplier = 1 − 32/100 = 0.68.",
+        "Original = 544 ÷ 0.68 = 800.",
+        "Check: 800 × 0.68 = 544.",
+        "Original 800 is larger than final 544."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "After a 32% decrease, the final amount is 544. Work out the original amount.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Remaining multiplier = 1 − 32/100 = 0.68.",
+            "Original = 544 ÷ 0.68 = 800.",
+            "Check: 800 × 0.68 = 544.",
+            "Original 800 is larger than final 544."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_original": "Reconstruct the amount before the decrease. Check the remaining multiplier and the order of the reverse calculation.",
+        "final_as_original": "That is the given final amount, not the amount before the decrease.",
+        "forward_again": "That result is below the final amount. The original before this decrease must be larger.",
+        "add_to_final": "That value does not undo this decrease. The stated percentage uses the original as its base, not the final amount.",
+        "divide_by_rate": "This result does not reconstruct the original whole. The final amount belongs to the remaining share, not the removed share.",
+        "reversed_division": "Check the division order. The given final amount is the quantity being scaled back; the multiplier is the scale factor.",
+        "check_unit": "Give the original quantity, not a percentage.",
+        "check_number_format": "Check the comma grouping. Separate groups of three digits, or leave commas out. Use a decimal point for decimal values."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-11-E05",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "Which multiplier represents a decrease of 11%?",
+      "target": "Reconstruct an original amount before a percentage decrease",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "0.11",
+          "0.89",
+          "1.11",
+          "1.89"
+        ],
+        "math_layout": "symbolic_compound_fraction"
+      },
+      "answer": {
+        "value": "0.89"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The multiplier measures the remaining share rather than the decrease.",
+        "correct_after_support": "The multiplier measures the remaining share rather than the decrease.",
+        "on_correct_math": "11% = 0.11. → Remaining multiplier = 1 − 0.11 = 0.89.",
+        "on_incorrect_attempt_1": "Find the share of the original remaining after the decrease.",
+        "on_incorrect_attempt_2": "The multiplier represents what remains after the decimal decrease is subtracted.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "11% = 0.11. → Remaining multiplier = 1 − 0.11 = 0.89."
+      },
+      "mathematical_support": {
+        "hint_1": "Find the share of the original remaining after the decrease.",
+        "hint_2": "The multiplier represents what remains after the decimal decrease is subtracted.",
+        "worked_solution": "11% = 0.11. → Remaining multiplier = 1 − 0.11 = 0.89."
+      },
+      "working": [
+        "11% = 0.11.",
+        "Remaining multiplier = 1 − 0.11 = 0.89."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "Which multiplier represents a decrease of 11%?",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "11% = 0.11.",
+            "Remaining multiplier = 1 − 0.11 = 0.89."
+          ]
+        }
+      },
+      "response_feedback": {
+        "0.11": "This is the share removed, not the share remaining.",
+        "1.11": "This is an increase multiplier.",
+        "1.89": "This adds a remaining share to a whole instead of representing the reduced amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-11-E06",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "After an 18% decrease, a final amount is $656. Which complete route is correct?",
+      "target": "Reconstruct an original amount before a percentage decrease",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Form 0.82, then calculate 656 ÷ 0.82.",
+          "Form 0.18, then calculate 656 ÷ 0.18.",
+          "Form 0.82, then calculate 656 × 0.82.",
+          "Calculate 18% of $656 and add it."
+        ],
+        "math_layout": "symbolic_compound_fraction"
+      },
+      "answer": {
+        "value": "Form 0.82, then calculate 656 ÷ 0.82."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The route reconstructs the original with the remaining multiplier and inverse operation.",
+        "correct_after_support": "The route reconstructs the original with the remaining multiplier and inverse operation.",
+        "on_correct_math": "Remaining multiplier = 1 − 0.18 = 0.82. → Original = $656 ÷ 0.82 = $800.",
+        "on_incorrect_attempt_1": "Choose the remaining multiplier and the operation that reverses its effect.",
+        "on_incorrect_attempt_2": "The final amount is already reduced. Reverse its remaining scale, rather than applying another change to it.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Remaining multiplier = 1 − 0.18 = 0.82. → Original = $656 ÷ 0.82 = $800."
+      },
+      "mathematical_support": {
+        "hint_1": "Choose the remaining multiplier and the operation that reverses its effect.",
+        "hint_2": "The final amount is already reduced. Reverse its remaining scale, rather than applying another change to it.",
+        "worked_solution": "Remaining multiplier = 1 − 0.18 = 0.82. → Original = $656 ÷ 0.82 = $800."
+      },
+      "working": [
+        "Remaining multiplier = 1 − 0.18 = 0.82.",
+        "Original = $656 ÷ 0.82 = $800."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "After an 18% decrease, a final amount is $656. Which complete route is correct?",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Remaining multiplier = 1 − 0.18 = 0.82.",
+            "Original = $656 ÷ 0.82 = $800."
+          ]
+        }
+      },
+      "response_feedback": {
+        "Form 0.18, then calculate 656 ÷ 0.18.": "This uses the removed share as the multiplier for the final amount.",
+        "Form 0.82, then calculate 656 × 0.82.": "This reduces the final amount again.",
+        "Calculate 18% of $656 and add it.": "This uses the final amount as the percentage base instead of the original."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    }
+  ],
+  "canonical_lesson": {
+    "version": "PC11-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

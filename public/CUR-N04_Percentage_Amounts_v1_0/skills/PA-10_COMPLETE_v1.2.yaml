@@ -1,0 +1,3227 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "PA-10 - Find a Percentage Using a Decimal Multiplier",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-18",
+      "sha256": "328ce144dd7a988d050728f2f2010e10fed8f047d3de599617097915e4e41292"
+    },
+    "authored_scope": "Find a percentage of an amount using its decimal multiplier, including percentages below 1% and above 100%.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "PA10-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "verified_desktop_ready_phone_invalid_required_method_learning_equal_reference_bars_tenths_hundredths_student_work_drafts_keyboard_320_390_audio_captions",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        14,
+        16,
+        17,
+        18
+      ],
+      "source_repairs_consulted": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        17,
+        18
+      ],
+      "note": "All eighteen source pages and previous configuration reviewed; rendered source diagrams inspected. Restores the 0.37 tenths/hundredths model, equal-reference 60/100/135 percent bars, prescribed worked/guided examples, all 25 active questions and exactly three unsupported final checks. Required decimal methods capture conversion, multiplication and amount independently. Unrestricted production context accepts alternatives. The repeated final guided amount is explicitly prescribed. No Entry, Diagnostic, prerequisite-state mutation, delayed Retrieval or Strong state."
+    }
+  },
+  "identity": {
+    "id": "PA-10",
+    "slug": "find-a-percentage-using-a-decimal-multiplier",
+    "title": "Find a Percentage Using a Decimal Multiplier",
+    "strand": "Number",
+    "cluster": "Finding Percentages of Amounts",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Convert a percentage to its exact decimal multiplier, multiply the complete original amount and check the size of the result.",
+    "success_criteria": [
+      "Keep the decimal equivalent correct, including below one percent and above one hundred percent.",
+      "Apply that decimal to the original whole by multiplication.",
+      "Accept either multiplication order.",
+      "Check result size against multiplier size.",
+      "Retain contextual units and distinguish invalid method from an arithmetic slip.",
+      "Accept alternatives only where the source leaves method unrestricted."
+    ],
+    "boundaries": {
+      "includes": [
+        "Terminating decimal multipliers below 0.01, below 1, equal to 1 and above 1",
+        "All prescribed calculations and short contexts",
+        "Explicit method evidence only where requested"
+      ],
+      "excludes": [
+        "Efficiency selection across all methods",
+        "Money notation or rounding",
+        "Increase, decrease, change and reverse percentages",
+        "Entry, Diagnostic, prerequisite-state mutation, delayed Retrieval and Strong"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "PA-01",
+      "FDP-05"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for PA-01, FDP-05 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "single_choice",
+      "decimal_multiplier_amount"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    },
+    "place_value_profile": true
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "The decimal multiplier and percentage describe the same share of the original whole.",
+    "invariant": "The reference whole stays fixed even when the selected result is larger.",
+    "must_notice": [
+      "Divide the percentage number by one hundred.",
+      "Multiply the whole, not the percentage number or an intermediate part.",
+      "A small percentage retains its place-value zeros.",
+      "A multiplier above one gives more than one whole.",
+      "A correct final answer alone cannot prove a required visible method."
+    ],
+    "common_confusions": [
+      "Missing decimal place",
+      "Forcing every multiplier below one",
+      "Unconverted percentage number",
+      "Divide instead of multiply",
+      "Wrong original whole",
+      "Correct amount after invalid method",
+      "Lost contextual unit"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "Read a percentage as a decimal share",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Read a percentage as a decimal share",
+          "initial_state": "Read a percentage as a decimal share",
+          "model": {
+            "kind": "decimal_multiplier_amount",
+            "title": "A decimal multiplier selects a share of the whole",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "principle",
+            "solved": true,
+            "steps": []
+          }
+        },
+        "narration": {
+          "script": "A percentage can be written as a decimal describing the same share of one whole. The decimal multiplier is applied to the complete original amount."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Select the complete tenths",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Select the complete tenths",
+          "initial_state": "Select the complete tenths",
+          "model": {
+            "kind": "decimal_multiplier_amount",
+            "title": "Select tenths and hundredths of the same whole",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "selection",
+            "whole": 200,
+            "tenths": 3,
+            "hundredths": 7,
+            "multiplier": "0.37",
+            "percent": 37,
+            "amount": 74,
+            "solved": true,
+            "steps": [
+              "Select three complete tenths of the original two hundred.",
+              "Magnify the next tenth and select seven of its ten equal hundredths.",
+              "Three tenths and seven hundredths select seventy-four from the original two hundred."
+            ],
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "Start with ten equal tenths of the original amount. The tenths digit selects three complete tenths."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Magnify the next tenth",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Magnify the next tenth",
+          "initial_state": "Magnify the next tenth",
+          "model": {
+            "kind": "decimal_multiplier_amount",
+            "title": "Select tenths and hundredths of the same whole",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "selection",
+            "whole": 200,
+            "tenths": 3,
+            "hundredths": 7,
+            "multiplier": "0.37",
+            "percent": 37,
+            "amount": 74,
+            "solved": true,
+            "steps": [
+              "Select three complete tenths of the original two hundred.",
+              "Magnify the next tenth and select seven of its ten equal hundredths.",
+              "Three tenths and seven hundredths select seventy-four from the original two hundred."
+            ],
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "The next tenth is magnified into ten equal hundredths of the same whole. Select seven of those smaller parts as well."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Connect the selected parts to the multiplier",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Connect the selected parts to the multiplier",
+          "initial_state": "Connect the selected parts to the multiplier",
+          "model": {
+            "kind": "decimal_multiplier_amount",
+            "title": "Select tenths and hundredths of the same whole",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "selection",
+            "whole": 200,
+            "tenths": 3,
+            "hundredths": 7,
+            "multiplier": "0.37",
+            "percent": 37,
+            "amount": 74,
+            "solved": true,
+            "steps": [
+              "Select three complete tenths of the original two hundred.",
+              "Magnify the next tenth and select seven of its ten equal hundredths.",
+              "Three tenths and seven hundredths select seventy-four from the original two hundred."
+            ],
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "Three tenths and seven hundredths form the decimal multiplier. Together they select the same share as thirty-seven percent of the original amount."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "A multiplier below one selects less",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "A multiplier below one selects less",
+          "initial_state": "A multiplier below one selects less",
+          "model": {
+            "kind": "decimal_multiplier_amount",
+            "title": "Compare each result with one unchanged whole",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "sizes",
+            "solved": true,
+            "comparisons": [
+              {
+                "percent": 60,
+                "multiplier": "0.60",
+                "label": "Result: less than one whole."
+              },
+              {
+                "percent": 100,
+                "multiplier": "1.00",
+                "label": "Result: exactly one whole."
+              },
+              {
+                "percent": 135,
+                "multiplier": "1.35",
+                "label": "Result: one whole plus 0.35 more."
+              }
+            ],
+            "steps": [
+              "A multiplier below one selects less than the whole.",
+              "A multiplier of one selects exactly the whole.",
+              "A multiplier above one selects more than the whole."
+            ],
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "The outlined reference bar is one whole. A decimal below one produces a shorter result bar, measured against that same whole."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T06"
+      },
+      {
+        "id": "T06",
+        "stage": "teaching",
+        "purpose": "A multiplier of one keeps the whole",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "A multiplier of one keeps the whole",
+          "initial_state": "A multiplier of one keeps the whole",
+          "model": {
+            "kind": "decimal_multiplier_amount",
+            "title": "Compare each result with one unchanged whole",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "sizes",
+            "solved": true,
+            "comparisons": [
+              {
+                "percent": 60,
+                "multiplier": "0.60",
+                "label": "Result: less than one whole."
+              },
+              {
+                "percent": 100,
+                "multiplier": "1.00",
+                "label": "Result: exactly one whole."
+              },
+              {
+                "percent": 135,
+                "multiplier": "1.35",
+                "label": "Result: one whole plus 0.35 more."
+              }
+            ],
+            "steps": [
+              "A multiplier below one selects less than the whole.",
+              "A multiplier of one selects exactly the whole.",
+              "A multiplier above one selects more than the whole."
+            ],
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "A multiplier of one selects exactly the original whole. The result bar and reference bar end at the same point."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T07"
+      },
+      {
+        "id": "T07",
+        "stage": "teaching",
+        "purpose": "A multiplier above one extends beyond the whole",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "A multiplier above one extends beyond the whole",
+          "initial_state": "A multiplier above one extends beyond the whole",
+          "model": {
+            "kind": "decimal_multiplier_amount",
+            "title": "Compare each result with one unchanged whole",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "sizes",
+            "solved": true,
+            "comparisons": [
+              {
+                "percent": 60,
+                "multiplier": "0.60",
+                "label": "Result: less than one whole."
+              },
+              {
+                "percent": 100,
+                "multiplier": "1.00",
+                "label": "Result: exactly one whole."
+              },
+              {
+                "percent": 135,
+                "multiplier": "1.35",
+                "label": "Result: one whole plus 0.35 more."
+              }
+            ],
+            "steps": [
+              "A multiplier below one selects less than the whole.",
+              "A multiplier of one selects exactly the whole.",
+              "A multiplier above one selects more than the whole."
+            ],
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "A multiplier above one selects one complete whole and an additional part. The reference bars keep the same length; the result extends beyond them."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T08"
+      },
+      {
+        "id": "T08",
+        "stage": "teaching",
+        "purpose": "Choose the greater-than-whole method",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Choose the greater-than-whole method",
+          "initial_state": "Choose the greater-than-whole method",
+          "model": {
+            "kind": "decimal_multiplier_amount",
+            "title": "Connect the multiplier to the amount selected",
+            "given": "125% of an amount",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "steps": [
+              "125% = 125 ÷ 100 = 1.25.",
+              "Multiply the original whole by 1.25.",
+              "The multiplier is greater than 1, so the result exceeds the original whole."
+            ],
+            "mode": "rule"
+          }
+        },
+        "narration": {
+          "script": "Choose the statement that connects the converted multiplier, operation and result size."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "PA-10-C01"
+        },
+        "next_step": "T09"
+      },
+      {
+        "id": "T09",
+        "stage": "teaching",
+        "purpose": "Convert before multiplying",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Convert before multiplying",
+          "initial_state": "Convert before multiplying",
+          "model": {
+            "kind": "decimal_multiplier_amount",
+            "title": "Find the requested amount from the original whole",
+            "given": "62% of 350",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "percent": 62,
+            "whole": 350,
+            "unit": "",
+            "steps": [
+              "62% = 62 ÷ 100 = 0.62.",
+              "350 × 0.62 = 217.",
+              "0.5 < 0.62 < 1, so 175 < 217 < 350."
+            ],
+            "stages": [
+              {
+                "title": "Convert to a decimal multiplier",
+                "lines": [
+                  "62% = 62 ÷ 100 = 0.62."
+                ]
+              },
+              {
+                "title": "Multiply the complete amount",
+                "lines": [
+                  "350 × 0.62 = 217."
+                ]
+              },
+              {
+                "title": "Check the size against the original whole",
+                "lines": [
+                  "0.5 < 0.62 < 1, so 175 < 217 < 350."
+                ]
+              }
+            ],
+            "solved": true,
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "Divide the percentage number by one hundred. This gives the exact decimal multiplier, without changing the share it describes."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T10"
+      },
+      {
+        "id": "T10",
+        "stage": "teaching",
+        "purpose": "Apply the decimal to the original amount",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Apply the decimal to the original amount",
+          "initial_state": "Apply the decimal to the original amount",
+          "model": {
+            "kind": "decimal_multiplier_amount",
+            "title": "Find the requested amount from the original whole",
+            "given": "62% of 350",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "percent": 62,
+            "whole": 350,
+            "unit": "",
+            "steps": [
+              "62% = 62 ÷ 100 = 0.62.",
+              "350 × 0.62 = 217.",
+              "0.5 < 0.62 < 1, so 175 < 217 < 350."
+            ],
+            "stages": [
+              {
+                "title": "Convert to a decimal multiplier",
+                "lines": [
+                  "62% = 62 ÷ 100 = 0.62."
+                ]
+              },
+              {
+                "title": "Multiply the complete amount",
+                "lines": [
+                  "350 × 0.62 = 217."
+                ]
+              },
+              {
+                "title": "Check the size against the original whole",
+                "lines": [
+                  "0.5 < 0.62 < 1, so 175 < 217 < 350."
+                ]
+              }
+            ],
+            "solved": true,
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "Multiply the complete amount by that decimal. Either multiplication order selects the same share of the original whole."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T11"
+      },
+      {
+        "id": "T11",
+        "stage": "teaching",
+        "purpose": "Check between half and the whole",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Check between half and the whole",
+          "initial_state": "Check between half and the whole",
+          "model": {
+            "kind": "decimal_multiplier_amount",
+            "title": "Find the requested amount from the original whole",
+            "given": "62% of 350",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "percent": 62,
+            "whole": 350,
+            "unit": "",
+            "steps": [
+              "62% = 62 ÷ 100 = 0.62.",
+              "350 × 0.62 = 217.",
+              "0.5 < 0.62 < 1, so 175 < 217 < 350."
+            ],
+            "stages": [
+              {
+                "title": "Convert to a decimal multiplier",
+                "lines": [
+                  "62% = 62 ÷ 100 = 0.62."
+                ]
+              },
+              {
+                "title": "Multiply the complete amount",
+                "lines": [
+                  "350 × 0.62 = 217."
+                ]
+              },
+              {
+                "title": "Check the size against the original whole",
+                "lines": [
+                  "0.5 < 0.62 < 1, so 175 < 217 < 350."
+                ]
+              }
+            ],
+            "solved": true,
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "The multiplier lies between one half and one. Check that the selected amount lies between half of the original amount and the complete whole."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T12"
+      },
+      {
+        "id": "T12",
+        "stage": "teaching",
+        "purpose": "Choose a small-percentage multiplier",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Choose a small-percentage multiplier",
+          "initial_state": "Choose a small-percentage multiplier",
+          "model": {
+            "kind": "decimal_multiplier_amount",
+            "title": "Convert a percentage below one",
+            "given": "0.8%",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "steps": [
+              "0.8% = 0.8 ÷ 100 = 0.008.",
+              "0.008 < 0.01: the multiplier is less than one hundredth."
+            ],
+            "mode": "rule"
+          }
+        },
+        "narration": {
+          "script": "Now choose the decimal equivalent of a percentage below one percent."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "PA-10-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "PA-10-G01",
+        "support_level": "high",
+        "pre_question_script": "Complete the decimal conversion.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "faded",
+        "question_ref": "PA-10-G02",
+        "support_level": "reduced",
+        "pre_question_script": "Use that same multiplier and enter the product.",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "faded",
+        "question_ref": "PA-10-G03",
+        "support_level": "reduced",
+        "pre_question_script": "Record the final amount in the complete statement.",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "independent_transfer",
+        "question_ref": "PA-10-G04",
+        "support_level": "none",
+        "pre_question_script": "Predict the result size before doing the exact multiplication.",
+        "correct_next": "P01"
+      }
+    },
+    "practice": {
+      "intro_script": "Work independently. Record the decimal multiplier, its multiplication by the original whole and the final amount wherever that method is required. Keep the printed unit. One later context accepts any valid exact method.",
+      "question_order": [
+        "PA-10-P01",
+        "PA-10-P02",
+        "PA-10-P03",
+        "PA-10-P04",
+        "PA-10-P05",
+        "PA-10-P06",
+        "PA-10-P07",
+        "PA-10-P08",
+        "PA-10-P09",
+        "PA-10-P10",
+        "PA-10-P11",
+        "PA-10-P12",
+        "PA-10-X01",
+        "PA-10-X02",
+        "PA-10-X03",
+        "PA-10-X04"
+      ],
+      "question_count": 16,
+      "feedback_policy": "No optional hints before submitting; answer-dependent correction and progressive working follow submitted errors. No Diagnostic or prerequisite branch."
+    },
+    "exit": {
+      "intro_script": "Complete three final questions without hints. Each requires a decimal multiplier, valid multiplication and the final amount. Responses lock, and feedback follows after all three are saved.",
+      "primary_question_refs": [
+        "PA-10-E01",
+        "PA-10-E02",
+        "PA-10-E03"
+      ],
+      "confirmation_question_refs": [],
+      "submission_policy": "Withhold correctness and working until all three responses are saved.",
+      "mastery_policy": {
+        "profile": "all_primary_unsupported_deferred",
+        "require_all": true,
+        "source_page": 14,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "All three final responses have valid decimal multipliers and multiplication of the original whole. The results have the expected sizes and the required unit is retained.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Connect the multiplier and amount",
+      "ryan_script": "One or more final responses need another pass. Review the decimal conversion, multiplication of the original whole and final amount.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "PA-10-C01",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "Which statement correctly describes 125% of an amount?",
+      "target": "Keep the decimal multiplier, complete amount and result consistent",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Multiply the whole by 1.25, so the answer is greater than the whole.",
+          "Multiply the whole by 0.125, so the answer is smaller than the whole.",
+          "Multiply the whole by 125 without converting the percentage.",
+          "Divide the whole by 1.25."
+        ]
+      },
+      "answer": {
+        "value": "Multiply the whole by 1.25, so the answer is greater than the whole."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. This multiplier selects more than one whole.",
+        "correct_after_support": "Correct. This multiplier selects more than one whole.",
+        "on_correct_math": "125% = 125 ÷ 100 = 1.25. → Multiply the original whole by 1.25. → The multiplier is greater than 1, so the result exceeds the original whole.",
+        "on_incorrect_attempt_1": "Compare this percentage with one complete whole before choosing its decimal.",
+        "on_incorrect_attempt_2": "The working links a percentage above one hundred to a multiplier above one, applied by multiplication.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "125% = 125 ÷ 100 = 1.25. → Multiply the original whole by 1.25. → The multiplier is greater than 1, so the result exceeds the original whole."
+      },
+      "mathematical_support": {
+        "hint_1": "Compare this percentage with one complete whole before choosing its decimal.",
+        "hint_2": "The working links a percentage above one hundred to a multiplier above one, applied by multiplication.",
+        "worked_solution": "125% = 125 ÷ 100 = 1.25. → Multiply the original whole by 1.25. → The multiplier is greater than 1, so the result exceeds the original whole."
+      },
+      "working": [
+        "125% = 125 ÷ 100 = 1.25.",
+        "Multiply the original whole by 1.25.",
+        "The multiplier is greater than 1, so the result exceeds the original whole."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_multiplier_amount",
+          "title": "Connect the multiplier to the amount selected",
+          "given": "125% of an amount",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "steps": [
+            "125% = 125 ÷ 100 = 1.25.",
+            "Multiply the original whole by 1.25.",
+            "The multiplier is greater than 1, so the result exceeds the original whole."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "Multiply the whole by 0.125, so the answer is smaller than the whole.": "That decimal represents twelve point five percent, not a percentage greater than one whole.",
+        "Multiply the whole by 125 without converting the percentage.": "The percentage number must be converted before it is used as a decimal multiplier.",
+        "Divide the whole by 1.25.": "The converted decimal is a multiplier, not a divisor of the whole."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-10-C02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "Which decimal multiplier represents 0.8%?",
+      "target": "Keep the decimal multiplier, complete amount and result consistent",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "0.008",
+          "0.08",
+          "0.8",
+          "8"
+        ]
+      },
+      "answer": {
+        "value": "0.008"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The multiplier is smaller than one hundredth.",
+        "correct_after_support": "Correct. The multiplier is smaller than one hundredth.",
+        "on_correct_math": "0.8% = 0.8 ÷ 100 = 0.008. → 0.008 < 0.01: the multiplier is less than one hundredth.",
+        "on_incorrect_attempt_1": "A percentage below one percent has a multiplier below one hundredth.",
+        "on_incorrect_attempt_2": "Follow the percentage-to-decimal division in the working; keep the zero that preserves the small value.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "0.8% = 0.8 ÷ 100 = 0.008. → 0.008 < 0.01: the multiplier is less than one hundredth."
+      },
+      "mathematical_support": {
+        "hint_1": "A percentage below one percent has a multiplier below one hundredth.",
+        "hint_2": "Follow the percentage-to-decimal division in the working; keep the zero that preserves the small value.",
+        "worked_solution": "0.8% = 0.8 ÷ 100 = 0.008. → 0.008 < 0.01: the multiplier is less than one hundredth."
+      },
+      "working": [
+        "0.8% = 0.8 ÷ 100 = 0.008.",
+        "0.008 < 0.01: the multiplier is less than one hundredth."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_multiplier_amount",
+          "title": "Convert a percentage below one",
+          "given": "0.8%",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "steps": [
+            "0.8% = 0.8 ÷ 100 = 0.008.",
+            "0.008 < 0.01: the multiplier is less than one hundredth."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "8": "A multiplier of eight selects eight whole amounts, not a percentage below one.",
+        "0.08": "That multiplier represents eight percent, which is too large.",
+        "0.8": "That multiplier represents eighty percent; the percentage has not been divided by one hundred."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-10-G01",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "Convert 37.5% to a decimal: 37.5% = ___.",
+      "target": "Keep the decimal multiplier, complete amount and result consistent",
+      "response": {
+        "type": "decimal_multiplier_amount",
+        "mode": "fields",
+        "fields": [
+          {
+            "key": "multiplier",
+            "label": "Decimal multiplier"
+          }
+        ]
+      },
+      "answer": {
+        "value": {
+          "multiplier": "0.375"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decimal names the same proportion as the percentage.",
+        "correct_after_support": "Correct. The decimal names the same proportion as the percentage.",
+        "on_correct_math": "37.5% = 37.5 ÷ 100 = 0.375.",
+        "on_incorrect_attempt_1": "Convert the percentage number to its decimal equivalent by dividing by one hundred.",
+        "on_incorrect_attempt_2": "Use the conversion in the working to check every decimal place, then enter the multiplier.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "37.5% = 37.5 ÷ 100 = 0.375."
+      },
+      "mathematical_support": {
+        "hint_1": "Convert the percentage number to its decimal equivalent by dividing by one hundred.",
+        "hint_2": "Use the conversion in the working to check every decimal place, then enter the multiplier.",
+        "worked_solution": "37.5% = 37.5 ÷ 100 = 0.375."
+      },
+      "working": [
+        "37.5% = 37.5 ÷ 100 = 0.375."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_multiplier_amount",
+          "title": "Complete the stated decimal-multiplier step",
+          "given": "37.5% of 240",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "steps": [
+            "37.5% = 37.5 ÷ 100 = 0.375."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_multiplier": "Keep the value equivalent while dividing the percentage number by one hundred."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-10-G02",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "faded",
+      "prompt": "Multiply the complete amount. Complete both blanks: 240 × ___ = ___.",
+      "target": "Keep the decimal multiplier, complete amount and result consistent",
+      "response": {
+        "type": "decimal_multiplier_amount",
+        "mode": "fields",
+        "fields": [
+          {
+            "key": "multiplier",
+            "label": "Decimal multiplier"
+          },
+          {
+            "key": "amount",
+            "label": "Product"
+          }
+        ]
+      },
+      "answer": {
+        "value": {
+          "multiplier": "0.375",
+          "amount": "90"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decimal is applied to the complete original amount.",
+        "correct_after_support": "Correct. The decimal is applied to the complete original amount.",
+        "on_correct_math": "Use the same multiplier: 0.375. → 240 × 0.375 = 90.",
+        "on_incorrect_attempt_1": "Keep the converted decimal unchanged when applying it to the original amount.",
+        "on_incorrect_attempt_2": "Compare the multiplier and product separately with the working, then correct the relevant blank.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Use the same multiplier: 0.375. → 240 × 0.375 = 90."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the converted decimal unchanged when applying it to the original amount.",
+        "hint_2": "Compare the multiplier and product separately with the working, then correct the relevant blank.",
+        "worked_solution": "Use the same multiplier: 0.375. → 240 × 0.375 = 90."
+      },
+      "working": [
+        "Use the same multiplier: 0.375.",
+        "240 × 0.375 = 90."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_multiplier_amount",
+          "title": "Complete the stated decimal-multiplier step",
+          "given": "37.5% of 240",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "steps": [
+            "Use the same multiplier: 0.375.",
+            "240 × 0.375 = 90."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_multiplier": "The product is correct. Recheck the decimal multiplier in the first blank.",
+        "check_amount": "The multiplier is correct. Recheck the multiplication of the complete amount.",
+        "check_multiple": "Check the decimal conversion and the product as two separate steps."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-10-G03",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "faded",
+      "prompt": "Complete the answer: 37.5% of 240 = ___.",
+      "target": "Keep the decimal multiplier, complete amount and result consistent",
+      "response": {
+        "type": "decimal_multiplier_amount",
+        "mode": "fields",
+        "fields": [
+          {
+            "key": "amount",
+            "label": "Final amount"
+          }
+        ]
+      },
+      "answer": {
+        "value": {
+          "amount": "90"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. This is the selected amount, not a new percentage.",
+        "correct_after_support": "Correct. This is the selected amount, not a new percentage.",
+        "on_correct_math": "37.5% of 240 = 240 × 0.375 = 90.",
+        "on_incorrect_attempt_1": "Record the amount found by multiplying the whole, not the decimal multiplier itself.",
+        "on_incorrect_attempt_2": "The working shows the complete calculation. Transfer its final amount into the answer.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "37.5% of 240 = 240 × 0.375 = 90."
+      },
+      "mathematical_support": {
+        "hint_1": "Record the amount found by multiplying the whole, not the decimal multiplier itself.",
+        "hint_2": "The working shows the complete calculation. Transfer its final amount into the answer.",
+        "worked_solution": "37.5% of 240 = 240 × 0.375 = 90."
+      },
+      "working": [
+        "37.5% of 240 = 240 × 0.375 = 90."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_multiplier_amount",
+          "title": "Complete the stated decimal-multiplier step",
+          "given": "37.5% of 240",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "steps": [
+            "37.5% of 240 = 240 × 0.375 = 90."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_amount": "The answer is the amount selected from the original whole; do not copy the multiplier into this blank."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-10-G04",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "independent_transfer",
+      "prompt": "A student is finding 135% of 80 using a decimal multiplier. Which statement must be true before the exact multiplication is completed?",
+      "target": "Keep the decimal multiplier, complete amount and result consistent",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "The answer must be greater than 80 because the multiplier is greater than 1.",
+          "The answer must be less than 80 because 135 is divided by 100.",
+          "The answer must equal 80 because the whole never changes.",
+          "The answer must be less than 1.35."
+        ]
+      },
+      "answer": {
+        "value": "The answer must be greater than 80 because the multiplier is greater than 1."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. A multiplier above one selects more than the original whole.",
+        "correct_after_support": "Correct. A multiplier above one selects more than the original whole.",
+        "on_correct_math": "135% = 1.35. → 1.35 > 1, so the selected result is greater than the original whole of 80.",
+        "on_incorrect_attempt_1": "Compare the multiplier with one, not with the original amount.",
+        "on_incorrect_attempt_2": "The working compares the converted multiplier with one. That determines whether the result is above or below the whole.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "135% = 1.35. → 1.35 > 1, so the selected result is greater than the original whole of 80."
+      },
+      "mathematical_support": {
+        "hint_1": "Compare the multiplier with one, not with the original amount.",
+        "hint_2": "The working compares the converted multiplier with one. That determines whether the result is above or below the whole.",
+        "worked_solution": "135% = 1.35. → 1.35 > 1, so the selected result is greater than the original whole of 80."
+      },
+      "working": [
+        "135% = 1.35.",
+        "1.35 > 1, so the selected result is greater than the original whole of 80."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_multiplier_amount",
+          "title": "Predict result size without calculating the product",
+          "given": "135% of 80",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "steps": [
+            "135% = 1.35.",
+            "1.35 > 1, so the selected result is greater than the original whole of 80."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "The answer must be less than 80 because 135 is divided by 100.": "Dividing the percentage by one hundred gives a multiplier still greater than one.",
+        "The answer must equal 80 because the whole never changes.": "The reference whole stays fixed, but the selected result can be greater than that whole.",
+        "The answer must be less than 1.35.": "The multiplier describes a proportion; it is not an upper limit on the amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-10-P01",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Use a decimal multiplier to find 48% of 250.",
+      "target": "Keep the decimal multiplier, complete amount and result consistent",
+      "response": {
+        "type": "decimal_multiplier_amount",
+        "require_decimal_method": true,
+        "percent": 48,
+        "whole": 250,
+        "unit": ""
+      },
+      "answer": {
+        "value": {
+          "multiplier": "0.48",
+          "calculation": "250 × 0.48",
+          "amount": "120"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The selected amount is just below half the original whole.",
+        "correct_after_support": "Correct. The selected amount is just below half the original whole.",
+        "on_correct_math": "48% = 48 ÷ 100 = 0.48. → 250 × 0.48 = 120. → 0.48 < 1, so 120 < 250.",
+        "on_incorrect_attempt_1": "The percentage is just below half of the whole.",
+        "on_incorrect_attempt_2": "Follow the conversion and multiplication in the working; use the half-whole comparison to check the product.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "48% = 48 ÷ 100 = 0.48. → 250 × 0.48 = 120. → 0.48 < 1, so 120 < 250."
+      },
+      "mathematical_support": {
+        "hint_1": "The percentage is just below half of the whole.",
+        "hint_2": "Follow the conversion and multiplication in the working; use the half-whole comparison to check the product.",
+        "worked_solution": "48% = 48 ÷ 100 = 0.48. → 250 × 0.48 = 120. → 0.48 < 1, so 120 < 250."
+      },
+      "working": [
+        "48% = 48 ÷ 100 = 0.48.",
+        "250 × 0.48 = 120.",
+        "0.48 < 1, so 120 < 250."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_multiplier_amount",
+          "title": "Find the requested amount from the original whole",
+          "given": "48% of 250",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 48,
+          "whole": 250,
+          "unit": "",
+          "steps": [
+            "48% = 48 ÷ 100 = 0.48.",
+            "250 × 0.48 = 120.",
+            "0.48 < 1, so 120 < 250."
+          ],
+          "stages": [
+            {
+              "title": "Convert to a decimal multiplier",
+              "lines": [
+                "48% = 48 ÷ 100 = 0.48."
+              ]
+            },
+            {
+              "title": "Multiply the complete amount",
+              "lines": [
+                "250 × 0.48 = 120."
+              ]
+            },
+            {
+              "title": "Check the size against the original whole",
+              "lines": [
+                "0.48 < 1, so 120 < 250."
+              ]
+            }
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_multiplier": "The multiplication and final amount are correct. Recheck that the recorded multiplier is the exact decimal equivalent of the stated percentage.",
+        "check_method": "The decimal multiplier and final amount are correct. Record valid multiplication of the complete original amount by that decimal.",
+        "check_amount": "The multiplier and multiplication are valid. Recheck the final amount and compare its size with the original whole.",
+        "check_multiple": "Check the decimal equivalent, its multiplication by the original whole and the final amount separately."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-10-P02",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Use a decimal multiplier to find 73% of 320.",
+      "target": "Keep the decimal multiplier, complete amount and result consistent",
+      "response": {
+        "type": "decimal_multiplier_amount",
+        "require_decimal_method": true,
+        "percent": 73,
+        "whole": 320,
+        "unit": ""
+      },
+      "answer": {
+        "value": {
+          "multiplier": "0.73",
+          "calculation": "320 × 0.73",
+          "amount": "233.6"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decimal product preserves the stated proportion.",
+        "correct_after_support": "Correct. The decimal product preserves the stated proportion.",
+        "on_correct_math": "73% = 73 ÷ 100 = 0.73. → 320 × 0.73 = 233.6. → 0.73 < 1, so 233.6 < 320.",
+        "on_incorrect_attempt_1": "Keep both percentage digits in the decimal equivalent.",
+        "on_incorrect_attempt_2": "Trace the exact decimal through the displayed multiplication without changing the whole.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "73% = 73 ÷ 100 = 0.73. → 320 × 0.73 = 233.6. → 0.73 < 1, so 233.6 < 320."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep both percentage digits in the decimal equivalent.",
+        "hint_2": "Trace the exact decimal through the displayed multiplication without changing the whole.",
+        "worked_solution": "73% = 73 ÷ 100 = 0.73. → 320 × 0.73 = 233.6. → 0.73 < 1, so 233.6 < 320."
+      },
+      "working": [
+        "73% = 73 ÷ 100 = 0.73.",
+        "320 × 0.73 = 233.6.",
+        "0.73 < 1, so 233.6 < 320."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_multiplier_amount",
+          "title": "Find the requested amount from the original whole",
+          "given": "73% of 320",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 73,
+          "whole": 320,
+          "unit": "",
+          "steps": [
+            "73% = 73 ÷ 100 = 0.73.",
+            "320 × 0.73 = 233.6.",
+            "0.73 < 1, so 233.6 < 320."
+          ],
+          "stages": [
+            {
+              "title": "Convert to a decimal multiplier",
+              "lines": [
+                "73% = 73 ÷ 100 = 0.73."
+              ]
+            },
+            {
+              "title": "Multiply the complete amount",
+              "lines": [
+                "320 × 0.73 = 233.6."
+              ]
+            },
+            {
+              "title": "Check the size against the original whole",
+              "lines": [
+                "0.73 < 1, so 233.6 < 320."
+              ]
+            }
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_multiplier": "The multiplication and final amount are correct. Recheck that the recorded multiplier is the exact decimal equivalent of the stated percentage.",
+        "check_method": "The decimal multiplier and final amount are correct. Record valid multiplication of the complete original amount by that decimal.",
+        "check_amount": "The multiplier and multiplication are valid. Recheck the final amount and compare its size with the original whole.",
+        "check_multiple": "Check the decimal equivalent, its multiplication by the original whole and the final amount separately."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-10-P03",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Use a decimal multiplier to find 12.5% of 480.",
+      "target": "Keep the decimal multiplier, complete amount and result consistent",
+      "response": {
+        "type": "decimal_multiplier_amount",
+        "require_decimal_method": true,
+        "percent": 12.5,
+        "whole": 480,
+        "unit": ""
+      },
+      "answer": {
+        "value": {
+          "multiplier": "0.125",
+          "calculation": "480 × 0.125",
+          "amount": "60"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decimal percentage and multiplier select the same amount.",
+        "correct_after_support": "Correct. The decimal percentage and multiplier select the same amount.",
+        "on_correct_math": "12.5% = 12.5 ÷ 100 = 0.125. → 480 × 0.125 = 60. → 0.125 < 1, so 60 < 480.",
+        "on_incorrect_attempt_1": "A decimal percentage still needs to be divided by one hundred.",
+        "on_incorrect_attempt_2": "Use the shown conversion to check the multiplier before checking the product.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "12.5% = 12.5 ÷ 100 = 0.125. → 480 × 0.125 = 60. → 0.125 < 1, so 60 < 480."
+      },
+      "mathematical_support": {
+        "hint_1": "A decimal percentage still needs to be divided by one hundred.",
+        "hint_2": "Use the shown conversion to check the multiplier before checking the product.",
+        "worked_solution": "12.5% = 12.5 ÷ 100 = 0.125. → 480 × 0.125 = 60. → 0.125 < 1, so 60 < 480."
+      },
+      "working": [
+        "12.5% = 12.5 ÷ 100 = 0.125.",
+        "480 × 0.125 = 60.",
+        "0.125 < 1, so 60 < 480."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_multiplier_amount",
+          "title": "Find the requested amount from the original whole",
+          "given": "12.5% of 480",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 12.5,
+          "whole": 480,
+          "unit": "",
+          "steps": [
+            "12.5% = 12.5 ÷ 100 = 0.125.",
+            "480 × 0.125 = 60.",
+            "0.125 < 1, so 60 < 480."
+          ],
+          "stages": [
+            {
+              "title": "Convert to a decimal multiplier",
+              "lines": [
+                "12.5% = 12.5 ÷ 100 = 0.125."
+              ]
+            },
+            {
+              "title": "Multiply the complete amount",
+              "lines": [
+                "480 × 0.125 = 60."
+              ]
+            },
+            {
+              "title": "Check the size against the original whole",
+              "lines": [
+                "0.125 < 1, so 60 < 480."
+              ]
+            }
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_multiplier": "The multiplication and final amount are correct. Recheck that the recorded multiplier is the exact decimal equivalent of the stated percentage.",
+        "check_method": "The decimal multiplier and final amount are correct. Record valid multiplication of the complete original amount by that decimal.",
+        "check_amount": "The multiplier and multiplication are valid. Recheck the final amount and compare its size with the original whole.",
+        "check_multiple": "Check the decimal equivalent, its multiplication by the original whole and the final amount separately."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-10-P04",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Use a decimal multiplier to find 0.5% of 640.",
+      "target": "Keep the decimal multiplier, complete amount and result consistent",
+      "response": {
+        "type": "decimal_multiplier_amount",
+        "require_decimal_method": true,
+        "percent": 0.5,
+        "whole": 640,
+        "unit": ""
+      },
+      "answer": {
+        "value": {
+          "multiplier": "0.005",
+          "calculation": "640 × 0.005",
+          "amount": "3.2"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. This small percentage selects much less than one hundredth of the whole.",
+        "correct_after_support": "Correct. This small percentage selects much less than one hundredth of the whole.",
+        "on_correct_math": "0.5% = 0.5 ÷ 100 = 0.005. → 640 × 0.005 = 3.2. → 0.005 < 1, so 3.2 < 640.",
+        "on_incorrect_attempt_1": "A percentage below one needs a multiplier below one hundredth.",
+        "on_incorrect_attempt_2": "The working preserves the small multiplier before applying it to the complete amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "0.5% = 0.5 ÷ 100 = 0.005. → 640 × 0.005 = 3.2. → 0.005 < 1, so 3.2 < 640."
+      },
+      "mathematical_support": {
+        "hint_1": "A percentage below one needs a multiplier below one hundredth.",
+        "hint_2": "The working preserves the small multiplier before applying it to the complete amount.",
+        "worked_solution": "0.5% = 0.5 ÷ 100 = 0.005. → 640 × 0.005 = 3.2. → 0.005 < 1, so 3.2 < 640."
+      },
+      "working": [
+        "0.5% = 0.5 ÷ 100 = 0.005.",
+        "640 × 0.005 = 3.2.",
+        "0.005 < 1, so 3.2 < 640."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_multiplier_amount",
+          "title": "Find the requested amount from the original whole",
+          "given": "0.5% of 640",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 0.5,
+          "whole": 640,
+          "unit": "",
+          "steps": [
+            "0.5% = 0.5 ÷ 100 = 0.005.",
+            "640 × 0.005 = 3.2.",
+            "0.005 < 1, so 3.2 < 640."
+          ],
+          "stages": [
+            {
+              "title": "Convert to a decimal multiplier",
+              "lines": [
+                "0.5% = 0.5 ÷ 100 = 0.005."
+              ]
+            },
+            {
+              "title": "Multiply the complete amount",
+              "lines": [
+                "640 × 0.005 = 3.2."
+              ]
+            },
+            {
+              "title": "Check the size against the original whole",
+              "lines": [
+                "0.005 < 1, so 3.2 < 640."
+              ]
+            }
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_multiplier": "The multiplication and final amount are correct. Recheck that the recorded multiplier is the exact decimal equivalent of the stated percentage.",
+        "check_method": "The decimal multiplier and final amount are correct. Record valid multiplication of the complete original amount by that decimal.",
+        "check_amount": "The multiplier and multiplication are valid. Recheck the final amount and compare its size with the original whole.",
+        "check_multiple": "Check the decimal equivalent, its multiplication by the original whole and the final amount separately."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-10-P05",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Use a decimal multiplier to find 125% of 240.",
+      "target": "Keep the decimal multiplier, complete amount and result consistent",
+      "response": {
+        "type": "decimal_multiplier_amount",
+        "require_decimal_method": true,
+        "percent": 125,
+        "whole": 240,
+        "unit": ""
+      },
+      "answer": {
+        "value": {
+          "multiplier": "1.25",
+          "calculation": "240 × 1.25",
+          "amount": "300"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The multiplier selects one whole and an additional quarter.",
+        "correct_after_support": "Correct. The multiplier selects one whole and an additional quarter.",
+        "on_correct_math": "125% = 125 ÷ 100 = 1.25. → 240 × 1.25 = 300. → 1.25 > 1, so 300 > 240.",
+        "on_incorrect_attempt_1": "The requested percentage exceeds one complete whole.",
+        "on_incorrect_attempt_2": "Compare the multiplier with one in the working; the product must be above the original amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "125% = 125 ÷ 100 = 1.25. → 240 × 1.25 = 300. → 1.25 > 1, so 300 > 240."
+      },
+      "mathematical_support": {
+        "hint_1": "The requested percentage exceeds one complete whole.",
+        "hint_2": "Compare the multiplier with one in the working; the product must be above the original amount.",
+        "worked_solution": "125% = 125 ÷ 100 = 1.25. → 240 × 1.25 = 300. → 1.25 > 1, so 300 > 240."
+      },
+      "working": [
+        "125% = 125 ÷ 100 = 1.25.",
+        "240 × 1.25 = 300.",
+        "1.25 > 1, so 300 > 240."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_multiplier_amount",
+          "title": "Find the requested amount from the original whole",
+          "given": "125% of 240",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 125,
+          "whole": 240,
+          "unit": "",
+          "steps": [
+            "125% = 125 ÷ 100 = 1.25.",
+            "240 × 1.25 = 300.",
+            "1.25 > 1, so 300 > 240."
+          ],
+          "stages": [
+            {
+              "title": "Convert to a decimal multiplier",
+              "lines": [
+                "125% = 125 ÷ 100 = 1.25."
+              ]
+            },
+            {
+              "title": "Multiply the complete amount",
+              "lines": [
+                "240 × 1.25 = 300."
+              ]
+            },
+            {
+              "title": "Check the size against the original whole",
+              "lines": [
+                "1.25 > 1, so 300 > 240."
+              ]
+            }
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_multiplier": "The multiplication and final amount are correct. Recheck that the recorded multiplier is the exact decimal equivalent of the stated percentage.",
+        "check_method": "The decimal multiplier and final amount are correct. Record valid multiplication of the complete original amount by that decimal.",
+        "check_amount": "The multiplier and multiplication are valid. Recheck the final amount and compare its size with the original whole.",
+        "check_multiple": "Check the decimal equivalent, its multiplication by the original whole and the final amount separately."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-10-P06",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Use a decimal multiplier to find 160% of 75.",
+      "target": "Keep the decimal multiplier, complete amount and result consistent",
+      "response": {
+        "type": "decimal_multiplier_amount",
+        "require_decimal_method": true,
+        "percent": 160,
+        "whole": 75,
+        "unit": ""
+      },
+      "answer": {
+        "value": {
+          "multiplier": "1.6",
+          "calculation": "75 × 1.6",
+          "amount": "120"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The result is larger than the unchanged reference whole.",
+        "correct_after_support": "Correct. The result is larger than the unchanged reference whole.",
+        "on_correct_math": "160% = 160 ÷ 100 = 1.6. → 75 × 1.6 = 120. → 1.6 > 1, so 120 > 75.",
+        "on_incorrect_attempt_1": "A percentage above one hundred needs a multiplier above one.",
+        "on_incorrect_attempt_2": "Follow the multiplier into the product, then compare the answer with the original whole.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "160% = 160 ÷ 100 = 1.6. → 75 × 1.6 = 120. → 1.6 > 1, so 120 > 75."
+      },
+      "mathematical_support": {
+        "hint_1": "A percentage above one hundred needs a multiplier above one.",
+        "hint_2": "Follow the multiplier into the product, then compare the answer with the original whole.",
+        "worked_solution": "160% = 160 ÷ 100 = 1.6. → 75 × 1.6 = 120. → 1.6 > 1, so 120 > 75."
+      },
+      "working": [
+        "160% = 160 ÷ 100 = 1.6.",
+        "75 × 1.6 = 120.",
+        "1.6 > 1, so 120 > 75."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_multiplier_amount",
+          "title": "Find the requested amount from the original whole",
+          "given": "160% of 75",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 160,
+          "whole": 75,
+          "unit": "",
+          "steps": [
+            "160% = 160 ÷ 100 = 1.6.",
+            "75 × 1.6 = 120.",
+            "1.6 > 1, so 120 > 75."
+          ],
+          "stages": [
+            {
+              "title": "Convert to a decimal multiplier",
+              "lines": [
+                "160% = 160 ÷ 100 = 1.6."
+              ]
+            },
+            {
+              "title": "Multiply the complete amount",
+              "lines": [
+                "75 × 1.6 = 120."
+              ]
+            },
+            {
+              "title": "Check the size against the original whole",
+              "lines": [
+                "1.6 > 1, so 120 > 75."
+              ]
+            }
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_multiplier": "The multiplication and final amount are correct. Recheck that the recorded multiplier is the exact decimal equivalent of the stated percentage.",
+        "check_method": "The decimal multiplier and final amount are correct. Record valid multiplication of the complete original amount by that decimal.",
+        "check_amount": "The multiplier and multiplication are valid. Recheck the final amount and compare its size with the original whole.",
+        "check_multiple": "Check the decimal equivalent, its multiplication by the original whole and the final amount separately."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-10-P07",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Use a decimal multiplier to find 2.4% of 350.",
+      "target": "Keep the decimal multiplier, complete amount and result consistent",
+      "response": {
+        "type": "decimal_multiplier_amount",
+        "require_decimal_method": true,
+        "percent": 2.4,
+        "whole": 350,
+        "unit": ""
+      },
+      "answer": {
+        "value": {
+          "multiplier": "0.024",
+          "calculation": "350 × 0.024",
+          "amount": "8.4"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decimal places preserve the small percentage.",
+        "correct_after_support": "Correct. The decimal places preserve the small percentage.",
+        "on_correct_math": "2.4% = 2.4 ÷ 100 = 0.024. → 350 × 0.024 = 8.4. → 0.024 < 1, so 8.4 < 350.",
+        "on_incorrect_attempt_1": "Distinguish a few percent from a few tenths of the whole.",
+        "on_incorrect_attempt_2": "Check the zeros in the displayed multiplier before comparing your multiplication with the working.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "2.4% = 2.4 ÷ 100 = 0.024. → 350 × 0.024 = 8.4. → 0.024 < 1, so 8.4 < 350."
+      },
+      "mathematical_support": {
+        "hint_1": "Distinguish a few percent from a few tenths of the whole.",
+        "hint_2": "Check the zeros in the displayed multiplier before comparing your multiplication with the working.",
+        "worked_solution": "2.4% = 2.4 ÷ 100 = 0.024. → 350 × 0.024 = 8.4. → 0.024 < 1, so 8.4 < 350."
+      },
+      "working": [
+        "2.4% = 2.4 ÷ 100 = 0.024.",
+        "350 × 0.024 = 8.4.",
+        "0.024 < 1, so 8.4 < 350."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_multiplier_amount",
+          "title": "Find the requested amount from the original whole",
+          "given": "2.4% of 350",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 2.4,
+          "whole": 350,
+          "unit": "",
+          "steps": [
+            "2.4% = 2.4 ÷ 100 = 0.024.",
+            "350 × 0.024 = 8.4.",
+            "0.024 < 1, so 8.4 < 350."
+          ],
+          "stages": [
+            {
+              "title": "Convert to a decimal multiplier",
+              "lines": [
+                "2.4% = 2.4 ÷ 100 = 0.024."
+              ]
+            },
+            {
+              "title": "Multiply the complete amount",
+              "lines": [
+                "350 × 0.024 = 8.4."
+              ]
+            },
+            {
+              "title": "Check the size against the original whole",
+              "lines": [
+                "0.024 < 1, so 8.4 < 350."
+              ]
+            }
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_multiplier": "The multiplication and final amount are correct. Recheck that the recorded multiplier is the exact decimal equivalent of the stated percentage.",
+        "check_method": "The decimal multiplier and final amount are correct. Record valid multiplication of the complete original amount by that decimal.",
+        "check_amount": "The multiplier and multiplication are valid. Recheck the final amount and compare its size with the original whole.",
+        "check_multiple": "Check the decimal equivalent, its multiplication by the original whole and the final amount separately."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-10-P08",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Use a decimal multiplier to find 99% of 430.",
+      "target": "Keep the decimal multiplier, complete amount and result consistent",
+      "response": {
+        "type": "decimal_multiplier_amount",
+        "require_decimal_method": true,
+        "percent": 99,
+        "whole": 430,
+        "unit": ""
+      },
+      "answer": {
+        "value": {
+          "multiplier": "0.99",
+          "calculation": "430 × 0.99",
+          "amount": "425.7"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The result is just below the unchanged whole.",
+        "correct_after_support": "Correct. The result is just below the unchanged whole.",
+        "on_correct_math": "99% = 99 ÷ 100 = 0.99. → 430 × 0.99 = 425.7. → 0.99 < 1, so 425.7 < 430.",
+        "on_incorrect_attempt_1": "This percentage is slightly less than a complete whole.",
+        "on_incorrect_attempt_2": "The working gives an amount just below the original total; use that size check with the exact product.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "99% = 99 ÷ 100 = 0.99. → 430 × 0.99 = 425.7. → 0.99 < 1, so 425.7 < 430."
+      },
+      "mathematical_support": {
+        "hint_1": "This percentage is slightly less than a complete whole.",
+        "hint_2": "The working gives an amount just below the original total; use that size check with the exact product.",
+        "worked_solution": "99% = 99 ÷ 100 = 0.99. → 430 × 0.99 = 425.7. → 0.99 < 1, so 425.7 < 430."
+      },
+      "working": [
+        "99% = 99 ÷ 100 = 0.99.",
+        "430 × 0.99 = 425.7.",
+        "0.99 < 1, so 425.7 < 430."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_multiplier_amount",
+          "title": "Find the requested amount from the original whole",
+          "given": "99% of 430",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 99,
+          "whole": 430,
+          "unit": "",
+          "steps": [
+            "99% = 99 ÷ 100 = 0.99.",
+            "430 × 0.99 = 425.7.",
+            "0.99 < 1, so 425.7 < 430."
+          ],
+          "stages": [
+            {
+              "title": "Convert to a decimal multiplier",
+              "lines": [
+                "99% = 99 ÷ 100 = 0.99."
+              ]
+            },
+            {
+              "title": "Multiply the complete amount",
+              "lines": [
+                "430 × 0.99 = 425.7."
+              ]
+            },
+            {
+              "title": "Check the size against the original whole",
+              "lines": [
+                "0.99 < 1, so 425.7 < 430."
+              ]
+            }
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_multiplier": "The multiplication and final amount are correct. Recheck that the recorded multiplier is the exact decimal equivalent of the stated percentage.",
+        "check_method": "The decimal multiplier and final amount are correct. Record valid multiplication of the complete original amount by that decimal.",
+        "check_amount": "The multiplier and multiplication are valid. Recheck the final amount and compare its size with the original whole.",
+        "check_multiple": "Check the decimal equivalent, its multiplication by the original whole and the final amount separately."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-10-P09",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Use a decimal multiplier to find 135% of 60 units.",
+      "target": "Keep the decimal multiplier, complete amount and result consistent",
+      "response": {
+        "type": "decimal_multiplier_amount",
+        "require_decimal_method": true,
+        "percent": 135,
+        "whole": 60,
+        "unit": "units"
+      },
+      "answer": {
+        "value": {
+          "multiplier": "1.35",
+          "calculation": "60 × 1.35",
+          "amount": "81"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The amount is above the reference whole and remains measured in units.",
+        "correct_after_support": "Correct. The amount is above the reference whole and remains measured in units.",
+        "on_correct_math": "135% = 135 ÷ 100 = 1.35. → 60 × 1.35 = 81 units. → 1.35 > 1, so 81 > 60.",
+        "on_incorrect_attempt_1": "The selected amount must exceed the reference whole, with units retained.",
+        "on_incorrect_attempt_2": "The displayed multiplier is above one. Follow its multiplication and retain the original unit.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "135% = 135 ÷ 100 = 1.35. → 60 × 1.35 = 81 units. → 1.35 > 1, so 81 > 60."
+      },
+      "mathematical_support": {
+        "hint_1": "The selected amount must exceed the reference whole, with units retained.",
+        "hint_2": "The displayed multiplier is above one. Follow its multiplication and retain the original unit.",
+        "worked_solution": "135% = 135 ÷ 100 = 1.35. → 60 × 1.35 = 81 units. → 1.35 > 1, so 81 > 60."
+      },
+      "working": [
+        "135% = 135 ÷ 100 = 1.35.",
+        "60 × 1.35 = 81 units.",
+        "1.35 > 1, so 81 > 60."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_multiplier_amount",
+          "title": "Find the requested amount from the original whole",
+          "given": "135% of 60 units",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 135,
+          "whole": 60,
+          "unit": "units",
+          "steps": [
+            "135% = 135 ÷ 100 = 1.35.",
+            "60 × 1.35 = 81 units.",
+            "1.35 > 1, so 81 > 60."
+          ],
+          "stages": [
+            {
+              "title": "Convert to a decimal multiplier",
+              "lines": [
+                "135% = 135 ÷ 100 = 1.35."
+              ]
+            },
+            {
+              "title": "Multiply the complete amount",
+              "lines": [
+                "60 × 1.35 = 81 units."
+              ]
+            },
+            {
+              "title": "Check the size against the original whole",
+              "lines": [
+                "1.35 > 1, so 81 > 60."
+              ]
+            }
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_multiplier": "The multiplication and final amount are correct. Recheck that the recorded multiplier is the exact decimal equivalent of the stated percentage.",
+        "check_method": "The decimal multiplier and final amount are correct. Record valid multiplication of the complete original amount by that decimal.",
+        "check_amount": "The multiplier and multiplication are valid. Recheck the final amount and compare its size with the original whole.",
+        "check_multiple": "Check the decimal equivalent, its multiplication by the original whole and the final amount separately."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-10-P10",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Use a decimal multiplier to find 0.8% of 1250 cm.",
+      "target": "Keep the decimal multiplier, complete amount and result consistent",
+      "response": {
+        "type": "decimal_multiplier_amount",
+        "require_decimal_method": true,
+        "percent": 0.8,
+        "whole": 1250,
+        "unit": "cm"
+      },
+      "answer": {
+        "value": {
+          "multiplier": "0.008",
+          "calculation": "1250 × 0.008",
+          "amount": "10"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The small selected length is recorded in centimetres.",
+        "correct_after_support": "Correct. The small selected length is recorded in centimetres.",
+        "on_correct_math": "0.8% = 0.8 ÷ 100 = 0.008. → 1250 × 0.008 = 10 cm. → 0.008 < 1, so 10 < 1250.",
+        "on_incorrect_attempt_1": "Convert the percentage below one carefully and keep centimetres.",
+        "on_incorrect_attempt_2": "Check the small multiplier in the working, then compare the selected length with the complete original length.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "0.8% = 0.8 ÷ 100 = 0.008. → 1250 × 0.008 = 10 cm. → 0.008 < 1, so 10 < 1250."
+      },
+      "mathematical_support": {
+        "hint_1": "Convert the percentage below one carefully and keep centimetres.",
+        "hint_2": "Check the small multiplier in the working, then compare the selected length with the complete original length.",
+        "worked_solution": "0.8% = 0.8 ÷ 100 = 0.008. → 1250 × 0.008 = 10 cm. → 0.008 < 1, so 10 < 1250."
+      },
+      "working": [
+        "0.8% = 0.8 ÷ 100 = 0.008.",
+        "1250 × 0.008 = 10 cm.",
+        "0.008 < 1, so 10 < 1250."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_multiplier_amount",
+          "title": "Find the requested amount from the original whole",
+          "given": "0.8% of 1250 cm",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 0.8,
+          "whole": 1250,
+          "unit": "cm",
+          "steps": [
+            "0.8% = 0.8 ÷ 100 = 0.008.",
+            "1250 × 0.008 = 10 cm.",
+            "0.008 < 1, so 10 < 1250."
+          ],
+          "stages": [
+            {
+              "title": "Convert to a decimal multiplier",
+              "lines": [
+                "0.8% = 0.8 ÷ 100 = 0.008."
+              ]
+            },
+            {
+              "title": "Multiply the complete amount",
+              "lines": [
+                "1250 × 0.008 = 10 cm."
+              ]
+            },
+            {
+              "title": "Check the size against the original whole",
+              "lines": [
+                "0.008 < 1, so 10 < 1250."
+              ]
+            }
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_multiplier": "The multiplication and final amount are correct. Recheck that the recorded multiplier is the exact decimal equivalent of the stated percentage.",
+        "check_method": "The decimal multiplier and final amount are correct. Record valid multiplication of the complete original amount by that decimal.",
+        "check_amount": "The multiplier and multiplication are valid. Recheck the final amount and compare its size with the original whole.",
+        "check_multiple": "Check the decimal equivalent, its multiplication by the original whole and the final amount separately."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-10-P11",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Which calculation finds 145% of 80?",
+      "target": "Keep the decimal multiplier, complete amount and result consistent",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "80 × 0.145",
+          "80 × 1.45",
+          "80 × 145",
+          "80 ÷ 1.45"
+        ]
+      },
+      "answer": {
+        "value": "80 × 1.45"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The original amount is multiplied by the decimal equivalent.",
+        "correct_after_support": "Correct. The original amount is multiplied by the decimal equivalent.",
+        "on_correct_math": "145% = 1.45. → Multiply the original amount by that decimal: 80 × 1.45.",
+        "on_incorrect_attempt_1": "Choose a converted multiplier that selects more than one whole.",
+        "on_incorrect_attempt_2": "Compare each choice with the conversion and multiplication shown in the working.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "145% = 1.45. → Multiply the original amount by that decimal: 80 × 1.45."
+      },
+      "mathematical_support": {
+        "hint_1": "Choose a converted multiplier that selects more than one whole.",
+        "hint_2": "Compare each choice with the conversion and multiplication shown in the working.",
+        "worked_solution": "145% = 1.45. → Multiply the original amount by that decimal: 80 × 1.45."
+      },
+      "working": [
+        "145% = 1.45.",
+        "Multiply the original amount by that decimal: 80 × 1.45."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_multiplier_amount",
+          "title": "Recognise the complete-amount calculation",
+          "given": "145% of 80",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "steps": [
+            "145% = 1.45.",
+            "Multiply the original amount by that decimal: 80 × 1.45."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "80 × 0.145": "That multiplier is below one and represents fourteen point five percent.",
+        "80 × 145": "That uses the unconverted percentage number, selecting too many whole amounts.",
+        "80 ÷ 1.45": "The decimal is a multiplier, not a divisor of the original whole."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-10-P12",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Which is the first incorrect step in this student’s decimal-multiplier method for 42% of 300?",
+      "target": "Keep the decimal multiplier, complete amount and result consistent",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Step 1",
+          "Step 2",
+          "Step 3",
+          "There is no incorrect step."
+        ]
+      },
+      "answer": {
+        "value": "Step 1"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The first error is the conversion, before the multiplication.",
+        "correct_after_support": "Correct. The first error is the conversion, before the multiplication.",
+        "on_correct_math": "The first conversion is wrong: 42% = 0.42, not 4.2. → 300 × 4.2 = 1260 is accurate multiplication of an incorrect multiplier. → The correct percentage calculation is 300 × 0.42 = 126.",
+        "on_incorrect_attempt_1": "Check the conversion before checking any later arithmetic.",
+        "on_incorrect_attempt_2": "The working distinguishes a wrong decimal conversion from accurate arithmetic using that wrong multiplier.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The first conversion is wrong: 42% = 0.42, not 4.2. → 300 × 4.2 = 1260 is accurate multiplication of an incorrect multiplier. → The correct percentage calculation is 300 × 0.42 = 126."
+      },
+      "mathematical_support": {
+        "hint_1": "Check the conversion before checking any later arithmetic.",
+        "hint_2": "The working distinguishes a wrong decimal conversion from accurate arithmetic using that wrong multiplier.",
+        "worked_solution": "The first conversion is wrong: 42% = 0.42, not 4.2. → 300 × 4.2 = 1260 is accurate multiplication of an incorrect multiplier. → The correct percentage calculation is 300 × 0.42 = 126."
+      },
+      "working": [
+        "The first conversion is wrong: 42% = 0.42, not 4.2.",
+        "300 × 4.2 = 1260 is accurate multiplication of an incorrect multiplier.",
+        "The correct percentage calculation is 300 × 0.42 = 126."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_multiplier_amount",
+          "title": "Find the first incorrect step",
+          "given": "42% of 300",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "steps": [
+            "The first conversion is wrong: 42% = 0.42, not 4.2.",
+            "300 × 4.2 = 1260 is accurate multiplication of an incorrect multiplier.",
+            "The correct percentage calculation is 300 × 0.42 = 126."
+          ],
+          "mode": "rule",
+          "student_work": [
+            "42% = 4.2",
+            "300 × 4.2 = 1260",
+            "42% of 300 = 1260"
+          ]
+        }
+      },
+      "response_feedback": {
+        "Step 2": "The multiplication is accurate for the decimal written, but the conversion was already wrong.",
+        "Step 3": "The final statement repeats the error; an earlier step introduced it.",
+        "There is no incorrect step.": "A percentage below one whole cannot have a multiplier greater than one here."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-10-X01",
+      "source_ref": {
+        "page": 16
+      },
+      "stage": "practice",
+      "prompt": "A reservoir contains 4800 litres of water. During a test, 37.5% is released. Use a decimal multiplier to find the volume released.",
+      "target": "Keep the decimal multiplier, complete amount and result consistent",
+      "response": {
+        "type": "decimal_multiplier_amount",
+        "require_decimal_method": true,
+        "percent": 37.5,
+        "whole": 4800,
+        "unit": "litres"
+      },
+      "answer": {
+        "value": {
+          "multiplier": "0.375",
+          "calculation": "4800 × 0.375",
+          "amount": "1800"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decimal method gives the released volume in litres.",
+        "correct_after_support": "Correct. The decimal method gives the released volume in litres.",
+        "on_correct_math": "37.5% = 37.5 ÷ 100 = 0.375. → 4800 × 0.375 = 1800 litres. → 0.375 < 1, so 1800 < 4800.",
+        "on_incorrect_attempt_1": "The full original reservoir volume is the quantity to multiply.",
+        "on_incorrect_attempt_2": "Trace the original volume through the displayed decimal multiplication; the result is water released, not water left.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "37.5% = 37.5 ÷ 100 = 0.375. → 4800 × 0.375 = 1800 litres. → 0.375 < 1, so 1800 < 4800."
+      },
+      "mathematical_support": {
+        "hint_1": "The full original reservoir volume is the quantity to multiply.",
+        "hint_2": "Trace the original volume through the displayed decimal multiplication; the result is water released, not water left.",
+        "worked_solution": "37.5% = 37.5 ÷ 100 = 0.375. → 4800 × 0.375 = 1800 litres. → 0.375 < 1, so 1800 < 4800."
+      },
+      "working": [
+        "37.5% = 37.5 ÷ 100 = 0.375.",
+        "4800 × 0.375 = 1800 litres.",
+        "0.375 < 1, so 1800 < 4800."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_multiplier_amount",
+          "title": "Find the requested amount from the original whole",
+          "given": "37.5% of 4800 litres",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 37.5,
+          "whole": 4800,
+          "unit": "litres",
+          "steps": [
+            "37.5% = 37.5 ÷ 100 = 0.375.",
+            "4800 × 0.375 = 1800 litres.",
+            "0.375 < 1, so 1800 < 4800."
+          ],
+          "stages": [
+            {
+              "title": "Convert to a decimal multiplier",
+              "lines": [
+                "37.5% = 37.5 ÷ 100 = 0.375."
+              ]
+            },
+            {
+              "title": "Multiply the complete amount",
+              "lines": [
+                "4800 × 0.375 = 1800 litres."
+              ]
+            },
+            {
+              "title": "Check the size against the original whole",
+              "lines": [
+                "0.375 < 1, so 1800 < 4800."
+              ]
+            }
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_multiplier": "The multiplication and final amount are correct. Recheck that the recorded multiplier is the exact decimal equivalent of the stated percentage.",
+        "check_method": "The decimal multiplier and final amount are correct. Record valid multiplication of the complete original amount by that decimal.",
+        "check_amount": "The multiplier and multiplication are valid. Recheck the final amount and compare its size with the original whole.",
+        "check_multiple": "Check the decimal equivalent, its multiplication by the original whole and the final amount separately."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-10-X02",
+      "source_ref": {
+        "page": 16
+      },
+      "stage": "practice",
+      "prompt": "A production line has a reference output of 240 components. During a trial, it produces 125% of that output. Work out the number of components produced.",
+      "target": "Keep the decimal multiplier, complete amount and result consistent",
+      "response": {
+        "type": "decimal_multiplier_amount",
+        "require_decimal_method": false,
+        "percent": 125,
+        "whole": 240,
+        "unit": "components"
+      },
+      "answer": {
+        "value": {
+          "amount": "300"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The trial output is greater than the reference output.",
+        "correct_after_support": "Correct. The trial output is greater than the reference output.",
+        "on_correct_math": "125% = 125 ÷ 100 = 1.25. → 240 × 1.25 = 300 components. → 1.25 > 1, so 300 > 240.",
+        "on_incorrect_attempt_1": "Use the reference output as the whole and find the full trial output.",
+        "on_incorrect_attempt_2": "The working shows one valid method. A whole-plus-quarter or other exact route is also accepted here.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "125% = 125 ÷ 100 = 1.25. → 240 × 1.25 = 300 components. → 1.25 > 1, so 300 > 240."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the reference output as the whole and find the full trial output.",
+        "hint_2": "The working shows one valid method. A whole-plus-quarter or other exact route is also accepted here.",
+        "worked_solution": "125% = 125 ÷ 100 = 1.25. → 240 × 1.25 = 300 components. → 1.25 > 1, so 300 > 240."
+      },
+      "working": [
+        "125% = 125 ÷ 100 = 1.25.",
+        "240 × 1.25 = 300 components.",
+        "1.25 > 1, so 300 > 240."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_multiplier_amount",
+          "title": "Find the requested amount from the original whole",
+          "given": "125% of 240 components",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 125,
+          "whole": 240,
+          "unit": "components",
+          "steps": [
+            "125% = 125 ÷ 100 = 1.25.",
+            "240 × 1.25 = 300 components.",
+            "1.25 > 1, so 300 > 240."
+          ],
+          "stages": [
+            {
+              "title": "Convert to a decimal multiplier",
+              "lines": [
+                "125% = 125 ÷ 100 = 1.25."
+              ]
+            },
+            {
+              "title": "Multiply the complete amount",
+              "lines": [
+                "240 × 1.25 = 300 components."
+              ]
+            },
+            {
+              "title": "Check the size against the original whole",
+              "lines": [
+                "1.25 > 1, so 300 > 240."
+              ]
+            }
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_multiplier": "The multiplication and final amount are correct. Recheck that the recorded multiplier is the exact decimal equivalent of the stated percentage.",
+        "check_method": "The final amount is correct, but the optional calculation is not valid. Correct it or remove work you did not use.",
+        "check_amount": "Recheck the requested amount against the original reference output.",
+        "check_multiple": "Check the reference whole, selected proportion and any recorded calculation."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-10-X03",
+      "source_ref": {
+        "page": 16
+      },
+      "stage": "practice",
+      "prompt": "A sample has a mass of 750 kg. An impurity makes up 0.8% of its total mass. Use a decimal multiplier to find the mass of the impurity.",
+      "target": "Keep the decimal multiplier, complete amount and result consistent",
+      "response": {
+        "type": "decimal_multiplier_amount",
+        "require_decimal_method": true,
+        "percent": 0.8,
+        "whole": 750,
+        "unit": "kg"
+      },
+      "answer": {
+        "value": {
+          "multiplier": "0.008",
+          "calculation": "750 × 0.008",
+          "amount": "6"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The impurity mass uses the complete sample and retains kilograms.",
+        "correct_after_support": "Correct. The impurity mass uses the complete sample and retains kilograms.",
+        "on_correct_math": "0.8% = 0.8 ÷ 100 = 0.008. → 750 × 0.008 = 6 kg. → 0.008 < 1, so 6 < 750.",
+        "on_incorrect_attempt_1": "The entire sample is the reference whole; the impurity is a small selected part.",
+        "on_incorrect_attempt_2": "Follow the small decimal multiplier in the working and keep kilograms for the selected mass.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "0.8% = 0.8 ÷ 100 = 0.008. → 750 × 0.008 = 6 kg. → 0.008 < 1, so 6 < 750."
+      },
+      "mathematical_support": {
+        "hint_1": "The entire sample is the reference whole; the impurity is a small selected part.",
+        "hint_2": "Follow the small decimal multiplier in the working and keep kilograms for the selected mass.",
+        "worked_solution": "0.8% = 0.8 ÷ 100 = 0.008. → 750 × 0.008 = 6 kg. → 0.008 < 1, so 6 < 750."
+      },
+      "working": [
+        "0.8% = 0.8 ÷ 100 = 0.008.",
+        "750 × 0.008 = 6 kg.",
+        "0.008 < 1, so 6 < 750."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_multiplier_amount",
+          "title": "Find the requested amount from the original whole",
+          "given": "0.8% of 750 kg",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 0.8,
+          "whole": 750,
+          "unit": "kg",
+          "steps": [
+            "0.8% = 0.8 ÷ 100 = 0.008.",
+            "750 × 0.008 = 6 kg.",
+            "0.008 < 1, so 6 < 750."
+          ],
+          "stages": [
+            {
+              "title": "Convert to a decimal multiplier",
+              "lines": [
+                "0.8% = 0.8 ÷ 100 = 0.008."
+              ]
+            },
+            {
+              "title": "Multiply the complete amount",
+              "lines": [
+                "750 × 0.008 = 6 kg."
+              ]
+            },
+            {
+              "title": "Check the size against the original whole",
+              "lines": [
+                "0.008 < 1, so 6 < 750."
+              ]
+            }
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_multiplier": "The multiplication and final amount are correct. Recheck that the recorded multiplier is the exact decimal equivalent of the stated percentage.",
+        "check_method": "The decimal multiplier and final amount are correct. Record valid multiplication of the complete original amount by that decimal.",
+        "check_amount": "The multiplier and multiplication are valid. Recheck the final amount and compare its size with the original whole.",
+        "check_multiple": "Check the decimal equivalent, its multiplication by the original whole and the final amount separately."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-10-X04",
+      "source_ref": {
+        "page": 16
+      },
+      "stage": "practice",
+      "prompt": "A student writes 0.6% = 0.06 and 0.6% of 500 = 500 × 0.06. Which statement is correct?",
+      "target": "Keep the decimal multiplier, complete amount and result consistent",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "The first line is incorrect because 0.6% = 0.006.",
+          "Both lines are correct.",
+          "The multiplier should be 6.",
+          "The whole should be divided by 0.6."
+        ]
+      },
+      "answer": {
+        "value": "The first line is incorrect because 0.6% = 0.006."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The conversion is ten times too large, before the multiplier is applied.",
+        "correct_after_support": "Correct. The conversion is ten times too large, before the multiplier is applied.",
+        "on_correct_math": "0.6% = 0.6 ÷ 100 = 0.006. → 0.06 represents 6%, ten times the stated percentage. → The valid calculation is 500 × 0.006 = 3.",
+        "on_incorrect_attempt_1": "A percentage below one percent must have a multiplier below one hundredth.",
+        "on_incorrect_attempt_2": "Compare the two decimal values in the working; the missing zero changes the selected percentage.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "0.6% = 0.6 ÷ 100 = 0.006. → 0.06 represents 6%, ten times the stated percentage. → The valid calculation is 500 × 0.006 = 3."
+      },
+      "mathematical_support": {
+        "hint_1": "A percentage below one percent must have a multiplier below one hundredth.",
+        "hint_2": "Compare the two decimal values in the working; the missing zero changes the selected percentage.",
+        "worked_solution": "0.6% = 0.6 ÷ 100 = 0.006. → 0.06 represents 6%, ten times the stated percentage. → The valid calculation is 500 × 0.006 = 3."
+      },
+      "working": [
+        "0.6% = 0.6 ÷ 100 = 0.006.",
+        "0.06 represents 6%, ten times the stated percentage.",
+        "The valid calculation is 500 × 0.006 = 3."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_multiplier_amount",
+          "title": "Check the small-percentage conversion",
+          "given": "Student: 0.6% = 0.06; 500 × 0.06",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "steps": [
+            "0.6% = 0.6 ÷ 100 = 0.006.",
+            "0.06 represents 6%, ten times the stated percentage.",
+            "The valid calculation is 500 × 0.006 = 3."
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "Both lines are correct.": "The decimal written represents six percent, not zero point six percent.",
+        "The multiplier should be 6.": "A multiplier of six selects six whole amounts, not a small fraction of one percent.",
+        "The whole should be divided by 0.6.": "Dividing by the percentage number does not repair the decimal conversion."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-10-E01",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "exit",
+      "prompt": "Final check: use a decimal multiplier to find 56% of 375.",
+      "target": "Keep the decimal multiplier, complete amount and result consistent",
+      "response": {
+        "type": "decimal_multiplier_amount",
+        "require_decimal_method": true,
+        "percent": 56,
+        "whole": 375,
+        "unit": ""
+      },
+      "answer": {
+        "value": {
+          "multiplier": "0.56",
+          "calculation": "375 × 0.56",
+          "amount": "210"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decimal conversion and multiplication support the final amount.",
+        "correct_after_support": "Correct. The decimal conversion and multiplication support the final amount.",
+        "on_correct_math": "56% = 56 ÷ 100 = 0.56. → 375 × 0.56 = 210. → 0.56 < 1, so 210 < 375.",
+        "on_incorrect_attempt_1": "Check the percentage conversion, original whole and multiplication separately.",
+        "on_incorrect_attempt_2": "Review the converted decimal and multiplication together, then compare the result with the original whole.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "56% = 56 ÷ 100 = 0.56. → 375 × 0.56 = 210. → 0.56 < 1, so 210 < 375."
+      },
+      "mathematical_support": {
+        "hint_1": "Check the percentage conversion, original whole and multiplication separately.",
+        "hint_2": "Review the converted decimal and multiplication together, then compare the result with the original whole.",
+        "worked_solution": "56% = 56 ÷ 100 = 0.56. → 375 × 0.56 = 210. → 0.56 < 1, so 210 < 375."
+      },
+      "working": [
+        "56% = 56 ÷ 100 = 0.56.",
+        "375 × 0.56 = 210.",
+        "0.56 < 1, so 210 < 375."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_multiplier_amount",
+          "title": "Find the requested amount from the original whole",
+          "given": "56% of 375",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 56,
+          "whole": 375,
+          "unit": "",
+          "steps": [
+            "56% = 56 ÷ 100 = 0.56.",
+            "375 × 0.56 = 210.",
+            "0.56 < 1, so 210 < 375."
+          ],
+          "stages": [
+            {
+              "title": "Convert to a decimal multiplier",
+              "lines": [
+                "56% = 56 ÷ 100 = 0.56."
+              ]
+            },
+            {
+              "title": "Multiply the complete amount",
+              "lines": [
+                "375 × 0.56 = 210."
+              ]
+            },
+            {
+              "title": "Check the size against the original whole",
+              "lines": [
+                "0.56 < 1, so 210 < 375."
+              ]
+            }
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_multiplier": "The multiplication and final amount are correct. Recheck that the recorded multiplier is the exact decimal equivalent of the stated percentage.",
+        "check_method": "The decimal multiplier and final amount are correct. Record valid multiplication of the complete original amount by that decimal.",
+        "check_amount": "The multiplier and multiplication are valid. Recheck the final amount and compare its size with the original whole.",
+        "check_multiple": "Check the decimal equivalent, its multiplication by the original whole and the final amount separately."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-10-E02",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "exit",
+      "prompt": "Final check: use a decimal multiplier to find 0.8% of 925.",
+      "target": "Keep the decimal multiplier, complete amount and result consistent",
+      "response": {
+        "type": "decimal_multiplier_amount",
+        "require_decimal_method": true,
+        "percent": 0.8,
+        "whole": 925,
+        "unit": ""
+      },
+      "answer": {
+        "value": {
+          "multiplier": "0.008",
+          "calculation": "925 × 0.008",
+          "amount": "7.4"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The below-one-percent multiplier preserves the required small amount.",
+        "correct_after_support": "Correct. The below-one-percent multiplier preserves the required small amount.",
+        "on_correct_math": "0.8% = 0.8 ÷ 100 = 0.008. → 925 × 0.008 = 7.4. → 0.008 < 1, so 7.4 < 925.",
+        "on_incorrect_attempt_1": "Check the percentage conversion, original whole and multiplication separately.",
+        "on_incorrect_attempt_2": "Use the worked conversion to check the small multiplier before reviewing the product.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "0.8% = 0.8 ÷ 100 = 0.008. → 925 × 0.008 = 7.4. → 0.008 < 1, so 7.4 < 925."
+      },
+      "mathematical_support": {
+        "hint_1": "Check the percentage conversion, original whole and multiplication separately.",
+        "hint_2": "Use the worked conversion to check the small multiplier before reviewing the product.",
+        "worked_solution": "0.8% = 0.8 ÷ 100 = 0.008. → 925 × 0.008 = 7.4. → 0.008 < 1, so 7.4 < 925."
+      },
+      "working": [
+        "0.8% = 0.8 ÷ 100 = 0.008.",
+        "925 × 0.008 = 7.4.",
+        "0.008 < 1, so 7.4 < 925."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_multiplier_amount",
+          "title": "Find the requested amount from the original whole",
+          "given": "0.8% of 925",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 0.8,
+          "whole": 925,
+          "unit": "",
+          "steps": [
+            "0.8% = 0.8 ÷ 100 = 0.008.",
+            "925 × 0.008 = 7.4.",
+            "0.008 < 1, so 7.4 < 925."
+          ],
+          "stages": [
+            {
+              "title": "Convert to a decimal multiplier",
+              "lines": [
+                "0.8% = 0.8 ÷ 100 = 0.008."
+              ]
+            },
+            {
+              "title": "Multiply the complete amount",
+              "lines": [
+                "925 × 0.008 = 7.4."
+              ]
+            },
+            {
+              "title": "Check the size against the original whole",
+              "lines": [
+                "0.008 < 1, so 7.4 < 925."
+              ]
+            }
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_multiplier": "The multiplication and final amount are correct. Recheck that the recorded multiplier is the exact decimal equivalent of the stated percentage.",
+        "check_method": "The decimal multiplier and final amount are correct. Record valid multiplication of the complete original amount by that decimal.",
+        "check_amount": "The multiplier and multiplication are valid. Recheck the final amount and compare its size with the original whole.",
+        "check_multiple": "Check the decimal equivalent, its multiplication by the original whole and the final amount separately."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PA-10-E03",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "exit",
+      "prompt": "Final check: a machine produces 132% of a reference output of 250 units. Use a decimal multiplier to find the new output.",
+      "target": "Keep the decimal multiplier, complete amount and result consistent",
+      "response": {
+        "type": "decimal_multiplier_amount",
+        "require_decimal_method": true,
+        "percent": 132,
+        "whole": 250,
+        "unit": "units"
+      },
+      "answer": {
+        "value": {
+          "multiplier": "1.32",
+          "calculation": "250 × 1.32",
+          "amount": "330"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The multiplier gives the full output above the reference amount, with units retained.",
+        "correct_after_support": "Correct. The multiplier gives the full output above the reference amount, with units retained.",
+        "on_correct_math": "132% = 132 ÷ 100 = 1.32. → 250 × 1.32 = 330 units. → 1.32 > 1, so 330 > 250.",
+        "on_incorrect_attempt_1": "Check the percentage conversion, original whole and multiplication separately.",
+        "on_incorrect_attempt_2": "The displayed multiplier selects more than the reference whole. Review the total output and its unit.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "132% = 132 ÷ 100 = 1.32. → 250 × 1.32 = 330 units. → 1.32 > 1, so 330 > 250."
+      },
+      "mathematical_support": {
+        "hint_1": "Check the percentage conversion, original whole and multiplication separately.",
+        "hint_2": "The displayed multiplier selects more than the reference whole. Review the total output and its unit.",
+        "worked_solution": "132% = 132 ÷ 100 = 1.32. → 250 × 1.32 = 330 units. → 1.32 > 1, so 330 > 250."
+      },
+      "working": [
+        "132% = 132 ÷ 100 = 1.32.",
+        "250 × 1.32 = 330 units.",
+        "1.32 > 1, so 330 > 250."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_multiplier_amount",
+          "title": "Find the requested amount from the original whole",
+          "given": "132% of 250 units",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "percent": 132,
+          "whole": 250,
+          "unit": "units",
+          "steps": [
+            "132% = 132 ÷ 100 = 1.32.",
+            "250 × 1.32 = 330 units.",
+            "1.32 > 1, so 330 > 250."
+          ],
+          "stages": [
+            {
+              "title": "Convert to a decimal multiplier",
+              "lines": [
+                "132% = 132 ÷ 100 = 1.32."
+              ]
+            },
+            {
+              "title": "Multiply the complete amount",
+              "lines": [
+                "250 × 1.32 = 330 units."
+              ]
+            },
+            {
+              "title": "Check the size against the original whole",
+              "lines": [
+                "1.32 > 1, so 330 > 250."
+              ]
+            }
+          ],
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "check_multiplier": "The multiplication and final amount are correct. Recheck that the recorded multiplier is the exact decimal equivalent of the stated percentage.",
+        "check_method": "The decimal multiplier and final amount are correct. Record valid multiplication of the complete original amount by that decimal.",
+        "check_amount": "The multiplier and multiplication are valid. Recheck the final amount and compare its size with the original whole.",
+        "check_multiple": "Check the decimal equivalent, its multiplication by the original whole and the final amount separately."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": false,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    }
+  ],
+  "canonical_lesson": {
+    "version": "PA10-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

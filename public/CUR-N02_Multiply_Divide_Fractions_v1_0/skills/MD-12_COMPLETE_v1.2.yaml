@@ -1,0 +1,2141 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "MD-12 - Divide a whole number by a proper fraction",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-17",
+      "sha256": "725da155e7924da896ebc00ce7c857e7337434534d814e9d5c0d07ce0d17ee82"
+    },
+    "authored_scope": "The approved regrouping concept, reciprocal worked example with a mixed result, gradual learner takeover and unlabelled grouping applications.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "MD12-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "pending",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        3,
+        4,
+        5,
+        6,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "source_repairs_consulted": [
+        9,
+        10,
+        11
+      ],
+      "note": "All 17 source pages and p3–5 diagrams reviewed. The source’s first practice question intentionally revisits the teaching pair and is not unseen evidence. Final pairs are fresh in the active route. Whole-answer fields accept exact fraction aliases, with simplest-form enforcement only when requested. Non-whole final answers accept simplest improper fractions or mixed numbers. Valid direct methods are accepted; unobserved working is not classified. Browser QA remains pending while its automatic approval service is unavailable."
+    }
+  },
+  "identity": {
+    "id": "MD-12",
+    "slug": "divide-a-whole-number-by-a-proper-fraction",
+    "title": "Divide a whole number by a proper fraction",
+    "strand": "Number",
+    "cluster": "Multiplying and Dividing Fractions",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Divide a positive whole number by a positive non-unit proper fraction, using a valid exact method and interpreting the result as a group count.",
+    "success_criteria": [
+      "Keep the whole number unchanged.",
+      "Reciprocate only the divisor.",
+      "Use both the numerator and denominator of the divisor.",
+      "Multiply and simplify accurately.",
+      "Accept and interpret non-whole exact group counts.",
+      "Recognise why the count is greater than the original whole-number amount.",
+      "Apply grouping in measuring, cutting and filling contexts."
+    ],
+    "boundaries": {
+      "includes": [
+        "Positive whole-number dividends",
+        "Positive non-unit proper-fraction divisors",
+        "Exact whole, improper-fraction and mixed-number results",
+        "Direct grouping, repeated subtraction and reciprocal methods",
+        "Simplest form where explicitly requested",
+        "Grouping and measuring contexts"
+      ],
+      "excludes": [
+        "Fraction dividends",
+        "Mixed-number starting values",
+        "Zero divisors",
+        "Negative numbers",
+        "Decimal divisors",
+        "Algebraic fractions",
+        "Multi-step operation selection",
+        "Diagnostic and delayed Retrieval routes"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "MD-09",
+      "MD-11",
+      "MD-05"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for MD-09, MD-11, MD-05 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "integer",
+      "fraction",
+      "single_choice"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    }
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "Count unit-fraction parts, then put the divisor’s numerator number of parts in each group.",
+    "invariant": "The exact group count multiplied by the group size restores the whole-number amount.",
+    "mathematical_rule": "Keep the whole amount and multiply by the reciprocal of the divisor; both divisor parts matter.",
+    "must_notice": [
+      "The denominator sets the size of each small part.",
+      "The numerator sets how many small parts make one group.",
+      "Only the divisor changes to its reciprocal.",
+      "The exact answer may include a fraction of a group."
+    ],
+    "common_confusions": [
+      "Multiplying by the original divisor",
+      "Ignoring the numerator",
+      "Reversing the whole number",
+      "Leaving simplification unfinished",
+      "Finding a share size instead of a group count"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "Count groups of a proper fraction",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Count groups of a proper fraction",
+          "initial_state": "Count groups of a proper fraction",
+          "model": {
+            "kind": "proper_groups",
+            "wholes": 4,
+            "n": 2,
+            "d": 3,
+            "object": "bars",
+            "target": "Number of proper-fraction groups",
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "The divisor is the size of each group. The question asks how many of those groups fit into the whole amount."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Count the small parts",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Count the small parts",
+          "initial_state": "Count the small parts",
+          "model": {
+            "kind": "proper_groups",
+            "wholes": 4,
+            "n": 2,
+            "d": 3,
+            "object": "bars",
+            "target": "Number of proper-fraction groups",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "small_parts"
+          }
+        },
+        "narration": {
+          "script": "First express the whole amount in thirds. Every whole contributes three thirds, so the four wholes contain twelve."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Put two thirds in each group",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Put two thirds in each group",
+          "initial_state": "Put two thirds in each group",
+          "model": {
+            "kind": "proper_groups",
+            "wholes": 4,
+            "n": 2,
+            "d": 3,
+            "object": "bars",
+            "target": "Number of proper-fraction groups",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "grouped"
+          }
+        },
+        "narration": {
+          "script": "The numerator tells how many small parts go together. Pair the thirds to form complete groups of two thirds."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Connect grouping to the reciprocal",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Connect grouping to the reciprocal",
+          "initial_state": "Connect grouping to the reciprocal",
+          "model": {
+            "kind": "proper_groups",
+            "wholes": 4,
+            "n": 2,
+            "d": 3,
+            "object": "bars",
+            "target": "Number of proper-fraction groups",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "count_rule"
+          }
+        },
+        "narration": {
+          "script": "Counting thirds uses the denominator. Grouping those thirds uses the numerator. Reciprocal multiplication combines both actions without changing the whole amount."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Explain the group count",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Explain the group count",
+          "initial_state": "Explain the group count",
+          "model": null
+        },
+        "narration": {
+          "script": "Choose the reason that accounts for the small parts and the complete groups."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "MD-12-C01"
+        },
+        "next_step": "T06"
+      },
+      {
+        "id": "T06",
+        "stage": "teaching",
+        "purpose": "Keep the new starting amount",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Keep the new starting amount",
+          "initial_state": "Keep the new starting amount",
+          "model": {
+            "kind": "proper_groups",
+            "wholes": 7,
+            "n": 2,
+            "d": 5,
+            "object": "bars",
+            "target": "Number of proper-fraction groups",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "whole_fraction"
+          }
+        },
+        "narration": {
+          "script": "Write the new whole-number amount over one. Its value stays unchanged."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T07"
+      },
+      {
+        "id": "T07",
+        "stage": "teaching",
+        "purpose": "Change only the divisor",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Change only the divisor",
+          "initial_state": "Change only the divisor",
+          "model": {
+            "kind": "proper_groups",
+            "wholes": 7,
+            "n": 2,
+            "d": 5,
+            "object": "bars",
+            "target": "Number of proper-fraction groups",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "reciprocal"
+          }
+        },
+        "narration": {
+          "script": "Replace division with multiplication by the divisor’s reciprocal. The first fraction stays exactly as it is."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T08"
+      },
+      {
+        "id": "T08",
+        "stage": "teaching",
+        "purpose": "Find the exact product",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Find the exact product",
+          "initial_state": "Find the exact product",
+          "model": {
+            "kind": "proper_groups",
+            "wholes": 7,
+            "n": 2,
+            "d": 5,
+            "object": "bars",
+            "target": "Number of proper-fraction groups",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "raw"
+          }
+        },
+        "narration": {
+          "script": "Multiply the numerator numbers and the denominator numbers. Keep this non-whole result as an exact fraction."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T09"
+      },
+      {
+        "id": "T09",
+        "stage": "teaching",
+        "purpose": "Express the same answer as a mixed number",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Express the same answer as a mixed number",
+          "initial_state": "Express the same answer as a mixed number",
+          "model": {
+            "kind": "proper_groups",
+            "wholes": 7,
+            "n": 2,
+            "d": 5,
+            "object": "bars",
+            "target": "Number of proper-fraction groups",
+            "math_text": true,
+            "compact_captions": true,
+            "phase": "mixed"
+          }
+        },
+        "narration": {
+          "script": "The improper fraction contains complete groups and part of another group. Writing a mixed number describes the same exact count."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T10"
+      },
+      {
+        "id": "T10",
+        "stage": "teaching",
+        "purpose": "Recognise a valid method",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Recognise a valid method",
+          "initial_state": "Recognise a valid method",
+          "model": null
+        },
+        "narration": {
+          "script": "Choose the method that preserves the starting amount and includes both parts of the divisor. This choice is unscored."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "MD-12-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "MD-12-G01",
+        "support_level": "high",
+        "pre_question_script": "Begin with the whole-number amount before changing the divisor.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "MD-12-G02",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "guided",
+        "question_ref": "MD-12-G03",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "guided",
+        "question_ref": "MD-12-G04",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G05"
+      },
+      "G05": {
+        "stage": "guided",
+        "question_ref": "MD-12-G05",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "F01"
+      },
+      "F01": {
+        "stage": "faded",
+        "question_ref": "MD-12-P01",
+        "support_level": "reduced",
+        "pre_question_script": "Apply the grouping idea yourself. Support is optional.",
+        "correct_next": "I01"
+      },
+      "I01": {
+        "stage": "independent_transfer",
+        "question_ref": "MD-12-P02",
+        "support_level": "none",
+        "pre_question_script": "Use any valid exact method and finish in simplest form.",
+        "correct_next": "P03"
+      }
+    },
+    "practice": {
+      "intro_script": "Some group counts are whole numbers and others are not. Keep every result exact and use simplest form when requested. In the applications, identify what the quantities mean.",
+      "question_order": [
+        "MD-12-P03",
+        "MD-12-P04",
+        "MD-12-P05",
+        "MD-12-P06",
+        "MD-12-X01",
+        "MD-12-X02",
+        "MD-12-X03",
+        "MD-12-X04"
+      ]
+    },
+    "exit": {
+      "intro_script": "Complete two new divisions in simplest exact form and a method check without support. Each answer locks after submission.",
+      "primary_question_refs": [
+        "MD-12-E01",
+        "MD-12-E02",
+        "MD-12-E03"
+      ],
+      "confirmation_question_refs": [],
+      "mastery_policy": {
+        "profile": "all_primary_unsupported",
+        "require_all": true,
+        "source_page": 12,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "You independently divided whole-number amounts by proper fractions, kept non-whole answers exact and identified which number changes to its reciprocal.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Keep building proper-fraction division",
+      "ryan_script": "One or more final checks need practice. Keep the whole amount unchanged, include both divisor parts and check the final exact form.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "MD-12-C01",
+      "source_ref": {
+        "page": 4
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "The calculation is 4 ÷ 2/3 = 6. Why is this correct?",
+      "target": "Number of proper-fraction groups",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Four wholes contain 12 thirds, and six groups of two thirds can be formed.",
+          "Four wholes contain only four groups of two thirds.",
+          "Dividing by 2/3 means multiplying by 2/3.",
+          "The numerator 2 can be ignored because the denominator is 3."
+        ]
+      },
+      "answer": {
+        "value": "Four wholes contain 12 thirds, and six groups of two thirds can be formed."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That explanation uses the thirds count and the number of thirds in each group.",
+        "correct_after_support": "That explanation uses the thirds count and the number of thirds in each group.",
+        "on_correct_math": "Four wholes contain twelve thirds. → Put two thirds in each group: twelve thirds form six groups.",
+        "on_incorrect_attempt_1": "Both numbers in the fraction have a role.",
+        "on_incorrect_attempt_2": "Follow the small parts into complete groups before comparing the counts.",
+        "worked_explanation": "Four wholes contain twelve thirds. → Put two thirds in each group: twelve thirds form six groups."
+      },
+      "mathematical_support": {
+        "hint_1": "Both numbers in the fraction have a role.",
+        "hint_2": "Distinguish the number of small parts from the number of complete groups.",
+        "worked_solution": "Four wholes contain twelve thirds. → Put two thirds in each group: twelve thirds form six groups."
+      },
+      "working": [
+        "Four wholes contain twelve thirds.",
+        "Put two thirds in each group: twelve thirds form six groups."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "proper_groups",
+          "wholes": 4,
+          "n": 2,
+          "d": 3,
+          "object": "bars",
+          "target": "Number of proper-fraction groups",
+          "math_text": true,
+          "compact_captions": true,
+          "phase": "stated_result",
+          "working_phases": [
+            "small_parts",
+            "grouped"
+          ]
+        }
+      },
+      "response_feedback": {
+        "Four wholes contain only four groups of two thirds.": "That treats each whole as one group even though a group is smaller than a whole.",
+        "Dividing by 2/3 means multiplying by 2/3.": "That finds a fraction of the amount instead of counting groups of that size.",
+        "The numerator 2 can be ignored because the denominator is 3.": "The numerator tells how many thirds must be put in each group. It cannot be ignored."
+      }
+    },
+    {
+      "id": "MD-12-C02",
+      "source_ref": {
+        "page": 4
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "For 7 ÷ 2/5, which method has been used correctly?",
+      "target": "Number of proper-fraction groups",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "7 ÷ 2/5 = 7/1 × 5/2 = 35/2",
+          "7 ÷ 2/5 = 7/1 × 2/5 = 14/5",
+          "7 ÷ 2/5 = 1/7 × 5/2 = 5/14",
+          "7 ÷ 2/5 = 7 × 5 = 35"
+        ]
+      },
+      "answer": {
+        "value": "7 ÷ 2/5 = 7/1 × 5/2 = 35/2"
+      },
+      "policy": {
+        "scored": false,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true,
+        "engagementOnly": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That route keeps the whole amount and uses both parts of the divisor’s reciprocal.",
+        "correct_after_support": "That route keeps the whole amount and uses both parts of the divisor’s reciprocal.",
+        "on_correct_math": "Keep the whole number: 7 = 7/1. → Use the divisor’s reciprocal: 7/1 ÷ 2/5 = 7/1 × 5/2. → Multiply: 7 × 5 = 35 and 1 × 2 = 2, giving 35/2. → 35/2 is already in simplest form.",
+        "on_incorrect_attempt_1": "Check which number stays unchanged and which becomes its reciprocal.",
+        "on_incorrect_attempt_2": "Compare the unchanged amount, reciprocal divisor and exact product.",
+        "worked_explanation": "Keep the whole number: 7 = 7/1. → Use the divisor’s reciprocal: 7/1 ÷ 2/5 = 7/1 × 5/2. → Multiply: 7 × 5 = 35 and 1 × 2 = 2, giving 35/2. → 35/2 is already in simplest form."
+      },
+      "mathematical_support": {
+        "hint_1": "Check which number stays unchanged and which becomes its reciprocal.",
+        "hint_2": "Both the numerator and denominator of the divisor must still have a role.",
+        "worked_solution": "Keep the whole number: 7 = 7/1. → Use the divisor’s reciprocal: 7/1 ÷ 2/5 = 7/1 × 5/2. → Multiply: 7 × 5 = 35 and 1 × 2 = 2, giving 35/2. → 35/2 is already in simplest form."
+      },
+      "working": [
+        "Keep the whole number: 7 = 7/1.",
+        "Use the divisor’s reciprocal: 7/1 ÷ 2/5 = 7/1 × 5/2.",
+        "Multiply: 7 × 5 = 35 and 1 × 2 = 2, giving 35/2.",
+        "35/2 is already in simplest form."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "proper_groups",
+          "wholes": 7,
+          "n": 2,
+          "d": 5,
+          "object": "bars",
+          "target": "Number of proper-fraction groups",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "whole_fraction",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "7 ÷ 2/5 = 7/1 × 2/5 = 14/5": "The original divisor has been used as a multiplier without being reciprocated.",
+        "7 ÷ 2/5 = 1/7 × 5/2 = 5/14": "The starting whole number has been reversed, so the amount has changed.",
+        "7 ÷ 2/5 = 7 × 5 = 35": "That counts fifths but does not combine the fifths into groups of two."
+      }
+    },
+    {
+      "id": "MD-12-G01",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "For 6 ÷ 3/5, write the whole number 6 as a fraction over 1.",
+      "target": "Number of proper-fraction groups",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": false,
+        "require_simplest_form": false,
+        "allow_mixed_number": false,
+        "allow_signed_parts": true,
+        "show_authored_label": true,
+        "input_label": "The whole number as a fraction"
+      },
+      "answer": {
+        "value": "6/1"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The starting amount now has the requested fraction form.",
+        "correct_after_support": "The starting amount now has the requested fraction form.",
+        "on_correct_math": "Keep the amount unchanged: 6 = 6/1.",
+        "on_incorrect_attempt_1": "The starting amount must keep its value.",
+        "on_incorrect_attempt_2": "Compare the whole number with the fraction that preserves it.",
+        "worked_explanation": "Keep the amount unchanged: 6 = 6/1.",
+        "on_equivalent_wrong_form": "That has the correct value, but this step specifically asks for a denominator of one."
+      },
+      "mathematical_support": {
+        "hint_1": "The starting amount must keep its value.",
+        "hint_2": "A whole-number amount can be written as that number of ones.",
+        "worked_solution": "Keep the amount unchanged: 6 = 6/1."
+      },
+      "working": [
+        "Keep the amount unchanged: 6 = 6/1."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "proper_groups",
+          "wholes": 6,
+          "n": 3,
+          "d": 5,
+          "object": "bars",
+          "target": "Number of proper-fraction groups",
+          "math_text": true,
+          "compact_captions": true,
+          "phase": "whole_unknown",
+          "resultScope": "whole_fraction",
+          "support_phases": [
+            "whole_fraction"
+          ],
+          "working_phases": [
+            "whole_fraction",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "1/6": "That reverses the starting amount. This step is not asking for its reciprocal.",
+        "12/2": "That has the correct value, but this step specifically asks for a denominator of one.",
+        "3/5": "That is the divisor, not the whole-number amount."
+      }
+    },
+    {
+      "id": "MD-12-G02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "Find the reciprocal of the divisor 3/5.",
+      "target": "Number of proper-fraction groups",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "require_simplest_form": false,
+        "allow_mixed_number": false,
+        "allow_signed_parts": true,
+        "show_authored_label": true,
+        "input_label": "Your exact fraction"
+      },
+      "answer": {
+        "value": "5/3"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The divisor’s reciprocal is ready for multiplication.",
+        "correct_after_support": "The divisor’s reciprocal is ready for multiplication.",
+        "on_correct_math": "Exchange the positions in the divisor: 3/5 becomes 5/3.",
+        "on_incorrect_attempt_1": "Only the divisor is being changed.",
+        "on_incorrect_attempt_2": "Compare the divisor’s two positions with your proposed reciprocal.",
+        "worked_explanation": "Exchange the positions in the divisor: 3/5 becomes 5/3."
+      },
+      "mathematical_support": {
+        "hint_1": "Only the divisor is being changed.",
+        "hint_2": "The numerator and denominator exchange places without changing the starting whole number.",
+        "worked_solution": "Exchange the positions in the divisor: 3/5 becomes 5/3."
+      },
+      "working": [
+        "Exchange the positions in the divisor: 3/5 becomes 5/3."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "proper_groups",
+          "wholes": 6,
+          "n": 3,
+          "d": 5,
+          "object": "bars",
+          "target": "Number of proper-fraction groups",
+          "math_text": true,
+          "compact_captions": true,
+          "phase": "divisor_given",
+          "resultScope": "reciprocal_only",
+          "support_phases": [
+            "reciprocal_only"
+          ],
+          "working_phases": [
+            "whole_fraction",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "3/5": "That repeats the divisor instead of using its reciprocal.",
+        "1/6": "That reverses the whole number, which must stay unchanged."
+      }
+    },
+    {
+      "id": "MD-12-G03",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "Multiply 6/1 × 5/3. Enter the numerator and denominator products without simplifying yet.",
+      "target": "Number of proper-fraction groups",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": false,
+        "require_simplest_form": false,
+        "allow_mixed_number": false,
+        "allow_signed_parts": true,
+        "show_authored_label": true,
+        "input_label": "Product before simplifying"
+      },
+      "answer": {
+        "value": "30/3"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Those products give the exact fraction before simplification.",
+        "correct_after_support": "Those products give the exact fraction before simplification.",
+        "on_correct_math": "Multiply the two numerators and the two denominators. → 6 × 5 = 30 and 1 × 3 = 3, giving 30/3.",
+        "on_incorrect_attempt_1": "Keep numerator multiplication separate from denominator multiplication.",
+        "on_incorrect_attempt_2": "Compare each fraction part with its own multiplication.",
+        "worked_explanation": "Multiply the two numerators and the two denominators. → 6 × 5 = 30 and 1 × 3 = 3, giving 30/3.",
+        "on_equivalent_wrong_form": "That has the correct value. This step asks for the numerator and denominator products before simplifying."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep numerator multiplication separate from denominator multiplication.",
+        "hint_2": "This box asks for the raw fraction before the final simplification.",
+        "worked_solution": "Multiply the two numerators and the two denominators. → 6 × 5 = 30 and 1 × 3 = 3, giving 30/3."
+      },
+      "working": [
+        "Multiply the two numerators and the two denominators.",
+        "6 × 5 = 30 and 1 × 3 = 3, giving 30/3."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "proper_groups",
+          "wholes": 6,
+          "n": 3,
+          "d": 5,
+          "object": "bars",
+          "target": "Number of proper-fraction groups",
+          "math_text": true,
+          "compact_captions": true,
+          "phase": "multiply",
+          "resultScope": "raw",
+          "support_phases": [
+            "multiply",
+            "raw"
+          ],
+          "working_phases": [
+            "whole_fraction",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "10/1": "That has the correct value. This step asks for the numerator and denominator products before simplifying.",
+        "6/5": "That leaves out the reciprocal multiplication.",
+        "18/5": "That multiplies by the original divisor instead of its reciprocal."
+      }
+    },
+    {
+      "id": "MD-12-G04",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "Complete the division: 6 ÷ 3/5 = 30/3. What is its exact value?",
+      "target": "Number of proper-fraction groups",
+      "response": {
+        "type": "integer",
+        "accept_exact_equivalents": true,
+        "require_simplest_form": false,
+        "input_label": "Your exact answer"
+      },
+      "answer": {
+        "value": 10
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That value is the number of groups in the original division.",
+        "correct_after_support": "That value is the number of groups in the original division.",
+        "on_correct_math": "The product is thirty thirds. → Thirty thirds make ten whole groups, so 30/3 = 10.",
+        "on_incorrect_attempt_1": "The denominator tells how many thirds make a whole group in this product.",
+        "on_incorrect_attempt_2": "Connect the fraction product to its exact group count.",
+        "worked_explanation": "The product is thirty thirds. → Thirty thirds make ten whole groups, so 30/3 = 10."
+      },
+      "mathematical_support": {
+        "hint_1": "The denominator tells how many thirds make a whole group in this product.",
+        "hint_2": "Find the exact value of the fraction, keeping numerator and denominator roles distinct.",
+        "worked_solution": "The product is thirty thirds. → Thirty thirds make ten whole groups, so 30/3 = 10."
+      },
+      "working": [
+        "The product is thirty thirds.",
+        "Thirty thirds make ten whole groups, so 30/3 = 10."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "proper_groups",
+          "wholes": 6,
+          "n": 3,
+          "d": 5,
+          "object": "bars",
+          "target": "Number of proper-fraction groups",
+          "math_text": true,
+          "compact_captions": true,
+          "phase": "raw_unknown",
+          "resultScope": "simplified",
+          "support_phases": [
+            "raw",
+            "simplified"
+          ],
+          "working_phases": [
+            "whole_fraction",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "30": "That repeats the numerator before accounting for the denominator.",
+        "3/30": "That reverses the product rather than finding its value."
+      }
+    },
+    {
+      "id": "MD-12-G05",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "guided",
+      "prompt": "Which statement correctly explains 6 ÷ 3/5?",
+      "target": "Number of proper-fraction groups",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Six wholes contain ten groups of size 3/5.",
+          "Dividing by 3/5 means multiplying by 3/5.",
+          "The numerator 3 can be ignored, so the answer is 30.",
+          "The reciprocal of 3/5 is 3/5."
+        ]
+      },
+      "answer": {
+        "value": "Six wholes contain ten groups of size 3/5."
+      },
+      "policy": {
+        "scored": false,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true,
+        "engagementOnly": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That explanation includes both the group size and the complete count.",
+        "correct_after_support": "That explanation includes both the group size and the complete count.",
+        "on_correct_math": "Six wholes contain thirty fifths. → Each group needs three fifths, so thirty fifths form ten groups.",
+        "on_incorrect_attempt_1": "The numerator determines how many small parts go in a group.",
+        "on_incorrect_attempt_2": "Compare the count of fifths with the number of groups they form.",
+        "worked_explanation": "Six wholes contain thirty fifths. → Each group needs three fifths, so thirty fifths form ten groups."
+      },
+      "mathematical_support": {
+        "hint_1": "The numerator determines how many small parts go in a group.",
+        "hint_2": "The answer counts groups, not the small parts individually.",
+        "worked_solution": "Six wholes contain thirty fifths. → Each group needs three fifths, so thirty fifths form ten groups."
+      },
+      "working": [
+        "Six wholes contain thirty fifths.",
+        "Each group needs three fifths, so thirty fifths form ten groups."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "proper_groups",
+          "wholes": 6,
+          "n": 3,
+          "d": 5,
+          "object": "bars",
+          "target": "Number of proper-fraction groups",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "small_parts",
+            "grouped"
+          ]
+        }
+      },
+      "response_feedback": {
+        "Dividing by 3/5 means multiplying by 3/5.": "That finds three fifths of six, which is a different calculation.",
+        "The numerator 3 can be ignored, so the answer is 30.": "Thirty counts fifths. Each requested group needs three of those fifths.",
+        "The reciprocal of 3/5 is 3/5.": "That repeats the original fraction rather than exchanging its two parts."
+      }
+    },
+    {
+      "id": "MD-12-P01",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "faded",
+      "prompt": "Work out 4 ÷ 2/3. Give your answer in simplest exact form.",
+      "target": "Number of proper-fraction groups",
+      "response": {
+        "type": "integer",
+        "accept_exact_equivalents": true,
+        "require_simplest_form": true,
+        "input_label": "Your exact answer"
+      },
+      "answer": {
+        "value": 6
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That count uses every third and puts the right number in each group.",
+        "correct_after_support": "That count uses every third and puts the right number in each group.",
+        "on_correct_math": "Keep the whole number: 4 = 4/1. → Use the divisor’s reciprocal: 4/1 ÷ 2/3 = 4/1 × 3/2. → Multiply: 4 × 3 = 12 and 1 × 2 = 2, giving 12/2. → 12/2 = 6. This is the same exact value in simplest form.",
+        "on_incorrect_attempt_1": "The divisor is the size of each group, not just its denominator.",
+        "on_incorrect_attempt_2": "Distinguish the count of thirds from the count of groups.",
+        "worked_explanation": "Keep the whole number: 4 = 4/1. → Use the divisor’s reciprocal: 4/1 ÷ 2/3 = 4/1 × 3/2. → Multiply: 4 × 3 = 12 and 1 × 2 = 2, giving 12/2. → 12/2 = 6. This is the same exact value in simplest form.",
+        "on_equivalent_unfinished": "Your answer has the correct value, but it is not yet in simplest form. Finish simplifying without changing that value."
+      },
+      "mathematical_support": {
+        "hint_1": "The divisor is the size of each group, not just its denominator.",
+        "hint_2": "Keep the whole amount unchanged. Use both fraction parts and finish in the requested form. Any valid exact method is accepted.",
+        "worked_solution": "Keep the whole number: 4 = 4/1. → Use the divisor’s reciprocal: 4/1 ÷ 2/3 = 4/1 × 3/2. → Multiply: 4 × 3 = 12 and 1 × 2 = 2, giving 12/2. → 12/2 = 6. This is the same exact value in simplest form."
+      },
+      "working": [
+        "Keep the whole number: 4 = 4/1.",
+        "Use the divisor’s reciprocal: 4/1 ÷ 2/3 = 4/1 × 3/2.",
+        "Multiply: 4 × 3 = 12 and 1 × 2 = 2, giving 12/2.",
+        "12/2 = 6. This is the same exact value in simplest form."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "proper_groups",
+          "wholes": 4,
+          "n": 2,
+          "d": 3,
+          "object": "bars",
+          "target": "Number of proper-fraction groups",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "whole_fraction",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "4": "That counts whole units, not the smaller fraction-sized groups.",
+        "12": "That counts the small unit-fraction parts but ignores how many of those parts belong in each group.",
+        "8/3": "That value comes from multiplying by the original fraction. This question counts fraction-sized groups in the whole amount.",
+        "3/8": "That reverses the starting whole number. The whole amount must stay unchanged.",
+        "2/12": "That is the reciprocal of the required group count. Keep the whole amount and change only the divisor."
+      }
+    },
+    {
+      "id": "MD-12-P02",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "independent_transfer",
+      "prompt": "Work out 9 ÷ 3/5. Give your answer in simplest exact form.",
+      "target": "Number of proper-fraction groups",
+      "response": {
+        "type": "integer",
+        "accept_exact_equivalents": true,
+        "require_simplest_form": true,
+        "input_label": "Your exact answer"
+      },
+      "answer": {
+        "value": 15
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The complete number of fraction-sized groups has been found.",
+        "correct_after_support": "The complete number of fraction-sized groups has been found.",
+        "on_correct_math": "Keep the whole number: 9 = 9/1. → Use the divisor’s reciprocal: 9/1 ÷ 3/5 = 9/1 × 5/3. → Multiply: 9 × 5 = 45 and 1 × 3 = 3, giving 45/3. → 45/3 = 15. This is the same exact value in simplest form.",
+        "on_incorrect_attempt_1": "The divisor is the size of each group, not just its denominator.",
+        "on_incorrect_attempt_2": "Check that both numbers in the divisor are included.",
+        "worked_explanation": "Keep the whole number: 9 = 9/1. → Use the divisor’s reciprocal: 9/1 ÷ 3/5 = 9/1 × 5/3. → Multiply: 9 × 5 = 45 and 1 × 3 = 3, giving 45/3. → 45/3 = 15. This is the same exact value in simplest form.",
+        "on_equivalent_unfinished": "Your answer has the correct value, but it is not yet in simplest form. Finish simplifying without changing that value."
+      },
+      "mathematical_support": {
+        "hint_1": "The divisor is the size of each group, not just its denominator.",
+        "hint_2": "Keep the whole amount unchanged. Use both fraction parts and finish in the requested form. Any valid exact method is accepted.",
+        "worked_solution": "Keep the whole number: 9 = 9/1. → Use the divisor’s reciprocal: 9/1 ÷ 3/5 = 9/1 × 5/3. → Multiply: 9 × 5 = 45 and 1 × 3 = 3, giving 45/3. → 45/3 = 15. This is the same exact value in simplest form."
+      },
+      "working": [
+        "Keep the whole number: 9 = 9/1.",
+        "Use the divisor’s reciprocal: 9/1 ÷ 3/5 = 9/1 × 5/3.",
+        "Multiply: 9 × 5 = 45 and 1 × 3 = 3, giving 45/3.",
+        "45/3 = 15. This is the same exact value in simplest form."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "proper_groups",
+          "wholes": 9,
+          "n": 3,
+          "d": 5,
+          "object": "bars",
+          "target": "Number of proper-fraction groups",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "whole_fraction",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "9": "That counts whole units, not the smaller fraction-sized groups.",
+        "45": "That counts the small unit-fraction parts but ignores how many of those parts belong in each group.",
+        "27/5": "That value comes from multiplying by the original fraction. This question counts fraction-sized groups in the whole amount.",
+        "5/27": "That reverses the starting whole number. The whole amount must stay unchanged.",
+        "3/45": "That is the reciprocal of the required group count. Keep the whole amount and change only the divisor."
+      }
+    },
+    {
+      "id": "MD-12-P03",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Work out 5 ÷ 2/7. Give your answer in simplest exact form.",
+      "target": "Number of proper-fraction groups",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "require_simplest_form": true,
+        "allow_mixed_number": true,
+        "allow_signed_parts": true,
+        "show_authored_label": true,
+        "input_label": "Your answer in simplest exact form"
+      },
+      "answer": {
+        "value": "35/2"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That exact result includes the fractional part of a group.",
+        "correct_after_support": "That exact result includes the fractional part of a group.",
+        "on_correct_math": "Keep the whole number: 5 = 5/1. → Use the divisor’s reciprocal: 5/1 ÷ 2/7 = 5/1 × 7/2. → Multiply: 5 × 7 = 35 and 1 × 2 = 2, giving 35/2. → 35/2 is already in simplest form.",
+        "on_incorrect_attempt_1": "The divisor is the size of each group, not just its denominator.",
+        "on_incorrect_attempt_2": "Keep the non-whole result exact instead of rounding the group count.",
+        "worked_explanation": "Keep the whole number: 5 = 5/1. → Use the divisor’s reciprocal: 5/1 ÷ 2/7 = 5/1 × 7/2. → Multiply: 5 × 7 = 35 and 1 × 2 = 2, giving 35/2. → 35/2 is already in simplest form.",
+        "on_equivalent_unfinished": "Your answer has the correct value, but it is not yet in simplest form. Finish simplifying without changing that value."
+      },
+      "mathematical_support": {
+        "hint_1": "The divisor is the size of each group, not just its denominator.",
+        "hint_2": "Keep the whole amount unchanged. Use both fraction parts and finish in the requested form. Any valid exact method is accepted.",
+        "worked_solution": "Keep the whole number: 5 = 5/1. → Use the divisor’s reciprocal: 5/1 ÷ 2/7 = 5/1 × 7/2. → Multiply: 5 × 7 = 35 and 1 × 2 = 2, giving 35/2. → 35/2 is already in simplest form."
+      },
+      "working": [
+        "Keep the whole number: 5 = 5/1.",
+        "Use the divisor’s reciprocal: 5/1 ÷ 2/7 = 5/1 × 7/2.",
+        "Multiply: 5 × 7 = 35 and 1 × 2 = 2, giving 35/2.",
+        "35/2 is already in simplest form."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "proper_groups",
+          "wholes": 5,
+          "n": 2,
+          "d": 7,
+          "object": "bars",
+          "target": "Number of proper-fraction groups",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "whole_fraction",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "5": "That counts whole units, not the smaller fraction-sized groups.",
+        "35": "That counts the small unit-fraction parts but ignores how many of those parts belong in each group.",
+        "10/7": "That value comes from multiplying by the original fraction. This question counts fraction-sized groups in the whole amount.",
+        "7/10": "That reverses the starting whole number. The whole amount must stay unchanged.",
+        "2/35": "That is the reciprocal of the required group count. Keep the whole amount and change only the divisor."
+      }
+    },
+    {
+      "id": "MD-12-P04",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Work out 8 ÷ 4/9. Give your answer in simplest exact form.",
+      "target": "Number of proper-fraction groups",
+      "response": {
+        "type": "integer",
+        "accept_exact_equivalents": true,
+        "require_simplest_form": true,
+        "input_label": "Your exact answer"
+      },
+      "answer": {
+        "value": 18
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The whole-number count follows from the fully simplified product.",
+        "correct_after_support": "The whole-number count follows from the fully simplified product.",
+        "on_correct_math": "Keep the whole number: 8 = 8/1. → Use the divisor’s reciprocal: 8/1 ÷ 4/9 = 8/1 × 9/4. → Multiply: 8 × 9 = 72 and 1 × 4 = 4, giving 72/4. → 72/4 = 18. This is the same exact value in simplest form.",
+        "on_incorrect_attempt_1": "The divisor is the size of each group, not just its denominator.",
+        "on_incorrect_attempt_2": "Check the reciprocal product and simplify it without changing its value.",
+        "worked_explanation": "Keep the whole number: 8 = 8/1. → Use the divisor’s reciprocal: 8/1 ÷ 4/9 = 8/1 × 9/4. → Multiply: 8 × 9 = 72 and 1 × 4 = 4, giving 72/4. → 72/4 = 18. This is the same exact value in simplest form.",
+        "on_equivalent_unfinished": "Your answer has the correct value, but it is not yet in simplest form. Finish simplifying without changing that value."
+      },
+      "mathematical_support": {
+        "hint_1": "The divisor is the size of each group, not just its denominator.",
+        "hint_2": "Keep the whole amount unchanged. Use both fraction parts and finish in the requested form. Any valid exact method is accepted.",
+        "worked_solution": "Keep the whole number: 8 = 8/1. → Use the divisor’s reciprocal: 8/1 ÷ 4/9 = 8/1 × 9/4. → Multiply: 8 × 9 = 72 and 1 × 4 = 4, giving 72/4. → 72/4 = 18. This is the same exact value in simplest form."
+      },
+      "working": [
+        "Keep the whole number: 8 = 8/1.",
+        "Use the divisor’s reciprocal: 8/1 ÷ 4/9 = 8/1 × 9/4.",
+        "Multiply: 8 × 9 = 72 and 1 × 4 = 4, giving 72/4.",
+        "72/4 = 18. This is the same exact value in simplest form."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "proper_groups",
+          "wholes": 8,
+          "n": 4,
+          "d": 9,
+          "object": "bars",
+          "target": "Number of proper-fraction groups",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "whole_fraction",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "8": "That counts whole units, not the smaller fraction-sized groups.",
+        "72": "That counts the small unit-fraction parts but ignores how many of those parts belong in each group.",
+        "32/9": "That value comes from multiplying by the original fraction. This question counts fraction-sized groups in the whole amount.",
+        "9/32": "That reverses the starting whole number. The whole amount must stay unchanged.",
+        "4/72": "That is the reciprocal of the required group count. Keep the whole amount and change only the divisor."
+      }
+    },
+    {
+      "id": "MD-12-P05",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "Work out 3 ÷ 5/6. Give your answer in simplest exact form.",
+      "target": "Number of proper-fraction groups",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "require_simplest_form": true,
+        "allow_mixed_number": true,
+        "allow_signed_parts": true,
+        "show_authored_label": true,
+        "input_label": "Your answer in simplest exact form"
+      },
+      "answer": {
+        "value": "18/5"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The exact fraction describes the whole groups and the remaining part.",
+        "correct_after_support": "The exact fraction describes the whole groups and the remaining part.",
+        "on_correct_math": "Keep the whole number: 3 = 3/1. → Use the divisor’s reciprocal: 3/1 ÷ 5/6 = 3/1 × 6/5. → Multiply: 3 × 6 = 18 and 1 × 5 = 5, giving 18/5. → 18/5 is already in simplest form.",
+        "on_incorrect_attempt_1": "The divisor is the size of each group, not just its denominator.",
+        "on_incorrect_attempt_2": "Check the group size and retain the exact fractional remainder.",
+        "worked_explanation": "Keep the whole number: 3 = 3/1. → Use the divisor’s reciprocal: 3/1 ÷ 5/6 = 3/1 × 6/5. → Multiply: 3 × 6 = 18 and 1 × 5 = 5, giving 18/5. → 18/5 is already in simplest form.",
+        "on_equivalent_unfinished": "Your answer has the correct value, but it is not yet in simplest form. Finish simplifying without changing that value."
+      },
+      "mathematical_support": {
+        "hint_1": "The divisor is the size of each group, not just its denominator.",
+        "hint_2": "Keep the whole amount unchanged. Use both fraction parts and finish in the requested form. Any valid exact method is accepted.",
+        "worked_solution": "Keep the whole number: 3 = 3/1. → Use the divisor’s reciprocal: 3/1 ÷ 5/6 = 3/1 × 6/5. → Multiply: 3 × 6 = 18 and 1 × 5 = 5, giving 18/5. → 18/5 is already in simplest form."
+      },
+      "working": [
+        "Keep the whole number: 3 = 3/1.",
+        "Use the divisor’s reciprocal: 3/1 ÷ 5/6 = 3/1 × 6/5.",
+        "Multiply: 3 × 6 = 18 and 1 × 5 = 5, giving 18/5.",
+        "18/5 is already in simplest form."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "proper_groups",
+          "wholes": 3,
+          "n": 5,
+          "d": 6,
+          "object": "bars",
+          "target": "Number of proper-fraction groups",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "whole_fraction",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "3": "That counts whole units, not the smaller fraction-sized groups.",
+        "18": "That counts the small unit-fraction parts but ignores how many of those parts belong in each group.",
+        "15/6": "That value comes from multiplying by the original fraction. This question counts fraction-sized groups in the whole amount.",
+        "6/15": "That reverses the starting whole number. The whole amount must stay unchanged.",
+        "5/18": "That is the reciprocal of the required group count. Keep the whole amount and change only the divisor."
+      }
+    },
+    {
+      "id": "MD-12-P06",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "practice",
+      "prompt": "A student calculates 10 ÷ 4/5. Which answer is correct?",
+      "target": "Number of proper-fraction groups",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "25/2",
+          "8",
+          "50",
+          "2/25"
+        ]
+      },
+      "answer": {
+        "value": "25/2"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That exact value counts the groups without ignoring the numerator.",
+        "correct_after_support": "That exact value counts the groups without ignoring the numerator.",
+        "on_correct_math": "Keep the whole number: 10 = 10/1. → Use the divisor’s reciprocal: 10/1 ÷ 4/5 = 10/1 × 5/4. → Multiply: 10 × 5 = 50 and 1 × 4 = 4, giving 50/4. → 50/4 = 25/2. This is the same exact value in simplest form.",
+        "on_incorrect_attempt_1": "The result can include a fraction of a group.",
+        "on_incorrect_attempt_2": "Compare each proposed result with a valid reciprocal multiplication.",
+        "worked_explanation": "Keep the whole number: 10 = 10/1. → Use the divisor’s reciprocal: 10/1 ÷ 4/5 = 10/1 × 5/4. → Multiply: 10 × 5 = 50 and 1 × 4 = 4, giving 50/4. → 50/4 = 25/2. This is the same exact value in simplest form."
+      },
+      "mathematical_support": {
+        "hint_1": "The result can include a fraction of a group.",
+        "hint_2": "Check whether each proposed answer uses both numbers in the divisor correctly.",
+        "worked_solution": "Keep the whole number: 10 = 10/1. → Use the divisor’s reciprocal: 10/1 ÷ 4/5 = 10/1 × 5/4. → Multiply: 10 × 5 = 50 and 1 × 4 = 4, giving 50/4. → 50/4 = 25/2. This is the same exact value in simplest form."
+      },
+      "working": [
+        "Keep the whole number: 10 = 10/1.",
+        "Use the divisor’s reciprocal: 10/1 ÷ 4/5 = 10/1 × 5/4.",
+        "Multiply: 10 × 5 = 50 and 1 × 4 = 4, giving 50/4.",
+        "50/4 = 25/2. This is the same exact value in simplest form."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "proper_groups",
+          "wholes": 10,
+          "n": 4,
+          "d": 5,
+          "object": "bars",
+          "target": "Number of proper-fraction groups",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "whole_fraction",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "8": "That multiplies ten by the original fraction.",
+        "50": "That counts fifths but ignores the four fifths needed for each group.",
+        "2/25": "That is the reciprocal of the required result."
+      }
+    },
+    {
+      "id": "MD-12-X01",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "practice",
+      "prompt": "A piece of ribbon is 6 metres long. It is cut into pieces that are each 3/4 metre long. Work out the number of pieces.",
+      "target": "Number of proper-fraction groups",
+      "response": {
+        "type": "integer",
+        "accept_exact_equivalents": true,
+        "require_simplest_form": false,
+        "input_label": "Number of pieces"
+      },
+      "answer": {
+        "value": 8
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That is the number of equal pieces cut from the full ribbon.",
+        "correct_after_support": "That is the number of equal pieces cut from the full ribbon.",
+        "on_correct_math": "Keep the whole number: 6 = 6/1. → Use the divisor’s reciprocal: 6/1 ÷ 3/4 = 6/1 × 4/3. → Multiply: 6 × 4 = 24 and 1 × 3 = 3, giving 24/3. → 24/3 = 8. This is the same exact value in simplest form.",
+        "on_incorrect_attempt_1": "The divisor is the size of each group, not just its denominator.",
+        "on_incorrect_attempt_2": "Compare each piece length with the original length available.",
+        "worked_explanation": "Keep the whole number: 6 = 6/1. → Use the divisor’s reciprocal: 6/1 ÷ 3/4 = 6/1 × 4/3. → Multiply: 6 × 4 = 24 and 1 × 3 = 3, giving 24/3. → 24/3 = 8. This is the same exact value in simplest form."
+      },
+      "mathematical_support": {
+        "hint_1": "The divisor is the size of each group, not just its denominator.",
+        "hint_2": "Keep the whole amount unchanged. Use both fraction parts and finish in the requested form. Any valid exact method is accepted.",
+        "worked_solution": "Keep the whole number: 6 = 6/1. → Use the divisor’s reciprocal: 6/1 ÷ 3/4 = 6/1 × 4/3. → Multiply: 6 × 4 = 24 and 1 × 3 = 3, giving 24/3. → 24/3 = 8. This is the same exact value in simplest form."
+      },
+      "working": [
+        "Keep the whole number: 6 = 6/1.",
+        "Use the divisor’s reciprocal: 6/1 ÷ 3/4 = 6/1 × 4/3.",
+        "Multiply: 6 × 4 = 24 and 1 × 3 = 3, giving 24/3.",
+        "24/3 = 8. This is the same exact value in simplest form."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "proper_groups",
+          "wholes": 6,
+          "n": 3,
+          "d": 4,
+          "object": "ribbon",
+          "target": "Number of proper-fraction groups",
+          "math_text": true,
+          "compact_captions": true,
+          "unit": "m",
+          "working_phases": [
+            "whole_fraction",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "6": "That counts whole units, not the smaller fraction-sized groups.",
+        "24": "That counts the small unit-fraction parts but ignores how many of those parts belong in each group.",
+        "18/4": "That value comes from multiplying by the original fraction. This question counts fraction-sized groups in the whole amount.",
+        "4/18": "That reverses the starting whole number. The whole amount must stay unchanged.",
+        "3/24": "That is the reciprocal of the required group count. Keep the whole amount and change only the divisor."
+      }
+    },
+    {
+      "id": "MD-12-X02",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "practice",
+      "prompt": "A container holds 8 litres of water. The water is poured into bottles that each hold 2/3 litre. Work out the number of full bottles that can be filled.",
+      "target": "Number of proper-fraction groups",
+      "response": {
+        "type": "integer",
+        "accept_exact_equivalents": true,
+        "require_simplest_form": false,
+        "input_label": "Number of full bottles"
+      },
+      "answer": {
+        "value": 12
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That count fills the bottles using all the available water.",
+        "correct_after_support": "That count fills the bottles using all the available water.",
+        "on_correct_math": "Keep the whole number: 8 = 8/1. → Use the divisor’s reciprocal: 8/1 ÷ 2/3 = 8/1 × 3/2. → Multiply: 8 × 3 = 24 and 1 × 2 = 2, giving 24/2. → 24/2 = 12. This is the same exact value in simplest form.",
+        "on_incorrect_attempt_1": "The divisor is the size of each group, not just its denominator.",
+        "on_incorrect_attempt_2": "Keep the capacity of one bottle separate from the bottle count.",
+        "worked_explanation": "Keep the whole number: 8 = 8/1. → Use the divisor’s reciprocal: 8/1 ÷ 2/3 = 8/1 × 3/2. → Multiply: 8 × 3 = 24 and 1 × 2 = 2, giving 24/2. → 24/2 = 12. This is the same exact value in simplest form."
+      },
+      "mathematical_support": {
+        "hint_1": "The divisor is the size of each group, not just its denominator.",
+        "hint_2": "Keep the whole amount unchanged. Use both fraction parts and finish in the requested form. Any valid exact method is accepted.",
+        "worked_solution": "Keep the whole number: 8 = 8/1. → Use the divisor’s reciprocal: 8/1 ÷ 2/3 = 8/1 × 3/2. → Multiply: 8 × 3 = 24 and 1 × 2 = 2, giving 24/2. → 24/2 = 12. This is the same exact value in simplest form."
+      },
+      "working": [
+        "Keep the whole number: 8 = 8/1.",
+        "Use the divisor’s reciprocal: 8/1 ÷ 2/3 = 8/1 × 3/2.",
+        "Multiply: 8 × 3 = 24 and 1 × 2 = 2, giving 24/2.",
+        "24/2 = 12. This is the same exact value in simplest form."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "proper_groups",
+          "wholes": 8,
+          "n": 2,
+          "d": 3,
+          "object": "water",
+          "target": "Number of proper-fraction groups",
+          "math_text": true,
+          "compact_captions": true,
+          "unit": "litre",
+          "working_phases": [
+            "whole_fraction",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "8": "That counts whole units, not the smaller fraction-sized groups.",
+        "24": "That counts the small unit-fraction parts but ignores how many of those parts belong in each group.",
+        "16/3": "That value comes from multiplying by the original fraction. This question counts fraction-sized groups in the whole amount.",
+        "3/16": "That reverses the starting whole number. The whole amount must stay unchanged.",
+        "2/24": "That is the reciprocal of the required group count. Keep the whole amount and change only the divisor."
+      }
+    },
+    {
+      "id": "MD-12-X03",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "practice",
+      "prompt": "A shop has 10 kg of flour. The flour is packed into bags that each contain 5/6 kg. Work out the number of bags that can be filled.",
+      "target": "Number of proper-fraction groups",
+      "response": {
+        "type": "integer",
+        "accept_exact_equivalents": true,
+        "require_simplest_form": false,
+        "input_label": "Number of bags"
+      },
+      "answer": {
+        "value": 12
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That is the number of full bags made from the available flour.",
+        "correct_after_support": "That is the number of full bags made from the available flour.",
+        "on_correct_math": "Keep the whole number: 10 = 10/1. → Use the divisor’s reciprocal: 10/1 ÷ 5/6 = 10/1 × 6/5. → Multiply: 10 × 6 = 60 and 1 × 5 = 5, giving 60/5. → 60/5 = 12. This is the same exact value in simplest form.",
+        "on_incorrect_attempt_1": "The divisor is the size of each group, not just its denominator.",
+        "on_incorrect_attempt_2": "Compare the mass in one bag with the full mass of flour.",
+        "worked_explanation": "Keep the whole number: 10 = 10/1. → Use the divisor’s reciprocal: 10/1 ÷ 5/6 = 10/1 × 6/5. → Multiply: 10 × 6 = 60 and 1 × 5 = 5, giving 60/5. → 60/5 = 12. This is the same exact value in simplest form."
+      },
+      "mathematical_support": {
+        "hint_1": "The divisor is the size of each group, not just its denominator.",
+        "hint_2": "Keep the whole amount unchanged. Use both fraction parts and finish in the requested form. Any valid exact method is accepted.",
+        "worked_solution": "Keep the whole number: 10 = 10/1. → Use the divisor’s reciprocal: 10/1 ÷ 5/6 = 10/1 × 6/5. → Multiply: 10 × 6 = 60 and 1 × 5 = 5, giving 60/5. → 60/5 = 12. This is the same exact value in simplest form."
+      },
+      "working": [
+        "Keep the whole number: 10 = 10/1.",
+        "Use the divisor’s reciprocal: 10/1 ÷ 5/6 = 10/1 × 6/5.",
+        "Multiply: 10 × 6 = 60 and 1 × 5 = 5, giving 60/5.",
+        "60/5 = 12. This is the same exact value in simplest form."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "proper_groups",
+          "wholes": 10,
+          "n": 5,
+          "d": 6,
+          "object": "flour",
+          "target": "Number of proper-fraction groups",
+          "math_text": true,
+          "compact_captions": true,
+          "unit": "kg",
+          "working_phases": [
+            "whole_fraction",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "10": "That counts whole units, not the smaller fraction-sized groups.",
+        "60": "That counts the small unit-fraction parts but ignores how many of those parts belong in each group.",
+        "50/6": "That value comes from multiplying by the original fraction. This question counts fraction-sized groups in the whole amount.",
+        "6/50": "That reverses the starting whole number. The whole amount must stay unchanged.",
+        "5/60": "That is the reciprocal of the required group count. Keep the whole amount and change only the divisor."
+      }
+    },
+    {
+      "id": "MD-12-X04",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "practice",
+      "prompt": "A 9-metre cable is cut into pieces that are each 3/5 metre long. Which calculation should be used to find the number of pieces?",
+      "target": "Number of proper-fraction groups",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "9 ÷ 3/5",
+          "9 × 3/5",
+          "3/5 ÷ 9",
+          "9 − 3/5"
+        ]
+      },
+      "answer": {
+        "value": "9 ÷ 3/5"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That calculation finds the count of equal-length cable pieces.",
+        "correct_after_support": "That calculation finds the count of equal-length cable pieces.",
+        "on_correct_math": "The total cable length and one piece length are known; the piece count is unknown. → Use 9 ÷ 3/5 to find the number of pieces.",
+        "on_incorrect_attempt_1": "Match the known length and piece size to the unknown count.",
+        "on_incorrect_attempt_2": "Check whether your calculation finds a count or a different length.",
+        "worked_explanation": "The total cable length and one piece length are known; the piece count is unknown. → Use 9 ÷ 3/5 to find the number of pieces."
+      },
+      "mathematical_support": {
+        "hint_1": "Match the known length and piece size to the unknown count.",
+        "hint_2": "Decide which calculation counts how many piece lengths fit into the total.",
+        "worked_solution": "The total cable length and one piece length are known; the piece count is unknown. → Use 9 ÷ 3/5 to find the number of pieces."
+      },
+      "working": [
+        "The total cable length and one piece length are known; the piece count is unknown.",
+        "Use 9 ÷ 3/5 to find the number of pieces."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "proper_groups",
+          "wholes": 9,
+          "n": 3,
+          "d": 5,
+          "object": "cable",
+          "target": "Number of proper-fraction groups",
+          "math_text": true,
+          "compact_captions": true,
+          "unit": "m",
+          "working_phases": [
+            "given",
+            "division"
+          ]
+        }
+      },
+      "response_feedback": {
+        "9 × 3/5": "That finds three fifths of the original length, not how many pieces can be cut.",
+        "3/5 ÷ 9": "That shares one piece into nine parts instead of counting pieces in the cable.",
+        "9 − 3/5": "That removes one piece but does not find the complete piece count."
+      }
+    },
+    {
+      "id": "MD-12-E01",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "Work out 8 ÷ 4/5. Give your answer in simplest exact form.",
+      "target": "Number of proper-fraction groups",
+      "response": {
+        "type": "integer",
+        "accept_exact_equivalents": true,
+        "require_simplest_form": true,
+        "input_label": "Your exact answer"
+      },
+      "answer": {
+        "value": 10
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That exact whole-number result includes both parts of the divisor.",
+        "correct_after_support": "That exact whole-number result includes both parts of the divisor.",
+        "on_correct_math": "Keep the whole number: 8 = 8/1. → Use the divisor’s reciprocal: 8/1 ÷ 4/5 = 8/1 × 5/4. → Multiply: 8 × 5 = 40 and 1 × 4 = 4, giving 40/4. → 40/4 = 10. This is the same exact value in simplest form.",
+        "on_incorrect_attempt_1": "The divisor is the size of each group, not just its denominator.",
+        "on_incorrect_attempt_2": "Compare the reciprocal product with the simplest group count.",
+        "worked_explanation": "Keep the whole number: 8 = 8/1. → Use the divisor’s reciprocal: 8/1 ÷ 4/5 = 8/1 × 5/4. → Multiply: 8 × 5 = 40 and 1 × 4 = 4, giving 40/4. → 40/4 = 10. This is the same exact value in simplest form.",
+        "on_equivalent_unfinished": "Your answer has the correct value, but it is not yet in simplest form. Finish simplifying without changing that value.",
+        "on_locked_incorrect": "Compare the reciprocal product with the simplest group count."
+      },
+      "mathematical_support": {
+        "hint_1": "The divisor is the size of each group, not just its denominator.",
+        "hint_2": "Keep the whole amount unchanged. Use both fraction parts and finish in the requested form. Any valid exact method is accepted.",
+        "worked_solution": "Keep the whole number: 8 = 8/1. → Use the divisor’s reciprocal: 8/1 ÷ 4/5 = 8/1 × 5/4. → Multiply: 8 × 5 = 40 and 1 × 4 = 4, giving 40/4. → 40/4 = 10. This is the same exact value in simplest form."
+      },
+      "working": [
+        "Keep the whole number: 8 = 8/1.",
+        "Use the divisor’s reciprocal: 8/1 ÷ 4/5 = 8/1 × 5/4.",
+        "Multiply: 8 × 5 = 40 and 1 × 4 = 4, giving 40/4.",
+        "40/4 = 10. This is the same exact value in simplest form."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "proper_groups",
+          "wholes": 8,
+          "n": 4,
+          "d": 5,
+          "object": "bars",
+          "target": "Number of proper-fraction groups",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "whole_fraction",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "8": "That counts whole units, not the smaller fraction-sized groups.",
+        "40": "That counts the small unit-fraction parts but ignores how many of those parts belong in each group.",
+        "32/5": "That value comes from multiplying by the original fraction. This question counts fraction-sized groups in the whole amount.",
+        "5/32": "That reverses the starting whole number. The whole amount must stay unchanged.",
+        "4/40": "That is the reciprocal of the required group count. Keep the whole amount and change only the divisor."
+      },
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "MD-12-E02",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "Work out 7 ÷ 2/3. Give your answer in simplest exact form.",
+      "target": "Number of proper-fraction groups",
+      "response": {
+        "type": "fraction",
+        "accept_equivalent_notation": true,
+        "require_simplest_form": true,
+        "allow_mixed_number": true,
+        "allow_signed_parts": true,
+        "show_authored_label": true,
+        "input_label": "Your answer in simplest exact form"
+      },
+      "answer": {
+        "value": "21/2"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The exact non-whole group count has been found in simplest form.",
+        "correct_after_support": "The exact non-whole group count has been found in simplest form.",
+        "on_correct_math": "Keep the whole number: 7 = 7/1. → Use the divisor’s reciprocal: 7/1 ÷ 2/3 = 7/1 × 3/2. → Multiply: 7 × 3 = 21 and 1 × 2 = 2, giving 21/2. → 21/2 is already in simplest form.",
+        "on_incorrect_attempt_1": "The divisor is the size of each group, not just its denominator.",
+        "on_incorrect_attempt_2": "Check the reciprocal multiplication and the exact remaining part of a group.",
+        "worked_explanation": "Keep the whole number: 7 = 7/1. → Use the divisor’s reciprocal: 7/1 ÷ 2/3 = 7/1 × 3/2. → Multiply: 7 × 3 = 21 and 1 × 2 = 2, giving 21/2. → 21/2 is already in simplest form.",
+        "on_equivalent_unfinished": "Your answer has the correct value, but it is not yet in simplest form. Finish simplifying without changing that value.",
+        "on_locked_incorrect": "Check the reciprocal multiplication and the exact remaining part of a group."
+      },
+      "mathematical_support": {
+        "hint_1": "The divisor is the size of each group, not just its denominator.",
+        "hint_2": "Keep the whole amount unchanged. Use both fraction parts and finish in the requested form. Any valid exact method is accepted.",
+        "worked_solution": "Keep the whole number: 7 = 7/1. → Use the divisor’s reciprocal: 7/1 ÷ 2/3 = 7/1 × 3/2. → Multiply: 7 × 3 = 21 and 1 × 2 = 2, giving 21/2. → 21/2 is already in simplest form."
+      },
+      "working": [
+        "Keep the whole number: 7 = 7/1.",
+        "Use the divisor’s reciprocal: 7/1 ÷ 2/3 = 7/1 × 3/2.",
+        "Multiply: 7 × 3 = 21 and 1 × 2 = 2, giving 21/2.",
+        "21/2 is already in simplest form."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "proper_groups",
+          "wholes": 7,
+          "n": 2,
+          "d": 3,
+          "object": "bars",
+          "target": "Number of proper-fraction groups",
+          "math_text": true,
+          "compact_captions": true,
+          "working_phases": [
+            "whole_fraction",
+            "reciprocal",
+            "raw",
+            "simplified"
+          ]
+        }
+      },
+      "response_feedback": {
+        "7": "That counts whole units, not the smaller fraction-sized groups.",
+        "21": "That counts the small unit-fraction parts but ignores how many of those parts belong in each group.",
+        "14/3": "That value comes from multiplying by the original fraction. This question counts fraction-sized groups in the whole amount.",
+        "3/14": "That reverses the starting whole number. The whole amount must stay unchanged.",
+        "2/21": "That is the reciprocal of the required group count. Keep the whole amount and change only the divisor."
+      },
+      "final_error_feedback": "answer_specific"
+    },
+    {
+      "id": "MD-12-E03",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "Which statement correctly describes dividing a whole number by a proper fraction?",
+      "target": "A valid whole-number division method",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Write the whole number over 1, change division to multiplication and reciprocate only the divisor.",
+          "Multiply by the original proper fraction.",
+          "Reverse the whole number and keep the divisor unchanged.",
+          "Multiply the whole number by the denominator and ignore the numerator."
+        ]
+      },
+      "answer": {
+        "value": "Write the whole number over 1, change division to multiplication and reciprocate only the divisor."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That method changes only the divisor and preserves the starting amount.",
+        "correct_after_support": "That method changes only the divisor and preserves the starting amount.",
+        "on_correct_math": "The whole number is the amount being divided and stays unchanged. → Replace division with multiplication by the divisor’s reciprocal. → Both numbers in the divisor matter; simplify the exact product where requested.",
+        "on_incorrect_attempt_1": "Consider which number is the starting amount and which names the group size.",
+        "on_incorrect_attempt_2": "Compare each method with the roles of the whole number and the group size.",
+        "worked_explanation": "The whole number is the amount being divided and stays unchanged. → Replace division with multiplication by the divisor’s reciprocal. → Both numbers in the divisor matter; simplify the exact product where requested.",
+        "on_locked_incorrect": "Compare each method with the roles of the whole number and the group size."
+      },
+      "mathematical_support": {
+        "hint_1": "Consider which number is the starting amount and which names the group size.",
+        "hint_2": "The replacement calculation must keep the value and use both parts of the divisor.",
+        "worked_solution": "The whole number is the amount being divided and stays unchanged. → Replace division with multiplication by the divisor’s reciprocal. → Both numbers in the divisor matter; simplify the exact product where requested."
+      },
+      "working": [
+        "The whole number is the amount being divided and stays unchanged.",
+        "Replace division with multiplication by the divisor’s reciprocal.",
+        "Both numbers in the divisor matter; simplify the exact product where requested."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "proper_groups_rule",
+          "object": "relationship",
+          "target": "A valid whole-number division method",
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "Multiply by the original proper fraction.": "That finds a fraction of the amount instead of a group count.",
+        "Reverse the whole number and keep the divisor unchanged.": "That changes the starting amount and leaves the divisor unreversed.",
+        "Multiply the whole number by the denominator and ignore the numerator.": "That counts small parts without putting the required number into each group."
+      },
+      "final_error_feedback": "answer_specific"
+    }
+  ],
+  "canonical_lesson": {
+    "version": "MD12-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

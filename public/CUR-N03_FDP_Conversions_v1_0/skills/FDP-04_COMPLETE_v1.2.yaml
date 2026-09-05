@@ -1,0 +1,2432 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "FDP-04 - Convert a decimal to a percentage",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-19",
+      "sha256": "45b1ae3c5412ed0c440c9159a6641d4bd7cd06b5323db7faef733d8e640a1a33"
+    },
+    "authored_scope": "Convert decimals to percentages across the Foundation range.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "FDP04-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "verified_desktop_ready_phone_locked_dropped_whole_failure_pair_drafts_sequential_charts_hints_audio_320_390",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        14,
+        16,
+        17,
+        18,
+        19
+      ],
+      "source_repairs_consulted": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        17,
+        18
+      ],
+      "note": "All 19 source pages and the previous bulk configuration reviewed; active pages rendered. Restored every active source item and both blanks of the second guided multiplication. The repeated 0.004 independent/final item is source-prescribed. Fixed-point charts track digits through two changes and include ten-thousandths. Exact decimal percentages below one and above one hundred are accepted. No diagnostic confirmation, prerequisite mutation, delayed Retrieval or Strong route is active."
+    }
+  },
+  "identity": {
+    "id": "FDP-04",
+    "slug": "convert-a-decimal-to-a-percentage",
+    "title": "Convert a decimal to a percentage",
+    "strand": "Number",
+    "cluster": "Fractions, Decimals and Percentages",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Convert an exact terminating decimal to its equivalent percentage, preserving all place values.",
+    "success_criteria": [
+      "Multiply the decimal number by 100, or by 10 twice.",
+      "Keep zeros and decimal points in the correct places.",
+      "Use the percent sign after numerical conversion.",
+      "Accept exact percentages below 1 and above 100.",
+      "Interpret contextual proportions against their stated whole or target."
+    ],
+    "boundaries": {
+      "includes": [
+        "Tenths through ten-thousandths and values above one",
+        "Exact decimal percentages and values above 100%",
+        "Guided two-stage multiplication and contextual conversion"
+      ],
+      "excludes": [
+        "Percentage-to-decimal conversion",
+        "Fraction conversion",
+        "Recurring decimals or rounding",
+        "Percentage of an amount",
+        "Percentage increase, decrease or reverse percentages",
+        "Entry, Diagnostic, prerequisite routing and delayed Retrieval"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "FDP-01",
+      "FDP-02",
+      "FDP-03"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for FDP-01, FDP-02, FDP-03 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "single_choice",
+      "decimal",
+      "decimal_scale_pair"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    },
+    "place_value_profile": true
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "The percentage number is one hundred times the decimal number.",
+    "invariant": "Decimal and percentage notation describe the same proportion, using different numerical units.",
+    "must_notice": [
+      "Multiplication by 100 equals multiplication by 10 twice.",
+      "Digits change place value while the decimal point stays fixed in the chart.",
+      "A whole contributes 100%; do not drop whole-number parts.",
+      "A small percentage can retain a decimal part."
+    ],
+    "common_confusions": [
+      "Unchanged numerical value with percent sign",
+      "Only one multiplication by ten",
+      "Reverse operation",
+      "Lost zero placeholders",
+      "Whole-number part dropped",
+      "Unnecessary rounding to a whole percent"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "From hundredths to percent",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "From hundredths to percent",
+          "initial_state": "From hundredths to percent",
+          "model": {
+            "kind": "decimal_scaling",
+            "title": "The same part of one whole",
+            "decimal": "0.37",
+            "given": "0.37 = 37/100 = 37%",
+            "steps": [
+              "0.37 × 10 = 3.7.",
+              "3.7 × 10 = 37; together, multiply the original value by 100.",
+              "0.37 = 37%."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "bridge",
+            "hundredths": 37,
+            "solved": true,
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "The square shows the same proportion in both notations. To obtain the percentage number, multiply the decimal number by one hundred, then use the percent sign."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Start with the original place value",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Start with the original place value",
+          "initial_state": "Start with the original place value",
+          "model": {
+            "kind": "decimal_scaling",
+            "title": "Track a small decimal",
+            "decimal": "0.006",
+            "given": "Convert 0.006",
+            "steps": [
+              "The digit 6 starts in thousandths."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 1,
+            "chart_power": 0
+          }
+        },
+        "narration": {
+          "script": "The nonzero digit begins in thousandths. Keep the decimal point fixed and track the digit, including the empty places."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Multiply by ten once",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Multiply by ten once",
+          "initial_state": "Multiply by ten once",
+          "model": {
+            "kind": "decimal_scaling",
+            "title": "Track a small decimal",
+            "decimal": "0.006",
+            "given": "Convert 0.006",
+            "steps": [
+              "0.006 × 10 = 0.06.",
+              "0.06 × 10 = 0.6; together, multiply the original value by 100.",
+              "0.006 = 0.6%."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 1,
+            "chart_power": 1
+          }
+        },
+        "narration": {
+          "script": "The first multiplication makes each digit ten times as valuable. The nonzero digit is now in hundredths."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Multiply by ten again",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Multiply by ten again",
+          "initial_state": "Multiply by ten again",
+          "model": {
+            "kind": "decimal_scaling",
+            "title": "Track a small decimal",
+            "decimal": "0.006",
+            "given": "Convert 0.006",
+            "steps": [
+              "0.006 × 10 = 0.06.",
+              "0.06 × 10 = 0.6; together, multiply the original value by 100.",
+              "0.006 = 0.6%."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 3,
+            "chart_power": 2
+          }
+        },
+        "narration": {
+          "script": "The second multiplication takes that digit into tenths. Keep the decimal part when writing the percentage; there is no need to round."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Include more than one whole",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Include more than one whole",
+          "initial_state": "Include more than one whole",
+          "model": {
+            "kind": "decimal_scaling",
+            "title": "A value above one whole",
+            "decimal": "1.24",
+            "given": "1.24",
+            "steps": [
+              "1.24 = 1 + 0.24.",
+              "1.24 = 100% + 24%.",
+              "1.24 = 124%."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "wholes",
+            "solved": true,
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "The complete whole contributes one hundred percent. Include the extra part as well, so the total can exceed one hundred percent."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T06"
+      },
+      {
+        "id": "T06",
+        "stage": "teaching",
+        "purpose": "Explain the small percentage",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Explain the small percentage",
+          "initial_state": "Explain the small percentage",
+          "model": {
+            "kind": "decimal_scaling",
+            "title": "Explain the small percentage",
+            "decimal": "0.006",
+            "given": "0.006 = 0.6%",
+            "steps": [
+              "0.006 × 10 = 0.06.",
+              "0.06 × 10 = 0.6; together, multiply the original value by 100.",
+              "0.006 = 0.6%."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "explanation_question": true
+          }
+        },
+        "narration": {
+          "script": "Choose the explanation that preserves exact place value and uses the percent sign correctly."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "FDP-04-C01"
+        },
+        "next_step": "T07"
+      },
+      {
+        "id": "T07",
+        "stage": "teaching",
+        "purpose": "The first product",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "The first product",
+          "initial_state": "The first product",
+          "model": {
+            "kind": "decimal_scaling",
+            "title": "Write 0.048 as a percentage",
+            "decimal": "0.048",
+            "given": "Convert 0.048",
+            "steps": [
+              "0.048 × 10 = 0.48.",
+              "0.48 × 10 = 4.8; together, multiply the original value by 100.",
+              "0.048 = 4.8%."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 1,
+            "chart_power": 1
+          }
+        },
+        "narration": {
+          "script": "In the worked example, complete one multiplication by ten first. Keep both nonzero digits in their new places."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T08"
+      },
+      {
+        "id": "T08",
+        "stage": "teaching",
+        "purpose": "The second product",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "The second product",
+          "initial_state": "The second product",
+          "model": {
+            "kind": "decimal_scaling",
+            "title": "Write 0.048 as a percentage",
+            "decimal": "0.048",
+            "given": "Convert 0.048",
+            "steps": [
+              "0.048 × 10 = 0.48.",
+              "0.48 × 10 = 4.8; together, multiply the original value by 100.",
+              "0.048 = 4.8%."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 2,
+            "chart_power": 2
+          }
+        },
+        "narration": {
+          "script": "Multiply that first product by ten again. Together, these two steps apply the required factor."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T09"
+      },
+      {
+        "id": "T09",
+        "stage": "teaching",
+        "purpose": "Write the percent sign",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Write the percent sign",
+          "initial_state": "Write the percent sign",
+          "model": {
+            "kind": "decimal_scaling",
+            "title": "Write 0.048 as a percentage",
+            "decimal": "0.048",
+            "given": "Convert 0.048",
+            "steps": [
+              "0.048 × 10 = 0.48.",
+              "0.48 × 10 = 4.8; together, multiply the original value by 100.",
+              "0.048 = 4.8%."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "phase": 3,
+            "chart_power": 2
+          }
+        },
+        "narration": {
+          "script": "Use the final numerical result with the percent sign. Its decimal point is still necessary."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T10"
+      },
+      {
+        "id": "T10",
+        "stage": "teaching",
+        "purpose": "Choose the conversion method",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Choose the conversion method",
+          "initial_state": "Choose the conversion method",
+          "model": {
+            "kind": "decimal_scaling",
+            "title": "Convert more than one whole",
+            "decimal": "1.35",
+            "given": "1.35",
+            "steps": [
+              "1.35 × 10 = 13.5.",
+              "13.5 × 10 = 135; together, multiply the original value by 100.",
+              "1.35 = 135%."
+            ],
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Check the scaling operation and whether the result includes the complete whole."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "FDP-04-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "FDP-04-G01",
+        "support_level": "high",
+        "pre_question_script": "Complete the first multiplication only.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "faded",
+        "question_ref": "FDP-04-G02",
+        "support_level": "reduced",
+        "pre_question_script": "Enter the previous product yourself, then calculate the next product.",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "faded",
+        "question_ref": "FDP-04-G03",
+        "support_level": "reduced",
+        "pre_question_script": "Complete the percentage with its supplied sign.",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "independent_transfer",
+        "question_ref": "FDP-04-G04",
+        "support_level": "none",
+        "pre_question_script": "Choose the explanation for the exact conversion.",
+        "correct_next": "P01"
+      }
+    },
+    "practice": {
+      "intro_script": "Convert each value exactly, then use the same idea in context. Percentages can be smaller than one or larger than one hundred. The percent sign is already printed.",
+      "question_order": [
+        "FDP-04-P01",
+        "FDP-04-P02",
+        "FDP-04-P03",
+        "FDP-04-P04",
+        "FDP-04-P05",
+        "FDP-04-P06",
+        "FDP-04-P07",
+        "FDP-04-P08",
+        "FDP-04-X01",
+        "FDP-04-X02",
+        "FDP-04-X03",
+        "FDP-04-X04"
+      ],
+      "question_count": 12,
+      "feedback_policy": "Specific scaling and magnitude feedback; sequential place-value working; learner correction remains required."
+    },
+    "exit": {
+      "intro_script": "Complete four conversions and one method check without hints or charts. Each response locks. Feedback waits until all five are saved.",
+      "primary_question_refs": [
+        "FDP-04-E01",
+        "FDP-04-E02",
+        "FDP-04-E03",
+        "FDP-04-E04",
+        "FDP-04-E05"
+      ],
+      "confirmation_question_refs": [],
+      "submission_policy": "No model or correctness feedback until the complete final set is saved.",
+      "mastery_policy": {
+        "profile": "all_primary_unsupported_deferred",
+        "require_all": true,
+        "source_page": 14,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "All final conversions and the method check are correct. You kept exact place values across ordinary, very small and greater-than-one decimals.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Keep both place-value changes",
+      "ryan_script": "One or more final responses need another pass. Review both place-value changes, keep the whole-number part and retain every necessary zero.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "FDP-04-C01",
+      "source_ref": {
+        "page": 4
+      },
+      "stage": "practice",
+      "prompt": "Why is 0.006 equal to 0.6%?",
+      "target": "Convert an exact decimal proportion to a percentage with correct place value",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Multiplying 0.006 by 100 gives 0.6, and the result is then written with a percent sign.",
+          "The two zeros after the decimal point are removed, giving 6%.",
+          "A percentage must be a whole number, so 0.006 rounds to 1%.",
+          "The percent sign can be added without changing the numerical value."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "Multiplying 0.006 by 100 gives 0.6, and the result is then written with a percent sign."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Yes. Scaling changes the numerical unit before the percent sign records the equivalent proportion.",
+        "correct_after_support": "Yes. Scaling changes the numerical unit before the percent sign records the equivalent proportion.",
+        "on_correct_math": "0.006 × 10 = 0.06. → 0.06 × 10 = 0.6; together, multiply the original value by 100. → 0.006 = 0.6%.",
+        "on_incorrect_attempt_1": "Choose an exact conversion, not a rule that deletes zeros or rounds the value.",
+        "on_incorrect_attempt_2": "Choose an exact conversion, not a rule that deletes zeros or rounds the value.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "0.006 × 10 = 0.06. → 0.06 × 10 = 0.6; together, multiply the original value by 100. → 0.006 = 0.6%."
+      },
+      "mathematical_support": {
+        "hint_1": "Choose an exact conversion, not a rule that deletes zeros or rounds the value.",
+        "hint_2": "Track the digits through the two separate place-value changes. Keep the decimal point fixed in the chart.",
+        "worked_solution": "0.006 × 10 = 0.06. → 0.06 × 10 = 0.6; together, multiply the original value by 100. → 0.006 = 0.6%."
+      },
+      "working": [
+        "0.006 × 10 = 0.06.",
+        "0.06 × 10 = 0.6; together, multiply the original value by 100.",
+        "0.006 = 0.6%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Explain the small percentage",
+          "decimal": "0.006",
+          "given": "0.006 = 0.6%",
+          "steps": [
+            "0.006 × 10 = 0.06.",
+            "0.06 × 10 = 0.6; together, multiply the original value by 100.",
+            "0.006 = 0.6%."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "explanation_question": true
+        }
+      },
+      "response_feedback": {
+        "The two zeros after the decimal point are removed, giving 6%.": "Removing those zeros by appearance changes the place value too far.",
+        "A percentage must be a whole number, so 0.006 rounds to 1%.": "Percentages can have a decimal part. This exact value must not be rounded to a whole percent.",
+        "The percent sign can be added without changing the numerical value.": "The sign does not replace the numerical conversion. Adding it to an unchanged number changes the proportion."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-04-C02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "practice",
+      "prompt": "Which method correctly converts 1.35 to a percentage?",
+      "target": "Convert an exact decimal proportion to a percentage with correct place value",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "1.35 × 100 = 135, so 1.35 = 135%.",
+          "1.35 × 10 = 13.5, so 1.35 = 13.5%.",
+          "1.35 ÷ 100 = 0.0135, so 1.35 = 0.0135%.",
+          "Add the percent sign without changing the value, so 1.35 = 1.35%."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "1.35 × 100 = 135, so 1.35 = 135%."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The numerical scaling includes the whole-number part, so the percentage can exceed one hundred.",
+        "correct_after_support": "Correct. The numerical scaling includes the whole-number part, so the percentage can exceed one hundred.",
+        "on_correct_math": "1.35 × 10 = 13.5. → 13.5 × 10 = 135; together, multiply the original value by 100. → 1.35 = 135%.",
+        "on_incorrect_attempt_1": "The starting value exceeds one whole. Check both the operation and the size of the percentage.",
+        "on_incorrect_attempt_2": "The starting value exceeds one whole. Check both the operation and the size of the percentage.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "1.35 × 10 = 13.5. → 13.5 × 10 = 135; together, multiply the original value by 100. → 1.35 = 135%."
+      },
+      "mathematical_support": {
+        "hint_1": "The starting value exceeds one whole. Check both the operation and the size of the percentage.",
+        "hint_2": "Track the digits through the two separate place-value changes. Keep the decimal point fixed in the chart.",
+        "worked_solution": "1.35 × 10 = 13.5. → 13.5 × 10 = 135; together, multiply the original value by 100. → 1.35 = 135%."
+      },
+      "working": [
+        "1.35 × 10 = 13.5.",
+        "13.5 × 10 = 135; together, multiply the original value by 100.",
+        "1.35 = 135%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Convert more than one whole",
+          "decimal": "1.35",
+          "given": "1.35",
+          "steps": [
+            "1.35 × 10 = 13.5.",
+            "13.5 × 10 = 135; together, multiply the original value by 100.",
+            "1.35 = 135%."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "1.35 × 10 = 13.5, so 1.35 = 13.5%.": "That scales by ten only. The conversion needs a second multiplication by ten.",
+        "1.35 ÷ 100 = 0.0135, so 1.35 = 0.0135%.": "That makes the numerical value smaller, using the reverse operation.",
+        "Add the percent sign without changing the value, so 1.35 = 1.35%.": "That attaches the sign but leaves the numerical value unconverted."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-04-G01",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "Multiply 0.072 by 10 once. Enter the product.",
+      "target": "Convert an exact decimal proportion to a percentage with correct place value",
+      "response": {
+        "type": "decimal",
+        "input_label": "Product",
+        "allow_leading_decimal_point": true,
+        "scale_source": "0.072",
+        "scale_power": 1
+      },
+      "answer": {
+        "value": "0.72"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The first multiplication makes each digit ten times as valuable.",
+        "correct_after_support": "Correct. The first multiplication makes each digit ten times as valuable.",
+        "on_correct_math": "0.072 × 10 = 0.72.",
+        "on_incorrect_attempt_1": "This step asks for one multiplication by ten, not the complete percentage yet.",
+        "on_incorrect_attempt_2": "Track each digit one column towards greater place value. Stop after this single change.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "0.072 × 10 = 0.72."
+      },
+      "mathematical_support": {
+        "hint_1": "This step asks for one multiplication by ten, not the complete percentage yet.",
+        "hint_2": "Track each digit one column towards greater place value. Stop after this single change.",
+        "worked_solution": "0.072 × 10 = 0.72."
+      },
+      "working": [
+        "0.072 × 10 = 0.72."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "First place-value change",
+          "decimal": "0.072",
+          "given": "0.072 × 10 = ?",
+          "steps": [
+            "0.072 × 10 = 0.72."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "chart_power": 1
+        }
+      },
+      "response_feedback": {
+        "unchanged": "That keeps the original decimal unchanged. Complete the first multiplication.",
+        "one_move_far": "That has already multiplied the original by one hundred. This blank asks for the first multiplication only.",
+        "reverse": "That makes the digits less valuable. Multiplication by ten makes them more valuable."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-04-G02",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "faded",
+      "prompt": "Continue from your first product: complete both blanks in ___ × 10 = ___.",
+      "target": "Convert an exact decimal proportion to a percentage with correct place value",
+      "response": {
+        "type": "decimal_scale_pair"
+      },
+      "answer": {
+        "value": {
+          "input": "0.72",
+          "output": "7.2"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. You carried the first product forward and applied the second multiplication.",
+        "correct_after_support": "Correct. You carried the first product forward and applied the second multiplication.",
+        "on_correct_math": "The first product is 0.72. → 0.72 × 10 = 7.2.",
+        "on_incorrect_attempt_1": "Carry the first product into the left blank, then multiply that value by ten.",
+        "on_incorrect_attempt_2": "Carry the first product into the left blank, then multiply that value by ten.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The first product is 0.72. → 0.72 × 10 = 7.2."
+      },
+      "mathematical_support": {
+        "hint_1": "Carry the first product into the left blank, then multiply that value by ten.",
+        "hint_2": "Track the digits through the two separate place-value changes. Keep the decimal point fixed in the chart.",
+        "worked_solution": "The first product is 0.72. → 0.72 × 10 = 7.2."
+      },
+      "working": [
+        "The first product is 0.72.",
+        "0.72 × 10 = 7.2."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Second place-value change",
+          "decimal": "0.072",
+          "given": "? × 10 = ?",
+          "steps": [
+            "The first product is 0.72.",
+            "0.72 × 10 = 7.2."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_input": "Your product is correct. The starting blank must contain the result of the first multiplication.",
+        "check_output": "Your starting value is correct. Multiply that value by ten for the product.",
+        "check_both": "The left blank needs the first product. The right blank needs the result after the second multiplication."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-04-G03",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "faded",
+      "prompt": "Complete the final percentage: 0.072 = ___%.",
+      "target": "Convert an exact decimal proportion to a percentage with correct place value",
+      "response": {
+        "type": "decimal",
+        "input_label": "Percentage",
+        "suffix": "%",
+        "allow_leading_decimal_point": true,
+        "scale_source": "0.072",
+        "scale_power": 2
+      },
+      "answer": {
+        "value": "7.2"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The final percentage preserves the decimal part of the converted number.",
+        "correct_after_support": "Correct. The final percentage preserves the decimal part of the converted number.",
+        "on_correct_math": "0.072 × 10 = 0.72. → 0.72 × 10 = 7.2; together, multiply the original value by 100. → 0.072 = 7.2%.",
+        "on_incorrect_attempt_1": "Use the number after both multiplications and keep the decimal point it needs.",
+        "on_incorrect_attempt_2": "Use the number after both multiplications and keep the decimal point it needs.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "0.072 × 10 = 0.72. → 0.72 × 10 = 7.2; together, multiply the original value by 100. → 0.072 = 7.2%."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the number after both multiplications and keep the decimal point it needs.",
+        "hint_2": "Track the digits through the two separate place-value changes. Keep the decimal point fixed in the chart.",
+        "worked_solution": "0.072 × 10 = 0.72. → 0.72 × 10 = 7.2; together, multiply the original value by 100. → 0.072 = 7.2%."
+      },
+      "working": [
+        "0.072 × 10 = 0.72.",
+        "0.72 × 10 = 7.2; together, multiply the original value by 100.",
+        "0.072 = 7.2%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Write the percentage",
+          "decimal": "0.072",
+          "given": "0.072 = ?%",
+          "steps": [
+            "0.072 × 10 = 0.72.",
+            "0.72 × 10 = 7.2; together, multiply the original value by 100.",
+            "0.072 = 7.2%."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "unchanged": "That adds the percent sign without carrying out the numerical conversion.",
+        "one_move_short": "That is only the first product. The percentage requires both multiplications.",
+        "one_move_far": "That removes a needed decimal place. The two multiplications do not produce a whole-number percentage here.",
+        "reverse": "That uses the reverse direction. The required percentage number is larger than the original decimal number."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-04-G04",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "independent_transfer",
+      "prompt": "Which statement correctly explains the conversion of 0.072?",
+      "target": "Convert an exact decimal proportion to a percentage with correct place value",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "0.072 = 0.072% because the percent sign is only a label.",
+          "0.072 = 0.72% because one multiplication by 10 is sufficient.",
+          "0.072 = 7.2% because multiplying by 100 makes each digit 100 times as valuable.",
+          "0.072 = 72% because all zeros may be removed."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "0.072 = 7.2% because multiplying by 100 makes each digit 100 times as valuable."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Yes. The explanation includes the full scaling and keeps the needed decimal place.",
+        "correct_after_support": "Yes. The explanation includes the full scaling and keeps the needed decimal place.",
+        "on_correct_math": "0.072 × 10 = 0.72. → 0.72 × 10 = 7.2; together, multiply the original value by 100. → 0.072 = 7.2%.",
+        "on_incorrect_attempt_1": "Choose the statement that preserves the exact result of both multiplications.",
+        "on_incorrect_attempt_2": "Choose the statement that preserves the exact result of both multiplications.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "0.072 × 10 = 0.72. → 0.72 × 10 = 7.2; together, multiply the original value by 100. → 0.072 = 7.2%."
+      },
+      "mathematical_support": {
+        "hint_1": "Choose the statement that preserves the exact result of both multiplications.",
+        "hint_2": "Track the digits through the two separate place-value changes. Keep the decimal point fixed in the chart.",
+        "worked_solution": "0.072 × 10 = 0.72. → 0.72 × 10 = 7.2; together, multiply the original value by 100. → 0.072 = 7.2%."
+      },
+      "working": [
+        "0.072 × 10 = 0.72.",
+        "0.72 × 10 = 7.2; together, multiply the original value by 100.",
+        "0.072 = 7.2%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Explain both place-value changes",
+          "decimal": "0.072",
+          "given": "0.072",
+          "steps": [
+            "0.072 × 10 = 0.72.",
+            "0.72 × 10 = 7.2; together, multiply the original value by 100.",
+            "0.072 = 7.2%."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "0.072 = 0.072% because the percent sign is only a label.": "The percent sign changes the unit. The numerical value must be converted as well.",
+        "0.072 = 0.72% because one multiplication by 10 is sufficient.": "One multiplication by ten is only half of the required scaling sequence.",
+        "0.072 = 72% because all zeros may be removed.": "Zeros cannot be removed just because they are visible. That result changes the place value too far."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-04-P01",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Write 0.6 as a percentage.",
+      "target": "Convert an exact decimal proportion to a percentage with correct place value",
+      "response": {
+        "type": "decimal",
+        "input_label": "Percentage",
+        "suffix": "%",
+        "allow_leading_decimal_point": true,
+        "scale_source": "0.6",
+        "scale_power": 2
+      },
+      "answer": {
+        "value": "60"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Your percentage preserves the six-tenths proportion.",
+        "correct_after_support": "Correct. Your percentage preserves the six-tenths proportion.",
+        "on_correct_math": "0.6 × 10 = 6. → 6 × 10 = 60; together, multiply the original value by 100. → 0.6 = 60%.",
+        "on_incorrect_attempt_1": "The percentage number must count the same six tenths in hundredths.",
+        "on_incorrect_attempt_2": "The percentage number must count the same six tenths in hundredths.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "0.6 × 10 = 6. → 6 × 10 = 60; together, multiply the original value by 100. → 0.6 = 60%."
+      },
+      "mathematical_support": {
+        "hint_1": "The percentage number must count the same six tenths in hundredths.",
+        "hint_2": "Track the digits through the two separate place-value changes. Keep the decimal point fixed in the chart.",
+        "worked_solution": "0.6 × 10 = 6. → 6 × 10 = 60; together, multiply the original value by 100. → 0.6 = 60%."
+      },
+      "working": [
+        "0.6 × 10 = 6.",
+        "6 × 10 = 60; together, multiply the original value by 100.",
+        "0.6 = 60%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Convert 0.6 to a percentage",
+          "decimal": "0.6",
+          "given": "0.6",
+          "steps": [
+            "0.6 × 10 = 6.",
+            "6 × 10 = 60; together, multiply the original value by 100.",
+            "0.6 = 60%."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "unchanged": "That leaves six tenths as the percentage number without scaling it.",
+        "one_move_short": "That is the result after one multiplication by ten, not two.",
+        "one_move_far": "That makes the percentage ten times too large for this part of one whole.",
+        "reverse": "That goes in the reverse direction and makes the numerical value smaller."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-04-P02",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Write 0.42 as a percentage.",
+      "target": "Convert an exact decimal proportion to a percentage with correct place value",
+      "response": {
+        "type": "decimal",
+        "input_label": "Percentage",
+        "suffix": "%",
+        "allow_leading_decimal_point": true,
+        "scale_source": "0.42",
+        "scale_power": 2
+      },
+      "answer": {
+        "value": "42"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both significant digits are preserved in the percentage count.",
+        "correct_after_support": "Correct. Both significant digits are preserved in the percentage count.",
+        "on_correct_math": "0.42 × 10 = 4.2. → 4.2 × 10 = 42; together, multiply the original value by 100. → 0.42 = 42%.",
+        "on_incorrect_attempt_1": "Keep both significant digits while converting hundredths to the percentage number.",
+        "on_incorrect_attempt_2": "Keep both significant digits while converting hundredths to the percentage number.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "0.42 × 10 = 4.2. → 4.2 × 10 = 42; together, multiply the original value by 100. → 0.42 = 42%."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep both significant digits while converting hundredths to the percentage number.",
+        "hint_2": "Track the digits through the two separate place-value changes. Keep the decimal point fixed in the chart.",
+        "worked_solution": "0.42 × 10 = 4.2. → 4.2 × 10 = 42; together, multiply the original value by 100. → 0.42 = 42%."
+      },
+      "working": [
+        "0.42 × 10 = 4.2.",
+        "4.2 × 10 = 42; together, multiply the original value by 100.",
+        "0.42 = 42%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Convert 0.42 to a percentage",
+          "decimal": "0.42",
+          "given": "0.42",
+          "steps": [
+            "0.42 × 10 = 4.2.",
+            "4.2 × 10 = 42; together, multiply the original value by 100.",
+            "0.42 = 42%."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "unchanged": "That retains the decimal number unchanged beside the percent sign.",
+        "one_move_short": "That stops after the first multiplication by ten.",
+        "one_move_far": "That takes a third place-value step instead of stopping after two.",
+        "reverse": "That divides the numerical value instead of multiplying it."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-04-P03",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Write 0.075 as a percentage.",
+      "target": "Convert an exact decimal proportion to a percentage with correct place value",
+      "response": {
+        "type": "decimal",
+        "input_label": "Percentage",
+        "suffix": "%",
+        "allow_leading_decimal_point": true,
+        "scale_source": "0.075",
+        "scale_power": 2
+      },
+      "answer": {
+        "value": "7.5"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. A percentage may have a decimal part; no rounding is needed.",
+        "correct_after_support": "Correct. A percentage may have a decimal part; no rounding is needed.",
+        "on_correct_math": "0.075 × 10 = 0.75. → 0.75 × 10 = 7.5; together, multiply the original value by 100. → 0.075 = 7.5%.",
+        "on_incorrect_attempt_1": "Keep the exact decimal part that remains after two multiplications.",
+        "on_incorrect_attempt_2": "Keep the exact decimal part that remains after two multiplications.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "0.075 × 10 = 0.75. → 0.75 × 10 = 7.5; together, multiply the original value by 100. → 0.075 = 7.5%."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the exact decimal part that remains after two multiplications.",
+        "hint_2": "Track the digits through the two separate place-value changes. Keep the decimal point fixed in the chart.",
+        "worked_solution": "0.075 × 10 = 0.75. → 0.75 × 10 = 7.5; together, multiply the original value by 100. → 0.075 = 7.5%."
+      },
+      "working": [
+        "0.075 × 10 = 0.75.",
+        "0.75 × 10 = 7.5; together, multiply the original value by 100.",
+        "0.075 = 7.5%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Convert 0.075 to a percentage",
+          "decimal": "0.075",
+          "given": "0.075",
+          "steps": [
+            "0.075 × 10 = 0.75.",
+            "0.75 × 10 = 7.5; together, multiply the original value by 100.",
+            "0.075 = 7.5%."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "unchanged": "That adds the sign without converting the numerical value.",
+        "one_move_short": "That is the first product. Complete the second multiplication.",
+        "one_move_far": "That changes the digits one place too far. The exact percentage still needs a decimal point.",
+        "reverse": "That uses the opposite direction and makes the percentage much too small."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-04-P04",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Write 1.3 as a percentage.",
+      "target": "Convert an exact decimal proportion to a percentage with correct place value",
+      "response": {
+        "type": "decimal",
+        "input_label": "Percentage",
+        "suffix": "%",
+        "allow_leading_decimal_point": true,
+        "scale_source": "1.3",
+        "scale_power": 2
+      },
+      "answer": {
+        "value": "130"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The percentage includes the complete whole and the extra three tenths.",
+        "correct_after_support": "Correct. The percentage includes the complete whole and the extra three tenths.",
+        "on_correct_math": "1.3 × 10 = 13. → 13 × 10 = 130; together, multiply the original value by 100. → 1.3 = 130%.",
+        "on_incorrect_attempt_1": "The original amount is more than one whole. Include that whole in the percentage.",
+        "on_incorrect_attempt_2": "The original amount is more than one whole. Include that whole in the percentage.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "1.3 × 10 = 13. → 13 × 10 = 130; together, multiply the original value by 100. → 1.3 = 130%."
+      },
+      "mathematical_support": {
+        "hint_1": "The original amount is more than one whole. Include that whole in the percentage.",
+        "hint_2": "Track the digits through the two separate place-value changes. Keep the decimal point fixed in the chart.",
+        "worked_solution": "1.3 × 10 = 13. → 13 × 10 = 130; together, multiply the original value by 100. → 1.3 = 130%."
+      },
+      "working": [
+        "1.3 × 10 = 13.",
+        "13 × 10 = 130; together, multiply the original value by 100.",
+        "1.3 = 130%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Convert 1.3 to a percentage",
+          "decimal": "1.3",
+          "given": "1.3",
+          "steps": [
+            "1.3 × 10 = 13.",
+            "13 × 10 = 130; together, multiply the original value by 100.",
+            "1.3 = 130%."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "unchanged": "That leaves the original numerical value unchanged.",
+        "one_move_short": "That uses one multiplication by ten only.",
+        "one_move_far": "That scales by an extra factor of ten.",
+        "reverse": "That makes a value above one into a tiny percentage by using the reverse operation.",
+        "dropped_whole": "That keeps only the extra three tenths and drops the complete whole."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-04-P05",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Write 2.08 as a percentage.",
+      "target": "Convert an exact decimal proportion to a percentage with correct place value",
+      "response": {
+        "type": "decimal",
+        "input_label": "Percentage",
+        "suffix": "%",
+        "allow_leading_decimal_point": true,
+        "scale_source": "2.08",
+        "scale_power": 2
+      },
+      "answer": {
+        "value": "208"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both complete wholes and the additional hundredths remain in the percentage.",
+        "correct_after_support": "Correct. Both complete wholes and the additional hundredths remain in the percentage.",
+        "on_correct_math": "2.08 × 10 = 20.8. → 20.8 × 10 = 208; together, multiply the original value by 100. → 2.08 = 208%.",
+        "on_incorrect_attempt_1": "Preserve both complete wholes and the extra hundredths.",
+        "on_incorrect_attempt_2": "Preserve both complete wholes and the extra hundredths.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "2.08 × 10 = 20.8. → 20.8 × 10 = 208; together, multiply the original value by 100. → 2.08 = 208%."
+      },
+      "mathematical_support": {
+        "hint_1": "Preserve both complete wholes and the extra hundredths.",
+        "hint_2": "Track the digits through the two separate place-value changes. Keep the decimal point fixed in the chart.",
+        "worked_solution": "2.08 × 10 = 20.8. → 20.8 × 10 = 208; together, multiply the original value by 100. → 2.08 = 208%."
+      },
+      "working": [
+        "2.08 × 10 = 20.8.",
+        "20.8 × 10 = 208; together, multiply the original value by 100.",
+        "2.08 = 208%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Convert 2.08 to a percentage",
+          "decimal": "2.08",
+          "given": "2.08",
+          "steps": [
+            "2.08 × 10 = 20.8.",
+            "20.8 × 10 = 208; together, multiply the original value by 100.",
+            "2.08 = 208%."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "unchanged": "That attaches the sign without converting the numerical value.",
+        "one_move_short": "That is one multiplication by ten short of the required percentage.",
+        "one_move_far": "That adds an extra place-value change beyond the two required.",
+        "reverse": "That scales in the wrong direction, losing the more-than-two-wholes size.",
+        "dropped_whole": "That records only the extra hundredths. The two complete wholes must be included."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-04-P06",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Write 0.004 as a percentage.",
+      "target": "Convert an exact decimal proportion to a percentage with correct place value",
+      "response": {
+        "type": "decimal",
+        "input_label": "Percentage",
+        "suffix": "%",
+        "allow_leading_decimal_point": true,
+        "scale_source": "0.004",
+        "scale_power": 2
+      },
+      "answer": {
+        "value": "0.4"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. This small decimal gives a percentage below one percent.",
+        "correct_after_support": "Correct. This small decimal gives a percentage below one percent.",
+        "on_correct_math": "0.004 × 10 = 0.04. → 0.04 × 10 = 0.4; together, multiply the original value by 100. → 0.004 = 0.4%.",
+        "on_incorrect_attempt_1": "Track the digit from thousandths through two place-value changes.",
+        "on_incorrect_attempt_2": "Track the digit from thousandths through two place-value changes.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "0.004 × 10 = 0.04. → 0.04 × 10 = 0.4; together, multiply the original value by 100. → 0.004 = 0.4%."
+      },
+      "mathematical_support": {
+        "hint_1": "Track the digit from thousandths through two place-value changes.",
+        "hint_2": "Track the digits through the two separate place-value changes. Keep the decimal point fixed in the chart.",
+        "worked_solution": "0.004 × 10 = 0.04. → 0.04 × 10 = 0.4; together, multiply the original value by 100. → 0.004 = 0.4%."
+      },
+      "working": [
+        "0.004 × 10 = 0.04.",
+        "0.04 × 10 = 0.4; together, multiply the original value by 100.",
+        "0.004 = 0.4%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Convert 0.004 to a percentage",
+          "decimal": "0.004",
+          "given": "0.004",
+          "steps": [
+            "0.004 × 10 = 0.04.",
+            "0.04 × 10 = 0.4; together, multiply the original value by 100.",
+            "0.004 = 0.4%."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "unchanged": "That keeps the original number instead of converting it.",
+        "one_move_short": "That moves the digit only as far as hundredths after one multiplication.",
+        "one_move_far": "That puts the digit in the ones place. Two multiplications take it only to tenths.",
+        "reverse": "That makes the digit even less valuable instead of completing the required scaling."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-04-P07",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Write 0.0009 as a percentage.",
+      "target": "Convert an exact decimal proportion to a percentage with correct place value",
+      "response": {
+        "type": "decimal",
+        "input_label": "Percentage",
+        "suffix": "%",
+        "allow_leading_decimal_point": true,
+        "scale_source": "0.0009",
+        "scale_power": 2
+      },
+      "answer": {
+        "value": "0.09"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The digit finishes in hundredths of a percent, with its placeholder retained.",
+        "correct_after_support": "Correct. The digit finishes in hundredths of a percent, with its placeholder retained.",
+        "on_correct_math": "0.0009 × 10 = 0.009. → 0.009 × 10 = 0.09; together, multiply the original value by 100. → 0.0009 = 0.09%.",
+        "on_incorrect_attempt_1": "Start in ten-thousandths. Keep track of both changes and every empty place.",
+        "on_incorrect_attempt_2": "Start in ten-thousandths. Keep track of both changes and every empty place.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "0.0009 × 10 = 0.009. → 0.009 × 10 = 0.09; together, multiply the original value by 100. → 0.0009 = 0.09%."
+      },
+      "mathematical_support": {
+        "hint_1": "Start in ten-thousandths. Keep track of both changes and every empty place.",
+        "hint_2": "Track the digits through the two separate place-value changes. Keep the decimal point fixed in the chart.",
+        "worked_solution": "0.0009 × 10 = 0.009. → 0.009 × 10 = 0.09; together, multiply the original value by 100. → 0.0009 = 0.09%."
+      },
+      "working": [
+        "0.0009 × 10 = 0.009.",
+        "0.009 × 10 = 0.09; together, multiply the original value by 100.",
+        "0.0009 = 0.09%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Convert 0.0009 to a percentage",
+          "decimal": "0.0009",
+          "given": "0.0009",
+          "steps": [
+            "0.0009 × 10 = 0.009.",
+            "0.009 × 10 = 0.09; together, multiply the original value by 100.",
+            "0.0009 = 0.09%."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "unchanged": "That leaves the digit in its original place instead of converting the number.",
+        "one_move_short": "That completes only the first place-value change.",
+        "one_move_far": "That takes the digit one place too far. It should still be in hundredths after two changes.",
+        "reverse": "That makes the tiny number smaller using the opposite direction."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-04-P08",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Which conversion of 0.56 is correct?",
+      "target": "Convert an exact decimal proportion to a percentage with correct place value",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "0.56 = 5.6%",
+          "0.56 = 56%",
+          "0.56 = 0.56%",
+          "0.56 = 560%"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "0.56 = 56%"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. That conversion uses the full factor of one hundred.",
+        "correct_after_support": "Correct. That conversion uses the full factor of one hundred.",
+        "on_correct_math": "0.56 × 10 = 5.6. → 5.6 × 10 = 56; together, multiply the original value by 100. → 0.56 = 56%.",
+        "on_incorrect_attempt_1": "Compare each proposed percentage with the result of two multiplications by ten.",
+        "on_incorrect_attempt_2": "Compare each proposed percentage with the result of two multiplications by ten.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "0.56 × 10 = 5.6. → 5.6 × 10 = 56; together, multiply the original value by 100. → 0.56 = 56%."
+      },
+      "mathematical_support": {
+        "hint_1": "Compare each proposed percentage with the result of two multiplications by ten.",
+        "hint_2": "Track the digits through the two separate place-value changes. Keep the decimal point fixed in the chart.",
+        "worked_solution": "0.56 × 10 = 5.6. → 5.6 × 10 = 56; together, multiply the original value by 100. → 0.56 = 56%."
+      },
+      "working": [
+        "0.56 × 10 = 5.6.",
+        "5.6 × 10 = 56; together, multiply the original value by 100.",
+        "0.56 = 56%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Check the exact scaling",
+          "decimal": "0.56",
+          "given": "0.56",
+          "steps": [
+            "0.56 × 10 = 5.6.",
+            "5.6 × 10 = 56; together, multiply the original value by 100.",
+            "0.56 = 56%."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "0.56 = 5.6%": "That uses a factor of ten only.",
+        "0.56 = 0.56%": "That leaves the numerical value unchanged.",
+        "0.56 = 560%": "That uses an extra factor of ten."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-04-X01",
+      "source_ref": {
+        "page": 16
+      },
+      "stage": "practice",
+      "prompt": "A school survey shows that 0.68 of the students travel to school by bus. Write this proportion as a percentage.",
+      "target": "Convert an exact decimal proportion to a percentage with correct place value",
+      "response": {
+        "type": "decimal",
+        "input_label": "Percentage",
+        "suffix": "%",
+        "allow_leading_decimal_point": true,
+        "scale_source": "0.68",
+        "scale_power": 2
+      },
+      "answer": {
+        "value": "68"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The percentage describes the students travelling by bus out of the full survey.",
+        "correct_after_support": "Correct. The percentage describes the students travelling by bus out of the full survey.",
+        "on_correct_math": "0.68 × 10 = 6.8. → 6.8 × 10 = 68; together, multiply the original value by 100. → 0.68 = 68%.",
+        "on_incorrect_attempt_1": "Describe the bus travellers as a proportion of all surveyed students.",
+        "on_incorrect_attempt_2": "Describe the bus travellers as a proportion of all surveyed students.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "0.68 × 10 = 6.8. → 6.8 × 10 = 68; together, multiply the original value by 100. → 0.68 = 68%."
+      },
+      "mathematical_support": {
+        "hint_1": "Describe the bus travellers as a proportion of all surveyed students.",
+        "hint_2": "Track the digits through the two separate place-value changes. Keep the decimal point fixed in the chart.",
+        "worked_solution": "0.68 × 10 = 6.8. → 6.8 × 10 = 68; together, multiply the original value by 100. → 0.68 = 68%."
+      },
+      "working": [
+        "0.68 × 10 = 6.8.",
+        "6.8 × 10 = 68; together, multiply the original value by 100.",
+        "0.68 = 68%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Students travelling by bus",
+          "decimal": "0.68",
+          "given": "0.68",
+          "steps": [
+            "0.68 × 10 = 6.8.",
+            "6.8 × 10 = 68; together, multiply the original value by 100.",
+            "0.68 = 68%."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "unchanged": "That keeps the decimal proportion as the percentage number without converting it.",
+        "one_move_short": "That stops after one multiplication by ten and understates the bus-travelling proportion.",
+        "one_move_far": "That adds an extra factor of ten and makes this part larger than the whole survey.",
+        "reverse": "That uses the reverse scaling and makes the bus-travelling proportion much too small."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-04-X02",
+      "source_ref": {
+        "page": 16
+      },
+      "stage": "practice",
+      "prompt": "A charity collects 1.08 times its fundraising target. Write this as a percentage of the target.",
+      "target": "Convert an exact decimal proportion to a percentage with correct place value",
+      "response": {
+        "type": "decimal",
+        "input_label": "Percentage",
+        "suffix": "%",
+        "allow_leading_decimal_point": true,
+        "scale_source": "1.08",
+        "scale_power": 2
+      },
+      "answer": {
+        "value": "108"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The percentage includes the target and the additional amount collected.",
+        "correct_after_support": "Correct. The percentage includes the target and the additional amount collected.",
+        "on_correct_math": "1.08 × 10 = 10.8. → 10.8 × 10 = 108; together, multiply the original value by 100. → 1.08 = 108%.",
+        "on_incorrect_attempt_1": "The target is the reference whole. Include the full target as well as the extra amount.",
+        "on_incorrect_attempt_2": "The target is the reference whole. Include the full target as well as the extra amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "1.08 × 10 = 10.8. → 10.8 × 10 = 108; together, multiply the original value by 100. → 1.08 = 108%."
+      },
+      "mathematical_support": {
+        "hint_1": "The target is the reference whole. Include the full target as well as the extra amount.",
+        "hint_2": "Track the digits through the two separate place-value changes. Keep the decimal point fixed in the chart.",
+        "worked_solution": "1.08 × 10 = 10.8. → 10.8 × 10 = 108; together, multiply the original value by 100. → 1.08 = 108%."
+      },
+      "working": [
+        "1.08 × 10 = 10.8.",
+        "10.8 × 10 = 108; together, multiply the original value by 100.",
+        "1.08 = 108%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Fundraising against the target",
+          "decimal": "1.08",
+          "given": "1.08",
+          "steps": [
+            "1.08 × 10 = 10.8.",
+            "10.8 × 10 = 108; together, multiply the original value by 100.",
+            "1.08 = 108%."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "wholes"
+        }
+      },
+      "response_feedback": {
+        "unchanged": "That leaves the numerical multiplier unchanged beside the percent sign.",
+        "one_move_short": "That is one multiplication by ten short and falls below the already-reached target.",
+        "one_move_far": "That adds an unnecessary extra factor of ten.",
+        "reverse": "That uses reverse scaling and makes a collection above target look tiny.",
+        "dropped_whole": "That describes only the extra collection. The whole target must also be included."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-04-X03",
+      "source_ref": {
+        "page": 16
+      },
+      "stage": "practice",
+      "prompt": "The proportion of manufactured parts that fail a quality check is 0.006. Write this proportion as a percentage.",
+      "target": "Convert an exact decimal proportion to a percentage with correct place value",
+      "response": {
+        "type": "decimal",
+        "input_label": "Percentage",
+        "suffix": "%",
+        "allow_leading_decimal_point": true,
+        "scale_source": "0.006",
+        "scale_power": 2
+      },
+      "answer": {
+        "value": "0.6"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The failure percentage stays below one percent without rounding.",
+        "correct_after_support": "Correct. The failure percentage stays below one percent without rounding.",
+        "on_correct_math": "0.006 × 10 = 0.06. → 0.06 × 10 = 0.6; together, multiply the original value by 100. → 0.006 = 0.6%.",
+        "on_incorrect_attempt_1": "Keep the failed parts as the selected proportion. A small percentage may remain below one.",
+        "on_incorrect_attempt_2": "Keep the failed parts as the selected proportion. A small percentage may remain below one.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "0.006 × 10 = 0.06. → 0.06 × 10 = 0.6; together, multiply the original value by 100. → 0.006 = 0.6%."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the failed parts as the selected proportion. A small percentage may remain below one.",
+        "hint_2": "Track the digits through the two separate place-value changes. Keep the decimal point fixed in the chart.",
+        "worked_solution": "0.006 × 10 = 0.06. → 0.06 × 10 = 0.6; together, multiply the original value by 100. → 0.006 = 0.6%."
+      },
+      "working": [
+        "0.006 × 10 = 0.06.",
+        "0.06 × 10 = 0.6; together, multiply the original value by 100.",
+        "0.006 = 0.6%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Parts failing a quality check",
+          "decimal": "0.006",
+          "given": "0.006",
+          "steps": [
+            "0.006 × 10 = 0.06.",
+            "0.06 × 10 = 0.6; together, multiply the original value by 100.",
+            "0.006 = 0.6%."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "unchanged": "That adds the sign without converting the failure proportion.",
+        "one_move_short": "That stops after the first multiplication and understates the failure percentage.",
+        "one_move_far": "That takes the digit into the ones place, making the failure percentage too large.",
+        "reverse": "That scales in the opposite direction and makes the failure proportion smaller again."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-04-X04",
+      "source_ref": {
+        "page": 16
+      },
+      "stage": "practice",
+      "prompt": "A digital display records a battery level as 0.47 of full capacity. Which calculation gives the battery level as a percentage?",
+      "target": "Convert an exact decimal proportion to a percentage with correct place value",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "0.47 × 100",
+          "0.47 × 10",
+          "0.47 ÷ 100",
+          "0.47 + 100"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "0.47 × 100"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. That operation converts the decimal proportion to a percentage of full capacity.",
+        "correct_after_support": "Correct. That operation converts the decimal proportion to a percentage of full capacity.",
+        "on_correct_math": "Choose multiplication by 100 to change the decimal number into its percentage number. → 0.47 × 100 = 47, so the charge is 47%.",
+        "on_incorrect_attempt_1": "Choose the operation that converts the stated proportion without changing which part of the capacity is described.",
+        "on_incorrect_attempt_2": "Choose the operation that converts the stated proportion without changing which part of the capacity is described.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose multiplication by 100 to change the decimal number into its percentage number. → 0.47 × 100 = 47, so the charge is 47%."
+      },
+      "mathematical_support": {
+        "hint_1": "Choose the operation that converts the stated proportion without changing which part of the capacity is described.",
+        "hint_2": "Track the digits through the two separate place-value changes. Keep the decimal point fixed in the chart.",
+        "worked_solution": "Choose multiplication by 100 to change the decimal number into its percentage number. → 0.47 × 100 = 47, so the charge is 47%."
+      },
+      "working": [
+        "Choose multiplication by 100 to change the decimal number into its percentage number.",
+        "0.47 × 100 = 47, so the charge is 47%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Choose the battery conversion",
+          "decimal": "0.47",
+          "given": "0.47 of full battery capacity",
+          "steps": [
+            "Choose multiplication by 100 to change the decimal number into its percentage number.",
+            "0.47 × 100 = 47, so the charge is 47%."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "0.47 × 10": "That changes the numerical value by a factor of ten only.",
+        "0.47 ÷ 100": "That is the reverse operation for this conversion direction.",
+        "0.47 + 100": "Adding one hundred is not the required scaling operation."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-04-E01",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "exit",
+      "prompt": "Final check: write 0.73 as a percentage.",
+      "target": "Convert an exact decimal proportion to a percentage with correct place value",
+      "response": {
+        "type": "decimal",
+        "input_label": "Percentage",
+        "suffix": "%",
+        "allow_leading_decimal_point": true,
+        "scale_source": "0.73",
+        "scale_power": 2
+      },
+      "answer": {
+        "value": "73"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The final percentage preserves the seventy-three-hundredths proportion.",
+        "correct_after_support": "Correct. The final percentage preserves the seventy-three-hundredths proportion.",
+        "on_correct_math": "0.73 × 10 = 7.3. → 7.3 × 10 = 73; together, multiply the original value by 100. → 0.73 = 73%.",
+        "on_incorrect_attempt_1": "Review the numerical scaling before the percent sign.",
+        "on_incorrect_attempt_2": "Review the numerical scaling before the percent sign.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "0.73 × 10 = 7.3. → 7.3 × 10 = 73; together, multiply the original value by 100. → 0.73 = 73%."
+      },
+      "mathematical_support": {
+        "hint_1": "Review the numerical scaling before the percent sign.",
+        "hint_2": "Track the digits through the two separate place-value changes. Keep the decimal point fixed in the chart.",
+        "worked_solution": "0.73 × 10 = 7.3. → 7.3 × 10 = 73; together, multiply the original value by 100. → 0.73 = 73%."
+      },
+      "working": [
+        "0.73 × 10 = 7.3.",
+        "7.3 × 10 = 73; together, multiply the original value by 100.",
+        "0.73 = 73%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Convert 0.73 to a percentage",
+          "decimal": "0.73",
+          "given": "0.73",
+          "steps": [
+            "0.73 × 10 = 7.3.",
+            "7.3 × 10 = 73; together, multiply the original value by 100.",
+            "0.73 = 73%."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "unchanged": "That leaves the original decimal number unchanged.",
+        "one_move_short": "That completes only one of the two multiplications by ten.",
+        "one_move_far": "That adds an extra factor of ten.",
+        "reverse": "That uses the reverse scaling operation."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-04-E02",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "exit",
+      "prompt": "Final check: write 0.058 as a percentage.",
+      "target": "Convert an exact decimal proportion to a percentage with correct place value",
+      "response": {
+        "type": "decimal",
+        "input_label": "Percentage",
+        "suffix": "%",
+        "allow_leading_decimal_point": true,
+        "scale_source": "0.058",
+        "scale_power": 2
+      },
+      "answer": {
+        "value": "5.8"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The final percentage keeps the exact decimal part.",
+        "correct_after_support": "Correct. The final percentage keeps the exact decimal part.",
+        "on_correct_math": "0.058 × 10 = 0.58. → 0.58 × 10 = 5.8; together, multiply the original value by 100. → 0.058 = 5.8%.",
+        "on_incorrect_attempt_1": "Review both place-value changes and the decimal point in the final number.",
+        "on_incorrect_attempt_2": "Review both place-value changes and the decimal point in the final number.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "0.058 × 10 = 0.58. → 0.58 × 10 = 5.8; together, multiply the original value by 100. → 0.058 = 5.8%."
+      },
+      "mathematical_support": {
+        "hint_1": "Review both place-value changes and the decimal point in the final number.",
+        "hint_2": "Track the digits through the two separate place-value changes. Keep the decimal point fixed in the chart.",
+        "worked_solution": "0.058 × 10 = 0.58. → 0.58 × 10 = 5.8; together, multiply the original value by 100. → 0.058 = 5.8%."
+      },
+      "working": [
+        "0.058 × 10 = 0.58.",
+        "0.58 × 10 = 5.8; together, multiply the original value by 100.",
+        "0.058 = 5.8%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Convert 0.058 to a percentage",
+          "decimal": "0.058",
+          "given": "0.058",
+          "steps": [
+            "0.058 × 10 = 0.58.",
+            "0.58 × 10 = 5.8; together, multiply the original value by 100.",
+            "0.058 = 5.8%."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "unchanged": "That adds the sign without numerical conversion.",
+        "one_move_short": "That stops at the first product instead of completing both multiplications.",
+        "one_move_far": "That changes the place value one step too far; this percentage retains a decimal part.",
+        "reverse": "That scales the numerical value in the wrong direction."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-04-E03",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "exit",
+      "prompt": "Final check: write 1.26 as a percentage.",
+      "target": "Convert an exact decimal proportion to a percentage with correct place value",
+      "response": {
+        "type": "decimal",
+        "input_label": "Percentage",
+        "suffix": "%",
+        "allow_leading_decimal_point": true,
+        "scale_source": "1.26",
+        "scale_power": 2
+      },
+      "answer": {
+        "value": "126"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Your final percentage includes the complete whole and the additional part.",
+        "correct_after_support": "Correct. Your final percentage includes the complete whole and the additional part.",
+        "on_correct_math": "1.26 × 10 = 12.6. → 12.6 × 10 = 126; together, multiply the original value by 100. → 1.26 = 126%.",
+        "on_incorrect_attempt_1": "Review the full whole-number part as well as the additional decimal part.",
+        "on_incorrect_attempt_2": "Review the full whole-number part as well as the additional decimal part.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "1.26 × 10 = 12.6. → 12.6 × 10 = 126; together, multiply the original value by 100. → 1.26 = 126%."
+      },
+      "mathematical_support": {
+        "hint_1": "Review the full whole-number part as well as the additional decimal part.",
+        "hint_2": "Track the digits through the two separate place-value changes. Keep the decimal point fixed in the chart.",
+        "worked_solution": "1.26 × 10 = 12.6. → 12.6 × 10 = 126; together, multiply the original value by 100. → 1.26 = 126%."
+      },
+      "working": [
+        "1.26 × 10 = 12.6.",
+        "12.6 × 10 = 126; together, multiply the original value by 100.",
+        "1.26 = 126%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Convert 1.26 to a percentage",
+          "decimal": "1.26",
+          "given": "1.26",
+          "steps": [
+            "1.26 × 10 = 12.6.",
+            "12.6 × 10 = 126; together, multiply the original value by 100.",
+            "1.26 = 126%."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "unchanged": "That leaves the numerical value unchanged before the sign.",
+        "one_move_short": "That uses a factor of ten rather than the full factor required.",
+        "one_move_far": "That scales by one extra factor of ten.",
+        "reverse": "That makes the more-than-one-whole value much too small.",
+        "dropped_whole": "That drops the complete whole and keeps only the additional part."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-04-E04",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "exit",
+      "prompt": "Final check: write 0.004 as a percentage.",
+      "target": "Convert an exact decimal proportion to a percentage with correct place value",
+      "response": {
+        "type": "decimal",
+        "input_label": "Percentage",
+        "suffix": "%",
+        "allow_leading_decimal_point": true,
+        "scale_source": "0.004",
+        "scale_power": 2
+      },
+      "answer": {
+        "value": "0.4"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The final percentage remains below one percent with the correct place value.",
+        "correct_after_support": "Correct. The final percentage remains below one percent with the correct place value.",
+        "on_correct_math": "0.004 × 10 = 0.04. → 0.04 × 10 = 0.4; together, multiply the original value by 100. → 0.004 = 0.4%.",
+        "on_incorrect_attempt_1": "Review where the digit finishes after exactly two place-value changes.",
+        "on_incorrect_attempt_2": "Review where the digit finishes after exactly two place-value changes.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "0.004 × 10 = 0.04. → 0.04 × 10 = 0.4; together, multiply the original value by 100. → 0.004 = 0.4%."
+      },
+      "mathematical_support": {
+        "hint_1": "Review where the digit finishes after exactly two place-value changes.",
+        "hint_2": "Track the digits through the two separate place-value changes. Keep the decimal point fixed in the chart.",
+        "worked_solution": "0.004 × 10 = 0.04. → 0.04 × 10 = 0.4; together, multiply the original value by 100. → 0.004 = 0.4%."
+      },
+      "working": [
+        "0.004 × 10 = 0.04.",
+        "0.04 × 10 = 0.4; together, multiply the original value by 100.",
+        "0.004 = 0.4%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Convert 0.004 to a percentage",
+          "decimal": "0.004",
+          "given": "0.004",
+          "steps": [
+            "0.004 × 10 = 0.04.",
+            "0.04 × 10 = 0.4; together, multiply the original value by 100.",
+            "0.004 = 0.4%."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "unchanged": "That leaves the original small decimal unconverted.",
+        "one_move_short": "That stops after one multiplication, while the digit is still in hundredths.",
+        "one_move_far": "That moves the digit into the ones place rather than stopping in tenths.",
+        "reverse": "That makes the digit less valuable using the reverse operation."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-04-E05",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "exit",
+      "prompt": "Final method check: which statement is correct?",
+      "target": "Convert an exact decimal proportion to a percentage with correct place value",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Multiply the decimal value by 100, then write the percent sign.",
+          "Multiply the decimal value by 10, then write the percent sign.",
+          "Add the percent sign without changing the numerical value.",
+          "Divide the decimal value by 100, then write the percent sign."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "Multiply the decimal value by 100, then write the percent sign."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The rule includes both the full numerical conversion and the percentage notation.",
+        "correct_after_support": "Correct. The rule includes both the full numerical conversion and the percentage notation.",
+        "on_correct_math": "Multiply the decimal value by 100. → Write the percent sign after the numerical conversion.",
+        "on_incorrect_attempt_1": "Review the scaling and the role of the percent sign.",
+        "on_incorrect_attempt_2": "Review the scaling and the role of the percent sign.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Multiply the decimal value by 100. → Write the percent sign after the numerical conversion."
+      },
+      "mathematical_support": {
+        "hint_1": "Review the scaling and the role of the percent sign.",
+        "hint_2": "Track the digits through the two separate place-value changes. Keep the decimal point fixed in the chart.",
+        "worked_solution": "Multiply the decimal value by 100. → Write the percent sign after the numerical conversion."
+      },
+      "working": [
+        "Multiply the decimal value by 100.",
+        "Write the percent sign after the numerical conversion."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "decimal_scaling",
+          "title": "Choose the complete conversion rule",
+          "decimal": "0.37",
+          "given": "Choose the correct statement.",
+          "steps": [
+            "Multiply the decimal value by 100.",
+            "Write the percent sign after the numerical conversion."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "Multiply the decimal value by 10, then write the percent sign.": "That includes only one multiplication by ten instead of the complete scaling.",
+        "Add the percent sign without changing the numerical value.": "That treats the sign as a label and does not convert the numerical value.",
+        "Divide the decimal value by 100, then write the percent sign.": "That uses the opposite conversion direction."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    }
+  ],
+  "canonical_lesson": {
+    "version": "FDP04-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

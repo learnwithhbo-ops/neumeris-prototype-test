@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MD-16 responsive visual QA</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../operation-structure.css">
+  <style>
+    body{margin:0;background:#f4f1ea;color:#233936;font-family:system-ui,sans-serif}
+    main{width:min(1040px,calc(100% - 28px));margin:24px auto 80px}
+    h1{font-size:clamp(1.5rem,4vw,2.25rem)}
+    section{box-sizing:border-box;margin:20px 0;padding:18px;border:1px solid #cbd7d3;border-radius:18px;background:#fff}
+    section>h2{font-size:1.05rem;margin:0 0 16px}
+  </style>
+</head>
+<body>
+<main>
+  <h1>MD-16 visual states</h1>
+  <div id="fixtures"></div>
+</main>
+<script src="../js/validators.js"></script>
+<script src="../js/multi-step-visuals.js"></script>
+<script src="../js/operation-structure-visuals.js"></script>
+<script src="../js/visual-primitives.js"></script>
+<script>
+  const f=(n,d)=>({n,d});
+  const items=[
+    ['Tank pathway: final state',{kind:'multi_step',structure:'fraction_then_group',context:'tank_bottles',object:'tank_bottles',given:48,first_fraction:f(3,4),group_size:f(2,3),unit:'litres',result_unit:'bottles',given_label:'water in tank',first_label:'is used',intermediate_label:'water used',group_label:'in each bottle',result_label:'bottles filled',target:'Number of bottles',solved:true,phase:'result'}],
+    ['Students and teams: question state',{kind:'multi_step',structure:'fraction_then_group',context:'students_teams',object:'students_teams',given:54,first_fraction:f(2,3),group_size:6,unit:'students',result_unit:'teams',given_label:'students in year group',first_label:'attend',intermediate_label:'students attending',group_label:'in each team',result_label:'teams formed',target:'Number of teams'}],
+    ['Reconstruct a whole: supported state',{kind:'multi_step',structure:'reconstruct_then_fraction',context:'number_reconstruct',object:'number_reconstruct',given:27,known_fraction:f(3,4),target_fraction:f(2,3),given_label:'known three-quarter part',first_label:'of the whole',intermediate_label:'whole number',second_label:'of that whole',result_label:'required value',target:'Two thirds of the whole'}],
+    ['Ribbon: progressive final state',{kind:'multi_step',structure:'repeat_then_group',context:'ribbon_lengths',object:'ribbon_lengths',copies:5,item_size:f(3,4),group_size:f(5,8),unit:'metres',result_unit:'lengths',given_label:'five ribbon pieces',first_label:'combine the lengths',intermediate_label:'ribbon altogether',group_label:'in each cut length',result_label:'complete lengths',target:'Complete lengths'}],
+    ['Books and boxes: question state',{kind:'multi_step',structure:'fraction_then_group',context:'books_boxes',object:'books_boxes',given:80,first_fraction:f(3,5),group_size:6,unit:'books',result_unit:'boxes',given_label:'exercise books ordered',first_label:'are for Year 10',intermediate_label:'Year 10 books',group_label:'in each box',result_label:'boxes used',target:'Number of boxes'}],
+    ['Selected group becomes the new whole',{kind:'multi_step',structure:'fraction_then_fraction',context:'students_tasks',object:'students_tasks',given:54,first_fraction:f(2,3),second_fraction:f(3,4),unit:'students',given_label:'students in year group',first_label:'join the session',intermediate_label:'students who join',second_label:'of those complete every task',result_label:'students completing every task',target:'Students completing every task'}],
+    ['Method path',{kind:'multi_step_rule',context:'method_final',object:'method_final',heading:'Identify the dependable method',rule_context:'Find and label the intermediate quantity, then choose the next operation from the remaining relationship.',target:'Valid multi-step method'}]
+  ];
+  const host=document.querySelector('#fixtures');
+  items.forEach(([title,model],index)=>{
+    const section=document.createElement('section');
+    const visual={primitive:'operation_structure',model};
+    const question=model.kind==='multi_step_rule'?{working:[]}:{working:['Find the intermediate quantity.','Use that quantity in the second relationship.','Reach the required result.']};
+    const ctx=index===0?{}:index===2?{question,feedback:'support',workingRevealed:1}:index===3?{question,feedback:'support',workingRevealed:3}:{question};
+    section.innerHTML='<h2>'+title+'</h2>'+window.RevilyOperationVisuals.renderMarkup(visual,ctx);
+    section.querySelector('.os-visual')?.setAttribute('aria-label',window.RevilyOperationVisuals.accessibleDescription(visual,ctx));
+    host.appendChild(section);
+  });
+</script>
+</body>
+</html>

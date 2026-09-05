@@ -1,0 +1,3001 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "FDP-13 - Compare two fractions, decimals or percentages",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-26",
+      "sha256": "f5afe1dc36048f3f4857731315afacd10129c8f19701aec9ea03454ca025a463"
+    },
+    "authored_scope": "Compare two values written as fractions, decimals or percentages.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "FDP13-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "verified_desktop_ready_phone_locked_rounded_work_learning_bars_number_line_exact_fractions_aligned_inputs_drafts_hints_audio_320_390",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        19,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "source_repairs_consulted": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        24,
+        25
+      ],
+      "note": "All 26 approved pages and the previous configuration reviewed. Restored exact aligned 3/5 and 58% bars, the 0.65-to-0.80 number line, five-stage worked comparison 0.64 versus 5/8, all guided blanks for 7/10 versus 68%, all 25 source questions and the five-item unsupported final. Exact common-form working is optional except the prescribed guided percentage stage; recorded incorrect or rounded work cannot establish readiness. No Entry, Diagnostic, prerequisite-state mutation, delayed Retrieval or Strong route."
+    }
+  },
+  "identity": {
+    "id": "FDP-13",
+    "slug": "compare-two-fractions-decimals-or-percentages",
+    "title": "Compare two fractions, decimals or percentages",
+    "strand": "Number",
+    "cluster": "Fractions, Decimals and Percentages",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Compare exactly two positive fractions, decimals or percentages using a suitable common form and the correct symbol in the original order.",
+    "success_criteria": [
+      "Preserve both values through exact conversion.",
+      "Compare corresponding place values or equal-sized parts.",
+      "Recognise exact equality.",
+      "Preserve quantities above one whole.",
+      "Use an exact fraction route when decimal conversion would require rounding.",
+      "Keep any recorded common-form working mathematically valid."
+    ],
+    "boundaries": {
+      "includes": [
+        "Exactly two positive proper/improper fractions, decimals or percentages",
+        "Values below, equal to and above one",
+        "Exact terminating forms and accessible non-terminating fraction comparisons",
+        "Any mathematically valid exact comparison route",
+        "Prescribed proportion contexts"
+      ],
+      "excludes": [
+        "Ordering three or more values and negative quantities",
+        "Percentage amounts, changes and reverse percentages",
+        "Approximate equality without an explicit rounding instruction",
+        "Entry, Diagnostic, prerequisite-state mutation and delayed Retrieval"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "FDP-03",
+      "FDP-04",
+      "FDP-05",
+      "FDP-08",
+      "FDP-09",
+      "FDP-10",
+      "FDP-11",
+      "FDP-12"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for FDP-03, FDP-04, FDP-05, FDP-08, FDP-09, FDP-10, FDP-11, FDP-12 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "single_choice",
+      "equivalent_percent",
+      "fdp_comparison"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    },
+    "place_value_profile": true
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "A common form puts both unchanged quantities on the same scale or into equal-sized parts.",
+    "invariant": "Conversion changes representation, not quantity or original order.",
+    "must_notice": [
+      "The common-form values must be exact.",
+      "Compare place values rather than digit counts.",
+      "The wide side of the symbol faces the larger value.",
+      "Equality means identical values, not rounded similarity.",
+      "An accessible common denominator avoids approximating recurring fractions."
+    ],
+    "common_confusions": [
+      "Printed numbers compared across different scales",
+      "Conversion direction or fraction value incorrect",
+      "Symbol reversed",
+      "Equality missed",
+      "Whole lost above one hundred percent",
+      "Rounded fraction treated as exactly equal",
+      "Correct symbol paired with invalid visible working"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "Use an exact common form",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Use an exact common form",
+          "initial_state": "Use an exact common form",
+          "model": {
+            "kind": "fdp_comparison",
+            "title": "Compare values, not their appearance",
+            "left": "0.72",
+            "right": "3/4",
+            "given": "",
+            "route": "decimal",
+            "steps": [
+              "Choose decimals: both values have exact terminating decimal forms.",
+              "0.72 = 0.72; 3/4 = 0.75.",
+              "Align decimal places: 0.72 = 0.72 and 0.75 = 0.75.",
+              "Compare corresponding place values: 0.72 < 0.75.",
+              "0.72 < 3/4; keep the original left-to-right order."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "principle",
+            "solved": true,
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "Use the same scale or equal-sized parts to compare two quantities. Keep both values exact and put the comparison symbol in the original order."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Use equal reference wholes",
+        "source_ref": {
+          "page": 6
+        },
+        "scene": {
+          "display_title": "Use equal reference wholes",
+          "initial_state": "Use equal reference wholes",
+          "model": {
+            "kind": "fdp_comparison",
+            "title": "Compare lengths for the same whole",
+            "left": "3/5",
+            "right": "58%",
+            "given": "3/5 and 58%",
+            "route": "decimal",
+            "steps": [
+              "The two bars represent equal reference wholes.",
+              "3/5 = 60/100, while 58% = 58/100: two hundredths less.",
+              "The top shaded length is longer, so 3/5 > 58%."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "bars",
+            "solved": true,
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "Both bars represent the same whole. The upper bar shows three fifths; the lower bar shows fifty-eight percent."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Compare equal hundredths",
+        "source_ref": {
+          "page": 6
+        },
+        "scene": {
+          "display_title": "Compare equal hundredths",
+          "initial_state": "Compare equal hundredths",
+          "model": {
+            "kind": "fdp_comparison",
+            "title": "Compare lengths for the same whole",
+            "left": "3/5",
+            "right": "58%",
+            "given": "3/5 and 58%",
+            "route": "decimal",
+            "steps": [
+              "The two bars represent equal reference wholes.",
+              "3/5 = 60/100, while 58% = 58/100: two hundredths less.",
+              "The top shaded length is longer, so 3/5 > 58%."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "bars",
+            "solved": true,
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "The upper shading reaches sixty hundredths. The lower shading stops two hundredths earlier, on the very same scale."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Return to the original representations",
+        "source_ref": {
+          "page": 6
+        },
+        "scene": {
+          "display_title": "Return to the original representations",
+          "initial_state": "Return to the original representations",
+          "model": {
+            "kind": "fdp_comparison",
+            "title": "Compare lengths for the same whole",
+            "left": "3/5",
+            "right": "58%",
+            "given": "3/5 and 58%",
+            "route": "decimal",
+            "steps": [
+              "The two bars represent equal reference wholes.",
+              "3/5 = 60/100, while 58% = 58/100: two hundredths less.",
+              "The top shaded length is longer, so 3/5 > 58%."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "bars",
+            "solved": true,
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "The greater shaded length belongs to the fraction on the left. The wide side of the symbol faces that larger value."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Locate both values on one number line",
+        "source_ref": {
+          "page": 7
+        },
+        "scene": {
+          "display_title": "Locate both values on one number line",
+          "initial_state": "Locate both values on one number line",
+          "model": {
+            "kind": "fdp_comparison",
+            "title": "Compare two positions on one scale",
+            "left": "0.72",
+            "right": "3/4",
+            "given": "0.72 and 3/4",
+            "route": "decimal",
+            "steps": [
+              "On the same 0.65 to 0.80 scale, 3/4 = 0.75 lies to the right of 0.72.",
+              "The gap is three hundredths, and 0.72 < 3/4."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "line",
+            "solved": true,
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "These points share one number-line scale. The exact fraction conversion locates its point to the right of the decimal."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T06"
+      },
+      {
+        "id": "T06",
+        "stage": "teaching",
+        "purpose": "Use position to compare",
+        "source_ref": {
+          "page": 7
+        },
+        "scene": {
+          "display_title": "Use position to compare",
+          "initial_state": "Use position to compare",
+          "model": {
+            "kind": "fdp_comparison",
+            "title": "Compare two positions on one scale",
+            "left": "0.72",
+            "right": "3/4",
+            "given": "0.72 and 3/4",
+            "route": "decimal",
+            "steps": [
+              "On the same 0.65 to 0.80 scale, 3/4 = 0.75 lies to the right of 0.72.",
+              "The gap is three hundredths, and 0.72 < 3/4."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "line",
+            "solved": true,
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "The two positions are three hundredths apart. Values farther right are larger, so preserve that relationship in the original order."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T07"
+      },
+      {
+        "id": "T07",
+        "stage": "teaching",
+        "purpose": "Explain the common form",
+        "source_ref": {
+          "page": 7
+        },
+        "scene": {
+          "display_title": "Explain the common form",
+          "initial_state": "Explain the common form",
+          "model": {
+            "kind": "fdp_comparison",
+            "title": "Explain a common comparison scale",
+            "left": "0.72",
+            "right": "3/4",
+            "given": "Choose the explanation.",
+            "route": "decimal",
+            "steps": [
+              "A common form compares the same scale or equal-sized parts.",
+              "Conversion preserves each original value.",
+              "The comparison then uses the quantities, not their printed appearance."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "mode": "rule",
+            "explanation_question": true
+          }
+        },
+        "narration": {
+          "script": "Choose why a shared scale or equal-sized parts makes the comparison valid."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "FDP-13-C01"
+        },
+        "next_step": "T08"
+      },
+      {
+        "id": "T08",
+        "stage": "teaching",
+        "purpose": "Choose a convenient exact form",
+        "source_ref": {
+          "page": 8
+        },
+        "scene": {
+          "display_title": "Choose a convenient exact form",
+          "initial_state": "Choose a convenient exact form",
+          "model": {
+            "kind": "fdp_comparison",
+            "title": "Compare sixty-four hundredths and five eighths",
+            "left": "0.64",
+            "right": "5/8",
+            "given": "0.64 and 5/8",
+            "route": "decimal",
+            "steps": [
+              "Choose decimals because five eighths has an exact terminating decimal.",
+              "5/8 = 5 ÷ 8 = 0.625.",
+              "Align places: 0.64 = 0.640.",
+              "Both have 6 tenths; at the hundredths place, 4 > 2. Therefore 0.640 > 0.625.",
+              "Return to the original order: 0.64 > 5/8."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "alternative": "A percentage route also works: 64% > 62.5%.",
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "For this worked example, the fraction has an exact terminating decimal, so decimals provide a suitable common form."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T09"
+      },
+      {
+        "id": "T09",
+        "stage": "teaching",
+        "purpose": "Convert the fraction exactly",
+        "source_ref": {
+          "page": 8
+        },
+        "scene": {
+          "display_title": "Convert the fraction exactly",
+          "initial_state": "Convert the fraction exactly",
+          "model": {
+            "kind": "fdp_comparison",
+            "title": "Compare sixty-four hundredths and five eighths",
+            "left": "0.64",
+            "right": "5/8",
+            "given": "0.64 and 5/8",
+            "route": "decimal",
+            "steps": [
+              "Choose decimals because five eighths has an exact terminating decimal.",
+              "5/8 = 5 ÷ 8 = 0.625.",
+              "Align places: 0.64 = 0.640.",
+              "Both have 6 tenths; at the hundredths place, 4 > 2. Therefore 0.640 > 0.625.",
+              "Return to the original order: 0.64 > 5/8."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "alternative": "A percentage route also works: 64% > 62.5%.",
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "Divide numerator by denominator and keep the complete exact result. Do not round before comparing."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T10"
+      },
+      {
+        "id": "T10",
+        "stage": "teaching",
+        "purpose": "Align the decimal places",
+        "source_ref": {
+          "page": 8
+        },
+        "scene": {
+          "display_title": "Align the decimal places",
+          "initial_state": "Align the decimal places",
+          "model": {
+            "kind": "fdp_comparison",
+            "title": "Compare sixty-four hundredths and five eighths",
+            "left": "0.64",
+            "right": "5/8",
+            "given": "0.64 and 5/8",
+            "route": "decimal",
+            "steps": [
+              "Choose decimals because five eighths has an exact terminating decimal.",
+              "5/8 = 5 ÷ 8 = 0.625.",
+              "Align places: 0.64 = 0.640.",
+              "Both have 6 tenths; at the hundredths place, 4 > 2. Therefore 0.640 > 0.625.",
+              "Return to the original order: 0.64 > 5/8."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "alternative": "A percentage route also works: 64% > 62.5%.",
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "Add a trailing zero to align the places. Its value is unchanged, and each column now compares the same place value."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T11"
+      },
+      {
+        "id": "T11",
+        "stage": "teaching",
+        "purpose": "Find the first differing place",
+        "source_ref": {
+          "page": 8
+        },
+        "scene": {
+          "display_title": "Find the first differing place",
+          "initial_state": "Find the first differing place",
+          "model": {
+            "kind": "fdp_comparison",
+            "title": "Compare sixty-four hundredths and five eighths",
+            "left": "0.64",
+            "right": "5/8",
+            "given": "0.64 and 5/8",
+            "route": "decimal",
+            "steps": [
+              "Choose decimals because five eighths has an exact terminating decimal.",
+              "5/8 = 5 ÷ 8 = 0.625.",
+              "Align places: 0.64 = 0.640.",
+              "Both have 6 tenths; at the hundredths place, 4 > 2. Therefore 0.640 > 0.625.",
+              "Return to the original order: 0.64 > 5/8."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "alternative": "A percentage route also works: 64% > 62.5%.",
+            "phase": 4
+          }
+        },
+        "narration": {
+          "script": "The tenths match. Compare the hundredths next; that first difference decides the order without counting how many digits are printed."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T12"
+      },
+      {
+        "id": "T12",
+        "stage": "teaching",
+        "purpose": "Keep the original left and right",
+        "source_ref": {
+          "page": 8
+        },
+        "scene": {
+          "display_title": "Keep the original left and right",
+          "initial_state": "Keep the original left and right",
+          "model": {
+            "kind": "fdp_comparison",
+            "title": "Compare sixty-four hundredths and five eighths",
+            "left": "0.64",
+            "right": "5/8",
+            "given": "0.64 and 5/8",
+            "route": "decimal",
+            "steps": [
+              "Choose decimals because five eighths has an exact terminating decimal.",
+              "5/8 = 5 ÷ 8 = 0.625.",
+              "Align places: 0.64 = 0.640.",
+              "Both have 6 tenths; at the hundredths place, 4 > 2. Therefore 0.640 > 0.625.",
+              "Return to the original order: 0.64 > 5/8."
+            ],
+            "math_text": true,
+            "compact_captions": true,
+            "solved": true,
+            "alternative": "A percentage route also works: 64% > 62.5%.",
+            "phase": 5
+          }
+        },
+        "narration": {
+          "script": "Write the symbol between the original quantities. An exact percentage route would give the same comparison."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T13"
+      },
+      {
+        "id": "T13",
+        "stage": "teaching",
+        "purpose": "Check the method",
+        "source_ref": {
+          "page": 8
+        },
+        "scene": {
+          "display_title": "Check the method",
+          "initial_state": "Check the method",
+          "model": {
+            "kind": "fdp_comparison",
+            "title": "Choose a valid comparison method",
+            "left": "0.64",
+            "right": "5/8",
+            "given": "0.64 and 5/8",
+            "route": "decimal",
+            "steps": [
+              "Choose decimals: both values have exact terminating decimal forms.",
+              "0.64 = 0.64; 5/8 = 0.625.",
+              "Align decimal places: 0.64 = 0.640 and 0.625 = 0.625.",
+              "Compare corresponding place values: 0.640 > 0.625.",
+              "0.64 > 5/8; keep the original left-to-right order."
+            ],
+            "math_text": true,
+            "compact_captions": true
+          }
+        },
+        "narration": {
+          "script": "Choose the method whose conversion and place-value comparison are both valid."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "FDP-13-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "FDP-13-G01",
+        "support_level": "high",
+        "pre_question_script": "Enter both the equivalent hundredths numerator and percentage.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "FDP-13-G02",
+        "support_level": "high",
+        "pre_question_script": "Enter the left percentage and compare it with the given right percentage.",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "faded",
+        "question_ref": "FDP-13-G03",
+        "support_level": "reduced",
+        "pre_question_script": "Use the comparison in the original order.",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "independent_transfer",
+        "question_ref": "FDP-13-G04",
+        "support_level": "none",
+        "pre_question_script": "Choose a statement with both valid conversion and comparison.",
+        "correct_next": "P01"
+      }
+    },
+    "practice": {
+      "intro_script": "Compare each pair exactly and keep its original order. Any valid method is accepted. Optional common-form working must preserve both original values; do not treat a rounded fraction as exact.",
+      "question_order": [
+        "FDP-13-P01",
+        "FDP-13-P02",
+        "FDP-13-P03",
+        "FDP-13-P04",
+        "FDP-13-P05",
+        "FDP-13-P06",
+        "FDP-13-P07",
+        "FDP-13-P08",
+        "FDP-13-P09",
+        "FDP-13-X01",
+        "FDP-13-X02",
+        "FDP-13-X03",
+        "FDP-13-X04",
+        "FDP-13-X05"
+      ],
+      "question_count": 14,
+      "feedback_policy": "Distinguish exact value, recorded conversion components, symbol direction, missed equality and approximation. Incorrect responses are evidence to check, not confirmed diagnoses."
+    },
+    "exit": {
+      "intro_script": "Complete four comparisons and the method check without hints. Any exact route is valid. Each response locks, and any working you record must preserve both values. Feedback follows after all five are saved.",
+      "primary_question_refs": [
+        "FDP-13-E01",
+        "FDP-13-E02",
+        "FDP-13-E03",
+        "FDP-13-E04",
+        "FDP-13-E05"
+      ],
+      "confirmation_question_refs": [],
+      "submission_policy": "No correctness, converted values, working or repair before all five final responses lock.",
+      "mastery_policy": {
+        "profile": "all_primary_unsupported_deferred",
+        "require_all": true,
+        "source_page": 19,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "All final comparisons and the method check are correct. The original order and exact values are preserved, including any recorded working.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Keep the comparison exact",
+      "ryan_script": "One or more final responses need another pass. Review exact common-form values, any recorded working and the symbol in the original order.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "FDP-13-C01",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Why should two quantities usually be written in the same form before they are compared?",
+      "target": "Compare two exact values in a suitable common form while preserving their original order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "A common form makes both values use the same scale or the same-sized parts.",
+          "The quantity with more printed digits is always larger.",
+          "A fraction is always smaller than a percentage.",
+          "Converting changes each quantity into a different value."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "A common form makes both values use the same scale or the same-sized parts."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Yes. A common scale makes the comparison meaningful without changing either quantity.",
+        "correct_after_support": "Yes. A common scale makes the comparison meaningful without changing either quantity.",
+        "on_correct_math": "A common form compares the same scale or equal-sized parts. → Conversion preserves each original value. → The comparison then uses the quantities, not their printed appearance.",
+        "on_incorrect_attempt_1": "Think about the units or parts being compared, rather than the number of digits.",
+        "on_incorrect_attempt_2": "Think about the units or parts being compared, rather than the number of digits.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "A common form compares the same scale or equal-sized parts. → Conversion preserves each original value. → The comparison then uses the quantities, not their printed appearance."
+      },
+      "mathematical_support": {
+        "hint_1": "Think about the units or parts being compared, rather than the number of digits.",
+        "hint_2": "Preserve both exact values in one common form. Compare corresponding place values or equal-sized parts, then keep the original order.",
+        "worked_solution": "A common form compares the same scale or equal-sized parts. → Conversion preserves each original value. → The comparison then uses the quantities, not their printed appearance."
+      },
+      "working": [
+        "A common form compares the same scale or equal-sized parts.",
+        "Conversion preserves each original value.",
+        "The comparison then uses the quantities, not their printed appearance."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_comparison",
+          "title": "Explain a common comparison scale",
+          "left": "0.72",
+          "right": "3/4",
+          "given": "Choose the explanation.",
+          "route": "decimal",
+          "steps": [
+            "A common form compares the same scale or equal-sized parts.",
+            "Conversion preserves each original value.",
+            "The comparison then uses the quantities, not their printed appearance."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "explanation_question": true
+        }
+      },
+      "response_feedback": {
+        "The quantity with more printed digits is always larger.": "The number of printed digits does not determine a value. Each digit has a place value.",
+        "A fraction is always smaller than a percentage.": "The representation does not decide which value is larger; fractions and percentages can represent any of these positive sizes.",
+        "Converting changes each quantity into a different value.": "A valid conversion changes notation, not the quantity being compared."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-13-C02",
+      "source_ref": {
+        "page": 8
+      },
+      "stage": "practice",
+      "prompt": "Which method compares 0.64 and 5/8 correctly?",
+      "target": "Compare two exact values in a suitable common form while preserving their original order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Convert 5/8 to 0.625, write 0.64 as 0.640, then compare the decimal places.",
+          "Compare the visible numbers 64 and 5, so 0.64 > 5/8.",
+          "Convert 5/8 to 0.85, then compare.",
+          "Add the two quantities before deciding which is larger."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "Convert 5/8 to 0.625, write 0.64 as 0.640, then compare the decimal places."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The conversion is exact and the decimal places are aligned before comparison.",
+        "correct_after_support": "Correct. The conversion is exact and the decimal places are aligned before comparison.",
+        "on_correct_math": "Choose decimals: both values have exact terminating decimal forms. → 0.64 = 0.64; 5/8 = 0.625. → Align decimal places: 0.64 = 0.640 and 0.625 = 0.625. → Compare corresponding place values: 0.640 > 0.625. → 0.64 > 5/8; keep the original left-to-right order.",
+        "on_incorrect_attempt_1": "Check the fraction conversion and compare matching decimal places.",
+        "on_incorrect_attempt_2": "Check the fraction conversion and compare matching decimal places.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose decimals: both values have exact terminating decimal forms. → 0.64 = 0.64; 5/8 = 0.625. → Align decimal places: 0.64 = 0.640 and 0.625 = 0.625. → Compare corresponding place values: 0.640 > 0.625. → 0.64 > 5/8; keep the original left-to-right order."
+      },
+      "mathematical_support": {
+        "hint_1": "Check the fraction conversion and compare matching decimal places.",
+        "hint_2": "Preserve both exact values in one common form. Compare corresponding place values or equal-sized parts, then keep the original order.",
+        "worked_solution": "Choose decimals: both values have exact terminating decimal forms. → 0.64 = 0.64; 5/8 = 0.625. → Align decimal places: 0.64 = 0.640 and 0.625 = 0.625. → Compare corresponding place values: 0.640 > 0.625. → 0.64 > 5/8; keep the original left-to-right order."
+      },
+      "working": [
+        "Choose decimals: both values have exact terminating decimal forms.",
+        "0.64 = 0.64; 5/8 = 0.625.",
+        "Align decimal places: 0.64 = 0.640 and 0.625 = 0.625.",
+        "Compare corresponding place values: 0.640 > 0.625.",
+        "0.64 > 5/8; keep the original left-to-right order."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_comparison",
+          "title": "Choose a valid comparison method",
+          "left": "0.64",
+          "right": "5/8",
+          "given": "0.64 and 5/8",
+          "route": "decimal",
+          "steps": [
+            "Choose decimals: both values have exact terminating decimal forms.",
+            "0.64 = 0.64; 5/8 = 0.625.",
+            "Align decimal places: 0.64 = 0.640 and 0.625 = 0.625.",
+            "Compare corresponding place values: 0.640 > 0.625.",
+            "0.64 > 5/8; keep the original left-to-right order."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "Compare the visible numbers 64 and 5, so 0.64 > 5/8.": "That conclusion is not justified by comparing the printed integers; they belong to different representations.",
+        "Convert 5/8 to 0.85, then compare.": "That is not the value of five eighths. Divide the numerator by the denominator exactly.",
+        "Add the two quantities before deciding which is larger.": "The sum does not tell you which of the original two quantities is larger."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-13-G01",
+      "source_ref": {
+        "page": 9
+      },
+      "stage": "guided",
+      "prompt": "Use percentages as the common form. Complete both blanks: 7/10 = ___/100 = ___%.",
+      "target": "Compare two exact values in a suitable common form while preserving their original order",
+      "response": {
+        "type": "equivalent_percent",
+        "original_fraction": {
+          "n": 7,
+          "d": 10
+        },
+        "require_hundredths_working": true
+      },
+      "answer": {
+        "value": {
+          "n": 70,
+          "percent": 70
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Both entries keep seven tenths equivalent to the same number of hundredths.",
+        "correct_after_support": "Correct. Both entries keep seven tenths equivalent to the same number of hundredths.",
+        "on_correct_math": "Multiply both fraction parts by 10: 7/10 = 70/100. → 70 hundredths = 70%.",
+        "on_incorrect_attempt_1": "Scale both fraction parts to denominator one hundred, then record the percentage number.",
+        "on_incorrect_attempt_2": "Scale both fraction parts to denominator one hundred, then record the percentage number.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Multiply both fraction parts by 10: 7/10 = 70/100. → 70 hundredths = 70%."
+      },
+      "mathematical_support": {
+        "hint_1": "Scale both fraction parts to denominator one hundred, then record the percentage number.",
+        "hint_2": "Preserve both exact values in one common form. Compare corresponding place values or equal-sized parts, then keep the original order.",
+        "worked_solution": "Multiply both fraction parts by 10: 7/10 = 70/100. → 70 hundredths = 70%."
+      },
+      "working": [
+        "Multiply both fraction parts by 10: 7/10 = 70/100.",
+        "70 hundredths = 70%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_comparison",
+          "title": "Convert seven tenths to hundredths and percent",
+          "left": "7/10",
+          "right": "68%",
+          "given": "7/10 and 68%",
+          "route": "decimal",
+          "steps": [
+            "Multiply both fraction parts by 10: 7/10 = 70/100.",
+            "70 hundredths = 70%."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "guided_conversion"
+        }
+      },
+      "response_feedback": {
+        "check_n": "Your percentage is correct. Check the numerator of the equivalent fraction with denominator one hundred.",
+        "check_percent": "Your hundredths numerator is correct. The percent number must count those same hundredths.",
+        "check_multiple": "Scale both fraction parts equally, then use the resulting numerator as the percentage number."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-13-G02",
+      "source_ref": {
+        "page": 9
+      },
+      "stage": "guided",
+      "prompt": "Compare the percentage values. Enter the left percentage and choose the symbol before 68%.",
+      "target": "Compare two exact values in a suitable common form while preserving their original order",
+      "response": {
+        "type": "fdp_comparison",
+        "original_pair": {
+          "left": "7/10",
+          "right": "68%"
+        },
+        "require_percent": true,
+        "allow_working": false
+      },
+      "answer": {
+        "value": {
+          "percent": "70",
+          "symbol": ">"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The percentage entry and comparison agree on the same scale.",
+        "correct_after_support": "Correct. The percentage entry and comparison agree on the same scale.",
+        "on_correct_math": "The left quantity is 70%. → Compare the percentage numbers: 70% > 68%.",
+        "on_incorrect_attempt_1": "Use the exact percentage for seven tenths, then compare numbers on the same percentage scale.",
+        "on_incorrect_attempt_2": "Use the exact percentage for seven tenths, then compare numbers on the same percentage scale.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The left quantity is 70%. → Compare the percentage numbers: 70% > 68%."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the exact percentage for seven tenths, then compare numbers on the same percentage scale.",
+        "hint_2": "Preserve both exact values in one common form. Compare corresponding place values or equal-sized parts, then keep the original order.",
+        "worked_solution": "The left quantity is 70%. → Compare the percentage numbers: 70% > 68%."
+      },
+      "working": [
+        "The left quantity is 70%.",
+        "Compare the percentage numbers: 70% > 68%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_comparison",
+          "title": "Compare the two percentage values",
+          "left": "7/10",
+          "right": "68%",
+          "given": "7/10 and 68%",
+          "route": "decimal",
+          "steps": [
+            "The left quantity is 70%.",
+            "Compare the percentage numbers: 70% > 68%."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "percent_comparison"
+        }
+      },
+      "response_feedback": {
+        "check_direction": "Check the exact values in a common form and keep their original order. The wide side of the symbol faces the larger value.",
+        "not_equal": "These exact values are different. Equal is not justified by similar digits or a rounded approximation.",
+        "missed_equality": "Both original quantities have exactly the same value. Different notation does not make either larger.",
+        "check_symbol": "Your recorded conversion values are correct. Recheck the comparison symbol in the original left-to-right order.",
+        "check_percent": "Your comparison symbol is correct, but the recorded left percentage is not equivalent to the original fraction.",
+        "check_both": "Check the left percentage conversion first, then choose the symbol for the resulting percentage comparison.",
+        "check_left_work": "The recorded right value is correct. Recheck the left value in the chosen common form; do not round an exact fraction.",
+        "check_right_work": "The recorded left value is correct. Recheck the right value in the chosen common form; keep the original order.",
+        "check_work": "The recorded common-form working does not preserve both original values exactly. Check the form, conversions and left-to-right order."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-13-G03",
+      "source_ref": {
+        "page": 9
+      },
+      "stage": "faded",
+      "prompt": "Keep the original order and choose the symbol: 7/10 ___ 68%.",
+      "target": "Compare two exact values in a suitable common form while preserving their original order",
+      "response": {
+        "type": "fdp_comparison",
+        "original_pair": {
+          "left": "7/10",
+          "right": "68%"
+        },
+        "require_percent": false,
+        "allow_working": false
+      },
+      "answer": {
+        "value": {
+          "symbol": ">"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The symbol preserves the comparison in the original order.",
+        "correct_after_support": "Correct. The symbol preserves the comparison in the original order.",
+        "on_correct_math": "The common-form comparison is 70% > 68%. → Keep the order of the original quantities: 7/10 > 68%.",
+        "on_incorrect_attempt_1": "Return the larger value to its original position; do not reverse the symbol when changing the notation back.",
+        "on_incorrect_attempt_2": "Return the larger value to its original position; do not reverse the symbol when changing the notation back.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "The common-form comparison is 70% > 68%. → Keep the order of the original quantities: 7/10 > 68%."
+      },
+      "mathematical_support": {
+        "hint_1": "Return the larger value to its original position; do not reverse the symbol when changing the notation back.",
+        "hint_2": "Preserve both exact values in one common form. Compare corresponding place values or equal-sized parts, then keep the original order.",
+        "worked_solution": "The common-form comparison is 70% > 68%. → Keep the order of the original quantities: 7/10 > 68%."
+      },
+      "working": [
+        "The common-form comparison is 70% > 68%.",
+        "Keep the order of the original quantities: 7/10 > 68%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_comparison",
+          "title": "Return to the original quantities",
+          "left": "7/10",
+          "right": "68%",
+          "given": "7/10 and 68%",
+          "route": "decimal",
+          "steps": [
+            "The common-form comparison is 70% > 68%.",
+            "Keep the order of the original quantities: 7/10 > 68%."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "original"
+        }
+      },
+      "response_feedback": {
+        "check_direction": "Check the exact values in a common form and keep their original order. The wide side of the symbol faces the larger value.",
+        "not_equal": "These exact values are different. Equal is not justified by similar digits or a rounded approximation.",
+        "missed_equality": "Both original quantities have exactly the same value. Different notation does not make either larger.",
+        "check_symbol": "Your recorded conversion values are correct. Recheck the comparison symbol in the original left-to-right order.",
+        "check_percent": "Your comparison symbol is correct, but the recorded left percentage is not equivalent to the original fraction.",
+        "check_both": "Check the left percentage conversion first, then choose the symbol for the resulting percentage comparison.",
+        "check_left_work": "The recorded right value is correct. Recheck the left value in the chosen common form; do not round an exact fraction.",
+        "check_right_work": "The recorded left value is correct. Recheck the right value in the chosen common form; keep the original order.",
+        "check_work": "The recorded common-form working does not preserve both original values exactly. Check the form, conversions and left-to-right order."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-13-G04",
+      "source_ref": {
+        "page": 9
+      },
+      "stage": "independent_transfer",
+      "prompt": "Which statement correctly compares seven tenths and sixty-eight percent?",
+      "target": "Compare two exact values in a suitable common form while preserving their original order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "7/10 = 70%, so 7/10 > 68%.",
+          "The printed number 68 is greater than 7, so 68% > 7/10.",
+          "7/10 = 7%, so 7/10 < 68%.",
+          "A fraction and a percentage cannot be compared."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "7/10 = 70%, so 7/10 > 68%."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The statement combines an exact conversion with the correct comparison direction.",
+        "correct_after_support": "Correct. The statement combines an exact conversion with the correct comparison direction.",
+        "on_correct_math": "7/10 = 70%. → 70% > 68%, so 7/10 > 68%.",
+        "on_incorrect_attempt_1": "Check the conversion before considering the symbol.",
+        "on_incorrect_attempt_2": "Check the conversion before considering the symbol.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "7/10 = 70%. → 70% > 68%, so 7/10 > 68%."
+      },
+      "mathematical_support": {
+        "hint_1": "Check the conversion before considering the symbol.",
+        "hint_2": "Preserve both exact values in one common form. Compare corresponding place values or equal-sized parts, then keep the original order.",
+        "worked_solution": "7/10 = 70%. → 70% > 68%, so 7/10 > 68%."
+      },
+      "working": [
+        "7/10 = 70%.",
+        "70% > 68%, so 7/10 > 68%."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_comparison",
+          "title": "Explain the common-form comparison",
+          "left": "7/10",
+          "right": "68%",
+          "given": "7/10 and 68%",
+          "route": "decimal",
+          "steps": [
+            "7/10 = 70%.",
+            "70% > 68%, so 7/10 > 68%."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "rule"
+        }
+      },
+      "response_feedback": {
+        "The printed number 68 is greater than 7, so 68% > 7/10.": "Those printed numbers count different-sized parts. Convert to a common form before comparing.",
+        "7/10 = 7%, so 7/10 < 68%.": "Seven tenths is not seven hundredths. Recheck the percentage conversion.",
+        "A fraction and a percentage cannot be compared.": "Different forms can be compared through a suitable exact common representation."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-13-P01",
+      "source_ref": {
+        "page": 10
+      },
+      "stage": "practice",
+      "prompt": "Choose the comparison symbol: 0.45 ___ 42%.",
+      "target": "Compare two exact values in a suitable common form while preserving their original order",
+      "response": {
+        "type": "fdp_comparison",
+        "original_pair": {
+          "left": "0.45",
+          "right": "42%"
+        },
+        "require_percent": false,
+        "allow_working": true
+      },
+      "answer": {
+        "value": {
+          "symbol": ">"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decimal represents a greater share than the percentage.",
+        "correct_after_support": "Correct. The decimal represents a greater share than the percentage.",
+        "on_correct_math": "Choose decimals: both values have exact terminating decimal forms. → 0.45 = 0.45; 42% = 0.42. → Align decimal places: 0.45 = 0.45 and 0.42 = 0.42. → Compare corresponding place values: 0.45 > 0.42. → 0.45 > 42%; keep the original left-to-right order.",
+        "on_incorrect_attempt_1": "Use a common scale for the decimal and percentage before comparing their digits.",
+        "on_incorrect_attempt_2": "Use a common scale for the decimal and percentage before comparing their digits.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose decimals: both values have exact terminating decimal forms. → 0.45 = 0.45; 42% = 0.42. → Align decimal places: 0.45 = 0.45 and 0.42 = 0.42. → Compare corresponding place values: 0.45 > 0.42. → 0.45 > 42%; keep the original left-to-right order."
+      },
+      "mathematical_support": {
+        "hint_1": "Use a common scale for the decimal and percentage before comparing their digits.",
+        "hint_2": "Preserve both exact values in one common form. Compare corresponding place values or equal-sized parts, then keep the original order.",
+        "worked_solution": "Choose decimals: both values have exact terminating decimal forms. → 0.45 = 0.45; 42% = 0.42. → Align decimal places: 0.45 = 0.45 and 0.42 = 0.42. → Compare corresponding place values: 0.45 > 0.42. → 0.45 > 42%; keep the original left-to-right order."
+      },
+      "working": [
+        "Choose decimals: both values have exact terminating decimal forms.",
+        "0.45 = 0.45; 42% = 0.42.",
+        "Align decimal places: 0.45 = 0.45 and 0.42 = 0.42.",
+        "Compare corresponding place values: 0.45 > 0.42.",
+        "0.45 > 42%; keep the original left-to-right order."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_comparison",
+          "title": "Compare two exact values",
+          "left": "0.45",
+          "right": "42%",
+          "given": "0.45 and 42%",
+          "route": "decimal",
+          "steps": [
+            "Choose decimals: both values have exact terminating decimal forms.",
+            "0.45 = 0.45; 42% = 0.42.",
+            "Align decimal places: 0.45 = 0.45 and 0.42 = 0.42.",
+            "Compare corresponding place values: 0.45 > 0.42.",
+            "0.45 > 42%; keep the original left-to-right order."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_direction": "The two printed numbers use different scales. Convert exactly, then check which original quantity is larger.",
+        "not_equal": "These exact values are different. Equal is not justified by similar digits or a rounded approximation.",
+        "missed_equality": "Both original quantities have exactly the same value. Different notation does not make either larger.",
+        "check_symbol": "Your recorded conversion values are correct. Recheck the comparison symbol in the original left-to-right order.",
+        "check_percent": "Your comparison symbol is correct, but the recorded left percentage is not equivalent to the original fraction.",
+        "check_both": "Check the left percentage conversion first, then choose the symbol for the resulting percentage comparison.",
+        "check_left_work": "The recorded right value is correct. Recheck the left value in the chosen common form; do not round an exact fraction.",
+        "check_right_work": "The recorded left value is correct. Recheck the right value in the chosen common form; keep the original order.",
+        "check_work": "The recorded common-form working does not preserve both original values exactly. Check the form, conversions and left-to-right order."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-13-P02",
+      "source_ref": {
+        "page": 10
+      },
+      "stage": "practice",
+      "prompt": "Choose the comparison symbol: 3/5 ___ 0.62.",
+      "target": "Compare two exact values in a suitable common form while preserving their original order",
+      "response": {
+        "type": "fdp_comparison",
+        "original_pair": {
+          "left": "3/5",
+          "right": "0.62"
+        },
+        "require_percent": false,
+        "allow_working": true
+      },
+      "answer": {
+        "value": {
+          "symbol": "<"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The fraction is smaller after both values are placed on the same scale.",
+        "correct_after_support": "Correct. The fraction is smaller after both values are placed on the same scale.",
+        "on_correct_math": "Choose decimals: both values have exact terminating decimal forms. → 3/5 = 0.6; 0.62 = 0.62. → Align decimal places: 0.6 = 0.60 and 0.62 = 0.62. → Compare corresponding place values: 0.60 < 0.62. → 3/5 < 0.62; keep the original left-to-right order.",
+        "on_incorrect_attempt_1": "Convert the fraction exactly and compare hundredths in the two decimals.",
+        "on_incorrect_attempt_2": "Convert the fraction exactly and compare hundredths in the two decimals.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose decimals: both values have exact terminating decimal forms. → 3/5 = 0.6; 0.62 = 0.62. → Align decimal places: 0.6 = 0.60 and 0.62 = 0.62. → Compare corresponding place values: 0.60 < 0.62. → 3/5 < 0.62; keep the original left-to-right order."
+      },
+      "mathematical_support": {
+        "hint_1": "Convert the fraction exactly and compare hundredths in the two decimals.",
+        "hint_2": "Preserve both exact values in one common form. Compare corresponding place values or equal-sized parts, then keep the original order.",
+        "worked_solution": "Choose decimals: both values have exact terminating decimal forms. → 3/5 = 0.6; 0.62 = 0.62. → Align decimal places: 0.6 = 0.60 and 0.62 = 0.62. → Compare corresponding place values: 0.60 < 0.62. → 3/5 < 0.62; keep the original left-to-right order."
+      },
+      "working": [
+        "Choose decimals: both values have exact terminating decimal forms.",
+        "3/5 = 0.6; 0.62 = 0.62.",
+        "Align decimal places: 0.6 = 0.60 and 0.62 = 0.62.",
+        "Compare corresponding place values: 0.60 < 0.62.",
+        "3/5 < 0.62; keep the original left-to-right order."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_comparison",
+          "title": "Compare two exact values",
+          "left": "3/5",
+          "right": "0.62",
+          "given": "3/5 and 0.62",
+          "route": "decimal",
+          "steps": [
+            "Choose decimals: both values have exact terminating decimal forms.",
+            "3/5 = 0.6; 0.62 = 0.62.",
+            "Align decimal places: 0.6 = 0.60 and 0.62 = 0.62.",
+            "Compare corresponding place values: 0.60 < 0.62.",
+            "3/5 < 0.62; keep the original left-to-right order."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_direction": "Check the exact values in a common form and keep their original order. The wide side of the symbol faces the larger value.",
+        "not_equal": "These exact values are different. Equal is not justified by similar digits or a rounded approximation.",
+        "missed_equality": "Both original quantities have exactly the same value. Different notation does not make either larger.",
+        "check_symbol": "Your recorded conversion values are correct. Recheck the comparison symbol in the original left-to-right order.",
+        "check_percent": "Your comparison symbol is correct, but the recorded left percentage is not equivalent to the original fraction.",
+        "check_both": "Check the left percentage conversion first, then choose the symbol for the resulting percentage comparison.",
+        "check_left_work": "The recorded right value is correct. Recheck the left value in the chosen common form; do not round an exact fraction.",
+        "check_right_work": "The recorded left value is correct. Recheck the right value in the chosen common form; keep the original order.",
+        "check_work": "The recorded common-form working does not preserve both original values exactly. Check the form, conversions and left-to-right order."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-13-P03",
+      "source_ref": {
+        "page": 10
+      },
+      "stage": "practice",
+      "prompt": "Choose the comparison symbol: 7/8 ___ 87.5%.",
+      "target": "Compare two exact values in a suitable common form while preserving their original order",
+      "response": {
+        "type": "fdp_comparison",
+        "original_pair": {
+          "left": "7/8",
+          "right": "87.5%"
+        },
+        "require_percent": false,
+        "allow_working": true
+      },
+      "answer": {
+        "value": {
+          "symbol": "="
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. These different representations describe exactly the same amount.",
+        "correct_after_support": "Correct. These different representations describe exactly the same amount.",
+        "on_correct_math": "Choose decimals: both values have exact terminating decimal forms. → 7/8 = 0.875; 87.5% = 0.875. → Align decimal places: 0.875 = 0.875 and 0.875 = 0.875. → Compare corresponding place values: 0.875 = 0.875. → 7/8 = 87.5%; keep the original left-to-right order.",
+        "on_incorrect_attempt_1": "Check whether the exact conversions coincide before choosing a greater-than or less-than symbol.",
+        "on_incorrect_attempt_2": "Check whether the exact conversions coincide before choosing a greater-than or less-than symbol.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose decimals: both values have exact terminating decimal forms. → 7/8 = 0.875; 87.5% = 0.875. → Align decimal places: 0.875 = 0.875 and 0.875 = 0.875. → Compare corresponding place values: 0.875 = 0.875. → 7/8 = 87.5%; keep the original left-to-right order."
+      },
+      "mathematical_support": {
+        "hint_1": "Check whether the exact conversions coincide before choosing a greater-than or less-than symbol.",
+        "hint_2": "Preserve both exact values in one common form. Compare corresponding place values or equal-sized parts, then keep the original order.",
+        "worked_solution": "Choose decimals: both values have exact terminating decimal forms. → 7/8 = 0.875; 87.5% = 0.875. → Align decimal places: 0.875 = 0.875 and 0.875 = 0.875. → Compare corresponding place values: 0.875 = 0.875. → 7/8 = 87.5%; keep the original left-to-right order."
+      },
+      "working": [
+        "Choose decimals: both values have exact terminating decimal forms.",
+        "7/8 = 0.875; 87.5% = 0.875.",
+        "Align decimal places: 0.875 = 0.875 and 0.875 = 0.875.",
+        "Compare corresponding place values: 0.875 = 0.875.",
+        "7/8 = 87.5%; keep the original left-to-right order."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_comparison",
+          "title": "Compare two exact values",
+          "left": "7/8",
+          "right": "87.5%",
+          "given": "7/8 and 87.5%",
+          "route": "decimal",
+          "steps": [
+            "Choose decimals: both values have exact terminating decimal forms.",
+            "7/8 = 0.875; 87.5% = 0.875.",
+            "Align decimal places: 0.875 = 0.875 and 0.875 = 0.875.",
+            "Compare corresponding place values: 0.875 = 0.875.",
+            "7/8 = 87.5%; keep the original left-to-right order."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_direction": "Check the exact values in a common form and keep their original order. The wide side of the symbol faces the larger value.",
+        "not_equal": "These exact values are different. Equal is not justified by similar digits or a rounded approximation.",
+        "missed_equality": "Both original quantities have exactly the same value. Different notation does not make either larger.",
+        "check_symbol": "Your recorded conversion values are correct. Recheck the comparison symbol in the original left-to-right order.",
+        "check_percent": "Your comparison symbol is correct, but the recorded left percentage is not equivalent to the original fraction.",
+        "check_both": "Check the left percentage conversion first, then choose the symbol for the resulting percentage comparison.",
+        "check_left_work": "The recorded right value is correct. Recheck the left value in the chosen common form; do not round an exact fraction.",
+        "check_right_work": "The recorded left value is correct. Recheck the right value in the chosen common form; keep the original order.",
+        "check_work": "The recorded common-form working does not preserve both original values exactly. Check the form, conversions and left-to-right order."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-13-P04",
+      "source_ref": {
+        "page": 10
+      },
+      "stage": "practice",
+      "prompt": "Choose the comparison symbol: 125% ___ 1.2.",
+      "target": "Compare two exact values in a suitable common form while preserving their original order",
+      "response": {
+        "type": "fdp_comparison",
+        "original_pair": {
+          "left": "125%",
+          "right": "1.2"
+        },
+        "require_percent": false,
+        "allow_working": true
+      },
+      "answer": {
+        "value": {
+          "symbol": ">"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The percentage is larger while both values retain their complete whole.",
+        "correct_after_support": "Correct. The percentage is larger while both values retain their complete whole.",
+        "on_correct_math": "Choose decimals: both values have exact terminating decimal forms. → 125% = 1.25; 1.2 = 1.2. → Align decimal places: 1.25 = 1.25 and 1.2 = 1.20. → Compare corresponding place values: 1.25 > 1.20. → 125% > 1.2; keep the original left-to-right order.",
+        "on_incorrect_attempt_1": "Both values exceed one whole. Keep the whole-number parts and compare the remaining decimal places.",
+        "on_incorrect_attempt_2": "Both values exceed one whole. Keep the whole-number parts and compare the remaining decimal places.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose decimals: both values have exact terminating decimal forms. → 125% = 1.25; 1.2 = 1.2. → Align decimal places: 1.25 = 1.25 and 1.2 = 1.20. → Compare corresponding place values: 1.25 > 1.20. → 125% > 1.2; keep the original left-to-right order."
+      },
+      "mathematical_support": {
+        "hint_1": "Both values exceed one whole. Keep the whole-number parts and compare the remaining decimal places.",
+        "hint_2": "Preserve both exact values in one common form. Compare corresponding place values or equal-sized parts, then keep the original order.",
+        "worked_solution": "Choose decimals: both values have exact terminating decimal forms. → 125% = 1.25; 1.2 = 1.2. → Align decimal places: 1.25 = 1.25 and 1.2 = 1.20. → Compare corresponding place values: 1.25 > 1.20. → 125% > 1.2; keep the original left-to-right order."
+      },
+      "working": [
+        "Choose decimals: both values have exact terminating decimal forms.",
+        "125% = 1.25; 1.2 = 1.2.",
+        "Align decimal places: 1.25 = 1.25 and 1.2 = 1.20.",
+        "Compare corresponding place values: 1.25 > 1.20.",
+        "125% > 1.2; keep the original left-to-right order."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_comparison",
+          "title": "Compare two exact values",
+          "left": "125%",
+          "right": "1.2",
+          "given": "125% and 1.2",
+          "route": "decimal",
+          "steps": [
+            "Choose decimals: both values have exact terminating decimal forms.",
+            "125% = 1.25; 1.2 = 1.2.",
+            "Align decimal places: 1.25 = 1.25 and 1.2 = 1.20.",
+            "Compare corresponding place values: 1.25 > 1.20.",
+            "125% > 1.2; keep the original left-to-right order."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_direction": "Keep a percentage above one hundred above one whole, then compare its exact value with the decimal.",
+        "not_equal": "These exact values are different. Equal is not justified by similar digits or a rounded approximation.",
+        "missed_equality": "Both original quantities have exactly the same value. Different notation does not make either larger.",
+        "check_symbol": "Your recorded conversion values are correct. Recheck the comparison symbol in the original left-to-right order.",
+        "check_percent": "Your comparison symbol is correct, but the recorded left percentage is not equivalent to the original fraction.",
+        "check_both": "Check the left percentage conversion first, then choose the symbol for the resulting percentage comparison.",
+        "check_left_work": "The recorded right value is correct. Recheck the left value in the chosen common form; do not round an exact fraction.",
+        "check_right_work": "The recorded left value is correct. Recheck the right value in the chosen common form; keep the original order.",
+        "check_work": "The recorded common-form working does not preserve both original values exactly. Check the form, conversions and left-to-right order."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-13-P05",
+      "source_ref": {
+        "page": 10
+      },
+      "stage": "practice",
+      "prompt": "Choose the comparison symbol: 0.375 ___ 2/5.",
+      "target": "Compare two exact values in a suitable common form while preserving their original order",
+      "response": {
+        "type": "fdp_comparison",
+        "original_pair": {
+          "left": "0.375",
+          "right": "2/5"
+        },
+        "require_percent": false,
+        "allow_working": true
+      },
+      "answer": {
+        "value": {
+          "symbol": "<"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Place value, not the number of printed digits, determines the smaller quantity.",
+        "correct_after_support": "Correct. Place value, not the number of printed digits, determines the smaller quantity.",
+        "on_correct_math": "Choose decimals: both values have exact terminating decimal forms. → 0.375 = 0.375; 2/5 = 0.4. → Align decimal places: 0.375 = 0.375 and 0.4 = 0.400. → Compare corresponding place values: 0.375 < 0.400. → 0.375 < 2/5; keep the original left-to-right order.",
+        "on_incorrect_attempt_1": "Align decimal places; a longer decimal does not automatically represent a larger value.",
+        "on_incorrect_attempt_2": "Align decimal places; a longer decimal does not automatically represent a larger value.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose decimals: both values have exact terminating decimal forms. → 0.375 = 0.375; 2/5 = 0.4. → Align decimal places: 0.375 = 0.375 and 0.4 = 0.400. → Compare corresponding place values: 0.375 < 0.400. → 0.375 < 2/5; keep the original left-to-right order."
+      },
+      "mathematical_support": {
+        "hint_1": "Align decimal places; a longer decimal does not automatically represent a larger value.",
+        "hint_2": "Preserve both exact values in one common form. Compare corresponding place values or equal-sized parts, then keep the original order.",
+        "worked_solution": "Choose decimals: both values have exact terminating decimal forms. → 0.375 = 0.375; 2/5 = 0.4. → Align decimal places: 0.375 = 0.375 and 0.4 = 0.400. → Compare corresponding place values: 0.375 < 0.400. → 0.375 < 2/5; keep the original left-to-right order."
+      },
+      "working": [
+        "Choose decimals: both values have exact terminating decimal forms.",
+        "0.375 = 0.375; 2/5 = 0.4.",
+        "Align decimal places: 0.375 = 0.375 and 0.4 = 0.400.",
+        "Compare corresponding place values: 0.375 < 0.400.",
+        "0.375 < 2/5; keep the original left-to-right order."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_comparison",
+          "title": "Compare two exact values",
+          "left": "0.375",
+          "right": "2/5",
+          "given": "0.375 and 2/5",
+          "route": "decimal",
+          "steps": [
+            "Choose decimals: both values have exact terminating decimal forms.",
+            "0.375 = 0.375; 2/5 = 0.4.",
+            "Align decimal places: 0.375 = 0.375 and 0.4 = 0.400.",
+            "Compare corresponding place values: 0.375 < 0.400.",
+            "0.375 < 2/5; keep the original left-to-right order."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_direction": "Check the exact values in a common form and keep their original order. The wide side of the symbol faces the larger value.",
+        "not_equal": "These exact values are different. Equal is not justified by similar digits or a rounded approximation.",
+        "missed_equality": "Both original quantities have exactly the same value. Different notation does not make either larger.",
+        "check_symbol": "Your recorded conversion values are correct. Recheck the comparison symbol in the original left-to-right order.",
+        "check_percent": "Your comparison symbol is correct, but the recorded left percentage is not equivalent to the original fraction.",
+        "check_both": "Check the left percentage conversion first, then choose the symbol for the resulting percentage comparison.",
+        "check_left_work": "The recorded right value is correct. Recheck the left value in the chosen common form; do not round an exact fraction.",
+        "check_right_work": "The recorded left value is correct. Recheck the right value in the chosen common form; keep the original order.",
+        "check_work": "The recorded common-form working does not preserve both original values exactly. Check the form, conversions and left-to-right order."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-13-P06",
+      "source_ref": {
+        "page": 10
+      },
+      "stage": "practice",
+      "prompt": "Choose the comparison symbol: 9/10 ___ 92%.",
+      "target": "Compare two exact values in a suitable common form while preserving their original order",
+      "response": {
+        "type": "fdp_comparison",
+        "original_pair": {
+          "left": "9/10",
+          "right": "92%"
+        },
+        "require_percent": false,
+        "allow_working": true
+      },
+      "answer": {
+        "value": {
+          "symbol": "<"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The fraction represents the smaller share of the same whole.",
+        "correct_after_support": "Correct. The fraction represents the smaller share of the same whole.",
+        "on_correct_math": "Choose decimals: both values have exact terminating decimal forms. → 9/10 = 0.9; 92% = 0.92. → Align decimal places: 0.9 = 0.90 and 0.92 = 0.92. → Compare corresponding place values: 0.90 < 0.92. → 9/10 < 92%; keep the original left-to-right order.",
+        "on_incorrect_attempt_1": "Write the fraction and percentage in a common form, then compare the hundredths.",
+        "on_incorrect_attempt_2": "Write the fraction and percentage in a common form, then compare the hundredths.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose decimals: both values have exact terminating decimal forms. → 9/10 = 0.9; 92% = 0.92. → Align decimal places: 0.9 = 0.90 and 0.92 = 0.92. → Compare corresponding place values: 0.90 < 0.92. → 9/10 < 92%; keep the original left-to-right order."
+      },
+      "mathematical_support": {
+        "hint_1": "Write the fraction and percentage in a common form, then compare the hundredths.",
+        "hint_2": "Preserve both exact values in one common form. Compare corresponding place values or equal-sized parts, then keep the original order.",
+        "worked_solution": "Choose decimals: both values have exact terminating decimal forms. → 9/10 = 0.9; 92% = 0.92. → Align decimal places: 0.9 = 0.90 and 0.92 = 0.92. → Compare corresponding place values: 0.90 < 0.92. → 9/10 < 92%; keep the original left-to-right order."
+      },
+      "working": [
+        "Choose decimals: both values have exact terminating decimal forms.",
+        "9/10 = 0.9; 92% = 0.92.",
+        "Align decimal places: 0.9 = 0.90 and 0.92 = 0.92.",
+        "Compare corresponding place values: 0.90 < 0.92.",
+        "9/10 < 92%; keep the original left-to-right order."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_comparison",
+          "title": "Compare two exact values",
+          "left": "9/10",
+          "right": "92%",
+          "given": "9/10 and 92%",
+          "route": "decimal",
+          "steps": [
+            "Choose decimals: both values have exact terminating decimal forms.",
+            "9/10 = 0.9; 92% = 0.92.",
+            "Align decimal places: 0.9 = 0.90 and 0.92 = 0.92.",
+            "Compare corresponding place values: 0.90 < 0.92.",
+            "9/10 < 92%; keep the original left-to-right order."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_direction": "Check the exact values in a common form and keep their original order. The wide side of the symbol faces the larger value.",
+        "not_equal": "These exact values are different. Equal is not justified by similar digits or a rounded approximation.",
+        "missed_equality": "Both original quantities have exactly the same value. Different notation does not make either larger.",
+        "check_symbol": "Your recorded conversion values are correct. Recheck the comparison symbol in the original left-to-right order.",
+        "check_percent": "Your comparison symbol is correct, but the recorded left percentage is not equivalent to the original fraction.",
+        "check_both": "Check the left percentage conversion first, then choose the symbol for the resulting percentage comparison.",
+        "check_left_work": "The recorded right value is correct. Recheck the left value in the chosen common form; do not round an exact fraction.",
+        "check_right_work": "The recorded left value is correct. Recheck the right value in the chosen common form; keep the original order.",
+        "check_work": "The recorded common-form working does not preserve both original values exactly. Check the form, conversions and left-to-right order."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-13-P07",
+      "source_ref": {
+        "page": 10
+      },
+      "stage": "practice",
+      "prompt": "Choose the comparison symbol: 5/4 ___ 120%.",
+      "target": "Compare two exact values in a suitable common form while preserving their original order",
+      "response": {
+        "type": "fdp_comparison",
+        "original_pair": {
+          "left": "5/4",
+          "right": "120%"
+        },
+        "require_percent": false,
+        "allow_working": true
+      },
+      "answer": {
+        "value": {
+          "symbol": ">"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The improper fraction exceeds the percentage when both are converted exactly.",
+        "correct_after_support": "Correct. The improper fraction exceeds the percentage when both are converted exactly.",
+        "on_correct_math": "Choose decimals: both values have exact terminating decimal forms. → 5/4 = 1.25; 120% = 1.2. → Align decimal places: 1.25 = 1.25 and 1.2 = 1.20. → Compare corresponding place values: 1.25 > 1.20. → 5/4 > 120%; keep the original left-to-right order.",
+        "on_incorrect_attempt_1": "Preserve values above one whole in both representations.",
+        "on_incorrect_attempt_2": "Preserve values above one whole in both representations.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose decimals: both values have exact terminating decimal forms. → 5/4 = 1.25; 120% = 1.2. → Align decimal places: 1.25 = 1.25 and 1.2 = 1.20. → Compare corresponding place values: 1.25 > 1.20. → 5/4 > 120%; keep the original left-to-right order."
+      },
+      "mathematical_support": {
+        "hint_1": "Preserve values above one whole in both representations.",
+        "hint_2": "Preserve both exact values in one common form. Compare corresponding place values or equal-sized parts, then keep the original order.",
+        "worked_solution": "Choose decimals: both values have exact terminating decimal forms. → 5/4 = 1.25; 120% = 1.2. → Align decimal places: 1.25 = 1.25 and 1.2 = 1.20. → Compare corresponding place values: 1.25 > 1.20. → 5/4 > 120%; keep the original left-to-right order."
+      },
+      "working": [
+        "Choose decimals: both values have exact terminating decimal forms.",
+        "5/4 = 1.25; 120% = 1.2.",
+        "Align decimal places: 1.25 = 1.25 and 1.2 = 1.20.",
+        "Compare corresponding place values: 1.25 > 1.20.",
+        "5/4 > 120%; keep the original left-to-right order."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_comparison",
+          "title": "Compare two exact values",
+          "left": "5/4",
+          "right": "120%",
+          "given": "5/4 and 120%",
+          "route": "decimal",
+          "steps": [
+            "Choose decimals: both values have exact terminating decimal forms.",
+            "5/4 = 1.25; 120% = 1.2.",
+            "Align decimal places: 1.25 = 1.25 and 1.2 = 1.20.",
+            "Compare corresponding place values: 1.25 > 1.20.",
+            "5/4 > 120%; keep the original left-to-right order."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_direction": "Check the exact values in a common form and keep their original order. The wide side of the symbol faces the larger value.",
+        "not_equal": "These exact values are different. Equal is not justified by similar digits or a rounded approximation.",
+        "missed_equality": "Both original quantities have exactly the same value. Different notation does not make either larger.",
+        "check_symbol": "Your recorded conversion values are correct. Recheck the comparison symbol in the original left-to-right order.",
+        "check_percent": "Your comparison symbol is correct, but the recorded left percentage is not equivalent to the original fraction.",
+        "check_both": "Check the left percentage conversion first, then choose the symbol for the resulting percentage comparison.",
+        "check_left_work": "The recorded right value is correct. Recheck the left value in the chosen common form; do not round an exact fraction.",
+        "check_right_work": "The recorded left value is correct. Recheck the right value in the chosen common form; keep the original order.",
+        "check_work": "The recorded common-form working does not preserve both original values exactly. Check the form, conversions and left-to-right order."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-13-P08",
+      "source_ref": {
+        "page": 10
+      },
+      "stage": "practice",
+      "prompt": "Choose the comparison symbol: 1/8 ___ 0.12.",
+      "target": "Compare two exact values in a suitable common form while preserving their original order",
+      "response": {
+        "type": "fdp_comparison",
+        "original_pair": {
+          "left": "1/8",
+          "right": "0.12"
+        },
+        "require_percent": false,
+        "allow_working": true
+      },
+      "answer": {
+        "value": {
+          "symbol": ">"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The exact fraction is slightly larger; truncating it would hide the difference.",
+        "correct_after_support": "Correct. The exact fraction is slightly larger; truncating it would hide the difference.",
+        "on_correct_math": "Choose decimals: both values have exact terminating decimal forms. → 1/8 = 0.125; 0.12 = 0.12. → Align decimal places: 0.125 = 0.125 and 0.12 = 0.120. → Compare corresponding place values: 0.125 > 0.120. → 1/8 > 0.12; keep the original left-to-right order.",
+        "on_incorrect_attempt_1": "Keep every exact decimal place of the fraction. Do not stop the conversion early.",
+        "on_incorrect_attempt_2": "Keep every exact decimal place of the fraction. Do not stop the conversion early.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose decimals: both values have exact terminating decimal forms. → 1/8 = 0.125; 0.12 = 0.12. → Align decimal places: 0.125 = 0.125 and 0.12 = 0.120. → Compare corresponding place values: 0.125 > 0.120. → 1/8 > 0.12; keep the original left-to-right order."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep every exact decimal place of the fraction. Do not stop the conversion early.",
+        "hint_2": "Preserve both exact values in one common form. Compare corresponding place values or equal-sized parts, then keep the original order.",
+        "worked_solution": "Choose decimals: both values have exact terminating decimal forms. → 1/8 = 0.125; 0.12 = 0.12. → Align decimal places: 0.125 = 0.125 and 0.12 = 0.120. → Compare corresponding place values: 0.125 > 0.120. → 1/8 > 0.12; keep the original left-to-right order."
+      },
+      "working": [
+        "Choose decimals: both values have exact terminating decimal forms.",
+        "1/8 = 0.125; 0.12 = 0.12.",
+        "Align decimal places: 0.125 = 0.125 and 0.12 = 0.120.",
+        "Compare corresponding place values: 0.125 > 0.120.",
+        "1/8 > 0.12; keep the original left-to-right order."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_comparison",
+          "title": "Compare two exact values",
+          "left": "1/8",
+          "right": "0.12",
+          "given": "1/8 and 0.12",
+          "route": "decimal",
+          "steps": [
+            "Choose decimals: both values have exact terminating decimal forms.",
+            "1/8 = 0.125; 0.12 = 0.12.",
+            "Align decimal places: 0.125 = 0.125 and 0.12 = 0.120.",
+            "Compare corresponding place values: 0.125 > 0.120.",
+            "1/8 > 0.12; keep the original left-to-right order."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_direction": "Check the exact values in a common form and keep their original order. The wide side of the symbol faces the larger value.",
+        "not_equal": "These exact values are different. Equal is not justified by similar digits or a rounded approximation.",
+        "missed_equality": "Both original quantities have exactly the same value. Different notation does not make either larger.",
+        "check_symbol": "Your recorded conversion values are correct. Recheck the comparison symbol in the original left-to-right order.",
+        "check_percent": "Your comparison symbol is correct, but the recorded left percentage is not equivalent to the original fraction.",
+        "check_both": "Check the left percentage conversion first, then choose the symbol for the resulting percentage comparison.",
+        "check_left_work": "The recorded right value is correct. Recheck the left value in the chosen common form; do not round an exact fraction.",
+        "check_right_work": "The recorded left value is correct. Recheck the right value in the chosen common form; keep the original order.",
+        "check_work": "The recorded common-form working does not preserve both original values exactly. Check the form, conversions and left-to-right order."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-13-P09",
+      "source_ref": {
+        "page": 10
+      },
+      "stage": "practice",
+      "prompt": "A student compares 0.48 and 1/2. Which comparison is correct?",
+      "target": "Compare two exact values in a suitable common form while preserving their original order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "0.48 < 1/2",
+          "0.48 > 1/2",
+          "0.48 = 1/2",
+          "The quantities cannot be compared because they are in different forms."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "0.48 < 1/2"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decimal lies below the exact half benchmark.",
+        "correct_after_support": "Correct. The decimal lies below the exact half benchmark.",
+        "on_correct_math": "Choose decimals: both values have exact terminating decimal forms. → 0.48 = 0.48; 1/2 = 0.5. → Align decimal places: 0.48 = 0.48 and 0.5 = 0.50. → Compare corresponding place values: 0.48 < 0.50. → 0.48 < 1/2; keep the original left-to-right order.",
+        "on_incorrect_attempt_1": "Use the exact value of one half on the same scale as the decimal.",
+        "on_incorrect_attempt_2": "Use the exact value of one half on the same scale as the decimal.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose decimals: both values have exact terminating decimal forms. → 0.48 = 0.48; 1/2 = 0.5. → Align decimal places: 0.48 = 0.48 and 0.5 = 0.50. → Compare corresponding place values: 0.48 < 0.50. → 0.48 < 1/2; keep the original left-to-right order."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the exact value of one half on the same scale as the decimal.",
+        "hint_2": "Preserve both exact values in one common form. Compare corresponding place values or equal-sized parts, then keep the original order.",
+        "worked_solution": "Choose decimals: both values have exact terminating decimal forms. → 0.48 = 0.48; 1/2 = 0.5. → Align decimal places: 0.48 = 0.48 and 0.5 = 0.50. → Compare corresponding place values: 0.48 < 0.50. → 0.48 < 1/2; keep the original left-to-right order."
+      },
+      "working": [
+        "Choose decimals: both values have exact terminating decimal forms.",
+        "0.48 = 0.48; 1/2 = 0.5.",
+        "Align decimal places: 0.48 = 0.48 and 0.5 = 0.50.",
+        "Compare corresponding place values: 0.48 < 0.50.",
+        "0.48 < 1/2; keep the original left-to-right order."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_comparison",
+          "title": "Compare the decimal with one half",
+          "left": "0.48",
+          "right": "1/2",
+          "given": "0.48 and 1/2",
+          "route": "decimal",
+          "steps": [
+            "Choose decimals: both values have exact terminating decimal forms.",
+            "0.48 = 0.48; 1/2 = 0.5.",
+            "Align decimal places: 0.48 = 0.48 and 0.5 = 0.50.",
+            "Compare corresponding place values: 0.48 < 0.50.",
+            "0.48 < 1/2; keep the original left-to-right order."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "0.48 > 1/2": "That reverses the comparison. Check both values in the same decimal or percentage form.",
+        "0.48 = 1/2": "These values are not exactly equal; being close does not justify equality.",
+        "The quantities cannot be compared because they are in different forms.": "Different notation does not prevent an exact comparison."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-13-X01",
+      "source_ref": {
+        "page": 21
+      },
+      "stage": "practice",
+      "prompt": "A phone battery is shown as 0.68 full. A second phone battery is shown as 65% full. Which phone has the greater proportion of battery remaining?",
+      "target": "Compare two exact values in a suitable common form while preserving their original order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "The first phone",
+          "The second phone",
+          "The proportions are equal",
+          "There is not enough information"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "The first phone"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The first phone has the greater remaining proportion, regardless of battery capacity.",
+        "correct_after_support": "Correct. The first phone has the greater remaining proportion, regardless of battery capacity.",
+        "on_correct_math": "Choose decimals: both values have exact terminating decimal forms. → 0.68 = 0.68; 65% = 0.65. → Align decimal places: 0.68 = 0.68 and 0.65 = 0.65. → Compare corresponding place values: 0.68 > 0.65. → 0.68 > 65%; keep the original left-to-right order.",
+        "on_incorrect_attempt_1": "Compare the proportion of each battery that remains, not the different printed number formats.",
+        "on_incorrect_attempt_2": "Compare the proportion of each battery that remains, not the different printed number formats.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose decimals: both values have exact terminating decimal forms. → 0.68 = 0.68; 65% = 0.65. → Align decimal places: 0.68 = 0.68 and 0.65 = 0.65. → Compare corresponding place values: 0.68 > 0.65. → 0.68 > 65%; keep the original left-to-right order."
+      },
+      "mathematical_support": {
+        "hint_1": "Compare the proportion of each battery that remains, not the different printed number formats.",
+        "hint_2": "Preserve both exact values in one common form. Compare corresponding place values or equal-sized parts, then keep the original order.",
+        "worked_solution": "Choose decimals: both values have exact terminating decimal forms. → 0.68 = 0.68; 65% = 0.65. → Align decimal places: 0.68 = 0.68 and 0.65 = 0.65. → Compare corresponding place values: 0.68 > 0.65. → 0.68 > 65%; keep the original left-to-right order."
+      },
+      "working": [
+        "Choose decimals: both values have exact terminating decimal forms.",
+        "0.68 = 0.68; 65% = 0.65.",
+        "Align decimal places: 0.68 = 0.68 and 0.65 = 0.65.",
+        "Compare corresponding place values: 0.68 > 0.65.",
+        "0.68 > 65%; keep the original left-to-right order."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_comparison",
+          "title": "Compare remaining battery proportions",
+          "left": "0.68",
+          "right": "65%",
+          "given": "0.68 and 65%",
+          "route": "decimal",
+          "steps": [
+            "Choose decimals: both values have exact terminating decimal forms.",
+            "0.68 = 0.68; 65% = 0.65.",
+            "Align decimal places: 0.68 = 0.68 and 0.65 = 0.65.",
+            "Compare corresponding place values: 0.68 > 0.65.",
+            "0.68 > 65%; keep the original left-to-right order."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "The second phone": "Compare equivalent forms of the two proportions before choosing a phone.",
+        "The proportions are equal": "The two exact proportions are different; check their common-form values.",
+        "There is not enough information": "The question asks for proportions, so the actual battery capacities are not needed."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-13-X02",
+      "source_ref": {
+        "page": 21
+      },
+      "stage": "practice",
+      "prompt": "Mina has completed 3/4 of a training plan. Sam has completed 72% of the same length plan. Who has completed the greater proportion?",
+      "target": "Compare two exact values in a suitable common form while preserving their original order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Mina",
+          "Sam",
+          "They have completed equal proportions",
+          "The values cannot be compared"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "Mina"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Mina has completed the greater proportion of the same-length plan.",
+        "correct_after_support": "Correct. Mina has completed the greater proportion of the same-length plan.",
+        "on_correct_math": "Choose decimals: both values have exact terminating decimal forms. → 3/4 = 0.75; 72% = 0.72. → Align decimal places: 0.75 = 0.75 and 0.72 = 0.72. → Compare corresponding place values: 0.75 > 0.72. → 3/4 > 72%; keep the original left-to-right order.",
+        "on_incorrect_attempt_1": "Use the same full plan as the reference and convert both completed proportions to a common form.",
+        "on_incorrect_attempt_2": "Use the same full plan as the reference and convert both completed proportions to a common form.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose decimals: both values have exact terminating decimal forms. → 3/4 = 0.75; 72% = 0.72. → Align decimal places: 0.75 = 0.75 and 0.72 = 0.72. → Compare corresponding place values: 0.75 > 0.72. → 3/4 > 72%; keep the original left-to-right order."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the same full plan as the reference and convert both completed proportions to a common form.",
+        "hint_2": "Preserve both exact values in one common form. Compare corresponding place values or equal-sized parts, then keep the original order.",
+        "worked_solution": "Choose decimals: both values have exact terminating decimal forms. → 3/4 = 0.75; 72% = 0.72. → Align decimal places: 0.75 = 0.75 and 0.72 = 0.72. → Compare corresponding place values: 0.75 > 0.72. → 3/4 > 72%; keep the original left-to-right order."
+      },
+      "working": [
+        "Choose decimals: both values have exact terminating decimal forms.",
+        "3/4 = 0.75; 72% = 0.72.",
+        "Align decimal places: 0.75 = 0.75 and 0.72 = 0.72.",
+        "Compare corresponding place values: 0.75 > 0.72.",
+        "3/4 > 72%; keep the original left-to-right order."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_comparison",
+          "title": "Compare completed training proportions",
+          "left": "3/4",
+          "right": "72%",
+          "given": "3/4 and 72%",
+          "route": "decimal",
+          "steps": [
+            "Choose decimals: both values have exact terminating decimal forms.",
+            "3/4 = 0.75; 72% = 0.72.",
+            "Align decimal places: 0.75 = 0.75 and 0.72 = 0.72.",
+            "Compare corresponding place values: 0.75 > 0.72.",
+            "3/4 > 72%; keep the original left-to-right order."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "Sam": "Check the exact percentage represented by three quarters before comparing with Sam.",
+        "They have completed equal proportions": "The two completed proportions are close but not exactly equal.",
+        "The values cannot be compared": "An exact common-form conversion allows the proportions to be compared."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-13-X03",
+      "source_ref": {
+        "page": 22
+      },
+      "stage": "practice",
+      "prompt": "A factory reaches 125% of one production target and 1.2 times another production target. Which target has been exceeded by the greater proportion?",
+      "target": "Compare two exact values in a suitable common form while preserving their original order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "The first target",
+          "The second target",
+          "The proportions are equal",
+          "A percentage above 100% cannot be compared with a decimal"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "The first target"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The first target is exceeded by a greater proportion of its own reference amount.",
+        "correct_after_support": "Correct. The first target is exceeded by a greater proportion of its own reference amount.",
+        "on_correct_math": "Choose decimals: both values have exact terminating decimal forms. → 125% = 1.25; 1.2 = 1.2. → Align decimal places: 1.25 = 1.25 and 1.2 = 1.20. → Compare corresponding place values: 1.25 > 1.20. → 125% is 25% above its target; 1.2 times a target is 20% above it. The first target has the greater relative excess.",
+        "on_incorrect_attempt_1": "Treat each original target as its own whole. Compare the proportions above that whole, not the absolute production totals.",
+        "on_incorrect_attempt_2": "Treat each original target as its own whole. Compare the proportions above that whole, not the absolute production totals.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose decimals: both values have exact terminating decimal forms. → 125% = 1.25; 1.2 = 1.2. → Align decimal places: 1.25 = 1.25 and 1.2 = 1.20. → Compare corresponding place values: 1.25 > 1.20. → 125% is 25% above its target; 1.2 times a target is 20% above it. The first target has the greater relative excess."
+      },
+      "mathematical_support": {
+        "hint_1": "Treat each original target as its own whole. Compare the proportions above that whole, not the absolute production totals.",
+        "hint_2": "Preserve both exact values in one common form. Compare corresponding place values or equal-sized parts, then keep the original order.",
+        "worked_solution": "Choose decimals: both values have exact terminating decimal forms. → 125% = 1.25; 1.2 = 1.2. → Align decimal places: 1.25 = 1.25 and 1.2 = 1.20. → Compare corresponding place values: 1.25 > 1.20. → 125% is 25% above its target; 1.2 times a target is 20% above it. The first target has the greater relative excess."
+      },
+      "working": [
+        "Choose decimals: both values have exact terminating decimal forms.",
+        "125% = 1.25; 1.2 = 1.2.",
+        "Align decimal places: 1.25 = 1.25 and 1.2 = 1.20.",
+        "Compare corresponding place values: 1.25 > 1.20.",
+        "125% is 25% above its target; 1.2 times a target is 20% above it. The first target has the greater relative excess."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_comparison",
+          "title": "Compare relative production above each target",
+          "left": "125%",
+          "right": "1.2",
+          "given": "125% and 1.2",
+          "route": "decimal",
+          "steps": [
+            "Choose decimals: both values have exact terminating decimal forms.",
+            "125% = 1.25; 1.2 = 1.2.",
+            "Align decimal places: 1.25 = 1.25 and 1.2 = 1.20.",
+            "Compare corresponding place values: 1.25 > 1.20.",
+            "125% is 25% above its target; 1.2 times a target is 20% above it. The first target has the greater relative excess."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "alternative": "The excesses are 25% and 20% of their respective targets."
+        }
+      },
+      "response_feedback": {
+        "The second target": "Convert both target multiples exactly and compare the portions above one whole.",
+        "The proportions are equal": "The two relative excesses are different; they are not made equal by using different formats.",
+        "A percentage above 100% cannot be compared with a decimal": "A percentage above one hundred is a value above one whole and can be compared exactly with a decimal."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-13-X04",
+      "source_ref": {
+        "page": 22
+      },
+      "stage": "practice",
+      "prompt": "One recipe uses 2/3 of a packet of flour. Another recipe uses 65% of an identical packet. Which recipe uses the greater proportion of a packet?",
+      "target": "Compare two exact values in a suitable common form while preserving their original order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "The first recipe",
+          "The second recipe",
+          "The proportions are equal",
+          "The values are too close to compare exactly"
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "The first recipe"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The first recipe uses the greater proportion, as the exact common-denominator comparison shows.",
+        "correct_after_support": "Correct. The first recipe uses the greater proportion, as the exact common-denominator comparison shows.",
+        "on_correct_math": "Choose exact fractions rather than rounding a recurring decimal. → 65% = 65/100 = 13/20; keep 2/3 exact. → Use denominator 60: 2/3 = 40/60 and 13/20 = 39/60. → 40 > 39, so 40/60 > 39/60. → 2/3 > 65% in the original order.",
+        "on_incorrect_attempt_1": "Use an exact fraction route with a common denominator; do not replace the recurring value by a rounded decimal.",
+        "on_incorrect_attempt_2": "Use an exact fraction route with a common denominator; do not replace the recurring value by a rounded decimal.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose exact fractions rather than rounding a recurring decimal. → 65% = 65/100 = 13/20; keep 2/3 exact. → Use denominator 60: 2/3 = 40/60 and 13/20 = 39/60. → 40 > 39, so 40/60 > 39/60. → 2/3 > 65% in the original order."
+      },
+      "mathematical_support": {
+        "hint_1": "Use an exact fraction route with a common denominator; do not replace the recurring value by a rounded decimal.",
+        "hint_2": "Preserve both exact values in one common form. Compare corresponding place values or equal-sized parts, then keep the original order.",
+        "worked_solution": "Choose exact fractions rather than rounding a recurring decimal. → 65% = 65/100 = 13/20; keep 2/3 exact. → Use denominator 60: 2/3 = 40/60 and 13/20 = 39/60. → 40 > 39, so 40/60 > 39/60. → 2/3 > 65% in the original order."
+      },
+      "working": [
+        "Choose exact fractions rather than rounding a recurring decimal.",
+        "65% = 65/100 = 13/20; keep 2/3 exact.",
+        "Use denominator 60: 2/3 = 40/60 and 13/20 = 39/60.",
+        "40 > 39, so 40/60 > 39/60.",
+        "2/3 > 65% in the original order."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_comparison",
+          "title": "Compare flour proportions exactly",
+          "left": "2/3",
+          "right": "65%",
+          "given": "2/3 and 65%",
+          "route": "fraction",
+          "steps": [
+            "Choose exact fractions rather than rounding a recurring decimal.",
+            "65% = 65/100 = 13/20; keep 2/3 exact.",
+            "Use denominator 60: 2/3 = 40/60 and 13/20 = 39/60.",
+            "40 > 39, so 40/60 > 39/60.",
+            "2/3 > 65% in the original order."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "The second recipe": "Write both proportions as exact fractions with the same denominator, then compare the numerators.",
+        "The proportions are equal": "A rounded decimal is not exactly equal to the original recurring fraction.",
+        "The values are too close to compare exactly": "A common denominator distinguishes these values exactly, however close they are."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-13-X05",
+      "source_ref": {
+        "page": 22
+      },
+      "stage": "practice",
+      "prompt": "Which method compares 2/3 and 65% exactly without treating a rounded decimal as equal?",
+      "target": "Compare two exact values in a suitable common form while preserving their original order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Write 65% = 13/20, then use denominator 60: 2/3 = 40/60 and 13/20 = 39/60.",
+          "Round 2/3 to 0.65 and state that the values are equal.",
+          "Compare the printed numbers 2 and 65.",
+          "Add 2/3 and 65%."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "Write 65% = 13/20, then use denominator 60: 2/3 = 40/60 and 13/20 = 39/60."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The common denominator preserves both exact values and exposes their difference.",
+        "correct_after_support": "Correct. The common denominator preserves both exact values and exposes their difference.",
+        "on_correct_math": "Choose exact fractions rather than rounding a recurring decimal. → 65% = 65/100 = 13/20; keep 2/3 exact. → Use denominator 60: 2/3 = 40/60 and 13/20 = 39/60. → 40 > 39, so 40/60 > 39/60. → 2/3 > 65% in the original order.",
+        "on_incorrect_attempt_1": "Look for equivalent exact fractions using equal-sized parts.",
+        "on_incorrect_attempt_2": "Look for equivalent exact fractions using equal-sized parts.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose exact fractions rather than rounding a recurring decimal. → 65% = 65/100 = 13/20; keep 2/3 exact. → Use denominator 60: 2/3 = 40/60 and 13/20 = 39/60. → 40 > 39, so 40/60 > 39/60. → 2/3 > 65% in the original order."
+      },
+      "mathematical_support": {
+        "hint_1": "Look for equivalent exact fractions using equal-sized parts.",
+        "hint_2": "Preserve both exact values in one common form. Compare corresponding place values or equal-sized parts, then keep the original order.",
+        "worked_solution": "Choose exact fractions rather than rounding a recurring decimal. → 65% = 65/100 = 13/20; keep 2/3 exact. → Use denominator 60: 2/3 = 40/60 and 13/20 = 39/60. → 40 > 39, so 40/60 > 39/60. → 2/3 > 65% in the original order."
+      },
+      "working": [
+        "Choose exact fractions rather than rounding a recurring decimal.",
+        "65% = 65/100 = 13/20; keep 2/3 exact.",
+        "Use denominator 60: 2/3 = 40/60 and 13/20 = 39/60.",
+        "40 > 39, so 40/60 > 39/60.",
+        "2/3 > 65% in the original order."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_comparison",
+          "title": "Choose an exact route for a recurring fraction",
+          "left": "2/3",
+          "right": "65%",
+          "given": "2/3 and 65%",
+          "route": "fraction",
+          "steps": [
+            "Choose exact fractions rather than rounding a recurring decimal.",
+            "65% = 65/100 = 13/20; keep 2/3 exact.",
+            "Use denominator 60: 2/3 = 40/60 and 13/20 = 39/60.",
+            "40 > 39, so 40/60 > 39/60.",
+            "2/3 > 65% in the original order."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "Round 2/3 to 0.65 and state that the values are equal.": "That is not an exact conversion, and a rounded value cannot establish equality.",
+        "Compare the printed numbers 2 and 65.": "Those integers count different-sized parts and cannot be compared directly.",
+        "Add 2/3 and 65%.": "Their sum does not compare the two original proportions."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-13-E01",
+      "source_ref": {
+        "page": 19
+      },
+      "stage": "exit",
+      "prompt": "Final check: choose the symbol for 0.72 ___ 70%. Use any exact method.",
+      "target": "Compare two exact values in a suitable common form while preserving their original order",
+      "response": {
+        "type": "fdp_comparison",
+        "original_pair": {
+          "left": "0.72",
+          "right": "70%"
+        },
+        "require_percent": false,
+        "allow_working": true
+      },
+      "answer": {
+        "value": {
+          "symbol": ">"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The final comparison preserves the original order and any recorded working.",
+        "correct_after_support": "Correct. The final comparison preserves the original order and any recorded working.",
+        "on_correct_math": "Choose decimals: both values have exact terminating decimal forms. → 0.72 = 0.72; 70% = 0.7. → Align decimal places: 0.72 = 0.72 and 0.7 = 0.70. → Compare corresponding place values: 0.72 > 0.70. → 0.72 > 70%; keep the original left-to-right order.",
+        "on_incorrect_attempt_1": "Review the two exact values on one common scale.",
+        "on_incorrect_attempt_2": "Review the two exact values on one common scale.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose decimals: both values have exact terminating decimal forms. → 0.72 = 0.72; 70% = 0.7. → Align decimal places: 0.72 = 0.72 and 0.7 = 0.70. → Compare corresponding place values: 0.72 > 0.70. → 0.72 > 70%; keep the original left-to-right order."
+      },
+      "mathematical_support": {
+        "hint_1": "Review the two exact values on one common scale.",
+        "hint_2": "Preserve both exact values in one common form. Compare corresponding place values or equal-sized parts, then keep the original order.",
+        "worked_solution": "Choose decimals: both values have exact terminating decimal forms. → 0.72 = 0.72; 70% = 0.7. → Align decimal places: 0.72 = 0.72 and 0.7 = 0.70. → Compare corresponding place values: 0.72 > 0.70. → 0.72 > 70%; keep the original left-to-right order."
+      },
+      "working": [
+        "Choose decimals: both values have exact terminating decimal forms.",
+        "0.72 = 0.72; 70% = 0.7.",
+        "Align decimal places: 0.72 = 0.72 and 0.7 = 0.70.",
+        "Compare corresponding place values: 0.72 > 0.70.",
+        "0.72 > 70%; keep the original left-to-right order."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_comparison",
+          "title": "Compare two exact values",
+          "left": "0.72",
+          "right": "70%",
+          "given": "0.72 and 70%",
+          "route": "decimal",
+          "steps": [
+            "Choose decimals: both values have exact terminating decimal forms.",
+            "0.72 = 0.72; 70% = 0.7.",
+            "Align decimal places: 0.72 = 0.72 and 0.7 = 0.70.",
+            "Compare corresponding place values: 0.72 > 0.70.",
+            "0.72 > 70%; keep the original left-to-right order."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_direction": "Check the exact values in a common form and keep their original order. The wide side of the symbol faces the larger value.",
+        "not_equal": "These exact values are different. Equal is not justified by similar digits or a rounded approximation.",
+        "missed_equality": "Both original quantities have exactly the same value. Different notation does not make either larger.",
+        "check_symbol": "Your recorded conversion values are correct. Recheck the comparison symbol in the original left-to-right order.",
+        "check_percent": "Your comparison symbol is correct, but the recorded left percentage is not equivalent to the original fraction.",
+        "check_both": "Check the left percentage conversion first, then choose the symbol for the resulting percentage comparison.",
+        "check_left_work": "The recorded right value is correct. Recheck the left value in the chosen common form; do not round an exact fraction.",
+        "check_right_work": "The recorded left value is correct. Recheck the right value in the chosen common form; keep the original order.",
+        "check_work": "The recorded common-form working does not preserve both original values exactly. Check the form, conversions and left-to-right order."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-13-E02",
+      "source_ref": {
+        "page": 19
+      },
+      "stage": "exit",
+      "prompt": "Final check: choose the symbol for 5/8 ___ 0.6. Use any exact method.",
+      "target": "Compare two exact values in a suitable common form while preserving their original order",
+      "response": {
+        "type": "fdp_comparison",
+        "original_pair": {
+          "left": "5/8",
+          "right": "0.6"
+        },
+        "require_percent": false,
+        "allow_working": true
+      },
+      "answer": {
+        "value": {
+          "symbol": ">"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The final comparison keeps every exact digit rather than truncating the fraction.",
+        "correct_after_support": "Correct. The final comparison keeps every exact digit rather than truncating the fraction.",
+        "on_correct_math": "Choose decimals: both values have exact terminating decimal forms. → 5/8 = 0.625; 0.6 = 0.6. → Align decimal places: 0.625 = 0.625 and 0.6 = 0.600. → Compare corresponding place values: 0.625 > 0.600. → 5/8 > 0.6; keep the original left-to-right order.",
+        "on_incorrect_attempt_1": "Review the complete exact fraction value before comparing.",
+        "on_incorrect_attempt_2": "Review the complete exact fraction value before comparing.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose decimals: both values have exact terminating decimal forms. → 5/8 = 0.625; 0.6 = 0.6. → Align decimal places: 0.625 = 0.625 and 0.6 = 0.600. → Compare corresponding place values: 0.625 > 0.600. → 5/8 > 0.6; keep the original left-to-right order."
+      },
+      "mathematical_support": {
+        "hint_1": "Review the complete exact fraction value before comparing.",
+        "hint_2": "Preserve both exact values in one common form. Compare corresponding place values or equal-sized parts, then keep the original order.",
+        "worked_solution": "Choose decimals: both values have exact terminating decimal forms. → 5/8 = 0.625; 0.6 = 0.6. → Align decimal places: 0.625 = 0.625 and 0.6 = 0.600. → Compare corresponding place values: 0.625 > 0.600. → 5/8 > 0.6; keep the original left-to-right order."
+      },
+      "working": [
+        "Choose decimals: both values have exact terminating decimal forms.",
+        "5/8 = 0.625; 0.6 = 0.6.",
+        "Align decimal places: 0.625 = 0.625 and 0.6 = 0.600.",
+        "Compare corresponding place values: 0.625 > 0.600.",
+        "5/8 > 0.6; keep the original left-to-right order."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_comparison",
+          "title": "Compare two exact values",
+          "left": "5/8",
+          "right": "0.6",
+          "given": "5/8 and 0.6",
+          "route": "decimal",
+          "steps": [
+            "Choose decimals: both values have exact terminating decimal forms.",
+            "5/8 = 0.625; 0.6 = 0.6.",
+            "Align decimal places: 0.625 = 0.625 and 0.6 = 0.600.",
+            "Compare corresponding place values: 0.625 > 0.600.",
+            "5/8 > 0.6; keep the original left-to-right order."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_direction": "Check the exact values in a common form and keep their original order. The wide side of the symbol faces the larger value.",
+        "not_equal": "These exact values are different. Equal is not justified by similar digits or a rounded approximation.",
+        "missed_equality": "Both original quantities have exactly the same value. Different notation does not make either larger.",
+        "check_symbol": "Your recorded conversion values are correct. Recheck the comparison symbol in the original left-to-right order.",
+        "check_percent": "Your comparison symbol is correct, but the recorded left percentage is not equivalent to the original fraction.",
+        "check_both": "Check the left percentage conversion first, then choose the symbol for the resulting percentage comparison.",
+        "check_left_work": "The recorded right value is correct. Recheck the left value in the chosen common form; do not round an exact fraction.",
+        "check_right_work": "The recorded left value is correct. Recheck the right value in the chosen common form; keep the original order.",
+        "check_work": "The recorded common-form working does not preserve both original values exactly. Check the form, conversions and left-to-right order."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-13-E03",
+      "source_ref": {
+        "page": 19
+      },
+      "stage": "exit",
+      "prompt": "Final check: choose the symbol for 130% ___ 1.3. Use any exact method.",
+      "target": "Compare two exact values in a suitable common form while preserving their original order",
+      "response": {
+        "type": "fdp_comparison",
+        "original_pair": {
+          "left": "130%",
+          "right": "1.3"
+        },
+        "require_percent": false,
+        "allow_working": true
+      },
+      "answer": {
+        "value": {
+          "symbol": "="
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The final comparison recognises exact equality across the two representations.",
+        "correct_after_support": "Correct. The final comparison recognises exact equality across the two representations.",
+        "on_correct_math": "Choose decimals: both values have exact terminating decimal forms. → 130% = 1.3; 1.3 = 1.3. → Align decimal places: 1.3 = 1.30 and 1.3 = 1.30. → Compare corresponding place values: 1.30 = 1.30. → 130% = 1.3; keep the original left-to-right order.",
+        "on_incorrect_attempt_1": "Review whether the exact values coincide, including their whole-number parts.",
+        "on_incorrect_attempt_2": "Review whether the exact values coincide, including their whole-number parts.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose decimals: both values have exact terminating decimal forms. → 130% = 1.3; 1.3 = 1.3. → Align decimal places: 1.3 = 1.30 and 1.3 = 1.30. → Compare corresponding place values: 1.30 = 1.30. → 130% = 1.3; keep the original left-to-right order."
+      },
+      "mathematical_support": {
+        "hint_1": "Review whether the exact values coincide, including their whole-number parts.",
+        "hint_2": "Preserve both exact values in one common form. Compare corresponding place values or equal-sized parts, then keep the original order.",
+        "worked_solution": "Choose decimals: both values have exact terminating decimal forms. → 130% = 1.3; 1.3 = 1.3. → Align decimal places: 1.3 = 1.30 and 1.3 = 1.30. → Compare corresponding place values: 1.30 = 1.30. → 130% = 1.3; keep the original left-to-right order."
+      },
+      "working": [
+        "Choose decimals: both values have exact terminating decimal forms.",
+        "130% = 1.3; 1.3 = 1.3.",
+        "Align decimal places: 1.3 = 1.30 and 1.3 = 1.30.",
+        "Compare corresponding place values: 1.30 = 1.30.",
+        "130% = 1.3; keep the original left-to-right order."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_comparison",
+          "title": "Compare two exact values",
+          "left": "130%",
+          "right": "1.3",
+          "given": "130% and 1.3",
+          "route": "decimal",
+          "steps": [
+            "Choose decimals: both values have exact terminating decimal forms.",
+            "130% = 1.3; 1.3 = 1.3.",
+            "Align decimal places: 1.3 = 1.30 and 1.3 = 1.30.",
+            "Compare corresponding place values: 1.30 = 1.30.",
+            "130% = 1.3; keep the original left-to-right order."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_direction": "Check the exact values in a common form and keep their original order. The wide side of the symbol faces the larger value.",
+        "not_equal": "These exact values are different. Equal is not justified by similar digits or a rounded approximation.",
+        "missed_equality": "Both original quantities have exactly the same value. Different notation does not make either larger.",
+        "check_symbol": "Your recorded conversion values are correct. Recheck the comparison symbol in the original left-to-right order.",
+        "check_percent": "Your comparison symbol is correct, but the recorded left percentage is not equivalent to the original fraction.",
+        "check_both": "Check the left percentage conversion first, then choose the symbol for the resulting percentage comparison.",
+        "check_left_work": "The recorded right value is correct. Recheck the left value in the chosen common form; do not round an exact fraction.",
+        "check_right_work": "The recorded left value is correct. Recheck the right value in the chosen common form; keep the original order.",
+        "check_work": "The recorded common-form working does not preserve both original values exactly. Check the form, conversions and left-to-right order."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-13-E04",
+      "source_ref": {
+        "page": 19
+      },
+      "stage": "exit",
+      "prompt": "Final check: choose the symbol for 2/3 ___ 65%. Use any exact method without treating a rounded value as equal.",
+      "target": "Compare two exact values in a suitable common form while preserving their original order",
+      "response": {
+        "type": "fdp_comparison",
+        "original_pair": {
+          "left": "2/3",
+          "right": "65%"
+        },
+        "require_percent": false,
+        "allow_working": true
+      },
+      "answer": {
+        "value": {
+          "symbol": ">"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The exact comparison distinguishes the recurring fraction from the percentage.",
+        "correct_after_support": "Correct. The exact comparison distinguishes the recurring fraction from the percentage.",
+        "on_correct_math": "Choose exact fractions rather than rounding a recurring decimal. → 65% = 65/100 = 13/20; keep 2/3 exact. → Use denominator 60: 2/3 = 40/60 and 13/20 = 39/60. → 40 > 39, so 40/60 > 39/60. → 2/3 > 65% in the original order.",
+        "on_incorrect_attempt_1": "Review the values exactly; a common-denominator route avoids rounding.",
+        "on_incorrect_attempt_2": "Review the values exactly; a common-denominator route avoids rounding.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Choose exact fractions rather than rounding a recurring decimal. → 65% = 65/100 = 13/20; keep 2/3 exact. → Use denominator 60: 2/3 = 40/60 and 13/20 = 39/60. → 40 > 39, so 40/60 > 39/60. → 2/3 > 65% in the original order."
+      },
+      "mathematical_support": {
+        "hint_1": "Review the values exactly; a common-denominator route avoids rounding.",
+        "hint_2": "Preserve both exact values in one common form. Compare corresponding place values or equal-sized parts, then keep the original order.",
+        "worked_solution": "Choose exact fractions rather than rounding a recurring decimal. → 65% = 65/100 = 13/20; keep 2/3 exact. → Use denominator 60: 2/3 = 40/60 and 13/20 = 39/60. → 40 > 39, so 40/60 > 39/60. → 2/3 > 65% in the original order."
+      },
+      "working": [
+        "Choose exact fractions rather than rounding a recurring decimal.",
+        "65% = 65/100 = 13/20; keep 2/3 exact.",
+        "Use denominator 60: 2/3 = 40/60 and 13/20 = 39/60.",
+        "40 > 39, so 40/60 > 39/60.",
+        "2/3 > 65% in the original order."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_comparison",
+          "title": "Compare two exact values",
+          "left": "2/3",
+          "right": "65%",
+          "given": "2/3 and 65%",
+          "route": "fraction",
+          "steps": [
+            "Choose exact fractions rather than rounding a recurring decimal.",
+            "65% = 65/100 = 13/20; keep 2/3 exact.",
+            "Use denominator 60: 2/3 = 40/60 and 13/20 = 39/60.",
+            "40 > 39, so 40/60 > 39/60.",
+            "2/3 > 65% in the original order."
+          ],
+          "math_text": true,
+          "compact_captions": true
+        }
+      },
+      "response_feedback": {
+        "check_direction": "Check the exact values in a common form and keep their original order. The wide side of the symbol faces the larger value.",
+        "not_equal": "These exact values are different. Equal is not justified by similar digits or a rounded approximation.",
+        "missed_equality": "Both original quantities have exactly the same value. Different notation does not make either larger.",
+        "check_symbol": "Your recorded conversion values are correct. Recheck the comparison symbol in the original left-to-right order.",
+        "check_percent": "Your comparison symbol is correct, but the recorded left percentage is not equivalent to the original fraction.",
+        "check_both": "Check the left percentage conversion first, then choose the symbol for the resulting percentage comparison.",
+        "check_left_work": "The recorded right value is correct. Recheck the left value in the chosen common form; do not round an exact fraction.",
+        "check_right_work": "The recorded left value is correct. Recheck the right value in the chosen common form; keep the original order.",
+        "check_work": "The recorded common-form working does not preserve both original values exactly. Check the form, conversions and left-to-right order."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "FDP-13-E05",
+      "source_ref": {
+        "page": 19
+      },
+      "stage": "exit",
+      "prompt": "Final method check: which statement gives a valid comparison rule?",
+      "target": "Compare two exact values in a suitable common form while preserving their original order",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Convert both quantities to a suitable common form, compare them, then use the symbol in the original order.",
+          "The quantity with more digits is always larger.",
+          "A percentage is always larger than a decimal.",
+          "Use = whenever the common-form values are close after rounding."
+        ],
+        "math_layout": "compound_fraction"
+      },
+      "answer": {
+        "value": "Convert both quantities to a suitable common form, compare them, then use the symbol in the original order."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The rule compares values rather than their appearance and keeps the original order.",
+        "correct_after_support": "Correct. The rule compares values rather than their appearance and keeps the original order.",
+        "on_correct_math": "Convert both quantities to a suitable exact common form. → Compare place values or equal-sized parts. → Place the symbol between the original quantities in their original order.",
+        "on_incorrect_attempt_1": "Review common-form equivalence, exactness and the original order.",
+        "on_incorrect_attempt_2": "Review common-form equivalence, exactness and the original order.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after the complete final check.",
+        "worked_explanation": "Convert both quantities to a suitable exact common form. → Compare place values or equal-sized parts. → Place the symbol between the original quantities in their original order."
+      },
+      "mathematical_support": {
+        "hint_1": "Review common-form equivalence, exactness and the original order.",
+        "hint_2": "Preserve both exact values in one common form. Compare corresponding place values or equal-sized parts, then keep the original order.",
+        "worked_solution": "Convert both quantities to a suitable exact common form. → Compare place values or equal-sized parts. → Place the symbol between the original quantities in their original order."
+      },
+      "working": [
+        "Convert both quantities to a suitable exact common form.",
+        "Compare place values or equal-sized parts.",
+        "Place the symbol between the original quantities in their original order."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fdp_comparison",
+          "title": "Choose the exact comparison rule",
+          "left": "0.72",
+          "right": "70%",
+          "given": "Choose the correct statement.",
+          "route": "decimal",
+          "steps": [
+            "Convert both quantities to a suitable exact common form.",
+            "Compare place values or equal-sized parts.",
+            "Place the symbol between the original quantities in their original order."
+          ],
+          "math_text": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "explanation_question": true
+        }
+      },
+      "response_feedback": {
+        "The quantity with more digits is always larger.": "The number of printed digits does not determine a quantity’s size.",
+        "A percentage is always larger than a decimal.": "No representation is automatically larger than another; its exact value decides.",
+        "Use = whenever the common-form values are close after rounding.": "Approximate closeness after rounding does not establish exact equality."
+      },
+      "evidence_profile": "place_value_conversion",
+      "retain_answer_specific_feedback": true,
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    }
+  ],
+  "canonical_lesson": {
+    "version": "FDP13-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

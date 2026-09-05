@@ -1,0 +1,3557 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "PC-07 - Decrease an amount using a multiplier",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-18",
+      "sha256": "24504744d992c04f4200c81eed53ddd6cc17ec0956037c5fcd86901e955711e7"
+    },
+    "authored_scope": "Decrease an amount using the correct decimal multiplier.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "PC07-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "verified_full_desktop_all_six_unsupported_ready_phone_correct_amount_missing_method_learning_320_390_equal_piece_removal_reference_remaining_final_roles_real_reload_drafts_locked_answers_units_audio_captions",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        12,
+        15,
+        16,
+        17,
+        18
+      ],
+      "source_repairs_consulted": [
+        2,
+        8,
+        9,
+        10,
+        11,
+        13,
+        14,
+        17,
+        18
+      ],
+      "note": "All eighteen approved source pages, both rendered removal diagrams, the entire old configuration and relevant tests reviewed. Restores 25 active source questions and every guided blank, including the two remaining/final descriptions in G04. Distinct ten-piece removal and twenty-piece reference/removal models preserve unit sizes. Required numerical multiplier evidence is separate from correct final values; valid alternative methods are accepted where unrestricted. A removed-share value alone does not distinguish rate-only working from subtracting a correct remaining product. The source has no fractional threshold, so the shared all-six unsupported gate is documented as an implementation interpretation. No new Entry, Diagnostic, prerequisite mutation, delayed Retrieval or Strong."
+    }
+  },
+  "identity": {
+    "id": "PC-07",
+    "slug": "decrease-an-amount-using-a-multiplier",
+    "title": "Decrease an amount using a multiplier",
+    "strand": "Number",
+    "cluster": "Percentage Change",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Use a decrease multiplier to calculate and interpret the amount remaining after a one-step decrease.",
+    "success_criteria": [
+      "Identify the original amount and decrease direction",
+      "Form a remaining multiplier strictly between zero and one",
+      "Multiply the original by that scale once",
+      "Interpret the product as remaining and therefore final",
+      "Retain exact values and appropriate money or measurement units",
+      "Show the numerical multiplier method only when explicitly requested",
+      "Accept other valid methods where no method is specified"
+    ],
+    "boundaries": {
+      "includes": [
+        "One-step decreases of positive amounts",
+        "Rates strictly above 0% and below 100%",
+        "Whole and accessible decimal rates and original amounts",
+        "Money, measurement, population, visitor and area contexts",
+        "Calculator and valid written multiplication",
+        "Exact equivalent results with appropriate units"
+      ],
+      "excludes": [
+        "Percentage change from two amounts",
+        "Reverse percentage and repeated change",
+        "Negative values or rates and decreases of 100% or more",
+        "Mandatory multiplier methods where the source does not request one",
+        "Entry, Diagnostic, prerequisite mutation, delayed Retrieval and Strong"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "PC-01",
+      "PC-05",
+      "FDP-05"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for PC-01, PC-05, FDP-05 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "single_choice",
+      "percentage_change_fields"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    },
+    "place_value_profile": true
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "A decrease multiplier measures the part remaining; its product with the original is already the final amount.",
+    "invariant": "The original remains the reference whole; removed and remaining amounts keep distinct roles.",
+    "mathematical_rule": "Final amount = original amount × (1 − p/100)",
+    "must_notice": [
+      "The rate alone describes the removed share",
+      "A remaining multiplier is strictly between zero and one",
+      "Apply the scale by multiplication",
+      "The remaining product is not subtracted again",
+      "Correct calculate-and-subtract is not a mathematical misconception"
+    ],
+    "common_confusions": [
+      "Removed-share product submitted as final",
+      "Direct subtraction of the multiplier",
+      "Remaining product subtracted again",
+      "Increase multiplier for a decrease",
+      "Inaccurate multiplication or premature rounding",
+      "Wrong unit"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "Start from the original whole",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Start from the original whole",
+          "initial_state": "Start from the original whole",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Remove equal parts to reveal the remaining amount",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "multiplier_amount_removal",
+            "layout": "remove_pair",
+            "original": 200,
+            "parts": 10,
+            "removedParts": 2,
+            "pieceDecimal": "0.1",
+            "rate": 20,
+            "change": 40,
+            "removedDecimal": "0.2",
+            "multiplier": "0.8",
+            "final": 160,
+            "currency": "$",
+            "solved": true,
+            "steps": [],
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "These ten equal pieces represent the original two hundred dollars. Each piece is ten percent of this same original."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Identify the pieces to remove",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Identify the pieces to remove",
+          "initial_state": "Identify the pieces to remove",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Remove equal parts to reveal the remaining amount",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "multiplier_amount_removal",
+            "layout": "remove_pair",
+            "original": 200,
+            "parts": 10,
+            "removedParts": 2,
+            "pieceDecimal": "0.1",
+            "rate": 20,
+            "change": 40,
+            "removedDecimal": "0.2",
+            "multiplier": "0.8",
+            "final": 160,
+            "currency": "$",
+            "solved": true,
+            "steps": [],
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "The twenty-percent decrease removes two of the original pieces. The highlighted share is the amount taken away, not the final amount."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Keep the remaining pieces",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Keep the remaining pieces",
+          "initial_state": "Keep the remaining pieces",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Remove equal parts to reveal the remaining amount",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "multiplier_amount_removal",
+            "layout": "remove_pair",
+            "original": 200,
+            "parts": 10,
+            "removedParts": 2,
+            "pieceDecimal": "0.1",
+            "rate": 20,
+            "change": 40,
+            "removedDecimal": "0.2",
+            "multiplier": "0.8",
+            "final": 160,
+            "currency": "$",
+            "solved": true,
+            "steps": [],
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "Eight unchanged-size pieces remain. They form eight tenths of the original, so multiplying by zero point eight gives the final price directly."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Connect the remaining bar to multiplication",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Connect the remaining bar to multiplication",
+          "initial_state": "Connect the remaining bar to multiplication",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "The remaining product is already final",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "role_worked",
+            "phase": 1,
+            "solved": true,
+            "symbolic_math": true,
+            "steps": [],
+            "stages": [
+              {
+                "title": "Scale to what remains",
+                "lines": [
+                  "Decrease multiplier = 1 − p/100.",
+                  "Final amount = original amount × decrease multiplier.",
+                  "For a positive decrease, 0 < multiplier < 1 and final amount < original amount."
+                ]
+              }
+            ]
+          }
+        },
+        "narration": {
+          "script": "A decrease multiplier describes the part that stays. Apply it to the original once. The product is already final; subtracting that product would leave the removed share instead."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Use smaller percentage pieces",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Use smaller percentage pieces",
+          "initial_state": "Use smaller percentage pieces",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Connect the decrease to the pieces removed",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "multiplier_amount_removal",
+            "layout": "reference_removal",
+            "original": 300,
+            "parts": 20,
+            "removedParts": 3,
+            "pieceDecimal": "0.05",
+            "rate": 15,
+            "change": 45,
+            "removedDecimal": "0.15",
+            "multiplier": "0.85",
+            "final": 255,
+            "currency": "$",
+            "solved": true,
+            "steps": [],
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "Here three hundred dollars is divided into twenty equal pieces. The decrease will be measured from this original whole."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T06"
+      },
+      {
+        "id": "T06",
+        "stage": "teaching",
+        "purpose": "Identify one original-sized piece",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Identify one original-sized piece",
+          "initial_state": "Identify one original-sized piece",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Connect the decrease to the pieces removed",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "multiplier_amount_removal",
+            "layout": "reference_removal",
+            "original": 300,
+            "parts": 20,
+            "removedParts": 3,
+            "pieceDecimal": "0.05",
+            "rate": 15,
+            "change": 45,
+            "removedDecimal": "0.15",
+            "multiplier": "0.85",
+            "final": 255,
+            "currency": "$",
+            "solved": true,
+            "steps": [],
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "One of these original pieces represents five percent. Keep its size and value fixed when measuring the share to remove."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T07"
+      },
+      {
+        "id": "T07",
+        "stage": "teaching",
+        "purpose": "Remove three matching pieces",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Remove three matching pieces",
+          "initial_state": "Remove three matching pieces",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Connect the decrease to the pieces removed",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "multiplier_amount_removal",
+            "layout": "reference_removal",
+            "original": 300,
+            "parts": 20,
+            "removedParts": 3,
+            "pieceDecimal": "0.05",
+            "rate": 15,
+            "change": 45,
+            "removedDecimal": "0.15",
+            "multiplier": "0.85",
+            "final": 255,
+            "currency": "$",
+            "solved": true,
+            "steps": [],
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "The fifteen-percent decrease removes three pieces of that same size from the original. Together they are the removed share."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T08"
+      },
+      {
+        "id": "T08",
+        "stage": "teaching",
+        "purpose": "Measure the amount remaining",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Measure the amount remaining",
+          "initial_state": "Measure the amount remaining",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Connect the decrease to the pieces removed",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "multiplier_amount_removal",
+            "layout": "reference_removal",
+            "original": 300,
+            "parts": 20,
+            "removedParts": 3,
+            "pieceDecimal": "0.05",
+            "rate": 15,
+            "change": 45,
+            "removedDecimal": "0.15",
+            "multiplier": "0.85",
+            "final": 255,
+            "currency": "$",
+            "solved": true,
+            "steps": [],
+            "phase": 4
+          }
+        },
+        "narration": {
+          "script": "The other seventeen pieces remain. Their scale is zero point eight five of the original, so the multiplier product gives the final amount that stays."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T09"
+      },
+      {
+        "id": "T09",
+        "stage": "teaching",
+        "purpose": "Select the remaining multiplication",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Select the remaining multiplication",
+          "initial_state": "Select the remaining multiplication",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Read the situation",
+            "given": "A quantity of 500 is decreased by 12%. Which calculation gives the final amount using a multiplier?",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "rule",
+            "steps": [
+              "12% = 0.12; 1 − 0.12 = 0.88.",
+              "500 × 0.88 finds the amount remaining."
+            ]
+          }
+        },
+        "narration": {
+          "script": "Choose the calculation that gives the final amount after the decrease using a multiplier."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "PC-07-C01"
+        },
+        "next_step": "T10"
+      },
+      {
+        "id": "T10",
+        "stage": "teaching",
+        "purpose": "Identify the sofa price before the decrease",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Identify the sofa price before the decrease",
+          "initial_state": "Identify the sofa price before the decrease",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Decrease a price using a multiplier",
+            "given": "A sofa costs $640. Decrease its price by 12.5% using a multiplier.",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "role_worked",
+            "solved": true,
+            "steps": [],
+            "stages": [
+              {
+                "title": "Identify the reference and direction",
+                "lines": [
+                  "Original price = $640.",
+                  "Decrease: 0 < final multiplier < 1."
+                ]
+              },
+              {
+                "title": "Form the remaining scale",
+                "lines": [
+                  "12.5% = 0.125.",
+                  "1 − 0.125 = 0.875."
+                ]
+              },
+              {
+                "title": "Apply the multiplier once",
+                "lines": [
+                  "640 × 0.875 = 560.",
+                  "The product is already the final price remaining."
+                ]
+              },
+              {
+                "title": "Check direction and unit",
+                "lines": [
+                  "$560 < $640.",
+                  "New price = $560."
+                ]
+              }
+            ],
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "The price before the change is the reference. The decrease must produce a smaller positive price."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T11"
+      },
+      {
+        "id": "T11",
+        "stage": "teaching",
+        "purpose": "Form the scale for the remaining price",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Form the scale for the remaining price",
+          "initial_state": "Form the scale for the remaining price",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Decrease a price using a multiplier",
+            "given": "A sofa costs $640. Decrease its price by 12.5% using a multiplier.",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "role_worked",
+            "solved": true,
+            "steps": [],
+            "stages": [
+              {
+                "title": "Identify the reference and direction",
+                "lines": [
+                  "Original price = $640.",
+                  "Decrease: 0 < final multiplier < 1."
+                ]
+              },
+              {
+                "title": "Form the remaining scale",
+                "lines": [
+                  "12.5% = 0.125.",
+                  "1 − 0.125 = 0.875."
+                ]
+              },
+              {
+                "title": "Apply the multiplier once",
+                "lines": [
+                  "640 × 0.875 = 560.",
+                  "The product is already the final price remaining."
+                ]
+              },
+              {
+                "title": "Check direction and unit",
+                "lines": [
+                  "$560 < $640.",
+                  "New price = $560."
+                ]
+              }
+            ],
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "Convert the percentage to a decimal share, then subtract that share from one. The last line gives the scale for what remains."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T12"
+      },
+      {
+        "id": "T12",
+        "stage": "teaching",
+        "purpose": "Multiply to find the remaining price",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Multiply to find the remaining price",
+          "initial_state": "Multiply to find the remaining price",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Decrease a price using a multiplier",
+            "given": "A sofa costs $640. Decrease its price by 12.5% using a multiplier.",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "role_worked",
+            "solved": true,
+            "steps": [],
+            "stages": [
+              {
+                "title": "Identify the reference and direction",
+                "lines": [
+                  "Original price = $640.",
+                  "Decrease: 0 < final multiplier < 1."
+                ]
+              },
+              {
+                "title": "Form the remaining scale",
+                "lines": [
+                  "12.5% = 0.125.",
+                  "1 − 0.125 = 0.875."
+                ]
+              },
+              {
+                "title": "Apply the multiplier once",
+                "lines": [
+                  "640 × 0.875 = 560.",
+                  "The product is already the final price remaining."
+                ]
+              },
+              {
+                "title": "Check direction and unit",
+                "lines": [
+                  "$560 < $640.",
+                  "New price = $560."
+                ]
+              }
+            ],
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "Apply that remaining scale to the original price once. Its product is the complete new price, not another amount to take away."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T13"
+      },
+      {
+        "id": "T13",
+        "stage": "teaching",
+        "purpose": "Check the smaller final price",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Check the smaller final price",
+          "initial_state": "Check the smaller final price",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Decrease a price using a multiplier",
+            "given": "A sofa costs $640. Decrease its price by 12.5% using a multiplier.",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "role_worked",
+            "solved": true,
+            "steps": [],
+            "stages": [
+              {
+                "title": "Identify the reference and direction",
+                "lines": [
+                  "Original price = $640.",
+                  "Decrease: 0 < final multiplier < 1."
+                ]
+              },
+              {
+                "title": "Form the remaining scale",
+                "lines": [
+                  "12.5% = 0.125.",
+                  "1 − 0.125 = 0.875."
+                ]
+              },
+              {
+                "title": "Apply the multiplier once",
+                "lines": [
+                  "640 × 0.875 = 560.",
+                  "The product is already the final price remaining."
+                ]
+              },
+              {
+                "title": "Check direction and unit",
+                "lines": [
+                  "$560 < $640.",
+                  "New price = $560."
+                ]
+              }
+            ],
+            "phase": 4
+          }
+        },
+        "narration": {
+          "script": "Check that the product is below the original price and keeps the dollar unit. No further subtraction is needed."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T14"
+      },
+      {
+        "id": "T14",
+        "stage": "teaching",
+        "purpose": "Recognise an equivalent subtraction route",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Recognise an equivalent subtraction route",
+          "initial_state": "Recognise an equivalent subtraction route",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Read the situation",
+            "given": "Which alternative calculation is equivalent to multiplying $640 by 0.875?",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "rule",
+            "steps": [
+              "0.875 = 1 − 0.125.",
+              "640 × 0.875 = 640 − 640 × 0.125.",
+              "Both routes remove the same percentage share once."
+            ]
+          }
+        },
+        "narration": {
+          "script": "Choose the alternative method that removes the same share from the original once."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "PC-07-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "PC-07-G01",
+        "support_level": "high",
+        "pre_question_script": "Identify the original amount and the direction.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "PC-07-G02",
+        "support_level": "high",
+        "pre_question_script": "Convert the rate and form the scale for the part that stays.",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "faded",
+        "question_ref": "PC-07-G03",
+        "support_level": "reduced",
+        "pre_question_script": "Apply the scale to the original price.",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "faded",
+        "question_ref": "PC-07-G04",
+        "support_level": "reduced",
+        "pre_question_script": "Complete both descriptions of the product and give the new price.",
+        "correct_next": "G05"
+      },
+      "G05": {
+        "stage": "independent_transfer",
+        "question_ref": "PC-07-G05",
+        "support_level": "none",
+        "pre_question_script": "Choose the statement that explains the product.",
+        "correct_next": "P01"
+      }
+    },
+    "practice": {
+      "intro_script": "Work independently using paper or a calculator. When a multiplier method is requested, give the numerical multiplier calculation and the final amount. When no method is specified, any exact valid method is accepted.",
+      "question_order": [
+        "PC-07-P01",
+        "PC-07-P02",
+        "PC-07-P03",
+        "PC-07-P04",
+        "PC-07-P05",
+        "PC-07-P06",
+        "PC-07-P07",
+        "PC-07-X01",
+        "PC-07-X02",
+        "PC-07-X03",
+        "PC-07-X04",
+        "PC-07-X05"
+      ],
+      "question_count": 12,
+      "feedback_policy": "No pre-submit worked route or optional hints. Answer-specific clues and sequential working follow demonstrated need, with learner correction required. Correct alternative mathematics is separate from requested multiplier evidence. A removed-share result does not prove which unseen procedure produced it. No diagnostic activation or prerequisite mutation."
+    },
+    "exit": {
+      "intro_script": "Answer all six final questions independently. Use a multiplier for each calculation. Every response locks before any result or working is revealed.",
+      "primary_question_refs": [
+        "PC-07-E01",
+        "PC-07-E02",
+        "PC-07-E03",
+        "PC-07-E04",
+        "PC-07-E05",
+        "PC-07-E06"
+      ],
+      "confirmation_question_refs": [],
+      "submission_policy": "Lock all six responses before any result or working is revealed.",
+      "mastery_policy": {
+        "profile": "all_primary_unsupported_deferred",
+        "source_page": 18,
+        "implementation_interpretation": "The source requires successful completion but gives no fractional threshold. Preserve the shared all-six unsupported rule; numerical finals also require the explicitly requested multiplier representation.",
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "Your final answers used the requested remaining multiplier and identified its product as the final amount. Later retrieval will check that this remains secure.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Keep building remaining-amount calculations",
+      "ryan_script": "Review the saved responses. Apply a remaining multiplier to the original once and report its product as final, with the correct unit.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "PC-07-C01",
+      "source_ref": {
+        "page": 4
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "A quantity of 500 is decreased by 12%. Which calculation gives the final amount using a multiplier?",
+      "target": "Calculate and interpret the amount remaining after a one-step percentage decrease",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "500 × 0.12",
+          "500 × 0.88",
+          "500 − 0.88",
+          "500 × 1.12"
+        ],
+        "math_layout": "decimal_compound_fraction"
+      },
+      "answer": {
+        "value": "500 × 0.88"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The remaining multiplier produces the final amount directly.",
+        "correct_after_support": "The remaining multiplier produces the final amount directly.",
+        "on_correct_math": "12% = 0.12; 1 − 0.12 = 0.88. → 500 × 0.88 finds the amount remaining.",
+        "on_incorrect_attempt_1": "Choose the multiplication that scales the original to the part that remains.",
+        "on_incorrect_attempt_2": "The working separates the removed share from the remaining multiplier.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "12% = 0.12; 1 − 0.12 = 0.88. → 500 × 0.88 finds the amount remaining."
+      },
+      "mathematical_support": {
+        "hint_1": "Choose the multiplication that scales the original to the part that remains.",
+        "hint_2": "The working separates the removed share from the remaining multiplier.",
+        "worked_solution": "12% = 0.12; 1 − 0.12 = 0.88. → 500 × 0.88 finds the amount remaining."
+      },
+      "working": [
+        "12% = 0.12; 1 − 0.12 = 0.88.",
+        "500 × 0.88 finds the amount remaining."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A quantity of 500 is decreased by 12%. Which calculation gives the final amount using a multiplier?",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "12% = 0.12; 1 − 0.12 = 0.88.",
+            "500 × 0.88 finds the amount remaining."
+          ]
+        }
+      },
+      "response_feedback": {
+        "500 × 0.12": "This calculates the removed share, not what remains.",
+        "500 − 0.88": "Subtracting the multiplier directly does not apply it as a scale.",
+        "500 × 1.12": "This multiplier makes the original larger, so it describes an increase."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-07-C02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "Which alternative calculation is equivalent to multiplying $640 by 0.875?",
+      "target": "Calculate and interpret the amount remaining after a one-step percentage decrease",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Find 12.5% of $640 and subtract it once from $640.",
+          "Find 12.5% of $640 and submit that amount.",
+          "Multiply $640 by 1.125.",
+          "Subtract 0.875 directly from $640."
+        ],
+        "math_layout": "decimal_compound_fraction"
+      },
+      "answer": {
+        "value": "Find 12.5% of $640 and subtract it once from $640."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Calculate-and-subtract finds the same remaining amount when the removed share is taken away once.",
+        "correct_after_support": "Calculate-and-subtract finds the same remaining amount when the removed share is taken away once.",
+        "on_correct_math": "0.875 = 1 − 0.125. → 640 × 0.875 = 640 − 640 × 0.125. → Both routes remove the same percentage share once.",
+        "on_incorrect_attempt_1": "Choose the alternative that removes the percentage amount from the original once.",
+        "on_incorrect_attempt_2": "The remaining product is equivalent to subtracting the removed share from the original.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "0.875 = 1 − 0.125. → 640 × 0.875 = 640 − 640 × 0.125. → Both routes remove the same percentage share once."
+      },
+      "mathematical_support": {
+        "hint_1": "Choose the alternative that removes the percentage amount from the original once.",
+        "hint_2": "The remaining product is equivalent to subtracting the removed share from the original.",
+        "worked_solution": "0.875 = 1 − 0.125. → 640 × 0.875 = 640 − 640 × 0.125. → Both routes remove the same percentage share once."
+      },
+      "working": [
+        "0.875 = 1 − 0.125.",
+        "640 × 0.875 = 640 − 640 × 0.125.",
+        "Both routes remove the same percentage share once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "Which alternative calculation is equivalent to multiplying $640 by 0.875?",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "0.875 = 1 − 0.125.",
+            "640 × 0.875 = 640 − 640 × 0.125.",
+            "Both routes remove the same percentage share once."
+          ]
+        }
+      },
+      "response_feedback": {
+        "Find 12.5% of $640 and submit that amount.": "This submits the amount removed instead of the amount remaining.",
+        "Multiply $640 by 1.125.": "This increases the price instead of decreasing it.",
+        "Subtract 0.875 directly from $640.": "The multiplier must scale the original; it is not a fixed subtraction amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-07-G01",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "A camera costs $360. Its price is decreased by 18%. Use a multiplier to work out the new price. Identify the original amount and direction.",
+      "target": "Calculate and interpret the amount remaining after a one-step percentage decrease",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "original",
+            "label": "Original amount",
+            "kind": "number",
+            "unit": "$",
+            "allow_expression": true,
+            "money_display": true
+          },
+          {
+            "key": "direction",
+            "label": "Direction",
+            "kind": "choice",
+            "options": [
+              "increase",
+              "decrease"
+            ]
+          }
+        ],
+        "error_values": [],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Give the requested quantities; exact numerical calculations are accepted. Units are printed beside their number boxes. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "original": "360",
+          "direction": "decrease"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The starting camera price is the reference for the decrease.",
+        "correct_after_support": "The starting camera price is the reference for the decrease.",
+        "on_correct_math": "Original price = $360. → Direction = decrease, so the final scale is between zero and one.",
+        "on_incorrect_attempt_1": "Identify the price before the change and the direction named in the question.",
+        "on_incorrect_attempt_2": "The working keeps the price before the decrease separate from the removed share and remaining price.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Original price = $360. → Direction = decrease, so the final scale is between zero and one."
+      },
+      "mathematical_support": {
+        "hint_1": "Identify the price before the change and the direction named in the question.",
+        "hint_2": "The working keeps the price before the decrease separate from the removed share and remaining price.",
+        "worked_solution": "Original price = $360. → Direction = decrease, so the final scale is between zero and one."
+      },
+      "working": [
+        "Original price = $360.",
+        "Direction = decrease, so the final scale is between zero and one."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A camera costs $360. Its price is decreased by 18%. Use a multiplier to work out the new price. Identify the original amount and direction.",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Original price = $360.",
+            "Direction = decrease, so the final scale is between zero and one."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_original": "Your direction is right. Identify the price before the decrease.",
+        "check_direction": "Your original amount is right. Follow the direction named in the question.",
+        "check_multiple": "Use the price before the change and the stated direction.",
+        "check_unit": "Keep the units printed beside the amount boxes. Decimal rates and multipliers have no unit."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-07-G02",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "A camera costs $360. Its price is decreased by 18%. Use a multiplier to work out the new price. Complete: 18% = decimal rate; 1 − removed share = multiplier.",
+      "target": "Calculate and interpret the amount remaining after a one-step percentage decrease",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "decimal_rate",
+            "label": "Decimal rate",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true,
+            "decimal_result_only": true
+          },
+          {
+            "key": "removed_share",
+            "label": "Removed share",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true,
+            "decimal_result_only": true
+          },
+          {
+            "key": "multiplier",
+            "label": "Multiplier",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true,
+            "decimal_result_only": true
+          }
+        ],
+        "error_values": [],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Give the requested quantities; exact numerical calculations are accepted. Units are printed beside their number boxes. No written explanation is required. Finish a decimal or multiplier box with a decimal result."
+      },
+      "answer": {
+        "value": {
+          "decimal_rate": "0.18",
+          "removed_share": "0.18",
+          "multiplier": "0.82"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The converted decrease share and the remaining multiplier keep their different roles.",
+        "correct_after_support": "The converted decrease share and the remaining multiplier keep their different roles.",
+        "on_correct_math": "18% = 18/100 = 0.18. → 1 − 0.18 = 0.82.",
+        "on_incorrect_attempt_1": "Convert the decrease to a share of one, then remove that share to form the remaining scale.",
+        "on_incorrect_attempt_2": "The first two blanks describe the same removed share. The last blank describes what remains of one original whole.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "18% = 18/100 = 0.18. → 1 − 0.18 = 0.82."
+      },
+      "mathematical_support": {
+        "hint_1": "Convert the decrease to a share of one, then remove that share to form the remaining scale.",
+        "hint_2": "The first two blanks describe the same removed share. The last blank describes what remains of one original whole.",
+        "worked_solution": "18% = 18/100 = 0.18. → 1 − 0.18 = 0.82."
+      },
+      "working": [
+        "18% = 18/100 = 0.18.",
+        "1 − 0.18 = 0.82."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A camera costs $360. Its price is decreased by 18%. Use a multiplier to work out the new price. Complete: 18% = decimal rate; 1 − removed share = multiplier.",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "18% = 18/100 = 0.18.",
+            "1 − 0.18 = 0.82."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_decimal_rate": "Your other values are right. Convert the stated percentage to a decimal share.",
+        "check_removed_share": "Your conversion and remaining scale are right. Subtract the converted share from one.",
+        "check_multiplier": "Your removed share is right. The multiplier must describe what remains of one whole.",
+        "check_multiple": "Keep the removed decimal share separate from the multiplier for the remaining price.",
+        "check_unit": "Keep the units printed beside the amount boxes. Decimal rates and multipliers have no unit.",
+        "check_decimal_form": "Finish this box with the decimal value. A correct calculation before the equals sign may remain."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-07-G03",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "faded",
+      "prompt": "A camera costs $360. Its price is decreased by 18%. Use a multiplier to work out the new price. Complete: $360 × multiplier = product.",
+      "target": "Calculate and interpret the amount remaining after a one-step percentage decrease",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "multiplier",
+            "label": "Multiplier",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true,
+            "decimal_result_only": true
+          },
+          {
+            "key": "product",
+            "label": "Product",
+            "kind": "number",
+            "unit": "$",
+            "allow_expression": true,
+            "money_display": true
+          }
+        ],
+        "error_values": [],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Give the requested quantities; exact numerical calculations are accepted. Units are printed beside their number boxes. No written explanation is required. Finish a decimal or multiplier box with a decimal result."
+      },
+      "answer": {
+        "value": {
+          "multiplier": "0.82",
+          "product": "295.20"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The multiplication gives the remaining camera price directly.",
+        "correct_after_support": "The multiplication gives the remaining camera price directly.",
+        "on_correct_math": "The remaining multiplier is 0.82. → 360 × 0.82 = 295.20.",
+        "on_incorrect_attempt_1": "Apply the remaining scale to the original price, keeping the multiplication exact.",
+        "on_incorrect_attempt_2": "The working scales the original price to what remains after the decrease.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "The remaining multiplier is 0.82. → 360 × 0.82 = 295.20."
+      },
+      "mathematical_support": {
+        "hint_1": "Apply the remaining scale to the original price, keeping the multiplication exact.",
+        "hint_2": "The working scales the original price to what remains after the decrease.",
+        "worked_solution": "The remaining multiplier is 0.82. → 360 × 0.82 = 295.20."
+      },
+      "working": [
+        "The remaining multiplier is 0.82.",
+        "360 × 0.82 = 295.20."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A camera costs $360. Its price is decreased by 18%. Use a multiplier to work out the new price. Complete: $360 × multiplier = product.",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "The remaining multiplier is 0.82.",
+            "360 × 0.82 = 295.20."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_multiplier": "Your product is right. Use the scale for what remains, not the removed share.",
+        "check_product": "Your multiplier is right. Check its product before reporting the remaining price.",
+        "check_multiple": "Multiply the original by the remaining scale and keep the exact product.",
+        "check_unit": "Keep the units printed beside the amount boxes. Decimal rates and multipliers have no unit.",
+        "check_decimal_form": "Finish this box with the decimal value. A correct calculation before the equals sign may remain."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-07-G04",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "faded",
+      "prompt": "A camera costs $360. Its price is decreased by 18%. Use a multiplier to work out the new price. Complete both descriptions: the product is the amount ___, so it is the ___ amount. Give the new price.",
+      "target": "Calculate and interpret the amount remaining after a one-step percentage decrease",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "remaining",
+            "label": "Product describes",
+            "kind": "choice",
+            "options": [
+              "remaining",
+              "removed",
+              "original"
+            ]
+          },
+          {
+            "key": "role",
+            "label": "Amount role",
+            "kind": "choice",
+            "options": [
+              "original",
+              "change",
+              "final"
+            ]
+          },
+          {
+            "key": "answer",
+            "label": "New price",
+            "kind": "number",
+            "unit": "$",
+            "allow_expression": true,
+            "money_display": true
+          }
+        ],
+        "error_values": [],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Give the requested quantities; exact numerical calculations are accepted. Units are printed beside their number boxes. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "remaining": "remaining",
+          "role": "final",
+          "answer": "295.20"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The amount remaining is the final price, with no second subtraction.",
+        "correct_after_support": "The amount remaining is the final price, with no second subtraction.",
+        "on_correct_math": "The multiplier describes the 82% that remains. → The product is the amount remaining, so it is the final amount. → New price = $295.20.",
+        "on_incorrect_attempt_1": "Decide what the product contains, then name its role in the completed decrease.",
+        "on_incorrect_attempt_2": "The product already measures what stays after removal. It needs no further subtraction from the original.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "The multiplier describes the 82% that remains. → The product is the amount remaining, so it is the final amount. → New price = $295.20."
+      },
+      "mathematical_support": {
+        "hint_1": "Decide what the product contains, then name its role in the completed decrease.",
+        "hint_2": "The product already measures what stays after removal. It needs no further subtraction from the original.",
+        "worked_solution": "The multiplier describes the 82% that remains. → The product is the amount remaining, so it is the final amount. → New price = $295.20."
+      },
+      "working": [
+        "The multiplier describes the 82% that remains.",
+        "The product is the amount remaining, so it is the final amount.",
+        "New price = $295.20."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A camera costs $360. Its price is decreased by 18%. Use a multiplier to work out the new price. Complete both descriptions: the product is the amount ___, so it is the ___ amount. Give the new price.",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "The multiplier describes the 82% that remains.",
+            "The product is the amount remaining, so it is the final amount.",
+            "New price = $295.20."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_remaining": "Your role and price are right. Decide whether this multiplier measures what stays or what is taken away.",
+        "check_role": "Your remaining amount and price are right. Name the role of the amount after the decrease.",
+        "check_answer": "Both descriptions are right. Report the product as the new price.",
+        "check_multiple": "Link the remaining scale to its product, then identify that product as the completed price.",
+        "check_unit": "Keep the units printed beside the amount boxes. Decimal rates and multipliers have no unit."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-07-G05",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "independent_transfer",
+      "prompt": "Why is the result of 360 × 0.82 already the final amount?",
+      "target": "Calculate and interpret the amount remaining after a one-step percentage decrease",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "The multiplier represents only the 18% removed.",
+          "The multiplier represents the 82% of the original that remains.",
+          "The result must still be subtracted from 360.",
+          "A multiplier below 1 always represents an increase."
+        ],
+        "math_layout": "decimal_compound_fraction"
+      },
+      "answer": {
+        "value": "The multiplier represents the 82% of the original that remains."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "This product is final because its scale measures what remains.",
+        "correct_after_support": "This product is final because its scale measures what remains.",
+        "on_correct_math": "0.82 describes the part of the original that remains. → The product therefore gives the final amount.",
+        "on_incorrect_attempt_1": "Interpret the part of the original represented by this scale.",
+        "on_incorrect_attempt_2": "The multiplier describes the remaining share, so its product is already the remaining final amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "0.82 describes the part of the original that remains. → The product therefore gives the final amount."
+      },
+      "mathematical_support": {
+        "hint_1": "Interpret the part of the original represented by this scale.",
+        "hint_2": "The multiplier describes the remaining share, so its product is already the remaining final amount.",
+        "worked_solution": "0.82 describes the part of the original that remains. → The product therefore gives the final amount."
+      },
+      "working": [
+        "0.82 describes the part of the original that remains.",
+        "The product therefore gives the final amount."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "Why is the result of 360 × 0.82 already the final amount?",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "0.82 describes the part of the original that remains.",
+            "The product therefore gives the final amount."
+          ]
+        }
+      },
+      "response_feedback": {
+        "The multiplier represents only the 18% removed.": "That confuses the removed share with the remaining multiplier.",
+        "The result must still be subtracted from 360.": "Subtracting the remaining product would leave the removed share instead.",
+        "A multiplier below 1 always represents an increase.": "A positive multiplier below one makes the amount smaller."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-07-P01",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Decrease $250 by 12%. Use a multiplier.",
+      "target": "Calculate and interpret the amount remaining after a one-step percentage decrease",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "calculation",
+            "label": "Multiplier calculation",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true
+          },
+          {
+            "key": "answer",
+            "label": "Final amount",
+            "kind": "number",
+            "unit": "$",
+            "allow_expression": true,
+            "money_display": true
+          }
+        ],
+        "error_values": [
+          {
+            "field": "answer",
+            "value": "30",
+            "classification": "removed_not_final"
+          },
+          {
+            "field": "answer",
+            "value": "249.12",
+            "classification": "subtract_multiplier"
+          },
+          {
+            "field": "answer",
+            "value": "280",
+            "classification": "wrong_direction"
+          }
+        ],
+        "unit_feedback": true,
+        "multiplier_method": {
+          "original": "250",
+          "multiplier": "0.88",
+          "calculation_key": "calculation",
+          "answer_key": "answer"
+        },
+        "input_note": "Use paper or a calculator. Enter a numerical multiplier calculation, then your final amount. You can use *, ×, /, parentheses or an equal-value calculation chain; no written explanation is required. Units are printed beside the final amount."
+      },
+      "answer": {
+        "value": {
+          "calculation": "250 * 0.88",
+          "answer": "220"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The remaining multiplier gives the complete reduced price.",
+        "correct_after_support": "The remaining multiplier gives the complete reduced price.",
+        "on_correct_math": "12% = 0.12; 1 − 0.12 = 0.88. → 250 × 0.88 = 220. → Final amount = $220; less than the original $250.",
+        "on_incorrect_attempt_1": "Use the amount before the decrease as the reference. The requested final amount is the part that stays after the decrease.",
+        "on_incorrect_attempt_2": "The working forms the remaining scale, multiplies the original by it once, and checks the smaller final amount and its unit.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "12% = 0.12; 1 − 0.12 = 0.88. → 250 × 0.88 = 220. → Final amount = $220; less than the original $250."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the amount before the decrease as the reference. The requested final amount is the part that stays after the decrease.",
+        "hint_2": "The working forms the remaining scale, multiplies the original by it once, and checks the smaller final amount and its unit.",
+        "worked_solution": "12% = 0.12; 1 − 0.12 = 0.88. → 250 × 0.88 = 220. → Final amount = $220; less than the original $250."
+      },
+      "working": [
+        "12% = 0.12; 1 − 0.12 = 0.88.",
+        "250 × 0.88 = 220.",
+        "Final amount = $220; less than the original $250."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "Decrease $250 by 12%. Use a multiplier.",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "12% = 0.12; 1 − 0.12 = 0.88.",
+            "250 × 0.88 = 220.",
+            "Final amount = $220; less than the original $250."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_calculation": "Your final amount is right. Check that the numerical calculation applies the remaining multiplier to the original.",
+        "check_answer": "Your multiplier calculation is right. Its product is the amount remaining; report that product as final.",
+        "check_multiple": "Use a scale for the part remaining and apply it to the original. The product is already final, not another amount to subtract.",
+        "check_requested_method": "Your final amount is correct. This question also requests a multiplier calculation. Show the remaining scale applied to the original.",
+        "removed_not_final": "That number describes the removed share, not the final amount remaining. A remaining-multiplier product is already final.",
+        "subtract_multiplier": "A multiplier is a scale, not a fixed amount to subtract. Apply the scale by multiplication.",
+        "wrong_direction": "This is a positive decrease. The final amount must be below the original, not above it.",
+        "check_unit": "Give the final money amount in dollars, as printed. Keep the numerical multiplier calculation free of units."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true,
+      "retain_answer_specific_feedback": true
+    },
+    {
+      "id": "PC-07-P02",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Decrease 680 by 5%. Use a multiplier.",
+      "target": "Calculate and interpret the amount remaining after a one-step percentage decrease",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "calculation",
+            "label": "Multiplier calculation",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true
+          },
+          {
+            "key": "answer",
+            "label": "Final amount",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true
+          }
+        ],
+        "error_values": [
+          {
+            "field": "answer",
+            "value": "34",
+            "classification": "removed_not_final"
+          },
+          {
+            "field": "answer",
+            "value": "679.05",
+            "classification": "subtract_multiplier"
+          },
+          {
+            "field": "answer",
+            "value": "714",
+            "classification": "wrong_direction"
+          }
+        ],
+        "unit_feedback": true,
+        "multiplier_method": {
+          "original": "680",
+          "multiplier": "0.95",
+          "calculation_key": "calculation",
+          "answer_key": "answer"
+        },
+        "input_note": "Use paper or a calculator. Enter a numerical multiplier calculation, then your final amount. You can use *, ×, /, parentheses or an equal-value calculation chain; no written explanation is required. Units are printed beside the final amount."
+      },
+      "answer": {
+        "value": {
+          "calculation": "680 * 0.95",
+          "answer": "646"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The final amount retains the part left after the five-percent decrease.",
+        "correct_after_support": "The final amount retains the part left after the five-percent decrease.",
+        "on_correct_math": "5% = 0.05; 1 − 0.05 = 0.95. → 680 × 0.95 = 646. → Final amount = 646; less than the original 680.",
+        "on_incorrect_attempt_1": "Use the amount before the decrease as the reference. The requested final amount is the part that stays after the decrease.",
+        "on_incorrect_attempt_2": "The working forms the remaining scale, multiplies the original by it once, and checks the smaller final amount and its unit.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "5% = 0.05; 1 − 0.05 = 0.95. → 680 × 0.95 = 646. → Final amount = 646; less than the original 680."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the amount before the decrease as the reference. The requested final amount is the part that stays after the decrease.",
+        "hint_2": "The working forms the remaining scale, multiplies the original by it once, and checks the smaller final amount and its unit.",
+        "worked_solution": "5% = 0.05; 1 − 0.05 = 0.95. → 680 × 0.95 = 646. → Final amount = 646; less than the original 680."
+      },
+      "working": [
+        "5% = 0.05; 1 − 0.05 = 0.95.",
+        "680 × 0.95 = 646.",
+        "Final amount = 646; less than the original 680."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "Decrease 680 by 5%. Use a multiplier.",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "5% = 0.05; 1 − 0.05 = 0.95.",
+            "680 × 0.95 = 646.",
+            "Final amount = 646; less than the original 680."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_calculation": "Your final amount is right. Check that the numerical calculation applies the remaining multiplier to the original.",
+        "check_answer": "Your multiplier calculation is right. Its product is the amount remaining; report that product as final.",
+        "check_multiple": "Use a scale for the part remaining and apply it to the original. The product is already final, not another amount to subtract.",
+        "check_requested_method": "Your final amount is correct. This question also requests a multiplier calculation. Show the remaining scale applied to the original.",
+        "removed_not_final": "That number describes the removed share, not the final amount remaining. A remaining-multiplier product is already final.",
+        "subtract_multiplier": "A multiplier is a scale, not a fixed amount to subtract. Apply the scale by multiplication.",
+        "wrong_direction": "This is a positive decrease. The final amount must be below the original, not above it.",
+        "check_unit": "Give the final number without a percent sign or currency unit. Keep the numerical multiplier calculation free of units."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true,
+      "retain_answer_specific_feedback": true
+    },
+    {
+      "id": "PC-07-P03",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "A length of 4.8 m is decreased by 25%. Work out the new length. Use a multiplier.",
+      "target": "Calculate and interpret the amount remaining after a one-step percentage decrease",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "calculation",
+            "label": "Multiplier calculation",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true
+          },
+          {
+            "key": "answer",
+            "label": "Final amount",
+            "kind": "number",
+            "unit": "m",
+            "allow_expression": true,
+            "unit_aliases": [
+              "m",
+              "metre",
+              "metres"
+            ]
+          }
+        ],
+        "error_values": [
+          {
+            "field": "answer",
+            "value": "1.2",
+            "classification": "removed_not_final"
+          },
+          {
+            "field": "answer",
+            "value": "4.05",
+            "classification": "subtract_multiplier"
+          },
+          {
+            "field": "answer",
+            "value": "6",
+            "classification": "wrong_direction"
+          }
+        ],
+        "unit_feedback": true,
+        "multiplier_method": {
+          "original": "4.8",
+          "multiplier": "0.75",
+          "calculation_key": "calculation",
+          "answer_key": "answer"
+        },
+        "input_note": "Use paper or a calculator. Enter a numerical multiplier calculation, then your final amount. You can use *, ×, /, parentheses or an equal-value calculation chain; no written explanation is required. Units are printed beside the final amount."
+      },
+      "answer": {
+        "value": {
+          "calculation": "4.8 * 0.75",
+          "answer": "3.6"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The reduced length keeps its metre unit.",
+        "correct_after_support": "The reduced length keeps its metre unit.",
+        "on_correct_math": "25% = 0.25; 1 − 0.25 = 0.75. → 4.8 × 0.75 = 3.6. → Final amount = 3.6 m; less than the original 4.8 m.",
+        "on_incorrect_attempt_1": "Use the amount before the decrease as the reference. The requested final amount is the part that stays after the decrease.",
+        "on_incorrect_attempt_2": "The working forms the remaining scale, multiplies the original by it once, and checks the smaller final amount and its unit.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "25% = 0.25; 1 − 0.25 = 0.75. → 4.8 × 0.75 = 3.6. → Final amount = 3.6 m; less than the original 4.8 m."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the amount before the decrease as the reference. The requested final amount is the part that stays after the decrease.",
+        "hint_2": "The working forms the remaining scale, multiplies the original by it once, and checks the smaller final amount and its unit.",
+        "worked_solution": "25% = 0.25; 1 − 0.25 = 0.75. → 4.8 × 0.75 = 3.6. → Final amount = 3.6 m; less than the original 4.8 m."
+      },
+      "working": [
+        "25% = 0.25; 1 − 0.25 = 0.75.",
+        "4.8 × 0.75 = 3.6.",
+        "Final amount = 3.6 m; less than the original 4.8 m."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A length of 4.8 m is decreased by 25%. Work out the new length. Use a multiplier.",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "25% = 0.25; 1 − 0.25 = 0.75.",
+            "4.8 × 0.75 = 3.6.",
+            "Final amount = 3.6 m; less than the original 4.8 m."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_calculation": "Your final amount is right. Check that the numerical calculation applies the remaining multiplier to the original.",
+        "check_answer": "Your multiplier calculation is right. Its product is the amount remaining; report that product as final.",
+        "check_multiple": "Use a scale for the part remaining and apply it to the original. The product is already final, not another amount to subtract.",
+        "check_requested_method": "Your final amount is correct. This question also requests a multiplier calculation. Show the remaining scale applied to the original.",
+        "removed_not_final": "That number describes the removed share, not the final amount remaining. A remaining-multiplier product is already final.",
+        "subtract_multiplier": "A multiplier is a scale, not a fixed amount to subtract. Apply the scale by multiplication.",
+        "wrong_direction": "This is a positive decrease. The final amount must be below the original, not above it.",
+        "check_unit": "Give the final length in metres, as printed. Keep the numerical multiplier calculation free of units."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true,
+      "retain_answer_specific_feedback": true
+    },
+    {
+      "id": "PC-07-P04",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Decrease $72.50 by 8%. Use a multiplier.",
+      "target": "Calculate and interpret the amount remaining after a one-step percentage decrease",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "calculation",
+            "label": "Multiplier calculation",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true
+          },
+          {
+            "key": "answer",
+            "label": "Final amount",
+            "kind": "number",
+            "unit": "$",
+            "allow_expression": true,
+            "money_display": true
+          }
+        ],
+        "error_values": [
+          {
+            "field": "answer",
+            "value": "5.8",
+            "classification": "removed_not_final"
+          },
+          {
+            "field": "answer",
+            "value": "71.58",
+            "classification": "subtract_multiplier"
+          },
+          {
+            "field": "answer",
+            "value": "78.3",
+            "classification": "wrong_direction"
+          }
+        ],
+        "unit_feedback": true,
+        "multiplier_method": {
+          "original": "72.5",
+          "multiplier": "0.92",
+          "calculation_key": "calculation",
+          "answer_key": "answer"
+        },
+        "input_note": "Use paper or a calculator. Enter a numerical multiplier calculation, then your final amount. You can use *, ×, /, parentheses or an equal-value calculation chain; no written explanation is required. Units are printed beside the final amount."
+      },
+      "answer": {
+        "value": {
+          "calculation": "72.5 * 0.92",
+          "answer": "66.70"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The exact product gives the money remaining after the decrease.",
+        "correct_after_support": "The exact product gives the money remaining after the decrease.",
+        "on_correct_math": "8% = 0.08; 1 − 0.08 = 0.92. → 72.5 × 0.92 = 66.70. → Final amount = $66.70; less than the original $72.5.",
+        "on_incorrect_attempt_1": "Use the amount before the decrease as the reference. The requested final amount is the part that stays after the decrease.",
+        "on_incorrect_attempt_2": "The working forms the remaining scale, multiplies the original by it once, and checks the smaller final amount and its unit.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "8% = 0.08; 1 − 0.08 = 0.92. → 72.5 × 0.92 = 66.70. → Final amount = $66.70; less than the original $72.5."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the amount before the decrease as the reference. The requested final amount is the part that stays after the decrease.",
+        "hint_2": "The working forms the remaining scale, multiplies the original by it once, and checks the smaller final amount and its unit.",
+        "worked_solution": "8% = 0.08; 1 − 0.08 = 0.92. → 72.5 × 0.92 = 66.70. → Final amount = $66.70; less than the original $72.5."
+      },
+      "working": [
+        "8% = 0.08; 1 − 0.08 = 0.92.",
+        "72.5 × 0.92 = 66.70.",
+        "Final amount = $66.70; less than the original $72.5."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "Decrease $72.50 by 8%. Use a multiplier.",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "8% = 0.08; 1 − 0.08 = 0.92.",
+            "72.5 × 0.92 = 66.70.",
+            "Final amount = $66.70; less than the original $72.5."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_calculation": "Your final amount is right. Check that the numerical calculation applies the remaining multiplier to the original.",
+        "check_answer": "Your multiplier calculation is right. Its product is the amount remaining; report that product as final.",
+        "check_multiple": "Use a scale for the part remaining and apply it to the original. The product is already final, not another amount to subtract.",
+        "check_requested_method": "Your final amount is correct. This question also requests a multiplier calculation. Show the remaining scale applied to the original.",
+        "removed_not_final": "That number describes the removed share, not the final amount remaining. A remaining-multiplier product is already final.",
+        "subtract_multiplier": "A multiplier is a scale, not a fixed amount to subtract. Apply the scale by multiplication.",
+        "wrong_direction": "This is a positive decrease. The final amount must be below the original, not above it.",
+        "check_unit": "Give the final money amount in dollars, as printed. Keep the numerical multiplier calculation free of units."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true,
+      "retain_answer_specific_feedback": true
+    },
+    {
+      "id": "PC-07-P05",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "A population of 1200 decreases by 3.5%. Work out the new population. Use a multiplier.",
+      "target": "Calculate and interpret the amount remaining after a one-step percentage decrease",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "calculation",
+            "label": "Multiplier calculation",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true
+          },
+          {
+            "key": "answer",
+            "label": "Final amount",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true
+          }
+        ],
+        "error_values": [
+          {
+            "field": "answer",
+            "value": "42",
+            "classification": "removed_not_final"
+          },
+          {
+            "field": "answer",
+            "value": "1199.035",
+            "classification": "subtract_multiplier"
+          },
+          {
+            "field": "answer",
+            "value": "1242",
+            "classification": "wrong_direction"
+          }
+        ],
+        "unit_feedback": true,
+        "multiplier_method": {
+          "original": "1200",
+          "multiplier": "0.965",
+          "calculation_key": "calculation",
+          "answer_key": "answer"
+        },
+        "input_note": "Use paper or a calculator. Enter a numerical multiplier calculation, then your final amount. You can use *, ×, /, parentheses or an equal-value calculation chain; no written explanation is required. Units are printed beside the final amount."
+      },
+      "answer": {
+        "value": {
+          "calculation": "1200 * 0.965",
+          "answer": "1158"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The decimal-rate multiplier gives the population that remains.",
+        "correct_after_support": "The decimal-rate multiplier gives the population that remains.",
+        "on_correct_math": "3.5% = 0.035; 1 − 0.035 = 0.965. → 1200 × 0.965 = 1158. → Final amount = 1158; less than the original 1200.",
+        "on_incorrect_attempt_1": "Use the amount before the decrease as the reference. The requested final amount is the part that stays after the decrease.",
+        "on_incorrect_attempt_2": "The working forms the remaining scale, multiplies the original by it once, and checks the smaller final amount and its unit.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "3.5% = 0.035; 1 − 0.035 = 0.965. → 1200 × 0.965 = 1158. → Final amount = 1158; less than the original 1200."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the amount before the decrease as the reference. The requested final amount is the part that stays after the decrease.",
+        "hint_2": "The working forms the remaining scale, multiplies the original by it once, and checks the smaller final amount and its unit.",
+        "worked_solution": "3.5% = 0.035; 1 − 0.035 = 0.965. → 1200 × 0.965 = 1158. → Final amount = 1158; less than the original 1200."
+      },
+      "working": [
+        "3.5% = 0.035; 1 − 0.035 = 0.965.",
+        "1200 × 0.965 = 1158.",
+        "Final amount = 1158; less than the original 1200."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A population of 1200 decreases by 3.5%. Work out the new population. Use a multiplier.",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "3.5% = 0.035; 1 − 0.035 = 0.965.",
+            "1200 × 0.965 = 1158.",
+            "Final amount = 1158; less than the original 1200."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_calculation": "Your final amount is right. Check that the numerical calculation applies the remaining multiplier to the original.",
+        "check_answer": "Your multiplier calculation is right. Its product is the amount remaining; report that product as final.",
+        "check_multiple": "Use a scale for the part remaining and apply it to the original. The product is already final, not another amount to subtract.",
+        "check_requested_method": "Your final amount is correct. This question also requests a multiplier calculation. Show the remaining scale applied to the original.",
+        "removed_not_final": "That number describes the removed share, not the final amount remaining. A remaining-multiplier product is already final.",
+        "subtract_multiplier": "A multiplier is a scale, not a fixed amount to subtract. Apply the scale by multiplication.",
+        "wrong_direction": "This is a positive decrease. The final amount must be below the original, not above it.",
+        "check_unit": "Give the final number without a percent sign or currency unit. Keep the numerical multiplier calculation free of units."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true,
+      "retain_answer_specific_feedback": true
+    },
+    {
+      "id": "PC-07-P06",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Decrease 46 cm by 40%. Use a multiplier.",
+      "target": "Calculate and interpret the amount remaining after a one-step percentage decrease",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "calculation",
+            "label": "Multiplier calculation",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true
+          },
+          {
+            "key": "answer",
+            "label": "Final amount",
+            "kind": "number",
+            "unit": "cm",
+            "allow_expression": true,
+            "unit_aliases": [
+              "cm",
+              "centimetre",
+              "centimetres"
+            ]
+          }
+        ],
+        "error_values": [
+          {
+            "field": "answer",
+            "value": "18.4",
+            "classification": "removed_not_final"
+          },
+          {
+            "field": "answer",
+            "value": "45.4",
+            "classification": "subtract_multiplier"
+          },
+          {
+            "field": "answer",
+            "value": "64.4",
+            "classification": "wrong_direction"
+          }
+        ],
+        "unit_feedback": true,
+        "multiplier_method": {
+          "original": "46",
+          "multiplier": "0.6",
+          "calculation_key": "calculation",
+          "answer_key": "answer"
+        },
+        "input_note": "Use paper or a calculator. Enter a numerical multiplier calculation, then your final amount. You can use *, ×, /, parentheses or an equal-value calculation chain; no written explanation is required. Units are printed beside the final amount."
+      },
+      "answer": {
+        "value": {
+          "calculation": "46 * 0.6",
+          "answer": "27.6"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The remaining length is expressed in centimetres.",
+        "correct_after_support": "The remaining length is expressed in centimetres.",
+        "on_correct_math": "40% = 0.4; 1 − 0.4 = 0.6. → 46 × 0.6 = 27.6. → Final amount = 27.6 cm; less than the original 46 cm.",
+        "on_incorrect_attempt_1": "Use the amount before the decrease as the reference. The requested final amount is the part that stays after the decrease.",
+        "on_incorrect_attempt_2": "The working forms the remaining scale, multiplies the original by it once, and checks the smaller final amount and its unit.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "40% = 0.4; 1 − 0.4 = 0.6. → 46 × 0.6 = 27.6. → Final amount = 27.6 cm; less than the original 46 cm."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the amount before the decrease as the reference. The requested final amount is the part that stays after the decrease.",
+        "hint_2": "The working forms the remaining scale, multiplies the original by it once, and checks the smaller final amount and its unit.",
+        "worked_solution": "40% = 0.4; 1 − 0.4 = 0.6. → 46 × 0.6 = 27.6. → Final amount = 27.6 cm; less than the original 46 cm."
+      },
+      "working": [
+        "40% = 0.4; 1 − 0.4 = 0.6.",
+        "46 × 0.6 = 27.6.",
+        "Final amount = 27.6 cm; less than the original 46 cm."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "Decrease 46 cm by 40%. Use a multiplier.",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "40% = 0.4; 1 − 0.4 = 0.6.",
+            "46 × 0.6 = 27.6.",
+            "Final amount = 27.6 cm; less than the original 46 cm."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_calculation": "Your final amount is right. Check that the numerical calculation applies the remaining multiplier to the original.",
+        "check_answer": "Your multiplier calculation is right. Its product is the amount remaining; report that product as final.",
+        "check_multiple": "Use a scale for the part remaining and apply it to the original. The product is already final, not another amount to subtract.",
+        "check_requested_method": "Your final amount is correct. This question also requests a multiplier calculation. Show the remaining scale applied to the original.",
+        "removed_not_final": "That number describes the removed share, not the final amount remaining. A remaining-multiplier product is already final.",
+        "subtract_multiplier": "A multiplier is a scale, not a fixed amount to subtract. Apply the scale by multiplication.",
+        "wrong_direction": "This is a positive decrease. The final amount must be below the original, not above it.",
+        "check_unit": "Give the final length in centimetres, as printed. Keep the numerical multiplier calculation free of units."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true,
+      "retain_answer_specific_feedback": true
+    },
+    {
+      "id": "PC-07-P07",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "A student multiplies an original amount by 0.93. What does the product represent?",
+      "target": "Calculate and interpret the amount remaining after a one-step percentage decrease",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "The 7% decrease amount only.",
+          "The final amount after a 7% decrease.",
+          "The original amount before the decrease.",
+          "The final amount after a 7% increase."
+        ],
+        "math_layout": "decimal_compound_fraction"
+      },
+      "answer": {
+        "value": "The final amount after a 7% decrease."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "This product describes the final amount after the decrease.",
+        "correct_after_support": "This product describes the final amount after the decrease.",
+        "on_correct_math": "0.93 represents the 93% that remains. → The product is final after a 7% decrease.",
+        "on_incorrect_attempt_1": "Interpret which part of the original the scale keeps.",
+        "on_incorrect_attempt_2": "The remaining scale excludes the removed share and gives the final amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "0.93 represents the 93% that remains. → The product is final after a 7% decrease."
+      },
+      "mathematical_support": {
+        "hint_1": "Interpret which part of the original the scale keeps.",
+        "hint_2": "The remaining scale excludes the removed share and gives the final amount.",
+        "worked_solution": "0.93 represents the 93% that remains. → The product is final after a 7% decrease."
+      },
+      "working": [
+        "0.93 represents the 93% that remains.",
+        "The product is final after a 7% decrease."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A student multiplies an original amount by 0.93. What does the product represent?",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "0.93 represents the 93% that remains.",
+            "The product is final after a 7% decrease."
+          ]
+        }
+      },
+      "response_feedback": {
+        "The 7% decrease amount only.": "The scale represents the part remaining, not the seven-percent removal.",
+        "The original amount before the decrease.": "The multiplier changes the original to a smaller remaining amount.",
+        "The final amount after a 7% increase.": "A multiplier below one decreases the original amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-07-X01",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A television costs $750. The price is decreased by 12%. Work out the new price. Use a multiplier.",
+      "target": "Calculate and interpret the amount remaining after a one-step percentage decrease",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "calculation",
+            "label": "Multiplier calculation",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true
+          },
+          {
+            "key": "answer",
+            "label": "Final amount",
+            "kind": "number",
+            "unit": "$",
+            "allow_expression": true,
+            "money_display": true
+          }
+        ],
+        "error_values": [
+          {
+            "field": "answer",
+            "value": "90",
+            "classification": "removed_not_final"
+          },
+          {
+            "field": "answer",
+            "value": "749.12",
+            "classification": "subtract_multiplier"
+          },
+          {
+            "field": "answer",
+            "value": "840",
+            "classification": "wrong_direction"
+          }
+        ],
+        "unit_feedback": true,
+        "multiplier_method": {
+          "original": "750",
+          "multiplier": "0.88",
+          "calculation_key": "calculation",
+          "answer_key": "answer"
+        },
+        "input_note": "Use paper or a calculator. Enter a numerical multiplier calculation, then your final amount. You can use *, ×, /, parentheses or an equal-value calculation chain; no written explanation is required. Units are printed beside the final amount."
+      },
+      "answer": {
+        "value": {
+          "calculation": "750 * 0.88",
+          "answer": "660"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The product is the reduced television price; it is not subtracted again.",
+        "correct_after_support": "The product is the reduced television price; it is not subtracted again.",
+        "on_correct_math": "12% = 0.12; 1 − 0.12 = 0.88. → 750 × 0.88 = 660. → Final amount = $660; less than the original $750.",
+        "on_incorrect_attempt_1": "Use the amount before the decrease as the reference. The requested final amount is the part that stays after the decrease.",
+        "on_incorrect_attempt_2": "The working forms the remaining scale, multiplies the original by it once, and checks the smaller final amount and its unit.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "12% = 0.12; 1 − 0.12 = 0.88. → 750 × 0.88 = 660. → Final amount = $660; less than the original $750."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the amount before the decrease as the reference. The requested final amount is the part that stays after the decrease.",
+        "hint_2": "The working forms the remaining scale, multiplies the original by it once, and checks the smaller final amount and its unit.",
+        "worked_solution": "12% = 0.12; 1 − 0.12 = 0.88. → 750 × 0.88 = 660. → Final amount = $660; less than the original $750."
+      },
+      "working": [
+        "12% = 0.12; 1 − 0.12 = 0.88.",
+        "750 × 0.88 = 660.",
+        "Final amount = $660; less than the original $750."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A television costs $750. The price is decreased by 12%. Work out the new price. Use a multiplier.",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "12% = 0.12; 1 − 0.12 = 0.88.",
+            "750 × 0.88 = 660.",
+            "Final amount = $660; less than the original $750."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_calculation": "Your final amount is right. Check that the numerical calculation applies the remaining multiplier to the original.",
+        "check_answer": "Your multiplier calculation is right. Its product is the amount remaining; report that product as final.",
+        "check_multiple": "Use a scale for the part remaining and apply it to the original. The product is already final, not another amount to subtract.",
+        "check_requested_method": "Your final amount is correct. This question also requests a multiplier calculation. Show the remaining scale applied to the original.",
+        "removed_not_final": "That number describes the removed share, not the final amount remaining. A remaining-multiplier product is already final.",
+        "subtract_multiplier": "A multiplier is a scale, not a fixed amount to subtract. Apply the scale by multiplication.",
+        "wrong_direction": "This is a positive decrease. The final amount must be below the original, not above it.",
+        "check_unit": "Give the final money amount in dollars, as printed. Keep the numerical multiplier calculation free of units."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true,
+      "retain_answer_specific_feedback": true
+    },
+    {
+      "id": "PC-07-X02",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "The number of visitors to a museum was 2400 in one month. The number decreased by 6.5% in the next month. Work out the number of visitors in the next month.",
+      "target": "Calculate and interpret the amount remaining after a one-step percentage decrease",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "answer",
+            "label": "Final amount",
+            "kind": "number",
+            "unit": "visitors",
+            "allow_expression": true,
+            "unit_aliases": [
+              "visitor",
+              "visitors"
+            ]
+          }
+        ],
+        "error_values": [
+          {
+            "field": "answer",
+            "value": "156",
+            "classification": "removed_not_final"
+          },
+          {
+            "field": "answer",
+            "value": "2399.065",
+            "classification": "subtract_multiplier"
+          },
+          {
+            "field": "answer",
+            "value": "2556",
+            "classification": "wrong_direction"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Give the requested quantities; exact numerical calculations are accepted. Units are printed beside their number boxes. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "answer": "2244"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The result is the next month’s visitor count after the decrease.",
+        "correct_after_support": "The result is the next month’s visitor count after the decrease.",
+        "on_correct_math": "6.5% = 0.065; 1 − 0.065 = 0.935. → 2400 × 0.935 = 2244. → Final amount = 2244 visitors; less than the original 2400 visitors.",
+        "on_incorrect_attempt_1": "Use the amount before the decrease as the reference. The requested final amount is the part that stays after the decrease.",
+        "on_incorrect_attempt_2": "The working forms the remaining scale, multiplies the original by it once, and checks the smaller final amount and its unit.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "6.5% = 0.065; 1 − 0.065 = 0.935. → 2400 × 0.935 = 2244. → Final amount = 2244 visitors; less than the original 2400 visitors."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the amount before the decrease as the reference. The requested final amount is the part that stays after the decrease.",
+        "hint_2": "The working forms the remaining scale, multiplies the original by it once, and checks the smaller final amount and its unit.",
+        "worked_solution": "6.5% = 0.065; 1 − 0.065 = 0.935. → 2400 × 0.935 = 2244. → Final amount = 2244 visitors; less than the original 2400 visitors."
+      },
+      "working": [
+        "6.5% = 0.065; 1 − 0.065 = 0.935.",
+        "2400 × 0.935 = 2244.",
+        "Final amount = 2244 visitors; less than the original 2400 visitors."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "The number of visitors to a museum was 2400 in one month. The number decreased by 6.5% in the next month. Work out the number of visitors in the next month.",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "6.5% = 0.065; 1 − 0.065 = 0.935.",
+            "2400 × 0.935 = 2244.",
+            "Final amount = 2244 visitors; less than the original 2400 visitors."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_calculation": "Your final amount is right. Check that the numerical calculation applies the remaining multiplier to the original.",
+        "check_answer": "Find the complete next-month visitor count after the decrease. Any exact valid method is accepted.",
+        "check_multiple": "Use a scale for the part remaining and apply it to the original. The product is already final, not another amount to subtract.",
+        "check_requested_method": "Your final amount is correct. This question also requests a multiplier calculation. Show the remaining scale applied to the original.",
+        "removed_not_final": "That number describes the removed share, not the final amount remaining. A remaining-multiplier product is already final.",
+        "subtract_multiplier": "A multiplier is a scale, not a fixed amount to subtract. Apply the scale by multiplication.",
+        "wrong_direction": "This is a positive decrease. The final amount must be below the original, not above it.",
+        "check_unit": "Give a visitor count, not a percentage or money amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-07-X03",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A rectangular garden has an original area of 84 m². The area is decreased by 17.5%. (a) Write the multiplier for this decrease. (b) Work out the new area.",
+      "target": "Calculate and interpret the amount remaining after a one-step percentage decrease",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "multiplier",
+            "label": "Multiplier",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true,
+            "decimal_result_only": true
+          },
+          {
+            "key": "area",
+            "label": "New area",
+            "kind": "number",
+            "unit": "m²",
+            "allow_expression": true,
+            "unit_suffixes": [
+              "m²",
+              "m2"
+            ]
+          }
+        ],
+        "error_values": [],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Give the requested quantities; exact numerical calculations are accepted. Units are printed beside their number boxes. No written explanation is required. Finish a decimal or multiplier box with a decimal result."
+      },
+      "answer": {
+        "value": {
+          "multiplier": "0.825",
+          "area": "69.3"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The remaining multiplier applies to the original area, and the result stays in square metres.",
+        "correct_after_support": "The remaining multiplier applies to the original area, and the result stays in square metres.",
+        "on_correct_math": "17.5% = 0.175; 1 − 0.175 = 0.825. → 84 × 0.825 = 69.3. → New area = 69.3 m².",
+        "on_incorrect_attempt_1": "Form the scale for the area that remains, then apply it to the original area.",
+        "on_incorrect_attempt_2": "The decrease applies to the given area; no side-length calculation is needed.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "17.5% = 0.175; 1 − 0.175 = 0.825. → 84 × 0.825 = 69.3. → New area = 69.3 m²."
+      },
+      "mathematical_support": {
+        "hint_1": "Form the scale for the area that remains, then apply it to the original area.",
+        "hint_2": "The decrease applies to the given area; no side-length calculation is needed.",
+        "worked_solution": "17.5% = 0.175; 1 − 0.175 = 0.825. → 84 × 0.825 = 69.3. → New area = 69.3 m²."
+      },
+      "working": [
+        "17.5% = 0.175; 1 − 0.175 = 0.825.",
+        "84 × 0.825 = 69.3.",
+        "New area = 69.3 m²."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A rectangular garden has an original area of 84 m². The area is decreased by 17.5%. (a) Write the multiplier for this decrease. (b) Work out the new area.",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "17.5% = 0.175; 1 − 0.175 = 0.825.",
+            "84 × 0.825 = 69.3.",
+            "New area = 69.3 m²."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_multiplier": "Your area is right. Give the decimal scale for the part that remains.",
+        "check_area": "Your multiplier is right. Apply it to the original area and keep the square-metre unit.",
+        "check_multiple": "Decrease the given area using the remaining scale. Do not treat the rate as a side-length change.",
+        "check_unit": "Give the area in square metres, as printed. The decimal multiplier has no unit.",
+        "check_decimal_form": "Finish this box with the decimal value. A correct calculation before the equals sign may remain."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-07-X04",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A student uses the calculation 560 × 0.92 = 515.2 for an 8% decrease. Which conclusion is correct?",
+      "target": "Calculate and interpret the amount remaining after a one-step percentage decrease",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "The amount removed is 515.2.",
+          "The final amount is 515.2.",
+          "The final amount is 560 − 515.2.",
+          "The multiplier should have been 1.08."
+        ],
+        "math_layout": "decimal_compound_fraction"
+      },
+      "answer": {
+        "value": "The final amount is 515.2."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The product is the amount remaining and is therefore final.",
+        "correct_after_support": "The product is the amount remaining and is therefore final.",
+        "on_correct_math": "0.92 describes the 92% of the original that remains. → 515.2 is already the final amount.",
+        "on_incorrect_attempt_1": "Decide whether the product describes the amount removed or the amount that stays.",
+        "on_incorrect_attempt_2": "The remaining product is complete; subtracting it would leave the removed share.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "0.92 describes the 92% of the original that remains. → 515.2 is already the final amount."
+      },
+      "mathematical_support": {
+        "hint_1": "Decide whether the product describes the amount removed or the amount that stays.",
+        "hint_2": "The remaining product is complete; subtracting it would leave the removed share.",
+        "worked_solution": "0.92 describes the 92% of the original that remains. → 515.2 is already the final amount."
+      },
+      "working": [
+        "0.92 describes the 92% of the original that remains.",
+        "515.2 is already the final amount."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A student uses the calculation 560 × 0.92 = 515.2 for an 8% decrease. Which conclusion is correct?",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "0.92 describes the 92% of the original that remains.",
+            "515.2 is already the final amount."
+          ]
+        }
+      },
+      "response_feedback": {
+        "The amount removed is 515.2.": "The scale measures the part remaining, not the removed amount.",
+        "The final amount is 560 − 515.2.": "This subtracts the amount remaining and leaves the removed share instead.",
+        "The multiplier should have been 1.08.": "A multiplier above one would increase the original."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-07-X05",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A price is decreased by 14% and the question requires a multiplier method. Which complete structure is correct?",
+      "target": "Calculate and interpret the amount remaining after a one-step percentage decrease",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Original amount × 0.14",
+          "Original amount − 0.86",
+          "Original amount × 0.86",
+          "Original amount × 1.14"
+        ],
+        "math_layout": "decimal_compound_fraction"
+      },
+      "answer": {
+        "value": "Original amount × 0.86"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The remaining scale is applied by multiplication to give the final amount.",
+        "correct_after_support": "The remaining scale is applied by multiplication to give the final amount.",
+        "on_correct_math": "14% = 0.14; 1 − 0.14 = 0.86. → Multiply the original by the remaining scale.",
+        "on_incorrect_attempt_1": "Choose a multiplication structure using the scale of the part that stays.",
+        "on_incorrect_attempt_2": "The remaining multiplier excludes the decrease share before it is applied to the original.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "14% = 0.14; 1 − 0.14 = 0.86. → Multiply the original by the remaining scale."
+      },
+      "mathematical_support": {
+        "hint_1": "Choose a multiplication structure using the scale of the part that stays.",
+        "hint_2": "The remaining multiplier excludes the decrease share before it is applied to the original.",
+        "worked_solution": "14% = 0.14; 1 − 0.14 = 0.86. → Multiply the original by the remaining scale."
+      },
+      "working": [
+        "14% = 0.14; 1 − 0.14 = 0.86.",
+        "Multiply the original by the remaining scale."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A price is decreased by 14% and the question requires a multiplier method. Which complete structure is correct?",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "14% = 0.14; 1 − 0.14 = 0.86.",
+            "Multiply the original by the remaining scale."
+          ]
+        }
+      },
+      "response_feedback": {
+        "Original amount × 0.14": "This finds the removed share alone.",
+        "Original amount − 0.86": "This subtracts the scale directly instead of applying it.",
+        "Original amount × 1.14": "This scale makes an increase, not the stated decrease."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-07-E01",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "Decrease $420 by 15%. Use a multiplier.",
+      "target": "Calculate and interpret the amount remaining after a one-step percentage decrease",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "calculation",
+            "label": "Multiplier calculation",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true
+          },
+          {
+            "key": "answer",
+            "label": "Final amount",
+            "kind": "number",
+            "unit": "$",
+            "allow_expression": true,
+            "money_display": true
+          }
+        ],
+        "error_values": [
+          {
+            "field": "answer",
+            "value": "63",
+            "classification": "removed_not_final"
+          },
+          {
+            "field": "answer",
+            "value": "419.15",
+            "classification": "subtract_multiplier"
+          },
+          {
+            "field": "answer",
+            "value": "483",
+            "classification": "wrong_direction"
+          }
+        ],
+        "unit_feedback": true,
+        "multiplier_method": {
+          "original": "420",
+          "multiplier": "0.85",
+          "calculation_key": "calculation",
+          "answer_key": "answer"
+        },
+        "input_note": "Use paper or a calculator. Enter a numerical multiplier calculation, then your final amount. You can use *, ×, /, parentheses or an equal-value calculation chain; no written explanation is required. Units are printed beside the final amount."
+      },
+      "answer": {
+        "value": {
+          "calculation": "420 * 0.85",
+          "answer": "357"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The remaining product gives the final reduced amount.",
+        "correct_after_support": "The remaining product gives the final reduced amount.",
+        "on_correct_math": "15% = 0.15; 1 − 0.15 = 0.85. → 420 × 0.85 = 357. → Final amount = $357; less than the original $420.",
+        "on_incorrect_attempt_1": "Use the amount before the decrease as the reference. The requested final amount is the part that stays after the decrease.",
+        "on_incorrect_attempt_2": "The working forms the remaining scale, multiplies the original by it once, and checks the smaller final amount and its unit.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "15% = 0.15; 1 − 0.15 = 0.85. → 420 × 0.85 = 357. → Final amount = $357; less than the original $420."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the amount before the decrease as the reference. The requested final amount is the part that stays after the decrease.",
+        "hint_2": "The working forms the remaining scale, multiplies the original by it once, and checks the smaller final amount and its unit.",
+        "worked_solution": "15% = 0.15; 1 − 0.15 = 0.85. → 420 × 0.85 = 357. → Final amount = $357; less than the original $420."
+      },
+      "working": [
+        "15% = 0.15; 1 − 0.15 = 0.85.",
+        "420 × 0.85 = 357.",
+        "Final amount = $357; less than the original $420."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "Decrease $420 by 15%. Use a multiplier.",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "15% = 0.15; 1 − 0.15 = 0.85.",
+            "420 × 0.85 = 357.",
+            "Final amount = $357; less than the original $420."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_calculation": "Your final amount is right. Check that the numerical calculation applies the remaining multiplier to the original.",
+        "check_answer": "Your multiplier calculation is right. Its product is the amount remaining; report that product as final.",
+        "check_multiple": "Use a scale for the part remaining and apply it to the original. The product is already final, not another amount to subtract.",
+        "check_requested_method": "Your final amount is correct. This question also requests a multiplier calculation. Show the remaining scale applied to the original.",
+        "removed_not_final": "That number describes the removed share, not the final amount remaining. A remaining-multiplier product is already final.",
+        "subtract_multiplier": "A multiplier is a scale, not a fixed amount to subtract. Apply the scale by multiplication.",
+        "wrong_direction": "This is a positive decrease. The final amount must be below the original, not above it.",
+        "check_unit": "Give the final money amount in dollars, as printed. Keep the numerical multiplier calculation free of units."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true,
+      "retain_answer_specific_feedback": true
+    },
+    {
+      "id": "PC-07-E02",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "Decrease 3.6 m by 25%. Use a multiplier.",
+      "target": "Calculate and interpret the amount remaining after a one-step percentage decrease",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "calculation",
+            "label": "Multiplier calculation",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true
+          },
+          {
+            "key": "answer",
+            "label": "Final amount",
+            "kind": "number",
+            "unit": "m",
+            "allow_expression": true,
+            "unit_aliases": [
+              "m",
+              "metre",
+              "metres"
+            ]
+          }
+        ],
+        "error_values": [
+          {
+            "field": "answer",
+            "value": "0.9",
+            "classification": "removed_not_final"
+          },
+          {
+            "field": "answer",
+            "value": "2.85",
+            "classification": "subtract_multiplier"
+          },
+          {
+            "field": "answer",
+            "value": "4.5",
+            "classification": "wrong_direction"
+          }
+        ],
+        "unit_feedback": true,
+        "multiplier_method": {
+          "original": "3.6",
+          "multiplier": "0.75",
+          "calculation_key": "calculation",
+          "answer_key": "answer"
+        },
+        "input_note": "Use paper or a calculator. Enter a numerical multiplier calculation, then your final amount. You can use *, ×, /, parentheses or an equal-value calculation chain; no written explanation is required. Units are printed beside the final amount."
+      },
+      "answer": {
+        "value": {
+          "calculation": "3.6 * 0.75",
+          "answer": "2.7"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The final length is smaller than the original and remains in metres.",
+        "correct_after_support": "The final length is smaller than the original and remains in metres.",
+        "on_correct_math": "25% = 0.25; 1 − 0.25 = 0.75. → 3.6 × 0.75 = 2.7. → Final amount = 2.7 m; less than the original 3.6 m.",
+        "on_incorrect_attempt_1": "Use the amount before the decrease as the reference. The requested final amount is the part that stays after the decrease.",
+        "on_incorrect_attempt_2": "The working forms the remaining scale, multiplies the original by it once, and checks the smaller final amount and its unit.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "25% = 0.25; 1 − 0.25 = 0.75. → 3.6 × 0.75 = 2.7. → Final amount = 2.7 m; less than the original 3.6 m."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the amount before the decrease as the reference. The requested final amount is the part that stays after the decrease.",
+        "hint_2": "The working forms the remaining scale, multiplies the original by it once, and checks the smaller final amount and its unit.",
+        "worked_solution": "25% = 0.25; 1 − 0.25 = 0.75. → 3.6 × 0.75 = 2.7. → Final amount = 2.7 m; less than the original 3.6 m."
+      },
+      "working": [
+        "25% = 0.25; 1 − 0.25 = 0.75.",
+        "3.6 × 0.75 = 2.7.",
+        "Final amount = 2.7 m; less than the original 3.6 m."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "Decrease 3.6 m by 25%. Use a multiplier.",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "25% = 0.25; 1 − 0.25 = 0.75.",
+            "3.6 × 0.75 = 2.7.",
+            "Final amount = 2.7 m; less than the original 3.6 m."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_calculation": "Your final amount is right. Check that the numerical calculation applies the remaining multiplier to the original.",
+        "check_answer": "Your multiplier calculation is right. Its product is the amount remaining; report that product as final.",
+        "check_multiple": "Use a scale for the part remaining and apply it to the original. The product is already final, not another amount to subtract.",
+        "check_requested_method": "Your final amount is correct. This question also requests a multiplier calculation. Show the remaining scale applied to the original.",
+        "removed_not_final": "That number describes the removed share, not the final amount remaining. A remaining-multiplier product is already final.",
+        "subtract_multiplier": "A multiplier is a scale, not a fixed amount to subtract. Apply the scale by multiplication.",
+        "wrong_direction": "This is a positive decrease. The final amount must be below the original, not above it.",
+        "check_unit": "Give the final length in metres, as printed. Keep the numerical multiplier calculation free of units."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true,
+      "retain_answer_specific_feedback": true
+    },
+    {
+      "id": "PC-07-E03",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "Decrease $86.40 by 7.5%. Use a multiplier.",
+      "target": "Calculate and interpret the amount remaining after a one-step percentage decrease",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "calculation",
+            "label": "Multiplier calculation",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true
+          },
+          {
+            "key": "answer",
+            "label": "Final amount",
+            "kind": "number",
+            "unit": "$",
+            "allow_expression": true,
+            "money_display": true
+          }
+        ],
+        "error_values": [
+          {
+            "field": "answer",
+            "value": "6.48",
+            "classification": "removed_not_final"
+          },
+          {
+            "field": "answer",
+            "value": "85.475",
+            "classification": "subtract_multiplier"
+          },
+          {
+            "field": "answer",
+            "value": "92.88",
+            "classification": "wrong_direction"
+          }
+        ],
+        "unit_feedback": true,
+        "multiplier_method": {
+          "original": "86.4",
+          "multiplier": "0.925",
+          "calculation_key": "calculation",
+          "answer_key": "answer"
+        },
+        "input_note": "Use paper or a calculator. Enter a numerical multiplier calculation, then your final amount. You can use *, ×, /, parentheses or an equal-value calculation chain; no written explanation is required. Units are printed beside the final amount."
+      },
+      "answer": {
+        "value": {
+          "calculation": "86.4 * 0.925",
+          "answer": "79.92"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The exact decimal-rate product gives the money remaining.",
+        "correct_after_support": "The exact decimal-rate product gives the money remaining.",
+        "on_correct_math": "7.5% = 0.075; 1 − 0.075 = 0.925. → 86.4 × 0.925 = 79.92. → Final amount = $79.92; less than the original $86.4.",
+        "on_incorrect_attempt_1": "Use the amount before the decrease as the reference. The requested final amount is the part that stays after the decrease.",
+        "on_incorrect_attempt_2": "The working forms the remaining scale, multiplies the original by it once, and checks the smaller final amount and its unit.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "7.5% = 0.075; 1 − 0.075 = 0.925. → 86.4 × 0.925 = 79.92. → Final amount = $79.92; less than the original $86.4."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the amount before the decrease as the reference. The requested final amount is the part that stays after the decrease.",
+        "hint_2": "The working forms the remaining scale, multiplies the original by it once, and checks the smaller final amount and its unit.",
+        "worked_solution": "7.5% = 0.075; 1 − 0.075 = 0.925. → 86.4 × 0.925 = 79.92. → Final amount = $79.92; less than the original $86.4."
+      },
+      "working": [
+        "7.5% = 0.075; 1 − 0.075 = 0.925.",
+        "86.4 × 0.925 = 79.92.",
+        "Final amount = $79.92; less than the original $86.4."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "Decrease $86.40 by 7.5%. Use a multiplier.",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "7.5% = 0.075; 1 − 0.075 = 0.925.",
+            "86.4 × 0.925 = 79.92.",
+            "Final amount = $79.92; less than the original $86.4."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_calculation": "Your final amount is right. Check that the numerical calculation applies the remaining multiplier to the original.",
+        "check_answer": "Your multiplier calculation is right. Its product is the amount remaining; report that product as final.",
+        "check_multiple": "Use a scale for the part remaining and apply it to the original. The product is already final, not another amount to subtract.",
+        "check_requested_method": "Your final amount is correct. This question also requests a multiplier calculation. Show the remaining scale applied to the original.",
+        "removed_not_final": "That number describes the removed share, not the final amount remaining. A remaining-multiplier product is already final.",
+        "subtract_multiplier": "A multiplier is a scale, not a fixed amount to subtract. Apply the scale by multiplication.",
+        "wrong_direction": "This is a positive decrease. The final amount must be below the original, not above it.",
+        "check_unit": "Give the final money amount in dollars, as printed. Keep the numerical multiplier calculation free of units."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true,
+      "retain_answer_specific_feedback": true
+    },
+    {
+      "id": "PC-07-E04",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "A population of 1250 decreases by 4%. Work out the new population. Use a multiplier.",
+      "target": "Calculate and interpret the amount remaining after a one-step percentage decrease",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "calculation",
+            "label": "Multiplier calculation",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true
+          },
+          {
+            "key": "answer",
+            "label": "Final amount",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true
+          }
+        ],
+        "error_values": [
+          {
+            "field": "answer",
+            "value": "50",
+            "classification": "removed_not_final"
+          },
+          {
+            "field": "answer",
+            "value": "1249.04",
+            "classification": "subtract_multiplier"
+          },
+          {
+            "field": "answer",
+            "value": "1300",
+            "classification": "wrong_direction"
+          }
+        ],
+        "unit_feedback": true,
+        "multiplier_method": {
+          "original": "1250",
+          "multiplier": "0.96",
+          "calculation_key": "calculation",
+          "answer_key": "answer"
+        },
+        "input_note": "Use paper or a calculator. Enter a numerical multiplier calculation, then your final amount. You can use *, ×, /, parentheses or an equal-value calculation chain; no written explanation is required. Units are printed beside the final amount."
+      },
+      "answer": {
+        "value": {
+          "calculation": "1250 * 0.96",
+          "answer": "1200"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The remaining scale gives the complete new population.",
+        "correct_after_support": "The remaining scale gives the complete new population.",
+        "on_correct_math": "4% = 0.04; 1 − 0.04 = 0.96. → 1250 × 0.96 = 1200. → Final amount = 1200; less than the original 1250.",
+        "on_incorrect_attempt_1": "Use the amount before the decrease as the reference. The requested final amount is the part that stays after the decrease.",
+        "on_incorrect_attempt_2": "The working forms the remaining scale, multiplies the original by it once, and checks the smaller final amount and its unit.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "4% = 0.04; 1 − 0.04 = 0.96. → 1250 × 0.96 = 1200. → Final amount = 1200; less than the original 1250."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the amount before the decrease as the reference. The requested final amount is the part that stays after the decrease.",
+        "hint_2": "The working forms the remaining scale, multiplies the original by it once, and checks the smaller final amount and its unit.",
+        "worked_solution": "4% = 0.04; 1 − 0.04 = 0.96. → 1250 × 0.96 = 1200. → Final amount = 1200; less than the original 1250."
+      },
+      "working": [
+        "4% = 0.04; 1 − 0.04 = 0.96.",
+        "1250 × 0.96 = 1200.",
+        "Final amount = 1200; less than the original 1250."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A population of 1250 decreases by 4%. Work out the new population. Use a multiplier.",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "4% = 0.04; 1 − 0.04 = 0.96.",
+            "1250 × 0.96 = 1200.",
+            "Final amount = 1200; less than the original 1250."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_calculation": "Your final amount is right. Check that the numerical calculation applies the remaining multiplier to the original.",
+        "check_answer": "Your multiplier calculation is right. Its product is the amount remaining; report that product as final.",
+        "check_multiple": "Use a scale for the part remaining and apply it to the original. The product is already final, not another amount to subtract.",
+        "check_requested_method": "Your final amount is correct. This question also requests a multiplier calculation. Show the remaining scale applied to the original.",
+        "removed_not_final": "That number describes the removed share, not the final amount remaining. A remaining-multiplier product is already final.",
+        "subtract_multiplier": "A multiplier is a scale, not a fixed amount to subtract. Apply the scale by multiplication.",
+        "wrong_direction": "This is a positive decrease. The final amount must be below the original, not above it.",
+        "check_unit": "Give the final number without a percent sign or currency unit. Keep the numerical multiplier calculation free of units."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true,
+      "retain_answer_specific_feedback": true
+    },
+    {
+      "id": "PC-07-E05",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "Which calculation decreases x by 22%?",
+      "target": "Calculate and interpret the amount remaining after a one-step percentage decrease",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "x × 0.22",
+          "x − 0.78",
+          "x × 1.22",
+          "x × 0.78"
+        ],
+        "math_layout": "decimal_compound_fraction"
+      },
+      "answer": {
+        "value": "x × 0.78"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The expression scales the original to the part remaining.",
+        "correct_after_support": "The expression scales the original to the part remaining.",
+        "on_correct_math": "22% = 0.22; 1 − 0.22 = 0.78. → Multiply x by the remaining scale 0.78.",
+        "on_incorrect_attempt_1": "Choose the operation and scale that retain the part after the decrease.",
+        "on_incorrect_attempt_2": "The final scale is below one and is applied by multiplication.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "22% = 0.22; 1 − 0.22 = 0.78. → Multiply x by the remaining scale 0.78."
+      },
+      "mathematical_support": {
+        "hint_1": "Choose the operation and scale that retain the part after the decrease.",
+        "hint_2": "The final scale is below one and is applied by multiplication.",
+        "worked_solution": "22% = 0.22; 1 − 0.22 = 0.78. → Multiply x by the remaining scale 0.78."
+      },
+      "working": [
+        "22% = 0.22; 1 − 0.22 = 0.78.",
+        "Multiply x by the remaining scale 0.78."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "Which calculation decreases x by 22%?",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "22% = 0.22; 1 − 0.22 = 0.78.",
+            "Multiply x by the remaining scale 0.78."
+          ]
+        }
+      },
+      "response_feedback": {
+        "x × 0.22": "This calculates the removed share alone.",
+        "x − 0.78": "This subtracts a scale as though it were a fixed amount.",
+        "x × 1.22": "This multiplier increases the original."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-07-E06",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "A student calculates 900 × 0.94 = 846. Which statement is correct?",
+      "target": "Calculate and interpret the amount remaining after a one-step percentage decrease",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "846 is the amount removed.",
+          "846 is the final amount after a 6% decrease.",
+          "846 must now be subtracted from 900.",
+          "The result should be greater than 900."
+        ],
+        "math_layout": "decimal_compound_fraction"
+      },
+      "answer": {
+        "value": "846 is the final amount after a 6% decrease."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The product is the final amount remaining, not another amount to subtract.",
+        "correct_after_support": "The product is the final amount remaining, not another amount to subtract.",
+        "on_correct_math": "0.94 measures the 94% that remains. → 846 is already final after a 6% decrease and is below 900.",
+        "on_incorrect_attempt_1": "Interpret the remaining product and check its direction.",
+        "on_incorrect_attempt_2": "The multiplier measures what stays after removal, so the product needs no further subtraction.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "0.94 measures the 94% that remains. → 846 is already final after a 6% decrease and is below 900."
+      },
+      "mathematical_support": {
+        "hint_1": "Interpret the remaining product and check its direction.",
+        "hint_2": "The multiplier measures what stays after removal, so the product needs no further subtraction.",
+        "worked_solution": "0.94 measures the 94% that remains. → 846 is already final after a 6% decrease and is below 900."
+      },
+      "working": [
+        "0.94 measures the 94% that remains.",
+        "846 is already final after a 6% decrease and is below 900."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A student calculates 900 × 0.94 = 846. Which statement is correct?",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "0.94 measures the 94% that remains.",
+            "846 is already final after a 6% decrease and is below 900."
+          ]
+        }
+      },
+      "response_feedback": {
+        "846 is the amount removed.": "This product measures the amount remaining, not the removed share.",
+        "846 must now be subtracted from 900.": "Subtracting the remaining product would return the removed share instead.",
+        "The result should be greater than 900.": "A positive decrease must give a final amount below the original."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    }
+  ],
+  "canonical_lesson": {
+    "version": "PC07-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

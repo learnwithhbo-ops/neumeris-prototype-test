@@ -1,0 +1,3384 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "PC-03 - Decrease an amount using calculate and subtract",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-18",
+      "sha256": "9fc0decc77831553348c69925d7205a428c99accc88f4926cd63fcbabb0b3fb6"
+    },
+    "authored_scope": "Decrease an amount by calculating the percentage change and adjusting once.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "PC03-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "verified_full_desktop_ready_phone_change_only_learning_320_390_equal_removed_parts_tokens_real_reload_drafts_locked_responses_units_money_audio_captions",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        12,
+        15,
+        16,
+        17,
+        18
+      ],
+      "source_repairs_consulted": [
+        2,
+        8,
+        9,
+        10,
+        11,
+        13,
+        14,
+        17,
+        18
+      ],
+      "note": "All eighteen PC-03 source pages, both rendered diagrams, complete prior configuration and relevant tests read. Restores all 25 active source questions, every guided blank, both conceptual removal models, the staged laptop example and five unsupported finals. Parallel PC-02 values are explicitly present in this source, but directions, option order, removal geometry, feedback and usable-capacity context are individually authored. Exact combined calculations and equivalent money values are accepted without teaching a new multiplier method. No free explanation, invented diagnostic confirmation, prerequisite mutation, Entry, delayed Retrieval or Strong."
+    }
+  },
+  "identity": {
+    "id": "PC-03",
+    "slug": "decrease-an-amount-using-calculate-and-subtract",
+    "title": "Decrease an amount using calculate and subtract",
+    "strand": "Number",
+    "cluster": "Percentage Change",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Find the stated percentage of the original amount, label it as the decrease, then subtract it once and retain the correct unit.",
+    "success_criteria": [
+      "Identify the original as the percentage reference",
+      "Calculate and distinguish the decrease amount",
+      "Subtract the decrease exactly once",
+      "Check the final amount is smaller than the original",
+      "Preserve context units and exact money value",
+      "Accept any valid previously learned percentage method"
+    ],
+    "boundaries": {
+      "includes": [
+        "One-step percentage decreases with positive originals and rates below 100%",
+        "Calculate the decrease then subtract once",
+        "Any valid exact previously learned percentage method",
+        "Source-authored 7.5% application alongside whole-number percentage practice",
+        "Money, measures and counts with stated units"
+      ],
+      "excludes": [
+        "Teaching final multipliers",
+        "Reverse or repeated percentage change",
+        "Entry, Diagnostic, prerequisite mutation, delayed Retrieval and Strong"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "PC-01",
+      "PA-01"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for PC-01, PA-01 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "single_choice",
+      "percentage_change_fields"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    },
+    "place_value_profile": true
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "Calculate the decrease from the original, then subtract it once.",
+    "invariant": "Every percentage part uses the unchanged original; the final amount is what remains after removing one complete decrease.",
+    "mathematical_rule": "Final amount = original amount − decrease amount",
+    "must_notice": [
+      "A rate is not an amount",
+      "The removed part is not the final total",
+      "A decrease makes the amount smaller"
+    ],
+    "common_confusions": [
+      "Subtracting the rate directly",
+      "Reporting only the decrease",
+      "Adding or subtracting the decrease twice",
+      "Changing the reference whole"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "Keep the original reference",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Keep the original reference",
+          "initial_state": "Keep the original reference",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Remove the highlighted share from the original",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "piece_removal",
+            "original": 150,
+            "rate": 20,
+            "change": 30,
+            "final": 120,
+            "currency": "$",
+            "parts": 10,
+            "removedParts": 2,
+            "solved": true,
+            "steps": [],
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "The original price is represented by ten equal parts. Each part is one tenth of that same starting whole."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Identify the decrease inside the original",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Identify the decrease inside the original",
+          "initial_state": "Identify the decrease inside the original",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Remove the highlighted share from the original",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "piece_removal",
+            "original": 150,
+            "rate": 20,
+            "change": 30,
+            "final": 120,
+            "currency": "$",
+            "parts": 10,
+            "removedParts": 2,
+            "solved": true,
+            "steps": [],
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "Highlight two of the original tenths. They form the twenty-percent decrease that will be removed."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Remove the share once",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Remove the share once",
+          "initial_state": "Remove the share once",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Remove the highlighted share from the original",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "piece_removal",
+            "original": 150,
+            "rate": 20,
+            "change": 30,
+            "final": 120,
+            "currency": "$",
+            "parts": 10,
+            "removedParts": 2,
+            "solved": true,
+            "steps": [],
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "Remove the two highlighted pieces once. Eight equal pieces remain; the empty positions show what was taken away."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Calculate, label, then subtract",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Calculate, label, then subtract",
+          "initial_state": "Calculate, label, then subtract",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Separate the three amounts",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "roles",
+            "solved": true,
+            "steps": [],
+            "roles": [
+              [
+                "Original amount",
+                "The unchanged starting reference."
+              ],
+              [
+                "Decrease amount",
+                "The stated percentage of that original."
+              ],
+              [
+                "Final amount",
+                "Original minus the decrease exactly once."
+              ]
+            ]
+          }
+        },
+        "narration": {
+          "script": "Find the percentage of the original and label that result as the decrease. Subtract it from the original once to find what remains."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T06"
+      },
+      {
+        "id": "T06",
+        "stage": "teaching",
+        "purpose": "Start with eight equal tokens",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Start with eight equal tokens",
+          "initial_state": "Start with eight equal tokens",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Take away tokens and keep what remains",
+            "given": "A price of $80 is decreased by 25%.",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "token_removal",
+            "original": 80,
+            "rate": 25,
+            "change": 20,
+            "final": 60,
+            "currency": "$",
+            "tokenValue": 10,
+            "originalTokens": 8,
+            "removedTokens": 2,
+            "solved": true,
+            "steps": [],
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "Eight ten-dollar tokens make the starting price. No tokens have been removed yet."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T07"
+      },
+      {
+        "id": "T07",
+        "stage": "teaching",
+        "purpose": "Highlight the decrease tokens",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Highlight the decrease tokens",
+          "initial_state": "Highlight the decrease tokens",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Take away tokens and keep what remains",
+            "given": "A price of $80 is decreased by 25%.",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "token_removal",
+            "original": 80,
+            "rate": 25,
+            "change": 20,
+            "final": 60,
+            "currency": "$",
+            "tokenValue": 10,
+            "originalTokens": 8,
+            "removedTokens": 2,
+            "solved": true,
+            "steps": [],
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "A quarter of the original eight tokens is highlighted. These tokens represent the amount to take away."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T08"
+      },
+      {
+        "id": "T08",
+        "stage": "teaching",
+        "purpose": "Keep the remaining tokens",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Keep the remaining tokens",
+          "initial_state": "Keep the remaining tokens",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Take away tokens and keep what remains",
+            "given": "A price of $80 is decreased by 25%.",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "token_removal",
+            "original": 80,
+            "rate": 25,
+            "change": 20,
+            "final": 60,
+            "currency": "$",
+            "tokenValue": 10,
+            "originalTokens": 8,
+            "removedTokens": 2,
+            "solved": true,
+            "steps": [],
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "Take away the two highlighted tokens once. The six tokens left represent the final price."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Choose the decrease sequence",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Choose the decrease sequence",
+          "initial_state": "Choose the decrease sequence",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Read the situation",
+            "given": "A quantity of 300 is decreased by 12%. Which sequence is correct?",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "rule",
+            "steps": [
+              "Find 12% of the original 300.",
+              "Label that result as the decrease amount.",
+              "Subtract the decrease amount from 300 once."
+            ]
+          }
+        },
+        "narration": {
+          "script": "Choose a sequence that finds the decrease from the original and removes it once."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "PC-03-C01"
+        },
+        "next_step": "T09"
+      },
+      {
+        "id": "T09",
+        "stage": "teaching",
+        "purpose": "Identify original and direction",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Identify original and direction",
+          "initial_state": "Identify original and direction",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Decrease the laptop price",
+            "given": "A laptop costs $480. Its price is decreased by 15%.",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "role_worked",
+            "solved": true,
+            "steps": [],
+            "stages": [
+              {
+                "title": "Original and direction",
+                "lines": [
+                  "Original amount = $480.",
+                  "Decreased means subtract the change."
+                ]
+              },
+              {
+                "title": "Find the decrease amount",
+                "lines": [
+                  "10% of $480 = $48 and 5% of $480 = $24.",
+                  "15% of $480 = $72."
+                ]
+              },
+              {
+                "title": "Subtract once",
+                "lines": [
+                  "$480 − $72 = $408."
+                ]
+              },
+              {
+                "title": "Check",
+                "lines": [
+                  "$408 is less than $480 and keeps the dollar unit.",
+                  "New price = $408."
+                ]
+              }
+            ],
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "Use the laptop’s starting price as the percentage reference. This change makes the price smaller."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T10"
+      },
+      {
+        "id": "T10",
+        "stage": "teaching",
+        "purpose": "Calculate the laptop decrease",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Calculate the laptop decrease",
+          "initial_state": "Calculate the laptop decrease",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Decrease the laptop price",
+            "given": "A laptop costs $480. Its price is decreased by 15%.",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "role_worked",
+            "solved": true,
+            "steps": [],
+            "stages": [
+              {
+                "title": "Original and direction",
+                "lines": [
+                  "Original amount = $480.",
+                  "Decreased means subtract the change."
+                ]
+              },
+              {
+                "title": "Find the decrease amount",
+                "lines": [
+                  "10% of $480 = $48 and 5% of $480 = $24.",
+                  "15% of $480 = $72."
+                ]
+              },
+              {
+                "title": "Subtract once",
+                "lines": [
+                  "$480 − $72 = $408."
+                ]
+              },
+              {
+                "title": "Check",
+                "lines": [
+                  "$408 is less than $480 and keeps the dollar unit.",
+                  "New price = $408."
+                ]
+              }
+            ],
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "Combine ten percent and five percent, both found from the same original price. Together they give the decrease amount."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T11"
+      },
+      {
+        "id": "T11",
+        "stage": "teaching",
+        "purpose": "Subtract the laptop decrease once",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Subtract the laptop decrease once",
+          "initial_state": "Subtract the laptop decrease once",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Decrease the laptop price",
+            "given": "A laptop costs $480. Its price is decreased by 15%.",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "role_worked",
+            "solved": true,
+            "steps": [],
+            "stages": [
+              {
+                "title": "Original and direction",
+                "lines": [
+                  "Original amount = $480.",
+                  "Decreased means subtract the change."
+                ]
+              },
+              {
+                "title": "Find the decrease amount",
+                "lines": [
+                  "10% of $480 = $48 and 5% of $480 = $24.",
+                  "15% of $480 = $72."
+                ]
+              },
+              {
+                "title": "Subtract once",
+                "lines": [
+                  "$480 − $72 = $408."
+                ]
+              },
+              {
+                "title": "Check",
+                "lines": [
+                  "$408 is less than $480 and keeps the dollar unit.",
+                  "New price = $408."
+                ]
+              }
+            ],
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "The percentage calculation found the saving, not the new price. Subtract that saving from the original once."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T12"
+      },
+      {
+        "id": "T12",
+        "stage": "teaching",
+        "purpose": "Check size and unit",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Check size and unit",
+          "initial_state": "Check size and unit",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Decrease the laptop price",
+            "given": "A laptop costs $480. Its price is decreased by 15%.",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "role_worked",
+            "solved": true,
+            "steps": [],
+            "stages": [
+              {
+                "title": "Original and direction",
+                "lines": [
+                  "Original amount = $480.",
+                  "Decreased means subtract the change."
+                ]
+              },
+              {
+                "title": "Find the decrease amount",
+                "lines": [
+                  "10% of $480 = $48 and 5% of $480 = $24.",
+                  "15% of $480 = $72."
+                ]
+              },
+              {
+                "title": "Subtract once",
+                "lines": [
+                  "$480 − $72 = $408."
+                ]
+              },
+              {
+                "title": "Check",
+                "lines": [
+                  "$408 is less than $480 and keeps the dollar unit.",
+                  "New price = $408."
+                ]
+              }
+            ],
+            "phase": 4
+          }
+        },
+        "narration": {
+          "script": "The result is smaller than the starting price and still represents dollars."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T13"
+      },
+      {
+        "id": "T13",
+        "stage": "teaching",
+        "purpose": "Recognise another valid method",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Recognise another valid method",
+          "initial_state": "Recognise another valid method",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Read the situation",
+            "given": "Which alternative method would also correctly find the 15% decrease amount on $480?",
+            "math_text": true,
+            "decimal_math": true,
+            "compact_captions": true,
+            "mode": "rule",
+            "steps": [
+              "1% of $480 is $4.80.",
+              "Fifteen equal 1% parts make 15% of $480."
+            ]
+          }
+        },
+        "narration": {
+          "script": "Choose another valid way to calculate the same percentage decrease."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "PC-03-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "PC-03-G01",
+        "support_level": "high",
+        "pre_question_script": "Identify the starting member count and direction.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "PC-03-G02",
+        "support_level": "high",
+        "pre_question_script": "Use the quarter relationship to find the decrease.",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "faded",
+        "question_ref": "PC-03-G03",
+        "support_level": "reduced",
+        "pre_question_script": "Carry the removed count into the final subtraction.",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "faded",
+        "question_ref": "PC-03-G04",
+        "support_level": "reduced",
+        "pre_question_script": "Report the members who remain.",
+        "correct_next": "G05"
+      },
+      "G05": {
+        "stage": "independent_transfer",
+        "question_ref": "PC-03-G05",
+        "support_level": "none",
+        "pre_question_script": "Check the decrease and final membership roles independently.",
+        "correct_next": "P01"
+      }
+    },
+    "practice": {
+      "intro_script": "Complete each one-step decrease independently. Find the decrease from the original, subtract it once and answer the quantity requested. Units are printed beside number boxes; any exact numerical method is accepted.",
+      "question_order": [
+        "PC-03-P01",
+        "PC-03-P02",
+        "PC-03-P03",
+        "PC-03-P04",
+        "PC-03-P05",
+        "PC-03-P06",
+        "PC-03-P07",
+        "PC-03-P08",
+        "PC-03-X01",
+        "PC-03-X02",
+        "PC-03-X03",
+        "PC-03-X04",
+        "PC-03-X05"
+      ],
+      "question_count": 13,
+      "feedback_policy": "No optional hints or pre-submit methods. Question-specific feedback, sequential working and learner correction after demonstrated need. No diagnostic confirmation or prerequisite mutation."
+    },
+    "exit": {
+      "intro_script": "Complete all five final questions independently. Each response locks before feedback, and review begins after all five answers are saved.",
+      "primary_question_refs": [
+        "PC-03-E01",
+        "PC-03-E02",
+        "PC-03-E03",
+        "PC-03-E04",
+        "PC-03-E05"
+      ],
+      "confirmation_question_refs": [],
+      "submission_policy": "All five locked responses before feedback.",
+      "mastery_policy": {
+        "profile": "all_primary_unsupported_deferred",
+        "require_all": true,
+        "source_page": 18,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "All five final answers calculated the decrease from the original and subtracted it once. Later retrieval will check whether that two-stage method remains secure.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Keep building calculate and subtract",
+      "ryan_script": "Review your saved answers. Label the percentage part as the decrease and subtract it once from the original to find what remains.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "PC-03-C01",
+      "source_ref": {
+        "page": 4
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "A quantity of 300 is decreased by 12%. Which sequence is correct?",
+      "target": "Find the percentage decrease from the original, then subtract it once",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Subtract 12 directly from 300.",
+          "Find 12% of 300, then subtract that result from 300.",
+          "Find 12% of 300, then add that result to 300.",
+          "Find 12% of the final amount, then subtract it from 300."
+        ],
+        "math_layout": "decimal_compound_fraction"
+      },
+      "answer": {
+        "value": "Find 12% of 300, then subtract that result from 300."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The rate becomes an amount before subtraction.",
+        "correct_after_support": "Correct. The rate becomes an amount before subtraction.",
+        "on_correct_math": "Find 12% of the original 300. → Label that result as the decrease amount. → Subtract the decrease amount from 300 once.",
+        "on_incorrect_attempt_1": "A percentage rate must first become an amount based on the original whole.",
+        "on_incorrect_attempt_2": "The working finds the decrease from the original before subtracting it.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all five final answers are recorded.",
+        "worked_explanation": "Find 12% of the original 300. → Label that result as the decrease amount. → Subtract the decrease amount from 300 once."
+      },
+      "mathematical_support": {
+        "hint_1": "A percentage rate must first become an amount based on the original whole.",
+        "hint_2": "The working finds the decrease from the original before subtracting it.",
+        "worked_solution": "Find 12% of the original 300. → Label that result as the decrease amount. → Subtract the decrease amount from 300 once."
+      },
+      "working": [
+        "Find 12% of the original 300.",
+        "Label that result as the decrease amount.",
+        "Subtract the decrease amount from 300 once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A quantity of 300 is decreased by 12%. Which sequence is correct?",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Find 12% of the original 300.",
+            "Label that result as the decrease amount.",
+            "Subtract the decrease amount from 300 once."
+          ]
+        }
+      },
+      "response_feedback": {
+        "Subtract 12 directly from 300.": "Twelve percent is a rate, not twelve units.",
+        "Find 12% of 300, then add that result to 300.": "Adding the computed share would increase the quantity.",
+        "Find 12% of the final amount, then subtract it from 300.": "The percentage is measured from the original, not the final amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-03-C02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "Which alternative method would also correctly find the 15% decrease amount on $480?",
+      "target": "Find the percentage decrease from the original, then subtract it once",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Find 1% of $480 and multiply it by 15.",
+          "Divide $480 by 15 and subtract the result.",
+          "Subtract 15 directly from $480.",
+          "Find 85% of $480 and call it the decrease amount."
+        ],
+        "math_layout": "decimal_compound_fraction"
+      },
+      "answer": {
+        "value": "Find 1% of $480 and multiply it by 15."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The one-percent method finds the same decrease amount.",
+        "correct_after_support": "Correct. The one-percent method finds the same decrease amount.",
+        "on_correct_math": "1% of $480 is $4.80. → Fifteen equal 1% parts make 15% of $480.",
+        "on_incorrect_attempt_1": "Look for a method that finds a percentage share of the original price.",
+        "on_incorrect_attempt_2": "Each one-percent part uses the same original price, so fifteen of them give the decrease share.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all five final answers are recorded.",
+        "worked_explanation": "1% of $480 is $4.80. → Fifteen equal 1% parts make 15% of $480."
+      },
+      "mathematical_support": {
+        "hint_1": "Look for a method that finds a percentage share of the original price.",
+        "hint_2": "Each one-percent part uses the same original price, so fifteen of them give the decrease share.",
+        "worked_solution": "1% of $480 is $4.80. → Fifteen equal 1% parts make 15% of $480."
+      },
+      "working": [
+        "1% of $480 is $4.80.",
+        "Fifteen equal 1% parts make 15% of $480."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "Which alternative method would also correctly find the 15% decrease amount on $480?",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "1% of $480 is $4.80.",
+            "Fifteen equal 1% parts make 15% of $480."
+          ]
+        }
+      },
+      "response_feedback": {
+        "Divide $480 by 15 and subtract the result.": "Dividing the price by fifteen does not find fifteen percent.",
+        "Subtract 15 directly from $480.": "Fifteen percent is not automatically fifteen dollars.",
+        "Find 85% of $480 and call it the decrease amount.": "Eighty-five percent describes the remainder, not the fifteen-percent decrease."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-03-G01",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "A sports club has 360 members. Its membership decreases by 25%. Work out the new number of members. Complete the original amount and direction.",
+      "target": "Find the percentage decrease from the original, then subtract it once",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "original",
+            "label": "Original amount",
+            "kind": "number",
+            "unit": "members",
+            "allow_expression": true,
+            "unit_aliases": [
+              "member",
+              "members"
+            ],
+            "money_display": false
+          },
+          {
+            "key": "direction",
+            "label": "Direction",
+            "kind": "choice",
+            "options": [
+              "increase",
+              "decrease"
+            ]
+          }
+        ],
+        "error_values": [],
+        "unit_feedback": true
+      },
+      "answer": {
+        "value": {
+          "original": "360",
+          "direction": "decrease"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The starting membership is fixed and the direction is downward.",
+        "correct_after_support": "Correct. The starting membership is fixed and the direction is downward.",
+        "on_correct_math": "Original amount = 360 members. → Direction = decrease.",
+        "on_incorrect_attempt_1": "Use the starting member count and the word describing the change.",
+        "on_incorrect_attempt_2": "The roles separate how many members there were from whether membership rises or falls.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all five final answers are recorded.",
+        "worked_explanation": "Original amount = 360 members. → Direction = decrease."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the starting member count and the word describing the change.",
+        "hint_2": "The roles separate how many members there were from whether membership rises or falls.",
+        "worked_solution": "Original amount = 360 members. → Direction = decrease."
+      },
+      "working": [
+        "Original amount = 360 members.",
+        "Direction = decrease."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A sports club has 360 members. Its membership decreases by 25%. Work out the new number of members. Complete the original amount and direction.",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Original amount = 360 members.",
+            "Direction = decrease."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_original": "The direction is right. Use the membership before the change.",
+        "check_direction": "The original count is right. Membership becomes smaller; choose that direction.",
+        "check_multiple": "Identify the starting membership and whether it rises or falls.",
+        "check_unit": "Keep the answer in members, as shown beside the boxes. A percentage or a conflicting unit cannot replace that amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-03-G02",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "A sports club has 360 members. Its membership decreases by 25%. Work out the new number of members. Complete the quarter calculation and decrease amount.",
+      "target": "Find the percentage decrease from the original, then subtract it once",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "quarter",
+            "label": "360 ÷ 4",
+            "kind": "number",
+            "unit": "members",
+            "allow_expression": true,
+            "unit_aliases": [
+              "member",
+              "members"
+            ],
+            "money_display": false
+          },
+          {
+            "key": "decrease",
+            "label": "Decrease amount",
+            "kind": "number",
+            "unit": "members",
+            "allow_expression": true,
+            "unit_aliases": [
+              "member",
+              "members"
+            ],
+            "money_display": false
+          }
+        ],
+        "error_values": [],
+        "unit_feedback": true
+      },
+      "answer": {
+        "value": {
+          "quarter": "90",
+          "decrease": "90"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The quarter-share is the decrease, not the membership remaining.",
+        "correct_after_support": "Correct. The quarter-share is the decrease, not the membership remaining.",
+        "on_correct_math": "25% is one quarter. → 360 ÷ 4 = 90. → Decrease amount = 90 members.",
+        "on_incorrect_attempt_1": "Apply the quarter relationship to the original membership.",
+        "on_incorrect_attempt_2": "One of four equal groups gives the member count removed.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all five final answers are recorded.",
+        "worked_explanation": "25% is one quarter. → 360 ÷ 4 = 90. → Decrease amount = 90 members."
+      },
+      "mathematical_support": {
+        "hint_1": "Apply the quarter relationship to the original membership.",
+        "hint_2": "One of four equal groups gives the member count removed.",
+        "worked_solution": "25% is one quarter. → 360 ÷ 4 = 90. → Decrease amount = 90 members."
+      },
+      "working": [
+        "25% is one quarter.",
+        "360 ÷ 4 = 90.",
+        "Decrease amount = 90 members."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A sports club has 360 members. Its membership decreases by 25%. Work out the new number of members. Complete the quarter calculation and decrease amount.",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "25% is one quarter.",
+            "360 ÷ 4 = 90.",
+            "Decrease amount = 90 members."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_quarter": "Your decrease count is right. The division gives that same quarter-share.",
+        "check_decrease": "Your division is right. Label the same result as the decrease amount.",
+        "check_multiple": "Both boxes describe a quarter of the original membership.",
+        "check_unit": "Keep the answer in members, as shown beside the boxes. A percentage or a conflicting unit cannot replace that amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-03-G03",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "faded",
+      "prompt": "A sports club has 360 members. Its membership decreases by 25%. Work out the new number of members. Complete the final subtraction.",
+      "target": "Find the percentage decrease from the original, then subtract it once",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "decrease",
+            "label": "Amount removed",
+            "kind": "number",
+            "unit": "members",
+            "allow_expression": true,
+            "unit_aliases": [
+              "member",
+              "members"
+            ],
+            "money_display": false
+          },
+          {
+            "key": "final",
+            "label": "Final amount",
+            "kind": "number",
+            "unit": "members",
+            "allow_expression": true,
+            "unit_aliases": [
+              "member",
+              "members"
+            ],
+            "money_display": false
+          }
+        ],
+        "error_values": [],
+        "unit_feedback": true
+      },
+      "answer": {
+        "value": {
+          "decrease": "90",
+          "final": "270"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The subtraction leaves the members who remain.",
+        "correct_after_support": "Correct. The subtraction leaves the members who remain.",
+        "on_correct_math": "Decrease amount = 90 members. → 360 − 90 = 270 members.",
+        "on_incorrect_attempt_1": "Carry the decrease amount into the subtraction and remove it once.",
+        "on_incorrect_attempt_2": "The working removes the lost membership from the starting count.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all five final answers are recorded.",
+        "worked_explanation": "Decrease amount = 90 members. → 360 − 90 = 270 members."
+      },
+      "mathematical_support": {
+        "hint_1": "Carry the decrease amount into the subtraction and remove it once.",
+        "hint_2": "The working removes the lost membership from the starting count.",
+        "worked_solution": "Decrease amount = 90 members. → 360 − 90 = 270 members."
+      },
+      "working": [
+        "Decrease amount = 90 members.",
+        "360 − 90 = 270 members."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A sports club has 360 members. Its membership decreases by 25%. Work out the new number of members. Complete the final subtraction.",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Decrease amount = 90 members.",
+            "360 − 90 = 270 members."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_decrease": "Your final total is right. Use the previously found decrease as the amount removed.",
+        "check_final": "Your removed amount is right. Subtract it once from the original membership.",
+        "check_multiple": "Keep the removed count separate from the members remaining.",
+        "check_unit": "Keep the answer in members, as shown beside the boxes. A percentage or a conflicting unit cannot replace that amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-03-G04",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "faded",
+      "prompt": "A sports club has 360 members. Its membership decreases by 25%. Work out the new number of members. Complete the new membership.",
+      "target": "Find the percentage decrease from the original, then subtract it once",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "answer",
+            "label": "New membership",
+            "kind": "number",
+            "unit": "members",
+            "allow_expression": true,
+            "unit_aliases": [
+              "member",
+              "members"
+            ],
+            "money_display": false
+          }
+        ],
+        "error_values": [
+          {
+            "field": "answer",
+            "value": "25",
+            "classification": "rate_as_amount"
+          },
+          {
+            "field": "answer",
+            "value": "90",
+            "classification": "change_as_final"
+          },
+          {
+            "field": "answer",
+            "value": "450",
+            "classification": "wrong_direction"
+          },
+          {
+            "field": "answer",
+            "value": "180",
+            "classification": "change_twice"
+          },
+          {
+            "field": "answer",
+            "value": "335",
+            "classification": "rate_subtracted"
+          }
+        ],
+        "unit_feedback": true
+      },
+      "answer": {
+        "value": {
+          "answer": "270"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The new membership is the remaining count.",
+        "correct_after_support": "Correct. The new membership is the remaining count.",
+        "on_correct_math": "Original membership = 360 members. → The 25% decrease is 90 members. → New membership = 360 − 90 = 270 members.",
+        "on_incorrect_attempt_1": "Report the members remaining, not the number who leave.",
+        "on_incorrect_attempt_2": "The final subtraction retains the original member count as its starting point.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all five final answers are recorded.",
+        "worked_explanation": "Original membership = 360 members. → The 25% decrease is 90 members. → New membership = 360 − 90 = 270 members."
+      },
+      "mathematical_support": {
+        "hint_1": "Report the members remaining, not the number who leave.",
+        "hint_2": "The final subtraction retains the original member count as its starting point.",
+        "worked_solution": "Original membership = 360 members. → The 25% decrease is 90 members. → New membership = 360 − 90 = 270 members."
+      },
+      "working": [
+        "Original membership = 360 members.",
+        "The 25% decrease is 90 members.",
+        "New membership = 360 − 90 = 270 members."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A sports club has 360 members. Its membership decreases by 25%. Work out the new number of members. Complete the new membership.",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Original membership = 360 members.",
+            "The 25% decrease is 90 members.",
+            "New membership = 360 − 90 = 270 members."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_answer": "Find 25% of the original 360 members, then subtract that decrease once.",
+        "rate_as_amount": "The percentage number 25 is a rate, not the final amount. Convert it to a share of the original first.",
+        "change_as_final": "90 members is only the decrease amount. The question asks for what remains after removing it from 360 members.",
+        "wrong_direction": "Adding the decrease makes the result larger. This situation asks for a decrease.",
+        "change_twice": "Subtract the complete decrease amount once, not twice.",
+        "rate_subtracted": "The rate was subtracted as a bare number. Find that percentage of the original before subtracting.",
+        "check_unit": "Keep the answer in members, as shown beside the boxes. A percentage or a conflicting unit cannot replace that amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-03-G05",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "independent_transfer",
+      "prompt": "A sports club has 360 members. Its membership decreases by 25%. Work out the new number of members. Which statement is correct?",
+      "target": "Find the percentage decrease from the original, then subtract it once",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "The decrease amount is 25 and the final amount is 335.",
+          "The decrease amount is 90 and the final amount is 450.",
+          "The decrease amount is 90 and the final amount is 270.",
+          "The decrease amount is 270 because that is the answer after the change."
+        ],
+        "math_layout": "decimal_compound_fraction"
+      },
+      "answer": {
+        "value": "The decrease amount is 90 and the final amount is 270."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The decrease and remaining membership have different roles.",
+        "correct_after_support": "Correct. The decrease and remaining membership have different roles.",
+        "on_correct_math": "25% of 360 = 90 members removed. → 360 − 90 = 270 members remaining.",
+        "on_incorrect_attempt_1": "Separate the percentage rate, the decrease count and the final count.",
+        "on_incorrect_attempt_2": "The working labels the removed members separately from the members remaining.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all five final answers are recorded.",
+        "worked_explanation": "25% of 360 = 90 members removed. → 360 − 90 = 270 members remaining."
+      },
+      "mathematical_support": {
+        "hint_1": "Separate the percentage rate, the decrease count and the final count.",
+        "hint_2": "The working labels the removed members separately from the members remaining.",
+        "worked_solution": "25% of 360 = 90 members removed. → 360 − 90 = 270 members remaining."
+      },
+      "working": [
+        "25% of 360 = 90 members removed.",
+        "360 − 90 = 270 members remaining."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A sports club has 360 members. Its membership decreases by 25%. Work out the new number of members. Which statement is correct?",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "25% of 360 = 90 members removed.",
+            "360 − 90 = 270 members remaining."
+          ]
+        }
+      },
+      "response_feedback": {
+        "The decrease amount is 25 and the final amount is 335.": "Twenty-five percent is a rate, not twenty-five members.",
+        "The decrease amount is 90 and the final amount is 450.": "The decrease count is right, but adding it makes the membership larger.",
+        "The decrease amount is 270 because that is the answer after the change.": "The final membership is what remains, not what was removed."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-03-P01",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Decrease 70 by 10%.",
+      "target": "Find the percentage decrease from the original, then subtract it once",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "answer",
+            "label": "Your answer",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true,
+            "unit_aliases": [],
+            "money_display": false
+          }
+        ],
+        "error_values": [
+          {
+            "field": "answer",
+            "value": "10",
+            "classification": "rate_as_amount"
+          },
+          {
+            "field": "answer",
+            "value": "7",
+            "classification": "change_as_final"
+          },
+          {
+            "field": "answer",
+            "value": "77",
+            "classification": "wrong_direction"
+          },
+          {
+            "field": "answer",
+            "value": "56",
+            "classification": "change_twice"
+          },
+          {
+            "field": "answer",
+            "value": "60",
+            "classification": "rate_subtracted"
+          }
+        ],
+        "unit_feedback": true
+      },
+      "answer": {
+        "value": {
+          "answer": "63"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The result keeps the nine tenths that remain.",
+        "correct_after_support": "Correct. The result keeps the nine tenths that remain.",
+        "on_correct_math": "10% of 70 = 7. → 70 − 7 = 63.",
+        "on_incorrect_attempt_1": "Find the stated percentage of the original 70, then decide what quantity the question asks for.",
+        "on_incorrect_attempt_2": "The working labels 7 as the decrease and removes it from the original exactly once.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all five final answers are recorded.",
+        "worked_explanation": "10% of 70 = 7. → 70 − 7 = 63."
+      },
+      "mathematical_support": {
+        "hint_1": "Find the stated percentage of the original 70, then decide what quantity the question asks for.",
+        "hint_2": "The working labels 7 as the decrease and removes it from the original exactly once.",
+        "worked_solution": "10% of 70 = 7. → 70 − 7 = 63."
+      },
+      "working": [
+        "10% of 70 = 7.",
+        "70 − 7 = 63."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "Decrease 70 by 10%.",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "10% of 70 = 7.",
+            "70 − 7 = 63."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_answer": "Find 10% of the original 70, then subtract that decrease once.",
+        "rate_as_amount": "The percentage number 10 is a rate, not the final amount. Convert it to a share of the original first.",
+        "change_as_final": "7 is only the decrease amount. The question asks for what remains after removing it from 70.",
+        "wrong_direction": "Adding the decrease makes the result larger. This situation asks for a decrease.",
+        "change_twice": "Subtract the complete decrease amount once, not twice.",
+        "rate_subtracted": "The rate was subtracted as a bare number. Find that percentage of the original before subtracting.",
+        "check_unit": "Keep the answer in the given quantity, as shown beside the boxes. A percentage or a conflicting unit cannot replace that amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-03-P02",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Decrease 240 by 25%.",
+      "target": "Find the percentage decrease from the original, then subtract it once",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "answer",
+            "label": "Your answer",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true,
+            "unit_aliases": [],
+            "money_display": false
+          }
+        ],
+        "error_values": [
+          {
+            "field": "answer",
+            "value": "25",
+            "classification": "rate_as_amount"
+          },
+          {
+            "field": "answer",
+            "value": "60",
+            "classification": "change_as_final"
+          },
+          {
+            "field": "answer",
+            "value": "300",
+            "classification": "wrong_direction"
+          },
+          {
+            "field": "answer",
+            "value": "120",
+            "classification": "change_twice"
+          },
+          {
+            "field": "answer",
+            "value": "215",
+            "classification": "rate_subtracted"
+          }
+        ],
+        "unit_feedback": true
+      },
+      "answer": {
+        "value": {
+          "answer": "180"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Removing one quarter leaves the remaining three quarters.",
+        "correct_after_support": "Correct. Removing one quarter leaves the remaining three quarters.",
+        "on_correct_math": "25% of 240 = 60. → 240 − 60 = 180.",
+        "on_incorrect_attempt_1": "Find the stated percentage of the original 240, then decide what quantity the question asks for.",
+        "on_incorrect_attempt_2": "The working labels 60 as the decrease and removes it from the original exactly once.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all five final answers are recorded.",
+        "worked_explanation": "25% of 240 = 60. → 240 − 60 = 180."
+      },
+      "mathematical_support": {
+        "hint_1": "Find the stated percentage of the original 240, then decide what quantity the question asks for.",
+        "hint_2": "The working labels 60 as the decrease and removes it from the original exactly once.",
+        "worked_solution": "25% of 240 = 60. → 240 − 60 = 180."
+      },
+      "working": [
+        "25% of 240 = 60.",
+        "240 − 60 = 180."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "Decrease 240 by 25%.",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "25% of 240 = 60.",
+            "240 − 60 = 180."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_answer": "Find 25% of the original 240, then subtract that decrease once.",
+        "rate_as_amount": "The percentage number 25 is a rate, not the final amount. Convert it to a share of the original first.",
+        "change_as_final": "60 is only the decrease amount. The question asks for what remains after removing it from 240.",
+        "wrong_direction": "Adding the decrease makes the result larger. This situation asks for a decrease.",
+        "change_twice": "Subtract the complete decrease amount once, not twice.",
+        "rate_subtracted": "The rate was subtracted as a bare number. Find that percentage of the original before subtracting.",
+        "check_unit": "Keep the answer in the given quantity, as shown beside the boxes. A percentage or a conflicting unit cannot replace that amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-03-P03",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "A concert ticket costs $80. The price is decreased by 15%. Work out the new price.",
+      "target": "Find the percentage decrease from the original, then subtract it once",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "answer",
+            "label": "Your answer",
+            "kind": "number",
+            "unit": "$",
+            "allow_expression": true,
+            "unit_aliases": [],
+            "money_display": true
+          }
+        ],
+        "error_values": [
+          {
+            "field": "answer",
+            "value": "15",
+            "classification": "rate_as_amount"
+          },
+          {
+            "field": "answer",
+            "value": "12",
+            "classification": "change_as_final"
+          },
+          {
+            "field": "answer",
+            "value": "92",
+            "classification": "wrong_direction"
+          },
+          {
+            "field": "answer",
+            "value": "56",
+            "classification": "change_twice"
+          },
+          {
+            "field": "answer",
+            "value": "65",
+            "classification": "rate_subtracted"
+          }
+        ],
+        "unit_feedback": true
+      },
+      "answer": {
+        "value": {
+          "answer": "68"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The ticket price is lower by the calculated dollar decrease.",
+        "correct_after_support": "Correct. The ticket price is lower by the calculated dollar decrease.",
+        "on_correct_math": "15% of $80 = $12. → $80 − $12 = $68.",
+        "on_incorrect_attempt_1": "Find the stated percentage of the original 80, then decide what quantity the question asks for.",
+        "on_incorrect_attempt_2": "The working labels $12 as the decrease and removes it from the original exactly once.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all five final answers are recorded.",
+        "worked_explanation": "15% of $80 = $12. → $80 − $12 = $68."
+      },
+      "mathematical_support": {
+        "hint_1": "Find the stated percentage of the original 80, then decide what quantity the question asks for.",
+        "hint_2": "The working labels $12 as the decrease and removes it from the original exactly once.",
+        "worked_solution": "15% of $80 = $12. → $80 − $12 = $68."
+      },
+      "working": [
+        "15% of $80 = $12.",
+        "$80 − $12 = $68."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A concert ticket costs $80. The price is decreased by 15%. Work out the new price.",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "15% of $80 = $12.",
+            "$80 − $12 = $68."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_answer": "Find 15% of the original $80, then subtract that decrease once.",
+        "rate_as_amount": "The percentage number 15 is a rate, not the final amount. Convert it to a share of the original first.",
+        "change_as_final": "$12 is only the decrease amount. The question asks for what remains after removing it from $80.",
+        "wrong_direction": "Adding the decrease makes the result larger. This situation asks for a decrease.",
+        "change_twice": "Subtract the complete decrease amount once, not twice.",
+        "rate_subtracted": "The rate was subtracted as a bare number. Find that percentage of the original before subtracting.",
+        "check_unit": "Keep the answer in dollars, as shown beside the boxes. A percentage or a conflicting unit cannot replace that amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-03-P04",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "A school has 650 students. The number of students decreases by 6%. Work out the new number of students.",
+      "target": "Find the percentage decrease from the original, then subtract it once",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "answer",
+            "label": "Your answer",
+            "kind": "number",
+            "unit": "students",
+            "allow_expression": true,
+            "unit_aliases": [
+              "student",
+              "students"
+            ],
+            "money_display": false
+          }
+        ],
+        "error_values": [
+          {
+            "field": "answer",
+            "value": "6",
+            "classification": "rate_as_amount"
+          },
+          {
+            "field": "answer",
+            "value": "39",
+            "classification": "change_as_final"
+          },
+          {
+            "field": "answer",
+            "value": "689",
+            "classification": "wrong_direction"
+          },
+          {
+            "field": "answer",
+            "value": "572",
+            "classification": "change_twice"
+          },
+          {
+            "field": "answer",
+            "value": "644",
+            "classification": "rate_subtracted"
+          }
+        ],
+        "unit_feedback": true
+      },
+      "answer": {
+        "value": {
+          "answer": "611"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The final count includes the students who remain.",
+        "correct_after_support": "Correct. The final count includes the students who remain.",
+        "on_correct_math": "6% of 650 students = 39 students. → 650 students − 39 students = 611 students.",
+        "on_incorrect_attempt_1": "Find the stated percentage of the original 650, then decide what quantity the question asks for.",
+        "on_incorrect_attempt_2": "The working labels 39 students as the decrease and removes it from the original exactly once.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all five final answers are recorded.",
+        "worked_explanation": "6% of 650 students = 39 students. → 650 students − 39 students = 611 students."
+      },
+      "mathematical_support": {
+        "hint_1": "Find the stated percentage of the original 650, then decide what quantity the question asks for.",
+        "hint_2": "The working labels 39 students as the decrease and removes it from the original exactly once.",
+        "worked_solution": "6% of 650 students = 39 students. → 650 students − 39 students = 611 students."
+      },
+      "working": [
+        "6% of 650 students = 39 students.",
+        "650 students − 39 students = 611 students."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A school has 650 students. The number of students decreases by 6%. Work out the new number of students.",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "6% of 650 students = 39 students.",
+            "650 students − 39 students = 611 students."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_answer": "Find 6% of the original 650 students, then subtract that decrease once.",
+        "rate_as_amount": "The percentage number 6 is a rate, not the final amount. Convert it to a share of the original first.",
+        "change_as_final": "39 students is only the decrease amount. The question asks for what remains after removing it from 650 students.",
+        "wrong_direction": "Adding the decrease makes the result larger. This situation asks for a decrease.",
+        "change_twice": "Subtract the complete decrease amount once, not twice.",
+        "rate_subtracted": "The rate was subtracted as a bare number. Find that percentage of the original before subtracting.",
+        "check_unit": "Keep the answer in students, as shown beside the boxes. A percentage or a conflicting unit cannot replace that amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-03-P05",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "A length of 42 cm is decreased by 20%. Work out the new length.",
+      "target": "Find the percentage decrease from the original, then subtract it once",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "answer",
+            "label": "Your answer",
+            "kind": "number",
+            "unit": "cm",
+            "allow_expression": true,
+            "unit_aliases": [
+              "cm",
+              "centimetre",
+              "centimetres"
+            ],
+            "money_display": false
+          }
+        ],
+        "error_values": [
+          {
+            "field": "answer",
+            "value": "20",
+            "classification": "rate_as_amount"
+          },
+          {
+            "field": "answer",
+            "value": "8.4",
+            "classification": "change_as_final"
+          },
+          {
+            "field": "answer",
+            "value": "50.4",
+            "classification": "wrong_direction"
+          },
+          {
+            "field": "answer",
+            "value": "25.2",
+            "classification": "change_twice"
+          },
+          {
+            "field": "answer",
+            "value": "22",
+            "classification": "rate_subtracted"
+          }
+        ],
+        "unit_feedback": true
+      },
+      "answer": {
+        "value": {
+          "answer": "33.6"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The shorter measurement keeps centimetres as its unit.",
+        "correct_after_support": "Correct. The shorter measurement keeps centimetres as its unit.",
+        "on_correct_math": "20% of 42 cm = 8.4 cm. → 42 cm − 8.4 cm = 33.6 cm.",
+        "on_incorrect_attempt_1": "Find the stated percentage of the original 42, then decide what quantity the question asks for.",
+        "on_incorrect_attempt_2": "The working labels eight point four centimetres as the decrease and removes it from the original exactly once.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all five final answers are recorded.",
+        "worked_explanation": "20% of 42 cm = 8.4 cm. → 42 cm − 8.4 cm = 33.6 cm."
+      },
+      "mathematical_support": {
+        "hint_1": "Find the stated percentage of the original 42, then decide what quantity the question asks for.",
+        "hint_2": "The working labels eight point four centimetres as the decrease and removes it from the original exactly once.",
+        "worked_solution": "20% of 42 cm = 8.4 cm. → 42 cm − 8.4 cm = 33.6 cm."
+      },
+      "working": [
+        "20% of 42 cm = 8.4 cm.",
+        "42 cm − 8.4 cm = 33.6 cm."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A length of 42 cm is decreased by 20%. Work out the new length.",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "20% of 42 cm = 8.4 cm.",
+            "42 cm − 8.4 cm = 33.6 cm."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_answer": "Find 20% of the original 42 cm, then subtract that decrease once.",
+        "rate_as_amount": "The percentage number 20 is a rate, not the final amount. Convert it to a share of the original first.",
+        "change_as_final": "eight point four centimetres is only the decrease amount. The question asks for what remains after removing it from 42 centimetres.",
+        "wrong_direction": "Adding the decrease makes the result larger. This situation asks for a decrease.",
+        "change_twice": "Subtract the complete decrease amount once, not twice.",
+        "rate_subtracted": "The rate was subtracted as a bare number. Find that percentage of the original before subtracting.",
+        "check_unit": "Keep the answer in centimetres, as shown beside the boxes. A percentage or a conflicting unit cannot replace that amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-03-P06",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "A phone costs $325. Its price is decreased by 8%. Which calculation gives the final price?",
+      "target": "Find the percentage decrease from the original, then subtract it once",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "$325 − $8",
+          "$325 − 8% of $325",
+          "$325 + 8% of $325",
+          "8% of $325 only"
+        ],
+        "math_layout": "decimal_compound_fraction"
+      },
+      "answer": {
+        "value": "$325 − 8% of $325"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The expression subtracts the calculated share, not the rate.",
+        "correct_after_support": "Correct. The expression subtracts the calculated share, not the rate.",
+        "on_correct_math": "Find 8% of the original $325. → Subtract that dollar decrease from $325 once.",
+        "on_incorrect_attempt_1": "Choose the calculation that finds the dollar decrease before removing it.",
+        "on_incorrect_attempt_2": "The correct expression takes the percentage share from the unchanged original price.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all five final answers are recorded.",
+        "worked_explanation": "Find 8% of the original $325. → Subtract that dollar decrease from $325 once."
+      },
+      "mathematical_support": {
+        "hint_1": "Choose the calculation that finds the dollar decrease before removing it.",
+        "hint_2": "The correct expression takes the percentage share from the unchanged original price.",
+        "worked_solution": "Find 8% of the original $325. → Subtract that dollar decrease from $325 once."
+      },
+      "working": [
+        "Find 8% of the original $325.",
+        "Subtract that dollar decrease from $325 once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A phone costs $325. Its price is decreased by 8%. Which calculation gives the final price?",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Find 8% of the original $325.",
+            "Subtract that dollar decrease from $325 once."
+          ]
+        }
+      },
+      "response_feedback": {
+        "$325 − $8": "Eight percent is a share of the price, not eight dollars.",
+        "$325 + 8% of $325": "Adding the share would increase the price.",
+        "8% of $325 only": "That expression finds only the decrease, not the final price."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-03-P07",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Decrease $84.50 by 20%.",
+      "target": "Find the percentage decrease from the original, then subtract it once",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "answer",
+            "label": "Your answer",
+            "kind": "number",
+            "unit": "$",
+            "allow_expression": true,
+            "unit_aliases": [],
+            "money_display": true
+          }
+        ],
+        "error_values": [
+          {
+            "field": "answer",
+            "value": "20",
+            "classification": "rate_as_amount"
+          },
+          {
+            "field": "answer",
+            "value": "16.9",
+            "classification": "change_as_final"
+          },
+          {
+            "field": "answer",
+            "value": "101.4",
+            "classification": "wrong_direction"
+          },
+          {
+            "field": "answer",
+            "value": "50.7",
+            "classification": "change_twice"
+          },
+          {
+            "field": "answer",
+            "value": "64.5",
+            "classification": "rate_subtracted"
+          }
+        ],
+        "unit_feedback": true
+      },
+      "answer": {
+        "value": {
+          "answer": "67.6"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The reduced price preserves its exact dollar-and-cent value.",
+        "correct_after_support": "Correct. The reduced price preserves its exact dollar-and-cent value.",
+        "on_correct_math": "20% of $84.50 = $16.90. → $84.50 − $16.90 = $67.60.",
+        "on_incorrect_attempt_1": "Find the stated percentage of the original eighty-four point five, then decide what quantity the question asks for.",
+        "on_incorrect_attempt_2": "The working labels sixteen dollars and ninety cents as the decrease and removes it from the original exactly once.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all five final answers are recorded.",
+        "worked_explanation": "20% of $84.50 = $16.90. → $84.50 − $16.90 = $67.60."
+      },
+      "mathematical_support": {
+        "hint_1": "Find the stated percentage of the original eighty-four point five, then decide what quantity the question asks for.",
+        "hint_2": "The working labels sixteen dollars and ninety cents as the decrease and removes it from the original exactly once.",
+        "worked_solution": "20% of $84.50 = $16.90. → $84.50 − $16.90 = $67.60."
+      },
+      "working": [
+        "20% of $84.50 = $16.90.",
+        "$84.50 − $16.90 = $67.60."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "Decrease $84.50 by 20%.",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "20% of $84.50 = $16.90.",
+            "$84.50 − $16.90 = $67.60."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_answer": "Find 20% of the original eighty-four dollars and fifty cents, then subtract that decrease once.",
+        "rate_as_amount": "The percentage number 20 is a rate, not the final amount. Convert it to a share of the original first.",
+        "change_as_final": "sixteen dollars and ninety cents is only the decrease amount. The question asks for what remains after removing it from eighty-four dollars and fifty cents.",
+        "wrong_direction": "Adding the decrease makes the result larger. This situation asks for a decrease.",
+        "change_twice": "Subtract the complete decrease amount once, not twice.",
+        "rate_subtracted": "The rate was subtracted as a bare number. Find that percentage of the original before subtracting.",
+        "check_unit": "Keep the answer in dollars, as shown beside the boxes. A percentage or a conflicting unit cannot replace that amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-03-P08",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "A student is decreasing 500 by 12% and finds 12% of 500 as 60. Which line should come next?",
+      "target": "Find the percentage decrease from the original, then subtract it once",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "500 − 60",
+          "500 + 60",
+          "60 − 12",
+          "500 − 12"
+        ],
+        "math_layout": "decimal_compound_fraction"
+      },
+      "answer": {
+        "value": "500 − 60"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The computed decrease is subtracted once.",
+        "correct_after_support": "Correct. The computed decrease is subtracted once.",
+        "on_correct_math": "The 60 is the decrease amount. → Subtract it from the original 500 once.",
+        "on_incorrect_attempt_1": "Use the decrease amount already calculated, not the bare rate.",
+        "on_incorrect_attempt_2": "The next line removes the whole decrease from the original amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all five final answers are recorded.",
+        "worked_explanation": "The 60 is the decrease amount. → Subtract it from the original 500 once."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the decrease amount already calculated, not the bare rate.",
+        "hint_2": "The next line removes the whole decrease from the original amount.",
+        "worked_solution": "The 60 is the decrease amount. → Subtract it from the original 500 once."
+      },
+      "working": [
+        "The 60 is the decrease amount.",
+        "Subtract it from the original 500 once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A student is decreasing 500 by 12% and finds 12% of 500 as 60. Which line should come next?",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "The 60 is the decrease amount.",
+            "Subtract it from the original 500 once."
+          ]
+        }
+      },
+      "response_feedback": {
+        "500 + 60": "Adding the decrease would make the quantity larger.",
+        "60 − 12": "This omits the original and subtracts a bare rate from the decrease.",
+        "500 − 12": "Twelve is the rate number, not the decrease amount already found."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-03-X01",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A train ticket costs $64. The price is decreased by 7.5%. Work out the new price.",
+      "target": "Find the percentage decrease from the original, then subtract it once",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "answer",
+            "label": "Your answer",
+            "kind": "number",
+            "unit": "$",
+            "allow_expression": true,
+            "unit_aliases": [],
+            "money_display": true
+          }
+        ],
+        "error_values": [
+          {
+            "field": "answer",
+            "value": "7.5",
+            "classification": "rate_as_amount"
+          },
+          {
+            "field": "answer",
+            "value": "4.8",
+            "classification": "change_as_final"
+          },
+          {
+            "field": "answer",
+            "value": "68.8",
+            "classification": "wrong_direction"
+          },
+          {
+            "field": "answer",
+            "value": "54.4",
+            "classification": "change_twice"
+          },
+          {
+            "field": "answer",
+            "value": "56.5",
+            "classification": "rate_subtracted"
+          }
+        ],
+        "unit_feedback": true
+      },
+      "answer": {
+        "value": {
+          "answer": "59.2"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The reduced fare removes the seven-and-a-half-percent share.",
+        "correct_after_support": "Correct. The reduced fare removes the seven-and-a-half-percent share.",
+        "on_correct_math": "7.5% of $64 = $4.80. → $64 − $4.80 = $59.20.",
+        "on_incorrect_attempt_1": "Find the stated percentage of the original 64, then decide what quantity the question asks for.",
+        "on_incorrect_attempt_2": "The working labels four dollars and eighty cents as the decrease and removes it from the original exactly once.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all five final answers are recorded.",
+        "worked_explanation": "7.5% of $64 = $4.80. → $64 − $4.80 = $59.20."
+      },
+      "mathematical_support": {
+        "hint_1": "Find the stated percentage of the original 64, then decide what quantity the question asks for.",
+        "hint_2": "The working labels four dollars and eighty cents as the decrease and removes it from the original exactly once.",
+        "worked_solution": "7.5% of $64 = $4.80. → $64 − $4.80 = $59.20."
+      },
+      "working": [
+        "7.5% of $64 = $4.80.",
+        "$64 − $4.80 = $59.20."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A train ticket costs $64. The price is decreased by 7.5%. Work out the new price.",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "7.5% of $64 = $4.80.",
+            "$64 − $4.80 = $59.20."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_answer": "Find seven point five percent of the original sixty-four dollars, then subtract that decrease once.",
+        "rate_as_amount": "The percentage number seven point five is a rate, not the final amount. Convert it to a share of the original first.",
+        "change_as_final": "four dollars and eighty cents is only the decrease amount. The question asks for what remains after removing it from sixty-four dollars.",
+        "wrong_direction": "Adding the decrease makes the result larger. This situation asks for a decrease.",
+        "change_twice": "Subtract the complete decrease amount once, not twice.",
+        "rate_subtracted": "The rate was subtracted as a bare number. Find that percentage of the original before subtracting.",
+        "check_unit": "Keep the answer in dollars, as shown beside the boxes. A percentage or a conflicting unit cannot replace that amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-03-X02",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A factory produces 2,400 components each week. Production is decreased by 12%. Work out the new weekly production.",
+      "target": "Find the percentage decrease from the original, then subtract it once",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "answer",
+            "label": "Your answer",
+            "kind": "number",
+            "unit": "components",
+            "allow_expression": true,
+            "unit_aliases": [
+              "component",
+              "components"
+            ],
+            "money_display": false
+          }
+        ],
+        "error_values": [
+          {
+            "field": "answer",
+            "value": "12",
+            "classification": "rate_as_amount"
+          },
+          {
+            "field": "answer",
+            "value": "288",
+            "classification": "change_as_final"
+          },
+          {
+            "field": "answer",
+            "value": "2688",
+            "classification": "wrong_direction"
+          },
+          {
+            "field": "answer",
+            "value": "1824",
+            "classification": "change_twice"
+          },
+          {
+            "field": "answer",
+            "value": "2388",
+            "classification": "rate_subtracted"
+          }
+        ],
+        "unit_feedback": true
+      },
+      "answer": {
+        "value": {
+          "answer": "2112"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The weekly output is what remains after the reduction.",
+        "correct_after_support": "Correct. The weekly output is what remains after the reduction.",
+        "on_correct_math": "12% of 2400 components = 288 components. → 2400 components − 288 components = 2112 components.",
+        "on_incorrect_attempt_1": "Find the stated percentage of the original 2400, then decide what quantity the question asks for.",
+        "on_incorrect_attempt_2": "The working labels 288 components as the decrease and removes it from the original exactly once.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all five final answers are recorded.",
+        "worked_explanation": "12% of 2400 components = 288 components. → 2400 components − 288 components = 2112 components."
+      },
+      "mathematical_support": {
+        "hint_1": "Find the stated percentage of the original 2400, then decide what quantity the question asks for.",
+        "hint_2": "The working labels 288 components as the decrease and removes it from the original exactly once.",
+        "worked_solution": "12% of 2400 components = 288 components. → 2400 components − 288 components = 2112 components."
+      },
+      "working": [
+        "12% of 2400 components = 288 components.",
+        "2400 components − 288 components = 2112 components."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A factory produces 2,400 components each week. Production is decreased by 12%. Work out the new weekly production.",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "12% of 2400 components = 288 components.",
+            "2400 components − 288 components = 2112 components."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_answer": "Find 12% of the original 2400 components, then subtract that decrease once.",
+        "rate_as_amount": "The percentage number 12 is a rate, not the final amount. Convert it to a share of the original first.",
+        "change_as_final": "288 components is only the decrease amount. The question asks for what remains after removing it from 2400 components.",
+        "wrong_direction": "Adding the decrease makes the result larger. This situation asks for a decrease.",
+        "change_twice": "Subtract the complete decrease amount once, not twice.",
+        "rate_subtracted": "The rate was subtracted as a bare number. Find that percentage of the original before subtracting.",
+        "check_unit": "Keep the answer in components, as shown beside the boxes. A percentage or a conflicting unit cannot replace that amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-03-X03",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A water tank has a capacity of 850 litres. A safety restriction reduces its usable capacity by 18%. Work out the decrease and the new usable capacity.",
+      "target": "Find the percentage decrease from the original, then subtract it once",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "decrease",
+            "label": "Decrease in usable capacity",
+            "kind": "number",
+            "unit": "litres",
+            "allow_expression": true,
+            "unit_aliases": [
+              "l",
+              "litre",
+              "litres"
+            ],
+            "money_display": false
+          },
+          {
+            "key": "final",
+            "label": "New usable capacity",
+            "kind": "number",
+            "unit": "litres",
+            "allow_expression": true,
+            "unit_aliases": [
+              "l",
+              "litre",
+              "litres"
+            ],
+            "money_display": false
+          }
+        ],
+        "error_values": [],
+        "unit_feedback": true
+      },
+      "answer": {
+        "value": {
+          "decrease": "153",
+          "final": "697"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The unavailable share and the remaining usable capacity are distinct.",
+        "correct_after_support": "Correct. The unavailable share and the remaining usable capacity are distinct.",
+        "on_correct_math": "18% of 850 litres = 153 litres. → 850 litres − 153 litres = 697 litres usable.",
+        "on_incorrect_attempt_1": "Find the share made unavailable, then separate it from the capacity still usable.",
+        "on_incorrect_attempt_2": "The working removes the restricted capacity once; it does not describe a tank physically shrinking.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all five final answers are recorded.",
+        "worked_explanation": "18% of 850 litres = 153 litres. → 850 litres − 153 litres = 697 litres usable."
+      },
+      "mathematical_support": {
+        "hint_1": "Find the share made unavailable, then separate it from the capacity still usable.",
+        "hint_2": "The working removes the restricted capacity once; it does not describe a tank physically shrinking.",
+        "worked_solution": "18% of 850 litres = 153 litres. → 850 litres − 153 litres = 697 litres usable."
+      },
+      "working": [
+        "18% of 850 litres = 153 litres.",
+        "850 litres − 153 litres = 697 litres usable."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A water tank has a capacity of 850 litres. A safety restriction reduces its usable capacity by 18%. Work out the decrease and the new usable capacity.",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "18% of 850 litres = 153 litres.",
+            "850 litres − 153 litres = 697 litres usable."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_decrease": "Your usable capacity is right. Find only the eighteen-percent share made unavailable.",
+        "check_final": "Your decrease is right. Subtract it once to find the capacity still usable.",
+        "check_multiple": "Find the restricted share from the original capacity, then subtract it once.",
+        "check_unit": "Keep the answer in litres, as shown beside the boxes. A percentage or a conflicting unit cannot replace that amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-03-X04",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A student has found 14% of $350 as $49. Which calculation completes the percentage decrease?",
+      "target": "Find the percentage decrease from the original, then subtract it once",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "$350 − $49",
+          "$350 − $14",
+          "$350 + $49",
+          "$49 − $14"
+        ],
+        "math_layout": "decimal_compound_fraction"
+      },
+      "answer": {
+        "value": "$350 − $49"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. Subtracting the dollar decrease completes the method.",
+        "correct_after_support": "Correct. Subtracting the dollar decrease completes the method.",
+        "on_correct_math": "The $49 is the decrease amount. → Subtract it from the original $350 once.",
+        "on_incorrect_attempt_1": "Use the calculated dollar amount and the decrease direction.",
+        "on_incorrect_attempt_2": "The finishing subtraction includes the original price and the computed decrease.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all five final answers are recorded.",
+        "worked_explanation": "The $49 is the decrease amount. → Subtract it from the original $350 once."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the calculated dollar amount and the decrease direction.",
+        "hint_2": "The finishing subtraction includes the original price and the computed decrease.",
+        "worked_solution": "The $49 is the decrease amount. → Subtract it from the original $350 once."
+      },
+      "working": [
+        "The $49 is the decrease amount.",
+        "Subtract it from the original $350 once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A student has found 14% of $350 as $49. Which calculation completes the percentage decrease?",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "The $49 is the decrease amount.",
+            "Subtract it from the original $350 once."
+          ]
+        }
+      },
+      "response_feedback": {
+        "$350 − $14": "The percentage rate is not the dollar decrease.",
+        "$350 + $49": "Adding the computed share would increase the price.",
+        "$49 − $14": "This leaves out the original price and subtracts the bare rate."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-03-X05",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "Which calculation gives the final amount when an original amount is decreased by 22%?",
+      "target": "Find the percentage decrease from the original, then subtract it once",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Original amount − 22",
+          "Original amount + 22% of the original",
+          "Original amount − 22% of the original",
+          "22% of the original only"
+        ],
+        "math_layout": "decimal_compound_fraction"
+      },
+      "answer": {
+        "value": "Original amount − 22% of the original"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The final amount is the original minus its decrease share.",
+        "correct_after_support": "Correct. The final amount is the original minus its decrease share.",
+        "on_correct_math": "Find 22% of the original amount. → Subtract that decrease from the original once.",
+        "on_incorrect_attempt_1": "Keep the original as the percentage reference and account for what remains.",
+        "on_incorrect_attempt_2": "The general structure calculates a decrease amount before the final subtraction.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all five final answers are recorded.",
+        "worked_explanation": "Find 22% of the original amount. → Subtract that decrease from the original once."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the original as the percentage reference and account for what remains.",
+        "hint_2": "The general structure calculates a decrease amount before the final subtraction.",
+        "worked_solution": "Find 22% of the original amount. → Subtract that decrease from the original once."
+      },
+      "working": [
+        "Find 22% of the original amount.",
+        "Subtract that decrease from the original once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "Which calculation gives the final amount when an original amount is decreased by 22%?",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Find 22% of the original amount.",
+            "Subtract that decrease from the original once."
+          ]
+        }
+      },
+      "response_feedback": {
+        "Original amount − 22": "Twenty-two is a rate number, not automatically an amount.",
+        "Original amount + 22% of the original": "Adding the share describes an increase.",
+        "22% of the original only": "The percentage part alone is the decrease, not the final amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-03-E01",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "Decrease 320 by 15%.",
+      "target": "Find the percentage decrease from the original, then subtract it once",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "answer",
+            "label": "Your answer",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true,
+            "unit_aliases": [],
+            "money_display": false
+          }
+        ],
+        "error_values": [
+          {
+            "field": "answer",
+            "value": "15",
+            "classification": "rate_as_amount"
+          },
+          {
+            "field": "answer",
+            "value": "48",
+            "classification": "change_as_final"
+          },
+          {
+            "field": "answer",
+            "value": "368",
+            "classification": "wrong_direction"
+          },
+          {
+            "field": "answer",
+            "value": "224",
+            "classification": "change_twice"
+          },
+          {
+            "field": "answer",
+            "value": "305",
+            "classification": "rate_subtracted"
+          }
+        ],
+        "unit_feedback": true
+      },
+      "answer": {
+        "value": {
+          "answer": "272"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The final quantity is the original minus the computed decrease.",
+        "correct_after_support": "Correct. The final quantity is the original minus the computed decrease.",
+        "on_correct_math": "15% of 320 = 48. → 320 − 48 = 272.",
+        "on_incorrect_attempt_1": "Find the stated percentage of the original 320, then decide what quantity the question asks for.",
+        "on_incorrect_attempt_2": "The working labels 48 as the decrease and removes it from the original exactly once.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all five final answers are recorded.",
+        "worked_explanation": "15% of 320 = 48. → 320 − 48 = 272."
+      },
+      "mathematical_support": {
+        "hint_1": "Find the stated percentage of the original 320, then decide what quantity the question asks for.",
+        "hint_2": "The working labels 48 as the decrease and removes it from the original exactly once.",
+        "worked_solution": "15% of 320 = 48. → 320 − 48 = 272."
+      },
+      "working": [
+        "15% of 320 = 48.",
+        "320 − 48 = 272."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "Decrease 320 by 15%.",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "15% of 320 = 48.",
+            "320 − 48 = 272."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_answer": "Find 15% of the original 320, then subtract that decrease once.",
+        "rate_as_amount": "The percentage number 15 is a rate, not the final amount. Convert it to a share of the original first.",
+        "change_as_final": "48 is only the decrease amount. The question asks for what remains after removing it from 320.",
+        "wrong_direction": "Adding the decrease makes the result larger. This situation asks for a decrease.",
+        "change_twice": "Subtract the complete decrease amount once, not twice.",
+        "rate_subtracted": "The rate was subtracted as a bare number. Find that percentage of the original before subtracting.",
+        "check_unit": "Keep the answer in the given quantity, as shown beside the boxes. A percentage or a conflicting unit cannot replace that amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-03-E02",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "A jacket costs $75. Its price is decreased by 12%. Work out the new price.",
+      "target": "Find the percentage decrease from the original, then subtract it once",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "answer",
+            "label": "Your answer",
+            "kind": "number",
+            "unit": "$",
+            "allow_expression": true,
+            "unit_aliases": [],
+            "money_display": true
+          }
+        ],
+        "error_values": [
+          {
+            "field": "answer",
+            "value": "12",
+            "classification": "rate_as_amount"
+          },
+          {
+            "field": "answer",
+            "value": "9",
+            "classification": "change_as_final"
+          },
+          {
+            "field": "answer",
+            "value": "84",
+            "classification": "wrong_direction"
+          },
+          {
+            "field": "answer",
+            "value": "57",
+            "classification": "change_twice"
+          },
+          {
+            "field": "answer",
+            "value": "63",
+            "classification": "rate_subtracted"
+          }
+        ],
+        "unit_feedback": true
+      },
+      "answer": {
+        "value": {
+          "answer": "66"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The jacket price removes its twelve-percent decrease once.",
+        "correct_after_support": "Correct. The jacket price removes its twelve-percent decrease once.",
+        "on_correct_math": "12% of $75 = $9. → $75 − $9 = $66.",
+        "on_incorrect_attempt_1": "Find the stated percentage of the original 75, then decide what quantity the question asks for.",
+        "on_incorrect_attempt_2": "The working labels $9 as the decrease and removes it from the original exactly once.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all five final answers are recorded.",
+        "worked_explanation": "12% of $75 = $9. → $75 − $9 = $66."
+      },
+      "mathematical_support": {
+        "hint_1": "Find the stated percentage of the original 75, then decide what quantity the question asks for.",
+        "hint_2": "The working labels $9 as the decrease and removes it from the original exactly once.",
+        "worked_solution": "12% of $75 = $9. → $75 − $9 = $66."
+      },
+      "working": [
+        "12% of $75 = $9.",
+        "$75 − $9 = $66."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A jacket costs $75. Its price is decreased by 12%. Work out the new price.",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "12% of $75 = $9.",
+            "$75 − $9 = $66."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_answer": "Find 12% of the original $75, then subtract that decrease once.",
+        "rate_as_amount": "The percentage number 12 is a rate, not the final amount. Convert it to a share of the original first.",
+        "change_as_final": "$9 is only the decrease amount. The question asks for what remains after removing it from $75.",
+        "wrong_direction": "Adding the decrease makes the result larger. This situation asks for a decrease.",
+        "change_twice": "Subtract the complete decrease amount once, not twice.",
+        "rate_subtracted": "The rate was subtracted as a bare number. Find that percentage of the original before subtracting.",
+        "check_unit": "Keep the answer in dollars, as shown beside the boxes. A percentage or a conflicting unit cannot replace that amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-03-E03",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "A container holds 48 litres. Its capacity is decreased by 25%. Work out the new capacity.",
+      "target": "Find the percentage decrease from the original, then subtract it once",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "answer",
+            "label": "Your answer",
+            "kind": "number",
+            "unit": "litres",
+            "allow_expression": true,
+            "unit_aliases": [
+              "l",
+              "litre",
+              "litres"
+            ],
+            "money_display": false
+          }
+        ],
+        "error_values": [
+          {
+            "field": "answer",
+            "value": "25",
+            "classification": "rate_as_amount"
+          },
+          {
+            "field": "answer",
+            "value": "12",
+            "classification": "change_as_final"
+          },
+          {
+            "field": "answer",
+            "value": "60",
+            "classification": "wrong_direction"
+          },
+          {
+            "field": "answer",
+            "value": "24",
+            "classification": "change_twice"
+          },
+          {
+            "field": "answer",
+            "value": "23",
+            "classification": "rate_subtracted"
+          }
+        ],
+        "unit_feedback": true
+      },
+      "answer": {
+        "value": {
+          "answer": "36"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The remaining capacity is three quarters of the original.",
+        "correct_after_support": "Correct. The remaining capacity is three quarters of the original.",
+        "on_correct_math": "25% of 48 litres = 12 litres. → 48 litres − 12 litres = 36 litres.",
+        "on_incorrect_attempt_1": "Find the stated percentage of the original 48, then decide what quantity the question asks for.",
+        "on_incorrect_attempt_2": "The working labels 12 litres as the decrease and removes it from the original exactly once.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all five final answers are recorded.",
+        "worked_explanation": "25% of 48 litres = 12 litres. → 48 litres − 12 litres = 36 litres."
+      },
+      "mathematical_support": {
+        "hint_1": "Find the stated percentage of the original 48, then decide what quantity the question asks for.",
+        "hint_2": "The working labels 12 litres as the decrease and removes it from the original exactly once.",
+        "worked_solution": "25% of 48 litres = 12 litres. → 48 litres − 12 litres = 36 litres."
+      },
+      "working": [
+        "25% of 48 litres = 12 litres.",
+        "48 litres − 12 litres = 36 litres."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A container holds 48 litres. Its capacity is decreased by 25%. Work out the new capacity.",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "25% of 48 litres = 12 litres.",
+            "48 litres − 12 litres = 36 litres."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_answer": "Find 25% of the original 48 litres, then subtract that decrease once.",
+        "rate_as_amount": "The percentage number 25 is a rate, not the final amount. Convert it to a share of the original first.",
+        "change_as_final": "12 litres is only the decrease amount. The question asks for what remains after removing it from 48 litres.",
+        "wrong_direction": "Adding the decrease makes the result larger. This situation asks for a decrease.",
+        "change_twice": "Subtract the complete decrease amount once, not twice.",
+        "rate_subtracted": "The rate was subtracted as a bare number. Find that percentage of the original before subtracting.",
+        "check_unit": "Keep the answer in litres, as shown beside the boxes. A percentage or a conflicting unit cannot replace that amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-03-E04",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "Which sequence correctly decreases an amount A by p%?",
+      "target": "Find the percentage decrease from the original, then subtract it once",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Find p% of A, then subtract it from A.",
+          "Subtract p directly from A.",
+          "Find p% of A, then add it to A.",
+          "Find p% of the final amount, then subtract it from A."
+        ],
+        "math_layout": "decimal_compound_fraction"
+      },
+      "answer": {
+        "value": "Find p% of A, then subtract it from A."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The sequence calculates the decrease before removing it.",
+        "correct_after_support": "Correct. The sequence calculates the decrease before removing it.",
+        "on_correct_math": "Find p% using A as the original reference. → Subtract that decrease amount from A once.",
+        "on_incorrect_attempt_1": "Convert the rate into an amount using the original reference.",
+        "on_incorrect_attempt_2": "The saved working separates the percentage calculation from the final subtraction.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all five final answers are recorded.",
+        "worked_explanation": "Find p% using A as the original reference. → Subtract that decrease amount from A once."
+      },
+      "mathematical_support": {
+        "hint_1": "Convert the rate into an amount using the original reference.",
+        "hint_2": "The saved working separates the percentage calculation from the final subtraction.",
+        "worked_solution": "Find p% using A as the original reference. → Subtract that decrease amount from A once."
+      },
+      "working": [
+        "Find p% using A as the original reference.",
+        "Subtract that decrease amount from A once."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "Which sequence correctly decreases an amount A by p%?",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Find p% using A as the original reference.",
+            "Subtract that decrease amount from A once."
+          ]
+        }
+      },
+      "response_feedback": {
+        "Subtract p directly from A.": "The rate must become an amount before subtraction.",
+        "Find p% of A, then add it to A.": "This uses the opposite direction from a decrease.",
+        "Find p% of the final amount, then subtract it from A.": "The stated decrease is measured from the original, not the final amount."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-03-E05",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "A student finds 18% of 250 correctly as 45. Which final line completes the percentage decrease?",
+      "target": "Find the percentage decrease from the original, then subtract it once",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "250 + 45 = 295",
+          "250 − 45 = 205",
+          "45 − 18 = 27",
+          "250 − 18 = 232"
+        ],
+        "math_layout": "decimal_compound_fraction"
+      },
+      "answer": {
+        "value": "250 − 45 = 205"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Correct. The final line subtracts the calculated decrease once.",
+        "correct_after_support": "Correct. The final line subtracts the calculated decrease once.",
+        "on_correct_math": "The 45 is the decrease amount. → Subtract it once from the original 250.",
+        "on_incorrect_attempt_1": "Use the decrease amount already found instead of the bare rate.",
+        "on_incorrect_attempt_2": "The saved review subtracts one complete decrease from the original.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all five final answers are recorded.",
+        "worked_explanation": "The 45 is the decrease amount. → Subtract it once from the original 250."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the decrease amount already found instead of the bare rate.",
+        "hint_2": "The saved review subtracts one complete decrease from the original.",
+        "worked_solution": "The 45 is the decrease amount. → Subtract it once from the original 250."
+      },
+      "working": [
+        "The 45 is the decrease amount.",
+        "Subtract it once from the original 250."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A student finds 18% of 250 correctly as 45. Which final line completes the percentage decrease?",
+          "math_text": true,
+          "decimal_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "The 45 is the decrease amount.",
+            "Subtract it once from the original 250."
+          ]
+        }
+      },
+      "response_feedback": {
+        "250 + 45 = 295": "The decrease is right, but this line adds it.",
+        "45 − 18 = 27": "This omits the original and subtracts the rate from the decrease.",
+        "250 − 18 = 232": "This subtracts the rate number instead of the computed decrease."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    }
+  ],
+  "canonical_lesson": {
+    "version": "PC03-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

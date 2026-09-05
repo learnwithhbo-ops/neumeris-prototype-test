@@ -1,0 +1,1806 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "MD-02 - Find a non-unit fraction of a whole-number amount",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-16",
+      "sha256": "9736f5a213e9bab7eaebb04cfadb133520b8bb50f1644a87a59c7ab47d77953b"
+    },
+    "authored_scope": "Find proper non-unit fractions of positive whole-number amounts; accept any mathematically valid exact method.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "MD02-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "preview_checked_2026-09-03",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        4,
+        5,
+        6,
+        7,
+        12,
+        14,
+        15,
+        16
+      ],
+      "source_repairs_consulted": [
+        9,
+        10,
+        11
+      ],
+      "note": "All 16 source pages read; the p4–6 PDF supplies the storyboard. The repeated sports-club example stays outside the active route. Separate entry, diagnostic and delayed-retrieval layers remain inactive."
+    }
+  },
+  "identity": {
+    "id": "MD-02",
+    "slug": "find-a-non-unit-fraction-of-a-whole-number-amount",
+    "title": "Find a non-unit fraction of a whole-number amount",
+    "strand": "Number",
+    "cluster": "Multiplying and Dividing Fractions",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Find a proper non-unit fraction of a positive whole-number amount by relating equal shares and selected shares.",
+    "success_criteria": [
+      "Use the denominator to find one equal share.",
+      "Use the numerator to combine the requested shares.",
+      "Complete both stages, accepting other valid exact methods.",
+      "Apply the relationship in a short context."
+    ],
+    "boundaries": {
+      "includes": [
+        "Proper non-unit fractions; denominators 3–12; integer one-share values and answers.",
+        "Division-first, multiplication-first and simplified-fraction methods when mathematically valid."
+      ],
+      "excludes": [
+        "Diagnostic route",
+        "Delayed retrieval route",
+        "Algebraic generalisation beyond the approved packet"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "MD-01"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for MD-01 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "single_choice",
+      "integer"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    }
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored result before submission.",
+      "Use one unchanged reference whole within a question.",
+      "Reveal locked post-submit working in the authored order."
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "Divide by the denominator to find one part, then multiply by the numerator to select the required number of parts.",
+    "invariant": "Every selected part has the same value because all parts come from one unchanged whole.",
+    "mathematical_rule": "Divide the whole by the denominator; Multiply one-part value by the numerator; Check the result is a plausible part of the whole; Keep the unit",
+    "must_notice": [
+      "Divide the whole by the denominator",
+      "Multiply one-part value by the numerator",
+      "Check the result is a plausible part of the whole",
+      "Keep the unit"
+    ],
+    "common_confusions": [
+      "Swapping numerator and denominator roles",
+      "Stopping after one equal share",
+      "Multiplying by the numerator but omitting division",
+      "Dividing the one-share value by the numerator"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "More than one equal share",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "More than one equal share",
+          "initial_state": "More than one equal share",
+          "model": {
+            "kind": "fraction_amount",
+            "total": 30,
+            "n": 3,
+            "d": 5,
+            "object": "counters",
+            "target": "Selected amount",
+            "phase": "whole"
+          }
+        },
+        "narration": {
+          "script": "A non-unit fraction selects several equal shares. Start with the whole collection of thirty counters."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Find one fifth",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Find one fifth",
+          "initial_state": "Find one fifth",
+          "model": {
+            "kind": "fraction_amount",
+            "total": 30,
+            "n": 3,
+            "d": 5,
+            "object": "counters",
+            "target": "Selected amount",
+            "phase": "unit",
+            "annotation": "30 ÷ 5 = 6 in one group."
+          }
+        },
+        "narration": {
+          "script": "The denominator names five equal groups. Sharing the counters equally gives six in each group."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Select three fifths",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Select three fifths",
+          "initial_state": "Select three fifths",
+          "model": {
+            "kind": "fraction_amount",
+            "total": 30,
+            "n": 3,
+            "d": 5,
+            "object": "counters",
+            "target": "Selected amount",
+            "solved": true,
+            "annotation": "6 × 3 = 18; three fifths is 18."
+          }
+        },
+        "narration": {
+          "script": "The numerator selects three groups. Combine their counters; one group alone is not the answer."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "What does the first division find?",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "What does the first division find?",
+          "initial_state": "What does the first division find?",
+          "model": null
+        },
+        "narration": {
+          "script": "Distinguish an intermediate share from the requested fraction."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "MD-02-C01"
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "A new amount: sixty-four",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "A new amount: sixty-four",
+          "initial_state": "A new amount: sixty-four",
+          "model": {
+            "kind": "fraction_amount",
+            "total": 64,
+            "n": 3,
+            "d": 8,
+            "object": "quantity",
+            "target": "Selected amount",
+            "phase": "grouped"
+          }
+        },
+        "narration": {
+          "script": "For three eighths, first use the denominator to make eight equal shares."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T06"
+      },
+      {
+        "id": "T06",
+        "stage": "teaching",
+        "purpose": "One eighth",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "One eighth",
+          "initial_state": "One eighth",
+          "model": {
+            "kind": "fraction_amount",
+            "total": 64,
+            "n": 3,
+            "d": 8,
+            "object": "quantity",
+            "target": "Selected amount",
+            "phase": "unit",
+            "annotation": "64 ÷ 8 = 8."
+          }
+        },
+        "narration": {
+          "script": "The division gives the value of one eighth. We still need more than one share."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T07"
+      },
+      {
+        "id": "T07",
+        "stage": "teaching",
+        "purpose": "Three eighths",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Three eighths",
+          "initial_state": "Three eighths",
+          "model": {
+            "kind": "fraction_amount",
+            "total": 64,
+            "n": 3,
+            "d": 8,
+            "object": "quantity",
+            "target": "Selected amount",
+            "solved": true,
+            "annotation": "8 × 3 = 24; three eighths is 24."
+          }
+        },
+        "narration": {
+          "script": "Now combine three shares. The highlighted part is the requested fraction of the same whole."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T08"
+      },
+      {
+        "id": "T08",
+        "stage": "teaching",
+        "purpose": "Match the completed method",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Match the completed method",
+          "initial_state": "Match the completed method",
+          "model": null
+        },
+        "narration": {
+          "script": "Which method accounts for both numbers in the fraction?"
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "MD-02-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "MD-02-G01",
+        "support_level": "high",
+        "pre_question_script": "Let’s separate finding one sixth from selecting five sixths.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "MD-02-G02",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "guided",
+        "question_ref": "MD-02-G03",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "guided",
+        "question_ref": "MD-02-G04",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G05"
+      },
+      "G05": {
+        "stage": "guided",
+        "question_ref": "MD-02-G05",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "G06"
+      },
+      "G06": {
+        "stage": "guided",
+        "question_ref": "MD-02-G06",
+        "support_level": "high",
+        "pre_question_script": "",
+        "correct_next": "F01"
+      },
+      "F01": {
+        "stage": "faded",
+        "question_ref": "MD-02-P01",
+        "support_level": "reduced",
+        "pre_question_script": "Try both stages yourself. You can ask for a clue if needed.",
+        "correct_next": "I01"
+      },
+      "I01": {
+        "stage": "independent_transfer",
+        "question_ref": "MD-02-P02",
+        "support_level": "none",
+        "pre_question_script": "Use any valid method. Work on paper if that helps, then enter the exact whole-number answer.",
+        "correct_next": "P03"
+      }
+    },
+    "practice": {
+      "intro_script": "Keep track of one share and all the selected shares as the amounts and contexts change.",
+      "question_order": [
+        "MD-02-P03",
+        "MD-02-P04",
+        "MD-02-P05",
+        "MD-02-P06",
+        "MD-02-X02",
+        "MD-02-X03",
+        "MD-02-X04"
+      ]
+    },
+    "exit": {
+      "intro_script": "Complete two calculations and a method check independently. No hints are available during these final checks.",
+      "primary_question_refs": [
+        "MD-02-E01",
+        "MD-02-E02",
+        "MD-02-E03"
+      ],
+      "confirmation_question_refs": [],
+      "mastery_policy": {
+        "profile": "all_primary_unsupported",
+        "require_all": true,
+        "source_page": 12,
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "You completed both calculations independently and kept the two fraction-number roles distinct.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Keep building selected shares",
+      "ryan_script": "One or more final checks need more practice. Compare finding one share with combining the selected shares.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "MD-02-C01",
+      "source_ref": {
+        "page": 4
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "When finding 4/7 of 42, what does 42 ÷ 7 find?",
+      "target": "Meaning of one part",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "The value of one seventh of 42.",
+          "The value of four sevenths of 42.",
+          "The number that must be subtracted from 42.",
+          "The final answer in every non-unit-fraction question."
+        ]
+      },
+      "answer": {
+        "value": "The value of one seventh of 42."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That division finds just one share; the numerator still matters.",
+        "correct_after_support": "That division finds just one share; the numerator still matters.",
+        "on_correct_math": "42 ÷ 7 = 6. → This is one seventh, not four sevenths. → Four sevenths requires four equal shares.",
+        "on_incorrect_attempt_1": "What does dividing into seven equal groups give you?",
+        "on_incorrect_attempt_2": "The first division gives one seventh. Use the working to distinguish one share from four.",
+        "worked_explanation": "42 ÷ 7 = 6. → This is one seventh, not four sevenths. → Four sevenths requires four equal shares."
+      },
+      "mathematical_support": {
+        "hint_1": "What does dividing into seven equal groups give you?",
+        "hint_2": "Distinguish the size of one group from the value of several groups.",
+        "worked_solution": "42 ÷ 7 = 6. → This is one seventh, not four sevenths. → Four sevenths requires four equal shares."
+      },
+      "working": [
+        "42 ÷ 7 = 6.",
+        "This is one seventh, not four sevenths.",
+        "Four sevenths requires four equal shares."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_amount",
+          "total": 42,
+          "n": 4,
+          "d": 7,
+          "object": "quantity",
+          "target": "Meaning of one part",
+          "resultScope": "unit"
+        }
+      },
+      "response_feedback": {
+        "The value of four sevenths of 42.": "The division finds one share. The four has not yet been used.",
+        "The number that must be subtracted from 42.": "The denominator counts equal groups; it is not an amount to remove.",
+        "The final answer in every non-unit-fraction question.": "A non-unit fraction selects several shares. One share is only an intermediate result."
+      }
+    },
+    {
+      "id": "MD-02-C02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "Which method correctly finds 3/8 of 64?",
+      "target": "Selected amount",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "64 ÷ 8 = 8; 8 × 3 = 24",
+          "64 ÷ 3 × 8",
+          "64 ÷ 8 = 8, so the answer is 8",
+          "64 × 3 = 192"
+        ]
+      },
+      "answer": {
+        "value": "64 ÷ 8 = 8; 8 × 3 = 24"
+      },
+      "policy": {
+        "scored": false,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true,
+        "engagementOnly": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Both stages are complete: one share first, then three shares.",
+        "correct_after_support": "Both stages are complete: one share first, then three shares.",
+        "on_correct_math": "One eighth: 64 ÷ 8 = 8. → Three eighths: 8 × 3 = 24.",
+        "on_incorrect_attempt_1": "Look for a method that accounts for both numbers in the fraction.",
+        "on_incorrect_attempt_2": "Compare the one-share line with the three-share line.",
+        "worked_explanation": "One eighth: 64 ÷ 8 = 8. → Three eighths: 8 × 3 = 24."
+      },
+      "mathematical_support": {
+        "hint_1": "Look for a method that accounts for both numbers in the fraction.",
+        "hint_2": "The denominator creates equal parts; the numerator selects some of those parts.",
+        "worked_solution": "One eighth: 64 ÷ 8 = 8. → Three eighths: 8 × 3 = 24."
+      },
+      "working": [
+        "One eighth: 64 ÷ 8 = 8.",
+        "Three eighths: 8 × 3 = 24."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_amount",
+          "total": 64,
+          "n": 3,
+          "d": 8,
+          "object": "quantity",
+          "target": "Selected amount"
+        }
+      },
+      "response_feedback": {
+        "64 ÷ 3 × 8": "That swaps the roles of the numerator and denominator.",
+        "64 ÷ 8 = 8, so the answer is 8": "Eight is only one share. This fraction selects three shares.",
+        "64 × 3 = 192": "That takes three whole amounts. The division into eighths is missing."
+      }
+    },
+    {
+      "id": "MD-02-G01",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "We want 5/6 of 42. What is the denominator?",
+      "target": "Denominator",
+      "response": {
+        "type": "integer",
+        "input_label": "Denominator",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 6
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Six names the equal groups.",
+        "correct_after_support": "Six names the equal groups.",
+        "on_correct_math": "The denominator is 6.",
+        "on_incorrect_attempt_1": "Which number names the equal parts?",
+        "on_incorrect_attempt_2": "The bottom number names sixths. Use it to correct your answer.",
+        "worked_explanation": "The denominator is 6."
+      },
+      "mathematical_support": {
+        "hint_1": "Which number names the equal parts?",
+        "hint_2": "Look below the fraction bar.",
+        "worked_solution": "The denominator is 6."
+      },
+      "working": [
+        "The denominator is 6."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_amount",
+          "total": 42,
+          "n": 5,
+          "d": 6,
+          "object": "quantity",
+          "target": "Denominator"
+        }
+      },
+      "reveal_model_on_submit": false
+    },
+    {
+      "id": "MD-02-G02",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "Find one sixth first. What is 42 ÷ 6?",
+      "target": "Value of one sixth",
+      "response": {
+        "type": "integer",
+        "input_label": "Value of one sixth",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 7
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That is the value of one sixth, not yet five sixths.",
+        "correct_after_support": "That is the value of one sixth, not yet five sixths.",
+        "on_correct_math": "42 ÷ 6 = 7. → One sixth has value 7.",
+        "on_incorrect_attempt_1": "Which multiplication fact links six equal groups to 42?",
+        "on_incorrect_attempt_2": "Use the division line to find one equal share, then correct this intermediate answer.",
+        "worked_explanation": "42 ÷ 6 = 7. → One sixth has value 7."
+      },
+      "mathematical_support": {
+        "hint_1": "Which multiplication fact links six equal groups to 42?",
+        "hint_2": "Find the value that makes six identical shares add to 42.",
+        "worked_solution": "42 ÷ 6 = 7. → One sixth has value 7."
+      },
+      "working": [
+        "42 ÷ 6 = 7.",
+        "One sixth has value 7."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_amount",
+          "total": 42,
+          "n": 5,
+          "d": 6,
+          "object": "quantity",
+          "target": "Value of one sixth",
+          "resultScope": "unit",
+          "previous": "Six equal groups share 42"
+        }
+      }
+    },
+    {
+      "id": "MD-02-G03",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "Which numerator tells us how many sixths to select in 5/6?",
+      "target": "Numerator",
+      "response": {
+        "type": "integer",
+        "input_label": "Numerator",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 5
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Five tells us how many shares to combine.",
+        "correct_after_support": "Five tells us how many shares to combine.",
+        "on_correct_math": "The numerator is 5: select five sixths.",
+        "on_incorrect_attempt_1": "Which number counts the selected parts?",
+        "on_incorrect_attempt_2": "The top number selects five of the equal shares.",
+        "worked_explanation": "The numerator is 5: select five sixths."
+      },
+      "mathematical_support": {
+        "hint_1": "Which number counts the selected parts?",
+        "hint_2": "Look above the fraction bar.",
+        "worked_solution": "The numerator is 5: select five sixths."
+      },
+      "working": [
+        "The numerator is 5: select five sixths."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_amount",
+          "total": 42,
+          "n": 5,
+          "d": 6,
+          "object": "quantity",
+          "target": "Numerator",
+          "previous": "One sixth is 7"
+        }
+      },
+      "reveal_model_on_submit": false
+    },
+    {
+      "id": "MD-02-G04",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "One sixth is 7. Find five sixths: 7 × 5 = ?",
+      "target": "Value of five sixths",
+      "response": {
+        "type": "integer",
+        "input_label": "Value of five sixths",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 35
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The five selected shares have been combined.",
+        "correct_after_support": "The five selected shares have been combined.",
+        "on_correct_math": "One sixth is 7. → Five sixths: 7 × 5 = 35.",
+        "on_incorrect_attempt_1": "Combine five groups of the one-share value.",
+        "on_incorrect_attempt_2": "Follow the selected groups in the working, then enter their combined value.",
+        "worked_explanation": "One sixth is 7. → Five sixths: 7 × 5 = 35."
+      },
+      "mathematical_support": {
+        "hint_1": "Combine five groups of the one-share value.",
+        "hint_2": "The numerator counts shares; do not divide the one-share value again.",
+        "worked_solution": "One sixth is 7. → Five sixths: 7 × 5 = 35."
+      },
+      "working": [
+        "One sixth is 7.",
+        "Five sixths: 7 × 5 = 35."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_amount",
+          "total": 42,
+          "n": 5,
+          "d": 6,
+          "object": "quantity",
+          "target": "Value of five sixths",
+          "previous": "One sixth: 42 ÷ 6 = 7"
+        }
+      }
+    },
+    {
+      "id": "MD-02-G05",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "Complete the conclusion: 5/6 of 42 = ?",
+      "target": "Five sixths of 42",
+      "response": {
+        "type": "integer",
+        "input_label": "Five sixths of 42",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 35
+      },
+      "policy": {
+        "scored": false,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true,
+        "engagementOnly": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That states the value of all five shares.",
+        "correct_after_support": "That states the value of all five shares.",
+        "on_correct_math": "Five shares of 7 have a combined value of 35. → 5/6 of 42 = 35.",
+        "on_incorrect_attempt_1": "The previous line gives the combined value of five shares.",
+        "on_incorrect_attempt_2": "Compare the conclusion with the combined-share calculation.",
+        "worked_explanation": "Five shares of 7 have a combined value of 35. → 5/6 of 42 = 35."
+      },
+      "mathematical_support": {
+        "hint_1": "The previous line gives the combined value of five shares.",
+        "hint_2": "Use all five shares, not the value of one share alone.",
+        "worked_solution": "Five shares of 7 have a combined value of 35. → 5/6 of 42 = 35."
+      },
+      "working": [
+        "Five shares of 7 have a combined value of 35.",
+        "5/6 of 42 = 35."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_amount",
+          "total": 42,
+          "n": 5,
+          "d": 6,
+          "object": "quantity",
+          "target": "Five sixths of 42",
+          "previous": "7 × 5 = 35"
+        }
+      },
+      "response_feedback": {
+        "7": "Seven is one sixth. The completed multiplication gives thirty-five for five sixths."
+      }
+    },
+    {
+      "id": "MD-02-G06",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "Which statement explains the calculation for 5/6 of 42?",
+      "target": "Selected amount",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Divide 42 by 6 to find one part, then multiply by 5.",
+          "Divide 42 by 5 to find one part, then multiply by 6.",
+          "Multiply 42 by 5 and stop.",
+          "Divide 42 by both 6 and 5."
+        ]
+      },
+      "answer": {
+        "value": "Divide 42 by 6 to find one part, then multiply by 5."
+      },
+      "policy": {
+        "scored": false,
+        "hintPolicy": "none",
+        "solutionPolicy": "checkpoint",
+        "autoContinueAfterFeedback": true,
+        "requireLearnerCorrection": true,
+        "engagementOnly": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The explanation keeps the two number roles separate.",
+        "correct_after_support": "The explanation keeps the two number roles separate.",
+        "on_correct_math": "42 ÷ 6 = 7. → 7 × 5 = 35.",
+        "on_incorrect_attempt_1": "Connect each number in the fraction to its job.",
+        "on_incorrect_attempt_2": "Use the working to match each number to the equal groups or selected shares.",
+        "worked_explanation": "42 ÷ 6 = 7. → 7 × 5 = 35."
+      },
+      "mathematical_support": {
+        "hint_1": "Connect each number in the fraction to its job.",
+        "hint_2": "The selected shares are combined, not divided again.",
+        "worked_solution": "42 ÷ 6 = 7. → 7 × 5 = 35."
+      },
+      "working": [
+        "42 ÷ 6 = 7.",
+        "7 × 5 = 35."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_amount",
+          "total": 42,
+          "n": 5,
+          "d": 6,
+          "object": "quantity",
+          "target": "Selected amount"
+        }
+      },
+      "response_feedback": {
+        "Divide 42 by 5 to find one part, then multiply by 6.": "That reverses the denominator and numerator roles.",
+        "Multiply 42 by 5 and stop.": "That ignores the denominator, so it combines whole amounts rather than sixths.",
+        "Divide 42 by both 6 and 5.": "After finding one sixth, combine five shares. Dividing again does not do that."
+      }
+    },
+    {
+      "id": "MD-02-P01",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "faded",
+      "prompt": "Find 2/3 of 27.",
+      "target": "Selected amount",
+      "response": {
+        "type": "integer",
+        "input_label": "Selected amount",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 18
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "You found two equal thirds of the original amount.",
+        "correct_after_support": "You found two equal thirds of the original amount.",
+        "on_correct_math": "27 ÷ 3 = 9. → 9 × 2 = 18. → 2/3 of 27 = 18.",
+        "on_incorrect_attempt_1": "Have you found just one share, or all the requested shares?",
+        "on_incorrect_attempt_2": "Compare one third with two thirds in the working, then correct your answer.",
+        "worked_explanation": "27 ÷ 3 = 9. → 9 × 2 = 18. → 2/3 of 27 = 18."
+      },
+      "mathematical_support": {
+        "hint_1": "Have you found just one share, or all the requested shares?",
+        "hint_2": "Use 3 equal groups, then combine 2 of them. A valid multiplication-first method also works.",
+        "worked_solution": "27 ÷ 3 = 9. → 9 × 2 = 18. → 2/3 of 27 = 18."
+      },
+      "working": [
+        "27 ÷ 3 = 9.",
+        "9 × 2 = 18.",
+        "2/3 of 27 = 18."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_amount",
+          "total": 27,
+          "n": 2,
+          "d": 3,
+          "object": "quantity",
+          "target": "Selected amount",
+          "stage": "faded",
+          "reaction": "You found two equal thirds of the original amount.",
+          "correction": "Compare one third with two thirds in the working, then correct your answer."
+        }
+      },
+      "response_feedback": {
+        "9": "That is the value of one share. How many shares does the numerator select?",
+        "54": "That combines whole amounts. Account for the size of each fractional share as well."
+      }
+    },
+    {
+      "id": "MD-02-P02",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "independent_transfer",
+      "prompt": "Find 3/5 of 45.",
+      "target": "Selected amount",
+      "response": {
+        "type": "integer",
+        "input_label": "Selected amount",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 27
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The result combines three of the five equal shares.",
+        "correct_after_support": "The result combines three of the five equal shares.",
+        "on_correct_math": "45 ÷ 5 = 9. → 9 × 3 = 27. → 3/5 of 45 = 27.",
+        "on_incorrect_attempt_1": "Have you found just one share, or all the requested shares?",
+        "on_incorrect_attempt_2": "The working separates one fifth from the three fifths requested.",
+        "worked_explanation": "45 ÷ 5 = 9. → 9 × 3 = 27. → 3/5 of 45 = 27."
+      },
+      "mathematical_support": {
+        "hint_1": "Have you found just one share, or all the requested shares?",
+        "hint_2": "Use 5 equal groups, then combine 3 of them. A valid multiplication-first method also works.",
+        "worked_solution": "45 ÷ 5 = 9. → 9 × 3 = 27. → 3/5 of 45 = 27."
+      },
+      "working": [
+        "45 ÷ 5 = 9.",
+        "9 × 3 = 27.",
+        "3/5 of 45 = 27."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_amount",
+          "total": 45,
+          "n": 3,
+          "d": 5,
+          "object": "quantity",
+          "target": "Selected amount",
+          "stage": "independent_transfer",
+          "reaction": "The result combines three of the five equal shares.",
+          "correction": "The working separates one fifth from the three fifths requested."
+        }
+      },
+      "response_feedback": {
+        "9": "That is the value of one share. How many shares does the numerator select?",
+        "135": "That combines whole amounts. Account for the size of each fractional share as well."
+      }
+    },
+    {
+      "id": "MD-02-P03",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Find 4/7 of 56.",
+      "target": "Selected amount",
+      "response": {
+        "type": "integer",
+        "input_label": "Selected amount",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 32
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "All four selected sevenths are included.",
+        "correct_after_support": "All four selected sevenths are included.",
+        "on_correct_math": "56 ÷ 7 = 8. → 8 × 4 = 32. → 4/7 of 56 = 32.",
+        "on_incorrect_attempt_1": "Have you found just one share, or all the requested shares?",
+        "on_incorrect_attempt_2": "Use the one-seventh value to check the four selected groups.",
+        "worked_explanation": "56 ÷ 7 = 8. → 8 × 4 = 32. → 4/7 of 56 = 32."
+      },
+      "mathematical_support": {
+        "hint_1": "Have you found just one share, or all the requested shares?",
+        "hint_2": "Use 7 equal groups, then combine 4 of them. A valid multiplication-first method also works.",
+        "worked_solution": "56 ÷ 7 = 8. → 8 × 4 = 32. → 4/7 of 56 = 32."
+      },
+      "working": [
+        "56 ÷ 7 = 8.",
+        "8 × 4 = 32.",
+        "4/7 of 56 = 32."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_amount",
+          "total": 56,
+          "n": 4,
+          "d": 7,
+          "object": "quantity",
+          "target": "Selected amount",
+          "reaction": "All four selected sevenths are included.",
+          "correction": "Use the one-seventh value to check the four selected groups."
+        }
+      },
+      "response_feedback": {
+        "8": "That is the value of one share. How many shares does the numerator select?",
+        "224": "That combines whole amounts. Account for the size of each fractional share as well."
+      }
+    },
+    {
+      "id": "MD-02-P04",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Find 5/8 of 72.",
+      "target": "Selected amount",
+      "response": {
+        "type": "integer",
+        "input_label": "Selected amount",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 45
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Five eighths accounts for five equal shares, not just one.",
+        "correct_after_support": "Five eighths accounts for five equal shares, not just one.",
+        "on_correct_math": "72 ÷ 8 = 9. → 9 × 5 = 45. → 5/8 of 72 = 45.",
+        "on_incorrect_attempt_1": "Have you found just one share, or all the requested shares?",
+        "on_incorrect_attempt_2": "Compare the eight equal shares with the five selected shares before correcting your answer.",
+        "worked_explanation": "72 ÷ 8 = 9. → 9 × 5 = 45. → 5/8 of 72 = 45."
+      },
+      "mathematical_support": {
+        "hint_1": "Have you found just one share, or all the requested shares?",
+        "hint_2": "Use 8 equal groups, then combine 5 of them. A valid multiplication-first method also works.",
+        "worked_solution": "72 ÷ 8 = 9. → 9 × 5 = 45. → 5/8 of 72 = 45."
+      },
+      "working": [
+        "72 ÷ 8 = 9.",
+        "9 × 5 = 45.",
+        "5/8 of 72 = 45."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_amount",
+          "total": 72,
+          "n": 5,
+          "d": 8,
+          "object": "quantity",
+          "target": "Selected amount",
+          "reaction": "Five eighths accounts for five equal shares, not just one.",
+          "correction": "Compare the eight equal shares with the five selected shares before correcting your answer."
+        }
+      },
+      "response_feedback": {
+        "9": "That is the value of one share. How many shares does the numerator select?",
+        "360": "That combines whole amounts. Account for the size of each fractional share as well."
+      }
+    },
+    {
+      "id": "MD-02-P05",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Find 7/10 of 90.",
+      "target": "Selected amount",
+      "response": {
+        "type": "integer",
+        "input_label": "Selected amount",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 63
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Seven of the ten equal shares give your result.",
+        "correct_after_support": "Seven of the ten equal shares give your result.",
+        "on_correct_math": "90 ÷ 10 = 9. → 9 × 7 = 63. → 7/10 of 90 = 63.",
+        "on_incorrect_attempt_1": "Have you found just one share, or all the requested shares?",
+        "on_incorrect_attempt_2": "Follow the tenths in the working, then combine the seven selected shares.",
+        "worked_explanation": "90 ÷ 10 = 9. → 9 × 7 = 63. → 7/10 of 90 = 63."
+      },
+      "mathematical_support": {
+        "hint_1": "Have you found just one share, or all the requested shares?",
+        "hint_2": "Use 10 equal groups, then combine 7 of them. A valid multiplication-first method also works.",
+        "worked_solution": "90 ÷ 10 = 9. → 9 × 7 = 63. → 7/10 of 90 = 63."
+      },
+      "working": [
+        "90 ÷ 10 = 9.",
+        "9 × 7 = 63.",
+        "7/10 of 90 = 63."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_amount",
+          "total": 90,
+          "n": 7,
+          "d": 10,
+          "object": "quantity",
+          "target": "Selected amount",
+          "reaction": "Seven of the ten equal shares give your result.",
+          "correction": "Follow the tenths in the working, then combine the seven selected shares."
+        }
+      },
+      "response_feedback": {
+        "9": "That is the value of one share. How many shares does the numerator select?",
+        "630": "That combines whole amounts. Account for the size of each fractional share as well."
+      }
+    },
+    {
+      "id": "MD-02-P06",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "A student finds 3/4 of 52. Which answer is correct?",
+      "target": "Selected amount",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "39",
+          "13",
+          "156",
+          "49"
+        ]
+      },
+      "answer": {
+        "value": "39"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That answer includes three of the four equal shares.",
+        "correct_after_support": "That answer includes three of the four equal shares.",
+        "on_correct_math": "52 ÷ 4 = 13. → 13 × 3 = 39.",
+        "on_incorrect_attempt_1": "Does the answer describe one quarter or three quarters?",
+        "on_incorrect_attempt_2": "Compare the one-quarter calculation and the three-quarter calculation.",
+        "worked_explanation": "52 ÷ 4 = 13. → 13 × 3 = 39."
+      },
+      "mathematical_support": {
+        "hint_1": "Does the answer describe one quarter or three quarters?",
+        "hint_2": "The selected amount contains three equal quarter-shares.",
+        "worked_solution": "52 ÷ 4 = 13. → 13 × 3 = 39."
+      },
+      "working": [
+        "52 ÷ 4 = 13.",
+        "13 × 3 = 39."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_amount",
+          "total": 52,
+          "n": 3,
+          "d": 4,
+          "object": "quantity",
+          "target": "Selected amount"
+        }
+      },
+      "response_feedback": {
+        "13": "Thirteen is one quarter. Three quarters includes more than one share.",
+        "49": "Subtracting three does not take three quarters of the amount.",
+        "156": "That is three whole amounts, not three quarters."
+      }
+    },
+    {
+      "id": "MD-02-X02",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "practice",
+      "prompt": "Aisha has £70. She spends four fifths on a jacket. How much does she spend?",
+      "target": "Jacket cost in pounds",
+      "response": {
+        "type": "integer",
+        "input_label": "Jacket cost in pounds",
+        "prefix": "£"
+      },
+      "answer": {
+        "value": 56
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The cost accounts for four fifths of her available money.",
+        "correct_after_support": "The cost accounts for four fifths of her available money.",
+        "on_correct_math": "70 ÷ 5 = 14. → 14 × 4 = 56. → Selected amount: £56.",
+        "on_incorrect_attempt_1": "Have you found just one share, or all the requested shares?",
+        "on_incorrect_attempt_2": "Use the money shares in the working to check the jacket cost.",
+        "worked_explanation": "70 ÷ 5 = 14. → 14 × 4 = 56. → Selected amount: £56."
+      },
+      "mathematical_support": {
+        "hint_1": "Have you found just one share, or all the requested shares?",
+        "hint_2": "Use 5 equal groups, then combine 4 of them. A valid multiplication-first method also works.",
+        "worked_solution": "70 ÷ 5 = 14. → 14 × 4 = 56. → Selected amount: £56."
+      },
+      "working": [
+        "70 ÷ 5 = 14.",
+        "14 × 4 = 56.",
+        "Selected amount: £56."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_amount",
+          "total": 70,
+          "n": 4,
+          "d": 5,
+          "object": "money",
+          "target": "Jacket cost in pounds",
+          "unit": "£",
+          "prompt": "Aisha has £70. She spends four fifths on a jacket. How much does she spend?",
+          "reaction": "The cost accounts for four fifths of her available money.",
+          "correction": "Use the money shares in the working to check the jacket cost."
+        }
+      },
+      "response_feedback": {
+        "14": "That is the value of one share. How many shares does the numerator select?",
+        "280": "That combines whole amounts. Account for the size of each fractional share as well."
+      }
+    },
+    {
+      "id": "MD-02-X03",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "practice",
+      "prompt": "A journey is 120 km long. Mia travels seven tenths by train. How far does she travel by train?",
+      "target": "Distance travelled by train",
+      "response": {
+        "type": "integer",
+        "input_label": "Distance travelled by train",
+        "suffix": "km"
+      },
+      "answer": {
+        "value": 84
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The train distance is seven tenths of the full journey.",
+        "correct_after_support": "The train distance is seven tenths of the full journey.",
+        "on_correct_math": "120 ÷ 10 = 12. → 12 × 7 = 84. → 7/10 of 120 = 84 km.",
+        "on_incorrect_attempt_1": "Have you found just one share, or all the requested shares?",
+        "on_incorrect_attempt_2": "Find the length of one tenth, then check the seven tenths travelled by train.",
+        "worked_explanation": "120 ÷ 10 = 12. → 12 × 7 = 84. → 7/10 of 120 = 84 km."
+      },
+      "mathematical_support": {
+        "hint_1": "Have you found just one share, or all the requested shares?",
+        "hint_2": "Use 10 equal groups, then combine 7 of them. A valid multiplication-first method also works.",
+        "worked_solution": "120 ÷ 10 = 12. → 12 × 7 = 84. → 7/10 of 120 = 84 km."
+      },
+      "working": [
+        "120 ÷ 10 = 12.",
+        "12 × 7 = 84.",
+        "7/10 of 120 = 84 km."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_amount",
+          "total": 120,
+          "n": 7,
+          "d": 10,
+          "object": "journey",
+          "target": "Distance travelled by train",
+          "unit": "km",
+          "prompt": "A journey is 120 km long. Mia travels seven tenths by train. How far does she travel by train?",
+          "reaction": "The train distance is seven tenths of the full journey.",
+          "correction": "Find the length of one tenth, then check the seven tenths travelled by train."
+        }
+      },
+      "response_feedback": {
+        "12": "That is the value of one share. How many shares does the numerator select?",
+        "840": "That combines whole amounts. Account for the size of each fractional share as well."
+      }
+    },
+    {
+      "id": "MD-02-X04",
+      "source_ref": {
+        "page": 14
+      },
+      "stage": "practice",
+      "prompt": "A box contains 84 tiles. Five twelfths are blue. Which calculation finds the number of blue tiles?",
+      "target": "Calculation for blue tiles",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "84 ÷ 12 × 5",
+          "84 ÷ 5 × 12",
+          "84 × 5",
+          "84 ÷ 12"
+        ]
+      },
+      "answer": {
+        "value": "84 ÷ 12 × 5"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "optional",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That calculation counts all five blue shares.",
+        "correct_after_support": "That calculation counts all five blue shares.",
+        "on_correct_math": "84 ÷ 12 = 7 in one equal share. → 7 × 5 = 35 blue tiles.",
+        "on_incorrect_attempt_1": "Use both the number of equal groups and the number of selected groups.",
+        "on_incorrect_attempt_2": "The worked tile groups show where both fraction numbers are used.",
+        "worked_explanation": "84 ÷ 12 = 7 in one equal share. → 7 × 5 = 35 blue tiles."
+      },
+      "mathematical_support": {
+        "hint_1": "Use both the number of equal groups and the number of selected groups.",
+        "hint_2": "The fraction describes five of twelve equal shares of the tiles.",
+        "worked_solution": "84 ÷ 12 = 7 in one equal share. → 7 × 5 = 35 blue tiles."
+      },
+      "working": [
+        "84 ÷ 12 = 7 in one equal share.",
+        "7 × 5 = 35 blue tiles."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_amount",
+          "total": 84,
+          "n": 5,
+          "d": 12,
+          "object": "tiles",
+          "target": "Calculation for blue tiles",
+          "selectionColor": "blue"
+        }
+      }
+    },
+    {
+      "id": "MD-02-E01",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "Find 3/7 of 63.",
+      "target": "Selected amount",
+      "response": {
+        "type": "integer",
+        "input_label": "Selected amount",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 27
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The result includes three sevenths of the full amount.",
+        "correct_after_support": "The result includes three sevenths of the full amount.",
+        "on_correct_math": "63 ÷ 7 = 9. → 9 × 3 = 27. → 3/7 of 63 = 27.",
+        "on_incorrect_attempt_1": "Have you found just one share, or all the requested shares?",
+        "on_incorrect_attempt_2": "Compare one seventh with the three sevenths requested.",
+        "worked_explanation": "63 ÷ 7 = 9. → 9 × 3 = 27. → 3/7 of 63 = 27.",
+        "on_locked_incorrect": "Compare the one-share and selected-share lines in the working."
+      },
+      "mathematical_support": {
+        "hint_1": "Have you found just one share, or all the requested shares?",
+        "hint_2": "Use 7 equal groups, then combine 3 of them. A valid multiplication-first method also works.",
+        "worked_solution": "63 ÷ 7 = 9. → 9 × 3 = 27. → 3/7 of 63 = 27."
+      },
+      "working": [
+        "63 ÷ 7 = 9.",
+        "9 × 3 = 27.",
+        "3/7 of 63 = 27."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_amount",
+          "total": 63,
+          "n": 3,
+          "d": 7,
+          "object": "quantity",
+          "target": "Selected amount",
+          "stage": "exit",
+          "reaction": "The result includes three sevenths of the full amount.",
+          "correction": "Compare one seventh with the three sevenths requested."
+        }
+      },
+      "response_feedback": {
+        "9": "That is the value of one share. How many shares does the numerator select?",
+        "189": "That combines whole amounts. Account for the size of each fractional share as well."
+      }
+    },
+    {
+      "id": "MD-02-E02",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "Find 5/12 of 96.",
+      "target": "Selected amount",
+      "response": {
+        "type": "integer",
+        "input_label": "Selected amount",
+        "suffix": ""
+      },
+      "answer": {
+        "value": 40
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Your result combines five equal twelfths.",
+        "correct_after_support": "Your result combines five equal twelfths.",
+        "on_correct_math": "96 ÷ 12 = 8. → 8 × 5 = 40. → 5/12 of 96 = 40.",
+        "on_incorrect_attempt_1": "Have you found just one share, or all the requested shares?",
+        "on_incorrect_attempt_2": "Compare the one-twelfth value with the five selected shares.",
+        "worked_explanation": "96 ÷ 12 = 8. → 8 × 5 = 40. → 5/12 of 96 = 40.",
+        "on_locked_incorrect": "Compare the one-share and selected-share lines in the working."
+      },
+      "mathematical_support": {
+        "hint_1": "Have you found just one share, or all the requested shares?",
+        "hint_2": "Use 12 equal groups, then combine 5 of them. A valid multiplication-first method also works.",
+        "worked_solution": "96 ÷ 12 = 8. → 8 × 5 = 40. → 5/12 of 96 = 40."
+      },
+      "working": [
+        "96 ÷ 12 = 8.",
+        "8 × 5 = 40.",
+        "5/12 of 96 = 40."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_amount",
+          "total": 96,
+          "n": 5,
+          "d": 12,
+          "object": "quantity",
+          "target": "Selected amount",
+          "stage": "exit",
+          "reaction": "Your result combines five equal twelfths.",
+          "correction": "Compare the one-twelfth value with the five selected shares."
+        }
+      },
+      "response_feedback": {
+        "8": "That is the value of one share. How many shares does the numerator select?",
+        "480": "That combines whole amounts. Account for the size of each fractional share as well."
+      }
+    },
+    {
+      "id": "MD-02-E03",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "Which statement correctly describes the method we used?",
+      "target": "Choose the method",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Divide by the denominator, then multiply by the numerator.",
+          "Divide by the numerator, then multiply by the denominator.",
+          "Multiply by the numerator and ignore the denominator.",
+          "Divide by both the denominator and the numerator."
+        ]
+      },
+      "answer": {
+        "value": "Divide by the denominator, then multiply by the numerator."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "one_locked_attempt",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "That method accounts for both the size and number of selected shares.",
+        "correct_after_support": "That method accounts for both the size and number of selected shares.",
+        "on_correct_math": "The denominator creates equal shares. → The numerator selects how many shares to combine. → Division first is one valid order; multiplying by the numerator before dividing by the denominator is also valid.",
+        "on_incorrect_attempt_1": "Keep the two fraction-number roles distinct.",
+        "on_incorrect_attempt_2": "Compare each step with the role of its fraction number.",
+        "worked_explanation": "The denominator creates equal shares. → The numerator selects how many shares to combine. → Division first is one valid order; multiplying by the numerator before dividing by the denominator is also valid.",
+        "on_locked_incorrect": "The steps must account for both fraction numbers. Compare their different roles."
+      },
+      "mathematical_support": {
+        "hint_1": "Keep the two fraction-number roles distinct.",
+        "hint_2": "One step finds a share size; the other combines selected shares.",
+        "worked_solution": "The denominator creates equal shares. → The numerator selects how many shares to combine. → Division first is one valid order; multiplying by the numerator before dividing by the denominator is also valid."
+      },
+      "working": [
+        "The denominator creates equal shares.",
+        "The numerator selects how many shares to combine.",
+        "Division first is one valid order; multiplying by the numerator before dividing by the denominator is also valid."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "fraction_amount_rule",
+          "object": "relationship",
+          "target": "Choose the method"
+        }
+      }
+    }
+  ],
+  "canonical_lesson": {
+    "version": "MD02-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}

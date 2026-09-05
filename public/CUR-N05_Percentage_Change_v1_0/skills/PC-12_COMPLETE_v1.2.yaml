@@ -1,0 +1,3437 @@
+{
+  "schema_version": "1.2",
+  "spec_intent": {
+    "source_of_truth": true,
+    "implementation_status": "source_aligned_preview",
+    "source_material": {
+      "title": "PC-12 - Apply repeated percentage change",
+      "path": "authoring-source-redacted.pdf",
+      "authoritative_pages": "1-18",
+      "sha256": "e3aa837b2363be4d374fa9e077db459f5f628eb2f84f38d6940205692faa3d56"
+    },
+    "authored_scope": "Apply repeated percentage change with a new whole at each stage and context-appropriate rounding.",
+    "excluded_from_active_route": [
+      "Entry check",
+      "Diagnostic probe",
+      "Delayed retrieval"
+    ],
+    "refinement": {
+      "version": "PC12-source-aligned-1",
+      "protected_from_bulk_generation": true,
+      "source_review": "complete",
+      "visual_and_interaction_qa": "verified_desktop_all_six_unsupported_ready_phone_missing_stage_rounding_and_cancellation_learning_320_390_proportional_updated_wholes_accessible_powers_real_reload_drafts_locked_answers_audio_captions",
+      "production_audio": "generated_and_word_timing_verified",
+      "source_pages_used": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        12,
+        15,
+        16,
+        17,
+        18
+      ],
+      "source_repairs_consulted": [
+        2,
+        8,
+        9,
+        10,
+        11,
+        13,
+        14,
+        17,
+        18
+      ],
+      "source_concerns": [
+        "Five of the six active non-guided expression/reason choices use the first option as correct in the approved source. Preserve the supplied choices rather than silently changing their order."
+      ],
+      "note": "All eighteen source pages, rendered models and six guided blanks, complete previous configuration and relevant tests reviewed. Restores 24 source questions. The two-year bars share a consistent money scale and explicitly repartition the updated whole. Exact powers and source-permitted exact unrounded values are property-gated. All-six unsupported mastery is documented interpretation; no unrequested layers activated."
+    }
+  },
+  "identity": {
+    "id": "PC-12",
+    "slug": "apply-repeated-percentage-change",
+    "title": "Apply repeated percentage change",
+    "strand": "Number",
+    "cluster": "Percentage Change",
+    "tier": "GCSE Foundation",
+    "status": "source_aligned_preview",
+    "estimated_minutes": {
+      "min": 18,
+      "max": 25
+    }
+  },
+  "curriculum": {
+    "learning_objective": "Apply repeated increases, decreases and two-stage different-rate changes, using each updated amount as the next whole and rounding only the final contextual result.",
+    "success_criteria": [
+      "Form exact increase and remaining multipliers",
+      "Use the updated amount as the next whole",
+      "Apply the multiplier once per period",
+      "Use different stage multipliers in order",
+      "Retain full precision until final rounding",
+      "Distinguish repeated change from fixed addition and cancelling opposite rates",
+      "Accept any valid method unless a form is specified"
+    ],
+    "boundaries": {
+      "includes": [
+        "Compound interest, depreciation, population, price and amount contexts",
+        "Repeated products and powers",
+        "Equal and different stage multipliers",
+        "Whole-person and nearest-cent final rounding"
+      ],
+      "excludes": [
+        "Reverse repeated change",
+        "Unknown rate or period count",
+        "Algebraic compound-interest formulae",
+        "Entry, Diagnostic, prerequisite mutation, delayed Retrieval and Strong"
+      ]
+    }
+  },
+  "dependencies": {
+    "required_skill_refs": [
+      "PC-04",
+      "PC-05",
+      "PC-06",
+      "PC-07",
+      "FDP-05"
+    ],
+    "entry_assumptions": [
+      "The prerequisite evidence for PC-04, PC-05, PC-06, PC-07, FDP-05 is available."
+    ]
+  },
+  "engine_capability_requirements": {
+    "input_types": [
+      "single_choice",
+      "percentage_change_fields"
+    ],
+    "visual_primitives": [
+      "operation_structure",
+      "caption_layer",
+      "progress_indicator"
+    ],
+    "animation_actions": [
+      "fade_in",
+      "highlight",
+      "reveal_equation",
+      "contrast",
+      "crossfade_phase"
+    ],
+    "audio_capabilities": [
+      "browser_speech",
+      "caption_sync",
+      "pause_for_input",
+      "cancel_on_navigation"
+    ],
+    "state_capabilities": [
+      "attempt_count",
+      "step_resume",
+      "exit_score",
+      "confirmation_branch"
+    ]
+  },
+  "experience_contract": {
+    "authored_feedback_only": true,
+    "ordered_phases": [
+      "teaching",
+      "guided",
+      "faded",
+      "independent_transfer",
+      "practice",
+      "exit",
+      "completion"
+    ],
+    "navigation": {
+      "default": "linear_forward",
+      "refresh_resume": "Resume at the latest committed step.",
+      "start_again": "Reset only this lesson attempt and preserve historical completion records."
+    },
+    "interaction_rules": [
+      "Never auto-submit or auto-fill an answer.",
+      "Keep input available while Ryan speaks.",
+      "Keep scored results hidden until submission.",
+      "Accept mathematically equivalent exact answers unless a form is explicitly required."
+    ],
+    "refinement_profile": "source_aligned_v1",
+    "global_ui_copy": {
+      "submit": "Check answer"
+    },
+    "place_value_profile": true
+  },
+  "voice_and_script": {
+    "performer_name": "Ryan",
+    "dialogue_profile_ref": "RYAN_DIALOGUE_PROFILE_v1.yaml",
+    "script_ownership": "All mathematical narration and response feedback is authored in this specification.",
+    "caption_policy": "Every spoken line is captioned; empty narration leaves no visible caption container.",
+    "narration_playback": {
+      "mode": "authored_audio_then_browser_speech",
+      "require_ryan_voice": true,
+      "browser_voice_name": "Microsoft Ryan Online (Natural) - English (United Kingdom)",
+      "opening_delay_ms": 0,
+      "timing_source": "provider_word_boundaries"
+    },
+    "production_audio_note": "Owner-approved Microsoft en-GB-RyanNeural recordings and provider word timings verified on 2026-09-03. Browser QA is tracked separately.",
+    "opening_mode": "authored_scene_only",
+    "caption_presentation": {
+      "mode": "on_canvas_progressive",
+      "hide_when_empty": true
+    }
+  },
+  "visual_language": {
+    "primary_visual_contract": {
+      "primitive": "operation_structure",
+      "rule": "Use each explicit authored model; never infer numbers or context from prose."
+    },
+    "scene_rules": [
+      "Never reveal a scored answer before submission",
+      "Keep one consistent money-to-length scale within each two-year model",
+      "Explicitly repartition the updated whole before its next percentage change",
+      "Keep captions, spoken action and current visual phase aligned",
+      "Reveal post-submit working sequentially"
+    ],
+    "reduced_motion": "Show the final model state immediately without removing labels, contrast or accessible descriptions."
+  },
+  "diagnostic": {
+    "enabled": false,
+    "question_refs": [],
+    "reason": "Diagnostic is outside the current implementation scope."
+  },
+  "concept_model": {
+    "core_idea": "Each new amount becomes the next whole.",
+    "invariant": "A fixed percentage acts on a changing amount, so the absolute change usually differs.",
+    "mathematical_rule": "Apply each multiplier once per period or stage. For repeated equal multipliers, use a power. Round only the final answer.",
+    "must_notice": [
+      "Updated whole",
+      "Exact multiplier",
+      "Number of applications",
+      "Final contextual rounding"
+    ],
+    "common_confusions": [
+      "Fixed addition",
+      "One stage only",
+      "Wrong exponent",
+      "Adding rates",
+      "Opposite rates cancel",
+      "Early rounding"
+    ]
+  },
+  "lesson": {
+    "teaching_steps": [
+      {
+        "id": "T01",
+        "stage": "teaching",
+        "purpose": "Reset the whole after every change",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Reset the whole after every change",
+          "initial_state": "Reset the whole after every change",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Reset the whole after every change",
+            "given": "",
+            "math_text": true,
+            "decimal_math": true,
+            "symbolic_math": true,
+            "compact_captions": true,
+            "mode": "repeated_rule",
+            "solved": true
+          }
+        },
+        "narration": {
+          "script": "After each percentage change, the new amount becomes the next whole. Apply the multiplier once for each period and keep full accuracy until the final answer."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T02"
+      },
+      {
+        "id": "T02",
+        "stage": "teaching",
+        "purpose": "Apply the first increase",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Apply the first increase",
+          "initial_state": "Apply the first increase",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "A second increase uses the new whole",
+            "given": "$500 increases by 10% each year for 2 years.",
+            "math_text": true,
+            "decimal_math": true,
+            "symbolic_math": true,
+            "compact_captions": true,
+            "mode": "repeated_whole",
+            "direction": "increase",
+            "parts": 10,
+            "rate": 10,
+            "original": 500,
+            "afterFirst": 550,
+            "final": 605,
+            "multiplier": "1.10",
+            "currency": "$",
+            "solved": true,
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "The starting whole is divided into ten equal parts. Add one matching part for the first yearly increase."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T03"
+      },
+      {
+        "id": "T03",
+        "stage": "teaching",
+        "purpose": "Repartition the updated whole",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Repartition the updated whole",
+          "initial_state": "Repartition the updated whole",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "A second increase uses the new whole",
+            "given": "$500 increases by 10% each year for 2 years.",
+            "math_text": true,
+            "decimal_math": true,
+            "symbolic_math": true,
+            "compact_captions": true,
+            "mode": "repeated_whole",
+            "direction": "increase",
+            "parts": 10,
+            "rate": 10,
+            "original": 500,
+            "afterFirst": 550,
+            "final": 605,
+            "multiplier": "1.10",
+            "currency": "$",
+            "solved": true,
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "The increased amount is now the next whole. Split that entire amount into ten new equal parts. Each new tenth is larger than a tenth of the starting amount."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T04"
+      },
+      {
+        "id": "T04",
+        "stage": "teaching",
+        "purpose": "Apply the second increase",
+        "source_ref": {
+          "page": 3
+        },
+        "scene": {
+          "display_title": "Apply the second increase",
+          "initial_state": "Apply the second increase",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "A second increase uses the new whole",
+            "given": "$500 increases by 10% each year for 2 years.",
+            "math_text": true,
+            "decimal_math": true,
+            "symbolic_math": true,
+            "compact_captions": true,
+            "mode": "repeated_whole",
+            "direction": "increase",
+            "parts": 10,
+            "rate": 10,
+            "original": 500,
+            "afterFirst": 550,
+            "final": 605,
+            "multiplier": "1.10",
+            "currency": "$",
+            "solved": true,
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "Add one of the new tenths. The increase is larger in the second year because the whole is larger. The repeated product and power record the same two changes."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T05"
+      },
+      {
+        "id": "T05",
+        "stage": "teaching",
+        "purpose": "Apply the first decrease",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Apply the first decrease",
+          "initial_state": "Apply the first decrease",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "A second decrease uses the remaining whole",
+            "given": "$500 decreases by 20% each year for 2 years.",
+            "math_text": true,
+            "decimal_math": true,
+            "symbolic_math": true,
+            "compact_captions": true,
+            "mode": "repeated_whole",
+            "direction": "decrease",
+            "parts": 5,
+            "rate": 20,
+            "original": 500,
+            "afterFirst": 400,
+            "final": 320,
+            "multiplier": "0.80",
+            "currency": "$",
+            "solved": true,
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "Divide the starting amount into five equal parts. Remove one part for the first yearly decrease; the crossed part no longer belongs to the value remaining."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T06"
+      },
+      {
+        "id": "T06",
+        "stage": "teaching",
+        "purpose": "Repartition the remaining amount",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Repartition the remaining amount",
+          "initial_state": "Repartition the remaining amount",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "A second decrease uses the remaining whole",
+            "given": "$500 decreases by 20% each year for 2 years.",
+            "math_text": true,
+            "decimal_math": true,
+            "symbolic_math": true,
+            "compact_captions": true,
+            "mode": "repeated_whole",
+            "direction": "decrease",
+            "parts": 5,
+            "rate": 20,
+            "original": 500,
+            "afterFirst": 400,
+            "final": 320,
+            "multiplier": "0.80",
+            "currency": "$",
+            "solved": true,
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "The amount remaining becomes the next whole. Split it into five new equal parts. A fifth of this smaller whole is worth less than a fifth of the starting amount."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T07"
+      },
+      {
+        "id": "T07",
+        "stage": "teaching",
+        "purpose": "Apply the second decrease",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Apply the second decrease",
+          "initial_state": "Apply the second decrease",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "A second decrease uses the remaining whole",
+            "given": "$500 decreases by 20% each year for 2 years.",
+            "math_text": true,
+            "decimal_math": true,
+            "symbolic_math": true,
+            "compact_captions": true,
+            "mode": "repeated_whole",
+            "direction": "decrease",
+            "parts": 5,
+            "rate": 20,
+            "original": 500,
+            "afterFirst": 400,
+            "final": 320,
+            "multiplier": "0.80",
+            "currency": "$",
+            "solved": true,
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "Remove one of the new fifths. This time the amount removed is smaller because the whole is smaller. The remaining multiplier has acted twice."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T08"
+      },
+      {
+        "id": "T08",
+        "stage": "teaching",
+        "purpose": "Choose the repeated-growth expression",
+        "source_ref": {
+          "page": 4
+        },
+        "scene": {
+          "display_title": "Choose the repeated-growth expression",
+          "initial_state": "Choose the repeated-growth expression",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Read the situation",
+            "given": "A quantity increases by 6% each year for 3 years. Which expression gives the final quantity from an original quantity Q?",
+            "math_text": true,
+            "decimal_math": true,
+            "symbolic_math": true,
+            "compact_captions": true,
+            "mode": "rule",
+            "steps": [
+              "Increase multiplier = 1.06.",
+              "Three applications: Q × 1.06 × 1.06 × 1.06 = Q × 1.06^3."
+            ]
+          }
+        },
+        "narration": {
+          "script": "Choose the expression that applies the stated yearly growth for every year."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "PC-12-C01"
+        },
+        "next_step": "T09"
+      },
+      {
+        "id": "T09",
+        "stage": "teaching",
+        "purpose": "Form the laptop’s yearly multiplier",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Form the laptop’s yearly multiplier",
+          "initial_state": "Form the laptop’s yearly multiplier",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Apply three yearly decreases",
+            "given": "A laptop costs $1500. Its value decreases by 12% each year. Work out its value after 3 years.",
+            "math_text": true,
+            "decimal_math": true,
+            "symbolic_math": true,
+            "compact_captions": true,
+            "mode": "role_worked",
+            "solved": true,
+            "stages": [
+              {
+                "title": "Form the yearly remaining multiplier",
+                "lines": [
+                  "12% = 0.12",
+                  "1 − 0.12 = 0.88"
+                ]
+              },
+              {
+                "title": "Apply the multiplier once for each year",
+                "lines": [
+                  "$1500 × 0.88 × 0.88 × 0.88",
+                  "$1500 × 0.88^3 = $1022.208"
+                ]
+              },
+              {
+                "title": "Round only the final money answer",
+                "lines": [
+                  "Exact final value: $1022.208",
+                  "Value after 3 years: $1022.21 (nearest cent)"
+                ]
+              }
+            ],
+            "phase": 1
+          }
+        },
+        "narration": {
+          "script": "The value decreases each year. Subtract the decimal decrease from one whole to find the share remaining."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T10"
+      },
+      {
+        "id": "T10",
+        "stage": "teaching",
+        "purpose": "Apply all three yearly changes",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Apply all three yearly changes",
+          "initial_state": "Apply all three yearly changes",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Apply three yearly decreases",
+            "given": "A laptop costs $1500. Its value decreases by 12% each year. Work out its value after 3 years.",
+            "math_text": true,
+            "decimal_math": true,
+            "symbolic_math": true,
+            "compact_captions": true,
+            "mode": "role_worked",
+            "solved": true,
+            "stages": [
+              {
+                "title": "Form the yearly remaining multiplier",
+                "lines": [
+                  "12% = 0.12",
+                  "1 − 0.12 = 0.88"
+                ]
+              },
+              {
+                "title": "Apply the multiplier once for each year",
+                "lines": [
+                  "$1500 × 0.88 × 0.88 × 0.88",
+                  "$1500 × 0.88^3 = $1022.208"
+                ]
+              },
+              {
+                "title": "Round only the final money answer",
+                "lines": [
+                  "Exact final value: $1022.208",
+                  "Value after 3 years: $1022.21 (nearest cent)"
+                ]
+              }
+            ],
+            "phase": 2
+          }
+        },
+        "narration": {
+          "script": "The yearly multiplier acts three times. Keep the complete calculator value through the repeated product."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T11"
+      },
+      {
+        "id": "T11",
+        "stage": "teaching",
+        "purpose": "Round the final laptop value",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Round the final laptop value",
+          "initial_state": "Round the final laptop value",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Apply three yearly decreases",
+            "given": "A laptop costs $1500. Its value decreases by 12% each year. Work out its value after 3 years.",
+            "math_text": true,
+            "decimal_math": true,
+            "symbolic_math": true,
+            "compact_captions": true,
+            "mode": "role_worked",
+            "solved": true,
+            "stages": [
+              {
+                "title": "Form the yearly remaining multiplier",
+                "lines": [
+                  "12% = 0.12",
+                  "1 − 0.12 = 0.88"
+                ]
+              },
+              {
+                "title": "Apply the multiplier once for each year",
+                "lines": [
+                  "$1500 × 0.88 × 0.88 × 0.88",
+                  "$1500 × 0.88^3 = $1022.208"
+                ]
+              },
+              {
+                "title": "Round only the final money answer",
+                "lines": [
+                  "Exact final value: $1022.208",
+                  "Value after 3 years: $1022.21 (nearest cent)"
+                ]
+              }
+            ],
+            "phase": 3
+          }
+        },
+        "narration": {
+          "script": "All yearly changes are complete. Now round the final value to the nearest cent; keep the earlier calculation unrounded."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": null
+        },
+        "next_step": "T12"
+      },
+      {
+        "id": "T12",
+        "stage": "teaching",
+        "purpose": "Explain the power",
+        "source_ref": {
+          "page": 5
+        },
+        "scene": {
+          "display_title": "Explain the power",
+          "initial_state": "Explain the power",
+          "model": {
+            "kind": "percentage_change_structure",
+            "title": "Read the situation",
+            "given": "In the laptop calculation, why is the multiplier raised to the power 3?",
+            "math_text": true,
+            "decimal_math": true,
+            "symbolic_math": true,
+            "compact_captions": true,
+            "mode": "rule",
+            "steps": [
+              "The value changes once per year, for 3 years.",
+              "1500 × 0.88 × 0.88 × 0.88 = 1500 × 0.88^3."
+            ]
+          }
+        },
+        "narration": {
+          "script": "Choose why the exponent matches this calculation."
+        },
+        "animation_timeline": [],
+        "learner_interaction": {
+          "question_ref": "PC-12-C02"
+        },
+        "next_step": "G01"
+      }
+    ],
+    "transfer_steps": {
+      "G01": {
+        "stage": "guided",
+        "question_ref": "PC-12-G01",
+        "support_level": "high",
+        "pre_question_script": "Complete the decimal conversion and the yearly multiplier.",
+        "correct_next": "G02"
+      },
+      "G02": {
+        "stage": "guided",
+        "question_ref": "PC-12-G02",
+        "support_level": "high",
+        "pre_question_script": "Supply the yearly multiplier and the exponent for this investment.",
+        "correct_next": "G03"
+      },
+      "G03": {
+        "stage": "faded",
+        "question_ref": "PC-12-G03",
+        "support_level": "reduced",
+        "pre_question_script": "Give the value after both yearly changes.",
+        "correct_next": "G04"
+      },
+      "G04": {
+        "stage": "independent_transfer",
+        "question_ref": "PC-12-G04",
+        "support_level": "none",
+        "pre_question_script": "Choose how the second year’s whole is determined.",
+        "correct_next": "P01"
+      }
+    },
+    "practice": {
+      "intro_script": "Apply every stated change in order. Use paper or a calculator, keep full accuracy, and round only the final answer as requested.",
+      "question_order": [
+        "PC-12-P01",
+        "PC-12-P02",
+        "PC-12-P03",
+        "PC-12-P04",
+        "PC-12-P05",
+        "PC-12-P06",
+        "PC-12-P07",
+        "PC-12-X01",
+        "PC-12-X02",
+        "PC-12-X03",
+        "PC-12-X04",
+        "PC-12-X05"
+      ],
+      "question_count": 12,
+      "feedback_policy": "No pre-submit worked route or optional hints. Answer-specific clues and sequential working follow demonstrated need, with learner correction required. Independent answers accept exact repeated products, powers and other valid methods. Scored evidence does not confirm an unseen method or mutate prerequisite state."
+    },
+    "exit": {
+      "intro_script": "Answer all six final questions independently. Every response locks before any result or working is revealed.",
+      "primary_question_refs": [
+        "PC-12-E01",
+        "PC-12-E02",
+        "PC-12-E03",
+        "PC-12-E04",
+        "PC-12-E05",
+        "PC-12-E06"
+      ],
+      "confirmation_question_refs": [],
+      "submission_policy": "Lock all six responses before any result or working is revealed.",
+      "mastery_policy": {
+        "profile": "all_primary_unsupported_deferred",
+        "source_page": 18,
+        "implementation_interpretation": "The source requires successful completion but gives no fractional threshold. Preserve the shared all-six unsupported rule. Source page 17 explicitly accepts exact calculator values before final rounding; accept the exact value or the correctly rounded contextual answer, not arbitrary nearby values.",
+        "success_state": "READY_FOR_RETRIEVAL",
+        "failure_state": "LEARNING"
+      }
+    }
+  },
+  "completion": {
+    "secure": {
+      "title": "Ready for retrieval",
+      "ryan_script": "Your final responses applied repeated changes to updated wholes and identified the correct repeated-growth structure. Later retrieval will check that this remains secure.",
+      "state_write": "READY_FOR_RETRIEVAL",
+      "buttons": [
+        "Back to topic"
+      ]
+    },
+    "needs_work": {
+      "title": "Keep building repeated percentage changes",
+      "ryan_script": "Review the saved responses. Track the updated whole, apply every stage multiplier and round only the final answer.",
+      "state_write": "LEARNING",
+      "buttons": [
+        "Try again",
+        "Back to topic"
+      ]
+    }
+  },
+  "question_bank": [
+    {
+      "id": "PC-12-C01",
+      "source_ref": {
+        "page": 4
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "A quantity increases by 6% each year for 3 years. Which expression gives the final quantity from an original quantity Q?",
+      "target": "Apply repeated percentage changes to the updated whole",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Q × 1.06^3",
+          "Q × 1.18",
+          "Q + 0.06^3",
+          "Q × 0.94^3"
+        ],
+        "math_layout": "symbolic_compound_fraction"
+      },
+      "answer": {
+        "value": "Q × 1.06^3"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The expression applies the growth multiplier once in each year.",
+        "correct_after_support": "The expression applies the growth multiplier once in each year.",
+        "on_correct_math": "Increase multiplier = 1.06. → Three applications: Q × 1.06 × 1.06 × 1.06 = Q × 1.06^3.",
+        "on_incorrect_attempt_1": "Use an increase multiplier once for each year.",
+        "on_incorrect_attempt_2": "The power counts how many times the multiplier acts on the updated amount.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Increase multiplier = 1.06. → Three applications: Q × 1.06 × 1.06 × 1.06 = Q × 1.06^3."
+      },
+      "mathematical_support": {
+        "hint_1": "Use an increase multiplier once for each year.",
+        "hint_2": "The power counts how many times the multiplier acts on the updated amount.",
+        "worked_solution": "Increase multiplier = 1.06. → Three applications: Q × 1.06 × 1.06 × 1.06 = Q × 1.06^3."
+      },
+      "working": [
+        "Increase multiplier = 1.06.",
+        "Three applications: Q × 1.06 × 1.06 × 1.06 = Q × 1.06^3."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A quantity increases by 6% each year for 3 years. Which expression gives the final quantity from an original quantity Q?",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Increase multiplier = 1.06.",
+            "Three applications: Q × 1.06 × 1.06 × 1.06 = Q × 1.06^3."
+          ]
+        }
+      },
+      "response_feedback": {
+        "Q × 1.18": "This adds the percentage rates as one increase, missing the changing whole.",
+        "Q + 0.06^3": "This adds a cubed decimal rate instead of multiplying the quantity by a growth factor.",
+        "Q × 0.94^3": "This applies a decrease in each year, not the stated increase."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-12-C02",
+      "source_ref": {
+        "page": 5
+      },
+      "stage": "teaching_checkpoint",
+      "prompt": "In the laptop calculation, why is the multiplier raised to the power 3?",
+      "target": "Apply repeated percentage changes to the updated whole",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "The 12% decrease is applied once in each of three years.",
+          "The percentage rate must always be cubed.",
+          "The original amount is split into three equal parts.",
+          "The final answer must contain three decimal places."
+        ],
+        "math_layout": "symbolic_compound_fraction"
+      },
+      "answer": {
+        "value": "The 12% decrease is applied once in each of three years."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The power counts yearly applications, not parts or decimal places.",
+        "correct_after_support": "The power counts yearly applications, not parts or decimal places.",
+        "on_correct_math": "The value changes once per year, for 3 years. → 1500 × 0.88 × 0.88 × 0.88 = 1500 × 0.88^3.",
+        "on_incorrect_attempt_1": "Connect the exponent to the number of changes.",
+        "on_incorrect_attempt_2": "Each yearly decrease needs another application of the remaining multiplier.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "The value changes once per year, for 3 years. → 1500 × 0.88 × 0.88 × 0.88 = 1500 × 0.88^3."
+      },
+      "mathematical_support": {
+        "hint_1": "Connect the exponent to the number of changes.",
+        "hint_2": "Each yearly decrease needs another application of the remaining multiplier.",
+        "worked_solution": "The value changes once per year, for 3 years. → 1500 × 0.88 × 0.88 × 0.88 = 1500 × 0.88^3."
+      },
+      "working": [
+        "The value changes once per year, for 3 years.",
+        "1500 × 0.88 × 0.88 × 0.88 = 1500 × 0.88^3."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "In the laptop calculation, why is the multiplier raised to the power 3?",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "The value changes once per year, for 3 years.",
+            "1500 × 0.88 × 0.88 × 0.88 = 1500 × 0.88^3."
+          ]
+        }
+      },
+      "response_feedback": {
+        "The percentage rate must always be cubed.": "The exponent depends on the number of periods, not on a general rule about percentage rates.",
+        "The original amount is split into three equal parts.": "The three years are repeated changes, not three equal parts of the original.",
+        "The final answer must contain three decimal places.": "The exponent does not specify rounding accuracy. Money is reported to the nearest cent."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-12-G01",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "An investment of $2400 increases by 6% each year for 2 years. Work out its value after 2 years. Write 6% as a decimal, then complete: increase multiplier = 1 + decimal increase.",
+      "target": "Apply repeated percentage changes to the updated whole",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "decimal",
+            "label": "Percentage as a decimal",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true,
+            "allow_powers": true,
+            "grouped_numbers": true,
+            "decimal_result_only": true
+          },
+          {
+            "key": "added",
+            "label": "Decimal added to one",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true,
+            "allow_powers": true,
+            "grouped_numbers": true,
+            "decimal_result_only": true
+          },
+          {
+            "key": "multiplier",
+            "label": "Increase multiplier",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true,
+            "allow_powers": true,
+            "grouped_numbers": true,
+            "percent_as_ratio": true
+          }
+        ],
+        "error_values": [],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Exact repeated products, power notation using ^, and other valid calculations are accepted unless a particular form is requested. Keep full accuracy; report final money to the nearest cent and populations to the nearest person. An exact unrounded calculator value is also accepted. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "decimal": "0.06",
+          "added": "0.06",
+          "multiplier": "1.06"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The multiplier includes the current whole and its increase.",
+        "correct_after_support": "The multiplier includes the current whole and its increase.",
+        "on_correct_math": "6% = 0.06. → Increase multiplier = 1 + 0.06 = 1.06.",
+        "on_incorrect_attempt_1": "Separate the decimal increase from the multiplier for the complete new amount.",
+        "on_incorrect_attempt_2": "Add the decimal increase to one whole. This retains the previous amount as well as its growth.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "6% = 0.06. → Increase multiplier = 1 + 0.06 = 1.06."
+      },
+      "mathematical_support": {
+        "hint_1": "Separate the decimal increase from the multiplier for the complete new amount.",
+        "hint_2": "Add the decimal increase to one whole. This retains the previous amount as well as its growth.",
+        "worked_solution": "6% = 0.06. → Increase multiplier = 1 + 0.06 = 1.06."
+      },
+      "working": [
+        "6% = 0.06.",
+        "Increase multiplier = 1 + 0.06 = 1.06."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "An investment of $2400 increases by 6% each year for 2 years. Work out its value after 2 years. Write 6% as a decimal, then complete: increase multiplier = 1 + decimal increase.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "6% = 0.06.",
+            "Increase multiplier = 1 + 0.06 = 1.06."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_decimal": "Your multiplier setup is right. Convert the stated percentage to its decimal value.",
+        "check_added": "Your conversion and multiplier are right. Add the decimal increase to one whole.",
+        "check_multiplier": "Your decimal entries are right. Include one whole as well as its increase.",
+        "check_multiple": "Keep the decimal increase separate from the complete increase multiplier.",
+        "check_decimal_form": "Give the requested decimal form in each decimal box.",
+        "check_unit": "Use the printed unit for this amount. A percentage or multiplier is not the final amount.",
+        "check_number_format": "Check the comma grouping. Separate groups of three digits, or leave commas out. Use a decimal point for decimal values."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-12-G02",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "guided",
+      "prompt": "An investment of $2400 increases by 6% each year for 2 years. Work out its value after 2 years. Complete the power expression: value after 2 years = $2400 × (multiplier) raised to the exponent.",
+      "target": "Apply repeated percentage changes to the updated whole",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "multiplier",
+            "label": "Multiplier",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true,
+            "allow_powers": true,
+            "grouped_numbers": true,
+            "percent_as_ratio": true
+          },
+          {
+            "key": "exponent",
+            "label": "Exponent",
+            "kind": "number",
+            "unit": "",
+            "allow_expression": true,
+            "allow_powers": true,
+            "grouped_numbers": true
+          }
+        ],
+        "error_values": [],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Exact repeated products, power notation using ^, and other valid calculations are accepted unless a particular form is requested. Keep full accuracy; report final money to the nearest cent and populations to the nearest person. An exact unrounded calculator value is also accepted. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "multiplier": "1.06",
+          "exponent": "2"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The expression uses the growth multiplier for both years.",
+        "correct_after_support": "The expression uses the growth multiplier for both years.",
+        "on_correct_math": "Value after 2 years = $2400 × (1.06)^2. → This means $2400 × 1.06 × 1.06.",
+        "on_incorrect_attempt_1": "Match the multiplier to the yearly change and the exponent to the number of years.",
+        "on_incorrect_attempt_2": "The multiplier acts once in each year. The power is a count of those applications.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Value after 2 years = $2400 × (1.06)^2. → This means $2400 × 1.06 × 1.06."
+      },
+      "mathematical_support": {
+        "hint_1": "Match the multiplier to the yearly change and the exponent to the number of years.",
+        "hint_2": "The multiplier acts once in each year. The power is a count of those applications.",
+        "worked_solution": "Value after 2 years = $2400 × (1.06)^2. → This means $2400 × 1.06 × 1.06."
+      },
+      "working": [
+        "Value after 2 years = $2400 × (1.06)^2.",
+        "This means $2400 × 1.06 × 1.06."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "An investment of $2400 increases by 6% each year for 2 years. Work out its value after 2 years. Complete the power expression: value after 2 years = $2400 × (multiplier) raised to the exponent.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Value after 2 years = $2400 × (1.06)^2.",
+            "This means $2400 × 1.06 × 1.06."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_multiplier": "Your exponent is right. Use the complete yearly increase multiplier.",
+        "check_exponent": "Your multiplier is right. The exponent counts the yearly changes.",
+        "check_multiple": "Check the yearly growth multiplier and the number of its applications separately.",
+        "check_unit": "Use the printed unit for this amount. A percentage or multiplier is not the final amount.",
+        "check_number_format": "Check the comma grouping. Separate groups of three digits, or leave commas out. Use a decimal point for decimal values."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-12-G03",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "faded",
+      "prompt": "An investment of $2400 increases by 6% each year for 2 years. Work out its value after 2 years. Give the final value.",
+      "target": "Apply repeated percentage changes to the updated whole",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "final",
+            "label": "Final value",
+            "kind": "number",
+            "unit": "$",
+            "allow_expression": true,
+            "allow_powers": true,
+            "grouped_numbers": true,
+            "money_display": true
+          }
+        ],
+        "error_values": [],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Exact repeated products, power notation using ^, and other valid calculations are accepted unless a particular form is requested. Keep full accuracy; report final money to the nearest cent and populations to the nearest person. An exact unrounded calculator value is also accepted. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "final": "2696.64"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The second year’s growth is based on the increased investment.",
+        "correct_after_support": "The second year’s growth is based on the increased investment.",
+        "on_correct_math": "After year 1: $2400 × 1.06 = $2544. → After year 2: $2544 × 1.06 = $2696.64. → Final value = $2696.64.",
+        "on_incorrect_attempt_1": "Apply the second increase to the amount after the first year.",
+        "on_incorrect_attempt_2": "The second line starts from the first year’s result, not from the original investment.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "After year 1: $2400 × 1.06 = $2544. → After year 2: $2544 × 1.06 = $2696.64. → Final value = $2696.64."
+      },
+      "mathematical_support": {
+        "hint_1": "Apply the second increase to the amount after the first year.",
+        "hint_2": "The second line starts from the first year’s result, not from the original investment.",
+        "worked_solution": "After year 1: $2400 × 1.06 = $2544. → After year 2: $2544 × 1.06 = $2696.64. → Final value = $2696.64."
+      },
+      "working": [
+        "After year 1: $2400 × 1.06 = $2544.",
+        "After year 2: $2544 × 1.06 = $2696.64.",
+        "Final value = $2696.64."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "An investment of $2400 increases by 6% each year for 2 years. Work out its value after 2 years. Give the final value.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "After year 1: $2400 × 1.06 = $2544.",
+            "After year 2: $2544 × 1.06 = $2696.64.",
+            "Final value = $2696.64."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_final": "Calculate both yearly changes, using the updated investment in the second year.",
+        "check_unit": "Use the printed unit for this amount. A percentage or multiplier is not the final amount.",
+        "check_number_format": "Check the comma grouping. Separate groups of three digits, or leave commas out. Use a decimal point for decimal values."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-12-G04",
+      "source_ref": {
+        "page": 6
+      },
+      "stage": "independent_transfer",
+      "prompt": "An investment of $2400 increases by 6% each year for 2 years. Work out its value after 2 years. Which statement is correct?",
+      "target": "Apply repeated percentage changes to the updated whole",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "The second 6% increase is calculated from the value after the first year.",
+          "The second 6% increase must equal the first increase in dollars.",
+          "The multiplier is applied only once because the rate is unchanged.",
+          "The two increases can be replaced by one 12% increase."
+        ],
+        "math_layout": "symbolic_compound_fraction"
+      },
+      "answer": {
+        "value": "The second 6% increase is calculated from the value after the first year."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The updated investment becomes the whole for the second year.",
+        "correct_after_support": "The updated investment becomes the whole for the second year.",
+        "on_correct_math": "After year 1: $2544 becomes the next whole. → The second 6% increase is based on $2544, not $2400.",
+        "on_incorrect_attempt_1": "Identify the whole used by the second percentage change.",
+        "on_incorrect_attempt_2": "The rate stays the same, but the investment it acts on has changed.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "After year 1: $2544 becomes the next whole. → The second 6% increase is based on $2544, not $2400."
+      },
+      "mathematical_support": {
+        "hint_1": "Identify the whole used by the second percentage change.",
+        "hint_2": "The rate stays the same, but the investment it acts on has changed.",
+        "worked_solution": "After year 1: $2544 becomes the next whole. → The second 6% increase is based on $2544, not $2400."
+      },
+      "working": [
+        "After year 1: $2544 becomes the next whole.",
+        "The second 6% increase is based on $2544, not $2400."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "An investment of $2400 increases by 6% each year for 2 years. Work out its value after 2 years. Which statement is correct?",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "After year 1: $2544 becomes the next whole.",
+            "The second 6% increase is based on $2544, not $2400."
+          ]
+        }
+      },
+      "response_feedback": {
+        "The second 6% increase must equal the first increase in dollars.": "Equal rates need not give equal dollar changes when their wholes differ.",
+        "The multiplier is applied only once because the rate is unchanged.": "An unchanged rate still acts once in each stated year.",
+        "The two increases can be replaced by one 12% increase.": "Adding the rates ignores growth of the first year’s increase during the second year."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-12-P01",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "$800 increases by 5% each year for 3 years. Work out the final amount.",
+      "target": "Apply repeated percentage changes to the updated whole",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "final",
+            "label": "Final amount",
+            "kind": "number",
+            "unit": "$",
+            "allow_expression": true,
+            "allow_powers": true,
+            "grouped_numbers": true,
+            "money_display": true,
+            "signed_evidence": true,
+            "accepted_exact_values": [
+              "926.1",
+              "800*1.05*1.05*1.05"
+            ]
+          }
+        ],
+        "error_values": [
+          {
+            "field": "final",
+            "classification": "starting_amount",
+            "value": "800"
+          },
+          {
+            "field": "final",
+            "classification": "one_stage",
+            "value": "800*1.05"
+          },
+          {
+            "field": "final",
+            "classification": "fixed_change",
+            "value": "800*(1+(5+5+5)/100)"
+          },
+          {
+            "field": "final",
+            "classification": "too_few_periods",
+            "value": "800*1.05^2"
+          },
+          {
+            "field": "final",
+            "classification": "too_many_periods",
+            "value": "800*1.05^4"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Exact repeated products, power notation using ^, and other valid calculations are accepted unless a particular form is requested. Keep full accuracy; report final money to the nearest cent and populations to the nearest person. An exact unrounded calculator value is also accepted. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "final": "926.10"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "All three annual increases are included.",
+        "correct_after_support": "All three annual increases are included.",
+        "on_correct_math": "Increase multiplier = 1 + 0.05 = 1.05. → Apply the multiplier 3 times: 800 × 1.05 × 1.05 × 1.05. → 800 × 1.05^3 = 926.1. → Final amount = $926.10 (nearest cent).",
+        "on_incorrect_attempt_1": "Identify every percentage change and the amount it acts on. The result of each stage becomes the next whole.",
+        "on_incorrect_attempt_2": "Follow the successive multiplications in the working. Keep the full value through every stage, then round only the final contextual answer.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Increase multiplier = 1 + 0.05 = 1.05. → Apply the multiplier 3 times: 800 × 1.05 × 1.05 × 1.05. → 800 × 1.05^3 = 926.1. → Final amount = $926.10 (nearest cent)."
+      },
+      "mathematical_support": {
+        "hint_1": "Identify every percentage change and the amount it acts on. The result of each stage becomes the next whole.",
+        "hint_2": "Follow the successive multiplications in the working. Keep the full value through every stage, then round only the final contextual answer.",
+        "worked_solution": "Increase multiplier = 1 + 0.05 = 1.05. → Apply the multiplier 3 times: 800 × 1.05 × 1.05 × 1.05. → 800 × 1.05^3 = 926.1. → Final amount = $926.10 (nearest cent)."
+      },
+      "working": [
+        "Increase multiplier = 1 + 0.05 = 1.05.",
+        "Apply the multiplier 3 times: 800 × 1.05 × 1.05 × 1.05.",
+        "800 × 1.05^3 = 926.1.",
+        "Final amount = $926.10 (nearest cent)."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "$800 increases by 5% each year for 3 years. Work out the final amount.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Increase multiplier = 1 + 0.05 = 1.05.",
+            "Apply the multiplier 3 times: 800 × 1.05 × 1.05 × 1.05.",
+            "800 × 1.05^3 = 926.1.",
+            "Final amount = $926.10 (nearest cent)."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_final": "Check each stage multiplier, the number of applications and the final rounding. Every change uses the amount immediately before it.",
+        "starting_amount": "That is the starting amount. The stated sequence of changes does not leave it unchanged.",
+        "one_stage": "That value is after the first change only. Apply the remaining changes to the updated amount.",
+        "fixed_change": "That value does not account for the changing whole. Apply each rate to the amount after the previous stage.",
+        "too_few_periods": "That value corresponds to fewer changes than the stated number of periods. Count every yearly application.",
+        "too_many_periods": "That value includes an extra change. Match the number of multiplier applications to the stated periods.",
+        "second_stage_only": "That value applies the second rate to the starting amount. Include the first change before applying the next.",
+        "check_unit": "Use the printed unit for this amount. A percentage or multiplier is not the final amount.",
+        "check_number_format": "Check the comma grouping. Separate groups of three digits, or leave commas out. Use a decimal point for decimal values."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-12-P02",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "$1200 decreases by 10% each year for 2 years. Work out the final amount.",
+      "target": "Apply repeated percentage changes to the updated whole",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "final",
+            "label": "Final amount",
+            "kind": "number",
+            "unit": "$",
+            "allow_expression": true,
+            "allow_powers": true,
+            "grouped_numbers": true,
+            "money_display": true,
+            "signed_evidence": true,
+            "accepted_exact_values": [
+              "972",
+              "1200*0.9*0.9"
+            ]
+          }
+        ],
+        "error_values": [
+          {
+            "field": "final",
+            "classification": "starting_amount",
+            "value": "1200"
+          },
+          {
+            "field": "final",
+            "classification": "one_stage",
+            "value": "1200*0.9"
+          },
+          {
+            "field": "final",
+            "classification": "fixed_change",
+            "value": "1200*(1+(-10+-10)/100)"
+          },
+          {
+            "field": "final",
+            "classification": "too_many_periods",
+            "value": "1200*0.9^3"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Exact repeated products, power notation using ^, and other valid calculations are accepted unless a particular form is requested. Keep full accuracy; report final money to the nearest cent and populations to the nearest person. An exact unrounded calculator value is also accepted. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "final": "972"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The second decrease uses the amount remaining after year one.",
+        "correct_after_support": "The second decrease uses the amount remaining after year one.",
+        "on_correct_math": "Remaining multiplier = 1 − 0.1 = 0.9. → Apply the multiplier 2 times: 1200 × 0.9 × 0.9. → 1200 × 0.9^2 = 972. → Final amount = $972.00.",
+        "on_incorrect_attempt_1": "Identify every percentage change and the amount it acts on. The result of each stage becomes the next whole.",
+        "on_incorrect_attempt_2": "Follow the successive multiplications in the working. Keep the full value through every stage, then round only the final contextual answer.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Remaining multiplier = 1 − 0.1 = 0.9. → Apply the multiplier 2 times: 1200 × 0.9 × 0.9. → 1200 × 0.9^2 = 972. → Final amount = $972.00."
+      },
+      "mathematical_support": {
+        "hint_1": "Identify every percentage change and the amount it acts on. The result of each stage becomes the next whole.",
+        "hint_2": "Follow the successive multiplications in the working. Keep the full value through every stage, then round only the final contextual answer.",
+        "worked_solution": "Remaining multiplier = 1 − 0.1 = 0.9. → Apply the multiplier 2 times: 1200 × 0.9 × 0.9. → 1200 × 0.9^2 = 972. → Final amount = $972.00."
+      },
+      "working": [
+        "Remaining multiplier = 1 − 0.1 = 0.9.",
+        "Apply the multiplier 2 times: 1200 × 0.9 × 0.9.",
+        "1200 × 0.9^2 = 972.",
+        "Final amount = $972.00."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "$1200 decreases by 10% each year for 2 years. Work out the final amount.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Remaining multiplier = 1 − 0.1 = 0.9.",
+            "Apply the multiplier 2 times: 1200 × 0.9 × 0.9.",
+            "1200 × 0.9^2 = 972.",
+            "Final amount = $972.00."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_final": "Check each stage multiplier, the number of applications and the final rounding. Every change uses the amount immediately before it.",
+        "starting_amount": "That is the starting amount. The stated sequence of changes does not leave it unchanged.",
+        "one_stage": "That value is after the first change only. Apply the remaining changes to the updated amount.",
+        "fixed_change": "That value does not account for the changing whole. Apply each rate to the amount after the previous stage.",
+        "too_few_periods": "That value corresponds to fewer changes than the stated number of periods. Count every yearly application.",
+        "too_many_periods": "That value includes an extra change. Match the number of multiplier applications to the stated periods.",
+        "second_stage_only": "That value applies the second rate to the starting amount. Include the first change before applying the next.",
+        "check_unit": "Use the printed unit for this amount. A percentage or multiplier is not the final amount.",
+        "check_number_format": "Check the comma grouping. Separate groups of three digits, or leave commas out. Use a decimal point for decimal values."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-12-P03",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "A population of 25,000 increases by 2% each year for 4 years. Give the final population to the nearest person.",
+      "target": "Apply repeated percentage changes to the updated whole",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "final",
+            "label": "Final population",
+            "kind": "number",
+            "unit": "people",
+            "allow_expression": true,
+            "allow_powers": true,
+            "grouped_numbers": true,
+            "unit_aliases": [
+              "people",
+              "person",
+              "persons"
+            ],
+            "signed_evidence": true,
+            "accepted_exact_values": [
+              "27060.804",
+              "25000*1.02*1.02*1.02*1.02"
+            ]
+          }
+        ],
+        "error_values": [
+          {
+            "field": "final",
+            "classification": "starting_amount",
+            "value": "25000"
+          },
+          {
+            "field": "final",
+            "classification": "one_stage",
+            "value": "25000*1.02"
+          },
+          {
+            "field": "final",
+            "classification": "fixed_change",
+            "value": "25000*(1+(2+2+2+2)/100)"
+          },
+          {
+            "field": "final",
+            "classification": "too_few_periods",
+            "value": "25000*1.02^3"
+          },
+          {
+            "field": "final",
+            "classification": "too_many_periods",
+            "value": "25000*1.02^5"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Exact repeated products, power notation using ^, and other valid calculations are accepted unless a particular form is requested. Keep full accuracy; report final money to the nearest cent and populations to the nearest person. An exact unrounded calculator value is also accepted. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "final": "27061"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The population is rounded only after all four yearly increases.",
+        "correct_after_support": "The population is rounded only after all four yearly increases.",
+        "on_correct_math": "Increase multiplier = 1 + 0.02 = 1.02. → Apply the multiplier 4 times: 25000 × 1.02 × 1.02 × 1.02 × 1.02. → 25000 × 1.02^4 = 27060.804. → Final population = 27061 people (nearest person).",
+        "on_incorrect_attempt_1": "Identify every percentage change and the amount it acts on. The result of each stage becomes the next whole.",
+        "on_incorrect_attempt_2": "Follow the successive multiplications in the working. Keep the full value through every stage, then round only the final contextual answer.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Increase multiplier = 1 + 0.02 = 1.02. → Apply the multiplier 4 times: 25000 × 1.02 × 1.02 × 1.02 × 1.02. → 25000 × 1.02^4 = 27060.804. → Final population = 27061 people (nearest person)."
+      },
+      "mathematical_support": {
+        "hint_1": "Identify every percentage change and the amount it acts on. The result of each stage becomes the next whole.",
+        "hint_2": "Follow the successive multiplications in the working. Keep the full value through every stage, then round only the final contextual answer.",
+        "worked_solution": "Increase multiplier = 1 + 0.02 = 1.02. → Apply the multiplier 4 times: 25000 × 1.02 × 1.02 × 1.02 × 1.02. → 25000 × 1.02^4 = 27060.804. → Final population = 27061 people (nearest person)."
+      },
+      "working": [
+        "Increase multiplier = 1 + 0.02 = 1.02.",
+        "Apply the multiplier 4 times: 25000 × 1.02 × 1.02 × 1.02 × 1.02.",
+        "25000 × 1.02^4 = 27060.804.",
+        "Final population = 27061 people (nearest person)."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A population of 25,000 increases by 2% each year for 4 years. Give the final population to the nearest person.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Increase multiplier = 1 + 0.02 = 1.02.",
+            "Apply the multiplier 4 times: 25000 × 1.02 × 1.02 × 1.02 × 1.02.",
+            "25000 × 1.02^4 = 27060.804.",
+            "Final population = 27061 people (nearest person)."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_final": "Check each stage multiplier, the number of applications and the final rounding. Every change uses the amount immediately before it.",
+        "starting_amount": "That is the starting amount. The stated sequence of changes does not leave it unchanged.",
+        "one_stage": "That value is after the first change only. Apply the remaining changes to the updated amount.",
+        "fixed_change": "That value does not account for the changing whole. Apply each rate to the amount after the previous stage.",
+        "too_few_periods": "That value corresponds to fewer changes than the stated number of periods. Count every yearly application.",
+        "too_many_periods": "That value includes an extra change. Match the number of multiplier applications to the stated periods.",
+        "second_stage_only": "That value applies the second rate to the starting amount. Include the first change before applying the next.",
+        "check_unit": "Use the printed unit for this amount. A percentage or multiplier is not the final amount.",
+        "check_number_format": "Check the comma grouping. Separate groups of three digits, or leave commas out. Use a decimal point for decimal values."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-12-P04",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "A car worth $18,000 loses 15% of its value each year for 3 years. Work out its final value.",
+      "target": "Apply repeated percentage changes to the updated whole",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "final",
+            "label": "Final value",
+            "kind": "number",
+            "unit": "$",
+            "allow_expression": true,
+            "allow_powers": true,
+            "grouped_numbers": true,
+            "money_display": true,
+            "signed_evidence": true,
+            "accepted_exact_values": [
+              "11054.25",
+              "18000*0.85*0.85*0.85"
+            ]
+          }
+        ],
+        "error_values": [
+          {
+            "field": "final",
+            "classification": "starting_amount",
+            "value": "18000"
+          },
+          {
+            "field": "final",
+            "classification": "one_stage",
+            "value": "18000*0.85"
+          },
+          {
+            "field": "final",
+            "classification": "fixed_change",
+            "value": "18000*(1+(-15+-15+-15)/100)"
+          },
+          {
+            "field": "final",
+            "classification": "too_few_periods",
+            "value": "18000*0.85^2"
+          },
+          {
+            "field": "final",
+            "classification": "too_many_periods",
+            "value": "18000*0.85^4"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Exact repeated products, power notation using ^, and other valid calculations are accepted unless a particular form is requested. Keep full accuracy; report final money to the nearest cent and populations to the nearest person. An exact unrounded calculator value is also accepted. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "final": "11054.25"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The same remaining multiplier acts on a smaller value each year.",
+        "correct_after_support": "The same remaining multiplier acts on a smaller value each year.",
+        "on_correct_math": "Remaining multiplier = 1 − 0.15 = 0.85. → Apply the multiplier 3 times: 18000 × 0.85 × 0.85 × 0.85. → 18000 × 0.85^3 = 11054.25. → Final value = $11054.25.",
+        "on_incorrect_attempt_1": "Identify every percentage change and the amount it acts on. The result of each stage becomes the next whole.",
+        "on_incorrect_attempt_2": "Follow the successive multiplications in the working. Keep the full value through every stage, then round only the final contextual answer.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Remaining multiplier = 1 − 0.15 = 0.85. → Apply the multiplier 3 times: 18000 × 0.85 × 0.85 × 0.85. → 18000 × 0.85^3 = 11054.25. → Final value = $11054.25."
+      },
+      "mathematical_support": {
+        "hint_1": "Identify every percentage change and the amount it acts on. The result of each stage becomes the next whole.",
+        "hint_2": "Follow the successive multiplications in the working. Keep the full value through every stage, then round only the final contextual answer.",
+        "worked_solution": "Remaining multiplier = 1 − 0.15 = 0.85. → Apply the multiplier 3 times: 18000 × 0.85 × 0.85 × 0.85. → 18000 × 0.85^3 = 11054.25. → Final value = $11054.25."
+      },
+      "working": [
+        "Remaining multiplier = 1 − 0.15 = 0.85.",
+        "Apply the multiplier 3 times: 18000 × 0.85 × 0.85 × 0.85.",
+        "18000 × 0.85^3 = 11054.25.",
+        "Final value = $11054.25."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A car worth $18,000 loses 15% of its value each year for 3 years. Work out its final value.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Remaining multiplier = 1 − 0.15 = 0.85.",
+            "Apply the multiplier 3 times: 18000 × 0.85 × 0.85 × 0.85.",
+            "18000 × 0.85^3 = 11054.25.",
+            "Final value = $11054.25."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_final": "Check each stage multiplier, the number of applications and the final rounding. Every change uses the amount immediately before it.",
+        "starting_amount": "That is the starting amount. The stated sequence of changes does not leave it unchanged.",
+        "one_stage": "That value is after the first change only. Apply the remaining changes to the updated amount.",
+        "fixed_change": "That value does not account for the changing whole. Apply each rate to the amount after the previous stage.",
+        "too_few_periods": "That value corresponds to fewer changes than the stated number of periods. Count every yearly application.",
+        "too_many_periods": "That value includes an extra change. Match the number of multiplier applications to the stated periods.",
+        "second_stage_only": "That value applies the second rate to the starting amount. Include the first change before applying the next.",
+        "check_unit": "Use the printed unit for this amount. A percentage or multiplier is not the final amount.",
+        "check_number_format": "Check the comma grouping. Separate groups of three digits, or leave commas out. Use a decimal point for decimal values."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-12-P05",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "$600 increases by 8% and then decreases by 10%. Work out the final amount.",
+      "target": "Apply repeated percentage changes to the updated whole",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "final",
+            "label": "Final amount",
+            "kind": "number",
+            "unit": "$",
+            "allow_expression": true,
+            "allow_powers": true,
+            "grouped_numbers": true,
+            "money_display": true,
+            "signed_evidence": true,
+            "accepted_exact_values": [
+              "583.2",
+              "600*1.08*0.9"
+            ]
+          }
+        ],
+        "error_values": [
+          {
+            "field": "final",
+            "classification": "starting_amount",
+            "value": "600"
+          },
+          {
+            "field": "final",
+            "classification": "one_stage",
+            "value": "600*1.08"
+          },
+          {
+            "field": "final",
+            "classification": "fixed_change",
+            "value": "600*(1+(8+-10)/100)"
+          },
+          {
+            "field": "final",
+            "classification": "second_stage_only",
+            "value": "600*0.9"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Exact repeated products, power notation using ^, and other valid calculations are accepted unless a particular form is requested. Keep full accuracy; report final money to the nearest cent and populations to the nearest person. An exact unrounded calculator value is also accepted. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "final": "583.20"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The second rate acts on the amount after the increase.",
+        "correct_after_support": "The second rate acts on the amount after the increase.",
+        "on_correct_math": "Increase multiplier = 1 + 0.08 = 1.08. → Remaining multiplier = 1 − 0.1 = 0.9. → Use the updated amount for each successive change. → 600 × 1.08 × 0.9 = 583.2. → Final amount = $583.20 (nearest cent).",
+        "on_incorrect_attempt_1": "Identify every percentage change and the amount it acts on. The result of each stage becomes the next whole.",
+        "on_incorrect_attempt_2": "Follow the successive multiplications in the working. Keep the full value through every stage, then round only the final contextual answer.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Increase multiplier = 1 + 0.08 = 1.08. → Remaining multiplier = 1 − 0.1 = 0.9. → Use the updated amount for each successive change. → 600 × 1.08 × 0.9 = 583.2. → Final amount = $583.20 (nearest cent)."
+      },
+      "mathematical_support": {
+        "hint_1": "Identify every percentage change and the amount it acts on. The result of each stage becomes the next whole.",
+        "hint_2": "Follow the successive multiplications in the working. Keep the full value through every stage, then round only the final contextual answer.",
+        "worked_solution": "Increase multiplier = 1 + 0.08 = 1.08. → Remaining multiplier = 1 − 0.1 = 0.9. → Use the updated amount for each successive change. → 600 × 1.08 × 0.9 = 583.2. → Final amount = $583.20 (nearest cent)."
+      },
+      "working": [
+        "Increase multiplier = 1 + 0.08 = 1.08.",
+        "Remaining multiplier = 1 − 0.1 = 0.9.",
+        "Use the updated amount for each successive change.",
+        "600 × 1.08 × 0.9 = 583.2.",
+        "Final amount = $583.20 (nearest cent)."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "$600 increases by 8% and then decreases by 10%. Work out the final amount.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Increase multiplier = 1 + 0.08 = 1.08.",
+            "Remaining multiplier = 1 − 0.1 = 0.9.",
+            "Use the updated amount for each successive change.",
+            "600 × 1.08 × 0.9 = 583.2.",
+            "Final amount = $583.20 (nearest cent)."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_final": "Check each stage multiplier, the number of applications and the final rounding. Every change uses the amount immediately before it.",
+        "starting_amount": "That is the starting amount. The stated sequence of changes does not leave it unchanged.",
+        "one_stage": "That value is after the first change only. Apply the remaining changes to the updated amount.",
+        "fixed_change": "That value does not account for the changing whole. Apply each rate to the amount after the previous stage.",
+        "too_few_periods": "That value corresponds to fewer changes than the stated number of periods. Count every yearly application.",
+        "too_many_periods": "That value includes an extra change. Match the number of multiplier applications to the stated periods.",
+        "second_stage_only": "That value applies the second rate to the starting amount. Include the first change before applying the next.",
+        "check_unit": "Use the printed unit for this amount. A percentage or multiplier is not the final amount.",
+        "check_number_format": "Check the comma grouping. Separate groups of three digits, or leave commas out. Use a decimal point for decimal values."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-12-P06",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "$2500 earns 3.5% compound interest each year for 2 years. Work out the final amount.",
+      "target": "Apply repeated percentage changes to the updated whole",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "final",
+            "label": "Final amount",
+            "kind": "number",
+            "unit": "$",
+            "allow_expression": true,
+            "allow_powers": true,
+            "grouped_numbers": true,
+            "money_display": true,
+            "signed_evidence": true,
+            "accepted_exact_values": [
+              "2678.0625",
+              "2500*1.035*1.035"
+            ]
+          }
+        ],
+        "error_values": [
+          {
+            "field": "final",
+            "classification": "starting_amount",
+            "value": "2500"
+          },
+          {
+            "field": "final",
+            "classification": "one_stage",
+            "value": "2500*1.035"
+          },
+          {
+            "field": "final",
+            "classification": "fixed_change",
+            "value": "2500*(1+(3.5+3.5)/100)"
+          },
+          {
+            "field": "final",
+            "classification": "too_many_periods",
+            "value": "2500*1.035^3"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Exact repeated products, power notation using ^, and other valid calculations are accepted unless a particular form is requested. Keep full accuracy; report final money to the nearest cent and populations to the nearest person. An exact unrounded calculator value is also accepted. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "final": "2678.06"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The exact decimal rate is retained through both years.",
+        "correct_after_support": "The exact decimal rate is retained through both years.",
+        "on_correct_math": "Increase multiplier = 1 + 0.035 = 1.035. → Apply the multiplier 2 times: 2500 × 1.035 × 1.035. → 2500 × 1.035^2 = 2678.0625. → Final amount = $2678.06 (nearest cent).",
+        "on_incorrect_attempt_1": "Identify every percentage change and the amount it acts on. The result of each stage becomes the next whole.",
+        "on_incorrect_attempt_2": "Follow the successive multiplications in the working. Keep the full value through every stage, then round only the final contextual answer.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Increase multiplier = 1 + 0.035 = 1.035. → Apply the multiplier 2 times: 2500 × 1.035 × 1.035. → 2500 × 1.035^2 = 2678.0625. → Final amount = $2678.06 (nearest cent)."
+      },
+      "mathematical_support": {
+        "hint_1": "Identify every percentage change and the amount it acts on. The result of each stage becomes the next whole.",
+        "hint_2": "Follow the successive multiplications in the working. Keep the full value through every stage, then round only the final contextual answer.",
+        "worked_solution": "Increase multiplier = 1 + 0.035 = 1.035. → Apply the multiplier 2 times: 2500 × 1.035 × 1.035. → 2500 × 1.035^2 = 2678.0625. → Final amount = $2678.06 (nearest cent)."
+      },
+      "working": [
+        "Increase multiplier = 1 + 0.035 = 1.035.",
+        "Apply the multiplier 2 times: 2500 × 1.035 × 1.035.",
+        "2500 × 1.035^2 = 2678.0625.",
+        "Final amount = $2678.06 (nearest cent)."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "$2500 earns 3.5% compound interest each year for 2 years. Work out the final amount.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Increase multiplier = 1 + 0.035 = 1.035.",
+            "Apply the multiplier 2 times: 2500 × 1.035 × 1.035.",
+            "2500 × 1.035^2 = 2678.0625.",
+            "Final amount = $2678.06 (nearest cent)."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_final": "Check each stage multiplier, the number of applications and the final rounding. Every change uses the amount immediately before it.",
+        "starting_amount": "That is the starting amount. The stated sequence of changes does not leave it unchanged.",
+        "one_stage": "That value is after the first change only. Apply the remaining changes to the updated amount.",
+        "fixed_change": "That value does not account for the changing whole. Apply each rate to the amount after the previous stage.",
+        "too_few_periods": "That value corresponds to fewer changes than the stated number of periods. Count every yearly application.",
+        "too_many_periods": "That value includes an extra change. Match the number of multiplier applications to the stated periods.",
+        "second_stage_only": "That value applies the second rate to the starting amount. Include the first change before applying the next.",
+        "check_unit": "Use the printed unit for this amount. A percentage or multiplier is not the final amount.",
+        "check_number_format": "Check the comma grouping. Separate groups of three digits, or leave commas out. Use a decimal point for decimal values."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-12-P07",
+      "source_ref": {
+        "page": 7
+      },
+      "stage": "practice",
+      "prompt": "Which expression represents a 12% decrease each year for 4 years from an original amount A?",
+      "target": "Apply repeated percentage changes to the updated whole",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "A × 0.88^4",
+          "A × 0.12^4",
+          "A × 0.52",
+          "A − 0.12^4"
+        ],
+        "math_layout": "symbolic_compound_fraction"
+      },
+      "answer": {
+        "value": "A × 0.88^4"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The expression retains the appropriate share in each of the four years.",
+        "correct_after_support": "The expression retains the appropriate share in each of the four years.",
+        "on_correct_math": "Remaining multiplier = 1 − 0.12 = 0.88. → Four applications: A × 0.88^4.",
+        "on_incorrect_attempt_1": "Use the remaining share once for every year.",
+        "on_incorrect_attempt_2": "The multiplier represents what remains; the exponent counts yearly applications.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Remaining multiplier = 1 − 0.12 = 0.88. → Four applications: A × 0.88^4."
+      },
+      "mathematical_support": {
+        "hint_1": "Use the remaining share once for every year.",
+        "hint_2": "The multiplier represents what remains; the exponent counts yearly applications.",
+        "worked_solution": "Remaining multiplier = 1 − 0.12 = 0.88. → Four applications: A × 0.88^4."
+      },
+      "working": [
+        "Remaining multiplier = 1 − 0.12 = 0.88.",
+        "Four applications: A × 0.88^4."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "Which expression represents a 12% decrease each year for 4 years from an original amount A?",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Remaining multiplier = 1 − 0.12 = 0.88.",
+            "Four applications: A × 0.88^4."
+          ]
+        }
+      },
+      "response_feedback": {
+        "A × 0.12^4": "This repeats the removed share, not the remaining share.",
+        "A × 0.52": "This combines the rates by subtraction instead of applying successive decreases.",
+        "A − 0.12^4": "Subtracting a powered decimal rate is not repeated percentage scaling."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-12-X01",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "$3500 is invested at 4% compound interest per year. Work out the value of the investment after 3 years. Give your answer to the nearest cent.",
+      "target": "Apply repeated percentage changes to the updated whole",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "final",
+            "label": "Value after 3 years",
+            "kind": "number",
+            "unit": "$",
+            "allow_expression": true,
+            "allow_powers": true,
+            "grouped_numbers": true,
+            "money_display": true,
+            "signed_evidence": true,
+            "accepted_exact_values": [
+              "3937.024",
+              "3500*1.04*1.04*1.04"
+            ]
+          }
+        ],
+        "error_values": [
+          {
+            "field": "final",
+            "classification": "starting_amount",
+            "value": "3500"
+          },
+          {
+            "field": "final",
+            "classification": "one_stage",
+            "value": "3500*1.04"
+          },
+          {
+            "field": "final",
+            "classification": "fixed_change",
+            "value": "3500*(1+(4+4+4)/100)"
+          },
+          {
+            "field": "final",
+            "classification": "too_few_periods",
+            "value": "3500*1.04^2"
+          },
+          {
+            "field": "final",
+            "classification": "too_many_periods",
+            "value": "3500*1.04^4"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Exact repeated products, power notation using ^, and other valid calculations are accepted unless a particular form is requested. Keep full accuracy; report final money to the nearest cent and populations to the nearest person. An exact unrounded calculator value is also accepted. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "final": "3937.02"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Interest compounds on the updated investment in every year.",
+        "correct_after_support": "Interest compounds on the updated investment in every year.",
+        "on_correct_math": "Increase multiplier = 1 + 0.04 = 1.04. → Apply the multiplier 3 times: 3500 × 1.04 × 1.04 × 1.04. → 3500 × 1.04^3 = 3937.024. → Final value after 3 years = $3937.02 (nearest cent).",
+        "on_incorrect_attempt_1": "Identify every percentage change and the amount it acts on. The result of each stage becomes the next whole.",
+        "on_incorrect_attempt_2": "Follow the successive multiplications in the working. Keep the full value through every stage, then round only the final contextual answer.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Increase multiplier = 1 + 0.04 = 1.04. → Apply the multiplier 3 times: 3500 × 1.04 × 1.04 × 1.04. → 3500 × 1.04^3 = 3937.024. → Final value after 3 years = $3937.02 (nearest cent)."
+      },
+      "mathematical_support": {
+        "hint_1": "Identify every percentage change and the amount it acts on. The result of each stage becomes the next whole.",
+        "hint_2": "Follow the successive multiplications in the working. Keep the full value through every stage, then round only the final contextual answer.",
+        "worked_solution": "Increase multiplier = 1 + 0.04 = 1.04. → Apply the multiplier 3 times: 3500 × 1.04 × 1.04 × 1.04. → 3500 × 1.04^3 = 3937.024. → Final value after 3 years = $3937.02 (nearest cent)."
+      },
+      "working": [
+        "Increase multiplier = 1 + 0.04 = 1.04.",
+        "Apply the multiplier 3 times: 3500 × 1.04 × 1.04 × 1.04.",
+        "3500 × 1.04^3 = 3937.024.",
+        "Final value after 3 years = $3937.02 (nearest cent)."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "$3500 is invested at 4% compound interest per year. Work out the value of the investment after 3 years. Give your answer to the nearest cent.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Increase multiplier = 1 + 0.04 = 1.04.",
+            "Apply the multiplier 3 times: 3500 × 1.04 × 1.04 × 1.04.",
+            "3500 × 1.04^3 = 3937.024.",
+            "Final value after 3 years = $3937.02 (nearest cent)."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_final": "Check each stage multiplier, the number of applications and the final rounding. Every change uses the amount immediately before it.",
+        "starting_amount": "That is the starting amount. The stated sequence of changes does not leave it unchanged.",
+        "one_stage": "That value is after the first change only. Apply the remaining changes to the updated amount.",
+        "fixed_change": "That value does not account for the changing whole. Apply each rate to the amount after the previous stage.",
+        "too_few_periods": "That value corresponds to fewer changes than the stated number of periods. Count every yearly application.",
+        "too_many_periods": "That value includes an extra change. Match the number of multiplier applications to the stated periods.",
+        "second_stage_only": "That value applies the second rate to the starting amount. Include the first change before applying the next.",
+        "check_unit": "Use the printed unit for this amount. A percentage or multiplier is not the final amount.",
+        "check_number_format": "Check the comma grouping. Separate groups of three digits, or leave commas out. Use a decimal point for decimal values."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-12-X02",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A car is worth $24,000. Its value depreciates by 18% each year. Work out its value after 2 years.",
+      "target": "Apply repeated percentage changes to the updated whole",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "final",
+            "label": "Value after 2 years",
+            "kind": "number",
+            "unit": "$",
+            "allow_expression": true,
+            "allow_powers": true,
+            "grouped_numbers": true,
+            "money_display": true,
+            "signed_evidence": true,
+            "accepted_exact_values": [
+              "16137.6",
+              "24000*0.82*0.82"
+            ]
+          }
+        ],
+        "error_values": [
+          {
+            "field": "final",
+            "classification": "starting_amount",
+            "value": "24000"
+          },
+          {
+            "field": "final",
+            "classification": "one_stage",
+            "value": "24000*0.82"
+          },
+          {
+            "field": "final",
+            "classification": "fixed_change",
+            "value": "24000*(1+(-18+-18)/100)"
+          },
+          {
+            "field": "final",
+            "classification": "too_many_periods",
+            "value": "24000*0.82^3"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Exact repeated products, power notation using ^, and other valid calculations are accepted unless a particular form is requested. Keep full accuracy; report final money to the nearest cent and populations to the nearest person. An exact unrounded calculator value is also accepted. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "final": "16137.60"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Both depreciation stages are applied to their current car values.",
+        "correct_after_support": "Both depreciation stages are applied to their current car values.",
+        "on_correct_math": "Remaining multiplier = 1 − 0.18 = 0.82. → Apply the multiplier 2 times: 24000 × 0.82 × 0.82. → 24000 × 0.82^2 = 16137.6. → Final value after 2 years = $16137.60 (nearest cent).",
+        "on_incorrect_attempt_1": "Identify every percentage change and the amount it acts on. The result of each stage becomes the next whole.",
+        "on_incorrect_attempt_2": "Follow the successive multiplications in the working. Keep the full value through every stage, then round only the final contextual answer.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Remaining multiplier = 1 − 0.18 = 0.82. → Apply the multiplier 2 times: 24000 × 0.82 × 0.82. → 24000 × 0.82^2 = 16137.6. → Final value after 2 years = $16137.60 (nearest cent)."
+      },
+      "mathematical_support": {
+        "hint_1": "Identify every percentage change and the amount it acts on. The result of each stage becomes the next whole.",
+        "hint_2": "Follow the successive multiplications in the working. Keep the full value through every stage, then round only the final contextual answer.",
+        "worked_solution": "Remaining multiplier = 1 − 0.18 = 0.82. → Apply the multiplier 2 times: 24000 × 0.82 × 0.82. → 24000 × 0.82^2 = 16137.6. → Final value after 2 years = $16137.60 (nearest cent)."
+      },
+      "working": [
+        "Remaining multiplier = 1 − 0.18 = 0.82.",
+        "Apply the multiplier 2 times: 24000 × 0.82 × 0.82.",
+        "24000 × 0.82^2 = 16137.6.",
+        "Final value after 2 years = $16137.60 (nearest cent)."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A car is worth $24,000. Its value depreciates by 18% each year. Work out its value after 2 years.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Remaining multiplier = 1 − 0.18 = 0.82.",
+            "Apply the multiplier 2 times: 24000 × 0.82 × 0.82.",
+            "24000 × 0.82^2 = 16137.6.",
+            "Final value after 2 years = $16137.60 (nearest cent)."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_final": "Check each stage multiplier, the number of applications and the final rounding. Every change uses the amount immediately before it.",
+        "starting_amount": "That is the starting amount. The stated sequence of changes does not leave it unchanged.",
+        "one_stage": "That value is after the first change only. Apply the remaining changes to the updated amount.",
+        "fixed_change": "That value does not account for the changing whole. Apply each rate to the amount after the previous stage.",
+        "too_few_periods": "That value corresponds to fewer changes than the stated number of periods. Count every yearly application.",
+        "too_many_periods": "That value includes an extra change. Match the number of multiplier applications to the stated periods.",
+        "second_stage_only": "That value applies the second rate to the starting amount. Include the first change before applying the next.",
+        "check_unit": "Use the printed unit for this amount. A percentage or multiplier is not the final amount.",
+        "check_number_format": "Check the comma grouping. Separate groups of three digits, or leave commas out. Use a decimal point for decimal values."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-12-X03",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "The population of a town is 48,000. The population increases by 2.5% each year. Work out the population after 4 years. Give your answer to the nearest person.",
+      "target": "Apply repeated percentage changes to the updated whole",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "final",
+            "label": "Population after 4 years",
+            "kind": "number",
+            "unit": "people",
+            "allow_expression": true,
+            "allow_powers": true,
+            "grouped_numbers": true,
+            "unit_aliases": [
+              "people",
+              "person",
+              "persons"
+            ],
+            "signed_evidence": true,
+            "accepted_exact_values": [
+              "52983.01875",
+              "48000*1.025*1.025*1.025*1.025"
+            ]
+          }
+        ],
+        "error_values": [
+          {
+            "field": "final",
+            "classification": "starting_amount",
+            "value": "48000"
+          },
+          {
+            "field": "final",
+            "classification": "one_stage",
+            "value": "48000*1.025"
+          },
+          {
+            "field": "final",
+            "classification": "fixed_change",
+            "value": "48000*(1+(2.5+2.5+2.5+2.5)/100)"
+          },
+          {
+            "field": "final",
+            "classification": "too_few_periods",
+            "value": "48000*1.025^3"
+          },
+          {
+            "field": "final",
+            "classification": "too_many_periods",
+            "value": "48000*1.025^5"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Exact repeated products, power notation using ^, and other valid calculations are accepted unless a particular form is requested. Keep full accuracy; report final money to the nearest cent and populations to the nearest person. An exact unrounded calculator value is also accepted. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "final": "52983"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The full values are retained until the final whole-person rounding.",
+        "correct_after_support": "The full values are retained until the final whole-person rounding.",
+        "on_correct_math": "Increase multiplier = 1 + 0.025 = 1.025. → Apply the multiplier 4 times: 48000 × 1.025 × 1.025 × 1.025 × 1.025. → 48000 × 1.025^4 = 52983.01875. → Final population = 52983 people (nearest person).",
+        "on_incorrect_attempt_1": "Identify every percentage change and the amount it acts on. The result of each stage becomes the next whole.",
+        "on_incorrect_attempt_2": "Follow the successive multiplications in the working. Keep the full value through every stage, then round only the final contextual answer.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Increase multiplier = 1 + 0.025 = 1.025. → Apply the multiplier 4 times: 48000 × 1.025 × 1.025 × 1.025 × 1.025. → 48000 × 1.025^4 = 52983.01875. → Final population = 52983 people (nearest person)."
+      },
+      "mathematical_support": {
+        "hint_1": "Identify every percentage change and the amount it acts on. The result of each stage becomes the next whole.",
+        "hint_2": "Follow the successive multiplications in the working. Keep the full value through every stage, then round only the final contextual answer.",
+        "worked_solution": "Increase multiplier = 1 + 0.025 = 1.025. → Apply the multiplier 4 times: 48000 × 1.025 × 1.025 × 1.025 × 1.025. → 48000 × 1.025^4 = 52983.01875. → Final population = 52983 people (nearest person)."
+      },
+      "working": [
+        "Increase multiplier = 1 + 0.025 = 1.025.",
+        "Apply the multiplier 4 times: 48000 × 1.025 × 1.025 × 1.025 × 1.025.",
+        "48000 × 1.025^4 = 52983.01875.",
+        "Final population = 52983 people (nearest person)."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "The population of a town is 48,000. The population increases by 2.5% each year. Work out the population after 4 years. Give your answer to the nearest person.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Increase multiplier = 1 + 0.025 = 1.025.",
+            "Apply the multiplier 4 times: 48000 × 1.025 × 1.025 × 1.025 × 1.025.",
+            "48000 × 1.025^4 = 52983.01875.",
+            "Final population = 52983 people (nearest person)."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_final": "Check each stage multiplier, the number of applications and the final rounding. Every change uses the amount immediately before it.",
+        "starting_amount": "That is the starting amount. The stated sequence of changes does not leave it unchanged.",
+        "one_stage": "That value is after the first change only. Apply the remaining changes to the updated amount.",
+        "fixed_change": "That value does not account for the changing whole. Apply each rate to the amount after the previous stage.",
+        "too_few_periods": "That value corresponds to fewer changes than the stated number of periods. Count every yearly application.",
+        "too_many_periods": "That value includes an extra change. Match the number of multiplier applications to the stated periods.",
+        "second_stage_only": "That value applies the second rate to the starting amount. Include the first change before applying the next.",
+        "check_unit": "Use the printed unit for this amount. A percentage or multiplier is not the final amount.",
+        "check_number_format": "Check the comma grouping. Separate groups of three digits, or leave commas out. Use a decimal point for decimal values."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-12-X04",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A ticket costs $60. The price increases by 10% and then increases by a further 5%. Work out the final price.",
+      "target": "Apply repeated percentage changes to the updated whole",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "final",
+            "label": "Final price",
+            "kind": "number",
+            "unit": "$",
+            "allow_expression": true,
+            "allow_powers": true,
+            "grouped_numbers": true,
+            "money_display": true,
+            "signed_evidence": true,
+            "accepted_exact_values": [
+              "69.3",
+              "60*1.1*1.05"
+            ]
+          }
+        ],
+        "error_values": [
+          {
+            "field": "final",
+            "classification": "starting_amount",
+            "value": "60"
+          },
+          {
+            "field": "final",
+            "classification": "one_stage",
+            "value": "60*1.1"
+          },
+          {
+            "field": "final",
+            "classification": "fixed_change",
+            "value": "60*(1+(10+5)/100)"
+          },
+          {
+            "field": "final",
+            "classification": "second_stage_only",
+            "value": "60*1.05"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Exact repeated products, power notation using ^, and other valid calculations are accepted unless a particular form is requested. Keep full accuracy; report final money to the nearest cent and populations to the nearest person. An exact unrounded calculator value is also accepted. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "final": "69.30"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The further increase uses the already increased ticket price.",
+        "correct_after_support": "The further increase uses the already increased ticket price.",
+        "on_correct_math": "Increase multiplier = 1 + 0.1 = 1.1. → Increase multiplier = 1 + 0.05 = 1.05. → Use the updated amount for each successive change. → 60 × 1.1 × 1.05 = 69.3. → Final price = $69.30 (nearest cent).",
+        "on_incorrect_attempt_1": "Identify every percentage change and the amount it acts on. The result of each stage becomes the next whole.",
+        "on_incorrect_attempt_2": "Follow the successive multiplications in the working. Keep the full value through every stage, then round only the final contextual answer.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Increase multiplier = 1 + 0.1 = 1.1. → Increase multiplier = 1 + 0.05 = 1.05. → Use the updated amount for each successive change. → 60 × 1.1 × 1.05 = 69.3. → Final price = $69.30 (nearest cent)."
+      },
+      "mathematical_support": {
+        "hint_1": "Identify every percentage change and the amount it acts on. The result of each stage becomes the next whole.",
+        "hint_2": "Follow the successive multiplications in the working. Keep the full value through every stage, then round only the final contextual answer.",
+        "worked_solution": "Increase multiplier = 1 + 0.1 = 1.1. → Increase multiplier = 1 + 0.05 = 1.05. → Use the updated amount for each successive change. → 60 × 1.1 × 1.05 = 69.3. → Final price = $69.30 (nearest cent)."
+      },
+      "working": [
+        "Increase multiplier = 1 + 0.1 = 1.1.",
+        "Increase multiplier = 1 + 0.05 = 1.05.",
+        "Use the updated amount for each successive change.",
+        "60 × 1.1 × 1.05 = 69.3.",
+        "Final price = $69.30 (nearest cent)."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A ticket costs $60. The price increases by 10% and then increases by a further 5%. Work out the final price.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Increase multiplier = 1 + 0.1 = 1.1.",
+            "Increase multiplier = 1 + 0.05 = 1.05.",
+            "Use the updated amount for each successive change.",
+            "60 × 1.1 × 1.05 = 69.3.",
+            "Final price = $69.30 (nearest cent)."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_final": "Check each stage multiplier, the number of applications and the final rounding. Every change uses the amount immediately before it.",
+        "starting_amount": "That is the starting amount. The stated sequence of changes does not leave it unchanged.",
+        "one_stage": "That value is after the first change only. Apply the remaining changes to the updated amount.",
+        "fixed_change": "That value does not account for the changing whole. Apply each rate to the amount after the previous stage.",
+        "too_few_periods": "That value corresponds to fewer changes than the stated number of periods. Count every yearly application.",
+        "too_many_periods": "That value includes an extra change. Match the number of multiplier applications to the stated periods.",
+        "second_stage_only": "That value applies the second rate to the starting amount. Include the first change before applying the next.",
+        "check_unit": "Use the printed unit for this amount. A percentage or multiplier is not the final amount.",
+        "check_number_format": "Check the comma grouping. Separate groups of three digits, or leave commas out. Use a decimal point for decimal values."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-12-X05",
+      "source_ref": {
+        "page": 15
+      },
+      "stage": "practice",
+      "prompt": "A quantity decreases by 14% each year for 3 years. Which calculation gives the final quantity from an original quantity Q?",
+      "target": "Apply repeated percentage changes to the updated whole",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "Q × 0.86^3",
+          "Q ÷ 0.86^3",
+          "Q × 0.14^3",
+          "Q × 0.58"
+        ],
+        "math_layout": "symbolic_compound_fraction"
+      },
+      "answer": {
+        "value": "Q × 0.86^3"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": true
+      },
+      "attempt_policy": {
+        "policy": "clue_then_worked_then_learner_correction",
+        "max_attempts_before_resolution": null,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The calculation moves forward through three remaining-share multiplications.",
+        "correct_after_support": "The calculation moves forward through three remaining-share multiplications.",
+        "on_correct_math": "Remaining multiplier = 1 − 0.14 = 0.86. → Final = Q × 0.86^3.",
+        "on_incorrect_attempt_1": "Start from the original and apply the remaining multiplier for every year.",
+        "on_incorrect_attempt_2": "This is a forward sequence of three decreases, not a reverse calculation.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Remaining multiplier = 1 − 0.14 = 0.86. → Final = Q × 0.86^3."
+      },
+      "mathematical_support": {
+        "hint_1": "Start from the original and apply the remaining multiplier for every year.",
+        "hint_2": "This is a forward sequence of three decreases, not a reverse calculation.",
+        "worked_solution": "Remaining multiplier = 1 − 0.14 = 0.86. → Final = Q × 0.86^3."
+      },
+      "working": [
+        "Remaining multiplier = 1 − 0.14 = 0.86.",
+        "Final = Q × 0.86^3."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A quantity decreases by 14% each year for 3 years. Which calculation gives the final quantity from an original quantity Q?",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Remaining multiplier = 1 − 0.14 = 0.86.",
+            "Final = Q × 0.86^3."
+          ]
+        }
+      },
+      "response_feedback": {
+        "Q ÷ 0.86^3": "Division reverses the scale; the question asks for a forward decrease.",
+        "Q × 0.14^3": "This uses the removed share instead of the share remaining each year.",
+        "Q × 0.58": "This adds the percentage reductions instead of applying them to changing wholes."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-12-E01",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "$900 increases by 4% each year for 3 years. Work out the final amount.",
+      "target": "Apply repeated percentage changes to the updated whole",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "final",
+            "label": "Final amount",
+            "kind": "number",
+            "unit": "$",
+            "allow_expression": true,
+            "allow_powers": true,
+            "grouped_numbers": true,
+            "money_display": true,
+            "signed_evidence": true,
+            "accepted_exact_values": [
+              "1012.3776",
+              "900*1.04*1.04*1.04"
+            ]
+          }
+        ],
+        "error_values": [
+          {
+            "field": "final",
+            "classification": "starting_amount",
+            "value": "900"
+          },
+          {
+            "field": "final",
+            "classification": "one_stage",
+            "value": "900*1.04"
+          },
+          {
+            "field": "final",
+            "classification": "fixed_change",
+            "value": "900*(1+(4+4+4)/100)"
+          },
+          {
+            "field": "final",
+            "classification": "too_few_periods",
+            "value": "900*1.04^2"
+          },
+          {
+            "field": "final",
+            "classification": "too_many_periods",
+            "value": "900*1.04^4"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Exact repeated products, power notation using ^, and other valid calculations are accepted unless a particular form is requested. Keep full accuracy; report final money to the nearest cent and populations to the nearest person. An exact unrounded calculator value is also accepted. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "final": "1012.38"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The final amount includes all three compounded increases.",
+        "correct_after_support": "The final amount includes all three compounded increases.",
+        "on_correct_math": "Increase multiplier = 1 + 0.04 = 1.04. → Apply the multiplier 3 times: 900 × 1.04 × 1.04 × 1.04. → 900 × 1.04^3 = 1012.3776. → Final amount = $1012.38 (nearest cent).",
+        "on_incorrect_attempt_1": "Identify every percentage change and the amount it acts on. The result of each stage becomes the next whole.",
+        "on_incorrect_attempt_2": "Follow the successive multiplications in the working. Keep the full value through every stage, then round only the final contextual answer.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Increase multiplier = 1 + 0.04 = 1.04. → Apply the multiplier 3 times: 900 × 1.04 × 1.04 × 1.04. → 900 × 1.04^3 = 1012.3776. → Final amount = $1012.38 (nearest cent)."
+      },
+      "mathematical_support": {
+        "hint_1": "Identify every percentage change and the amount it acts on. The result of each stage becomes the next whole.",
+        "hint_2": "Follow the successive multiplications in the working. Keep the full value through every stage, then round only the final contextual answer.",
+        "worked_solution": "Increase multiplier = 1 + 0.04 = 1.04. → Apply the multiplier 3 times: 900 × 1.04 × 1.04 × 1.04. → 900 × 1.04^3 = 1012.3776. → Final amount = $1012.38 (nearest cent)."
+      },
+      "working": [
+        "Increase multiplier = 1 + 0.04 = 1.04.",
+        "Apply the multiplier 3 times: 900 × 1.04 × 1.04 × 1.04.",
+        "900 × 1.04^3 = 1012.3776.",
+        "Final amount = $1012.38 (nearest cent)."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "$900 increases by 4% each year for 3 years. Work out the final amount.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Increase multiplier = 1 + 0.04 = 1.04.",
+            "Apply the multiplier 3 times: 900 × 1.04 × 1.04 × 1.04.",
+            "900 × 1.04^3 = 1012.3776.",
+            "Final amount = $1012.38 (nearest cent)."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_final": "Check each stage multiplier, the number of applications and the final rounding. Every change uses the amount immediately before it.",
+        "starting_amount": "That is the starting amount. The stated sequence of changes does not leave it unchanged.",
+        "one_stage": "That value is after the first change only. Apply the remaining changes to the updated amount.",
+        "fixed_change": "That value does not account for the changing whole. Apply each rate to the amount after the previous stage.",
+        "too_few_periods": "That value corresponds to fewer changes than the stated number of periods. Count every yearly application.",
+        "too_many_periods": "That value includes an extra change. Match the number of multiplier applications to the stated periods.",
+        "second_stage_only": "That value applies the second rate to the starting amount. Include the first change before applying the next.",
+        "check_unit": "Use the printed unit for this amount. A percentage or multiplier is not the final amount.",
+        "check_number_format": "Check the comma grouping. Separate groups of three digits, or leave commas out. Use a decimal point for decimal values."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-12-E02",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "$1600 decreases by 12.5% each year for 2 years. Work out the final amount.",
+      "target": "Apply repeated percentage changes to the updated whole",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "final",
+            "label": "Final amount",
+            "kind": "number",
+            "unit": "$",
+            "allow_expression": true,
+            "allow_powers": true,
+            "grouped_numbers": true,
+            "money_display": true,
+            "signed_evidence": true,
+            "accepted_exact_values": [
+              "1225",
+              "1600*0.875*0.875"
+            ]
+          }
+        ],
+        "error_values": [
+          {
+            "field": "final",
+            "classification": "starting_amount",
+            "value": "1600"
+          },
+          {
+            "field": "final",
+            "classification": "one_stage",
+            "value": "1600*0.875"
+          },
+          {
+            "field": "final",
+            "classification": "fixed_change",
+            "value": "1600*(1+(-12.5+-12.5)/100)"
+          },
+          {
+            "field": "final",
+            "classification": "too_many_periods",
+            "value": "1600*0.875^3"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Exact repeated products, power notation using ^, and other valid calculations are accepted unless a particular form is requested. Keep full accuracy; report final money to the nearest cent and populations to the nearest person. An exact unrounded calculator value is also accepted. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "final": "1225"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The exact remaining share is used in both years.",
+        "correct_after_support": "The exact remaining share is used in both years.",
+        "on_correct_math": "Remaining multiplier = 1 − 0.125 = 0.875. → Apply the multiplier 2 times: 1600 × 0.875 × 0.875. → 1600 × 0.875^2 = 1225. → Final amount = $1225.00.",
+        "on_incorrect_attempt_1": "Identify every percentage change and the amount it acts on. The result of each stage becomes the next whole.",
+        "on_incorrect_attempt_2": "Follow the successive multiplications in the working. Keep the full value through every stage, then round only the final contextual answer.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Remaining multiplier = 1 − 0.125 = 0.875. → Apply the multiplier 2 times: 1600 × 0.875 × 0.875. → 1600 × 0.875^2 = 1225. → Final amount = $1225.00."
+      },
+      "mathematical_support": {
+        "hint_1": "Identify every percentage change and the amount it acts on. The result of each stage becomes the next whole.",
+        "hint_2": "Follow the successive multiplications in the working. Keep the full value through every stage, then round only the final contextual answer.",
+        "worked_solution": "Remaining multiplier = 1 − 0.125 = 0.875. → Apply the multiplier 2 times: 1600 × 0.875 × 0.875. → 1600 × 0.875^2 = 1225. → Final amount = $1225.00."
+      },
+      "working": [
+        "Remaining multiplier = 1 − 0.125 = 0.875.",
+        "Apply the multiplier 2 times: 1600 × 0.875 × 0.875.",
+        "1600 × 0.875^2 = 1225.",
+        "Final amount = $1225.00."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "$1600 decreases by 12.5% each year for 2 years. Work out the final amount.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Remaining multiplier = 1 − 0.125 = 0.875.",
+            "Apply the multiplier 2 times: 1600 × 0.875 × 0.875.",
+            "1600 × 0.875^2 = 1225.",
+            "Final amount = $1225.00."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_final": "Check each stage multiplier, the number of applications and the final rounding. Every change uses the amount immediately before it.",
+        "starting_amount": "That is the starting amount. The stated sequence of changes does not leave it unchanged.",
+        "one_stage": "That value is after the first change only. Apply the remaining changes to the updated amount.",
+        "fixed_change": "That value does not account for the changing whole. Apply each rate to the amount after the previous stage.",
+        "too_few_periods": "That value corresponds to fewer changes than the stated number of periods. Count every yearly application.",
+        "too_many_periods": "That value includes an extra change. Match the number of multiplier applications to the stated periods.",
+        "second_stage_only": "That value applies the second rate to the starting amount. Include the first change before applying the next.",
+        "check_unit": "Use the printed unit for this amount. A percentage or multiplier is not the final amount.",
+        "check_number_format": "Check the comma grouping. Separate groups of three digits, or leave commas out. Use a decimal point for decimal values."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-12-E03",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "A population of 30,000 decreases by 3% each year for 4 years. Give the final population to the nearest person.",
+      "target": "Apply repeated percentage changes to the updated whole",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "final",
+            "label": "Final population",
+            "kind": "number",
+            "unit": "people",
+            "allow_expression": true,
+            "allow_powers": true,
+            "grouped_numbers": true,
+            "unit_aliases": [
+              "people",
+              "person",
+              "persons"
+            ],
+            "signed_evidence": true,
+            "accepted_exact_values": [
+              "26558.7843",
+              "30000*0.97*0.97*0.97*0.97"
+            ]
+          }
+        ],
+        "error_values": [
+          {
+            "field": "final",
+            "classification": "starting_amount",
+            "value": "30000"
+          },
+          {
+            "field": "final",
+            "classification": "one_stage",
+            "value": "30000*0.97"
+          },
+          {
+            "field": "final",
+            "classification": "fixed_change",
+            "value": "30000*(1+(-3+-3+-3+-3)/100)"
+          },
+          {
+            "field": "final",
+            "classification": "too_few_periods",
+            "value": "30000*0.97^3"
+          },
+          {
+            "field": "final",
+            "classification": "too_many_periods",
+            "value": "30000*0.97^5"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Exact repeated products, power notation using ^, and other valid calculations are accepted unless a particular form is requested. Keep full accuracy; report final money to the nearest cent and populations to the nearest person. An exact unrounded calculator value is also accepted. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "final": "26559"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "Every decrease uses the current population before final rounding.",
+        "correct_after_support": "Every decrease uses the current population before final rounding.",
+        "on_correct_math": "Remaining multiplier = 1 − 0.03 = 0.97. → Apply the multiplier 4 times: 30000 × 0.97 × 0.97 × 0.97 × 0.97. → 30000 × 0.97^4 = 26558.7843. → Final population = 26559 people (nearest person).",
+        "on_incorrect_attempt_1": "Identify every percentage change and the amount it acts on. The result of each stage becomes the next whole.",
+        "on_incorrect_attempt_2": "Follow the successive multiplications in the working. Keep the full value through every stage, then round only the final contextual answer.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Remaining multiplier = 1 − 0.03 = 0.97. → Apply the multiplier 4 times: 30000 × 0.97 × 0.97 × 0.97 × 0.97. → 30000 × 0.97^4 = 26558.7843. → Final population = 26559 people (nearest person)."
+      },
+      "mathematical_support": {
+        "hint_1": "Identify every percentage change and the amount it acts on. The result of each stage becomes the next whole.",
+        "hint_2": "Follow the successive multiplications in the working. Keep the full value through every stage, then round only the final contextual answer.",
+        "worked_solution": "Remaining multiplier = 1 − 0.03 = 0.97. → Apply the multiplier 4 times: 30000 × 0.97 × 0.97 × 0.97 × 0.97. → 30000 × 0.97^4 = 26558.7843. → Final population = 26559 people (nearest person)."
+      },
+      "working": [
+        "Remaining multiplier = 1 − 0.03 = 0.97.",
+        "Apply the multiplier 4 times: 30000 × 0.97 × 0.97 × 0.97 × 0.97.",
+        "30000 × 0.97^4 = 26558.7843.",
+        "Final population = 26559 people (nearest person)."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A population of 30,000 decreases by 3% each year for 4 years. Give the final population to the nearest person.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Remaining multiplier = 1 − 0.03 = 0.97.",
+            "Apply the multiplier 4 times: 30000 × 0.97 × 0.97 × 0.97 × 0.97.",
+            "30000 × 0.97^4 = 26558.7843.",
+            "Final population = 26559 people (nearest person)."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_final": "Check each stage multiplier, the number of applications and the final rounding. Every change uses the amount immediately before it.",
+        "starting_amount": "That is the starting amount. The stated sequence of changes does not leave it unchanged.",
+        "one_stage": "That value is after the first change only. Apply the remaining changes to the updated amount.",
+        "fixed_change": "That value does not account for the changing whole. Apply each rate to the amount after the previous stage.",
+        "too_few_periods": "That value corresponds to fewer changes than the stated number of periods. Count every yearly application.",
+        "too_many_periods": "That value includes an extra change. Match the number of multiplier applications to the stated periods.",
+        "second_stage_only": "That value applies the second rate to the starting amount. Include the first change before applying the next.",
+        "check_unit": "Use the printed unit for this amount. A percentage or multiplier is not the final amount.",
+        "check_number_format": "Check the comma grouping. Separate groups of three digits, or leave commas out. Use a decimal point for decimal values."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-12-E04",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "$500 increases by 20% and then decreases by 20%. Work out the final amount.",
+      "target": "Apply repeated percentage changes to the updated whole",
+      "response": {
+        "type": "percentage_change_fields",
+        "fields": [
+          {
+            "key": "final",
+            "label": "Final amount",
+            "kind": "number",
+            "unit": "$",
+            "allow_expression": true,
+            "allow_powers": true,
+            "grouped_numbers": true,
+            "money_display": true,
+            "signed_evidence": true,
+            "accepted_exact_values": [
+              "480",
+              "500*1.2*0.8"
+            ]
+          }
+        ],
+        "error_values": [
+          {
+            "field": "final",
+            "classification": "starting_amount",
+            "value": "500"
+          },
+          {
+            "field": "final",
+            "classification": "one_stage",
+            "value": "500*1.2"
+          },
+          {
+            "field": "final",
+            "classification": "fixed_change",
+            "value": "500*(1+(20+-20)/100)"
+          },
+          {
+            "field": "final",
+            "classification": "second_stage_only",
+            "value": "500*0.8"
+          }
+        ],
+        "unit_feedback": true,
+        "input_note": "Use paper or a calculator. Exact repeated products, power notation using ^, and other valid calculations are accepted unless a particular form is requested. Keep full accuracy; report final money to the nearest cent and populations to the nearest person. An exact unrounded calculator value is also accepted. No written explanation is required."
+      },
+      "answer": {
+        "value": {
+          "final": "480"
+        }
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The decrease acts on the larger updated amount, so the rates do not cancel.",
+        "correct_after_support": "The decrease acts on the larger updated amount, so the rates do not cancel.",
+        "on_correct_math": "Increase multiplier = 1 + 0.2 = 1.2. → Remaining multiplier = 1 − 0.2 = 0.8. → Use the updated amount for each successive change. → 500 × 1.2 × 0.8 = 480. → Final amount = $480.00.",
+        "on_incorrect_attempt_1": "Identify every percentage change and the amount it acts on. The result of each stage becomes the next whole.",
+        "on_incorrect_attempt_2": "Follow the successive multiplications in the working. Keep the full value through every stage, then round only the final contextual answer.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Increase multiplier = 1 + 0.2 = 1.2. → Remaining multiplier = 1 − 0.2 = 0.8. → Use the updated amount for each successive change. → 500 × 1.2 × 0.8 = 480. → Final amount = $480.00."
+      },
+      "mathematical_support": {
+        "hint_1": "Identify every percentage change and the amount it acts on. The result of each stage becomes the next whole.",
+        "hint_2": "Follow the successive multiplications in the working. Keep the full value through every stage, then round only the final contextual answer.",
+        "worked_solution": "Increase multiplier = 1 + 0.2 = 1.2. → Remaining multiplier = 1 − 0.2 = 0.8. → Use the updated amount for each successive change. → 500 × 1.2 × 0.8 = 480. → Final amount = $480.00."
+      },
+      "working": [
+        "Increase multiplier = 1 + 0.2 = 1.2.",
+        "Remaining multiplier = 1 − 0.2 = 0.8.",
+        "Use the updated amount for each successive change.",
+        "500 × 1.2 × 0.8 = 480.",
+        "Final amount = $480.00."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "$500 increases by 20% and then decreases by 20%. Work out the final amount.",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Increase multiplier = 1 + 0.2 = 1.2.",
+            "Remaining multiplier = 1 − 0.2 = 0.8.",
+            "Use the updated amount for each successive change.",
+            "500 × 1.2 × 0.8 = 480.",
+            "Final amount = $480.00."
+          ]
+        }
+      },
+      "response_feedback": {
+        "check_final": "Check each stage multiplier, the number of applications and the final rounding. Every change uses the amount immediately before it.",
+        "starting_amount": "That leaves the starting amount unchanged. These equal rates do not cancel: the decrease acts on the larger amount after the increase.",
+        "one_stage": "That value is after the first change only. Apply the remaining changes to the updated amount.",
+        "fixed_change": "That value does not account for the changing whole. Apply each rate to the amount after the previous stage.",
+        "too_few_periods": "That value corresponds to fewer changes than the stated number of periods. Count every yearly application.",
+        "too_many_periods": "That value includes an extra change. Match the number of multiplier applications to the stated periods.",
+        "second_stage_only": "That value applies the second rate to the starting amount. Include the first change before applying the next.",
+        "check_unit": "Use the printed unit for this amount. A percentage or multiplier is not the final amount.",
+        "check_number_format": "Check the comma grouping. Separate groups of three digits, or leave commas out. Use a decimal point for decimal values."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-12-E05",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "Which expression represents 7% growth each year for 5 years from an original amount P?",
+      "target": "Apply repeated percentage changes to the updated whole",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "P × 1.07^5",
+          "P × 1.35",
+          "P × 0.93^5",
+          "P + 0.07^5"
+        ],
+        "math_layout": "symbolic_compound_fraction"
+      },
+      "answer": {
+        "value": "P × 1.07^5"
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The power represents five applications of the growth multiplier.",
+        "correct_after_support": "The power represents five applications of the growth multiplier.",
+        "on_correct_math": "Increase multiplier = 1.07. → Five yearly applications: P × 1.07^5.",
+        "on_incorrect_attempt_1": "Match the scale factor to growth and the exponent to the years.",
+        "on_incorrect_attempt_2": "A growth multiplier acts once for each of the five periods.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Increase multiplier = 1.07. → Five yearly applications: P × 1.07^5."
+      },
+      "mathematical_support": {
+        "hint_1": "Match the scale factor to growth and the exponent to the years.",
+        "hint_2": "A growth multiplier acts once for each of the five periods.",
+        "worked_solution": "Increase multiplier = 1.07. → Five yearly applications: P × 1.07^5."
+      },
+      "working": [
+        "Increase multiplier = 1.07.",
+        "Five yearly applications: P × 1.07^5."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "Which expression represents 7% growth each year for 5 years from an original amount P?",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Increase multiplier = 1.07.",
+            "Five yearly applications: P × 1.07^5."
+          ]
+        }
+      },
+      "response_feedback": {
+        "P × 1.35": "This adds the yearly rates into one increase instead of compounding.",
+        "P × 0.93^5": "This represents repeated decreases instead of growth.",
+        "P + 0.07^5": "This adds a powered rate rather than scaling the original quantity."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    },
+    {
+      "id": "PC-12-E06",
+      "source_ref": {
+        "page": 12
+      },
+      "stage": "exit",
+      "prompt": "A price increases by 10% and then decreases by 10%. Which statement is correct?",
+      "target": "Apply repeated percentage changes to the updated whole",
+      "response": {
+        "type": "single_choice",
+        "options": [
+          "The final price is equal to the original price.",
+          "The final price is 1% less than the original price.",
+          "The final price is 1% greater than the original price.",
+          "The final price is 20% less than the original price."
+        ],
+        "math_layout": "symbolic_compound_fraction"
+      },
+      "answer": {
+        "value": "The final price is 1% less than the original price."
+      },
+      "policy": {
+        "scored": true,
+        "hintPolicy": "none",
+        "solutionPolicy": "after_locked_submit",
+        "requireLearnerCorrection": false
+      },
+      "attempt_policy": {
+        "policy": "single_submit_locked",
+        "max_attempts_before_resolution": 1,
+        "submit_label": "Check answer",
+        "allow_change_before_submit": true
+      },
+      "scripts": {
+        "on_correct_reaction": "The combined scale is below one because the equal rates act on different wholes.",
+        "correct_after_support": "The combined scale is below one because the equal rates act on different wholes.",
+        "on_correct_math": "Combined multiplier = 1.10 × 0.90 = 0.99. → Final price = 99% of the original: 1% less.",
+        "on_incorrect_attempt_1": "The second percentage uses a different whole. Compare the combined scale with one original whole.",
+        "on_incorrect_attempt_2": "Multiply the two stage factors before deciding the overall change.",
+        "on_locked_incorrect": "Your response is saved. Feedback follows after all six final answers are recorded.",
+        "worked_explanation": "Combined multiplier = 1.10 × 0.90 = 0.99. → Final price = 99% of the original: 1% less."
+      },
+      "mathematical_support": {
+        "hint_1": "The second percentage uses a different whole. Compare the combined scale with one original whole.",
+        "hint_2": "Multiply the two stage factors before deciding the overall change.",
+        "worked_solution": "Combined multiplier = 1.10 × 0.90 = 0.99. → Final price = 99% of the original: 1% less."
+      },
+      "working": [
+        "Combined multiplier = 1.10 × 0.90 = 0.99.",
+        "Final price = 99% of the original: 1% less."
+      ],
+      "visual": {
+        "primitive": "operation_structure",
+        "model": {
+          "kind": "percentage_change_structure",
+          "title": "Read the situation",
+          "given": "A price increases by 10% and then decreases by 10%. Which statement is correct?",
+          "math_text": true,
+          "decimal_math": true,
+          "symbolic_math": true,
+          "compact_captions": true,
+          "mode": "rule",
+          "steps": [
+            "Combined multiplier = 1.10 × 0.90 = 0.99.",
+            "Final price = 99% of the original: 1% less."
+          ]
+        }
+      },
+      "response_feedback": {
+        "The final price is equal to the original price.": "Equal increase and decrease rates do not cancel when their wholes differ.",
+        "The final price is 1% greater than the original price.": "The decrease is taken from the larger updated price, so it removes more than the first increase added.",
+        "The final price is 20% less than the original price.": "Adding the two rates does not describe this successive increase and decrease."
+      },
+      "evidence_profile": "place_value_conversion",
+      "final_error_feedback": "answer_specific",
+      "resume_specific_narration": true
+    }
+  ],
+  "canonical_lesson": {
+    "version": "PC12-source-aligned-1",
+    "engine_profile": "source_aligned_preview"
+  }
+}
