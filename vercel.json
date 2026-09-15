@@ -5,7 +5,35 @@
   "buildCommand": "node scripts/verify-physics-release.mjs",
   "outputDirectory": "physics-release",
   "redirects": [
-    { "source": "/fractions/", "destination": "/", "permanent": false },
-    { "source": "/fractions/:path*", "destination": "/", "permanent": false }
+    {
+      "source": "/fractions/",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/fractions/:path*",
+      "destination": "/",
+      "permanent": false
+    }
+  ],
+  "headers": [
+    {
+      "source": "/bank/index.json",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/bank/packs/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
   ]
 }

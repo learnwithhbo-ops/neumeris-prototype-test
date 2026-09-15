@@ -1,6 +1,6 @@
+import {assetUrl} from './asset-delivery.js';
 export const escape=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function partLabel(label){if(label==='whole')return 'Question';const bits=label.split('.');const section=/^\d+$/.test(bits[0])?'Part '+bits.shift()+' ':'';return section+bits.map(x=>'('+x+')').join('');}
-const assetUrl=p=>'./'+p.split('/').map(encodeURIComponent).join('/');
 export function images(assets,label,eager=false,presentation={}){
   return (assets??[]).map((a,i)=>{
     const frame=presentation[a.path]??{};if(frame.hidden)return '';

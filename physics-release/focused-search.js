@@ -1,4 +1,9 @@
-export function hydrateLibrary(data, supplemental=null, bridges={}, adjustments={}, curation={}) {
+export function hydrateLibrary(data, supplemental=null, bridges={}, adjustments={}, curation={}, crossBoard=null) {
+  if(crossBoard){
+    data.sources={...data.sources,...crossBoard.sources};
+    data.questions.push(...crossBoard.questions);
+    data.papers.push(...crossBoard.papers);
+  }
   if(supplemental){
     data.sources={...data.sources,...supplemental.sources};
     data.questions.unshift(...supplemental.questions);
@@ -54,7 +59,7 @@ export function hydrateLibrary(data, supplemental=null, bridges={}, adjustments=
   data.summary.supplementary_parts=added.reduce((n,r)=>n+r.targets.length,0);
   data.summary.supplementary_questions=added.length;
   data.summary.syllabus_excluded_parts=data.questions.reduce((n,q)=>n+q.parts.filter(p=>p.syllabus_exclusion).length,0);
-  data.summary.mcq_questions=all.filter(r=>['1','1A'].includes(String(r.question.source.paper_label))).length;
+  data.summary.mcq_questions=all.filter(r=>isMcq(r.question)).length;
   data.summary.written_questions=all.length-data.summary.mcq_questions;
   data.summary.thermodynamics_questions=findQuestions(data,{subtopics:['B.4'],course:'all'}).length;
   data.summary.source_papers=data.papers.length;
@@ -64,6 +69,7 @@ export function hydrateLibrary(data, supplemental=null, bridges={}, adjustments=
 }
 export const isReviewed=q=>q.parts.some(p=>p.review_status==='reviewed') && q.parts.filter(p=>p.subtopic_ids.length).every(p=>p.review_status==='reviewed');
 export const assessedSkills=p=>p.subtopic_ids??[];
+export const isMcq=q=>q.question_type?q.question_type==='mcq':['1','1A'].includes(String(q.source.paper_label??q.source.paper));
 // Topic practice is curated. Draft keyword matches remain in the source archive.
 const matchingParts=q=>q.parts.filter(p=>p.review_status==='reviewed'&&!p.syllabus_exclusion);
 export function visibleQuestion(q,course='all',review='all',filters={}) {
@@ -76,12 +82,17 @@ export function visibleQuestion(q,course='all',review='all',filters={}) {
     if(filters.yearFrom && year<Number(filters.yearFrom))return false;
     if(filters.yearTo && year>Number(filters.yearTo))return false;
   }
-  const mcq=['1','1A'].includes(String(q.source.paper_label??q.source.paper));
+  const mcq=isMcq(q);
   if(filters.format==='mcq'&&!mcq)return false;
   if(filters.format==='written'&&mcq)return false;
   if(filters.syllabus && filters.syllabus!=='all' && q.source.syllabus!==filters.syllabus)return false;
   if(filters.paper && filters.paper!=='all' && String(q.source.paper_label??q.source.paper)!==filters.paper)return false;
-  if(course!=='all' && q.source.course+'-'+q.source.level!==course)return false;
+  if(course!=='all'){
+    if(q.ib_level){
+      if(course==='Physics-SL'&&q.ib_level!=='SL')return false;
+      if(!['Physics-SL','Physics-HL'].includes(course))return false;
+    }else if(q.source.course+'-'+q.source.level!==course)return false;
+  }
   if(review==='unclassified')return !q.parts.some(p=>p.subtopic_ids.length&&p.review_status==='reviewed');
   return matchingParts(q,review).some(p=>p.subtopic_ids.length);
 }

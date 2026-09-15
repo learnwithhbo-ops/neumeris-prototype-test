@@ -36,3 +36,27 @@ body[data-motion=off] *,body[data-motion=off] *:before,body[data-motion=off] *:a
 @media(max-width:1150px){.lab-hero{padding:29px;grid-template-columns:1.2fr 1fr}.lab-planet{width:145px;height:145px}.lab-rays{width:250px}.lab-next{flex-wrap:wrap}.lab-next>div{flex-basis:100%}.paper-grid{grid-template-columns:repeat(2,1fr)}.paper-tile .n-tag{font-size:12px}.paper-tile-foot>span{font-size:12px}.lesson-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:800px){.lab-hero{grid-template-columns:1fr}.lab-orbit{position:absolute;right:-90px;top:0;width:280px;opacity:.35;z-index:-1}.lab-hero-text>p:not(.n-kicker){max-width:400px}.archive-filters{gap:12px;padding:18px;grid-template-columns:1fr 1fr}.archive-reset{grid-column:2;text-align:right;min-height:25px}.archive-intro{padding:20px;gap:14px}.archive-total{display:none}.paper-tile{padding:19px}.paper-tile-foot{align-items:flex-start;flex-direction:column;gap:9px}}
 @media(max-width:650px){.lab-hero{padding:25px}.lab-hero h2{font-size:34px}.lab-hero .n-kicker{font-size:12px}.lab-hero-text>p:not(.n-kicker){font-size:14px;max-width:300px}.lab-actions{gap:14px}.notes-heading .n-tag{display:none}.lesson-grid{gap:12px}.lesson-tile{padding:18px}.lesson-tile h3{font-size:16px}.lesson-tile>p{font-size:13px}.lesson-tile-foot{font-size:12px}.lesson-symbol{font-size:24px}.lab-next{padding:20px}.lab-next .n-button{width:100%;justify-content:space-between}.archive-emblem{display:none}.archive-intro p{font-size:13px}.paper-grid{gap:12px}.paper-tile{padding:17px}.paper-tile-top{flex-direction:column;gap:10px}.paper-year{font-size:21px}.paper-year small{display:inline;margin-left:7px}.paper-tile .n-tag{font-size:12px}.paper-tile h3{font-size:21px;margin-top:17px}.paper-tile>p{font-size:12px}.paper-tile-foot>span{font-size:12px}.paper-reader{width:96vw;height:94dvh;border-radius:12px}.reader-header{padding:14px}.reader-header h2{font-size:14px}.reader-toolbar{padding:10px;gap:8px}.reader-tabs button{padding:8px;font-size:12px}.reader-toolbar a{font-size:12px;white-space:nowrap}}
+/* Release navigation: compact topic discovery and transparent review scope. */
+.review-guide{margin:0 0 22px;border:1px solid #c8d9f2;border-radius:16px;background:#f2f7ff;color:#405371;padding:14px 18px;max-width:900px;font-size:14px}
+.review-guide summary{cursor:pointer;display:flex;align-items:center;gap:12px;list-style:none;font-weight:550}
+.review-guide summary:after{content:'+';margin-left:auto;font-size:20px;color:#3164b8}
+.review-guide[open] summary:after{content:'−'}
+.review-guide p{line-height:1.7;margin:14px 0 2px;max-width:78ch}
+.review-badge{display:inline-flex;align-items:center;border-radius:100px;background:#e0edff;color:#204f98;border:1px solid #bbd2f5;padding:5px 11px;font-size:12px;font-weight:650;white-space:nowrap}
+.topic-search-label{display:block;font-size:14px;font-weight:600;margin:2px 0 8px;color:#405371}
+#topic-search{width:100%;border:1px solid #c4d2e8;border-radius:12px;padding:13px 15px;background:#f7faff;color:#132a4c;font:inherit;margin-bottom:18px}
+#topic-search:focus{outline:3px solid #bbd5ff;outline-offset:2px}
+.topic-group[hidden],.subtopic-label[hidden],.study-selected[hidden]{display:none!important}
+.selected-topics{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0;max-height:180px;overflow:auto}
+.selected-topic{font:inherit;font-size:14px;line-height:1.45;text-align:left;color:#285597;background:#edf4ff;border:1px solid #ccddf5;border-radius:10px;padding:7px 9px;cursor:pointer}
+.selected-topic span{margin-left:5px;font-size:16px}
+.selected-topic:hover{background:#dfeeff;border-color:#8fb4ec}
+.selected-topics:empty{display:none}
+.study-selected{display:flex;align-items:center;justify-content:space-between;gap:8px;color:#285597;font-size:14px;line-height:1.5;padding:12px 0 16px;text-decoration:none}
+.study-selected:hover{text-decoration:underline}
+.practice-review-note{display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:13px;color:#526783;margin:0 0 12px}
+.archive-note strong{display:block;margin-bottom:6px;color:#405371}
+#search-form[aria-busy="true"] .primary-button{background:linear-gradient(100deg,#234e99,#4a85dc,#234e99);background-size:200% 100%;animation:pack-load 1.4s linear infinite}
+@keyframes pack-load{to{background-position:-200% 0}}
+@media(prefers-reduced-motion:reduce){#search-form[aria-busy="true"] .primary-button{animation:none}}
+body[data-motion="off"] #search-form[aria-busy="true"] .primary-button{animation:none}
