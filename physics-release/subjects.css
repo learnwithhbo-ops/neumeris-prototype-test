@@ -1,0 +1,66 @@
+/* One Neumeris shell, with each subject retaining its own teaching controls. */
+[hidden]{display:none!important}
+.subject-chooser{grid-template-columns:repeat(3,minmax(0,1fr))}
+.subject-card{min-height:355px;color:var(--ink);padding:30px}
+.subject-card .subject-symbol{font:64px Georgia,serif;line-height:1;color:#668cea;margin:30px 0 20px}
+.subject-card h2{margin:0 0 10px;font-size:28px}
+.subject-card p{max-width:250px;margin:0 0 20px}
+.subject-card .n-tag{align-self:flex-start;margin-top:4px}
+.subject-card.physics{background:linear-gradient(145deg,#1644cd,#2c64f2);color:white;border-color:#285bea}
+.subject-card.physics .subject-symbol,.subject-card.physics p,.subject-card.physics .step,.subject-card.physics .n-link{color:#e1eaff}
+.subject-card.physics .n-tag{border-color:#ffffff50;color:white}
+.subject-card .n-link{padding-top:28px}
+.all-subjects-link{color:var(--blue)}
+body[data-experience=subjects] .subject-pill,body[data-experience=subjects] .nav-label{visibility:hidden}
+body[data-experience=subjects] .n-nav a:not([data-nav=subjects]){display:none}
+body[data-experience=subjects] .topbar-right>span{display:none}
+.maths-site .n-breadcrumb>a{color:inherit}
+.maths-site .subject-pill{font-size:13px;padding:12px 9px;gap:7px}
+.maths-site .subject-pill>span:last-child{font-size:11px;padding:3px}
+.maths-site .n-page-heading h1,.maths-site .page-heading h1{margin-bottom:8px}
+.maths-site .n-page-heading p,.maths-site .journey-card p{line-height:1.65}
+.maths-site .journey-card h2{margin-bottom:0}
+.maths-site .journey-card.learn h2{max-width:190px}
+.coming-badge{display:inline-flex;align-self:flex-start;padding:5px 10px;border:1px solid #ffffff55;border-radius:6px;color:white;font-size:13px;margin-top:18px}
+.notes-soon{padding:44px;max-width:800px;background:white;border:1px solid var(--line);border-radius:18px;margin-top:30px}
+.notes-symbol{font:64px Georgia,serif;color:var(--blue);display:block;margin-bottom:24px}
+.notes-soon h2{font-size:27px;line-height:1.4;margin:20px 0 10px;max-width:540px}
+.notes-soon p{color:var(--muted);font-size:16px;line-height:1.7;max-width:600px}
+.notes-soon .n-button{margin-top:14px}
+.maths-topics{grid-template-columns:repeat(3,minmax(0,1fr))}
+.maths-topics .topic-tile h3{max-width:none;font-size:16px;margin:0 0 12px}
+.maths-coverage{margin-top:24px!important;font-size:14px!important;line-height:1.7!important}
+.maths-site .n-footer a{color:var(--muted)}
+.maths-site .selection-view{margin:0 auto;max-width:1280px}
+.maths-site .page-heading>p{color:var(--muted)}
+.maths-site .practice-toolbar{top:0}
+.ib-maths .selection-layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:24px;align-items:start}
+.ib-maths .topic-panel,.ib-maths .options-panel{background:white;border:1px solid var(--line);overflow:hidden}
+.ib-maths .options-panel{padding:25px;border-top:3px solid #5680ff}
+.ib-maths .options-panel h2{font-size:18px;margin-bottom:18px}
+.ib-maths .options-panel>label{display:block;margin:16px 0 8px;font-size:14px;font-weight:600}
+.ib-maths .panel-heading{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:22px}
+.ib-maths .panel-heading h2{font-size:19px}
+.ib-maths .text-actions{display:flex;gap:17px}
+.ib-maths .text-actions button{background:none;border:0;color:var(--blue);font-size:14px;padding:5px 0}
+.ib-maths .start-bar{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 26px;margin-top:24px;border-radius:14px;position:sticky;bottom:20px;z-index:4}
+.ib-maths .start-bar p{margin:5px 0 0;font-size:14px}
+.ib-maths .start-bar .primary-button{padding:13px 22px;width:auto;flex:none;min-height:48px}
+.ib-maths .primary-button:disabled{opacity:.55;cursor:not-allowed}
+.ib-maths .practice-content{padding:30px 28px 60px;max-width:990px;margin:auto}
+.ib-maths .practice-toolbar{position:sticky;z-index:9;border-bottom:1px solid var(--line);padding:14px 28px}
+.ib-maths .practice-toolbar-inner{max-width:934px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:15px;color:var(--muted);font-size:14px}
+.ib-maths .back-button{padding:10px 14px;background:white;border:1px solid var(--line);border-radius:8px;font-size:14px;color:var(--ink)}
+.ib-maths .question-card{padding:0}
+.ib-maths .question-head{display:block}
+.ib-maths .topic-tree{max-height:none}
+.ib-maths .course-note{line-height:1.7;font-size:14px}
+.ib-maths #archive-browser{padding:22px;background:white;border:1px solid var(--line);border-radius:16px}
+.ib-maths #paper-keyword{max-width:650px;display:block;margin:10px 0 22px}
+.ib-maths .paper-row{padding:18px 0}
+.ib-maths .paper-row a{line-height:1.6}
+.ib-maths .more-results{text-align:center}
+@media(max-width:1150px){.subject-card{padding:23px}.subject-card h2{font-size:24px}}
+@media(max-width:900px){.subject-chooser{grid-template-columns:1fr}.subject-card{min-height:265px;padding-right:140px}.subject-card .subject-symbol{position:absolute;right:30px;top:25px}.subject-card h2{margin-top:24px}.subject-card p{max-width:500px}.maths-site .n-breadcrumb{gap:8px}.ib-maths .selection-layout{grid-template-columns:minmax(0,1fr) 255px;gap:16px}}
+@media(max-width:700px){.ib-maths .selection-layout{grid-template-columns:1fr}.maths-topics{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.n-nav{grid-template-columns:repeat(5,1fr)}body[data-experience=subjects] .n-sidebar{display:none}body[data-experience=subjects] .n-app{padding-bottom:0}.maths-site .topbar-right>span{display:none}.maths-site .n-breadcrumb{font-size:12px}.subject-card{padding:24px 105px 24px 24px}.subject-card .subject-symbol{right:24px;font-size:48px}.subject-card h2{font-size:25px}.subject-card p{font-size:14px}.notes-soon{padding:25px}.notes-soon h2{font-size:23px}.ib-maths .practice-content{padding:24px 12px 70px}.ib-maths .practice-toolbar{padding:12px 16px}.ib-maths .practice-toolbar-inner>span{display:none}.ib-maths .start-bar{bottom:80px;align-items:stretch;flex-direction:column;gap:14px;padding:18px}.ib-maths .start-bar .primary-button{width:100%}.maths-site .start-bar{bottom:80px}.maths-site .n-stats{gap:10px}.maths-site .n-stat{gap:7px}.maths-site .n-stat strong{font-size:19px}}

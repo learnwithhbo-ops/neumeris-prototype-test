@@ -10,22 +10,22 @@ const sky=createUniverse($('starfield'),{isEnabled:motionEnabled,isVisible:()=>!
 window.addEventListener('neumeris:motion-change',()=>sky.start());
 function enter(){
  if(entering)return;entering=true;$('enter-numeris').disabled=true;$('observatory').hidden=false;$('observatory').inert=true;$('portal').classList.add('launching');
- if(!location.hash)history.replaceState(null,'','#home');
- setTimeout(()=>{entering=false;$('portal').hidden=true;$('portal').classList.remove('launching');$('enter-numeris').disabled=false;$('observatory').inert=false;sky.stop();currentPage='';route();$('home-title').focus({preventScroll:true});},motionEnabled()?1050:0);
+ if(!location.hash)history.replaceState(null,'','#subjects');
+ setTimeout(()=>{entering=false;$('portal').hidden=true;$('portal').classList.remove('launching');$('enter-numeris').disabled=false;$('observatory').inert=false;sky.stop();currentPage='';route();$('subjects-title').focus({preventScroll:true});},motionEnabled()?1050:0);
 }
 $('enter-numeris').addEventListener('click',enter);
 $('replay-entrance').addEventListener('click',()=>{history.pushState(null,'',location.pathname);currentPage='';setExperience('entrance');$('observatory').hidden=true;$('portal').hidden=false;document.title='Neumeris · A universe of understanding';$('enter-numeris').focus();sky.start();});
 async function route(){
- const ticket=++routeSerial,hash=location.hash.slice(1),part=hash.split('?')[0],isBank=['choose','practice'].includes(part),page=part==='notes'?'notes':part==='papers'?'papers':isBank?'bank':'home';
+ const ticket=++routeSerial,hash=location.hash.slice(1),part=hash.split('?')[0],isBank=['choose','practice'].includes(part),page=part==='subjects'?'subjects':part==='notes'?'notes':part==='papers'?'papers':isBank?'bank':'home';
  if(!hash&&!new URLSearchParams(location.search).has('topic')){$('portal').hidden=false;$('observatory').hidden=true;currentPage='';setExperience('entrance');sky.start();return;}
  if(!entering){$('portal').hidden=true;$('observatory').hidden=false;sky.stop();}
  const changed=currentPage!==page;currentPage=page;setExperience(isBank?part:page);
- for(const p of ['home','notes','papers','bank'])$(p+'-view').hidden=p!==page;
+ for(const p of ['subjects','home','notes','papers','bank'])$(p+'-view').hidden=p!==page;
  document.querySelectorAll('[data-nav]').forEach(a=>{if(a.dataset.nav===(isBank?'choose':page))a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
- $('view-label').textContent=({home:'Physics',notes:'Discovery Lab',papers:'Exam Archive',bank:'Practice Studio'})[page];
- document.title=({home:'Your physics observatory',notes:'The Discovery Lab',papers:'The Exam Archive',bank:'The Practice Studio'})[page]+' · Neumeris';
+ $('view-label').textContent=({subjects:'Your subjects',home:'Physics',notes:'Discovery Lab',papers:'Exam Archive',bank:'Practice Studio'})[page];
+ document.title=({subjects:'Explore your subjects',home:'Your physics observatory',notes:'The Discovery Lab',papers:'The Exam Archive',bank:'The Practice Studio'})[page]+' · Neumeris';
  if(changed)revealView($(page+'-view'));
- if(page==='home'&&changed)revealItems($('home-view'));
+ if(['home','subjects'].includes(page)&&changed)revealItems($(page+'-view'));
  if(isBank){bankPromise??=import('./app.js');try{const bank=await bankPromise;await bank.ready;if(ticket===routeSerial)window.dispatchEvent(new Event('numeris:topic-route'));}catch{$('load-error').hidden=false;$('error-message').textContent='The practice studio could not load. Please refresh to try again.';}}
  if(page==='notes'||page==='papers'){viewsPromise??=import('./numeris-views.js');try{const views=await viewsPromise;await views.show(page);if(ticket===routeSerial)revealItems($(page+'-view'));}catch{$(page+'-content').innerHTML='<div class="n-error">This collection could not load. <button class="n-button" onclick="location.reload()">Try again</button></div>';}}
 }
