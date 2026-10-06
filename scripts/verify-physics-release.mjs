@@ -39,3 +39,5 @@ const {scientificFigures}=await import(pathToFileURL(path.join(root,'learn/green
 for(const figure of Object.values(scientificFigures))checkReference('learn/greenhouse-effect/index.html',figure.src);
 console.log(JSON.stringify({files:selected.size,bytes,papers:catalog.papers.length,lessons:catalog.lessons.length,practiceQuestions:matches.length,questionPacks:index.packUrls.length,status:'verified'}));
 await import('./verify-maths-release.mjs');
+const {verifyOriginals}=await import('./verify-originals.mjs');
+console.log(JSON.stringify({...await verifyOriginals(root),status:'originals-verified'}));

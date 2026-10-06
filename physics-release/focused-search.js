@@ -71,7 +71,16 @@ export const isReviewed=q=>q.parts.some(p=>p.review_status==='reviewed') && q.pa
 export const assessedSkills=p=>p.subtopic_ids??[];
 export const isMcq=q=>q.question_type?q.question_type==='mcq':['1','1A'].includes(String(q.source.paper_label??q.source.paper));
 // Topic practice is curated. Draft keyword matches remain in the source archive.
-const matchingParts=q=>q.parts.filter(p=>p.review_status==='reviewed'&&!p.syllabus_exclusion);
+// Current guide sections with no SL content; keep in sync with the topic menu.
+export const HL_ONLY_SUBTOPICS=new Set(['A.4','A.5','B.4','D.4','E.2']);
+export function partMatchesCourse(q,p,course='all') {
+  if(course==='all')return true;
+  if(p.subtopic_ids?.some(id=>HL_ONLY_SUBTOPICS.has(id)))return course==='Physics-HL';
+  const level=p.ib_level??q.ib_level;
+  if(level)return course==='Physics-HL'||(course==='Physics-SL'&&level==='SL');
+  return q.source.course+'-'+q.source.level===course;
+}
+const matchingParts=(q,course='all')=>q.parts.filter(p=>p.review_status==='reviewed'&&!p.syllabus_exclusion&&partMatchesCourse(q,p,course));
 export function visibleQuestion(q,course='all',review='all',filters={}) {
   if(filters.collection==='supplementary'&&q.source.collection!=='supplementary')return false;
   if(filters.collection==='past'&&q.source.collection==='supplementary')return false;
@@ -87,17 +96,11 @@ export function visibleQuestion(q,course='all',review='all',filters={}) {
   if(filters.format==='written'&&mcq)return false;
   if(filters.syllabus && filters.syllabus!=='all' && q.source.syllabus!==filters.syllabus)return false;
   if(filters.paper && filters.paper!=='all' && String(q.source.paper_label??q.source.paper)!==filters.paper)return false;
-  if(course!=='all'){
-    if(q.ib_level){
-      if(course==='Physics-SL'&&q.ib_level!=='SL')return false;
-      if(!['Physics-SL','Physics-HL'].includes(course))return false;
-    }else if(q.source.course+'-'+q.source.level!==course)return false;
-  }
-  if(review==='unclassified')return !q.parts.some(p=>p.subtopic_ids.length&&p.review_status==='reviewed');
-  return matchingParts(q,review).some(p=>p.subtopic_ids.length);
+  if(review==='unclassified')return q.parts.some(p=>partMatchesCourse(q,p,course))&&!q.parts.some(p=>p.subtopic_ids.length&&p.review_status==='reviewed');
+  return matchingParts(q,course).some(p=>p.subtopic_ids.length);
 }
 export function questionSubtopics(q,skills={},course='all',review='all') {
-  return [...new Set(matchingParts(q,review).flatMap(p=>p.subtopic_ids))];
+  return [...new Set(matchingParts(q,course).flatMap(p=>p.subtopic_ids))];
 }
 export function availableQuestions(questions,skills,subtopic,course='all',review='all',filters={}) {
   return findQuestions({questions},{...filters,keyword:'',subtopics:[subtopic],course,review}).length;
@@ -131,7 +134,7 @@ export function findQuestions(data,filters) {
   const results=[],seen=new Set();
   for(const q of data.questions) {
     if(!visibleQuestion(q,filters.course,review,filters))continue;
-    const parts=matchingParts(q,review).filter(p=>p.subtopic_ids.some(s=>selected.has(s)));
+    const parts=matchingParts(q,filters.course).filter(p=>p.subtopic_ids.some(s=>selected.has(s)));
     if(!parts.length&&review!=='unclassified')continue;
     const context=selectedContexts(q,parts.map(p=>p.label));
     const text=[q.question_number,q.source.level,q.source.year,q.source.session,q.source.collection_label,'Paper '+q.source.paper_label,...parts.map(p=>p.display_text??p.text),...context.map(c=>c.display_text??c.text)].join(' ').toLocaleLowerCase();

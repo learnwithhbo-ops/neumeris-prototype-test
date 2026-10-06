@@ -4,7 +4,7 @@ export function createPracticeLoader(fetcher=fetch){
   const json=async url=>{const response=await fetcher('./'+url);if(!response.ok)throw new Error('This question pack could not load. Please try again.');return response.json();};
   const menu=()=>menuPromise??=(json('bank/index.json').then(index=>{
     if(index.schema!==2)throw new Error('Please refresh to open the updated topic menu.');
-    index.questions=index.questions.map(([id,question_number,source,pack,parts,question_type,ib_level])=>({id,question_number,source:index.sources[source],pack:index.packUrls[pack],question_type:question_type??undefined,ib_level:ib_level??undefined,contexts:[],parts:parts.map(([label,subtopic_ids,duplicate_group,context_ids])=>({label,subtopic_ids,duplicate_group,context_ids,review_status:'reviewed',depends_on:[]}))}));
+    index.questions=index.questions.map(([id,question_number,source,pack,parts,question_type,ib_level])=>({id,question_number,source:index.sources[source],pack:index.packUrls[pack],question_type:question_type??undefined,ib_level:ib_level??undefined,contexts:[],parts:parts.map(([label,subtopic_ids,duplicate_group,context_ids,part_level])=>({label,subtopic_ids,duplicate_group,context_ids,ib_level:part_level??undefined,review_status:'reviewed',depends_on:[]}))}));
     return index;
   }).catch(error=>{menuPromise=null;throw error;}));
   async function search(){

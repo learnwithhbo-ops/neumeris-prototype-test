@@ -5,7 +5,7 @@ const icons={grid:'<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14"
 export const icon=name=>`<svg class="n-icon" viewBox="0 0 24 24" aria-hidden="true">${icons[name]||icons.atom}</svg>`;
 document.querySelectorAll('[data-icon]').forEach(el=>el.innerHTML=icon(el.dataset.icon));
 
-let entering=false,bankPromise,viewsPromise,currentPage='',routeSerial=0;
+let entering=false,bankPromise,viewsPromise,originalsPromise,dashboardPromise,currentPage='',routeSerial=0;
 const sky=createUniverse($('starfield'),{isEnabled:motionEnabled,isVisible:()=>!$('portal').hidden,isEntering:()=>entering});
 window.addEventListener('neumeris:motion-change',()=>sky.start());
 function enter(){
@@ -16,18 +16,20 @@ function enter(){
 $('enter-numeris').addEventListener('click',enter);
 $('replay-entrance').addEventListener('click',()=>{history.pushState(null,'',location.pathname);currentPage='';setExperience('entrance');$('observatory').hidden=true;$('portal').hidden=false;document.title='Neumeris · A universe of understanding';$('enter-numeris').focus();sky.start();});
 async function route(){
- const ticket=++routeSerial,hash=location.hash.slice(1),part=hash.split('?')[0],isBank=['choose','practice'].includes(part),page=part==='subjects'?'subjects':part==='notes'?'notes':part==='papers'?'papers':isBank?'bank':'home';
+ const ticket=++routeSerial,hash=location.hash.slice(1),part=hash.split('?')[0],isBank=['choose','practice'].includes(part),page=part==='dashboard'?'dashboard':part==='subjects'?'subjects':part==='notes'?'notes':part==='papers'?'papers':part==='originals'?'originals':isBank?'bank':'home';
  if(!hash&&!new URLSearchParams(location.search).has('topic')){$('portal').hidden=false;$('observatory').hidden=true;currentPage='';setExperience('entrance');sky.start();return;}
  if(!entering){$('portal').hidden=true;$('observatory').hidden=false;sky.stop();}
  const changed=currentPage!==page;currentPage=page;setExperience(isBank?part:page);
- for(const p of ['subjects','home','notes','papers','bank'])$(p+'-view').hidden=p!==page;
+ for(const p of ['subjects','dashboard','home','notes','papers','originals','bank'])$(p+'-view').hidden=p!==page;
  document.querySelectorAll('[data-nav]').forEach(a=>{if(a.dataset.nav===(isBank?'choose':page))a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
- $('view-label').textContent=({subjects:'Your subjects',home:'Physics',notes:'Discovery Lab',papers:'Exam Archive',bank:'Practice Studio'})[page];
- document.title=({subjects:'Explore your subjects',home:'Your physics observatory',notes:'The Discovery Lab',papers:'The Exam Archive',bank:'The Practice Studio'})[page]+' · Neumeris';
+ $('view-label').textContent=({dashboard:'My dashboard',subjects:'Your subjects',home:'Physics',notes:'Discovery Lab',papers:'Exam Archive',originals:'Neumeris Originals',bank:'Practice Studio'})[page];
+ document.title=({dashboard:'My dashboard',subjects:'Explore your subjects',home:'Your physics observatory',notes:'The Discovery Lab',papers:'The Exam Archive',originals:'Neumeris Originals',bank:'The Practice Studio'})[page]+' · Neumeris';
  if(changed)revealView($(page+'-view'));
  if(['home','subjects'].includes(page)&&changed)revealItems($(page+'-view'));
  if(isBank){bankPromise??=import('./app.js');try{const bank=await bankPromise;await bank.ready;if(ticket===routeSerial)window.dispatchEvent(new Event('numeris:topic-route'));}catch{$('load-error').hidden=false;$('error-message').textContent='The practice studio could not load. Please refresh to try again.';}}
  if(page==='notes'||page==='papers'){viewsPromise??=import('./numeris-views.js');try{const views=await viewsPromise;await views.show(page);if(ticket===routeSerial)revealItems($(page+'-view'));}catch{$(page+'-content').innerHTML='<div class="n-error">This collection could not load. <button class="n-button" onclick="location.reload()">Try again</button></div>';}}
+ if(page==='dashboard'){dashboardPromise??=import('./dashboard.js');try{const dashboard=await dashboardPromise;if(ticket===routeSerial)await dashboard.show();}catch{$('dashboard-content').textContent='Your dashboard could not load. Your saved answers remain on this device.';}}
+ if(page==='originals'){originalsPromise??=import('./originals.js');try{const originals=await originalsPromise;if(ticket===routeSerial)await originals.show({hash:location.hash});}catch{$('originals-content').replaceChildren();const message=document.createElement('p');message.className='n-error';message.setAttribute('role','alert');message.textContent='Neumeris Originals could not load. Please refresh to try again.';$('originals-content').append(message);}}
 }
 window.addEventListener('hashchange',()=>{route();window.scrollTo({top:0,behavior:'instant'});});
 window.addEventListener('popstate',route);
